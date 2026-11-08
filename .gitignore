@@ -44,3 +44,6 @@ __pycache__/
 
 # Skill assets that are part of the tool, not output
 !.claude/skills/**/assets/*.png
+
+# Workbench worker logs (the issue log itself, issues.jsonl, is versioned)
+design/*/workbench/worker.log

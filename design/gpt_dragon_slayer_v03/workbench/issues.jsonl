@@ -1,0 +1,20 @@
+{"t": "2026-11-08 13:56:08", "asset": "character", "unit": "待机", "by": "user", "imported": true, "op": "open", "issue": 1, "frames": [], "marks": [], "note": "实际上，原版的脸部4帧像素是不变的"}
+{"t": "2026-11-08 13:56:38", "asset": "character", "unit": "待机抬手", "by": "user", "imported": true, "op": "open", "issue": 2, "frames": [], "marks": [], "note": "原版抬手手部有五指握拳的动作"}
+{"t": "2026-11-08 13:57:44", "asset": "character", "unit": "叉腰站", "by": "user", "imported": true, "op": "open", "issue": 3, "frames": [], "marks": [], "note": "原版的剑是被双腿遮挡，龙娘是裙子中间应该完全遮挡。还有就是，脸部像素问题，这个姿势脸部像素应该也是不动的。"}
+{"t": "2026-11-08 14:03:36", "asset": "character", "unit": "挥臂平举", "by": "user", "imported": true, "op": "open", "issue": 4, "frames": [127, 131], "marks": [], "note": "128帧原版抬起的是另一只手。132帧没握到刀把"}
+{"t": "2026-11-08 14:04:13", "asset": "character", "unit": "战斗站姿", "by": "user", "imported": true, "op": "open", "issue": 5, "frames": [], "marks": [], "note": "同样的147到150脸部是不动的"}
+{"t": "2026-11-08 14:05:06", "asset": "character", "unit": "跑步", "by": "user", "imported": true, "op": "open", "issue": 6, "frames": [], "marks": [], "note": "跟原版比起来感觉不稳。原版的头部、躯干在整个跑步过程中位置是相对不变的"}
+{"t": "2026-11-08 14:08:00", "asset": "character", "unit": "回身高踢", "by": "user", "imported": true, "op": "open", "issue": 7, "frames": [230, 231], "marks": [], "note": "231跟232有问题，裁剪问题嘛？这两帧尺寸好像都偏大，还被裁掉了一部分内容"}
+{"t": "2026-11-08 14:08:51", "asset": "character", "unit": "背刀站", "by": "user", "imported": true, "op": "open", "issue": 8, "frames": [], "marks": [], "note": "脸部问题，脸部不动，这个动作不需要手部握刀。刀在身前，握刀的手是被遮挡的"}
+{"t": "2026-11-08 14:09:43", "asset": "character", "unit": "终结", "by": "user", "imported": true, "op": "open", "issue": 9, "frames": [243, 244, 245], "marks": [], "note": "244握刀有问题，245 246图片不完整，被裁剪了"}
+{"t": "2026-11-08 20:58:57", "op": "import", "by": "claude", "source": "design\\gpt_dragon_slayer_v03\\review.json", "actions": 9}
+{"t": "2026-11-08 20:59:27", "op": "fixed", "by": "claude", "issue": 1, "note": "微动只从下巴以下开始，脸的像素变化为 0（记录在 docs/gpt_dragon_slayer_v03.md）", "frames_version": 1794125760}
+{"t": "2026-11-08 20:59:27", "op": "note", "by": "claude", "issue": 2, "note": "第二轮意见是在聊天里提的：原版 5–9 帧全身不动，只动手、头和头发。"}
+{"t": "2026-11-08 20:59:27", "op": "fixed", "by": "claude", "issue": 2, "note": "待机 1–9 帧改用同一张画（idle_hold）：只改前手和头，腿、裙子、尾巴逐像素不变；第 7 帧握拳只换手", "frames_version": 1794125832}
+{"t": "2026-11-08 20:59:27", "op": "note", "by": "claude", "issue": 3, "note": "脸部不动已修（同 #1）。刀被腿和裙子挡住没有修：需要把重新挖洞的武器图层打进补丁（太刀 644 个文件、约 32MB），等你决定。"}
+{"t": "2026-11-08 20:59:27", "op": "fixed", "by": "claude", "issue": 4, "note": "修复表 repair_d 重画 127–128、132（工具编号 126–127、131）", "frames_version": 1794125799}
+{"t": "2026-11-08 20:59:28", "op": "fixed", "by": "claude", "issue": 5, "note": "微动只从下巴以下开始，脸的像素变化为 0", "frames_version": 1794125804}
+{"t": "2026-11-08 20:59:28", "op": "fixed", "by": "claude", "issue": 6, "note": "改按头对齐（anchor: head，anchor_px: 48）；第二行三格放大；腿偏短，下半身拉伸 5–6px", "frames_version": 1794125808}
+{"t": "2026-11-08 20:59:28", "op": "fixed", "by": "claude", "issue": 7, "note": "修复表 repair_e 留足四周空白重画，再按 frame_scales.json 缩回", "frames_version": 1794125829}
+{"t": "2026-11-08 20:59:28", "op": "fixed", "by": "claude", "issue": 8, "note": "脸部不动已修；刀在身前时的握刀手按原版被遮挡处理", "frames_version": 1794125832}
+{"t": "2026-11-08 20:59:28", "op": "fixed", "by": "claude", "issue": 9, "note": "repair_e 重画 244–246；244 和 245 原版几乎一样，两帧用同一格", "frames_version": 1794125832}

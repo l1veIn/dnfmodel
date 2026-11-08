@@ -2,6 +2,15 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "workbench",
+      "runtimeExecutable": "D:/VideoStudio/comfyUI/install/ComfyUI/ComfyUI/.venv/Scripts/python.exe",
+      "runtimeArgs": [
+        "scripts/workbench/server.py",
+        "--port=8800"
+      ],
+      "port": 8800, "autoPort": false
+    },
+    {
       "name": "fatfish-doll-preview",
       "runtimeExecutable": "python",
       "runtimeArgs": [
@@ -14,28 +23,6 @@
         "output"
       ],
       "port": 8797, "autoPort": false
-    },
-    {
-      "name": "fatfish-whale-review",
-      "runtimeExecutable": "D:/VideoStudio/comfyUI/install/ComfyUI/ComfyUI/.venv/Scripts/python.exe",
-      "runtimeArgs": [
-        ".claude/skills/dnf-character-patch/scripts/patch.py",
-        "fatfish_whale_maid",
-        "review-page",
-        "--port=8798"
-      ],
-      "port": 8798, "autoPort": false
-    },
-    {
-      "name": "gpt-dragon-v03-review",
-      "runtimeExecutable": "D:/VideoStudio/comfyUI/install/ComfyUI/ComfyUI/.venv/Scripts/python.exe",
-      "runtimeArgs": [
-        ".claude/skills/dnf-character-patch/scripts/patch.py",
-        "gpt_dragon_slayer_v03",
-        "review-page",
-        "--port=8799"
-      ],
-      "port": 8799, "autoPort": false
     }
   ]
 }

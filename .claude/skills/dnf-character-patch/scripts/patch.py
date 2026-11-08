@@ -10,7 +10,8 @@
   patch.py <id> split <clip id> <ranges...> | unfreeze | match-sizes
   patch.py <id> check | final [clip ids]
   patch.py <id> board <file.png> <frames> [cols] | hands <file.png> [frames] | grips <file.png> <frames> | anim <file.gif> <frames> | stats | sizes | repeats | moving <frames> | colors
-  patch.py <id> review-page [--port=8798]             local page: review each action, verdicts go to design/<id>/review.json
+  patch.py <id> issues [--all] | issue-fix <n> "what was done" | issue-note <n> "comment"   the workbench's issue log
+  patch.py <id> review-page [--port=8798]             old single-patch page (review.json); use the workbench instead
   patch.py <id> build | install
 """
 from __future__ import annotations
@@ -23,6 +24,7 @@ from collections import Counter
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+ROOT_DIR = __import__("pathlib").Path(__file__).resolve().parents[4]
 
 
 def survey(cls, equipment):
@@ -185,6 +187,15 @@ def main():
         if action == "hands":
             return review.hands_board(rest[0], rest[1] if len(rest) > 1 else None)
         return review.stats() if action == "stats" else review.check()
+    if action in ("issues", "issue-fix", "issue-note"):
+        # The workbench's issue log (design/<id>/workbench/issues.jsonl); the page is scripts/workbench/server.py.
+        sys.path.insert(0, str(ROOT_DIR / "scripts" / "workbench"))
+        import issues
+        if action == "issues":
+            return issues.cmd_list(args[0], "all" in flags)
+        if action == "issue-fix":
+            return issues.cmd_fixed(args[0], int(rest[0]), rest[1])
+        return issues.cmd_note(args[0], int(rest[0]), rest[1])
     if action == "review-page":
         from kit import review_page
         return review_page.serve(int(flags.get("port", 8798)))

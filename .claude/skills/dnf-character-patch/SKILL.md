@@ -144,13 +144,21 @@ $PY $K <id> colors                     # 参考图、母版、成品的色相对
 
 用户验收非常细（见清单），这里查出的问题不要留给用户。
 
-自查后用审核页让用户逐个动作过一轮：
+自查后请用户在工作台里逐个动作过一轮。工作台用 `preview_start` 启动 `.claude/launch.json` 里的 `workbench`（端口 8800），一个服务管所有补丁，不要再为每个补丁开端口。设计见 `docs/workbench_design.md`。
+
+- 左边是项目、资产（人物动作、切入图、大招人物帧、武器和机器人、发光层）和单元列表；中间原版和新版同步播放，可以逐帧、叠加、调速、开关武器；右边是这个单元的问题。
+- 用户在新版画面上点击落标记，提交问题。问题存在 `design/<id>/workbench/issues.jsonl`，只追加，不会被覆盖。
+- 人物动作按 `clips.json` 的 `action` 分组；一个动作拆到几张表时，给这些段写同一个 `action`。人物以外的资产写在 `design/<id>/workbench/assets.json` 里（范例 `design/claude_gunner/workbench/assets.json`），它们直接从打包好的 NPK 里取帧，和资源库查到的官方 IMG 对比。
+
+修问题的流程：
 
 ```
-$PY $K <id> review-page --port=8798    # 不要直接运行，写进 .claude/launch.json 后用 preview_start 启动
+$PY $K <id> issues                     # 待修和被退回的问题，帧号同时给工具编号和用户编号，标记给出坐标
+$PY $K <id> issue-fix <n> "做法"        # 修完、重跑 final 之后再写；记录当时的帧版本
+$PY $K <id> issue-note <n> "说明"       # 只说明、不算修完（比如需要用户决定）
 ```
 
-左边是动作列表，原版和新版同步播放，可逐帧、叠加、开关武器。每个动作的通过、要改、意见和标记帧存到 `design/<id>/review.json`，读这个文件来修。动作按 `clips.json` 的 `action` 分组，一个动作拆到几张表时给这些段写同一个 `action`。改完重跑 `final`，用户刷新页面就是新帧，审核记录不会丢。
+用户点“刷新”就能看到新帧，然后点“复核通过”或“退回”。一个动作通过之后帧又改了，会自动变成“需复核”。旧的 `review-page` 和 `review.json` 不再使用；`python scripts/workbench/issues.py <id> import-review` 可以把旧记录导入问题单。
 
 ### 8. 打包安装
 
@@ -183,4 +191,4 @@ $PY $K <id> review-page --port=8798    # 不要直接运行，写进 .claude/lau
 
 ## 收到修改意见时
 
-用户说的帧号从 1 开始，工具里从 0 开始，先对上再改。审核页的 `review.json` 里 `frames` 是工具编号，意见文字里的帧号是用户的编号。多数问题在 [references/acceptance.md](references/acceptance.md) 里有现成做法。改完重跑 `final`，同一段相似的问题一起修，并复核相邻帧大小有没有跳变。
+用户说的帧号从 1 开始，工具里从 0 开始，先对上再改。问题单里的 `frames` 和标记是工具编号，意见文字里的帧号是用户的编号；`issues` 命令会把两种编号都列出来。用户在聊天里提的意见，也用 `issue-note` 记到对应的问题上，免得只留在聊天里。多数问题在 [references/acceptance.md](references/acceptance.md) 里有现成做法。改完重跑 `final`，同一段相似的问题一起修，并复核相邻帧大小有没有跳变。

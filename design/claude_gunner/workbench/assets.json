@@ -1,0 +1,477 @@
+{
+ "note": "Assets of the Claude gunner v06 NPK besides the character. Generated from design/gunner_props/families.json and scripts/gunner_props_preview.py.",
+ "assets": [
+  {
+   "id": "cutin",
+   "kind": "img",
+   "label": "切入图",
+   "npk": "output/claude_gunner_v06/A_Claude_FGunner_v06.NPK",
+   "player": "screen",
+   "groups": [
+    {
+     "id": "atgunner_launcher_neo",
+     "label": "女大枪 launcher_neo",
+     "match": [
+      "atgunner_launcher_neo",
+      "(18)atgunner_launcher_neo"
+     ]
+    },
+    {
+     "id": "atgunner_stormtrooper",
+     "label": "女大枪 stormtrooper",
+     "match": [
+      "atgunner_stormtrooper",
+      "(18)atgunner_stormtrooper"
+     ]
+    },
+    {
+     "id": "atgunner_spitfire_neo",
+     "label": "女弹药 spitfire_neo",
+     "match": [
+      "atgunner_spitfire_neo",
+      "(18)atgunner_spitfire_neo"
+     ]
+    },
+    {
+     "id": "atgunner_freyja",
+     "label": "女弹药 freyja",
+     "match": [
+      "atgunner_freyja",
+      "(18)atgunner_freyja"
+     ]
+    },
+    {
+     "id": "atgunner_mechanic_neo",
+     "label": "女机械 mechanic_neo",
+     "match": [
+      "atgunner_mechanic_neo",
+      "(18)atgunner_mechanic_neo"
+     ]
+    },
+    {
+     "id": "atgunner_optimus",
+     "label": "女机械 optimus",
+     "match": [
+      "atgunner_optimus",
+      "(18)atgunner_optimus"
+     ]
+    },
+    {
+     "id": "atgunner_ranger_neo",
+     "label": "女漫游 ranger_neo",
+     "match": [
+      "atgunner_ranger_neo",
+      "(18)atgunner_ranger_neo"
+     ]
+    },
+    {
+     "id": "atgunner_crimsonrose",
+     "label": "女漫游 crimsonrose",
+     "match": [
+      "atgunner_crimsonrose",
+      "(18)atgunner_crimsonrose"
+     ]
+    },
+    {
+     "id": "atgunner_paramedic_neo",
+     "label": "女医疗 paramedic_neo",
+     "match": [
+      "atgunner_paramedic_neo",
+      "(18)atgunner_paramedic_neo"
+     ]
+    },
+    {
+     "id": "atgunner_paramedic",
+     "label": "paramedic",
+     "match": [
+      "atgunner_paramedic",
+      "(18)atgunner_paramedic"
+     ]
+    },
+    {
+     "id": "atgunner_coronis",
+     "label": "coronis",
+     "match": [
+      "atgunner_coronis",
+      "(18)atgunner_coronis"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "awake",
+   "kind": "img",
+   "label": "大招人物帧",
+   "npk": "output/claude_gunner_v06/A_Claude_FGunner_v06.NPK",
+   "groups": [
+    {
+     "id": "awake_launcher",
+     "label": "女大枪大招人物帧",
+     "match": [
+      "atdecisivebattle/awakebody_atlauncher_0000"
+     ]
+    },
+    {
+     "id": "awake_spitfire",
+     "label": "女弹药大招人物帧",
+     "match": [
+      "atdefinitesolution/awakebody_atspitfire_0000"
+     ]
+    },
+    {
+     "id": "awake_mech",
+     "label": "女机械大招人物帧",
+     "match": [
+      "atgxstardust/awakebody_atmechanic_0000"
+     ]
+    },
+    {
+     "id": "awake_ranger",
+     "label": "女漫游大招人物帧",
+     "match": [
+      "atcrimsongarden/awakebody_ranger_00000"
+     ]
+    },
+    {
+     "id": "awake_paramedic",
+     "label": "女医疗大招人物帧",
+     "match": [
+      "athalo/awakebody_paramedic_0000"
+     ]
+    },
+    {
+     "id": "awake_dday",
+     "label": "atdday 人物帧",
+     "match": [
+      "atdday/dday_body_00",
+      "atdday/dday_body_01",
+      "atdday/dday_body_02",
+      "atdday/add_body_a_nor",
+      "atdday/add_body_b_nor",
+      "atdday/add_body_c_nor"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "props",
+   "kind": "img",
+   "label": "武器和机器人",
+   "npk": "output/claude_gunner_v06/A_Claude_FGunner_v06.NPK",
+   "groups": [
+    {
+     "id": "flamer",
+     "label": "喷火器",
+     "match": [
+      "flamethrower/atflamethrowerguna",
+      "flamethrower/atflamethrowergunb"
+     ]
+    },
+    {
+     "id": "flamer_boost",
+     "label": "强化喷火器",
+     "match": [
+      "flamethrowerboost/atflamethrowergunb",
+      "flamethrowerboost/atflamethrowergunf",
+      "blizzardthrowerboost_female/behind",
+      "blizzardthrowerboost_female/front",
+      "EQ105/atflamethrowergunb",
+      "EQ105/atflamethrowergunf"
+     ]
+    },
+    {
+     "id": "laser",
+     "label": "激光枪",
+     "match": [
+      "laserriflecharge/atlaserguncharge",
+      "laserriflecharge_90lvhcannon/atlaserguncharge",
+      "ROOT/lasergunata",
+      "ROOT/lasergunata_90lvhcannon",
+      "ROOT/lasergunatb",
+      "ROOT/lasergunatb_90lvhcannon",
+      "heavyweaponalteration/chargelaser_guncharge",
+      "heavyweaponalteration/fullchange_change2",
+      "heavyweaponalteration/laserguncharge2",
+      "heavyweaponalteration/lasergunconvert_gun",
+      "heavyweaponalteration_90lvhcannon/chargelaser_guncharge",
+      "heavyweaponalteration_90lvhcannon/fullchange_change2",
+      "heavyweaponalteration_90lvhcannon/laserguncharge2",
+      "heavyweaponalteration_90lvhcannon/lasergunconvert_gun"
+     ]
+    },
+    {
+     "id": "bomb",
+     "label": "原子弹",
+     "match": [
+      "aturaniumbomb/aturaniumbombvpmissile",
+      "uraniumbomb/missile",
+      "uraniumbomb_90lvhcannon/missile",
+      "dropbomblight/missile"
+     ]
+    },
+    {
+     "id": "steyr",
+     "label": "反坦克炮",
+     "match": [
+      "steyrheavyrifle/at_gun_back",
+      "steyrheavyrifle/at_gun_front",
+      "steyrheavyrifle_90lvhcannon/at_gun_back",
+      "steyrheavyrifle_90lvhcannon/at_gun_front"
+     ]
+    },
+    {
+     "id": "gatling",
+     "label": "格林机枪",
+     "match": [
+      "ROOT/atgatlinggun",
+      "ROOT/atgatlinggunreinforce",
+      "ROOT/gatlingheavyweapon"
+     ]
+    },
+    {
+     "id": "stinger",
+     "label": "毒刺",
+     "match": [
+      "atstinger/gun1",
+      "atstinger/gun2"
+     ]
+    },
+    {
+     "id": "pt15",
+     "label": "PT-15",
+     "match": [
+      "atpt-15prototype/cannon"
+     ]
+    },
+    {
+     "id": "operation",
+     "label": "Operation Raze",
+     "match": [
+      "atoperationraze/operationdot",
+      "atoperationraze/operationdot2",
+      "atoperationraze/missile01"
+     ]
+    },
+    {
+     "id": "phlegethon",
+     "label": "UHT-03",
+     "match": [
+      "atphlegethon/weaponc",
+      "atphlegethon/weapond"
+     ]
+    },
+    {
+     "id": "extruder",
+     "label": "X-1",
+     "match": [
+      "extruder/extruder_body_dot",
+      "extruder_90lvhcannon/extruder_body_dot"
+     ]
+    },
+    {
+     "id": "fm31",
+     "label": "FM-31",
+     "match": [
+      "fm-31/01_fegun_normal"
+     ]
+    },
+    {
+     "id": "wgg",
+     "label": "等离子武器",
+     "match": [
+      "plasmaboost/wgg",
+      "atplasmaboost/atplasmaboostvpwgg"
+     ]
+    },
+    {
+     "id": "fsc7",
+     "label": "FS-C7",
+     "match": [
+      "atfsc7/0101"
+     ]
+    },
+    {
+     "id": "defsol",
+     "label": "终解武器件",
+     "match": [
+      "atdefinitesolution/addon_01",
+      "atdefinitesolution/addon_02"
+     ]
+    },
+    {
+     "id": "solasys",
+     "label": "Sola System",
+     "match": [
+      "atsolasystem/solasystemweaponback",
+      "atsolasystem/solasystemweaponfront"
+     ]
+    },
+    {
+     "id": "carbine",
+     "label": "卡宾",
+     "match": [
+      "pistolcarbine/ggweapon",
+      "pistolcarbine/gweapon"
+     ]
+    },
+    {
+     "id": "ordnance",
+     "label": "手雷地雷",
+     "match": [
+      "atthermobaricgranade/granade",
+      "atzerodistance/grenade",
+      "grenade/light",
+      "grenade/none",
+      "grenade/water",
+      "grenade_reload/light",
+      "grenade_reload/none",
+      "grenade_reload/water",
+      "atlightmine/lm-61_body",
+      "atlightmine/lmine_body",
+      "m18claymore/clay",
+      "m18claymore/claymore"
+     ]
+    },
+    {
+     "id": "mech",
+     "label": "白色机甲",
+     "match": [
+      "atmechboltmx/01_appear",
+      "atmechboltmx/02_attack1",
+      "atmechboltmx/03_backfly",
+      "atmechboltmx/04_gun1",
+      "atmechboltmx/04_gun2",
+      "atmechboltmx/04_gun3",
+      "atmechboltmx/04_gun4",
+      "atmechboltmx/05_sword",
+      "atmechboltmx/06_parts",
+      "atmechboltmx/07_backfly2",
+      "atmechboltmx/castingnormal"
+     ]
+    },
+    {
+     "id": "walker",
+     "label": "SO 步行机",
+     "match": [
+      "at_sowalker/walkerfront",
+      "at_sowalker/walker",
+      "at_sowalker/weapon"
+     ]
+    },
+    {
+     "id": "g0",
+     "label": "G-0",
+     "match": [
+      "g0/g0_body",
+      "g0/g0_body_fly_booster",
+      "g0/g0_union_body",
+      "g0/trans_g0core_body",
+      "g0/trans_g0_body"
+     ]
+    },
+    {
+     "id": "corona",
+     "label": "G-1 科罗纳",
+     "match": [
+      "atg5falcon/corona",
+      "atg5falcon/coronatransforma",
+      "atg5falcon/coronatransformb",
+      "atg5falcon/coronatransformc"
+     ]
+    },
+    {
+     "id": "rolling",
+     "label": "G-2 旋雷者",
+     "match": [
+      "atg5falcon/rollingthunder",
+      "atg5falcon/rollingthundertransforma",
+      "atg5falcon/rollingthundertransformb",
+      "atg5falcon/rollingthundertransformc"
+     ]
+    },
+    {
+     "id": "raptor",
+     "label": "G-3 捍卫者",
+     "match": [
+      "atg5falcon/rapter",
+      "atg5falcon/raptertransforma",
+      "atg5falcon/raptertransformb",
+      "atg5falcon/raptertransformc"
+     ]
+    },
+    {
+     "id": "small_g1",
+     "label": "小型 G1",
+     "match": [
+      "g1/g1_body",
+      "g1/trans_g1_body",
+      "atlimitover/g1normal"
+     ]
+    },
+    {
+     "id": "small_g2",
+     "label": "小型 G2",
+     "match": [
+      "g2/g2_body",
+      "g2/g-2_rolling_thunder",
+      "g2/trans_g2_body"
+     ]
+    },
+    {
+     "id": "small_g3",
+     "label": "小型 G3",
+     "match": [
+      "g3/body",
+      "g3/trans_g3_body"
+     ]
+    },
+    {
+     "id": "limit_g4",
+     "label": "Limit Over G4",
+     "match": [
+      "atlimitover/g4normal"
+     ]
+    },
+    {
+     "id": "tempester",
+     "label": "女版暴风骑士",
+     "match": [
+      "TEMPESTERAT/tempester"
+     ]
+    },
+    {
+     "id": "overdrone",
+     "label": "无人机",
+     "match": [
+      "atoverpowerlaser/overpowerlaserdrone",
+      "atoverpowerlaser/overpowerlasertalismandrone1",
+      "atoverpowerlaser/pinfunnel"
+     ]
+    },
+    {
+     "id": "bits",
+     "label": "小件",
+     "match": [
+      "atg-operater/gbody",
+      "atg-4_frisbee/body_spin",
+      "atg-4_frisbee/tarns",
+      "atc_aed/dronetransform",
+      "atstandby-ready/flashdot",
+      "atstandby-ready/frozendot",
+      "atstandby-ready/grenadedot",
+      "atmagneticfield/shelldot",
+      "atmagneticfield/weapondot",
+      "atparamedicdot/apius"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "glow",
+   "kind": "img",
+   "label": "发光层（调色）",
+   "npk": "output/claude_gunner_v06/A_Claude_FGunner_v06.NPK",
+   "rest": true
+  }
+ ]
+}
