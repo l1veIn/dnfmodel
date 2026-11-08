@@ -26,6 +26,7 @@ from urllib.parse import parse_qs, urlparse
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from PIL import Image  # noqa: E402
 
 IDLE = 600
@@ -129,22 +130,13 @@ def geometry(img):
 class ImgAsset:
     kind = "img"
 
-    def __init__(self, spec, claimed):
-        self.id, self.label = spec["id"], spec.get("label", spec["id"])
-        self.npk = str(ROOT / spec["npk"])
-        self.player = spec.get("player", "sprite")
-        paths = [p for p in npk_entries(self.npk) if not COSTUME.match(p) and p not in claimed]
-        self.paths = {}
-        for group in spec.get("groups", []):
-            for p in paths:
-                stem = p.rsplit("/", 1)[1][:-4].lower()
-                if any(p.lower().endswith(f"/{m.lower()}.img") or stem == m.lower() for m in group["match"]):
-                    self.paths.setdefault(p, group.get("label", group["id"]))
-        if spec.get("rest"):
-            for p in paths:
-                if p not in self.paths and p not in claimed:
-                    self.paths[p] = p.rsplit("/", 2)[-2]
-        claimed.update(self.paths)
+    def __init__(self, key, npk, paths, names):
+        """One category of the NPK (see categories.py). names maps a path to a friendlier group label from assets.json; others group by folder."""
+        import categories
+        self.id, self.label = key, categories.LABEL[key]
+        self.npk = str(npk)
+        self.player = categories.PLAYER[key] or "sprite"
+        self.paths = {p: names.get(p) or p.rsplit("/", 2)[-2] for p in sorted(paths, key=lambda p: (names.get(p) or p.rsplit("/", 2)[-2], p))}
         self.version = int(Path(self.npk).stat().st_mtime)
         self._units = None
 
@@ -201,19 +193,57 @@ class ImgAsset:
 # ---------------------------------------------------------------- project and HTTP
 
 
+def built_npk(ident):
+    """The NPK this design is reviewed against: the project's newest build for its current design, otherwise the build its patch.json names."""
+    import progress
+    data = json.loads((ROOT / "design" / ident / "patch.json").read_text("utf-8"))
+    own = f"{data['npk_stem']}_v{data['version']:02d}.NPK"
+    for p in progress.registry():
+        if ident in p["designs"]:
+            built = progress.versions(p)
+            pick = built[0] if p.get("current") == ident and built else next((v for v in built if v["name"] == own), None)
+            return ROOT / pick["path"] if pick else None
+    hits = list((ROOT / "output").glob(f"*/{own}"))
+    return hits[0] if hits else None
+
+
+def group_names(ident, paths):
+    """Group labels from design/<id>/workbench/assets.json (optional): {"groups": [{"label", "match": [path tails or stems]}]} under any asset."""
+    spec_path = ROOT / "design" / ident / "workbench" / "assets.json"
+    if not spec_path.exists():
+        return {}
+    names = {}
+    for spec in json.loads(spec_path.read_text("utf-8")).get("assets", []):
+        for group in spec.get("groups", []):
+            match = [m.lower() for m in group["match"]]
+            for p in paths:
+                low = p.lower()
+                stem = low.rsplit("/", 1)[1][:-4]
+                if p not in names and any(low.endswith(f"/{m}.img") or stem == m for m in match):
+                    names[p] = group.get("label", group["id"])
+    return names
+
+
 class Project:
+    """The character asset, then one asset per category of the built NPK, in the same order for every project (categories.py)."""
+
     def __init__(self, ident):
+        import categories
         self.id = ident
         self.assets = {}
         if Character.available(ident):
             c = Character(ident)
             self.assets[c.id] = c
-        spec_path = ROOT / "design" / ident / "workbench" / "assets.json"
-        if spec_path.exists():
-            claimed = set()
-            for spec in json.loads(spec_path.read_text("utf-8"))["assets"]:
-                if spec.get("kind") == "img" and (ROOT / spec["npk"]).exists():
-                    self.assets[spec["id"]] = ImgAsset(spec, claimed)
+        self.npk = built_npk(ident)
+        if self.npk and self.npk.exists():
+            paths = list(npk_entries(str(self.npk)))
+            by_key = {}
+            for p in paths:
+                by_key.setdefault(categories.classify(p), []).append(p)
+            names = group_names(ident, paths)
+            for key, _, _ in categories.CATEGORIES:
+                if key != "avatar" and by_key.get(key):
+                    self.assets[key] = ImgAsset(key, self.npk, by_key[key], names)
         self._listing = None
 
     def listing(self):

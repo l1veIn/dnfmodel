@@ -1,5 +1,5 @@
 {
- "note": "Assets of the Claude gunner v06 NPK besides the character. Generated from design/gunner_props/families.json and scripts/gunner_props_preview.py.",
+ "note": "Optional group labels for the review board. Assets themselves are the categories of scripts/workbench/categories.py, read from the project's newest NPK; only 'groups' (label + match on path tail or IMG stem) is used. Generated from design/gunner_props/families.json.",
  "assets": [
   {
    "id": "cutin",

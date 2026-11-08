@@ -59,12 +59,60 @@ async function overview() {
     return a;
   };
   const live = data.projects.filter(p => !p.archived), old = data.projects.filter(p => p.archived);
-  const page = [el("h1", {textContent: "补丁项目"}), el("p", {className: "lead", textContent: `${live.length} 个进行中的项目。进度、版本和安装状态都是从文件里读出来的，点进项目可以导出 NPK、看对照页和进入审核台。`})];
+  const page = [el("h1", {textContent: "补丁项目"}), el("p", {className: "lead", textContent: `${live.length} 个进行中的项目。进度、版本和安装状态都是从文件里读出来的，点进项目可以导出 NPK、用统一的对照台看原版和新版。`})];
   if (data.others.length) page.push(el("div", {className: "warnline", textContent: `游戏目录里还有不属于任何项目的补丁：${data.others.join("、")}`}));
   page.push(el("div", {className: "cards"}, ...live.map(card)));
+  page.push(el("h2", {textContent: "替换范围（各项目最新版和游戏官方对比）"}), coverageMatrix(live));
   if (old.length) page.push(el("h2", {textContent: "已归档"}), el("div", {className: "cards"}, ...old.map(card)));
   page.push(el("p", {className: "small muted", textContent: "新建项目：在对话里告诉 Claude 要把哪个职业换成哪个角色，它会按 skill 建配置并登记到 design/projects.json。"}));
   $("page").replaceChildren(...page);
+}
+
+// ---------------------------------------------------------------- coverage: the same categories for every project
+
+const SHARED = {awake: "职业目录合计，男女可能共用", effect: "职业目录合计，男女共用", cutin: "按文件名估计的本性别数量"};
+
+function coverageCell(row, pid, design) {
+  const td = el("td", {className: "cov"});
+  if (!row.changed) {
+    td.append(el("span", {className: "badge", textContent: "未改"}));
+    td.title = `游戏里是官方的${row.total ? `（官方 ${row.total} 个 IMG）` : ""}`;
+    return td;
+  }
+  const full = row.total && row.changed >= row.total * 0.95;
+  const text = row.total ? (full ? `全部 ${row.changed}` : `${row.changed} / ${row.total}`) : `${row.changed}`;
+  const badge = el(design ? "a" : "span", {className: `badge ${full ? "ok" : "info"}`, textContent: `已改 ${text}`});
+  if (design) badge.href = `/review#${new URLSearchParams({p: design, a: row.key === "avatar" ? "character" : row.key})}`;
+  td.append(badge);
+  td.title = `${row.label}：新版有 ${row.changed} 个 IMG${row.total ? `，官方 ${row.total} 个` : ""}${SHARED[row.key] ? `（官方数量：${SHARED[row.key]}）` : ""}`;
+  return td;
+}
+
+function coverageMatrix(projects) {
+  const keys = [];
+  for (const p of projects) for (const r of p.coverage?.rows || []) if (!keys.some(k => k.key === r.key)) keys.push({key: r.key, label: r.label});
+  const head = el("tr", {}, el("th", {textContent: "项目"}), el("th", {textContent: "版本"}), ...keys.map(k => el("th", {textContent: k.label})));
+  const rows = projects.filter(p => p.coverage).map(p => el("tr", {},
+    el("td", {}, el("a", {href: `#/p/${enc(p.id)}`, textContent: p.name})),
+    el("td", {textContent: p.coverage.version}),
+    ...keys.map(k => { const r = p.coverage.rows.find(x => x.key === k.key); return r ? coverageCell(r, p.id, p.current) : el("td", {textContent: "—"}); })));
+  return el("div", {}, el("div", {className: "tablewrap"}, el("table", {className: "matrix"}, el("thead", {}, head), el("tbody", {}, ...rows))),
+    el("p", {className: "small muted", textContent: "“已改”点进去就是审核台里同一类的原版和新版对照。数量按 IMG 计；切入图、大招人物帧、技能特效的官方数量是职业目录里的合计，男女可能共用，只作参考。"}));
+}
+
+function coverageSection(p) {
+  const c = p.coverage;
+  if (!c) return [];
+  const box = row => {
+    const changed = row.changed > 0;
+    const link = changed && p.current ? el("a", {className: "button", href: `/review#${new URLSearchParams({p: p.current, a: row.key === "avatar" ? "character" : row.key})}`, textContent: "看对照"}) : null;
+    return el("div", {className: `box cov ${changed ? "changed" : "same"}`},
+      el("h3", {textContent: row.label}),
+      el("p", {className: changed ? "" : "muted", textContent: changed ? `已改 ${row.changed} 个 IMG` + (row.total ? `（官方 ${row.total} 个）` : "") : "未改，游戏里显示官方的"}),
+      changed && SHARED[row.key] && row.total ? el("p", {className: "small muted", textContent: `官方数量是${SHARED[row.key]}`}) : null,
+      link ? el("div", {className: "actions"}, link) : null);
+  };
+  return [el("h2", {textContent: `改了什么（${c.version} 和游戏官方对比）`}), el("div", {className: "grid4"}, ...c.rows.map(box))];
 }
 
 // ---------------------------------------------------------------- project page
@@ -76,12 +124,11 @@ async function projectPage(pid) {
   const newest = p.versions[0];
   const current = p.designs.find(d => d.id === p.current);
   const actions = el("div", {className: "actions"});
-  if (current) actions.append(el("a", {className: "button primary", href: `/review#${new URLSearchParams({p: current.id})}`, textContent: "进入审核台"}));
+  if (current) actions.append(el("a", {className: "button primary", href: `/review#${new URLSearchParams({p: current.id})}`, textContent: "对照和审核"}));
   if (newest) {
     actions.append(el("a", {className: "button", href: download(p.id, newest.name, "npk"), textContent: `导出最新 NPK（${newest.label}，${mb(newest.size)}）`}));
     if (newest.zip) actions.append(el("a", {className: "button", href: download(p.id, newest.name, "zip"), textContent: "下载发布包"}));
     actions.append(button("在文件夹中显示", () => reveal(p.id, newest.name, "npk")));
-    if (newest.preview) actions.append(el("a", {className: "button", href: `/output/${newest.preview}`, target: "_blank", textContent: "对照页"}));
     if (newest.doc) actions.append(button("说明", () => showDoc(p.id, newest.doc)));
   }
   const hero = el("div", {className: "hero"}, cover(p, true), el("div", {},
@@ -94,6 +141,7 @@ async function projectPage(pid) {
   const sameName = p.game.filter(n => !p.versions.some(v => v.name === n) && p.versions.some(v => n.split("_v")[0] === v.name.split("_v")[0]));
   if (sameName.length) page.push(el("div", {className: "warnline", textContent: `游戏目录里有这个项目的补丁，但本地 output 里找不到同名文件：${sameName.join("、")}`}));
 
+  page.push(...coverageSection(p));
   if (p.stages.length) {
     page.push(el("h2", {textContent: "进度"}), el("ol", {className: "stepper"}, ...p.stages.map(s => el("li", {className: s.status},
       el("span", {className: "st", textContent: s.status === "done" ? "完成" : s.status === "active" ? "进行中" : "未开始"}), el("b", {textContent: s.name}), el("span", {textContent: s.detail})))));
@@ -107,7 +155,7 @@ async function projectPage(pid) {
       const ops = el("div", {className: "row"},
         el("a", {className: "button", href: download(p.id, v.name, "npk"), textContent: "导出 NPK"}),
         v.zip ? el("a", {className: "button", href: download(p.id, v.name, "zip"), textContent: `发布包 ${mb(v.zip_size)}`}) : null,
-        v.preview ? el("a", {className: "button", href: `/output/${v.preview}`, target: "_blank", textContent: "对照页"}) : null,
+        v.preview ? el("a", {className: "button", href: `/output/${v.preview}`, target: "_blank", title: "打包时生成的静态页，各版本格式不同；统一对照请用“对照和审核”", textContent: "当时的对照页"}) : null,
         v.doc ? button("说明", () => showDoc(p.id, v.doc)) : null,
         button("文件夹", () => reveal(p.id, v.name, "npk")),
         p.current ? button("记实机结果", () => gateDialog(p, v)) : null);
@@ -128,7 +176,6 @@ async function projectPage(pid) {
       el("h3", {textContent: `${d.id}${d.id === p.current ? "（当前）" : ""}`}),
       el("dl", {className: "kv"},
         el("dt", {textContent: "配置版本"}), el("dd", {textContent: `v${String(d.version).padStart(2, "0")}，产物目录 ${d.out}`}),
-        el("dt", {textContent: "资产"}), el("dd", {textContent: d.assets.map(a => ({character: "人物动作", cutin: "切入图", awake: "大招人物帧", props: "武器和机器人", glow: "发光层"})[a] || a).join("、")}),
         el("dt", {textContent: "问题"}), el("dd", {textContent: `待修 ${d.issues.open}，待复核 ${d.issues.fixed}，已复核 ${d.issues.verified}`}),
         el("dt", {textContent: "人物生图"}), el("dd", {textContent: d.cost.images ? `${d.cost.images} 次，约 ${usd(d.cost.usd)}` : "没有记录"})),
       el("div", {className: "actions"}, el("a", {className: "button", href: `/review#${new URLSearchParams({p: d.id})}`, textContent: "审核这份配置"}))))));

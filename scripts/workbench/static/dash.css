@@ -72,3 +72,10 @@ td a.button, td button { font-size: 12px; padding: 2px 8px; }
   .pcard { grid-template-columns: 84px minmax(0, 1fr); }
   .cover { width: 84px; height: 112px; }
 }
+.grid4 { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; }
+.box.cov.changed { border-top: 3px solid var(--accent); }
+.box.cov.same { border-top: 3px solid var(--line); }
+.box.cov .actions { margin-top: 6px; }
+table.matrix td, table.matrix th { white-space: nowrap; }
+table.matrix a.badge { text-decoration: none; }
+table.matrix a.badge:hover { border-color: var(--accent); }

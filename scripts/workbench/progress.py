@@ -9,6 +9,7 @@ import re
 import time
 from pathlib import Path
 
+import categories
 import issues
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -170,6 +171,49 @@ def stages(design, built):
     return out_rows
 
 
+def class_folder(p):
+    """(class, equipment) folder of the project, from its current design or, for an archived project, from the resource library."""
+    data = _design(p["current"]) if p.get("current") else None
+    if data:
+        return data["class"], data["equipment"]
+    kb = ROOT / "kb" / "kb.sqlite"
+    if kb.exists() and p.get("profession"):
+        import sqlite3
+        db = sqlite3.connect(f"file:{kb}?mode=ro", uri=True)
+        row = db.execute("select cls, eq from profession where name=?", (p["profession"],)).fetchone()
+        db.close()
+        if row:
+            return row
+    return None, None
+
+
+def npk_paths(path):
+    from dnf_resources import read_npk
+    return _cached(f"npk:{path}", path, lambda: [e["path"] for e in read_npk(path)])
+
+
+def coverage(p, version=None):
+    """What one built NPK replaces, by category, next to what the game has for this class. Default: the newest version."""
+    import sys
+    sys.path.insert(0, str(ROOT / "scripts"))
+    built = versions(p)
+    v = next((x for x in built if x["name"] == version), built[0] if built else None)
+    if v is None:
+        return None
+    counts = {}
+    for path in npk_paths(ROOT / v["path"]):
+        key = categories.classify(path)
+        counts[key] = counts.get(key, 0) + 1
+    cls, eq = class_folder(p)
+    totals = _cached(f"totals:{cls}/{eq}", ROOT / "kb" / "kb.sqlite", lambda: categories.official_totals(cls, eq)) if cls and (ROOT / "kb" / "kb.sqlite").exists() else {}
+    rows = []
+    for key, label, _ in categories.CATEGORIES:
+        if key == "other" and not counts.get(key):
+            continue
+        rows.append(dict(key=key, label=label, changed=counts.get(key, 0), total=totals.get(key)))
+    return dict(version=v["label"], name=v["name"], cls=cls, eq=eq, rows=rows)
+
+
 def cover(p):
     """The current design's master picture, if there is one."""
     data = _design(p["current"]) if p.get("current") else None
@@ -199,7 +243,7 @@ def summary(p):
     return dict(id=p["id"], name=p["name"], cls=p["class"], character=p["character"], summary=p.get("summary", ""), archived=p.get("archived", False),
                 versions=len(built), newest=newest and dict(label=newest["label"], name=newest["name"], built=newest["built"], size=newest["size"]),
                 installed=[dict(label=v["label"], state=v["installed"]) for v in installed], stage=active["name"] if active else ("完成" if st else None),
-                stages=st, issues=review_counts(p), usd=round(spent, 2), cover=bool(cover(p)), current=p.get("current"))
+                stages=st, issues=review_counts(p), usd=round(spent, 2), cover=bool(cover(p)), current=p.get("current"), coverage=coverage(p))
 
 
 def detail(p):
@@ -209,9 +253,7 @@ def detail(p):
         data = _design(d)
         if not data:
             continue
-        extra = DESIGN / d / "workbench" / "assets.json"
         designs.append(dict(id=d, title=data.get("title"), version=data["version"], out=data.get("out"), npk_stem=data["npk_stem"], cost=cost(d),
-                            assets=["character"] + ([a["id"] for a in json.loads(extra.read_text("utf-8"))["assets"]] if extra.exists() else []),
                             license=data.get("license_note", ""), issues=review_counts(dict(designs=[d]))))
     return dict(summary(p), versions=built, designs=designs, costs=p.get("costs", []), game=game_patches(),
                 gates=gates(p["current"]) if p.get("current") else [])

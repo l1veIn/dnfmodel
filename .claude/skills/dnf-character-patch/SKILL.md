@@ -150,7 +150,7 @@ $PY $K <id> colors                     # 参考图、母版、成品的色相对
 
 - 左边是项目、资产（人物动作、切入图、大招人物帧、武器和机器人、发光层）和单元列表；中间原版和新版同步播放，可以逐帧、叠加、调速、开关武器；右边是这个单元的问题。
 - 用户在新版画面上点击落标记，提交问题。问题存在 `design/<id>/workbench/issues.jsonl`，只追加，不会被覆盖。
-- 人物动作按 `clips.json` 的 `action` 分组；一个动作拆到几张表时，给这些段写同一个 `action`。人物以外的资产写在 `design/<id>/workbench/assets.json` 里（范例 `design/claude_gunner/workbench/assets.json`），它们直接从打包好的 NPK 里取帧，和资源库查到的官方 IMG 对比。
+- 人物动作按 `clips.json` 的 `action` 分组；一个动作拆到几张表时，给这些段写同一个 `action`。人物以外的资产不用登记：工作台读项目最新的 NPK，按统一分类（转职附加外观、武器、切入图、大招人物帧、技能特效和道具、召唤物，见 `scripts/workbench/categories.py`）自动列出，每个 IMG 都和资源库查到的官方 IMG 对比。`design/<id>/workbench/assets.json` 只用来给 IMG 起分组名（范例 `design/claude_gunner/workbench/assets.json`，把 IMG 按“喷火器”“G-1 科罗纳”分组）。首页的“替换范围”表按同样的分类，一眼看出哪个项目改了切入图、哪个没改。
 
 修问题的流程：
 
