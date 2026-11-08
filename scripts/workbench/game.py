@@ -12,6 +12,7 @@ import threading
 import time
 from pathlib import Path
 
+import categories
 import progress
 import render
 
@@ -19,6 +20,9 @@ ROOT = Path(__file__).resolve().parents[2]
 KB = ROOT / "kb" / "kb.sqlite"
 NAMES = ROOT / "kb" / "curated" / "skill_names.json"
 ROOT_FOLDER = "(根目录)"
+PORTRAITS = ROOT / "kb" / "curated" / "portraits.json"
+# Pseudo folders listed first for every class: illustrations that live outside the class folder (categories.py).
+SPECIAL = {"@buffart": ("buffart", "技能立绘（加 buff）"), "@portrait": ("portrait", "人物立绘")}
 lock = threading.Lock()
 _cache = {}
 
@@ -49,6 +53,29 @@ def save_name(payload):
         tmp.write_text(json.dumps(data, ensure_ascii=False, indent=1), "utf-8")
         tmp.replace(NAMES)
     return entry
+
+
+def professions(cls):
+    con = db()
+    names = [r[0] for r in con.execute("select name from profession where cls=?", (cls,))]
+    con.close()
+    return names
+
+
+def special_paths(cls, key):
+    return [p for p in categories.portrait_paths(professions(cls)) if categories.classify(p) == key]
+
+
+def display(path):
+    """(box covers the whole screen, atlas is scaled down, frames are separate stills) for an IMG."""
+    kind = categories.classify(path)
+    still = kind in ("buffart", "portrait") and "/adventurer2020/" not in path
+    return kind == "cutin", kind == "cutin" or still, still
+
+
+def frame_labels(path):
+    data = json.loads(PORTRAITS.read_text("utf-8")) if PORTRAITS.exists() else {}
+    return {int(k): v for k, v in data.get(path, {}).items()}
 
 
 def mods():
@@ -104,17 +131,23 @@ def skills(cls):
             f["frames"] += frames or 0
             f["paths"].append(path)
         _cache[key] = folders
-    folders = _cache[key]
+    folders = dict(_cache[key])
+    for special, (kind, label) in SPECIAL.items():
+        paths = special_paths(cls, kind)
+        if paths:
+            folders[special] = dict(folder=special, imgs=len(paths), frames=0, paths=paths, label=label)
     changed = mods()
     labels = names().get("classes", {}).get(cls, {})
     out = []
-    for folder, f in sorted(folders.items()):
+    for folder, f in sorted(folders.items(), key=lambda kv: (not kv[0].startswith("@"), kv[0])):
         touched = {}
         for path in f["paths"]:
             for m in changed.get(path, []):
                 touched.setdefault(m["project"], dict(m, imgs=0))["imgs"] += 1
         meta = labels.get(folder, {})
-        out.append(dict(folder=folder, imgs=f["imgs"], frames=f["frames"], name=meta.get("name", ""), transfer=meta.get("transfer", ""),
+        if "label" in f:
+            meta = dict(name=f["label"], checked=True, source="游戏界面文件（sprite/interface），按文件名归到职业")
+        out.append(dict(folder=folder, special=folder.startswith("@"), imgs=f["imgs"], frames=f["frames"], name=meta.get("name", ""), transfer=meta.get("transfer", ""),
                         checked=meta.get("checked", False), source=meta.get("source", ""), note=meta.get("note", ""),
                         mods=[dict(project=m["project"], name=m["name"], version=m["version"], imgs=m["imgs"], archived=m["archived"]) for m in touched.values()]))
     return dict(cls=cls, skills=out)
@@ -122,19 +155,26 @@ def skills(cls):
 
 def skill(cls, folder):
     """The IMGs of one effect folder, each with its box, atlas grid and the projects that replaced it."""
-    folders = _cache.get(("skills", cls, KB.stat().st_mtime)) or (skills(cls) and _cache[("skills", cls, KB.stat().st_mtime)])
-    f = folders.get(folder)
-    if f is None:
-        raise KeyError(folder)
+    if folder in SPECIAL:
+        paths = special_paths(cls, SPECIAL[folder][0])
+    else:
+        folders = _cache.get(("skills", cls, KB.stat().st_mtime)) or (skills(cls) and _cache[("skills", cls, KB.stat().st_mtime)])
+        if folder not in folders:
+            raise KeyError(folder)
+        paths = folders[folder]["paths"]
     changed = mods()
-    screen = folder == "cutin"
+    mine = set(professions(cls))
     items = []
-    for path in sorted(f["paths"]):
+    for path in sorted(paths):
         official = render.official_npk(path)
         versions = changed.get(path, [])
-        box, count, _ = render.unit_box([official] + [m["npk"] for m in versions], path, screen)
-        items.append(dict(path=path, label=path.rsplit("/", 1)[1][:-4], frames=count, box=box, screen=screen,
-                          atlas=render.layout(box[2] - box[0], box[3] - box[1], count, screen),
+        whole, scaled, still = display(path)
+        box, count, _ = render.unit_box([official] + [m["npk"] for m in versions], path, whole)
+        labels = frame_labels(path)
+        start = min((k for k, v in labels.items() if v.get("profession") in mine), default=0)
+        items.append(dict(path=path, label=path.rsplit("/", 1)[1][:-4], frames=count, box=box, screen=whole, still=still, start=start,
+                          labels={k: v["label"] + ("" if v.get("checked") else "（推断）") for k, v in labels.items()},
+                          atlas=render.layout(box[2] - box[0], box[3] - box[1], count, scaled),
                           mods=[dict(project=m["project"], name=m["name"], version=m["version"], stamp=int(Path(m["npk"]).stat().st_mtime)) for m in versions]))
     return dict(cls=cls, folder=folder, items=items)
 
@@ -145,8 +185,8 @@ def atlas(path, source):
     if official is None:
         raise KeyError(path)
     versions = mods().get(path, [])
-    screen = "/effect/cutin/" in path
-    box, count, _ = render.unit_box([official] + [m["npk"] for m in versions], path, screen)
+    whole, scaled, _ = display(path)
+    box, count, _ = render.unit_box([official] + [m["npk"] for m in versions], path, whole)
     if source == "official":
         npk = official
     else:
@@ -154,4 +194,22 @@ def atlas(path, source):
         if m is None:
             raise KeyError(source)
         npk = m["npk"]
-    return render.img_atlas(npk, path, tuple(box), count, screen)
+    return render.img_atlas(npk, path, tuple(box), count, scaled)
+
+
+def frame(path, source, k):
+    """One frame of a still IMG (portraits), cropped to the same box as its atlas would be. Stills are browsed one at a time."""
+    official = render.official_npk(path)
+    if official is None:
+        raise KeyError(path)
+    versions = mods().get(path, [])
+    whole, _, _ = display(path)
+    box, count, _ = render.unit_box([official] + [m["npk"] for m in versions], path, whole)
+    if not 0 <= k < count:
+        raise KeyError(k)
+    npk = official if source == "official" else next((m["npk"] for m in versions if m["project"] == source), None)
+    if npk is None:
+        raise KeyError(source)
+    key = f"frame|{render.token(npk)}|{path}|{tuple(box)}|{k}"
+    return render.cached(key, lambda: render.webp(render.frame(npk, path, k, tuple(box))))
+

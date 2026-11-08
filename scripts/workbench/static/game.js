@@ -2,8 +2,13 @@
 // The game's own skill effects, class by class: original next to every project's version, or "暂无改版". Uses helpers from dash.js.
 const G = {cls: null, skills: [], folder: null, skill: null, item: 0, k: 0, playing: true, timer: null, images: new Map(), filter: "all", query: ""};
 
-function gameAtlas(path, src, stamp, onload) {
-  const url = `/api/game/atlas?${new URLSearchParams({path, src, v: stamp})}`;
+// Animated IMGs come as one atlas; stills (portraits) one frame at a time, since a shared picture IMG can hold 78 large frames.
+function gameImage(it, src, stamp, onload) {
+  return it.still ? gameLoad(`/api/game/frame?${new URLSearchParams({path: it.path, src, k: G.k, v: stamp})}`, onload)
+                  : gameLoad(`/api/game/atlas?${new URLSearchParams({path: it.path, src, v: stamp})}`, onload);
+}
+
+function gameLoad(url, onload) {
   if (!G.images.has(url)) { const img = new Image(); img.decoding = "async"; img.onload = onload; img.src = url; G.images.set(url, img); }
   return G.images.get(url);
 }
@@ -44,7 +49,7 @@ function renderSkillList() {
   });
   $("skillCount").textContent = `${list.length} / ${G.skills.length} 个目录，${G.skills.filter(s => s.mods.length).length} 个有改版`;
   $("skillList").replaceChildren(...list.map(s => {
-    const tag = s.mods.length ? el("span", {className: "tag pass", textContent: "已改"}) : el("span", {className: "tag", textContent: `${s.imgs}`});
+    const tag = s.mods.length ? el("span", {className: "tag pass", textContent: "已改"}) : el("span", {className: `tag${s.special ? " fixed" : ""}`, textContent: s.special ? "立绘" : `${s.imgs}`});
     const name = el("span", {className: `name${s.name && !s.checked ? " guess" : ""}`, textContent: (s.transfer ? `${s.transfer} · ` : "") + skillTitle(s) + (s.name && !s.checked ? "（未核实）" : "")});
     const b = el("button", {type: "button", title: s.folder}, name, tag, el("span", {className: "code", textContent: s.name ? s.folder : `${s.imgs} 个 IMG`}));
     b.setAttribute("aria-current", String(s.folder === G.folder));
@@ -59,6 +64,7 @@ async function openSkill(folder) {
   $("skillList").querySelector('[aria-current="true"]')?.scrollIntoView({block: "nearest"});
   $("gameMain").replaceChildren(el("p", {className: "muted", textContent: "读取中…"}));
   G.skill = await api(`/api/game/skill?${new URLSearchParams({cls: G.cls, folder})}`);
+  G.k = G.skill.items[0]?.start || 0;
   renderSkill();
 }
 
@@ -79,7 +85,7 @@ function renderSkill() {
   const imgs = el("div", {className: "imgs", id: "imgChips"}, ...sk.items.map((it, n) => {
     const b = el("button", {type: "button", className: it.mods.length ? "mod" : "", textContent: `${it.label} · ${it.frames}`, title: it.path});
     b.setAttribute("aria-current", String(n === G.item));
-    b.addEventListener("click", () => { G.item = n; G.k = 0; renderSkill(); });
+    b.addEventListener("click", () => { G.item = n; G.k = it.start || 0; renderSkill(); });
     return b;
   }));
   const fps = el("input", {type: "range", min: 2, max: 30, step: 1, value: 10, id: "gfps"});
@@ -90,7 +96,8 @@ function renderSkill() {
   back.addEventListener("change", gameDraw);
   $("gameMain").replaceChildren(
     el("div", {className: "row"}, el("h2", {id: "skillTitle", textContent: skillTitle(s)}), el("span", {className: "muted", textContent: `sprite/character/${G.cls}/effect/${s.folder === "(根目录)" ? "" : s.folder + "/"} · ${s.imgs} 个 IMG`})),
-    el("div", {className: "namebar"}, name, transfer, el("label", {className: "field"}, checked, "已核实"), save, status,
+    s.special ? el("div", {className: "small muted", textContent: "按文件名归到这个职业目录（男女都列出）。技能立绘是放 buff 等技能时弹出的人物画；人物立绘包括创建角色的立绘、转职立绘（一张 IMG 里每个转职一帧，所有职业共用）和冒险团的小头像动画。"})
+      : el("div", {className: "namebar"}, name, transfer, el("label", {className: "field"}, checked, "已核实"), save, status,
       el("span", {className: "small muted", textContent: s.source ? `来源：${s.source}` : "游戏数据里没有中文名，这里填的名字存在 kb/curated/skill_names.json"})),
     el("div", {className: s.mods.length ? "" : "muted", textContent: `改版：${modsText}`}),
     imgs,
@@ -99,8 +106,15 @@ function renderSkill() {
     el("div", {className: "small muted", id: "ginfo"}),
     el("div", {className: "gstage", id: "gstage"}),
     el("p", {className: "small muted", textContent: "特效按普通叠加显示；游戏里很多光效是发光（加亮）叠加、速度也由技能脚本决定，这里只看形状和颜色。"}));
+  const it = sk.items[G.item];
+  if (it.still && it.frames > 1) {
+    const pick = el("select", {id: "gframe", ariaLabel: "帧"}, ...Array.from({length: it.frames}, (_, k) => el("option", {value: k, textContent: `#${k}${it.labels[k] ? " " + it.labels[k] : ""}`})));
+    pick.value = G.k;
+    pick.addEventListener("change", () => gameGo(Number(pick.value)));
+    $("gameMain").querySelector(".controls").append(el("label", {className: "field"}, "帧 ", pick));
+  }
   gameLayout();
-  gameSetPlaying(true);
+  gameSetPlaying(!it.still);
 }
 
 function gameSources() {
@@ -119,7 +133,7 @@ function gameSources() {
 function gameLayout() {
   const it = G.skill.items[G.item], [x0, y0, x1, y1] = it.box, w = x1 - x0, h = y1 - y0;
   const cols = gameSources();
-  const room = Math.max(300, $("gameMain").clientWidth - 20), tall = Math.max(220, window.innerHeight - 380);
+  const room = Math.max(300, $("gameMain").clientWidth - 48), tall = Math.max(220, window.innerHeight - 380);
   const fit = Math.min((room - 14 * (cols.length - 1)) / cols.length / w, tall / h);
   G.zoom = fit >= 1 ? Math.min(6, Math.floor(fit)) : fit;
   const W = Math.max(40, Math.round(w * G.zoom)), H = Math.max(40, Math.round(h * G.zoom));
@@ -127,7 +141,7 @@ function gameLayout() {
     if (c.empty) { const d = el("div", {className: "empty", textContent: c.empty}); d.style.width = `${W}px`; d.style.height = `${H}px`; return el("figure", {}, el("figcaption", {textContent: c.label}), d); }
     const canvas = el("canvas", {width: W, height: H});
     canvas.dataset.src = c.src; canvas.dataset.stamp = c.stamp;
-    gameAtlas(it.path, c.src, c.stamp, gameDraw);
+    gameImage(it, c.src, c.stamp, gameDraw);
     return el("figure", {}, el("figcaption", {textContent: c.label}), canvas);
   }));
 }
@@ -136,13 +150,17 @@ function gameDraw() {
   if (!G.skill || !$("gstage")) return;
   const it = G.skill.items[G.item], g = it.atlas, k = G.k;
   for (const canvas of $("gstage").querySelectorAll("canvas")) {
-    const img = gameAtlas(it.path, canvas.dataset.src, canvas.dataset.stamp, gameDraw), ctx = canvas.getContext("2d");
+    const img = gameImage(it, canvas.dataset.src, canvas.dataset.stamp, gameDraw), ctx = canvas.getContext("2d");
     ctx.imageSmoothingEnabled = G.zoom < 1;
     ctx.fillStyle = $("gback")?.value || "#22282a";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    if (img.complete && img.naturalWidth) ctx.drawImage(img, (k % g.cols) * g.cw, Math.floor(k / g.cols) * g.ch, g.cw, g.ch, 0, 0, canvas.width, canvas.height);
+    if (img.complete && img.naturalWidth) {
+      if (it.still) ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      else ctx.drawImage(img, (k % g.cols) * g.cw, Math.floor(k / g.cols) * g.ch, g.cw, g.ch, 0, 0, canvas.width, canvas.height);
+    }
   }
-  $("ginfo").textContent = `${it.label}：第 ${k + 1} / ${it.frames} 帧（${it.path}）`;
+  if ($("gframe")) $("gframe").value = k;
+  $("ginfo").textContent = `${it.label}：第 ${k + 1} / ${it.frames} 帧${it.labels?.[k] ? "，" + it.labels[k] : ""}（${it.path}）`;
 }
 
 function gameGo(k) {

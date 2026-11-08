@@ -1,0 +1,30 @@
+{
+ "note": "Labels for frames of shared portrait IMGs (one frame per transfer for every class). Frame numbers from 0. 'checked' once confirmed in game.",
+ "sprite/interface2/classchange/classchange_cha/classchange_cha.img": {
+  "25": {
+   "label": "女枪手 · 漫游枪手",
+   "profession": "gunner_at",
+   "checked": false
+  },
+  "26": {
+   "label": "女枪手 · 枪炮师",
+   "profession": "gunner_at",
+   "checked": false
+  },
+  "27": {
+   "label": "女枪手 · 机械师",
+   "profession": "gunner_at",
+   "checked": false
+  },
+  "28": {
+   "label": "女枪手 · 弹药专家",
+   "profession": "gunner_at",
+   "checked": false
+  },
+  "29": {
+   "label": "女枪手 · 第五转职",
+   "profession": "gunner_at",
+   "checked": false
+  }
+ }
+}

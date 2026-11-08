@@ -18,6 +18,8 @@ CATEGORIES = [
     ("growtype", "转职附加外观", "sprite"),
     ("weapon", "武器", "sprite"),
     ("cutin", "切入图", "screen"),
+    ("buffart", "技能立绘（加 buff）", "still"),
+    ("portrait", "人物立绘", "still"),
     ("awake", "大招人物帧", "sprite"),
     ("effect", "技能特效和道具", "sprite"),
     ("monster", "召唤物", "sprite"),
@@ -25,6 +27,57 @@ CATEGORIES = [
 ]
 LABEL = {k: label for k, label, _ in CATEGORIES}
 PLAYER = {k: player for k, _, player in CATEGORIES}
+
+
+# Illustrations outside the class folder: the skill portrait shown when a buff is cast (one per transfer), and the class's
+# standing illustrations: character creation, the transfer pictures (one IMG, a frame per transfer for every class) and the
+# small animated faces of the adventure UI. File names carry the class and gender, so each profession has its prefixes.
+PORTRAIT_DIRS = ("sprite/interface2/charactercreatever2/characterillust/", "sprite/interface2/adventurer2020/neo_",
+                 "sprite/interface2/classchange/classchange_cha/", "sprite/interface2/classchange/experienceclassillust")
+SHARED_PORTRAITS = ("sprite/interface2/classchange/classchange_cha/classchange_cha.img", "sprite/interface2/classchange/experienceclassillust.img")
+# profession: (skill portrait prefix, creation illustration name, adventure face prefix)
+PREFIXES = {
+    "swordman": ("ghost_", "slayerm", "neo_ghostm_"), "swordman_at": ("ghostf_", "slayerf", "neo_ghostf_"),
+    "fighter_at": ("atfighter_", "fighterm", "neo_atfighter_"), "fighter": ("fighter_", "fighterf", "neo_fighterf_"),
+    "gunner": ("gunner_", "gunnerm", "neo_gunnerm_"), "gunner_at": ("atgunner_", "gunnerf", "neo_gunnerf_"),
+    "mage_at": ("magem_", "magem", "neo_magem_"), "mage": ("mage_", "magef", "neo_magef_"),
+    "priest": ("priest_", "priestm", "neo_priestm_"), "priest_at": ("priestf_", "priestf", "neo_priestf_"),
+    "thief": ("thief_", "thief", "neo_thief_"), "knight": ("knightf_", "knight", "neo_knightf_"),
+    "demoniclancer": ("deminiclancer_", "demoniclancer", "neo_demoniclancer_"), "gunblader": ("gunblader_", "gunblader", "neo_gunblader"),
+    "archer": ("archer_", "archer", "neo_archer_"),
+}
+
+
+def _bare(path):
+    """File name without folder, extension or the (tn)/(18) tags."""
+    return re.sub(r"^(\(\w+\))+", "", path.rsplit("/", 1)[1][:-4].lower())
+
+
+def portrait_of(path, profession):
+    """Whether a buff or standing portrait belongs to this profession. The shared transfer pictures belong to every class."""
+    if profession not in PREFIXES:
+        return False
+    skill, illust, face = PREFIXES[profession]
+    p, name = path.lower(), _bare(path)
+    if p.startswith("sprite/interface/skillcutscene/"):
+        return name.startswith(skill)
+    if p.startswith("sprite/interface2/charactercreatever2/characterillust/"):
+        return name == illust
+    if p.startswith("sprite/interface2/adventurer2020/neo_"):
+        return name.startswith(face)
+    return p in SHARED_PORTRAITS
+
+
+def portrait_paths(professions):
+    """Official buff and standing portraits of these professions, from the resource library."""
+    if not KB.exists():
+        return []
+    db = sqlite3.connect(f"file:{KB}?mode=ro", uri=True)
+    rows = [r[0] for r in db.execute("select distinct path from img where (path like 'sprite/interface/skillcutscene/%' or path like 'sprite/interface2/charactercreatever2/characterillust/%' "
+                                     "or path like 'sprite/interface2/adventurer2020/neo_%' or path like 'sprite/interface2/classchange/%') "
+                                     "and npk in (select id from npk where lower(name) like 'sprite%')")]
+    db.close()
+    return sorted(p for p in rows if classify(p) in ("buffart", "portrait") and any(portrait_of(p, prof) for prof in professions))
 
 
 def classify(path):
@@ -38,6 +91,10 @@ def classify(path):
         return "growtype"
     if "/effect/cutin/" in p:
         return "cutin"
+    if p.startswith("sprite/interface/skillcutscene/"):
+        return "buffart"
+    if any(p.startswith(prefix) for prefix in PORTRAIT_DIRS):
+        return "portrait"
     if "awakebody" in name:
         return "awake"
     if p.startswith("sprite/monster/"):
@@ -53,7 +110,7 @@ def _female_side(stem, eq):
     return stem.startswith("at") == eq.startswith("at")
 
 
-def official_totals(cls, eq):
+def official_totals(cls, eq, profession=None):
     """How many official IMGs each category has for this class folder, from the resource library. Effects are shared by both genders."""
     if not KB.exists():
         return {}
@@ -71,4 +128,8 @@ def official_totals(cls, eq):
     cutins = [r[0] for r in db.execute(f"select path from img where path like ? and {official}", (f"sprite/character/{cls}/effect/cutin/%",))]
     out["cutin"] = sum(1 for p in cutins if _female_side(p.rsplit("/", 1)[1][:-4], eq))
     db.close()
+    if profession:
+        mine = portrait_paths([profession])
+        out["buffart"] = sum(1 for p in mine if classify(p) == "buffart")
+        out["portrait"] = sum(1 for p in mine if classify(p) == "portrait")
     return out

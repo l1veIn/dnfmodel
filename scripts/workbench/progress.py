@@ -205,7 +205,7 @@ def coverage(p, version=None):
         key = categories.classify(path)
         counts[key] = counts.get(key, 0) + 1
     cls, eq = class_folder(p)
-    totals = _cached(f"totals:{cls}/{eq}", ROOT / "kb" / "kb.sqlite", lambda: categories.official_totals(cls, eq)) if cls and (ROOT / "kb" / "kb.sqlite").exists() else {}
+    totals = _cached(f"totals:{cls}/{eq}/{p.get('profession')}", ROOT / "kb" / "kb.sqlite", lambda: categories.official_totals(cls, eq, p.get('profession'))) if cls and (ROOT / "kb" / "kb.sqlite").exists() else {}
     rows = []
     for key, label, _ in categories.CATEGORIES:
         if key == "other" and not counts.get(key):
