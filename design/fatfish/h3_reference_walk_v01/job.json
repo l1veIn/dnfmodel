@@ -1,0 +1,136 @@
+{
+  "job_id": "fatfish_reference_e4c44a5801d64770b3f99edab9b8b316",
+  "status": "completed",
+  "mode": "one-pass",
+  "frozen_api_sha256": "8d895947bccc621f7610a64e74e28b834e157cd6b340e03a0c513ed5268e92bb",
+  "frozen_gui_sha256": "4781751286c7645430ccb51398eb60dca22dcbfe5aa2ef794f9b840cddf5656b",
+  "stages": [
+    {
+      "name": "execute",
+      "node": "20",
+      "width": 608,
+      "height": 352,
+      "client_id": "ef19af43-2e2f-4e44-bcdb-e90678c2f942",
+      "status": "completed",
+      "submission_attempted": true,
+      "started_at": 1792770975.5527008,
+      "prompt_id": "47665a9a-3fc3-4aac-b59d-fc95b524f0ee",
+      "elapsed_seconds": 111.39,
+      "videos": [
+        "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_h3_reference_walk_v01_00001_.mp4"
+      ],
+      "media_reports": [
+        {
+          "file": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_h3_reference_walk_v01_00001_.mp4",
+          "width": 608,
+          "height": 352,
+          "fps": 24.0,
+          "video_codec": "h264",
+          "container_seconds": 5.167,
+          "decoded_frames": 124,
+          "mean_luma_proxy": 120.56885042498189,
+          "mean_temporal_pixel_change": 1.9492802972473748,
+          "frames": {
+            "1": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_h3_reference_walk_v01_00001__qa\\frame_001.png",
+            "62": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_h3_reference_walk_v01_00001__qa\\frame_062.png",
+            "124": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_h3_reference_walk_v01_00001__qa\\frame_124.png"
+          },
+          "audio": {
+            "codec": "aac",
+            "sample_rate": 32000,
+            "channels": 2,
+            "decoded_audio_frames": 162,
+            "rms": 0.0314058543600781,
+            "peak": 0.7249991297721863
+          }
+        }
+      ]
+    }
+  ],
+  "memory_before": {
+    "ram_available_gib": 15.656089782714844,
+    "commit_available_gib": 16.10275650024414,
+    "commit_total_gib": 40.95303726196289
+  },
+  "backend": {
+    "system": {
+      "os": "win32",
+      "ram_total": 33487228928,
+      "ram_free": 16814796800,
+      "comfyui_version": "0.42.1",
+      "required_frontend_version": "1.55.18",
+      "installed_templates_version": "0.11.89",
+      "required_templates_version": "0.11.89",
+      "comfy_package_versions": [
+        {
+          "name": "comfyui-frontend-package",
+          "installed": "1.55.18",
+          "required": "1.55.18"
+        },
+        {
+          "name": "comfyui-workflow-templates",
+          "installed": "0.11.89",
+          "required": "0.11.89"
+        },
+        {
+          "name": "comfyui-embedded-docs",
+          "installed": "0.5.14",
+          "required": "0.5.14"
+        },
+        {
+          "name": "comfy-kitchen",
+          "installed": "0.2.39",
+          "required": "0.2.39"
+        },
+        {
+          "name": "comfy-aimdo",
+          "installed": "0.5.6",
+          "required": "0.5.6"
+        }
+      ],
+      "python_version": "3.13.12 (main, Feb 12 2026, 00:38:53) [MSC v.1944 64 bit (AMD64)]",
+      "pytorch_version": "2.12.1+cu130",
+      "embedded_python": false,
+      "deploy_environment": "local-desktop2-standalone",
+      "argv": [
+        "main.py",
+        "--listen",
+        "127.0.0.1",
+        "--port",
+        "8188",
+        "--cuda-device",
+        "0",
+        "--offline",
+        "--disable-all-custom-nodes",
+        "--whitelist-custom-nodes",
+        "ComfyUI_MiniMaxH3_Director",
+        "--cache-none",
+        "--reserve-vram",
+        "1",
+        "--disable-pinned-memory",
+        "--extra-model-paths-config",
+        "D:\\VideoStudio\\comfyUI\\shared_model_paths.yaml",
+        "--input-directory",
+        "D:\\VideoStudio\\comfyUI\\shared\\input",
+        "--output-directory",
+        "D:\\VideoStudio\\comfyUI\\shared\\output"
+      ]
+    },
+    "devices": [
+      {
+        "name": "cuda:0 NVIDIA GeForce RTX 4070 SUPER : cudaMallocAsync",
+        "type": "cuda",
+        "index": 0,
+        "vram_total": 12878086144,
+        "vram_free": 11524767744,
+        "torch_vram_total": 33554432,
+        "torch_vram_free": 25034752
+      }
+    ]
+  },
+  "memory_after": {
+    "ram_available_gib": 15.663440704345703,
+    "commit_available_gib": 16.23831558227539,
+    "commit_total_gib": 40.95303726196289
+  }
+}

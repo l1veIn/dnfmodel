@@ -1,0 +1,81 @@
+{
+  "job_id": "fatfish_pose_7d5d4f7066034729ad6007e029b679e4",
+  "mode": "one-pass",
+  "status": "completed",
+  "profile": {
+    "jobs_max": 1,
+    "new_motion_generations_max": 1,
+    "first_frame_only_plus_pose": true,
+    "same_reference_and_seed_as_h3_baseline": true,
+    "no_automatic_refine": true,
+    "width": 608,
+    "height": 352,
+    "length": 124,
+    "seed": 20261023,
+    "steps": 20,
+    "control_strength": 1,
+    "pose_cycle_seconds": 1,
+    "original_ani_verified": false,
+    "protected_files_before": {
+      "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\h3_walk_v01\\references\\same_grok_letterboxed_608x352.png": "5e3b17371e2008b9a4d7a604c3712590dd0d4da65f91adb5acad5d185fb5ed87",
+      "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20",
+      "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+      "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d",
+      "C:\\Users\\A\\Desktop\\dnfmodel\\output\\Fatfish_H3_Walk_v01\\report.json": "16e945faadc6fd0f254467b7045477fa202a807989118e62a0840112d58bc4bd"
+    }
+  },
+  "memory_before": {
+    "ram_available_gib": 15.452091217041016,
+    "commit_available_gib": 14.517230987548828,
+    "commit_total_gib": 40.95303726196289
+  },
+  "backend_version": "0.42.1",
+  "stages": [
+    {
+      "name": "pose_first",
+      "node": "20",
+      "width": 608,
+      "height": 352,
+      "client_id": "0d3c413b-b722-4e68-9cac-35413988e5dc",
+      "status": "completed",
+      "submission_attempted": true,
+      "started_at": 1792756295.795013,
+      "prompt_id": "e2052d98-9bae-4d6e-aa8e-a1494df968ad",
+      "elapsed_seconds": 111.43,
+      "videos": [
+        "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_h3_pose_walk_v01_00001_.mp4"
+      ],
+      "media_reports": [
+        {
+          "file": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_h3_pose_walk_v01_00001_.mp4",
+          "width": 608,
+          "height": 352,
+          "fps": 24.0,
+          "video_codec": "h264",
+          "container_seconds": 5.167,
+          "decoded_frames": 124,
+          "mean_luma_proxy": 125.66645714544481,
+          "mean_temporal_pixel_change": 1.9741151439465159,
+          "frames": {
+            "1": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_h3_pose_walk_v01_00001__qa\\frame_001.png",
+            "62": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_h3_pose_walk_v01_00001__qa\\frame_062.png",
+            "124": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_h3_pose_walk_v01_00001__qa\\frame_124.png"
+          },
+          "audio": {
+            "codec": "aac",
+            "sample_rate": 32000,
+            "channels": 2,
+            "decoded_audio_frames": 162,
+            "rms": 0.1323367843410059,
+            "peak": 0.8503760099411011
+          }
+        }
+      ]
+    }
+  ],
+  "memory_after": {
+    "ram_available_gib": 15.68795394897461,
+    "commit_available_gib": 13.85263442993164,
+    "commit_total_gib": 40.95303726196289
+  }
+}

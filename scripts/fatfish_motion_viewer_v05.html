@@ -1,0 +1,25 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大肥鱼 v05.1 动作预览</title><style>
+body{margin:0;background:#141c28;color:#e7eef7;font:15px/1.6 system-ui,"Microsoft YaHei",sans-serif}main{max-width:1200px;margin:auto;padding:24px}h1{font-size:24px;margin:0 0 8px}p{color:#aebed1}button,select,input{font:inherit}button,select{border:1px solid #405574;background:#25374f;color:#e7eef7;padding:7px 12px;border-radius:6px}button.active{background:#2e678d;border-color:#62c0ef}.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}.canvases{display:flex;gap:18px;overflow:auto;padding:12px 0}canvas{image-rendering:pixelated;display:block;background:#101722;max-width:none}label{white-space:nowrap}.caption{color:#c7d8ea;margin-bottom:8px;min-height:48px}.note{padding:12px 16px;background:#202d40;border-left:3px solid #6baac8}.status{font-variant-numeric:tabular-nums;color:#d6be88}</style>
+<main><h1>大肥鱼 v05.1 · 主帧与动作小样</h1><p>第三帧已撤销碰到前腿的局部变形，第四帧已修复袖口与手腕连接。锁定 v04 站姿，仍只包含原来的 6 张动作测试。</p>
+<div class="controls" id="actions"><button data-mode="walk" class="active">步行片段</button><button data-mode="master">主帧</button><button data-mode="cast_065">施法</button><button data-mode="jump_023">跳跃</button></div>
+<div class="controls"><button id="play">暂停</button><label>帧 <input id="frame" type="range" min="0" max="3" value="0"></label><span id="status" class="status"></span></div>
+<div class="controls"><label>视图 <select id="motion"><option value="fixed">固定坐标</option><option value="ground">原脚点接地模拟</option></select></label><label>动作版本 <select id="correction"><option value="after">局部矫正后</option><option value="before">仅整体矫正</option></select></label><label>倍率 <select id="zoom"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>6</option></select></label><label>帧间隔 <input id="speed" type="range" min="80" max="320" step="20" value="140"> <span id="speedText">140ms</span></label></div>
+<div class="canvases"><div><div class="caption">原女法动作参考</div><canvas id="source" width="176" height="160"></canvas></div><div><div class="caption">大肥鱼 · 最近邻显示 · 保留原 PNG 色彩与透明度</div><canvas id="target" width="176" height="160"></canvas></div></div>
+<div class="note">接地模拟两边使用同一组从原素材脚点推算的位移，支撑脚本身参与拟合。它可帮助检查脚形和相对位置，不能证明实机无滑步。工程配时并非原游戏 ANI，片尾会明确停顿重播。</div><p>这轮没有复用主帧脸覆盖动作脸。重点观察头脸轮廓、发梢、裙边金饰、鲸尾、鞋形和局部接缝。可暂停、拖动帧滑块，并切换修正前后。</p></main>
+<script>
+const frames=__FRAME_DATA__;
+let mode='walk',index=0,playing=true,last=0,reset=false;
+const $=id=>document.getElementById(id),lookup=Object.fromEntries(frames.map(x=>[x.name,x]));
+async function init(){if(window.innerWidth<1160)$('zoom').value=window.innerWidth<790?'1':'2';await Promise.all(frames.flatMap(f=>['original','before','after'].map(k=>new Promise((resolve,reject)=>{let im=new Image;im.onload=()=>{f[k+'Image']=im;resolve()};im.onerror=reject;im.src=f[k]}))));draw();requestAnimationFrame(tick)}
+function current(){return lookup[mode==='walk'?'walk_'+String(index).padStart(3,'0'):mode]}
+function draw(){const f=current(),zoom=Number($('zoom').value),ground=mode==='walk'&&$('motion').value==='ground';
+  const dx=ground?278-f.sole[0]:0,dy=ground?386-f.sole[1]:0;
+  for(const [id,im] of [['source',f.originalImage],['target',f[$('correction').value+'Image']]]){let canvas=$(id),ctx=canvas.getContext('2d');canvas.style.width=176*zoom+'px';canvas.style.height=160*zoom+'px';ctx.imageSmoothingEnabled=false;ctx.fillStyle='#101722';ctx.fillRect(0,0,176,160);
+    if(reset){ctx.fillStyle='#c9d9e9';ctx.font='11px sans-serif';ctx.fillText('4 帧片段结束，随后重播',15,80)}else{ctx.drawImage(im,dx-178,dy-260);ctx.strokeStyle='#92713f';ctx.beginPath();ctx.moveTo(0,126.5);ctx.lineTo(176,126.5);ctx.stroke();if(ground){ctx.fillStyle='#ddbd78';ctx.fillRect(100,122,1,9)}}}
+  $('status').textContent=reset?'片段重播':`IMG ${String(f.frame).padStart(3,'0')} · ${mode==='walk'?(index+1)+'/4':'单帧'}`;$('frame').value=index;$('speedText').textContent=$('speed').value+'ms';$('play').textContent=playing?'暂停':'播放';}
+function tick(now){if(playing&&mode==='walk'){let duration=reset?500:index===3?650:Number($('speed').value);if(now-last>=duration){if(reset){reset=false;index=0}else if(index===3){reset=true}else{index++}last=now;draw()}}requestAnimationFrame(tick)}
+$('play').onclick=()=>{playing=!playing;last=performance.now();draw()};$('frame').oninput=()=>{index=Number($('frame').value);playing=false;reset=false;draw()};
+for(let id of ['motion','correction','zoom','speed'])$(id).oninput=draw;
+for(let button of document.querySelectorAll('[data-mode]'))button.onclick=()=>{mode=button.dataset.mode;index=0;reset=false;last=performance.now();for(let b of document.querySelectorAll('[data-mode]'))b.classList.toggle('active',b===button);$('frame').disabled=mode!=='walk';draw()};
+init();</script></html>

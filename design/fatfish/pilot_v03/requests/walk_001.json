@@ -1,0 +1,26 @@
+{
+  "name": "walk_001",
+  "category": "walk_001",
+  "source_frame": 1,
+  "model": "gpt-image-2.5",
+  "input": {
+    "prompt": "Clean game sprite of the SAME Fatfish whale-maid DNF female mage. Single full body, transparent alpha, no text or props.\nCompact female-mage anatomy, consistent head size and limb proportions. Navy-to-cyan long wavy hair in about six broad readable locks, one curled ahoge, whale-fin ears, cyan bow and white maid headband. Navy long-sleeved dress, white chest and apron, one simple navy whale emblem, two gold waist buttons, small gold bows, one simple gold hem stripe, opaque white tights, navy Mary-Jane shoes and one compact navy whale tail.\nArt direction: clean low-resolution pixel sprite intended for a 128x128 native canvas, shown enlarged exactly 8x on a 1024 square. Big connected pixel clusters and solid interior colors. Each material has just a base, one shadow and one highlight. Navy outline, flat navy/blue/cyan/white/gold/skin palette. No stipple, grain, embroidery, intricate lace, tiny gold scribbles, isolated sparkle pixels, gritty texture, noisy gradients, blue/purple fringe, soft painted edges or tiny perforations. Simplify details that would collapse at native size. Preserve the costume rather than adding decoration.\nOnly one character. No grid, markers, lettering, scenery, floor, shadow, effects, weapon, bowl or extra limbs. Genuine alpha outside the silhouette, solid opaque colors inside the character.\n\nImage 1 is the immediately preceding frame of this SAME character; preserve head size, face, hair mass, gold trim, apron emblem, dress length, tail size and exact pixel density. Image 2 is the EXACT NEXT DNF pose, not a loose mood reference. Ignore its old costume; match its shoulders, elbows, wrists, hips, knees, and both shoe positions. Image 3 is the corrected contact frame/identity master.\nDraw just the next adjacent frame 1 after frame 0 in a short walking step. Keep the same fixed 128-native-pixel window enlarged 8x, do not re-center by silhouette or invent a full stride. Eye target [544, 256]; lowest/supporting shoe sole [600, 896]; other shoe sole [408, 832]; visible hand [680, 432]. Carefully preserve which leg is in front and which is behind in Image 2. Keep natural occlusion where the legs overlap.\nNo new costume decorations, no different face or hair volume, no effects or shadow. Do not mirror. The intended motion is a small progression, not a new character illustration. One full-body transparent sprite.\n",
+    "n": 1,
+    "size": "1:1",
+    "resolution": "1k",
+    "background": "transparent",
+    "output_format": "png",
+    "quality": "high"
+  },
+  "local_reference_paths": [
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\corrected\\fix_walk_reference_8x.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\references\\walk_001_pose.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\corrected\\fix_walk_reference_8x.png"
+  ],
+  "reference_sha256": [
+    "8a9b3e96b701960a5beb3220468c96c607fdbfa7607e36dc1576936b9b244a40",
+    "a1f17b937f111a44bc17324f08340e1d49d21aa53f9acadcdb87aaf064f14382",
+    "8a9b3e96b701960a5beb3220468c96c607fdbfa7607e36dc1576936b9b244a40"
+  ],
+  "output_directory": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\raw"
+}

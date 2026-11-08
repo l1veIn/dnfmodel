@@ -1,0 +1,522 @@
+{
+  "inspected_at": "2026-10-22T10:10:33.510218+00:00",
+  "provider": "65535",
+  "model": "gpt-image-2.5",
+  "completed": 12,
+  "authorized_count": 12,
+  "budget_usd": 20.0,
+  "observed_account_cost_delta": 0.4559999999999995,
+  "cost_unit": "USD",
+  "cost_caution": "Observed account usage checked before and after each four-job wave; API exposes no per-request billing cap. Other concurrent account activity can contribute to observed deltas.",
+  "alpha_pass": 12,
+  "clipped_count": 0,
+  "registration_analysis": "Full original 1024 square retained. No bbox centering, rescaling, pose correction, matting, or pixel repainting of raw PNGs.",
+  "animation_caution": "Three poses per category selected for a small test. Source animation names and timings not certified from ANI; pose GIFs are inspection flips only.",
+  "rows": [
+    {
+      "name": "idle_01",
+      "category": "idle",
+      "source_frame": 10,
+      "task_id": "img_944f828ae9a17ee1d7c5d1b5cf20f57e",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png",
+      "sha256": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "has_real_alpha": true,
+      "transparent_fraction": 0.855496,
+      "partial_alpha_fraction": 0.142982,
+      "transparent_corner_patches": true,
+      "alpha_bbox_gt_8": [
+        290,
+        243,
+        686,
+        953
+      ],
+      "alpha_bbox_gt_127": [
+        290,
+        244,
+        685,
+        952
+      ],
+      "touches_canvas_edge": false,
+      "reference_alpha_bbox": [
+        432,
+        368,
+        584,
+        764
+      ],
+      "silhouette_height_ratio": 1.793,
+      "silhouette_bottom_delta_output_px": 189,
+      "silhouette_bottom_delta_native_px": 47.25,
+      "metric_caution": "Silhouette extents only, not detected skeletal joints. New hair/tail/hat change silhouette; bottom is only a shoe-registration proxy. No auto-fitting or alignment correction performed."
+    },
+    {
+      "name": "idle_02",
+      "category": "idle",
+      "source_frame": 13,
+      "task_id": "img_414c634849f072ff52215d9695fa23b0",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_02_0.png",
+      "sha256": "b95070be3bc580dd8b8d042ea898a079c1bc63065710ef5d3b2ff20b778122c3",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "has_real_alpha": true,
+      "transparent_fraction": 0.888536,
+      "partial_alpha_fraction": 0.110962,
+      "transparent_corner_patches": true,
+      "alpha_bbox_gt_8": [
+        283,
+        315,
+        653,
+        933
+      ],
+      "alpha_bbox_gt_127": [
+        284,
+        316,
+        652,
+        932
+      ],
+      "touches_canvas_edge": false,
+      "reference_alpha_bbox": [
+        432,
+        368,
+        580,
+        764
+      ],
+      "silhouette_height_ratio": 1.561,
+      "silhouette_bottom_delta_output_px": 169,
+      "silhouette_bottom_delta_native_px": 42.25,
+      "metric_caution": "Silhouette extents only, not detected skeletal joints. New hair/tail/hat change silhouette; bottom is only a shoe-registration proxy. No auto-fitting or alignment correction performed."
+    },
+    {
+      "name": "idle_03",
+      "category": "idle",
+      "source_frame": 17,
+      "task_id": "img_0e6d8d62b997d89394bc242d081ac127",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_03_0.png",
+      "sha256": "9ff69d73e8a920bd16e115b1f7e274feccdc981527eef5e60cbd97fafb2c40c5",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "has_real_alpha": true,
+      "transparent_fraction": 0.884974,
+      "partial_alpha_fraction": 0.11446,
+      "transparent_corner_patches": true,
+      "alpha_bbox_gt_8": [
+        301,
+        298,
+        672,
+        932
+      ],
+      "alpha_bbox_gt_127": [
+        302,
+        299,
+        671,
+        931
+      ],
+      "touches_canvas_edge": false,
+      "reference_alpha_bbox": [
+        432,
+        372,
+        584,
+        780
+      ],
+      "silhouette_height_ratio": 1.554,
+      "silhouette_bottom_delta_output_px": 152,
+      "silhouette_bottom_delta_native_px": 38.0,
+      "metric_caution": "Silhouette extents only, not detected skeletal joints. New hair/tail/hat change silhouette; bottom is only a shoe-registration proxy. No auto-fitting or alignment correction performed."
+    },
+    {
+      "name": "walk_01",
+      "category": "walk",
+      "source_frame": 0,
+      "task_id": "img_f9baceaf72a712c48e0c4c88d7c4cba0",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\walk_01_0.png",
+      "sha256": "da4fc60d5d20805feb15fe0e744743856199ed13a76727de9e91865392ccc0c6",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "has_real_alpha": true,
+      "transparent_fraction": 0.848489,
+      "partial_alpha_fraction": 0.149776,
+      "transparent_corner_patches": true,
+      "alpha_bbox_gt_8": [
+        230,
+        277,
+        762,
+        937
+      ],
+      "alpha_bbox_gt_127": [
+        230,
+        278,
+        761,
+        936
+      ],
+      "touches_canvas_edge": false,
+      "reference_alpha_bbox": [
+        384,
+        368,
+        652,
+        752
+      ],
+      "silhouette_height_ratio": 1.719,
+      "silhouette_bottom_delta_output_px": 185,
+      "silhouette_bottom_delta_native_px": 46.25,
+      "metric_caution": "Silhouette extents only, not detected skeletal joints. New hair/tail/hat change silhouette; bottom is only a shoe-registration proxy. No auto-fitting or alignment correction performed."
+    },
+    {
+      "name": "walk_02",
+      "category": "walk",
+      "source_frame": 3,
+      "task_id": "img_19ffef1d2998fb2b81d0b610c50e452a",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\walk_02_0.png",
+      "sha256": "64808bdda263ae0a8bc959b3f19a8f1471d2b4cd59088ffc13c110a3a11975b3",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "has_real_alpha": true,
+      "transparent_fraction": 0.85499,
+      "partial_alpha_fraction": 0.144408,
+      "transparent_corner_patches": true,
+      "alpha_bbox_gt_8": [
+        222,
+        264,
+        722,
+        930
+      ],
+      "alpha_bbox_gt_127": [
+        223,
+        265,
+        721,
+        929
+      ],
+      "touches_canvas_edge": false,
+      "reference_alpha_bbox": [
+        420,
+        372,
+        600,
+        760
+      ],
+      "silhouette_height_ratio": 1.716,
+      "silhouette_bottom_delta_output_px": 170,
+      "silhouette_bottom_delta_native_px": 42.5,
+      "metric_caution": "Silhouette extents only, not detected skeletal joints. New hair/tail/hat change silhouette; bottom is only a shoe-registration proxy. No auto-fitting or alignment correction performed."
+    },
+    {
+      "name": "walk_03",
+      "category": "walk",
+      "source_frame": 6,
+      "task_id": "img_c2c03349f23f16f2a38ced79fc7eae46",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\walk_03_0.png",
+      "sha256": "59527a15df6b2572919aef34b4256f828ab11e1321c9cfff895d5ea93a8af67e",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "has_real_alpha": true,
+      "transparent_fraction": 0.841895,
+      "partial_alpha_fraction": 0.156165,
+      "transparent_corner_patches": true,
+      "alpha_bbox_gt_8": [
+        268,
+        231,
+        753,
+        934
+      ],
+      "alpha_bbox_gt_127": [
+        269,
+        231,
+        752,
+        933
+      ],
+      "touches_canvas_edge": false,
+      "reference_alpha_bbox": [
+        412,
+        368,
+        604,
+        740
+      ],
+      "silhouette_height_ratio": 1.89,
+      "silhouette_bottom_delta_output_px": 194,
+      "silhouette_bottom_delta_native_px": 48.5,
+      "metric_caution": "Silhouette extents only, not detected skeletal joints. New hair/tail/hat change silhouette; bottom is only a shoe-registration proxy. No auto-fitting or alignment correction performed."
+    },
+    {
+      "name": "cast_01",
+      "category": "cast",
+      "source_frame": 62,
+      "task_id": "img_c02de318d4ae712c1a83c051c9ce300c",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\cast_01_0.png",
+      "sha256": "7a7e32d92fec8df290a4ae4f1852a1434f2e0744170ce9f2a3e47a3f7a248064",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "has_real_alpha": true,
+      "transparent_fraction": 0.860885,
+      "partial_alpha_fraction": 0.138481,
+      "transparent_corner_patches": true,
+      "alpha_bbox_gt_8": [
+        283,
+        248,
+        686,
+        933
+      ],
+      "alpha_bbox_gt_127": [
+        284,
+        249,
+        685,
+        932
+      ],
+      "touches_canvas_edge": false,
+      "reference_alpha_bbox": [
+        432,
+        372,
+        608,
+        772
+      ],
+      "silhouette_height_ratio": 1.712,
+      "silhouette_bottom_delta_output_px": 161,
+      "silhouette_bottom_delta_native_px": 40.25,
+      "metric_caution": "Silhouette extents only, not detected skeletal joints. New hair/tail/hat change silhouette; bottom is only a shoe-registration proxy. No auto-fitting or alignment correction performed."
+    },
+    {
+      "name": "cast_02",
+      "category": "cast",
+      "source_frame": 64,
+      "task_id": "img_04af018317629d2907f8d8881dd9069a",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\cast_02_0.png",
+      "sha256": "132f33c47a1b3e45792b9b61022d77276173bc0286448d0ce3fc332413fc4e72",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "has_real_alpha": true,
+      "transparent_fraction": 0.828226,
+      "partial_alpha_fraction": 0.170247,
+      "transparent_corner_patches": true,
+      "alpha_bbox_gt_8": [
+        191,
+        270,
+        779,
+        974
+      ],
+      "alpha_bbox_gt_127": [
+        192,
+        271,
+        778,
+        973
+      ],
+      "touches_canvas_edge": false,
+      "reference_alpha_bbox": [
+        420,
+        372,
+        592,
+        772
+      ],
+      "silhouette_height_ratio": 1.76,
+      "silhouette_bottom_delta_output_px": 202,
+      "silhouette_bottom_delta_native_px": 50.5,
+      "metric_caution": "Silhouette extents only, not detected skeletal joints. New hair/tail/hat change silhouette; bottom is only a shoe-registration proxy. No auto-fitting or alignment correction performed."
+    },
+    {
+      "name": "cast_03",
+      "category": "cast",
+      "source_frame": 65,
+      "task_id": "img_a14ce4bed5d1de812ede307ba1293358",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\cast_03_0.png",
+      "sha256": "fda707953915e0afbfb3c3f870b45a15cbbead50e761823299203c0f1510fe31",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "has_real_alpha": true,
+      "transparent_fraction": 0.844828,
+      "partial_alpha_fraction": 0.153831,
+      "transparent_corner_patches": true,
+      "alpha_bbox_gt_8": [
+        249,
+        254,
+        816,
+        935
+      ],
+      "alpha_bbox_gt_127": [
+        249,
+        254,
+        815,
+        934
+      ],
+      "touches_canvas_edge": false,
+      "reference_alpha_bbox": [
+        332,
+        372,
+        584,
+        772
+      ],
+      "silhouette_height_ratio": 1.702,
+      "silhouette_bottom_delta_output_px": 163,
+      "silhouette_bottom_delta_native_px": 40.75,
+      "metric_caution": "Silhouette extents only, not detected skeletal joints. New hair/tail/hat change silhouette; bottom is only a shoe-registration proxy. No auto-fitting or alignment correction performed."
+    },
+    {
+      "name": "jump_01",
+      "category": "jump",
+      "source_frame": 22,
+      "task_id": "img_97518880dab73b2f01d9e8c395733ae0",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\jump_01_0.png",
+      "sha256": "a5e6ac6cdc9a4d8ade54389086f1dbb64f3ba8a479817bc095b071e9640159f9",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "has_real_alpha": true,
+      "transparent_fraction": 0.830267,
+      "partial_alpha_fraction": 0.168342,
+      "transparent_corner_patches": true,
+      "alpha_bbox_gt_8": [
+        241,
+        224,
+        727,
+        973
+      ],
+      "alpha_bbox_gt_127": [
+        242,
+        225,
+        726,
+        972
+      ],
+      "touches_canvas_edge": false,
+      "reference_alpha_bbox": [
+        392,
+        372,
+        612,
+        760
+      ],
+      "silhouette_height_ratio": 1.93,
+      "silhouette_bottom_delta_output_px": 213,
+      "silhouette_bottom_delta_native_px": 53.25,
+      "metric_caution": "Silhouette extents only, not detected skeletal joints. New hair/tail/hat change silhouette; bottom is only a shoe-registration proxy. No auto-fitting or alignment correction performed."
+    },
+    {
+      "name": "jump_02",
+      "category": "jump",
+      "source_frame": 23,
+      "task_id": "img_ffab5d24800ad616a0d382a63e9ee4b3",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\jump_02_0.png",
+      "sha256": "9000a9fb647e08251db2fbcbf10fb6d4a07691e105ca5f0d6e216a7fb3705d84",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "has_real_alpha": true,
+      "transparent_fraction": 0.812225,
+      "partial_alpha_fraction": 0.186041,
+      "transparent_corner_patches": true,
+      "alpha_bbox_gt_8": [
+        231,
+        200,
+        738,
+        948
+      ],
+      "alpha_bbox_gt_127": [
+        232,
+        201,
+        737,
+        948
+      ],
+      "touches_canvas_edge": false,
+      "reference_alpha_bbox": [
+        396,
+        384,
+        636,
+        760
+      ],
+      "silhouette_height_ratio": 1.989,
+      "silhouette_bottom_delta_output_px": 188,
+      "silhouette_bottom_delta_native_px": 47.0,
+      "metric_caution": "Silhouette extents only, not detected skeletal joints. New hair/tail/hat change silhouette; bottom is only a shoe-registration proxy. No auto-fitting or alignment correction performed."
+    },
+    {
+      "name": "jump_03",
+      "category": "jump",
+      "source_frame": 26,
+      "task_id": "img_06fac7eb462e9779ca8924aeaed251fe",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\jump_03_0.png",
+      "sha256": "92bca2a6329e8478e445e98dd16b1b98a388c2dbb8c1356a0dbd3db3faf0bcd2",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "has_real_alpha": true,
+      "transparent_fraction": 0.829739,
+      "partial_alpha_fraction": 0.169302,
+      "transparent_corner_patches": true,
+      "alpha_bbox_gt_8": [
+        259,
+        214,
+        742,
+        920
+      ],
+      "alpha_bbox_gt_127": [
+        260,
+        215,
+        741,
+        919
+      ],
+      "touches_canvas_edge": false,
+      "reference_alpha_bbox": [
+        392,
+        372,
+        612,
+        760
+      ],
+      "silhouette_height_ratio": 1.82,
+      "silhouette_bottom_delta_output_px": 160,
+      "silhouette_bottom_delta_native_px": 40.0,
+      "metric_caution": "Silhouette extents only, not detected skeletal joints. New hair/tail/hat change silhouette; bottom is only a shoe-registration proxy. No auto-fitting or alignment correction performed."
+    }
+  ],
+  "contact_sheet": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\qa\\contact_sheet.png",
+  "alignment_sheets": [
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\qa\\alignment_idle.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\qa\\alignment_walk.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\qa\\alignment_cast.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\qa\\alignment_jump.png"
+  ],
+  "pose_flips": [
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\qa\\pose_flip_idle.gif",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\qa\\pose_flip_walk.gif",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\qa\\pose_flip_cast.gif",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\qa\\pose_flip_jump.gif"
+  ]
+}

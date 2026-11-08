@@ -1,0 +1,88 @@
+{
+  "eyes": [
+    [
+      332,
+      227
+    ],
+    [
+      351,
+      221
+    ],
+    [
+      381,
+      234
+    ],
+    [
+      351,
+      207
+    ],
+    [
+      356,
+      207
+    ],
+    [
+      408,
+      208
+    ],
+    [
+      348,
+      209
+    ],
+    [
+      385,
+      214
+    ],
+    [
+      394,
+      213
+    ]
+  ],
+  "tail_reviews": [
+    {
+      "visible_hd": true,
+      "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+      "status": "待验收"
+    },
+    {
+      "visible_hd": true,
+      "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+      "status": "待验收"
+    },
+    {
+      "visible_hd": true,
+      "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+      "status": "待验收"
+    },
+    {
+      "visible_hd": true,
+      "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+      "status": "待验收"
+    },
+    {
+      "visible_hd": true,
+      "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+      "status": "待验收"
+    },
+    {
+      "visible_hd": true,
+      "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+      "status": "待验收"
+    },
+    {
+      "visible_hd": true,
+      "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+      "status": "待验收"
+    },
+    {
+      "visible_hd": true,
+      "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+      "status": "待验收"
+    },
+    {
+      "visible_hd": true,
+      "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+      "status": "待验收"
+    }
+  ],
+  "method": "Manually inspected blue-eye centers in normalized 640px cells; approximate fitting hints."
+}

@@ -1,0 +1,67 @@
+{
+  "name": "walk_003",
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\raw\\walk_003_0.png",
+  "sha256": "9714c00db3bfa4e309d61765531993682af28312421ed97618c1c5621e0d82a9",
+  "raw_eye": [
+    542.0,
+    296.0
+  ],
+  "raw_sole": [
+    416.0,
+    939.0
+  ],
+  "target_eye": [
+    252.0,
+    304.0
+  ],
+  "target_sole": [
+    235.0,
+    386.0
+  ],
+  "actual_eye": [
+    251.99999999999997,
+    303.99999999999994
+  ],
+  "actual_sole": [
+    234.99999999999997,
+    385.99999999999994
+  ],
+  "resized_canvas": [
+    131,
+    131
+  ],
+  "scale_x": 0.12780823287037715,
+  "scale_y": 0.12780823287037715,
+  "translation": [
+    183.14504862283815,
+    265.41481162289637
+  ],
+  "transform_type": "global_similarity",
+  "matrix_2x3": [
+    [
+      0.1278006172480056,
+      -0.00139521341640948,
+      183.14504862283815
+    ],
+    [
+      0.00139521341640948,
+      0.1278006172480056,
+      265.41481162289637
+    ]
+  ],
+  "rotation_degrees": 0.6254794882648165,
+  "landmark_method": "Manually annotated visible eye and sole, approximate 1-2 native pixels; no skeleton detector.",
+  "processing": "Single-pass global similarity (if requested) or uniform resize + translation. Nearest and filtered candidates. Clean candidate thresholds alpha at 128, no palette reduction, local deformation or repainting. Eye/sole are fitting anchors, not independent validation.",
+  "source_modified": false,
+  "game_ready": false,
+  "outputs": [
+    {
+      "method": "nearest",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\registered\\walk_003_nearest_canvas.png"
+    },
+    {
+      "method": "bicubic",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\registered\\walk_003_bicubic_canvas.png"
+    }
+  ]
+}

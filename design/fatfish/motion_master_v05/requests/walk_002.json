@@ -1,0 +1,26 @@
+{
+  "name": "walk_002",
+  "category": "walk_002",
+  "source_frame": 2,
+  "model": "gpt-image-2.5",
+  "input": {
+    "prompt": "Use case: identity-preserve / animation sprite pose edit.\nOne full-body Fatfish whale-maid female mage game sprite, genuine transparent RGBA background.\nImage 1 is the EDIT TARGET and strict pose/geometry guide: repaint this gray DNF sprite into the approved character while keeping its skeletal pose and frame placement. Ignore the guide's original hair, hat, clothes and equipment.\nImage 2 is the APPROVED STANDING MASTER: preserve this exact character's face, proportions, costume, fine wavy navy-to-cyan hair, curled ahoge, whale-fin ears, cyan bow, white maid headband, dark long sleeves, white chest/apron, whale emblem, gold edging/bows/buttons, opaque white stockings, dark Mary-Jane shoes and compact whale tail. Match its existing rendering and delicacy. Do not simplify the hair into thick cyan blobs, enlarge the face, redesign the skirt or invent decorations.\nImage 3 is supplementary identity/detail or motion continuity, NOT a substitute for the pose in Image 1.\nKeep the same three-quarter facing-screen-right body/head view as the guide. Keep hair volume and the whale-tail silhouette consistent; allow only a small natural response to the pose. Match the master's light direction, colors, line weight and head size.\nFraming: 1024 square representing a fixed 128x128 native game window enlarged 8 times. Keep all important body parts inside the same window. Head/shoulders/pelvis/elbows/hands/knees and both shoes must follow Image 1, not a generic action pose. Copy the guide's actual leg overlap and foot spacing.\nOnly the character; no weapon, spell, motion blur, shadow, floor, grid, labels, markers, checkerboard or scenery. No new accessories or alternate costume. Do not output a sheet, panels or multiple figures. Preserve true alpha outside the figure.\n\nImage 3 is the immediately preceding registered walking frame. Keep the same head size, face, hair locks, hem details and tail volume with minimal inter-frame changes. Do not copy its limb pose.\nACTION: Walk/contact pose. Follow this exact guide frame; do not reuse the master's standing legs or invent a wide stride.\nOriginal IMG slot 2. Visible eye near output [552, 256]; support/lowest shoe sole [560, 896]. Other shoe sole [440, 832]. Visible hand target(s) [[552, 544]] (output pixels).\n",
+    "n": 1,
+    "size": "1:1",
+    "resolution": "1k",
+    "background": "transparent",
+    "output_format": "png",
+    "quality": "high"
+  },
+  "local_reference_paths": [
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\references\\walk_002_pose.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\references\\master_approved_8x.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\corrected\\walk_001_reference_8x.png"
+  ],
+  "reference_sha256": [
+    "17368be47d8ae749c4a5d334687d81b53771e692b104109e51206f929126a46e",
+    "69b3de02e55aa6ebda3e5192d67055a893819258d5acf1e9ba2ae1ce948f7308",
+    "60d0004a422f058dbb7a0ca718572b07783feb916eaa00bc4376ff89569f73df"
+  ],
+  "output_directory": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw"
+}

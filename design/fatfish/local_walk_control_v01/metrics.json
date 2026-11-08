@@ -1,0 +1,13 @@
+{
+  "elapsed_seconds": 41.291,
+  "peak_gpu_used_mib_sampled": 6429.0,
+  "min_ram_free_gib_sampled": 8.124412536621094,
+  "min_commit_free_gib_sampled": 15.499488830566406,
+  "sample_interval_seconds": 0.5,
+  "frames": 25,
+  "size": 256,
+  "fps": 24,
+  "alpha_output": false,
+  "memory_guard_triggered": false,
+  "game_ready": false
+}

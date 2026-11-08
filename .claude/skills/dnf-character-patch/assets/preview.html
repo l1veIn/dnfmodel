@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__TITLE__</title>
+<style>
+:root{--bg:#10141f;--panel:#1a2132;--line:#2c3650;--ink:#e6ebf7;--dim:#93a0bd;--accent:#6ea8ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 system-ui,"Microsoft YaHei",sans-serif}
+header{padding:18px 20px 6px}h1{margin:0;font-size:20px}header p{margin:4px 0 0;color:var(--dim)}
+.wrap{display:grid;grid-template-columns:220px 1fr;gap:14px;padding:14px 20px 28px}
+@media(max-width:760px){.wrap{grid-template-columns:1fr}.clips{max-height:180px}}
+.clips{background:var(--panel);border:1px solid var(--line);border-radius:8px;max-height:calc(100vh - 110px);overflow:auto;padding:6px}
+.clips button{display:flex;justify-content:space-between;width:100%;background:none;border:0;color:var(--ink);padding:7px 9px;border-radius:6px;font:inherit;cursor:pointer;text-align:left}
+.clips button:hover{background:#242d44}.clips button.on{background:var(--accent);color:#0b1020}
+.clips small{opacity:.7}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin-bottom:12px}
+.bar button,.bar select{background:#242d44;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:5px 10px;font:inherit;cursor:pointer}
+.stage{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+figure{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+figcaption{padding:6px 10px;color:var(--dim);border-bottom:1px solid var(--line)}
+.view{width:100%;display:flex;justify-content:center;background:linear-gradient(#55617a 0 72%,#3a4254 72% 100%)}
+canvas{image-rendering:pixelated;max-width:100%;display:block}
+</style></head><body>
+<header><h1>__TITLE__</h1><p>整体绘制：__METHOD__ + 手部贴合。四栏同一帧位、同一世界坐标、100 ms 手工配时；1× 才是游戏里的真实观感。</p></header>
+<div class="wrap"><nav class="clips" id="clips"></nav><main>
+<div class="bar"><button id="play">暂停</button><button id="prev">上一帧</button><button id="next">下一帧</button>
+<label>缩放 <select id="zoom"><option value="1">1× 游戏实际</option><option value="2" selected>2×</option><option value="3">3×</option></select></label>
+<label>速度 <select id="speed"><option value="1">原速</option><option value="0.5">半速</option><option value="0.25">1/4 速</option></select></label>
+<span id="info"></span></div>
+<div class="stage">
+__COLUMNS__
+</div></main></div>
+<script>
+const CLIPS=__CLIPS__,CELL=__CELL__,COLS=__COLS__;
+const views=[...document.querySelectorAll('canvas')].map(c=>{const i=new Image();i.src=c.dataset.src;return {c,i,x:c.getContext('2d')}});
+let clip=CLIPS[0],pos=0,playing=true,last=0;
+const $=id=>document.getElementById(id);
+function draw(){const z=+$('zoom').value,frame=clip.start+pos;for(const v of views){v.c.width=CELL[0]*z;v.c.height=CELL[1]*z;v.x.imageSmoothingEnabled=false;
+ if(v.i.complete)v.x.drawImage(v.i,(frame%COLS)*CELL[0],Math.floor(frame/COLS)*CELL[1],CELL[0],CELL[1],0,0,CELL[0]*z,CELL[1]*z)}
+ $('info').textContent=clip.name+' · IMG '+String(frame).padStart(3,'0')+' ('+(pos+1)+'/'+(clip.end-clip.start+1)+')'}
+function tick(t){const ms=100/+$('speed').value;if(playing&&t-last>=ms){last=t;pos=(pos+1)%(clip.end-clip.start+1);draw()}requestAnimationFrame(tick)}
+CLIPS.forEach(k=>{const b=document.createElement('button');b.innerHTML=k.name+' <small>'+k.start+'–'+k.end+'</small>';b.onclick=()=>{clip=k;pos=0;[...$('clips').children].forEach(e=>e.classList.remove('on'));b.classList.add('on');draw()};$('clips').appendChild(b)});
+$('clips').firstChild.classList.add('on');
+$('play').onclick=()=>{playing=!playing;$('play').textContent=playing?'暂停':'播放'};
+$('prev').onclick=()=>{playing=false;$('play').textContent='播放';pos=(pos-1+clip.end-clip.start+1)%(clip.end-clip.start+1);draw()};
+$('next').onclick=()=>{playing=false;$('play').textContent='播放';pos=(pos+1)%(clip.end-clip.start+1);draw()};
+$('zoom').onchange=draw;views.forEach(v=>v.i.onload=draw);draw();requestAnimationFrame(tick);
+</script></body></html>

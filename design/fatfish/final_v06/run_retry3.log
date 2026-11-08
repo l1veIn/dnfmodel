@@ -1,0 +1,98 @@
+{"event": "accepted", "stage": "execute", "prompt_id": "6bb7e42f-ef50-498a-b5eb-9a4fdfb8ff4d"}
+{"event": "running", "stage": "execute", "prompt_id": "6bb7e42f-ef50-498a-b5eb-9a4fdfb8ff4d", "ram_available_GiB": 18.96, "gpu": "1661, 4"}
+{"event": "running", "stage": "execute", "prompt_id": "6bb7e42f-ef50-498a-b5eb-9a4fdfb8ff4d", "ram_available_GiB": 14.26, "gpu": "9005, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "6bb7e42f-ef50-498a-b5eb-9a4fdfb8ff4d", "ram_available_GiB": 13.62, "gpu": "11455, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "6bb7e42f-ef50-498a-b5eb-9a4fdfb8ff4d", "ram_available_GiB": 13.61, "gpu": "11500, 96"}
+{"event": "running", "stage": "execute", "prompt_id": "6bb7e42f-ef50-498a-b5eb-9a4fdfb8ff4d", "ram_available_GiB": 13.57, "gpu": "11154, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "6bb7e42f-ef50-498a-b5eb-9a4fdfb8ff4d", "ram_available_GiB": 13.52, "gpu": "11155, 95"}
+{"event": "running", "stage": "execute", "prompt_id": "6bb7e42f-ef50-498a-b5eb-9a4fdfb8ff4d", "ram_available_GiB": 13.61, "gpu": "11160, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "6bb7e42f-ef50-498a-b5eb-9a4fdfb8ff4d", "ram_available_GiB": 13.62, "gpu": "11144, 96"}
+{"event": "running", "stage": "execute", "prompt_id": "6bb7e42f-ef50-498a-b5eb-9a4fdfb8ff4d", "ram_available_GiB": 13.62, "gpu": "11144, 95"}
+{"event": "running", "stage": "execute", "prompt_id": "6bb7e42f-ef50-498a-b5eb-9a4fdfb8ff4d", "ram_available_GiB": 13.61, "gpu": "11144, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "6bb7e42f-ef50-498a-b5eb-9a4fdfb8ff4d", "ram_available_GiB": 13.66, "gpu": "11144, 100"}
+{"event": "stage_completed", "stage": "execute", "seconds": 328.91, "videos": ["D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_035_041_a03_00001_.mp4"]}
+{"clip": "clip_035_041", "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_035_041_a03_00001_.mp4", "seconds": 328.91, "ram": {"ram_available_gib": 18.852558135986328, "commit_available_gib": 16.780200958251953, "commit_total_gib": 40.95303726196289}}
+{"event": "accepted", "stage": "execute", "prompt_id": "b1d45aaa-d295-41a5-a4c7-8cf6ffaa5a97"}
+{"event": "running", "stage": "execute", "prompt_id": "b1d45aaa-d295-41a5-a4c7-8cf6ffaa5a97", "ram_available_GiB": 18.83, "gpu": "1432, 2"}
+{"event": "running", "stage": "execute", "prompt_id": "b1d45aaa-d295-41a5-a4c7-8cf6ffaa5a97", "ram_available_GiB": 14.18, "gpu": "9384, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "b1d45aaa-d295-41a5-a4c7-8cf6ffaa5a97", "ram_available_GiB": 13.96, "gpu": "11464, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "b1d45aaa-d295-41a5-a4c7-8cf6ffaa5a97", "ram_available_GiB": 13.95, "gpu": "11464, 95"}
+{"event": "running", "stage": "execute", "prompt_id": "b1d45aaa-d295-41a5-a4c7-8cf6ffaa5a97", "ram_available_GiB": 13.96, "gpu": "11464, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "b1d45aaa-d295-41a5-a4c7-8cf6ffaa5a97", "ram_available_GiB": 14.0, "gpu": "11464, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "b1d45aaa-d295-41a5-a4c7-8cf6ffaa5a97", "ram_available_GiB": 13.97, "gpu": "11464, 95"}
+{"event": "running", "stage": "execute", "prompt_id": "b1d45aaa-d295-41a5-a4c7-8cf6ffaa5a97", "ram_available_GiB": 13.98, "gpu": "11464, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "b1d45aaa-d295-41a5-a4c7-8cf6ffaa5a97", "ram_available_GiB": 13.95, "gpu": "11464, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "b1d45aaa-d295-41a5-a4c7-8cf6ffaa5a97", "ram_available_GiB": 13.98, "gpu": "11464, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "b1d45aaa-d295-41a5-a4c7-8cf6ffaa5a97", "ram_available_GiB": 13.99, "gpu": "11464, 96"}
+{"event": "stage_completed", "stage": "execute", "seconds": 323.72, "videos": ["D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_042_052_a03_00001_.mp4"]}
+{"clip": "clip_042_052", "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_042_052_a03_00001_.mp4", "seconds": 323.72, "ram": {"ram_available_gib": 19.149227142333984, "commit_available_gib": 16.615833282470703, "commit_total_gib": 40.95303726196289}}
+{"event": "accepted", "stage": "execute", "prompt_id": "38047600-71c4-4ca7-bde2-ad85f7837ea3"}
+{"event": "running", "stage": "execute", "prompt_id": "38047600-71c4-4ca7-bde2-ad85f7837ea3", "ram_available_GiB": 19.14, "gpu": "1432, 2"}
+{"event": "running", "stage": "execute", "prompt_id": "38047600-71c4-4ca7-bde2-ad85f7837ea3", "ram_available_GiB": 14.48, "gpu": "9384, 87"}
+{"event": "running", "stage": "execute", "prompt_id": "38047600-71c4-4ca7-bde2-ad85f7837ea3", "ram_available_GiB": 13.95, "gpu": "11464, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "38047600-71c4-4ca7-bde2-ad85f7837ea3", "ram_available_GiB": 13.99, "gpu": "11464, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "38047600-71c4-4ca7-bde2-ad85f7837ea3", "ram_available_GiB": 14.03, "gpu": "11464, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "38047600-71c4-4ca7-bde2-ad85f7837ea3", "ram_available_GiB": 14.05, "gpu": "11464, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "38047600-71c4-4ca7-bde2-ad85f7837ea3", "ram_available_GiB": 13.61, "gpu": "11464, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "38047600-71c4-4ca7-bde2-ad85f7837ea3", "ram_available_GiB": 13.64, "gpu": "11464, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "38047600-71c4-4ca7-bde2-ad85f7837ea3", "ram_available_GiB": 13.78, "gpu": "11464, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "38047600-71c4-4ca7-bde2-ad85f7837ea3", "ram_available_GiB": 13.59, "gpu": "11464, 96"}
+{"event": "running", "stage": "execute", "prompt_id": "38047600-71c4-4ca7-bde2-ad85f7837ea3", "ram_available_GiB": 13.56, "gpu": "11464, 100"}
+{"event": "stage_completed", "stage": "execute", "seconds": 323.78, "videos": ["D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_055_061_a03_00001_.mp4"]}
+{"clip": "clip_055_061", "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_055_061_a03_00001_.mp4", "seconds": 323.78, "ram": {"ram_available_gib": 18.769386291503906, "commit_available_gib": 16.237384796142578, "commit_total_gib": 40.95303726196289}}
+{"event": "accepted", "stage": "execute", "prompt_id": "c132f72f-3d2a-4a65-a42a-bb4277c82345"}
+{"event": "running", "stage": "execute", "prompt_id": "c132f72f-3d2a-4a65-a42a-bb4277c82345", "ram_available_GiB": 18.75, "gpu": "1432, 1"}
+{"event": "running", "stage": "execute", "prompt_id": "c132f72f-3d2a-4a65-a42a-bb4277c82345", "ram_available_GiB": 14.01, "gpu": "9384, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "c132f72f-3d2a-4a65-a42a-bb4277c82345", "ram_available_GiB": 13.82, "gpu": "11464, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "c132f72f-3d2a-4a65-a42a-bb4277c82345", "ram_available_GiB": 13.78, "gpu": "11464, 95"}
+{"event": "running", "stage": "execute", "prompt_id": "c132f72f-3d2a-4a65-a42a-bb4277c82345", "ram_available_GiB": 13.81, "gpu": "11464, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "c132f72f-3d2a-4a65-a42a-bb4277c82345", "ram_available_GiB": 13.84, "gpu": "11464, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "c132f72f-3d2a-4a65-a42a-bb4277c82345", "ram_available_GiB": 13.88, "gpu": "11464, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "c132f72f-3d2a-4a65-a42a-bb4277c82345", "ram_available_GiB": 13.84, "gpu": "11464, 98"}
+{"event": "running", "stage": "execute", "prompt_id": "c132f72f-3d2a-4a65-a42a-bb4277c82345", "ram_available_GiB": 13.84, "gpu": "11464, 95"}
+{"event": "running", "stage": "execute", "prompt_id": "c132f72f-3d2a-4a65-a42a-bb4277c82345", "ram_available_GiB": 13.83, "gpu": "11464, 96"}
+{"event": "running", "stage": "execute", "prompt_id": "c132f72f-3d2a-4a65-a42a-bb4277c82345", "ram_available_GiB": 13.79, "gpu": "11569, 100"}
+{"event": "stage_completed", "stage": "execute", "seconds": 323.74, "videos": ["D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_062_075_a03_00001_.mp4"]}
+{"clip": "clip_062_075", "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_062_075_a03_00001_.mp4", "seconds": 323.74, "ram": {"ram_available_gib": 18.825969696044922, "commit_available_gib": 16.623611450195312, "commit_total_gib": 40.95303726196289}}
+{"event": "accepted", "stage": "execute", "prompt_id": "a173363d-7315-4351-b3e0-9062549edfe9"}
+{"event": "running", "stage": "execute", "prompt_id": "a173363d-7315-4351-b3e0-9062549edfe9", "ram_available_GiB": 18.81, "gpu": "1537, 4"}
+{"event": "running", "stage": "execute", "prompt_id": "a173363d-7315-4351-b3e0-9062549edfe9", "ram_available_GiB": 14.05, "gpu": "9329, 99"}
+{"event": "running", "stage": "execute", "prompt_id": "a173363d-7315-4351-b3e0-9062549edfe9", "ram_available_GiB": 13.58, "gpu": "11473, 96"}
+{"event": "running", "stage": "execute", "prompt_id": "a173363d-7315-4351-b3e0-9062549edfe9", "ram_available_GiB": 13.52, "gpu": "11473, 96"}
+{"event": "running", "stage": "execute", "prompt_id": "a173363d-7315-4351-b3e0-9062549edfe9", "ram_available_GiB": 13.56, "gpu": "11473, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "a173363d-7315-4351-b3e0-9062549edfe9", "ram_available_GiB": 13.56, "gpu": "11473, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "a173363d-7315-4351-b3e0-9062549edfe9", "ram_available_GiB": 13.91, "gpu": "11473, 95"}
+{"event": "running", "stage": "execute", "prompt_id": "a173363d-7315-4351-b3e0-9062549edfe9", "ram_available_GiB": 13.96, "gpu": "11473, 95"}
+{"event": "running", "stage": "execute", "prompt_id": "a173363d-7315-4351-b3e0-9062549edfe9", "ram_available_GiB": 14.07, "gpu": "11473, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "a173363d-7315-4351-b3e0-9062549edfe9", "ram_available_GiB": 14.12, "gpu": "11473, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "a173363d-7315-4351-b3e0-9062549edfe9", "ram_available_GiB": 14.11, "gpu": "11473, 100"}
+{"event": "stage_completed", "stage": "execute", "seconds": 323.8, "videos": ["D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_084_096_a03_00001_.mp4"]}
+{"clip": "clip_084_096", "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_084_096_a03_00001_.mp4", "seconds": 323.8, "ram": {"ram_available_gib": 19.227005004882812, "commit_available_gib": 16.602020263671875, "commit_total_gib": 40.95303726196289}}
+{"event": "accepted", "stage": "execute", "prompt_id": "7343f6a4-77fe-4f64-8f10-5f15f9715368"}
+{"event": "running", "stage": "execute", "prompt_id": "7343f6a4-77fe-4f64-8f10-5f15f9715368", "ram_available_GiB": 19.22, "gpu": "1537, 0"}
+{"event": "running", "stage": "execute", "prompt_id": "7343f6a4-77fe-4f64-8f10-5f15f9715368", "ram_available_GiB": 14.63, "gpu": "9713, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "7343f6a4-77fe-4f64-8f10-5f15f9715368", "ram_available_GiB": 14.11, "gpu": "11473, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "7343f6a4-77fe-4f64-8f10-5f15f9715368", "ram_available_GiB": 14.08, "gpu": "11473, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "7343f6a4-77fe-4f64-8f10-5f15f9715368", "ram_available_GiB": 14.11, "gpu": "11473, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "7343f6a4-77fe-4f64-8f10-5f15f9715368", "ram_available_GiB": 14.11, "gpu": "11473, 96"}
+{"event": "running", "stage": "execute", "prompt_id": "7343f6a4-77fe-4f64-8f10-5f15f9715368", "ram_available_GiB": 14.11, "gpu": "11473, 96"}
+{"event": "running", "stage": "execute", "prompt_id": "7343f6a4-77fe-4f64-8f10-5f15f9715368", "ram_available_GiB": 14.07, "gpu": "11473, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "7343f6a4-77fe-4f64-8f10-5f15f9715368", "ram_available_GiB": 14.11, "gpu": "11473, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "7343f6a4-77fe-4f64-8f10-5f15f9715368", "ram_available_GiB": 14.18, "gpu": "11473, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "7343f6a4-77fe-4f64-8f10-5f15f9715368", "ram_available_GiB": 14.19, "gpu": "11473, 95"}
+{"event": "stage_completed", "stage": "execute", "seconds": 323.82, "videos": ["D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_144_147_a03_00001_.mp4"]}
+{"clip": "clip_144_147", "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_144_147_a03_00001_.mp4", "seconds": 323.82, "ram": {"ram_available_gib": 19.345481872558594, "commit_available_gib": 16.60866928100586, "commit_total_gib": 40.95303726196289}}
+{"event": "accepted", "stage": "execute", "prompt_id": "7c945cd9-7d0f-475e-a690-6dbfc639c961"}
+{"event": "running", "stage": "execute", "prompt_id": "7c945cd9-7d0f-475e-a690-6dbfc639c961", "ram_available_GiB": 19.34, "gpu": "1537, 0"}
+{"event": "running", "stage": "execute", "prompt_id": "7c945cd9-7d0f-475e-a690-6dbfc639c961", "ram_available_GiB": 14.73, "gpu": "9105, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "7c945cd9-7d0f-475e-a690-6dbfc639c961", "ram_available_GiB": 14.18, "gpu": "11473, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "7c945cd9-7d0f-475e-a690-6dbfc639c961", "ram_available_GiB": 14.18, "gpu": "11473, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "7c945cd9-7d0f-475e-a690-6dbfc639c961", "ram_available_GiB": 14.19, "gpu": "11473, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "7c945cd9-7d0f-475e-a690-6dbfc639c961", "ram_available_GiB": 14.2, "gpu": "11473, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "7c945cd9-7d0f-475e-a690-6dbfc639c961", "ram_available_GiB": 14.2, "gpu": "11473, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "7c945cd9-7d0f-475e-a690-6dbfc639c961", "ram_available_GiB": 14.14, "gpu": "11473, 96"}
+{"event": "running", "stage": "execute", "prompt_id": "7c945cd9-7d0f-475e-a690-6dbfc639c961", "ram_available_GiB": 14.21, "gpu": "11473, 96"}
+{"event": "running", "stage": "execute", "prompt_id": "7c945cd9-7d0f-475e-a690-6dbfc639c961", "ram_available_GiB": 14.17, "gpu": "11473, 96"}
+{"event": "running", "stage": "execute", "prompt_id": "7c945cd9-7d0f-475e-a690-6dbfc639c961", "ram_available_GiB": 14.17, "gpu": "11473, 100"}
+{"event": "stage_completed", "stage": "execute", "seconds": 323.87, "videos": ["D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_170_173_a03_00001_.mp4"]}
+{"clip": "clip_170_173", "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_170_173_a03_00001_.mp4", "seconds": 323.87, "ram": {"ram_available_gib": 19.323638916015625, "commit_available_gib": 16.625896453857422, "commit_total_gib": 40.95303726196289}}

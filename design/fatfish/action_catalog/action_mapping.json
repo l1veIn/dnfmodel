@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "unresolved",
+  "summary": "当前客户端 ANI 尚未提取；未找到可核对到当前女法师帧位的可靠动作表。",
+  "action_total_known": false,
+  "actions": [],
+  "checks": [
+    {"label": "本地 Script.pvf", "result": "不符合已检查的 ACT1 或经典 UUID 文件头布局；当前无法提取角色 ANI。", "status": "unresolved"},
+    {"label": "独立 ANI 文件", "result": "游戏目录中的独立 .ani 为 Windows 鼠标光标格式，没有找到角色 ANI、CHR 或 LAY 文件。", "status": "unresolved"},
+    {"label": "ANI 文本读取", "result": "已在公开的圣职者示例中读出 8 帧的 IMG 引用、坐标及延时；该示例不用于女法师归类。", "status": "reference_only"},
+    {"label": "女法师帧位资料", "result": "查阅 COLG 手册、公开解析器与资源仓库，尚未获得适配当前客户端的动作映射证据。", "status": "unresolved"}
+  ],
+  "admission_rule": "需要可追溯的 ANI 原文件、角色状态/技能引用、当前版本与 IMG 路径核对；保留实际引用顺序、重复帧、延时及循环信息。不能用相邻帧号或目测姿势替代。",
+  "sources": [
+    {"label": "PVF 格式实现与兼容范围", "url": "https://github.com/syqg88/PvfEquipmentBrowser/blob/2dd7e73e8ce9bd677fd8db0ae32053763477a56e/docs/PVF_FORMATS.md"},
+    {"label": "ANI 二进制格式实现（仅作参考）", "url": "https://github.com/zjysun/dnf-pvf-parser-ts/blob/e4e624c13f5335e5e04c0ae3d3d67c1ee059fb98/src/pvf/binaryAni.ts"},
+    {"label": "公开 ANI 格式样本（圣职者）", "url": "https://github.com/zjysun/dnf-pvf-parser-ts/blob/e4e624c13f5335e5e04c0ae3d3d67c1ee059fb98/src/scriptLang/apc/ai_doc/expc_sample/animation/move.ani"},
+    {"label": "COLG 新手补丁手册", "url": "https://bbs.colg.cn/thread-9391342-1-1.html"}
+  ]
+}

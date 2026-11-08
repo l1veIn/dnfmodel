@@ -1,0 +1,72 @@
+{
+  "job_id": "fatfish_decoder_probe_ea73f2a19b43465bbef6cf3fd197ce10",
+  "mode": "one-pass",
+  "status": "completed",
+  "frozen_api_sha256": "201c9aaa1270c6365a607d9aa46af1c0a4d982a332d3c2e3159757d3e2f9c735",
+  "frozen_gui_sha256": "3485fc528651ec5e0ebf7592b502f401c8a800d887d621d0ad6ffd34a1e81aa8",
+  "stages": [
+    {
+      "name": "execute",
+      "node": "20",
+      "width": 608,
+      "height": 352,
+      "client_id": "5516f1bb-2aa0-4f94-b497-8abf6d8f9887",
+      "status": "completed",
+      "submission_attempted": true,
+      "started_at": 1792758541.463285,
+      "prompt_id": "b03c907d-a110-42e0-9c27-694ec1ffa29a",
+      "elapsed_seconds": 131.93,
+      "videos": [
+        "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_decoder_v02_normal_00001_.mp4"
+      ],
+      "media_reports": [
+        {
+          "file": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_decoder_v02_normal_00001_.mp4",
+          "width": 608,
+          "height": 352,
+          "fps": 24.0,
+          "video_codec": "h264",
+          "container_seconds": 5.167,
+          "decoded_frames": 124,
+          "mean_luma_proxy": 125.66645714544481,
+          "mean_temporal_pixel_change": 1.9741151439465159,
+          "frames": {
+            "1": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_decoder_v02_normal_00001__qa\\frame_001.png",
+            "62": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_decoder_v02_normal_00001__qa\\frame_062.png",
+            "124": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_decoder_v02_normal_00001__qa\\frame_124.png"
+          },
+          "audio": {
+            "codec": "aac",
+            "sample_rate": 32000,
+            "channels": 2,
+            "decoded_audio_frames": 162,
+            "rms": 0.1323367843410059,
+            "peak": 0.8503760099411011
+          }
+        }
+      ]
+    }
+  ],
+  "sampling_reproduction": true,
+  "new_motion": false,
+  "original_cache_reused": false,
+  "same_reproduced_latent_both_decoders": true,
+  "normal_node": "17",
+  "tiled_node": "30",
+  "normal_png_node": "34",
+  "tiled_png_node": "35",
+  "secondary_video_node": "33",
+  "memory_before": {
+    "ram_available_gib": 15.67763900756836,
+    "commit_available_gib": 14.576587677001953,
+    "commit_total_gib": 40.95303726196289
+  },
+  "secondary_videos": [
+    "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_decoder_v02_tiled_00001_.mp4"
+  ],
+  "memory_after": {
+    "ram_available_gib": 15.801582336425781,
+    "commit_available_gib": 14.640422821044922,
+    "commit_total_gib": 40.95303726196289
+  }
+}

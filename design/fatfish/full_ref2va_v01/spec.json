@@ -1,0 +1,36 @@
+{
+  "scope": "All174 template slots across the25 user-labelled segments; default-avatar carrier, not every paid costume or separate class-effect IMG.",
+  "annotation_revision": 26,
+  "protected_files": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\manual_motion.json": "3587dd94d67763e176c3f265ab0508222018e806fe1849c5428038075d8b9fa9",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d"
+  },
+  "local_only": true,
+  "serial_gpu": true,
+  "model": "minimax_h3_ref2va_pruned_w6a8.safetensors",
+  "output_dimensions": [
+    608,
+    352
+  ],
+  "output_frames": 124,
+  "fps": 24,
+  "steps": 20,
+  "refinement": false,
+  "appearance": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\h3_reference_walk_v01\\input\\appearance_hd_gray.png",
+  "appearance_sha256": "498f1873fdd9a2669e3136a2325ed6708d03ccbfd95bc22a80bc344db3e3fc19",
+  "reference_dimensions": [
+    320,
+    192
+  ],
+  "reference_frames": 124,
+  "reference_camera_world": [
+    143.3333333333,
+    272,
+    356.6666666667,
+    400
+  ],
+  "npk_geometry": "Native500px world canvas; preserve antialiasing when resizing, no palette quantization. Source/HD frames supplied separately.",
+  "user_authorization": "我觉得可以了，来吧，完成一次闭关吧，填满我们的动作工作台，制作一个完整的 npk"
+}

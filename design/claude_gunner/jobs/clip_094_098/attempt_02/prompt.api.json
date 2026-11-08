@@ -1,0 +1,234 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_ref2va_pruned_w6a8.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "claude_gunner_v01/clip_094_098/attempt_02/appearance.png"
+    }
+  },
+  "7": {
+    "class_type": "LoadVideo",
+    "inputs": {
+      "file": "claude_gunner_v01/clip_094_098/attempt_02/motion.mp4"
+    }
+  },
+  "8": {
+    "class_type": "GetVideoComponents",
+    "inputs": {
+      "video": [
+        "7",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Picture: Use <Picture 1> for the exact identity and costume. Use <Video 1> as the complete motion and pose timeline: replace only the character in the video. She is in mid-air with knees tucked and her body curled forward, then lands in a low crouch. Match the source torso tilt, head orientation, arm height, hand trajectory, leg bends and body orientation in every frame, with both arms always clearly visible. Perform the whole sequence once in source order and finish holding the final pose. Do not replace this action with walking or idle. Keep the exact character and body proportions from <Picture 1>: a tall slim elegant lady with a small head, very long straight orange hair falling behind her as one smooth mass, amber eyes, an orange flower hair ornament with a black ribbon, a high ruffled collar with an orange flower brooch and black cravat, a cream capelet, full cream sleeves with frilled cuffs, a black corset with gold buttons, and a floor-length bell gown with a cream center, an orange front panel, black side panels, gold trim, large orange flower bows and a frilled hem, with white lace-up boots. The long gown moves and flares with her legs; when she kicks, the leg with its white boot is clearly visible coming out of the gown. Hair, ribbons, tassels and gown react naturally to the movement. Clean cel-shaded anime game sprite with bold dark outlines of even weight and flat saturated colors. Locked camera, full body always visible, flat uniform medium-gray background, no ground shadow, no scene, no cuts, no zoom, no extra people. Her hands are empty: no guns, no weapons, no book, no rings, circles, orbs, glow, sparkles, motion blur streaks or magic anywhere. No blonde hair, no text.\nSound: Quiet neutral room tone, no speech.\nScore: No music.",
+      "width": 512,
+      "height": 512,
+      "length": 124,
+      "ref_image_size": "match",
+      "ref_images.ref_image_0": [
+        "5",
+        0
+      ],
+      "ref_videos.ref_video_0": [
+        "8",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift_video": 12.0,
+      "shift_audio": 3.0
+    }
+  },
+  "12": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 20263201
+    }
+  },
+  "13": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "10",
+        0
+      ],
+      "conditioning": [
+        "6",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "15": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "model": [
+        "10",
+        0
+      ],
+      "scheduler": "simple",
+      "steps": 20,
+      "denoise": 1.0
+    }
+  },
+  "16": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "12",
+        0
+      ],
+      "guider": [
+        "13",
+        0
+      ],
+      "sampler": [
+        "14",
+        0
+      ],
+      "sigmas": [
+        "15",
+        0
+      ],
+      "latent_image": [
+        "6",
+        1
+      ]
+    }
+  },
+  "21": {
+    "class_type": "LTXVSeparateAVLatent",
+    "inputs": {
+      "av_latent": [
+        "16",
+        0
+      ]
+    }
+  },
+  "22": {
+    "class_type": "SaveLatent",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "filename_prefix": "latents/claude_gunner_v01/clip_094_098_a02_video"
+    }
+  },
+  "23": {
+    "class_type": "SaveLatent",
+    "inputs": {
+      "samples": [
+        "21",
+        1
+      ],
+      "filename_prefix": "latents/claude_gunner_v01/clip_094_098_a02_audio"
+    }
+  },
+  "17": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "22",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "tile_size": 256,
+      "overlap": 64,
+      "temporal_size": 32,
+      "temporal_overlap": 8
+    }
+  },
+  "18": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "23",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ]
+    }
+  },
+  "19": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "17",
+        0
+      ],
+      "audio": [
+        "18",
+        0
+      ],
+      "fps": 24
+    }
+  },
+  "20": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "19",
+        0
+      ],
+      "filename_prefix": "video/claude_gunner_v01/clip_094_098_a02",
+      "format": "auto",
+      "format.codec": "auto"
+    }
+  }
+}

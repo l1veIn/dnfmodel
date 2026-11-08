@@ -1,0 +1,41 @@
+{
+  "model": "gpt-image-2.5",
+  "provider": "65535",
+  "source_window": [
+    186,
+    272,
+    314,
+    400
+  ],
+  "output_scale": 8,
+  "native_window_size": [
+    128,
+    128
+  ],
+  "game_canvas": [
+    500,
+    500
+  ],
+  "poses": {
+    "master": 10,
+    "walk": 0,
+    "cast": 65,
+    "jump": 23
+  },
+  "authorization": "User explicitly requested master correction and one walk/cast/jump; then authorized spending with no fixed numeric ceiling: 随便用，额度管够",
+  "numeric_user_ceiling": null,
+  "additional_actions_authorized": 3,
+  "engine_validation": "not performed",
+  "phase": "master_and_three_pose_tests_reviewed",
+  "selected_master": "master_feet",
+  "selected_actions": {
+    "walk": "walk",
+    "cast": "cast",
+    "jump": "jump_fix"
+  },
+  "generation_tasks": 7,
+  "reported_task_cost_total_usd": 0.266,
+  "game_ready": false,
+  "static_master": "suitable_for_this_pilot",
+  "remaining_action_issues": "Independent hand/shoe visual landmark estimates still differ about 2-7 native pixels"
+}

@@ -1,0 +1,26 @@
+{
+  "review_method": "Visual inspection of all 12 samples in a full-frame contact sheet, all four source/output comparison sheets, and selected 1024-square raw PNGs. Automated alpha/dimension/bbox inspection for every raw file.",
+  "overall": "Costume concept promising; alpha passed; exact pose/registration not passed; full animation production deferred for user review.",
+  "identity": {
+    "stable": ["navy-to-cyan long wavy hair", "whale-fin ears", "maid headband and cyan bow", "navy/white/gold dress", "whale apron emblem", "white tights and navy shoes", "single whale tail"],
+    "drift": ["head and face size", "hair volume and curl shapes", "apron outline", "gold bows and hem decoration", "tail position and apparent size"]
+  },
+  "registration": {
+    "passed": false,
+    "silhouette_height_ratio_range": [1.554, 1.989],
+    "silhouette_bottom_delta_native_px_range": [38.0, 53.25],
+    "native_scale_definition": "Output pixels divided by requested 4x reference scale; actual generated pixel grid is not uniformly 4x.",
+    "caution": "Silhouette measurements are not skeletal joint detection. Hair, tail, ahoge and new accessories affect extents. Raw full-frame comparison visibly confirms scale and position mismatch."
+  },
+  "category_findings": {
+    "idle": "Idle 1 has a larger figure than 2/3. Idle 3 invents a hand-near-chin pose. Not a registered breathing loop.",
+    "walk": "Readable walking silhouette, but 2/3 have very similar leg and arm phases; not a complete opposite-step cycle.",
+    "cast": "Readable casting gestures, but 1/2 reinterpret the source hand and arm poses. Third sample follows the source's opposite-facing arm direction.",
+    "jump": "Raised-arm and airborne silhouettes readable; limb angles, torso registration and phase spacing differ from source. Not a timed trajectory."
+  },
+  "edge_and_pixel_findings": ["Local blue/purple edge noise is visible in raw PNGs", "Fine shading and pixel clusters vary; a consistent native pixel grid has not been established"],
+  "recommended_next_step": "After user reviews the design, lock one master sprite at native size, define head/hands/pelvis/shoe anchors, and use controlled pose deformation/local redraws with continuous-motion review before expanding production.",
+  "additional_paid_jobs_submitted": 0,
+  "game_ready_img_or_npk_created": false,
+  "game_installation_changed": false
+}

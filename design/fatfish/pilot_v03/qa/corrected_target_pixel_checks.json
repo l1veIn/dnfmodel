@@ -1,0 +1,86 @@
+[
+  {
+    "name": "fix_walk",
+    "landmark": "rear_shoe",
+    "target_native": [
+      227,
+      379
+    ],
+    "nearest_visible_target_material_distance_px": 1.0,
+    "material": "visible shoe",
+    "outside_patch_pixels_unchanged": true,
+    "caution": "Endpoint was constrained during repair; this checks actual output pixels nearby, not an independent skeleton estimate or animation proof."
+  },
+  {
+    "name": "fix_walk",
+    "landmark": "left_hand",
+    "target_native": [
+      228,
+      335
+    ],
+    "nearest_visible_target_material_distance_px": 0.0,
+    "material": "skin",
+    "outside_patch_pixels_unchanged": true,
+    "caution": "Endpoint was constrained during repair; this checks actual output pixels nearby, not an independent skeleton estimate or animation proof."
+  },
+  {
+    "name": "fix_walk",
+    "landmark": "right_hand",
+    "target_native": [
+      279,
+      316
+    ],
+    "nearest_visible_target_material_distance_px": 0.0,
+    "material": "skin",
+    "outside_patch_pixels_unchanged": true,
+    "caution": "Endpoint was constrained during repair; this checks actual output pixels nearby, not an independent skeleton estimate or animation proof."
+  },
+  {
+    "name": "fix_cast",
+    "landmark": "left_hand",
+    "target_native": [
+      209,
+      315
+    ],
+    "nearest_visible_target_material_distance_px": 0.0,
+    "material": "skin",
+    "outside_patch_pixels_unchanged": true,
+    "caution": "Endpoint was constrained during repair; this checks actual output pixels nearby, not an independent skeleton estimate or animation proof."
+  },
+  {
+    "name": "fix_cast",
+    "landmark": "right_hand",
+    "target_native": [
+      260,
+      337
+    ],
+    "nearest_visible_target_material_distance_px": 0.0,
+    "material": "skin",
+    "outside_patch_pixels_unchanged": true,
+    "caution": "Endpoint was constrained during repair; this checks actual output pixels nearby, not an independent skeleton estimate or animation proof."
+  },
+  {
+    "name": "fix_cast",
+    "landmark": "raised_shoe",
+    "target_native": [
+      263,
+      367
+    ],
+    "nearest_visible_target_material_distance_px": 0.0,
+    "material": "visible shoe",
+    "outside_patch_pixels_unchanged": true,
+    "caution": "Endpoint was constrained during repair; this checks actual output pixels nearby, not an independent skeleton estimate or animation proof."
+  },
+  {
+    "name": "fix_jump",
+    "landmark": "rear_hand",
+    "target_native": [
+      224,
+      305
+    ],
+    "nearest_visible_target_material_distance_px": 1.4142135623730951,
+    "material": "skin",
+    "outside_patch_pixels_unchanged": true,
+    "caution": "Endpoint was constrained during repair; this checks actual output pixels nearby, not an independent skeleton estimate or animation proof."
+  }
+]

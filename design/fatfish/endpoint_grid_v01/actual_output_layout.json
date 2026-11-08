@@ -1,0 +1,67 @@
+{
+  "canvas": [
+    2048,
+    2048
+  ],
+  "divider_x_bands": [
+    [
+      680,
+      684
+    ],
+    [
+      1365,
+      1368
+    ]
+  ],
+  "divider_y_bands": [
+    [
+      682,
+      686
+    ],
+    [
+      1366,
+      1373
+    ]
+  ],
+  "method": "Inspected long alpha line bands in the actual output; one common684px window, padded beyond source edge.",
+  "bottom_cell_boxes": [
+    [
+      0,
+      688,
+      684,
+      1372
+    ],
+    [
+      684,
+      688,
+      1368,
+      1372
+    ],
+    [
+      1368,
+      688,
+      2052,
+      1372
+    ],
+    [
+      0,
+      1376,
+      684,
+      2060
+    ],
+    [
+      684,
+      1376,
+      1368,
+      2060
+    ],
+    [
+      1368,
+      1376,
+      2052,
+      2060
+    ]
+  ],
+  "input640_cell_positions_not_used": true,
+  "reason": "Fixed input boxes clipped shoes because the model moved dividers and enlarged cells."
+}

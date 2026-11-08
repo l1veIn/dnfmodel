@@ -1,0 +1,181 @@
+{
+  "provider": "65535",
+  "model": "gpt-image-2.5",
+  "jobs_max": 1,
+  "n": 1,
+  "requested_resolution": "2k",
+  "transparent_background": true,
+  "native_window_world": [
+    170,
+    250,
+    330,
+    410
+  ],
+  "native_size": [
+    160,
+    160
+  ],
+  "sheet_size": [
+    2048,
+    2048
+  ],
+  "cell_size": 640,
+  "guide_scale": 4,
+  "frames": [
+    {
+      "slot": 0,
+      "cell": [
+        48,
+        48,
+        688,
+        688
+      ],
+      "guide_native_bbox": [
+        48,
+        38,
+        115,
+        134
+      ],
+      "original_source_sha256": "3eb9ceac2b2811d940cbb40980445b3948af823d6158415d884544b37621905c"
+    },
+    {
+      "slot": 1,
+      "cell": [
+        704,
+        48,
+        1344,
+        688
+      ],
+      "guide_native_bbox": [
+        56,
+        39,
+        105,
+        135
+      ],
+      "original_source_sha256": "7ceed83a1486b9b9494588a81bf10dc82ecb115afc75c79b1603d9e904914ad0"
+    },
+    {
+      "slot": 2,
+      "cell": [
+        1360,
+        48,
+        2000,
+        688
+      ],
+      "guide_native_bbox": [
+        57,
+        39,
+        101,
+        135
+      ],
+      "original_source_sha256": "a0a6c4deb9e486d450c025844bac215c827bd4517f79dd025e71f8df96bf008f"
+    },
+    {
+      "slot": 3,
+      "cell": [
+        48,
+        704,
+        688,
+        1344
+      ],
+      "guide_native_bbox": [
+        57,
+        39,
+        102,
+        136
+      ],
+      "original_source_sha256": "33e94578f1dd80d68582c61d04851e7d5f6b6c8f11da287fe53366931039180c"
+    },
+    {
+      "slot": 4,
+      "cell": [
+        704,
+        704,
+        1344,
+        1344
+      ],
+      "guide_native_bbox": [
+        50,
+        39,
+        120,
+        135
+      ],
+      "original_source_sha256": "c0bc9b5488a5bf79c665d8e9b965c5a81617837c525fd2ee1362d52ecc8db7f7"
+    },
+    {
+      "slot": 5,
+      "cell": [
+        1360,
+        704,
+        2000,
+        1344
+      ],
+      "guide_native_bbox": [
+        47,
+        39,
+        116,
+        134
+      ],
+      "original_source_sha256": "1234dbe30391640c2fc7047dd48cf9d2fbf939802d97da084927a1a908f0cfe7"
+    },
+    {
+      "slot": 6,
+      "cell": [
+        48,
+        1360,
+        688,
+        2000
+      ],
+      "guide_native_bbox": [
+        55,
+        38,
+        103,
+        131
+      ],
+      "original_source_sha256": "6665a3e1fd5093a33129f36ba4c0fd53ab8bd217ad6a91fc8d615d430afee6de"
+    },
+    {
+      "slot": 7,
+      "cell": [
+        704,
+        1360,
+        1344,
+        2000
+      ],
+      "guide_native_bbox": [
+        57,
+        40,
+        100,
+        132
+      ],
+      "original_source_sha256": "eb739531d888b1d491f7c1f80a2d9a62865169ad8fe787762d90cbc9b361d3f8"
+    },
+    {
+      "slot": 8,
+      "cell": [
+        1360,
+        1360,
+        2000,
+        2000
+      ],
+      "guide_native_bbox": [
+        52,
+        40,
+        103,
+        133
+      ],
+      "original_source_sha256": "259d2d3a6a54e33209d4106f1b65089b0c8a07a153313a54ad4938375e2f5fd7"
+    }
+  ],
+  "master_sha256": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446",
+  "protected_files_before": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\nearest_standing_v04\\standing_canvas.png": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20"
+  },
+  "source_order": "Existing walk-test IMG0..8, not parsed ANI order/timing; missing IMG9 means not a complete gait loop.",
+  "preview_timing_ms": 120,
+  "authorisation": "One requested sheet only; prior unrestricted spending instruction persists.",
+  "batch_generation": false,
+  "game_installation_changed": false
+}

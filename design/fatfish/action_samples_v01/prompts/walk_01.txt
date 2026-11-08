@@ -1,0 +1,17 @@
+Create ONE production-oriented transparent PNG action sample for the same DNF female mage wearing the approved Fatfish whale-maid cosplay.
+
+REFERENCE ROLES:
+Image 1 is the APPROVED COSTUME AND IDENTITY master. Use its three large character views to preserve the same navy-to-cyan wavy long hair, one curled ahoge, blue eyes, whale-fin ear ornaments with pale undersides, cyan bow, white frilled maid headband, fully covered navy long-sleeved maid dress with white chest front, small cyan gem and navy neck bow, fitted navy waist and gold buttons, white apron with a small navy whale emblem, restrained gold bows and hem trim, opaque white tights, navy Mary-Jane shoes, and ONE compact navy whale tail attached behind the waist. Keep the knee-length skirt and long hair near calf level.
+Image 2 is ONLY a POSE AND REGISTRATION guide from the existing DNF female mage. Reproduce its skeleton, facing, head size and location, shoulder and hip positions, arm/hand positions, leg and shoe positions, and framing as closely as possible. Its old red/black costume is not part of the new outfit. Its grid, labels, lines and registration marks are guides only and must not appear in the output.
+
+STYLE AND OUTPUT:
+One single full-body 2D DNF-style pixel-art sprite on a genuinely transparent alpha background. The intended native sprite is roughly 90-110 pixels high, shown enlarged 4x on a 1024x1024 output canvas: coherent pixel clusters, controlled dark outlines, limited clean cel-shaded colors, no soft illustration rendering and no airbrushed gradients. Keep the mage's compact approximately 3.5-4-head body proportions from Image 2; do not revert to the shorter chibi proportions in other references. Keep consistent face shape, hair colors, outfit construction, accessory placement and tail size across the whole batch.
+
+REGISTRATION:
+Use the same full square frame as Image 2. Keep the torso, head and shoes in the same frame locations. The entire character including hair, fingers and tail must remain visible. Long hair and the tail may extend beyond the old garment silhouette but must remain within the safe transparent margins. Preserve the action's original local registration instead of centering the silhouette by its bounding box. Do not add dramatic perspective or change camera angle.
+
+No lettering, no multiple panels, no reference sheet, no duplicate character, no props, no weapon, no bowl, no basin helmet, no magical aura, no whale-shaped spell effect, no backdrop, no floor, no cast shadow, no checkerboard painted into the background, no watermarks. The only requested new element is the specific action described below.
+
+ACTION: Walking contact pose: one foot forward and the other trailing, counter-swinging arms exactly following the guide.
+
+No costume drift, no extra tails or limbs, no missing fin ears or headband, no skirt changing length, no chibi body redesign, no opaque or fake checkerboard background, no cropping, no ghosted previous pose.

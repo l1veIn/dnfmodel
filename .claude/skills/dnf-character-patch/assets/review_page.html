@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>动作审核</title>
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #1b1d22; --panel: #24272e; --panel-2: #2d3139; --line: #3a3f49; --text: #e8e9ec; --muted: #a2a7b1;
+  --accent: #7fb0ff; --pass: #6fd08c; --fix: #ff8a7a; --sprite-bg: #56617a;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.5 "Microsoft YaHei UI", "PingFang SC", system-ui, sans-serif; }
+button, select, textarea { font: inherit; color: inherit; }
+button { background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 5px 11px; cursor: pointer; }
+button:hover { border-color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.app { display: grid; grid-template-columns: 196px minmax(0, 1fr); height: 100vh; }
+aside { background: var(--panel); border-right: 1px solid var(--line); display: flex; flex-direction: column; min-height: 0; }
+.head { padding: 12px 12px 10px; border-bottom: 1px solid var(--line); }
+.head h1 { font-size: 14px; margin: 0 0 6px; font-weight: 600; }
+.bar { height: 4px; background: var(--panel-2); border-radius: 2px; overflow: hidden; margin-bottom: 5px; }
+.bar i { display: block; height: 100%; background: var(--pass); width: 0; }
+.progress { color: var(--muted); font-size: 12px; }
+#list { list-style: none; margin: 0; padding: 4px; overflow-y: auto; flex: 1; }
+#list button { width: 100%; text-align: left; background: none; border: 1px solid transparent; padding: 5px 7px; display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 6px; }
+#list button:hover { background: var(--panel-2); }
+#list button[aria-current="true"] { background: var(--panel-2); border-color: var(--accent); }
+.name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tag { font-size: 12px; color: var(--muted); }
+.tag.pass { color: var(--pass); } .tag.fix { color: var(--fix); }
+.range { grid-column: 1 / -1; font-size: 12px; color: var(--muted); }
+main { display: flex; flex-direction: column; min-width: 0; min-height: 0; overflow-y: auto; padding: 10px 14px 14px; gap: 9px; }
+.title { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
+.title h2 { font-size: 17px; margin: 0; }
+.title span { color: var(--muted); font-size: 13px; }
+#stage { display: flex; gap: 12px; justify-content: center; align-items: flex-end; flex-wrap: wrap; }
+figure { margin: 0; text-align: center; }
+figcaption { color: var(--muted); font-size: 12px; margin-bottom: 3px; }
+canvas { image-rendering: pixelated; display: block; border-radius: 4px; max-width: 100%; }
+.controls { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; }
+.controls label { display: inline-flex; gap: 5px; align-items: center; color: var(--muted); font-size: 13px; }
+select { background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 4px 6px; }
+#info { font-size: 13px; color: var(--muted); min-height: 20px; }
+#strip { display: flex; gap: 4px; overflow-x: auto; padding-bottom: 5px; }
+#strip button { position: relative; padding: 0; flex: none; background: none; border: 2px solid var(--line); border-radius: 5px; overflow: hidden; line-height: 0; }
+#strip button[aria-current="true"] { border-color: var(--accent); }
+#strip button.flag { border-color: var(--fix); }
+#strip button.flag::after { content: "标记"; position: absolute; right: 2px; bottom: 2px; font-size: 11px; line-height: 15px; color: #1b1d22; background: var(--fix); padding: 0 3px; border-radius: 3px; }
+#strip span { position: absolute; left: 2px; top: 2px; font-size: 11px; line-height: 15px; background: rgba(0, 0, 0, .65); padding: 0 3px; border-radius: 3px; color: #fff; }
+#strip canvas { height: 76px; width: auto; border-radius: 0; }
+.verdict { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 10px; align-items: start; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; }
+.choice { display: flex; gap: 6px; flex-wrap: wrap; }
+#pass[aria-pressed="true"] { background: var(--pass); border-color: var(--pass); color: #10241a; font-weight: 600; }
+#fix[aria-pressed="true"] { background: var(--fix); border-color: var(--fix); color: #2c120e; font-weight: 600; }
+textarea { width: 100%; min-height: 58px; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; resize: vertical; }
+.foot { grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 14px; font-size: 12px; color: var(--muted); }
+#saved.bad { color: var(--fix); }
+kbd { background: var(--panel-2); border: 1px solid var(--line); border-radius: 3px; padding: 0 4px; font: inherit; font-size: 11px; }
+@media (max-width: 720px) {
+  .app { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); height: auto; min-height: 100vh; }
+  aside { border-right: 0; border-bottom: 1px solid var(--line); min-width: 0; }
+  #list { display: flex; max-height: 76px; overflow-x: auto; overflow-y: hidden; }
+  #list li { flex: none; width: 140px; }
+  main { overflow: visible; padding: 10px 16px 16px; }
+  .verdict { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <div class="head">
+      <h1 id="heading">动作审核</h1>
+      <div class="bar"><i id="bar"></i></div>
+      <div class="progress" id="progress"></div>
+    </div>
+    <ul id="list"></ul>
+  </aside>
+  <main>
+    <div class="title"><h2 id="action"></h2><span id="range"></span></div>
+    <div id="stage"></div>
+    <div class="controls">
+      <button id="play" type="button">暂停</button>
+      <button id="prev" type="button" aria-label="上一帧">上一帧</button>
+      <button id="next" type="button" aria-label="下一帧">下一帧</button>
+      <label>速度 <select id="speed"><option value="50">快 50ms</option><option value="100" selected>正常 100ms</option><option value="200">慢 200ms</option><option value="400">很慢 400ms</option></select></label>
+      <label>显示 <select id="view"><option value="side">并排</option><option value="overlay">叠加</option></select></label>
+      <label>背景 <select id="backdrop"><option value="#56617a">灰蓝</option><option value="#22282a">深色</option><option value="#c2c0ac">浅色</option></select></label>
+      <label><input id="weapon" type="checkbox" checked> <span id="weaponLabel">带武器</span></label>
+      <button id="flag" type="button">标记此帧</button>
+    </div>
+    <div id="info" aria-live="polite"></div>
+    <div id="strip"></div>
+    <section class="verdict" aria-label="审核意见">
+      <div class="choice">
+        <button id="pass" type="button" aria-pressed="false">通过</button>
+        <button id="fix" type="button" aria-pressed="false">要改</button>
+      </div>
+      <textarea id="note" placeholder="哪里要改？可以直接写帧号，比如“第 5 帧尾巴太长”。自动保存。"></textarea>
+      <div class="foot">
+        <span><kbd>空格</kbd> 播放 <kbd>←</kbd><kbd>→</kbd> 逐帧 <kbd>↑</kbd><kbd>↓</kbd> 换动作 <kbd>1</kbd> 通过 <kbd>2</kbd> 要改 <kbd>F</kbd> 标记</span>
+        <span id="saved" aria-live="polite"></span>
+      </div>
+    </section>
+  </main>
+</div>
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+const HAND = {auto: "已贴合", contact: "贴合到接触点", nearest: "贴合到最近轮廓", manual: "手动贴合", "no hand near": "附近没找到手，未移动", "too far": "太远，未移动", "left alone": "未移动"};
+const state = {data: null, index: 0, frame: 0, playing: true, timer: null, images: new Map(), saveTimer: null, saving: Promise.resolve()};
+const current = () => state.data.actions[state.index];
+const review = name => state.data.reviews[name] || {status: "", note: "", frames: []};
+const rangeText = action => {
+  const a = action.frames[0].i + 1, b = action.frames[action.frames.length - 1].i + 1;
+  return a === b ? `第 ${a} 帧` : `第 ${a}–${b} 帧`;
+};
+
+function image(kind, i) {
+  const weapon = $("weapon").checked ? 1 : 0;
+  const key = `${kind}/${weapon}/${i}`;
+  if (!state.images.has(key)) {
+    const img = new Image();
+    img.onload = draw;
+    img.src = `/frame/${key}.png?v=${state.data.version}`;
+    state.images.set(key, img);
+  }
+  return state.images.get(key);
+}
+
+function paint(canvas, layers) {
+  const [x0, y0] = current().box, g = canvas.getContext("2d");
+  g.globalAlpha = 1;
+  g.fillStyle = $("backdrop").value;
+  g.fillRect(0, 0, canvas.width, canvas.height);
+  for (const [img, alpha] of layers) {
+    if (img.complete && img.naturalWidth) {
+      g.globalAlpha = alpha;
+      g.drawImage(img, -x0, -y0);
+    }
+  }
+}
+
+function draw() {
+  if (!state.data) return;
+  const i = current().frames[state.frame].i;
+  const canvases = [...$("stage").querySelectorAll("canvas")];
+  if ($("view").value === "overlay") {
+    paint(canvases[0], [[image("native", i), 1], [image("new", i), 0.6]]);
+  } else {
+    paint(canvases[0], [[image("native", i), 1]]);
+    paint(canvases[1], [[image("new", i), 1]]);
+  }
+}
+
+function layout() {
+  const [x0, y0, x1, y1] = current().box, w = x1 - x0, h = y1 - y0;
+  const overlay = $("view").value === "overlay";
+  $("stage").replaceChildren(...(overlay ? ["原版（实色）叠新版（半透明）"] : ["原版", "新版"]).map(label => {
+    const f = document.createElement("figure"), c = document.createElement("figcaption"), v = document.createElement("canvas");
+    c.textContent = label; v.width = w; v.height = h;
+    f.append(c, v);
+    return f;
+  }));
+  const room = Math.max(160, $("stage").clientWidth), count = overlay ? 1 : 2;
+  const tall = Math.max(170, window.innerHeight - 420);
+  const fit = Math.min((room - 12 * (count - 1)) / count / w, tall / h);
+  const zoom = fit >= 1 ? Math.floor(fit) : fit;
+  $("stage").querySelectorAll("canvas").forEach(c => { c.style.width = `${w * zoom}px`; c.style.height = `${h * zoom}px`; });
+}
+
+function strip() {
+  const action = current(), [x0, y0, x1, y1] = action.box, flags = review(action.name).frames;
+  $("strip").replaceChildren(...action.frames.map((row, k) => {
+    const b = document.createElement("button"), s = document.createElement("span"), c = document.createElement("canvas");
+    b.type = "button"; s.textContent = row.i + 1; c.width = x1 - x0; c.height = y1 - y0;
+    b.setAttribute("aria-label", `第 ${row.i + 1} 帧`);
+    b.addEventListener("click", () => { setPlaying(false); go(k); });
+    b.classList.toggle("flag", flags.includes(row.i));
+    b.append(c, s);
+    const img = image("new", row.i), g = c.getContext("2d");
+    const put = () => { g.fillStyle = $("backdrop").value; g.fillRect(0, 0, c.width, c.height); if (img.naturalWidth) g.drawImage(img, -x0, -y0); };
+    if (img.complete) put(); else img.addEventListener("load", put, {once: true});
+    return b;
+  }));
+  markStrip();
+}
+
+function markStrip() {
+  [...$("strip").children].forEach((b, k) => {
+    b.setAttribute("aria-current", k === state.frame ? "true" : "false");
+    if (k === state.frame && state.playing === false) b.scrollIntoView({block: "nearest", inline: "nearest"});
+  });
+}
+
+function info() {
+  const row = current().frames[state.frame];
+  const parts = [`第 ${row.i + 1} 帧（工具编号 ${row.i}）`, `身高比 ${row.ratio.toFixed(2)}`];
+  if (row.hand) parts.push(`手：${HAND[row.hand] || row.hand}${row.gap != null ? `，移动 ${row.gap}px` : ""}`);
+  if (row.source) parts.push(`来源 ${row.source}`);
+  if (review(current().name).frames.includes(row.i)) parts.push("已标记");
+  $("info").textContent = parts.join(" · ");
+}
+
+function go(k) {
+  const n = current().frames.length;
+  state.frame = (k + n) % n;
+  draw(); markStrip(); info();
+}
+
+function setPlaying(on) {
+  state.playing = on;
+  clearTimeout(state.timer);
+  $("play").textContent = on ? "暂停" : "播放";
+  if (on) tick();
+  markStrip();
+}
+
+function tick() {
+  state.timer = setTimeout(() => {
+    if (!state.playing) return;
+    go(state.frame + 1);
+    tick();
+  }, Number($("speed").value));
+}
+
+function renderList() {
+  const actions = state.data.actions;
+  const done = actions.filter(a => review(a.name).status).length, passed = actions.filter(a => review(a.name).status === "pass").length, fixes = actions.filter(a => review(a.name).status === "fix").length;
+  $("progress").textContent = `已审 ${done} / ${actions.length}，通过 ${passed}，要改 ${fixes}`;
+  $("bar").style.width = `${100 * done / actions.length}%`;
+  $("list").replaceChildren(...actions.map((a, k) => {
+    const li = document.createElement("li"), b = document.createElement("button"), n = document.createElement("span"), t = document.createElement("span"), r = document.createElement("span");
+    const status = review(a.name).status;
+    b.type = "button"; b.setAttribute("aria-current", k === state.index ? "true" : "false");
+    n.className = "name"; n.textContent = a.name;
+    t.className = `tag ${status}`; t.textContent = status === "pass" ? "通过" : status === "fix" ? "要改" : "未审";
+    r.className = "range"; r.textContent = rangeText(a);
+    b.addEventListener("click", () => select(k));
+    b.append(n, t, r); li.append(b);
+    return li;
+  }));
+  const active = $("list").querySelector('[aria-current="true"]');
+  if (active) active.scrollIntoView({block: "nearest", inline: "nearest"});
+}
+
+function renderVerdict() {
+  const r = review(current().name);
+  $("pass").setAttribute("aria-pressed", String(r.status === "pass"));
+  $("fix").setAttribute("aria-pressed", String(r.status === "fix"));
+  if (document.activeElement !== $("note")) $("note").value = r.note;
+}
+
+function select(k) {
+  flush();
+  state.index = k; state.frame = 0;
+  const action = current();
+  $("action").textContent = action.name;
+  $("range").textContent = `${rangeText(action)}，共 ${action.frames.length} 帧`;
+  action.frames.forEach(row => { image("native", row.i); image("new", row.i); });
+  layout(); strip(); renderList(); renderVerdict(); draw(); info();
+  setPlaying(true);
+}
+
+// Saves run one at a time and each sends the newest text, so a slow reply can neither overwrite what is being typed nor land after a newer save.
+function save(name) {
+  $("saved").classList.remove("bad");
+  $("saved").textContent = "保存中…";
+  state.saving = state.saving.then(async () => {
+    const r = review(name);
+    try {
+      const response = await fetch("/api/review", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({action: name, status: r.status, note: r.note, frames: r.frames})});
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const stored = await response.json();
+      $("saved").textContent = `已保存 ${stored.updated.slice(11)}`;
+    } catch (error) {
+      $("saved").classList.add("bad");
+      $("saved").textContent = `没保存上：${error.message}。页面服务可能已停止，内容还在输入框里。`;
+    }
+  });
+  return state.saving;
+}
+
+function edit(change) {
+  const name = current().name;
+  const r = {...review(name)};
+  change(r);
+  state.data.reviews[name] = r;
+  return name;
+}
+
+function flush() {
+  if (state.saveTimer) {
+    clearTimeout(state.saveTimer.id);
+    save(state.saveTimer.name);
+    state.saveTimer = null;
+  }
+}
+
+function nextUnreviewed() {
+  const actions = state.data.actions, n = actions.length;
+  for (let step = 1; step < n; step++) {
+    const k = (state.index + step) % n;
+    if (!review(actions[k].name).status) return k;
+  }
+  return null;
+}
+
+function verdict(status) {
+  const toggled = review(current().name).status === status ? "" : status;
+  const name = edit(r => { r.status = toggled; });
+  save(name);
+  renderVerdict(); renderList();
+  if (toggled === "pass") {
+    const k = nextUnreviewed();
+    if (k !== null) select(k);
+  } else if (toggled === "fix") {
+    $("note").focus();
+  }
+}
+
+function toggleFlag() {
+  const i = current().frames[state.frame].i;
+  setPlaying(false);
+  const name = edit(r => { r.frames = r.frames.includes(i) ? r.frames.filter(f => f !== i) : [...r.frames, i].sort((a, b) => a - b); });
+  save(name);
+  $("strip").children[state.frame].classList.toggle("flag", review(name).frames.includes(i));
+  info();
+}
+
+$("play").addEventListener("click", () => setPlaying(!state.playing));
+$("prev").addEventListener("click", () => { setPlaying(false); go(state.frame - 1); });
+$("next").addEventListener("click", () => { setPlaying(false); go(state.frame + 1); });
+$("speed").addEventListener("change", () => setPlaying(state.playing));
+$("view").addEventListener("change", () => { layout(); draw(); });
+$("backdrop").addEventListener("change", () => { strip(); draw(); });
+$("weapon").addEventListener("change", () => { current().frames.forEach(row => { image("native", row.i); image("new", row.i); }); strip(); draw(); });
+$("flag").addEventListener("click", toggleFlag);
+$("pass").addEventListener("click", () => verdict("pass"));
+$("fix").addEventListener("click", () => verdict("fix"));
+$("note").addEventListener("input", () => {
+  const name = edit(r => { r.note = $("note").value; });
+  if (state.saveTimer) clearTimeout(state.saveTimer.id);
+  state.saveTimer = {name, id: setTimeout(() => { state.saveTimer = null; save(name); }, 500)};
+  $("saved").classList.remove("bad");
+  $("saved").textContent = "待保存…";
+});
+$("note").addEventListener("blur", flush);
+window.addEventListener("resize", () => { if (state.data) { layout(); draw(); } });
+window.addEventListener("beforeunload", flush);
+document.addEventListener("keydown", event => {
+  if (!state.data || event.target.matches("textarea, select, input") || event.ctrlKey || event.metaKey || event.altKey) return;
+  const n = state.data.actions.length, keys = {
+    " ": () => setPlaying(!state.playing),
+    ArrowLeft: () => { setPlaying(false); go(state.frame - 1); },
+    ArrowRight: () => { setPlaying(false); go(state.frame + 1); },
+    ArrowUp: () => select((state.index - 1 + n) % n),
+    ArrowDown: () => select((state.index + 1) % n),
+    1: () => verdict("pass"),
+    2: () => verdict("fix"),
+    f: toggleFlag, F: toggleFlag,
+  };
+  if (keys[event.key]) {
+    event.preventDefault();
+    keys[event.key]();
+  }
+});
+
+(async () => {
+  try {
+    const response = await fetch("/api/data");
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    state.data = await response.json();
+  } catch (error) {
+    $("action").textContent = "读取失败";
+    $("range").textContent = `${error.message}。先确认 final 跑完、页面服务在运行。`;
+    return;
+  }
+  $("heading").textContent = state.data.title;
+  document.title = `动作审核 · ${state.data.title}`;
+  if (state.data.weapon) $("weaponLabel").textContent = `带${state.data.weapon}（工程模拟，遮挡顺序未核实）`;
+  else $("weapon").closest("label").hidden = true;
+  const first = nextUnreviewed.call(null);
+  select(review(state.data.actions[0].name).status ? (first ?? 0) : 0);
+})();
+</script>
+</body>
+</html>

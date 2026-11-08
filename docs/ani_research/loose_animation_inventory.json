@@ -1,0 +1,1039 @@
+{
+  "files": [
+    {
+      "path": "Cursor\\add_equipment_socket.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\amplify.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\applyskin.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\attach.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\avatar_convert.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\bid.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\bow.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\buy.ani",
+      "bytes": 69854,
+      "header_hex": "52494646d610010041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\buynow.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\cancel.ani",
+      "bytes": 69890,
+      "header_hex": "52494646fa10010041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\chn_MouseMaking.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\chn_MouseMaking_trans.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\chn_partybreak.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\chronicleupgrade.ani",
+      "bytes": 97754,
+      "header_hex": "52494646d27d010041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\Components.ani",
+      "bytes": 55900,
+      "header_hex": "5249464654da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\convert.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\conv_npc.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\conv_pc.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\CopySkilltree.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\CopySkilltree_Press.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\decomposition.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\deselect.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\detailview.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\dismantle.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\distort.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\dye.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\eco_energy_donation.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\enchant.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\enter.ani",
+      "bytes": 41918,
+      "header_hex": "52494646b6a3000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\equip.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\EquipmentSimulator.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\EquipmentSimulator_trans.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\eventlock.ani",
+      "bytes": 38784,
+      "header_hex": "524946467897000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\FiendWar01.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\fightwait.ani",
+      "bytes": 41918,
+      "header_hex": "52494646b6a3000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\gem.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\genuine_damage_upgrade.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\gift.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\grant.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\grow.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\letsfight.ani",
+      "bytes": 55896,
+      "header_hex": "5249464650da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\locationguide.ani",
+      "bytes": 55892,
+      "header_hex": "524946464cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\mousewheel.ani",
+      "bytes": 41966,
+      "header_hex": "52494646e6a3000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\mousewheel_tuning.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\mousewheel_tuning_trans.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\move.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\multiselect.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\notimenu.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\notimenu_trans.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\payment.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\produce.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\purify.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\push.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\puton.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\questscroll.ani",
+      "bytes": 55900,
+      "header_hex": "5249464654da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\raid_match.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\raid_move.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\register.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\register2.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\reinforce.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\release.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\remove.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\rental.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\resize_diagonal.ani",
+      "bytes": 41942,
+      "header_hex": "52494646cea3000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\resize_diagonal2.ani",
+      "bytes": 41942,
+      "header_hex": "52494646cea3000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\resize_horizontal.ani",
+      "bytes": 41942,
+      "header_hex": "52494646cea3000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\resize_vertical.ani",
+      "bytes": 41942,
+      "header_hex": "52494646cea3000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\resize_vertical_2.ani",
+      "bytes": 41942,
+      "header_hex": "52494646cea3000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\sealskill.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\seemenu.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\seemenu00.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\seemenu01.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\seemenu_trans.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\select.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\sell.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\Sorting.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\Sorting_trans.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\sortlock.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\sortunlock.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\teleportparty.ani",
+      "bytes": 55900,
+      "header_hex": "5249464654da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\tocart.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\tradelock.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\tradeunlock.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\unblock.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\VP_leftclick.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\VP_leftclick_trans.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\VP_rightclick.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\VP_rightclick_trans.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\wait.ani",
+      "bytes": 69818,
+      "header_hex": "52494646b210010041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "Cursor\\web.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\add_equipment_socket.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\amplify.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\applyskin.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\attach.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\avatar_convert.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\bid.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\bow.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\buy.ani",
+      "bytes": 69854,
+      "header_hex": "52494646d610010041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\buynow.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\cancel.ani",
+      "bytes": 69890,
+      "header_hex": "52494646fa10010041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\chn_partybreak.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\chronicleupgrade.ani",
+      "bytes": 97754,
+      "header_hex": "52494646d27d010041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\Components.ani",
+      "bytes": 55900,
+      "header_hex": "5249464654da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\convert.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\conv_npc.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\conv_pc.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\CopySkilltree.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\CopySkilltree_Press.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\decomposition.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\deselect.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\detailview.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\dismantle.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\distort.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\drop.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\dye.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\eco_energy_donation.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\enchant.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\enter.ani",
+      "bytes": 41918,
+      "header_hex": "52494646b6a3000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\equip.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\EquipmentSimulator.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\EquipmentSimulator_trans.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\FiendWar01.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\fightwait.ani",
+      "bytes": 41918,
+      "header_hex": "52494646b6a3000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\gem.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\genuine_damage_upgrade.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\gift.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\grant.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\grow.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\letsfight.ani",
+      "bytes": 55896,
+      "header_hex": "5249464650da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\locationguide.ani",
+      "bytes": 55892,
+      "header_hex": "524946464cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\mousewheel.ani",
+      "bytes": 41966,
+      "header_hex": "52494646e6a3000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\mousewheel_tuning.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\mousewheel_tuning_trans.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\move.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\multiselect.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\notimenu.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\notimenu_trans.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\payment.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\produce.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\purify.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\push.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\puton.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\questscroll.ani",
+      "bytes": 55900,
+      "header_hex": "5249464654da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\raid_match.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\raid_move.ani",
+      "bytes": 27968,
+      "header_hex": "52494646386d000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\register.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\register2.ani",
+      "bytes": 55868,
+      "header_hex": "5249464634da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\reinforce.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\release.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\remove.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\rental.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\resize_diagonal.ani",
+      "bytes": 41942,
+      "header_hex": "52494646cea3000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\resize_diagonal2.ani",
+      "bytes": 41942,
+      "header_hex": "52494646cea3000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\resize_horizontal.ani",
+      "bytes": 41942,
+      "header_hex": "52494646cea3000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\resize_vertical.ani",
+      "bytes": 41942,
+      "header_hex": "52494646cea3000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\resize_vertical_2.ani",
+      "bytes": 41942,
+      "header_hex": "52494646cea3000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\sealskill.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\seemenu.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\seemenu00.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\seemenu01.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\seemenu_trans.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\select.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\sell.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\sortlock.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\sortunlock.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\teleportparty.ani",
+      "bytes": 55900,
+      "header_hex": "5249464654da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\tocart.ani",
+      "bytes": 55904,
+      "header_hex": "5249464658da000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\tradelock.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\tradeunlock.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\unblock.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\wait.ani",
+      "bytes": 69818,
+      "header_hex": "52494646b210010041434f4e",
+      "windows_cursor": true
+    },
+    {
+      "path": "SideGamePlay\\Cursor\\web.ani",
+      "bytes": 55940,
+      "header_hex": "524946467cda000041434f4e",
+      "windows_cursor": true
+    }
+  ],
+  "count": 172,
+  "all_windows_cursors": true,
+  "character_animation_count": 0
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "name": "master",
+    "task_id": "img_7bf13ddef19a0aa314ab3e31936fcabd",
+    "model": "gpt-image-2.5",
+    "output_n": 1,
+    "cost_usd": 0.038,
+    "created_at": "2026-10-22T10:34:28.226414Z",
+    "finished_at": "2026-10-22T10:35:56.445905Z",
+    "image_count_from_server": 1,
+    "image_count_caution": "Task detail field is 1 for all jobs and does not expose submitted reference images; not evidence of reference count."
+  },
+  {
+    "name": "master_refine",
+    "task_id": "img_0f4a0069d7b703eaa07a2d71b638435b",
+    "model": "gpt-image-2.5",
+    "output_n": 1,
+    "cost_usd": 0.038,
+    "created_at": "2026-10-22T10:37:39.585274Z",
+    "finished_at": "2026-10-22T10:38:40.572266Z",
+    "image_count_from_server": 1,
+    "image_count_caution": "Task detail field is 1 for all jobs and does not expose submitted reference images; not evidence of reference count."
+  },
+  {
+    "name": "master_feet",
+    "task_id": "img_e2914b5e5c7024c9ccddc62307f85593",
+    "model": "gpt-image-2.5",
+    "output_n": 1,
+    "cost_usd": 0.038,
+    "created_at": "2026-10-22T10:41:08.105798Z",
+    "finished_at": "2026-10-22T10:41:52.60707Z",
+    "image_count_from_server": 1,
+    "image_count_caution": "Task detail field is 1 for all jobs and does not expose submitted reference images; not evidence of reference count."
+  },
+  {
+    "name": "walk",
+    "task_id": "img_a225a1aa7c0bd78c6d8a4f36b6512806",
+    "model": "gpt-image-2.5",
+    "output_n": 1,
+    "cost_usd": 0.038,
+    "created_at": "2026-10-22T10:43:11.334006Z",
+    "finished_at": "2026-10-22T10:44:03.496758Z",
+    "image_count_from_server": 1,
+    "image_count_caution": "Task detail field is 1 for all jobs and does not expose submitted reference images; not evidence of reference count."
+  },
+  {
+    "name": "cast",
+    "task_id": "img_d95924a7f41e132beef217b8e1136115",
+    "model": "gpt-image-2.5",
+    "output_n": 1,
+    "cost_usd": 0.038,
+    "created_at": "2026-10-22T10:43:11.321012Z",
+    "finished_at": "2026-10-22T10:44:00.604486Z",
+    "image_count_from_server": 1,
+    "image_count_caution": "Task detail field is 1 for all jobs and does not expose submitted reference images; not evidence of reference count."
+  },
+  {
+    "name": "jump",
+    "task_id": "img_32a5f5425dd29f7300182c1e6e10d29f",
+    "model": "gpt-image-2.5",
+    "output_n": 1,
+    "cost_usd": 0.038,
+    "created_at": "2026-10-22T10:43:11.283308Z",
+    "finished_at": "2026-10-22T10:44:00.784942Z",
+    "image_count_from_server": 1,
+    "image_count_caution": "Task detail field is 1 for all jobs and does not expose submitted reference images; not evidence of reference count."
+  },
+  {
+    "name": "jump_fix",
+    "task_id": "img_1b28a06037078fe2e9d3413a6d5ce84c",
+    "model": "gpt-image-2.5",
+    "output_n": 1,
+    "cost_usd": 0.038,
+    "created_at": "2026-10-22T10:47:53.308311Z",
+    "finished_at": "2026-10-22T10:48:46.402212Z",
+    "image_count_from_server": 1,
+    "image_count_caution": "Task detail field is 1 for all jobs and does not expose submitted reference images; not evidence of reference count."
+  }
+]

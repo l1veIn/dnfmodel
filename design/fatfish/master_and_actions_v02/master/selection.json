@@ -1,0 +1,21 @@
+{
+  "name": "master_feet",
+  "reference_8x": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_reference_8x.png",
+  "native_canvas": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_clean_canvas.png",
+  "native_window": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_native_128.png",
+  "raw_provider": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\master_feet_0.png",
+  "selection_reason": "Simplified hair/gold trim and corrected foreground-left/background-right staggered feet. Registered eye residual ~1.7 native px, supporting sole <0.2px (manually estimated anchors). Readable outline and intact character identity. Accepted for three-pose pilot, not runtime-certified or final user-approved art.",
+  "inspection": "Raw PNG and native 128 window inspected at integer enlargement. No forced palette reduction.",
+  "rear_shoe_holdout_estimate": {
+    "raw": [
+      540,
+      850
+    ],
+    "target_native": [
+      250,
+      379
+    ],
+    "caution": "Manual estimate, about 1-2 native pixel uncertainty; not used in registration fitting."
+  },
+  "game_ready": false
+}

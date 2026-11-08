@@ -1,0 +1,67 @@
+{
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png",
+  "source_sha256": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d",
+  "reference_frame": 10,
+  "original_canvas": [
+    500,
+    500
+  ],
+  "guide_window": [
+    122,
+    196,
+    378,
+    452
+  ],
+  "manual_landmarks": {
+    "generated_output_pixel_eye": [
+      550,
+      384
+    ],
+    "generated_output_pixel_sole": [
+      490,
+      950
+    ],
+    "target_native_eye": [
+      249,
+      305
+    ],
+    "target_native_sole": [
+      244,
+      386
+    ],
+    "caution": "Visual estimates only, approximately 1-2 native pixels uncertainty; not certified engine anchors."
+  },
+  "target_native_scale": 0.1431095406360424,
+  "rounded_resized_canvas": [
+    147,
+    147
+  ],
+  "actual_native_scale": 0.1435546875,
+  "translation": [
+    174,
+    250
+  ],
+  "transformed_eye": [
+    252.955,
+    305.125
+  ],
+  "transformed_sole": [
+    244.342,
+    386.377
+  ],
+  "unresolved": [
+    "head horizontal offset",
+    "head/body and leg proportions",
+    "hand pose",
+    "accessory drift between independently generated frames",
+    "native pixel cleanup and weapon occlusion"
+  ],
+  "outputs": [
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\qa\\registration_probe\\idle_01_nearest_native_canvas.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\qa\\registration_probe\\idle_01_lanczos_native_canvas.png"
+  ],
+  "comparison": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\qa\\registration_probe\\comparison.png",
+  "source_modified": false,
+  "new_generation_jobs": 0,
+  "game_ready": false
+}

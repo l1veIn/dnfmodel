@@ -1,0 +1,12 @@
+Edit Image 1. It is the finished appearance master for a 2D action game character. Redraw the same single figure with only the tail changed. Same pose, same three-quarter view facing right, same framing and scale, same height, same head, face, hair, shoulders, sleeves, bodice, apron, back bow and its ribbons, skirt, hem, legs, shoes, colors, outlines and flat medium gray background. Do not redesign, restyle, recolor or simplify anything else.
+
+The tail in Image 1 is too long and too thin, like a slender eel. Make it a short, thick, chunky, chubby whale tail. Keep what is right about it: it grows from her hips at the same place on the back of the skirt, and it lifts up a little at the end instead of drooping.
+- Length: about one third shorter than in Image 1. The far edge of the fluke reaches only about 0.15 of her height behind the back of the skirt, not further.
+- Thickness: about one and a half times as thick as in Image 1 along its whole length. At the root it is about 0.11 of her height across, and just before the fluke it is still about 0.06 of her height across. It looks heavy, round and soft, like a plump whale's body, with no long thin neck anywhere.
+- Curve: one short, fat, springy upward curve from the hips. The fluke ends up lifted and tilted up and back, with its top at about 0.42 of her height. It stays clear of the long hair.
+- Fluke: a wide fluke, the same overall width as in Image 1, about 0.15 of her height across, but with short, broad, thick, rounded lobes instead of long thin pointed ones. Each lobe is plump and about half as long again as it is deep, with softly rounded tips. The notch between the lobes is shallow.
+- Color: the same blue as Image 1 with the same deep shadows, the same pale underside along the lower edge, and the same gradient to light blue at the fluke tips.
+
+Where the old, longer tail was, draw only the flat gray background. No trace of the old tail remains.
+
+Every shape is fully opaque. Background: completely flat uniform medium gray, RGB 128 128 128. No shadow, no floor, no effects, no text.

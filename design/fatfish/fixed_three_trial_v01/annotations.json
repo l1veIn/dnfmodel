@@ -1,0 +1,4 @@
+{
+  "eyes": [[366,145],[376,156],[365,140],[337,158],[366,161],[359,152]],
+  "method": "Approximate manual center of the same near-side visible eye, read from inspected 640px normalized cells. Fitting hint, not a pose accuracy measurement."
+}

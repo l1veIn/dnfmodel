@@ -1,0 +1,150 @@
+{
+  "old_source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\registered\\cast_clean_canvas.png",
+  "normalized_generated": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\registered\\fix_cast_clean_canvas.png",
+  "output": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\corrected\\fix_cast_canvas.png",
+  "changed_pixels": 1017,
+  "outside_mask_identical": true,
+  "patch_polygons": [
+    [
+      [
+        198,
+        301
+      ],
+      [
+        232,
+        301
+      ],
+      [
+        232,
+        326
+      ],
+      [
+        198,
+        326
+      ]
+    ],
+    [
+      [
+        251,
+        325
+      ],
+      [
+        270,
+        325
+      ],
+      [
+        270,
+        348
+      ],
+      [
+        251,
+        348
+      ]
+    ],
+    [
+      [
+        249,
+        349
+      ],
+      [
+        275,
+        349
+      ],
+      [
+        275,
+        379
+      ],
+      [
+        249,
+        379
+      ]
+    ]
+  ],
+  "local_fits": [
+    {
+      "label": "left_hand",
+      "generated_point_before_local_fit": [
+        204.2613439923315,
+        315.6850112491827
+      ],
+      "target_native": [
+        209,
+        315
+      ],
+      "fixed_root": [
+        232,
+        313
+      ],
+      "local_matrix": [
+        [
+          0.8283853352045102,
+          -0.008083446567133959,
+          42.34472100806656
+        ],
+        [
+          0.008083446567133959,
+          0.8283853352045102,
+          51.84003047741322
+        ]
+      ],
+      "note": "The endpoint is a fitting constraint, not an independent zero-error validation. Final pixels/joint seams require inspection."
+    },
+    {
+      "label": "right_hand",
+      "generated_point_before_local_fit": [
+        259.6034657254734,
+        337.08107322089575
+      ],
+      "target_native": [
+        260,
+        337
+      ],
+      "fixed_root": [
+        253,
+        329
+      ],
+      "local_matrix": [
+        [
+          1.0180272775523609,
+          0.0343384792465972,
+          -15.858260892877803
+        ],
+        [
+          -0.0343384792465972,
+          1.0180272775523609,
+          2.7566609346623636
+        ]
+      ],
+      "note": "The endpoint is a fitting constraint, not an independent zero-error validation. Final pixels/joint seams require inspection."
+    },
+    {
+      "label": "raised_shoe",
+      "generated_point_before_local_fit": [
+        259.3009871826788,
+        370.2909501662366
+      ],
+      "target_native": [
+        263,
+        367
+      ],
+      "fixed_root": [
+        251,
+        352
+      ],
+      "local_matrix": [
+        [
+          0.9269103156133749,
+          0.2354021694591129,
+          -64.51605286856486
+        ],
+        [
+          -0.2354021694591129,
+          0.9269103156133749,
+          84.81351343832938
+        ]
+      ],
+      "note": "The endpoint is a fitting constraint, not an independent zero-error validation. Final pixels/joint seams require inspection."
+    }
+  ],
+  "note": "Only generated local repair regions are fitted/composited; no manual pixel painting. Visible limb anchors and joint seams still require independent checks."
+}

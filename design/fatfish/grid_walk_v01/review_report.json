@@ -1,0 +1,767 @@
+{
+  "schema_version": 1,
+  "task_id": "img_c8dfb23330245af9fb5892282885f3f9",
+  "model": "gpt-image-2.5",
+  "cost_usd": 0.038,
+  "generation_jobs": 1,
+  "actual_size": [
+    2048,
+    2048
+  ],
+  "actual_mode": "RGBA",
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "transparent_fraction": 0.5905792713165283,
+  "sheet_sha256": "a958790c84466d0cb3ee0e0bce95a892a273214f6dd215f11f648b96640c2471",
+  "reference_count": 2,
+  "reference_payload_hash_verified": true,
+  "frame_slots": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "native_window_world": [
+    170,
+    250,
+    330,
+    410
+  ],
+  "native_size": [
+    160,
+    160
+  ],
+  "preview_timing_ms": 120,
+  "frames": [
+    {
+      "slot": 0,
+      "cell_box": [
+        48,
+        48,
+        688,
+        688
+      ],
+      "cleanup": {
+        "nontransparent_before": 165496,
+        "nontransparent_after": 110460,
+        "main_bbox_xywh": [
+          127,
+          78,
+          373,
+          534
+        ],
+        "method": "Remove fixed labels/borders and alpha islands more than 8 raw pixels from the main opaque character; retain sampled alpha values."
+      },
+      "registration": {
+        "uniform_scale": 0.18309859154929578,
+        "translation": [
+          20.2112676056338,
+          20.309859154929576
+        ],
+        "rotation_degrees": 0,
+        "source_eye_manual": [
+          332,
+          184
+        ],
+        "target_eye_manual": [
+          81,
+          54
+        ],
+        "source_sole": [
+          429.4246575342466,
+          610.0
+        ],
+        "target_sole_y": 132.0,
+        "hands": [
+          {
+            "raw_hand": [
+              484.74436090225566,
+              256.68045112781954
+            ],
+            "target_hand": [
+              109.0,
+              65.0
+            ],
+            "before_error_native_px": 2.3079202240056067,
+            "radius_native_px": 16.0,
+            "skin_component_refined": true
+          },
+          {
+            "raw_hand": [
+              226.8430913348946,
+              363.1662763466042
+            ],
+            "target_hand": [
+              58.0,
+              85.0
+            ],
+            "before_error_native_px": 4.158156184507017,
+            "radius_native_px": 16.0,
+            "skin_component_refined": false
+          }
+        ],
+        "samples_from_raw_once": true,
+        "interpolation": "NEAREST",
+        "face_pixels_not_composited_or_replaced": true,
+        "alpha_values_preserved_by_sampling": true
+      },
+      "target_landmarks": {
+        "eye": [
+          81,
+          54
+        ],
+        "sole_height": [
+          104.0,
+          132.0
+        ],
+        "hand_0": [
+          109.0,
+          65.0
+        ],
+        "hand_1": [
+          58.0,
+          85.0
+        ]
+      },
+      "corrected_solid_bottom_y": 132.0,
+      "note": "按原版眼部与鞋底高度做整体矫正，手部采用连续的小范围位置调整。点位用于拟合，仍需目视检查袖口、关节、腿部和边缘。"
+    },
+    {
+      "slot": 1,
+      "cell_box": [
+        704,
+        48,
+        1344,
+        688
+      ],
+      "cleanup": {
+        "nontransparent_before": 154013,
+        "nontransparent_after": 100856,
+        "main_bbox_xywh": [
+          150,
+          102,
+          324,
+          513
+        ],
+        "method": "Remove fixed labels/borders and alpha islands more than 8 raw pixels from the main opaque character; retain sampled alpha values."
+      },
+      "registration": {
+        "uniform_scale": 0.19851116625310175,
+        "translation": [
+          12.734491315136466,
+          12.312655086848629
+        ],
+        "rotation_degrees": 0,
+        "source_eye_manual": [
+          359,
+          210
+        ],
+        "target_eye_manual": [
+          84,
+          54
+        ],
+        "source_sole": [
+          395.4760705289672,
+          613.0
+        ],
+        "target_sole_y": 134.0,
+        "hands": [
+          {
+            "raw_hand": [
+              457.6,
+              351.07924528301885
+            ],
+            "target_hand": [
+              101.0,
+              76.0
+            ],
+            "before_error_native_px": 6.533839853789742,
+            "radius_native_px": 22.868439488264098,
+            "skin_component_refined": false
+          }
+        ],
+        "samples_from_raw_once": true,
+        "interpolation": "NEAREST",
+        "face_pixels_not_composited_or_replaced": true,
+        "alpha_values_preserved_by_sampling": true
+      },
+      "target_landmarks": {
+        "eye": [
+          84,
+          54
+        ],
+        "sole_height": [
+          91.08571428571429,
+          134.0
+        ],
+        "hand_0": [
+          101.0,
+          76.0
+        ]
+      },
+      "corrected_solid_bottom_y": 134.0,
+      "note": "按原版眼部与鞋底高度做整体矫正，手部采用连续的小范围位置调整。点位用于拟合，仍需目视检查袖口、关节、腿部和边缘。"
+    },
+    {
+      "slot": 2,
+      "cell_box": [
+        1360,
+        48,
+        2000,
+        688
+      ],
+      "cleanup": {
+        "nontransparent_before": 165351,
+        "nontransparent_after": 90925,
+        "main_bbox_xywh": [
+          196,
+          98,
+          283,
+          524
+        ],
+        "method": "Remove fixed labels/borders and alpha islands more than 8 raw pixels from the main opaque character; retain sampled alpha values."
+      },
+      "registration": {
+        "uniform_scale": 0.1937046004842615,
+        "translation": [
+          11.198547215496376,
+          13.903147699757874
+        ],
+        "rotation_degrees": 0,
+        "source_eye_manual": [
+          381,
+          207
+        ],
+        "target_eye_manual": [
+          85,
+          54
+        ],
+        "source_sole": [
+          392.3342105263158,
+          620.0
+        ],
+        "target_sole_y": 134.0,
+        "hands": [
+          {
+            "raw_hand": [
+              387.578231292517,
+              397.8503401360544
+            ],
+            "target_hand": [
+              85.77777777777777,
+              90.33333333333333
+            ],
+            "before_error_native_px": 0.8062369797637017,
+            "radius_native_px": 16.0,
+            "skin_component_refined": true
+          }
+        ],
+        "samples_from_raw_once": true,
+        "interpolation": "NEAREST",
+        "face_pixels_not_composited_or_replaced": true,
+        "alpha_values_preserved_by_sampling": true
+      },
+      "target_landmarks": {
+        "eye": [
+          85,
+          54
+        ],
+        "sole_height": [
+          83.08571428571429,
+          134.0
+        ],
+        "hand_0": [
+          85.77777777777777,
+          90.33333333333333
+        ]
+      },
+      "corrected_solid_bottom_y": 134.0,
+      "note": "按原版眼部与鞋底高度做整体矫正，手部采用连续的小范围位置调整。点位用于拟合，仍需目视检查袖口、关节、腿部和边缘。"
+    },
+    {
+      "slot": 3,
+      "cell_box": [
+        48,
+        704,
+        688,
+        1344
+      ],
+      "cleanup": {
+        "nontransparent_before": 161474,
+        "nontransparent_after": 97123,
+        "main_bbox_xywh": [
+          140,
+          124,
+          294,
+          498
+        ],
+        "method": "Remove fixed labels/borders and alpha islands more than 8 raw pixels from the main opaque character; retain sampled alpha values."
+      },
+      "registration": {
+        "uniform_scale": 0.20506329113924052,
+        "translation": [
+          11.45822784810126,
+          7.860759493670884
+        ],
+        "rotation_degrees": 0,
+        "source_eye_manual": [
+          344,
+          225
+        ],
+        "target_eye_manual": [
+          82,
+          54
+        ],
+        "source_sole": [
+          243.58783783783784,
+          620.0
+        ],
+        "target_sole_y": 135.0,
+        "hands": [
+          {
+            "raw_hand": [
+              411.49881235154396,
+              382.0095011876485
+            ],
+            "target_hand": [
+              97.3,
+              82.3
+            ],
+            "before_error_native_px": 4.160871533761893,
+            "radius_native_px": 16.0,
+            "skin_component_refined": true
+          }
+        ],
+        "samples_from_raw_once": true,
+        "interpolation": "NEAREST",
+        "face_pixels_not_composited_or_replaced": true,
+        "alpha_values_preserved_by_sampling": true
+      },
+      "target_landmarks": {
+        "eye": [
+          82,
+          54
+        ],
+        "sole_height": [
+          67.30434782608695,
+          135.0
+        ],
+        "hand_0": [
+          97.3,
+          82.3
+        ]
+      },
+      "corrected_solid_bottom_y": 135.0,
+      "note": "按原版眼部与鞋底高度做整体矫正，手部采用连续的小范围位置调整。点位用于拟合，仍需目视检查袖口、关节、腿部和边缘。"
+    },
+    {
+      "slot": 4,
+      "cell_box": [
+        704,
+        704,
+        1344,
+        1344
+      ],
+      "cleanup": {
+        "nontransparent_before": 169236,
+        "nontransparent_after": 113887,
+        "main_bbox_xywh": [
+          137,
+          100,
+          412,
+          515
+        ],
+        "method": "Remove fixed labels/borders and alpha islands more than 8 raw pixels from the main opaque character; retain sampled alpha values."
+      },
+      "registration": {
+        "uniform_scale": 0.19607843137254902,
+        "translation": [
+          11.784313725490193,
+          13.803921568627452
+        ],
+        "rotation_degrees": 0,
+        "source_eye_manual": [
+          353,
+          205
+        ],
+        "target_eye_manual": [
+          81,
+          54
+        ],
+        "source_sole": [
+          248.29003021148037,
+          613.0
+        ],
+        "target_sole_y": 134.0,
+        "hands": [
+          {
+            "raw_hand": [
+              497.59504132231405,
+              313.3388429752066
+            ],
+            "target_hand": [
+              105.33333333333333,
+              74.66666666666667
+            ],
+            "before_error_native_px": 4.059739959230605,
+            "radius_native_px": 16.0,
+            "skin_component_refined": true
+          }
+        ],
+        "samples_from_raw_once": true,
+        "interpolation": "NEAREST",
+        "face_pixels_not_composited_or_replaced": true,
+        "alpha_values_preserved_by_sampling": true
+      },
+      "target_landmarks": {
+        "eye": [
+          81,
+          54
+        ],
+        "sole_height": [
+          60.30434782608695,
+          134.0
+        ],
+        "hand_0": [
+          105.33333333333333,
+          74.66666666666667
+        ]
+      },
+      "corrected_solid_bottom_y": 134.0,
+      "note": "按原版眼部与鞋底高度做整体矫正，手部采用连续的小范围位置调整。点位用于拟合，仍需目视检查袖口、关节、腿部和边缘。"
+    },
+    {
+      "slot": 5,
+      "cell_box": [
+        1360,
+        704,
+        2000,
+        1344
+      ],
+      "cleanup": {
+        "nontransparent_before": 187465,
+        "nontransparent_after": 114020,
+        "main_bbox_xywh": [
+          148,
+          98,
+          392,
+          517
+        ],
+        "method": "Remove fixed labels/borders and alpha islands more than 8 raw pixels from the main opaque character; retain sampled alpha values."
+      },
+      "registration": {
+        "uniform_scale": 0.1926829268292683,
+        "translation": [
+          11.441463414634143,
+          14.69268292682927
+        ],
+        "rotation_degrees": 0,
+        "source_eye_manual": [
+          361,
+          204
+        ],
+        "target_eye_manual": [
+          81,
+          54
+        ],
+        "source_sole": [
+          243.60927152317882,
+          614.0
+        ],
+        "target_sole_y": 133.0,
+        "hands": [
+          {
+            "raw_hand": [
+              520.0226244343892,
+              307.66968325791856
+            ],
+            "target_hand": [
+              109.66666666666667,
+              70.83333333333333
+            ],
+            "before_error_native_px": 3.710824494899828,
+            "radius_native_px": 16.0,
+            "skin_component_refined": true
+          }
+        ],
+        "samples_from_raw_once": true,
+        "interpolation": "NEAREST",
+        "face_pixels_not_composited_or_replaced": true,
+        "alpha_values_preserved_by_sampling": true
+      },
+      "target_landmarks": {
+        "eye": [
+          81,
+          54
+        ],
+        "sole_height": [
+          57.30434782608695,
+          133.0
+        ],
+        "hand_0": [
+          109.66666666666667,
+          70.83333333333333
+        ]
+      },
+      "corrected_solid_bottom_y": 132.0,
+      "note": "按原版眼部与鞋底高度做整体矫正，手部采用连续的小范围位置调整。点位用于拟合，仍需目视检查袖口、关节、腿部和边缘。"
+    },
+    {
+      "slot": 6,
+      "cell_box": [
+        48,
+        1360,
+        688,
+        2000
+      ],
+      "cleanup": {
+        "nontransparent_before": 184683,
+        "nontransparent_after": 107973,
+        "main_bbox_xywh": [
+          133,
+          86,
+          319,
+          520
+        ],
+        "method": "Remove fixed labels/borders and alpha islands more than 8 raw pixels from the main opaque character; retain sampled alpha values."
+      },
+      "registration": {
+        "uniform_scale": 0.18465227817745802,
+        "translation": [
+          19.18705035971223,
+          18.47002398081535
+        ],
+        "rotation_degrees": 0,
+        "source_eye_manual": [
+          351,
+          187
+        ],
+        "target_eye_manual": [
+          84,
+          53
+        ],
+        "source_sole": [
+          399.26223091976516,
+          604.0
+        ],
+        "target_sole_y": 130.0,
+        "hands": [
+          {
+            "raw_hand": [
+              431.10545454545456,
+              367.1709090909091
+            ],
+            "target_hand": [
+              100.75,
+              83.75
+            ],
+            "before_error_native_px": 3.1906614279860857,
+            "radius_native_px": 16.0,
+            "skin_component_refined": true
+          }
+        ],
+        "samples_from_raw_once": true,
+        "interpolation": "NEAREST",
+        "face_pixels_not_composited_or_replaced": true,
+        "alpha_values_preserved_by_sampling": true
+      },
+      "target_landmarks": {
+        "eye": [
+          84,
+          53
+        ],
+        "sole_height": [
+          89.90243902439025,
+          130.0
+        ],
+        "hand_0": [
+          100.75,
+          83.75
+        ]
+      },
+      "corrected_solid_bottom_y": 130.0,
+      "note": "按原版眼部与鞋底高度做整体矫正，手部采用连续的小范围位置调整。点位用于拟合，仍需目视检查袖口、关节、腿部和边缘。"
+    },
+    {
+      "slot": 7,
+      "cell_box": [
+        704,
+        1360,
+        1344,
+        2000
+      ],
+      "cleanup": {
+        "nontransparent_before": 156590,
+        "nontransparent_after": 96565,
+        "main_bbox_xywh": [
+          168,
+          77,
+          297,
+          530
+        ],
+        "method": "Remove fixed labels/borders and alpha islands more than 8 raw pixels from the main opaque character; retain sampled alpha values."
+      },
+      "registration": {
+        "uniform_scale": 0.18052256532066507,
+        "translation": [
+          19.636579572446557,
+          21.603325415676963
+        ],
+        "rotation_degrees": 0,
+        "source_eye_manual": [
+          351,
+          185
+        ],
+        "target_eye_manual": [
+          83,
+          55
+        ],
+        "source_sole": [
+          360.47353760445685,
+          606.0
+        ],
+        "target_sole_y": 131.0,
+        "hands": [
+          {
+            "raw_hand": [
+              357.16494845360825,
+              382.7525773195876
+            ],
+            "target_hand": [
+              87.0,
+              90.0
+            ],
+            "before_error_native_px": 2.9704545684487855,
+            "radius_native_px": 16.0,
+            "skin_component_refined": false
+          }
+        ],
+        "samples_from_raw_once": true,
+        "interpolation": "NEAREST",
+        "face_pixels_not_composited_or_replaced": true,
+        "alpha_values_preserved_by_sampling": true
+      },
+      "target_landmarks": {
+        "eye": [
+          83,
+          55
+        ],
+        "sole_height": [
+          79.58333333333333,
+          131.0
+        ],
+        "hand_0": [
+          87.0,
+          90.0
+        ]
+      },
+      "corrected_solid_bottom_y": 130.0,
+      "note": "按原版眼部与鞋底高度做整体矫正，手部采用连续的小范围位置调整。点位用于拟合，仍需目视检查袖口、关节、腿部和边缘。"
+    },
+    {
+      "slot": 8,
+      "cell_box": [
+        1360,
+        1360,
+        2000,
+        2000
+      ],
+      "cleanup": {
+        "nontransparent_before": 207819,
+        "nontransparent_after": 117176,
+        "main_bbox_xywh": [
+          131,
+          78,
+          364,
+          522
+        ],
+        "method": "Remove fixed labels/borders and alpha islands more than 8 raw pixels from the main opaque character; retain sampled alpha values."
+      },
+      "registration": {
+        "uniform_scale": 0.1873479318734793,
+        "translation": [
+          18.30170316301703,
+          19.96593673965937
+        ],
+        "rotation_degrees": 0,
+        "source_eye_manual": [
+          340,
+          187
+        ],
+        "target_eye_manual": [
+          82,
+          55
+        ],
+        "source_sole": [
+          284.0183486238532,
+          598.0
+        ],
+        "target_sole_y": 132.0,
+        "hands": [
+          {
+            "raw_hand": [
+              483.5625,
+              287.375
+            ],
+            "target_hand": [
+              100.0,
+              74.5
+            ],
+            "before_error_native_px": 8.923240400227026,
+            "radius_native_px": 31.23134140079459,
+            "skin_component_refined": true
+          }
+        ],
+        "samples_from_raw_once": true,
+        "interpolation": "NEAREST",
+        "face_pixels_not_composited_or_replaced": true,
+        "alpha_values_preserved_by_sampling": true
+      },
+      "target_landmarks": {
+        "eye": [
+          82,
+          55
+        ],
+        "sole_height": [
+          79.12903225806451,
+          132.0
+        ],
+        "hand_0": [
+          100.0,
+          74.5
+        ]
+      },
+      "corrected_solid_bottom_y": 132.0,
+      "note": "按原版眼部与鞋底高度做整体矫正，手部采用连续的小范围位置调整。点位用于拟合，仍需目视检查袖口、关节、腿部和边缘。"
+    }
+  ],
+  "findings": [
+    "实际返回 2048×2048 RGBA，存在真正透明像素；九个对应人物均保留。",
+    "输入九宫格与已确认主帧的编码字节均已核对，只有一次生成请求。",
+    "分格采用原固定坐标；移除格线、标签和远离主体的透明噪点，原始整图保留。",
+    "整体大小/眼部位置/鞋底高度矫正后，做有限的连续手部位移；每个成品像素从原始单格最近邻取样一次。",
+    "造型与九格姿势具备一致性，但头脸、头发细节和轮廓仍有变化；蓝灰色透明边缘残留需要继续检查。",
+    "当前仅含 IMG0–8；未含 IMG9，原 ANI 配时未核实，未证明完整循环接缝或实机无滑步。"
+  ],
+  "assessment": "九宫格单张生成已完成，九帧均可对照。当前作为方法试验保留，待你检查造型、手脚位置和原生尺寸连播；尚未标记通过。",
+  "correction_limitations": "Manual eye hints and detected sole/skin centroids are fitting controls, not independent pose/foot-slip validation. Hair/garment differences remain generated content.",
+  "accepted_walk_replaced": false,
+  "game_installation_changed": false,
+  "npk_created": false,
+  "batch_generation": false,
+  "human_approved": false,
+  "validation": {
+    "all_nine_apng_frames_pixel_readback": true,
+    "one_raw_sample_per_output_pixel": true,
+    "protected_files_unchanged": {
+      "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\nearest_standing_v04\\standing_canvas.png": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446",
+      "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+      "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20"
+    }
+  }
+}

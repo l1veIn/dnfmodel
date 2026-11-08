@@ -1,0 +1,58 @@
+{
+  "trial_completed": true,
+  "generative_jobs": 1,
+  "model": "Wan2.1 VACE 1.3B FP16",
+  "actual_inputs": {
+    "reference_image": "Approved Fatfish master",
+    "control_video": "25 real input PNGs; manual skeletons traced from original IMG0..9",
+    "control_masks": "0 known RGB endpoints, 1 middle pose-conditioning frames",
+    "first_last_anchor_identical": true
+  },
+  "metrics": {
+    "elapsed_seconds": 41.291,
+    "peak_gpu_used_mib_sampled": 6429.0,
+    "min_ram_free_gib_sampled": 8.124412536621094,
+    "min_commit_free_gib_sampled": 15.499488830566406,
+    "sample_interval_seconds": 0.5,
+    "frames": 25,
+    "size": 256,
+    "fps": 24,
+    "alpha_output": false,
+    "memory_guard_triggered": false,
+    "game_ready": false
+  },
+  "validation": {
+    "nearest_pixels_passed": true,
+    "apng_readback_passed": true,
+    "input_mask_and_reference_check_passed": true,
+    "first_last_native_rgb_mae_0_255": 86.15669759114583
+  },
+  "visual_result": {
+    "usable_walk_cycle": false,
+    "identity_preserved": false,
+    "loop_seam_passed": false,
+    "foot_sliding_passed": false,
+    "observations": [
+      "Legs and arms respond to the motion guide more strongly than the initial-image-only baseline",
+      "Face, hair color, sleeve and apron details deform significantly",
+      "Background becomes contaminated, especially at the final frame",
+      "First/last conditioning did not produce a closed loop",
+      "Changing shoes/limbs prevent reliable contact/sliding validation"
+    ]
+  },
+  "motion_limits": {
+    "original_ani_verified": false,
+    "test_period_seconds": 1,
+    "sequence": "Visually inferred original IMG0..9 alternating gait",
+    "joints": "Manual estimates; not an extracted game skeleton",
+    "game_root_velocity_verified": false
+  },
+  "recommendation": "Do not batch this VACE1.3B pipeline. Preserve master pixels and test deterministic limb deformation/rigging before more generated motion.",
+  "game_installation_changed": false,
+  "paid_api_used": false,
+  "additional_generation_started": false,
+  "sources": [
+    "https://docs.comfy.org/tutorials/video/wan/vace",
+    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged"
+  ]
+}

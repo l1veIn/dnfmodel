@@ -1,0 +1,9 @@
+{
+  "public_priest_sample_parsed": true,
+  "duplicate_and_nonconsecutive_img_refs_preserved": true,
+  "different_delays_preserved": true,
+  "mismatched_frame_count_rejected": true,
+  "missing_delay_not_invented": true,
+  "female_mage_actions_verified": 0,
+  "fixtures_admitted_to_dashboard": false
+}

@@ -1,0 +1,26 @@
+{
+  "name": "fix_walk",
+  "category": "fix_walk",
+  "source_frame": 0,
+  "model": "gpt-image-2.5",
+  "input": {
+    "prompt": "Clean game sprite of the SAME Fatfish whale-maid DNF female mage. Single full body, transparent alpha, no text or props.\nCompact female-mage anatomy, consistent head size and limb proportions. Navy-to-cyan long wavy hair in about six broad readable locks, one curled ahoge, whale-fin ears, cyan bow and white maid headband. Navy long-sleeved dress, white chest and apron, one simple navy whale emblem, two gold waist buttons, small gold bows, one simple gold hem stripe, opaque white tights, navy Mary-Jane shoes and one compact navy whale tail.\nArt direction: clean low-resolution pixel sprite intended for a 128x128 native canvas, shown enlarged exactly 8x on a 1024 square. Big connected pixel clusters and solid interior colors. Each material has just a base, one shadow and one highlight. Navy outline, flat navy/blue/cyan/white/gold/skin palette. No stipple, grain, embroidery, intricate lace, tiny gold scribbles, isolated sparkle pixels, gritty texture, noisy gradients, blue/purple fringe, soft painted edges or tiny perforations. Simplify details that would collapse at native size. Preserve the costume rather than adding decoration.\nOnly one character. No grid, markers, lettering, scenery, floor, shadow, effects, weapon, bowl or extra limbs. Genuine alpha outside the silhouette, solid opaque colors inside the character.\n\nEDIT ONLY the local hands/feet of Image 1. It is the existing registered sprite, 128 native pixels enlarged exactly 8x. Preserve the canvas framing and scale. Keep every unchanged part of the face, hair, ears, headband, torso, dress, apron emblem and tail visually identical.\nImage 2 is the matching original DNF pose (only skeletal geometry, ignore its old outfit). Image 3 is the standing master (identity only).\nRequired local corrections: Move the screen-left/trailing shoe LEFT by 7 native pixels to sole (328,856), reconnect its lower leg naturally. Move the screen-left hand about 2 pixels left and 2 pixels up to (336,504); move the screen-right hand about 2 pixels left and 4 pixels up to (744,352). These are output-pixel targets on the 1024 canvas; stated movement amounts are native pixels, each enlarged 8x.\nKeep visible eye near output [520, 256] and planted/local shoe sole near [736, 872]; do not auto-center the silhouette. Do not redesign the clothing, change the head size or add detail. Draw clean joint connections. Single transparent full-body result. No text, markers, background, shadows or effects.\n",
+    "n": 1,
+    "size": "1:1",
+    "resolution": "1k",
+    "background": "transparent",
+    "output_format": "png",
+    "quality": "high"
+  },
+  "local_reference_paths": [
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\registered\\walk_reference_8x.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\references\\fix_walk_pose.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_reference_8x.png"
+  ],
+  "reference_sha256": [
+    "1a52ed4199d2d5fb18fd745ea0f06e88715b3745128b6e3dbb106f59912e0027",
+    "15a49bc0fe57b19fed59b8f370bf2e92c020f88b41294762e0c0377ce41c2b71",
+    "70ca8180075d7bd8fdcaa28e655e84c2f741aab32d630a8a143a1787d6633977"
+  ],
+  "output_directory": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\raw"
+}

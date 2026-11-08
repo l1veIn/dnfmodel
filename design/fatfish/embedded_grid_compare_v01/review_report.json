@@ -1,0 +1,561 @@
+{
+  "model": "gpt-image-2.5",
+  "provider": "65535",
+  "generation_jobs": 2,
+  "references_per_job": 1,
+  "groups": {
+    "embedded_3x3": {
+      "records": [
+        {
+          "slot": null,
+          "actual_cell_box": [
+            48,
+            48,
+            688,
+            688
+          ],
+          "actual_cell_size": [
+            640,
+            640
+          ],
+          "cleanup": {
+            "nontransparent_before": 121197,
+            "nontransparent_after": 88379,
+            "main_bbox_xywh": [
+              154,
+              156,
+              290,
+              474
+            ],
+            "alpha_background_decontaminated": false,
+            "method": "Fixed border/label removal, keep original alpha near largest alpha>=128 component; attached halos remain."
+          }
+        },
+        {
+          "slot": 0,
+          "actual_cell_box": [
+            704,
+            48,
+            1344,
+            688
+          ],
+          "actual_cell_size": [
+            640,
+            640
+          ],
+          "cleanup": {
+            "nontransparent_before": 139977,
+            "nontransparent_after": 100552,
+            "main_bbox_xywh": [
+              126,
+              141,
+              381,
+              487
+            ],
+            "alpha_background_decontaminated": false,
+            "method": "Fixed border/label removal, keep original alpha near largest alpha>=128 component; attached halos remain."
+          },
+          "registered_bottom_y": 136
+        },
+        {
+          "slot": 1,
+          "actual_cell_box": [
+            1360,
+            48,
+            2000,
+            688
+          ],
+          "actual_cell_size": [
+            640,
+            640
+          ],
+          "cleanup": {
+            "nontransparent_before": 131460,
+            "nontransparent_after": 97802,
+            "main_bbox_xywh": [
+              163,
+              141,
+              315,
+              483
+            ],
+            "alpha_background_decontaminated": false,
+            "method": "Fixed border/label removal, keep original alpha near largest alpha>=128 component; attached halos remain."
+          },
+          "registered_bottom_y": 135
+        },
+        {
+          "slot": 2,
+          "actual_cell_box": [
+            48,
+            704,
+            688,
+            1344
+          ],
+          "actual_cell_size": [
+            640,
+            640
+          ],
+          "cleanup": {
+            "nontransparent_before": 120307,
+            "nontransparent_after": 83359,
+            "main_bbox_xywh": [
+              158,
+              129,
+              271,
+              485
+            ],
+            "alpha_background_decontaminated": false,
+            "method": "Fixed border/label removal, keep original alpha near largest alpha>=128 component; attached halos remain."
+          },
+          "registered_bottom_y": 133
+        },
+        {
+          "slot": 3,
+          "actual_cell_box": [
+            704,
+            704,
+            1344,
+            1344
+          ],
+          "actual_cell_size": [
+            640,
+            640
+          ],
+          "cleanup": {
+            "nontransparent_before": 142337,
+            "nontransparent_after": 88472,
+            "main_bbox_xywh": [
+              160,
+              128,
+              281,
+              495
+            ],
+            "alpha_background_decontaminated": false,
+            "method": "Fixed border/label removal, keep original alpha near largest alpha>=128 component; attached halos remain."
+          },
+          "registered_bottom_y": 135
+        },
+        {
+          "slot": 4,
+          "actual_cell_box": [
+            1360,
+            704,
+            2000,
+            1344
+          ],
+          "actual_cell_size": [
+            640,
+            640
+          ],
+          "cleanup": {
+            "nontransparent_before": 144833,
+            "nontransparent_after": 101941,
+            "main_bbox_xywh": [
+              142,
+              129,
+              415,
+              485
+            ],
+            "alpha_background_decontaminated": false,
+            "method": "Fixed border/label removal, keep original alpha near largest alpha>=128 component; attached halos remain."
+          },
+          "registered_bottom_y": 133
+        },
+        {
+          "slot": 5,
+          "actual_cell_box": [
+            48,
+            1360,
+            688,
+            2000
+          ],
+          "actual_cell_size": [
+            640,
+            640
+          ],
+          "cleanup": {
+            "nontransparent_before": 140612,
+            "nontransparent_after": 100434,
+            "main_bbox_xywh": [
+              129,
+              123,
+              381,
+              473
+            ],
+            "alpha_background_decontaminated": false,
+            "method": "Fixed border/label removal, keep original alpha near largest alpha>=128 component; attached halos remain."
+          },
+          "registered_bottom_y": 129
+        },
+        {
+          "slot": 6,
+          "actual_cell_box": [
+            704,
+            1360,
+            1344,
+            2000
+          ],
+          "actual_cell_size": [
+            640,
+            640
+          ],
+          "cleanup": {
+            "nontransparent_before": 145174,
+            "nontransparent_after": 88718,
+            "main_bbox_xywh": [
+              185,
+              123,
+              268,
+              468
+            ],
+            "alpha_background_decontaminated": false,
+            "method": "Fixed border/label removal, keep original alpha near largest alpha>=128 component; attached halos remain."
+          },
+          "registered_bottom_y": 128
+        },
+        {
+          "slot": 7,
+          "actual_cell_box": [
+            1360,
+            1360,
+            2000,
+            2000
+          ],
+          "actual_cell_size": [
+            640,
+            640
+          ],
+          "cleanup": {
+            "nontransparent_before": 136105,
+            "nontransparent_after": 84542,
+            "main_bbox_xywh": [
+              163,
+              119,
+              283,
+              478
+            ],
+            "alpha_background_decontaminated": false,
+            "method": "Fixed border/label removal, keep original alpha near largest alpha>=128 component; attached halos remain."
+          },
+          "registered_bottom_y": 130
+        }
+      ],
+      "actual_size": [
+        2048,
+        2048
+      ],
+      "actual_alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.6594028472900391,
+      "raw_file_sha256": "049bb659446f6ffb7b75f02c02597aaf3b72b0028c969ec7c8bb32d5b2b2f19e",
+      "task_id": "img_ab49440996f28629a6a6e8e2ae5a5e86",
+      "cost_usd": 0.038,
+      "shared_transform": {
+        "scale_from_normalized_640": 0.20887728459530025,
+        "translation_native": [
+          10.563968668407313,
+          5.749347258485642
+        ],
+        "same_for_every_target": true,
+        "fit_slots": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "fitting_method": "Median eye/sole scale and median eye translation; manual eye points, detected alpha sole.",
+        "interpolation": "NEAREST",
+        "samples_from_actual_crop_once": true,
+        "local_limb_warps": false
+      },
+      "normalized_eye_hints": [
+        [
+          333,
+          239
+        ],
+        [
+          372,
+          239
+        ],
+        [
+          342,
+          230
+        ],
+        [
+          342,
+          229
+        ],
+        [
+          350,
+          231
+        ],
+        [
+          348,
+          221
+        ],
+        [
+          362,
+          217
+        ],
+        [
+          351,
+          219
+        ]
+      ]
+    },
+    "embedded_2x3": {
+      "records": [
+        {
+          "slot": null,
+          "actual_cell_box": [
+            42,
+            59,
+            837,
+            849
+          ],
+          "actual_cell_size": [
+            795,
+            790
+          ],
+          "cleanup": {
+            "nontransparent_before": 196043,
+            "nontransparent_after": 174015,
+            "main_bbox_xywh": [
+              139,
+              67,
+              409,
+              711
+            ],
+            "alpha_background_decontaminated": false,
+            "method": "Fixed border/label removal, keep original alpha near largest alpha>=128 component; attached halos remain."
+          }
+        },
+        {
+          "slot": 0,
+          "actual_cell_box": [
+            857,
+            59,
+            1653,
+            849
+          ],
+          "actual_cell_size": [
+            796,
+            790
+          ],
+          "cleanup": {
+            "nontransparent_before": 205237,
+            "nontransparent_after": 180958,
+            "main_bbox_xywh": [
+              177,
+              105,
+              501,
+              668
+            ],
+            "alpha_background_decontaminated": false,
+            "method": "Fixed border/label removal, keep original alpha near largest alpha>=128 component; attached halos remain."
+          },
+          "registered_bottom_y": 133
+        },
+        {
+          "slot": 1,
+          "actual_cell_box": [
+            42,
+            869,
+            837,
+            1659
+          ],
+          "actual_cell_size": [
+            795,
+            790
+          ],
+          "cleanup": {
+            "nontransparent_before": 217677,
+            "nontransparent_after": 183233,
+            "main_bbox_xywh": [
+              159,
+              92,
+              450,
+              684
+            ],
+            "alpha_background_decontaminated": false,
+            "method": "Fixed border/label removal, keep original alpha near largest alpha>=128 component; attached halos remain."
+          },
+          "registered_bottom_y": 134
+        },
+        {
+          "slot": 2,
+          "actual_cell_box": [
+            857,
+            869,
+            1653,
+            1659
+          ],
+          "actual_cell_size": [
+            796,
+            790
+          ],
+          "cleanup": {
+            "nontransparent_before": 182186,
+            "nontransparent_after": 155170,
+            "main_bbox_xywh": [
+              236,
+              95,
+              372,
+              679
+            ],
+            "alpha_background_decontaminated": false,
+            "method": "Fixed border/label removal, keep original alpha near largest alpha>=128 component; attached halos remain."
+          },
+          "registered_bottom_y": 134
+        },
+        {
+          "slot": 3,
+          "actual_cell_box": [
+            42,
+            1679,
+            837,
+            2469
+          ],
+          "actual_cell_size": [
+            795,
+            790
+          ],
+          "cleanup": {
+            "nontransparent_before": 187721,
+            "nontransparent_after": 144137,
+            "main_bbox_xywh": [
+              231,
+              93,
+              320,
+              678
+            ],
+            "alpha_background_decontaminated": false,
+            "method": "Fixed border/label removal, keep original alpha near largest alpha>=128 component; attached halos remain."
+          },
+          "registered_bottom_y": 133
+        },
+        {
+          "slot": 4,
+          "actual_cell_box": [
+            857,
+            1679,
+            1653,
+            2469
+          ],
+          "actual_cell_size": [
+            796,
+            790
+          ],
+          "cleanup": {
+            "nontransparent_before": 217293,
+            "nontransparent_after": 174667,
+            "main_bbox_xywh": [
+              230,
+              103,
+              492,
+              657
+            ],
+            "alpha_background_decontaminated": false,
+            "method": "Fixed border/label removal, keep original alpha near largest alpha>=128 component; attached halos remain."
+          },
+          "registered_bottom_y": 131
+        }
+      ],
+      "actual_size": [
+        1696,
+        2528
+      ],
+      "actual_alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.6937264897301171,
+      "raw_file_sha256": "610d26b984ef72b9e41d357028dbe70d4fcff25b191e0272c4fe616ecaddc9a8",
+      "task_id": "img_4df1395879b8d497545a4b022590f974",
+      "cost_usd": 0.038,
+      "shared_transform": {
+        "scale_from_normalized_640": 0.18373161230304086,
+        "translation_native": [
+          16.100645386359673,
+          19.090993662422235
+        ],
+        "same_for_every_target": true,
+        "fit_slots": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "fitting_method": "Median eye/sole scale and median eye translation; manual eye points, detected alpha sole.",
+        "interpolation": "NEAREST",
+        "samples_from_actual_crop_once": true,
+        "local_limb_warps": false
+      },
+      "normalized_eye_hints": [
+        [
+          382,
+          194
+        ],
+        [
+          368,
+          182
+        ],
+        [
+          375,
+          190
+        ],
+        [
+          334,
+          187
+        ],
+        [
+          372,
+          192
+        ]
+      ]
+    }
+  },
+  "common_slots": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "native_size": [
+    160,
+    160
+  ],
+  "preview_timing_ms": 120,
+  "accepted": false,
+  "npk_created": false,
+  "assessment": "两组都实现了同图主帧驱动的角色替换；本次六宫格未显示明确的整体优势，不能据此判断更少帧必然更好。",
+  "findings": [
+    "左上参考格在两张返回图中也被重绘和放大；未能原样锁定主帧，原批准主帧仍单独冻结。",
+    "两组共同 IMG0–4 均可识别对应摆臂和迈步，但手部、腿型及发饰/裙边仍有差异；六宫格 IMG0 的后侧摆臂手部附近出现疑似多余手形。",
+    "实际九宫格为 2048×2048；六宫格为 1696×2528。六宫格没有按所请求的 1365×2048 返回，已按实际格坐标拆帧并统一原生显示。",
+    "两张有真正 alpha，但九宫格有蓝色边缘、六宫格有较宽灰色半透明残留；只清理标签和远处碎点，没有修饰连接着角色的光边。",
+    "每组使用同一个整体缩放/位移，再一次最近邻取样；保留帧间偏移，无逐帧手脚变形修正，以便比较生成质量。",
+    "本次每种布局仅一张随机样本；帧数、排布、画布比例及实际输出尺寸均可能影响效果，尚不能归因于注意力。"
+  ],
+  "limitations": [
+    "One stochastic sample per layout; not statistical proof of attention limits.",
+    "Equal input cell scale; canvas aspect ratio and target arrangement change alongside target count.",
+    "First cell is a standing identity exemplar and must not be included in walking playback.",
+    "Existing walk-test slot order only; ANI sequence/timing and complete gait not established."
+  ],
+  "protected_files_unchanged": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\nearest_standing_v04\\standing_canvas.png": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20"
+  },
+  "validation": {
+    "apng_five_frame_exact_pixel_readback": true,
+    "master_not_in_walk_playback": true,
+    "local_limb_warps": false
+  }
+}

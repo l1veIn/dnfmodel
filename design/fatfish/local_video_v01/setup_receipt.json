@@ -1,0 +1,16 @@
+{
+  "comfy_root": "D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI",
+  "comfy_version": "0.30.2",
+  "comfy_commit": "dec5d9450a5290bcf63430409ea41018e67f41c3",
+  "python": "3.13.12",
+  "torch": "2.12.1+cu130",
+  "models": "D:\\VideoStudio\\comfyUI\\shared\\models",
+  "server_pid": 22964,
+  "model_source": "https://modelscope.cn/models/Comfy-Org/Wan_2.2_ComfyUI_Repackaged",
+  "official_hash_metadata": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged",
+  "workflow_source": "Installed official comfyui-workflow-templates 0.11.31 video_wan2_2_5B_ti2v",
+  "installation_upgraded": false,
+  "custom_nodes_enabled": false,
+  "paid_api_used": false,
+  "game_installation_changed": false
+}

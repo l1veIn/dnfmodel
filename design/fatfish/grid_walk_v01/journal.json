@@ -1,0 +1,21 @@
+{
+  "provider": "65535",
+  "model": "gpt-image-2.5",
+  "max_jobs": 1,
+  "jobs": {
+    "fatfish_walk_grid_9": {
+      "state": "downloaded",
+      "started_at": "2026-10-22T23:58:16.708396+00:00",
+      "task_id": "img_c8dfb23330245af9fb5892282885f3f9",
+      "submitted_at": "2026-10-22T23:58:18.491542+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T23:59:14.980741+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grid_walk_v01\\raw\\fatfish_walk_grid_9_0.png"
+      ],
+      "stdout": "design\\fatfish\\grid_walk_v01\\logs\\fatfish_walk_grid_9.stdout.txt",
+      "stderr": "design\\fatfish\\grid_walk_v01\\logs\\fatfish_walk_grid_9.stderr.txt"
+    }
+  },
+  "created_at": "2026-10-22T23:58:03.658112+00:00"
+}

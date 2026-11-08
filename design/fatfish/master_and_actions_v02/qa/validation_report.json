@@ -1,0 +1,479 @@
+{
+  "provider": "65535",
+  "model": "gpt-image-2.5",
+  "task_count": 7,
+  "chosen_master": "master_feet",
+  "selected_actions": {
+    "walk": "walk",
+    "cast": "cast",
+    "jump": "jump_fix"
+  },
+  "raw_files": [
+    {
+      "name": "master",
+      "task_id": "img_7bf13ddef19a0aa314ab3e31936fcabd",
+      "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\master_0.png",
+      "sha256": "1fc0b84eb47d0dec02e83888a41d149bf7f99ce22141a9ae61230bdd11c3c418",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1024
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "real_alpha": true,
+      "transparent_corners": true,
+      "solid_bbox": [
+        210,
+        64,
+        751,
+        994
+      ],
+      "clipped": false
+    },
+    {
+      "name": "master_refine",
+      "task_id": "img_0f4a0069d7b703eaa07a2d71b638435b",
+      "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\master_refine_0.png",
+      "sha256": "a0a99e89815eb90748d74a599a1c983227d47651f0639cc1b3b8846f9c3f0173",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1024
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "real_alpha": true,
+      "transparent_corners": true,
+      "solid_bbox": [
+        222,
+        92,
+        687,
+        930
+      ],
+      "clipped": false
+    },
+    {
+      "name": "master_feet",
+      "task_id": "img_e2914b5e5c7024c9ccddc62307f85593",
+      "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\master_feet_0.png",
+      "sha256": "9bc66c0b05ad91d0354f763d0674c55a70a054e51c2dfca0653a88afac9b50c2",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1024
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "real_alpha": true,
+      "transparent_corners": true,
+      "solid_bbox": [
+        216,
+        98,
+        688,
+        920
+      ],
+      "clipped": false
+    },
+    {
+      "name": "walk",
+      "task_id": "img_a225a1aa7c0bd78c6d8a4f36b6512806",
+      "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\walk_0.png",
+      "sha256": "6e1be8d8ca172889ddc11f18ba53261a6ca648bb98e9a1bd6616d2398be1980e",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1024
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "real_alpha": true,
+      "transparent_corners": true,
+      "solid_bbox": [
+        194,
+        84,
+        829,
+        960
+      ],
+      "clipped": false
+    },
+    {
+      "name": "cast",
+      "task_id": "img_d95924a7f41e132beef217b8e1136115",
+      "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\cast_0.png",
+      "sha256": "cef275830f7fd6e545fac713400b08d038f63e3b8022bc05ff8a3c43268f30f9",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1024
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "real_alpha": true,
+      "transparent_corners": true,
+      "solid_bbox": [
+        159,
+        114,
+        704,
+        952
+      ],
+      "clipped": false
+    },
+    {
+      "name": "jump",
+      "task_id": "img_32a5f5425dd29f7300182c1e6e10d29f",
+      "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\jump_0.png",
+      "sha256": "5d6ccfd6a3e9514d7813f53001834d94b36121ad6fcfc178c009491860e62bb9",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1024
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "real_alpha": true,
+      "transparent_corners": true,
+      "solid_bbox": [
+        257,
+        116,
+        789,
+        934
+      ],
+      "clipped": false
+    },
+    {
+      "name": "jump_fix",
+      "task_id": "img_1b28a06037078fe2e9d3413a6d5ce84c",
+      "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\jump_fix_0.png",
+      "sha256": "14d8d98da65543f82b4fb56b1a9b2ef5341809e71fac4130d1c835f783ce5f9b",
+      "mode": "RGBA",
+      "size": [
+        1024,
+        1024
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "real_alpha": true,
+      "transparent_corners": true,
+      "solid_bbox": [
+        296,
+        102,
+        798,
+        939
+      ],
+      "clipped": false
+    }
+  ],
+  "real_alpha_pass": 7,
+  "clipped_count": 0,
+  "observations": [
+    {
+      "name": "master",
+      "eye_residual_native_px": [
+        1.732421875,
+        -0.1259765625
+      ],
+      "sole_residual_native_px": [
+        -0.0888671875,
+        -0.138671875
+      ],
+      "raw_silhouette_scale_before_registration": 0.9921875,
+      "caution": "Eye/sole are used to fit scale and placement, not independent hold-out validation. Hands, knees and body proportions require visual or separate landmark checks."
+    },
+    {
+      "name": "walk",
+      "eye_residual_native_px": [
+        0.0,
+        0.0
+      ],
+      "sole_residual_native_px": [
+        0.0,
+        0.0
+      ],
+      "raw_silhouette_scale_before_registration": 0.9026637157209669,
+      "caution": "Eye/sole are used to fit scale and placement, not independent hold-out validation. Hands, knees and body proportions require visual or separate landmark checks."
+    },
+    {
+      "name": "cast",
+      "eye_residual_native_px": [
+        0.0,
+        0.0
+      ],
+      "sole_residual_native_px": [
+        0.0,
+        0.0
+      ],
+      "raw_silhouette_scale_before_registration": 0.9718399187895779,
+      "caution": "Eye/sole are used to fit scale and placement, not independent hold-out validation. Hands, knees and body proportions require visual or separate landmark checks."
+    },
+    {
+      "name": "jump",
+      "eye_residual_native_px": [
+        -2.842170943040401e-14,
+        0.0
+      ],
+      "sole_residual_native_px": [
+        -2.842170943040401e-14,
+        0.0
+      ],
+      "raw_silhouette_scale_before_registration": 0.929735037783047,
+      "caution": "Eye/sole are used to fit scale and placement, not independent hold-out validation. Hands, knees and body proportions require visual or separate landmark checks."
+    }
+  ],
+  "independent_landmark_checks": [
+    {
+      "name": "master",
+      "landmark": "rear_shoe",
+      "actual_native": [
+        251.97265625,
+        378.419921875
+      ],
+      "target_native": [
+        250,
+        379
+      ],
+      "residual_native_px": [
+        1.97265625,
+        -0.580078125
+      ],
+      "distance_native_px": 2.056176867822313,
+      "caution": "Manual visual annotation, about 1-2 native pixel uncertainty; not used for scale/translation fitting."
+    },
+    {
+      "name": "walk",
+      "landmark": "hand_screen_left",
+      "actual_native": [
+        230.063836134036,
+        337.41821616784324
+      ],
+      "target_native": [
+        228,
+        335
+      ],
+      "residual_native_px": [
+        2.063836134035995,
+        2.418216167843241
+      ],
+      "distance_native_px": 3.179180558346929,
+      "caution": "Manual visual annotation, about 1-2 native pixel uncertainty; not used for scale/translation fitting."
+    },
+    {
+      "name": "walk",
+      "landmark": "hand_screen_right",
+      "actual_native": [
+        280.81516892176137,
+        319.8947766959102
+      ],
+      "target_native": [
+        279,
+        316
+      ],
+      "residual_native_px": [
+        1.8151689217613693,
+        3.8947766959101955
+      ],
+      "distance_native_px": 4.296990077430186,
+      "caution": "Manual visual annotation, about 1-2 native pixel uncertainty; not used for scale/translation fitting."
+    },
+    {
+      "name": "walk",
+      "landmark": "trailing_shoe",
+      "actual_native": [
+        233.9699635156531,
+        378.6989773674669
+      ],
+      "target_native": [
+        227,
+        379
+      ],
+      "residual_native_px": [
+        6.969963515653092,
+        -0.3010226325330905
+      ],
+      "distance_native_px": 6.976460853099683,
+      "caution": "Manual visual annotation, about 1-2 native pixel uncertainty; not used for scale/translation fitting."
+    },
+    {
+      "name": "cast",
+      "landmark": "hand_screen_left",
+      "actual_native": [
+        210.04047194074434,
+        312.14352798968633
+      ],
+      "target_native": [
+        209,
+        315
+      ],
+      "residual_native_px": [
+        1.0404719407443395,
+        -2.8564720103136665
+      ],
+      "distance_native_px": 3.0400681250889248,
+      "caution": "Manual visual annotation, about 1-2 native pixel uncertainty; not used for scale/translation fitting."
+    },
+    {
+      "name": "cast",
+      "landmark": "hand_screen_right",
+      "actual_native": [
+        259.70538270724586,
+        339.48526326545255
+      ],
+      "target_native": [
+        260,
+        337
+      ],
+      "residual_native_px": [
+        -0.2946172927541397,
+        2.485263265452545
+      ],
+      "distance_native_px": 2.502665148955734,
+      "caution": "Manual visual annotation, about 1-2 native pixel uncertainty; not used for scale/translation fitting."
+    },
+    {
+      "name": "cast",
+      "landmark": "raised_shoe",
+      "actual_native": [
+        258.1982116341611,
+        370.4345581153676
+      ],
+      "target_native": [
+        263,
+        367
+      ],
+      "residual_native_px": [
+        -4.801788365838888,
+        3.434558115367622
+      ],
+      "distance_native_px": 5.903673513850786,
+      "caution": "Manual visual annotation, about 1-2 native pixel uncertainty; not used for scale/translation fitting."
+    },
+    {
+      "name": "jump",
+      "landmark": "rear_hand",
+      "actual_native": [
+        226.55791653159605,
+        304.10644260632233
+      ],
+      "target_native": [
+        224,
+        305
+      ],
+      "residual_native_px": [
+        2.5579165315960495,
+        -0.8935573936776677
+      ],
+      "distance_native_px": 2.7094984403775526,
+      "caution": "Manual visual annotation, about 1-2 native pixel uncertainty; not used for scale/translation fitting."
+    }
+  ],
+  "native_canvas_checks": [
+    {
+      "name": "master",
+      "visible_bbox": [
+        212,
+        285,
+        270,
+        387
+      ],
+      "wholly_inside_native_window": true,
+      "strict_alpha_values": [
+        0,
+        255
+      ]
+    },
+    {
+      "name": "walk",
+      "visible_bbox": [
+        212,
+        284,
+        285,
+        382
+      ],
+      "wholly_inside_native_window": true,
+      "strict_alpha_values": [
+        0,
+        255
+      ]
+    },
+    {
+      "name": "cast",
+      "visible_bbox": [
+        200,
+        286,
+        265,
+        388
+      ],
+      "wholly_inside_native_window": true,
+      "strict_alpha_values": [
+        0,
+        255
+      ]
+    },
+    {
+      "name": "jump",
+      "visible_bbox": [
+        216,
+        287,
+        275,
+        387
+      ],
+      "wholly_inside_native_window": true,
+      "strict_alpha_values": [
+        0,
+        255
+      ]
+    }
+  ],
+  "observed_account_cost_delta": 0.2660000000000018,
+  "unit": "USD",
+  "reported_task_cost_total_usd": 0.266,
+  "cost_caution": "Observed cumulative account usage delta; other concurrent activity may contribute. No per-request billing cap exposed.",
+  "master_selection": {
+    "name": "master_feet",
+    "reference_8x": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_reference_8x.png",
+    "native_canvas": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_clean_canvas.png",
+    "native_window": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_native_128.png",
+    "raw_provider": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\master_feet_0.png",
+    "selection_reason": "Simplified hair/gold trim and corrected foreground-left/background-right staggered feet. Registered eye residual ~1.7 native px, supporting sole <0.2px (manually estimated anchors). Readable outline and intact character identity. Accepted for three-pose pilot, not runtime-certified or final user-approved art.",
+    "inspection": "Raw PNG and native 128 window inspected at integer enlargement. No forced palette reduction.",
+    "rear_shoe_holdout_estimate": {
+      "raw": [
+        540,
+        850
+      ],
+      "target_native": [
+        250,
+        379
+      ],
+      "caution": "Manual estimate, about 1-2 native pixel uncertainty; not used in registration fitting."
+    },
+    "game_ready": false
+  },
+  "native_window": [
+    186,
+    272,
+    314,
+    400
+  ],
+  "native_window_size": [
+    128,
+    128
+  ],
+  "processing": "Each provider result is scaled to native once. Inspection images are integer enlargements only. No forced palette reduction; strict-alpha candidate thresholds alpha at 128.",
+  "animation_timing_certified": false,
+  "game_runtime_validated": false
+}

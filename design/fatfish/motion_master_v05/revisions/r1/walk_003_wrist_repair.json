@@ -1,0 +1,53 @@
+{
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\walk_003_wrist_fix_0.png",
+  "source_sha256": "a3712f40803127697ef1f4ad261d1e0297eafe1f7a2ddc6e16d37028e1aff367",
+  "method": "Use original frame-3 raw-to-world matrix and NEAREST; integrate only forearm/cuff/wrist region",
+  "mask_polygon": [
+    [
+      244,
+      315
+    ],
+    [
+      253,
+      314
+    ],
+    [
+      262,
+      322
+    ],
+    [
+      273,
+      330
+    ],
+    [
+      273,
+      342
+    ],
+    [
+      266,
+      344
+    ],
+    [
+      260,
+      344
+    ],
+    [
+      258,
+      348
+    ],
+    [
+      249,
+      348
+    ],
+    [
+      248,
+      340
+    ],
+    [
+      245,
+      332
+    ]
+  ],
+  "outside_arm_region_pixels_unchanged": true,
+  "no_face_or_leg_changes": true
+}

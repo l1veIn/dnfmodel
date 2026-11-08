@@ -1,0 +1,106 @@
+[
+  {
+    "name": "standing",
+    "reference_frame_index": 10,
+    "canvas_png": "standing_500.png",
+    "canvas_size": [
+      500,
+      500
+    ],
+    "native_window_png": "standing_128.png",
+    "native_window_origin": [
+      186,
+      272
+    ],
+    "native_window_size": [
+      128,
+      128
+    ],
+    "visible_bbox": [
+      212,
+      285,
+      270,
+      387
+    ],
+    "sha256": "df18b70d927eb86205e783d5c2881fc44b967bf4ec9764adf3680156da121ab8",
+    "runtime_certified": false
+  },
+  {
+    "name": "walk",
+    "reference_frame_index": 0,
+    "canvas_png": "walk_500.png",
+    "canvas_size": [
+      500,
+      500
+    ],
+    "native_window_png": "walk_128.png",
+    "native_window_origin": [
+      186,
+      272
+    ],
+    "native_window_size": [
+      128,
+      128
+    ],
+    "visible_bbox": [
+      212,
+      284,
+      285,
+      382
+    ],
+    "sha256": "be6911644c1396a4b2593c1437515b1b26e062f760da63253f56b5a87a493322",
+    "runtime_certified": false
+  },
+  {
+    "name": "cast",
+    "reference_frame_index": 65,
+    "canvas_png": "cast_500.png",
+    "canvas_size": [
+      500,
+      500
+    ],
+    "native_window_png": "cast_128.png",
+    "native_window_origin": [
+      186,
+      272
+    ],
+    "native_window_size": [
+      128,
+      128
+    ],
+    "visible_bbox": [
+      200,
+      286,
+      265,
+      388
+    ],
+    "sha256": "2f933f1cd5b8b59ba2280f5d984fd65a3983180ea979903a4bb90b012bec6a4c",
+    "runtime_certified": false
+  },
+  {
+    "name": "jump",
+    "reference_frame_index": 23,
+    "canvas_png": "jump_500.png",
+    "canvas_size": [
+      500,
+      500
+    ],
+    "native_window_png": "jump_128.png",
+    "native_window_origin": [
+      186,
+      272
+    ],
+    "native_window_size": [
+      128,
+      128
+    ],
+    "visible_bbox": [
+      216,
+      287,
+      275,
+      387
+    ],
+    "sha256": "ff70d2427751d5d53967f4d4b1b6804d635fa5de076a17ede6bf6ad8a71e1e9c",
+    "runtime_certified": false
+  }
+]

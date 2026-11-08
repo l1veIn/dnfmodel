@@ -1,0 +1,580 @@
+{
+  "package": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_7Frame_Pilot_v03.NPK",
+  "sha256": "b8f2ace519f20a320c9a054657df1c26f93d6a729265f6a27834dc697a84b501",
+  "bytes": 2468392,
+  "entry_count": 64,
+  "skin_paths": 38,
+  "default_avatar_paths": 26,
+  "frame_count": 174,
+  "unique_drawn_slots": [
+    0,
+    1,
+    2,
+    3,
+    10,
+    23,
+    65
+  ],
+  "fallback_slots": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173
+  ],
+  "fallback": "standing master frame 10",
+  "decoded_frames_checked": 11136,
+  "all_pixel_and_position_roundtrips_passed": true,
+  "entries": [
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0000.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0001.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0002.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0003.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0004.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0005.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0006.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0007.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0008.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0009.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0010.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0011.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0012.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0013.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0014.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0015.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0016.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0017.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0018.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0019.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0020.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0021.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0022.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0023.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0025.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0026.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0027.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body0028.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body80000.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body80100.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body80200.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body80300.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body80400.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body80500.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body80600.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body80700.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body80800.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/skin/mg_body80900.img",
+      "frames": 174,
+      "role": "whole_character",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/belt/mg_belt0000a.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/belt/mg_belt0000a_mask1.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/cap/mg_cap0000c.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/cap/mg_cap0000c_mask1.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/coat/mg_coat0000a.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/coat/mg_coat0000a_mask1.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/coat/mg_coat0000b.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/coat/mg_coat0000b_mask1.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/coat/mg_coat0000c.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/coat/mg_coat0000c_mask1.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/face/mg_face0000b.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/face/mg_face0000b_mask1.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/hair/mg_hair0000a.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/hair/mg_hair0000a_mask1.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/hair/mg_hair0000b.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/hair/mg_hair0000b_mask1.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/neck/mg_neck0000d.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/neck/mg_neck0000d_mask1.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/pants/mg_pants0000a.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/pants/mg_pants0000a_mask1.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/pants/mg_pants0000d.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/pants/mg_pants0000d_mask1.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/shoes/mg_shoes0000a.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/shoes/mg_shoes0000a_mask1.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/shoes/mg_shoes0000b.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    },
+    {
+      "path": "sprite/character/mage/equipment/avatar/shoes/mg_shoes0000b_mask1.img",
+      "frames": 174,
+      "role": "hide_default_avatar",
+      "roundtrip": "passed"
+    }
+  ],
+  "scope": "Female mage skin resources plus default unequipped costume layers only",
+  "game_installation_changed": false,
+  "game_runtime_validated": false,
+  "animation_timing_certified": false
+}

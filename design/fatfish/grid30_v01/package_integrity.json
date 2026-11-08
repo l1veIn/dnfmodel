@@ -1,0 +1,10 @@
+{
+  "npk": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grid30_Test_v01.NPK",
+  "npk_sha256": "78c66b478d2c05ad2bc38b099a3bbd55f8fb36ee9f4b47363cc4af79a6e16fc6",
+  "npk_bytes": 12918886,
+  "zip": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\fatfish_grid30_test_v01.zip",
+  "zip_bytes": 91898745,
+  "zip_sha256": "dd0e7e16015e2bafde6b78c421bfa1de79ca6356e51d9d83b325f306d6c5c9eb",
+  "crc_and_manifest_passed": true,
+  "protected_files_unchanged": true
+}

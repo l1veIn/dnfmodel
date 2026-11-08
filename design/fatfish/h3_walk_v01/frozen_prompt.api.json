@@ -1,0 +1,246 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "minimax_h3_fl2va_pruned_w6a8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "H3 FL2VA · W6A8 (ComfyUI ≥ 0.38)"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "CLIP (minimax / Qwen3-VL)"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Video VAE"
+    }
+  },
+  "4": {
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Audio VAE"
+    }
+  },
+  "5": {
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "video_vae": [
+        "3",
+        0
+      ],
+      "audio_vae": [
+        "4",
+        0
+      ],
+      "clip": [
+        "2",
+        0
+      ],
+      "refine": [
+        "13",
+        0
+      ],
+      "task_type": "fl2v — 首尾帧生视频(First-Last Frame)",
+      "global_prompt": "Picture: Animate the supplied first-frame image as a precise 2D game sprite walk-cycle test. The image is the approved character design, proportions, pixel-art style, outfit and fixed three-quarter view facing right. Preserve that exact character throughout: navy-to-cyan long wavy hair, curled ahoge, small whale-fin ears, white frilled maid headband, blue eyes, navy long-sleeved dress, white whale-emblem apron with gold trim, opaque white tights, navy Mary Jane shoes, and compact whale tail. Keep her face, head size, hair silhouette, costume colors and all accessories consistent.\n\nThe character walks IN PLACE at a steady moderate cadence, repeatedly alternating left and right legs through a complete natural gait. Clearly bend knees and ankles, lift each foot during swing, and show continuous connected arms and hands with small counter-swing. Each planted foot travels backward smoothly during support and returns forward only while lifted, like a treadmill walk. The head and torso remain almost fixed, with only tiny natural vertical bobbing; the pelvis does not drift across the canvas. Hair, skirt and tail follow with restrained secondary motion. Keep the same right-facing three-quarter orientation; never turn toward the camera.\n\nShow five evenly timed walking repetitions across this five-second shot. Continue the walk right to the end, reaching the starting gait phase for a clean repeat; do not pause to pose. Locked camera and scale, entire body and both shoes visible within the original margins, constant ground-contact height. Preserve the deliberately pixelated game-sprite appearance; no conversion to 3D, realistic rendering or smooth anime illustration. Background stays a perfectly flat uniform neutral gray RGB(128,128,128) with no floor, shadows, scenery, grid, text, effects, additional characters or camera movement. \nSound: Soft unchanging room tone. No speech.\nScore: No music.",
+      "bd_grp_sample": "采样设置",
+      "cfg": 1,
+      "seed": 20261023,
+      "frame_rate": 24,
+      "width": 608,
+      "height": 352,
+      "ref_max_size": 608,
+      "total_frames": 124,
+      "timeline_data": "{\"version\":5,\"editMode\":\"global\",\"timelineMode\":\"fl2v\",\"totalFrames\":124,\"frameRate\":24,\"width\":608,\"height\":352,\"refMaxSize\":608,\"output\":{\"mode\":\"fixed\",\"longEdge\":608,\"width\":608,\"height\":352,\"maxExportFrames\":0,\"exportMode\":\"all\",\"continuityEnabled\":false,\"continuityOverlapFrames\":22,\"multiple\":32,\"audioMode\":\"generate\"},\"videoClips\":[],\"video\":{\"fileName\":\"\",\"videoFile\":\"\",\"subfolder\":\"\",\"type\":\"input\",\"frames\":[],\"frameMap\":[]},\"global\":{\"taskType\":\"fl2v — 首尾帧生视频(First-Last Frame)\",\"prompt\":\"Picture: Animate the supplied first-frame image as a precise 2D game sprite walk-cycle test. The image is the approved character design, proportions, pixel-art style, outfit and fixed three-quarter view facing right. Preserve that exact character throughout: navy-to-cyan long wavy hair, curled ahoge, small whale-fin ears, white frilled maid headband, blue eyes, navy long-sleeved dress, white whale-emblem apron with gold trim, opaque white tights, navy Mary Jane shoes, and compact whale tail. Keep her face, head size, hair silhouette, costume colors and all accessories consistent.\\n\\nThe character walks IN PLACE at a steady moderate cadence, repeatedly alternating left and right legs through a complete natural gait. Clearly bend knees and ankles, lift each foot during swing, and show continuous connected arms and hands with small counter-swing. Each planted foot travels backward smoothly during support and returns forward only while lifted, like a treadmill walk. The head and torso remain almost fixed, with only tiny natural vertical bobbing; the pelvis does not drift across the canvas. Hair, skirt and tail follow with restrained secondary motion. Keep the same right-facing three-quarter orientation; never turn toward the camera.\\n\\nShow five evenly timed walking repetitions across this five-second shot. Continue the walk right to the end, reaching the starting gait phase for a clean repeat; do not pause to pose. Locked camera and scale, entire body and both shoes visible within the original margins, constant ground-contact height. Preserve the deliberately pixelated game-sprite appearance; no conversion to 3D, realistic rendering or smooth anime illustration. Background stays a perfectly flat uniform neutral gray RGB(128,128,128) with no floor, shadows, scenery, grid, text, effects, additional characters or camera movement. \\nSound: Soft unchanging room tone. No speech.\\nScore: No music.\",\"refs\":[],\"referenceVideo\":{},\"continuousReference\":false,\"genImage\":{\"imageFile\":\"\"},\"refAudios\":[],\"refVideos\":[],\"commonEnabled\":false},\"segments\":[],\"gen\":{\"defaultFrameCount\":124},\"runSelectEnabled\":false,\"runSelection\":[],\"liveTaePreview\":false,\"shots\":[{\"id\":\"fatfish_walk\",\"durationSec\":5,\"prompt\":\"Picture: Animate the supplied first-frame image as a precise 2D game sprite walk-cycle test. The image is the approved character design, proportions, pixel-art style, outfit and fixed three-quarter view facing right. Preserve that exact character throughout: navy-to-cyan long wavy hair, curled ahoge, small whale-fin ears, white frilled maid headband, blue eyes, navy long-sleeved dress, white whale-emblem apron with gold trim, opaque white tights, navy Mary Jane shoes, and compact whale tail. Keep her face, head size, hair silhouette, costume colors and all accessories consistent.\\n\\nThe character walks IN PLACE at a steady moderate cadence, repeatedly alternating left and right legs through a complete natural gait. Clearly bend knees and ankles, lift each foot during swing, and show continuous connected arms and hands with small counter-swing. Each planted foot travels backward smoothly during support and returns forward only while lifted, like a treadmill walk. The head and torso remain almost fixed, with only tiny natural vertical bobbing; the pelvis does not drift across the canvas. Hair, skirt and tail follow with restrained secondary motion. Keep the same right-facing three-quarter orientation; never turn toward the camera.\\n\\nShow five evenly timed walking repetitions across this five-second shot. Continue the walk right to the end, reaching the starting gait phase for a clean repeat; do not pause to pose. Locked camera and scale, entire body and both shoes visible within the original margins, constant ground-contact height. Preserve the deliberately pixelated game-sprite appearance; no conversion to 3D, realistic rendering or smooth anime illustration. Background stays a perfectly flat uniform neutral gray RGB(128,128,128) with no floor, shadows, scenery, grid, text, effects, additional characters or camera movement. \\nSound: Soft unchanging room tone. No speech.\\nScore: No music.\",\"startImage\":{\"imageFile\":\"h3_inputs/fatfish_same_grok_5e3b17371e2008.png\",\"width\":608,\"height\":352},\"negativePrompt\":\"bad video, camera motion, changing clothes, changing face, additional people, detached limbs\"}]}",
+      "bd_grp_advanced": "高级采样",
+      "steps": 20,
+      "sampler": "res_multistep",
+      "scheduler": "simple",
+      "shift_video": 12,
+      "shift_audio": 3,
+      "bd_grp_perf": "性能",
+      "clear_vram_between_segments": true,
+      "clear_vram_before_refine": true,
+      "clear_vram_before_face_refine": false,
+      "cache_frames_codec": "raw",
+      "export_source_images": false,
+      "export_pre_face_refine": false,
+      "cache_name": "h3_agent_20261023-190159_fatfish_first_frame_10e4777971d0"
+    },
+    "class_type": "MiniMaxH3Director",
+    "_meta": {
+      "title": "02 · first pass 608×352 → refine 864×480"
+    }
+  },
+  "6": {
+    "inputs": {
+      "images": [
+        "5",
+        0
+      ],
+      "fps": [
+        "5",
+        2
+      ],
+      "audio": [
+        "5",
+        1
+      ],
+      "bit_depth": 8
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "Final video · after refine"
+    }
+  },
+  "7": {
+    "inputs": {
+      "video": [
+        "6",
+        0
+      ],
+      "filename_prefix": "video/minimax_h3_agent/20261023-190159_fatfish_first_frame_10e4777971d0/refined",
+      "format": "auto",
+      "format.codec": "auto"
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save refined video (second Queue)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "source": [
+        "5",
+        5
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Director 运行报告"
+    }
+  },
+  "9": {
+    "inputs": {
+      "source": [
+        "5",
+        2
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "fps"
+    }
+  },
+  "10": {
+    "inputs": {
+      "source": [
+        "5",
+        3
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "frame_count"
+    }
+  },
+  "12": {
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "scheduler": "simple",
+      "steps": 6,
+      "denoise": 0.25
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "Refine sigmas · 6 steps / denoise 0.25"
+    }
+  },
+  "13": {
+    "inputs": {
+      "sigmas": [
+        "12",
+        0
+      ],
+      "mode": "upscale",
+      "upscale_method": "h3_latent",
+      "latent_upscale_model": "minimax_h3_latent_upscaler_3d_conv_v1_fp16.safetensors",
+      "sampler": "res_multistep",
+      "passes": 1,
+      "seed_mode": "inherit",
+      "aspect_ratio": "跟随导演台",
+      "megapixels": 0.4,
+      "width": 864,
+      "height": 480,
+      "skip_fl2v": false,
+      "confirm_first_pass": true,
+      "enable_latent_chunking": true,
+      "enable_tiling": true,
+      "tile_count": 2,
+      "tile_overlap": 128,
+      "seed": 20261023
+    },
+    "class_type": "MiniMaxH3DirectorRefine",
+    "_meta": {
+      "title": "Latent upscale + second pass · target 864×480"
+    }
+  },
+  "14": {
+    "inputs": {
+      "images": [
+        "5",
+        6
+      ],
+      "fps": [
+        "5",
+        2
+      ],
+      "audio": [
+        "5",
+        1
+      ],
+      "bit_depth": 8
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "First-pass video · before refine"
+    }
+  },
+  "15": {
+    "inputs": {
+      "video": [
+        "14",
+        0
+      ],
+      "filename_prefix": "video/minimax_h3_agent/20261023-190159_fatfish_first_frame_10e4777971d0/first_pass",
+      "format": "auto",
+      "format.codec": "auto"
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "Save first pass (available on first Queue)"
+    }
+  }
+}

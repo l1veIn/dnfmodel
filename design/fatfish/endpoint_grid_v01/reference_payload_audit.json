@@ -1,0 +1,32 @@
+{
+  "actual_cli_body_captured_before_http": true,
+  "network_requests_during_audit": 0,
+  "reference_count": 2,
+  "request": {
+    "kind": "image",
+    "model": "gpt-image-2.5",
+    "input": {
+      "prompt": "Create one temporally coherent six-frame 2D game-character animation strip within the bottom two rows of IMAGE 1. Return exactly ONE 2048x2048 transparent RGBA PNG in the same 3x3 grid.\n\nIMAGE 1 has three fixed blue Fatfish whale-maid motion/appearance references in its TOP ROW. Leave those three reference figures and labels in place. They show additional views and silhouettes of the same approved character. The BOTTOM TWO ROWS are ONE ordered SIX-FRAME MOTION SEGMENT, read left-to-right then top-to-bottom. Only FRAME 1 / START and FRAME 6 / END contain original red-haired DNF mage poses. The four MIDDLE cells are intentionally empty. This is NOT a request to leave them blank: generate the four missing in-betweens, plus replace the original characters in the first and sixth bottom cells with Fatfish.\n\nSTART and END are the only pose anchors. Match the specific original head/torso placement, arm heights, wrist positions, leg overlaps, feet and facing in these two anchors. Between them animate a single smooth natural right-facing in-place walking segment. Design the four in-between poses jointly as one coherent motion: consistent limb lengths and body proportions, gradual arm swings through shoulders/elbows, knees bending and legs passing then opening, continuous foot trajectories and coherent weight transfer. Do not make six unrelated poses, six endpoint copies, merely translate one rigid character, morph unrelated clothing, or jump the limb ordering. Keep sleeves attached to hands and legs attached to shoes. Camera, character scale, face size, hair volume and garment construction must stay fixed throughout the six frames. Preserve head and torso continuity; avoid abrupt vertical bobbing, accidental zoom and lateral drifting. Use small continuous secondary hair/hem/tail motion rather than random changes in each cell. This is only the START-to-END segment; do not add a new reset pose or force frame6 to equal frame1.\n\nIMAGE 2 is the TRUE 1024px HIGH-RESOLUTION APPEARANCE MASTER. Follow its exact blue-eyed face, proportions, fine original detail and shading, navy-to-cyan wavy long hair, curled ahoge, whale-fin ears with white underside, white maid headband with cyan bow, navy long sleeves and dress, white whale-emblem apron, gold trim/bows/buttons, white tights and navy Mary Jane shoes. The top-row video references are coarser; use them for structure/views, not as a reason to pixelate or blur. Keep the substantial separate curved dark-navy whale tail with fluked tip behind the hips toward screen left in EVERY frame; it is not a skirt panel, ribbon or hair lock. Keep the costume, face, outlines, colors, tail and details coherent between adjacent frames. No added/missing limbs, accessories, effects or weapons. Do not copy Image2's standing pose into the whole segment.\n\nLAYOUT: exactly 3x3, each cell640x640, cell top-left x/y=48,704,1360. Top3 stay references. Bottom cells are animation frames1..6 at equal time intervals t=0,.2,.4,.6,.8,1. Retain thin separators and labels. All cells share the same game coordinate window, camera and scale. Do not independently center, auto-fit or enlarge a frame. Keep each full body, hair, tail, hands and shoes inside its own cell. Output exactly nine figures total: top3 references and six blue Fatfish animation frames below. No original red-haired characters remain.\n\nUse real clean alpha transparency outside characters/labels/dividers, no solid matte or painted checkerboard, floor, cast shadow, colored edge halo, motion blur or scene. Preserve clear fine illustrated-sprite detail, with no coarse pixel blocks or artificial nearest-upscaled texture.\n",
+      "n": 1,
+      "size": "1:1",
+      "resolution": "2k",
+      "image": [
+        {
+          "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\endpoint_grid_v01\\references\\input_grid_2048.png",
+          "decoded_bytes": 438936,
+          "decoded_sha256": "a38283db354bb88642146572534fe53527543e3fc82f9de09dcf26a12049b54c"
+        },
+        {
+          "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\endpoint_grid_v01\\references\\appearance_original_1024.png",
+          "decoded_bytes": 380772,
+          "decoded_sha256": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d"
+        }
+      ],
+      "background": "transparent",
+      "output_format": "png",
+      "quality": "high"
+    }
+  },
+  "wire_bytes": 1096843,
+  "wire_sha256": "03bf26f6fe38e8fdc792e2a4375b3f2c2a3f33adb3e63342d201b8fd1e96431d"
+}

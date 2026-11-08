@@ -1,0 +1,30 @@
+{"event": "backend_started", "pid": 7048, "stderr": "D:\\VideoStudio\\comfyUI\\shared\\h3-agent-runtime\\20261107-022254_48a35787.stderr.log"}
+{"event": "accepted", "stage": "execute", "prompt_id": "e0f68404-ca17-45d5-adcc-18f010aec652"}
+{"event": "running", "stage": "execute", "prompt_id": "e0f68404-ca17-45d5-adcc-18f010aec652", "ram_available_GiB": 16.1, "gpu": "1329, 2"}
+{"event": "running", "stage": "execute", "prompt_id": "e0f68404-ca17-45d5-adcc-18f010aec652", "ram_available_GiB": 10.78, "gpu": "7030, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "e0f68404-ca17-45d5-adcc-18f010aec652", "ram_available_GiB": 10.48, "gpu": "11443, 97"}
+{"event": "running", "stage": "execute", "prompt_id": "e0f68404-ca17-45d5-adcc-18f010aec652", "ram_available_GiB": 10.83, "gpu": "11443, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "e0f68404-ca17-45d5-adcc-18f010aec652", "ram_available_GiB": 10.85, "gpu": "11443, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "e0f68404-ca17-45d5-adcc-18f010aec652", "ram_available_GiB": 10.79, "gpu": "11443, 99"}
+{"event": "running", "stage": "execute", "prompt_id": "e0f68404-ca17-45d5-adcc-18f010aec652", "ram_available_GiB": 10.72, "gpu": "11443, 96"}
+{"event": "running", "stage": "execute", "prompt_id": "e0f68404-ca17-45d5-adcc-18f010aec652", "ram_available_GiB": 10.76, "gpu": "11443, 96"}
+{"event": "running", "stage": "execute", "prompt_id": "e0f68404-ca17-45d5-adcc-18f010aec652", "ram_available_GiB": 10.81, "gpu": "11443, 96"}
+{"event": "running", "stage": "execute", "prompt_id": "e0f68404-ca17-45d5-adcc-18f010aec652", "ram_available_GiB": 10.79, "gpu": "11444, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "e0f68404-ca17-45d5-adcc-18f010aec652", "ram_available_GiB": 10.85, "gpu": "11444, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "e0f68404-ca17-45d5-adcc-18f010aec652", "ram_available_GiB": 10.29, "gpu": "10833, 3"}
+{"event": "stage_completed", "stage": "execute", "seconds": 338.96, "videos": ["D:\\VideoStudio\\comfyUI\\shared\\output\\video\\claude_gunner_v01\\clip_068_075_a01_00001_.mp4"]}
+{"clip": "clip_068_075", "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\claude_gunner_v01\\clip_068_075_a01_00001_.mp4", "seconds": 338.96, "ram": {"ram_available_gib": 15.759956359863281, "commit_available_gib": 15.49368667602539, "commit_total_gib": 40.95303726196289}}
+{"event": "accepted", "stage": "execute", "prompt_id": "1f8b7b23-003e-49c5-82e6-b5524cd71948"}
+{"event": "running", "stage": "execute", "prompt_id": "1f8b7b23-003e-49c5-82e6-b5524cd71948", "ram_available_GiB": 15.77, "gpu": "1329, 18"}
+{"event": "running", "stage": "execute", "prompt_id": "1f8b7b23-003e-49c5-82e6-b5524cd71948", "ram_available_GiB": 11.06, "gpu": "8513, 71"}
+{"event": "running", "stage": "execute", "prompt_id": "1f8b7b23-003e-49c5-82e6-b5524cd71948", "ram_available_GiB": 10.57, "gpu": "11457, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "1f8b7b23-003e-49c5-82e6-b5524cd71948", "ram_available_GiB": 10.62, "gpu": "11457, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "1f8b7b23-003e-49c5-82e6-b5524cd71948", "ram_available_GiB": 10.6, "gpu": "11457, 98"}
+{"event": "running", "stage": "execute", "prompt_id": "1f8b7b23-003e-49c5-82e6-b5524cd71948", "ram_available_GiB": 10.66, "gpu": "11457, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "1f8b7b23-003e-49c5-82e6-b5524cd71948", "ram_available_GiB": 10.7, "gpu": "11457, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "1f8b7b23-003e-49c5-82e6-b5524cd71948", "ram_available_GiB": 10.66, "gpu": "11457, 96"}
+{"event": "running", "stage": "execute", "prompt_id": "1f8b7b23-003e-49c5-82e6-b5524cd71948", "ram_available_GiB": 10.61, "gpu": "11457, 96"}
+{"event": "running", "stage": "execute", "prompt_id": "1f8b7b23-003e-49c5-82e6-b5524cd71948", "ram_available_GiB": 10.67, "gpu": "11448, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "1f8b7b23-003e-49c5-82e6-b5524cd71948", "ram_available_GiB": 10.7, "gpu": "11448, 96"}
+{"event": "stage_completed", "stage": "execute", "seconds": 334.04, "videos": ["D:\\VideoStudio\\comfyUI\\shared\\output\\video\\claude_gunner_v01\\clip_108_112_a01_00001_.mp4"]}
+{"clip": "clip_108_112", "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\claude_gunner_v01\\clip_108_112_a01_00001_.mp4", "seconds": 334.04, "ram": {"ram_available_gib": 15.850811004638672, "commit_available_gib": 15.529876708984375, "commit_total_gib": 40.95303726196289}}

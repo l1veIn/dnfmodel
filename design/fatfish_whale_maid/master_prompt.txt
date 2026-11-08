@@ -1,0 +1,39 @@
+Full-body character art for a 2D action game, used as the appearance master for animation. Draw exactly one figure. This is not a turnaround sheet.
+
+Image 1 is a three-view design sheet of one adult woman and it is the authority on her design: front, side and back views, with close-ups. Reproduce this exact design and its overall silhouette: the same very long wavy dark-blue hair fading to light blue, the same small looped ahoge, the same big white frilled maid headband, the same blue hair bow, the same navy whale-fin ears with white scalloped undersides, the same maid dress and apron, and the same long thick whale tail with its wide fluke. Use the side view to see how the tail and back bow attach. Keep the design faithful.
+Image 2 is only the pose and body proportions to copy: a short-bodied woman in three-quarter view facing RIGHT, standing with her feet a little apart and both arms hanging down at her sides. Copy only her pose and body proportions, none of her colors, clothes or hair.
+
+Keep these large shapes at their full size, as in Image 1:
+- Hair: a big full mass of long wavy hair behind her shoulders and back, ending at about hip height and spreading out behind her, about as wide as in Image 1, in several large wave masses with soft curled ends. Keep the side bangs framing her face. Her face and both arms stay in front of the hair and clear of it.
+- Whale-fin ears: one large navy fin on each side of her head, pointing outward and slightly down, with a white scalloped underside, as large relative to her head as in Image 1.
+- Maid headband: big white ruffled frill across the top of her head, as large relative to her head as in Image 1. A small dark-blue looped ahoge rises just above it. A blue bow sits at the side of her head just above the fin.
+- Tail: one long thick whale tail, coming out from under the back bow at her lower back, hanging down behind her skirt in a gentle outward curve, as thick as in Image 1, about 0.06 of her height across. Its wide two-lobed fluke is about 0.17 of her height across, and the fluke tips reach down to 0.71 of her height, level with the lower skirt. Do not make it thin, short or small.
+- Back bow: a big white bow at the back of her waist with long ribbon tails, clearly sticking out behind her back above the tail.
+- Skirt: a full bell skirt as wide as in Image 1, about 0.36 of her height across, with a thick layered white ruffle at the hem.
+- Apron: a big white apron with a wide ruffled edge from the waist to 0.585 of her height, with the navy whale logo at its lower part, large and simple.
+
+Simplify only what is inside these shapes, because the game sprite is very small. Keep the silhouette and do not shrink anything to do this:
+- Skirt embroidery as one clean thin gold band above the ruffle and a few simple gold motifs instead of fine filigree. Two gold bows with dark ribbons on the skirt, drawn large and simple.
+- A few large pleats and ruffle folds instead of many small ones.
+- The bodice: white ruffled front with a single row of navy buttons, white collar, big black bow at the neck with a blue round gem. Navy corset waist with two rows of gold buttons. White frilled shoulder straps.
+- Detached navy sleeves: bare shoulders, a navy puff on the upper arm with a small gold cross ornament, a long fitted navy sleeve, a white ruffled cuff at each wrist.
+- Hair strands as a few clean highlight bands, not fine lines.
+- Plain white opaque tights. Glossy navy chunky-heeled Mary Jane shoes with a strap and a gold ring buckle.
+
+Her hands are bare, empty and fully visible below the white cuffs, in front of the skirt. Do not copy the clasped hands of Image 1. A happy open smile with one small fang. Blue eyes.
+
+Proportions, as fractions of total height from the top of the headband to the soles of her shoes (only the ahoge may rise above this, by about 0.025):
+- Chin at 0.15: a small head, about six and a half heads tall. This head is a little smaller relative to her body than in Image 1, on purpose. Adult proportions, NOT chibi, no big head, no big eyes.
+- Waist at 0.33, hips at 0.47.
+- Skirt ruffle ends at 0.76, as in Image 1. Below it both legs in white tights and both shoes are clearly visible.
+
+Colors, the same as Image 1, with no added color blocks:
+- Hair: deep blue RGB 56 76 150 at the crown and shoulders, blending through RGB 100 134 204 to light blue RGB 150 182 232 at the ends. The light blue covers the lower third of the hair and stays clearly visible.
+- Fins and tail: blue RGB 68 92 165 with deep shadows RGB 45 50 100. The fluke fades to light blue RGB 150 182 232 at its tips, and the tail's underside is pale RGB 200 196 220.
+- Sleeves, corset and outer skirt: dark navy RGB 50 54 95. Do not make them black. The middle panel of the skirt below the apron: periwinkle-blue RGB 104 116 175 with soft vertical stripes.
+- Hair bow: bright blue RGB 76 144 220. Gold details: soft gold RGB 215 170 95.
+- White parts: clean white with cool shadows RGB 214 212 232. Warm pale peach skin.
+- Outlines: dark navy RGB 30 32 70, clean and of even weight. Never purple, never teal, never black-brown.
+
+Style: clean cel shading, flat colors, crisp edges, outlines thick enough to separate shapes when small. No painterly texture, no pixel art.
+Fill most of the image height, with the ahoge, feet, both fins, the hair and the fluke fully visible and a small margin. Every shape is fully opaque. Background: completely flat uniform medium gray, RGB 128 128 128. No shadow, no floor, no effects, no text.

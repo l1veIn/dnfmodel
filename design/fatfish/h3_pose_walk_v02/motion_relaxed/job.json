@@ -1,0 +1,67 @@
+{
+  "job_id": "fatfish_motion_relaxed_72a15e576a6244a0a689cd789f1a361d",
+  "mode": "one-pass",
+  "status": "completed",
+  "frozen_api_sha256": "7fd7165491ef79cb0c2d00b6b8ce82f96d82e311fdd44d755fc41bc5ece85692",
+  "frozen_gui_sha256": "3681d1d284da5ccfec7f17a3509793d0b77d8183f9508016c99e51d1de53d09c",
+  "stages": [
+    {
+      "name": "execute",
+      "node": "20",
+      "width": 608,
+      "height": 352,
+      "client_id": "f3496f81-63c2-46d9-8ce7-cfb39e97e2ff",
+      "status": "completed",
+      "submission_attempted": true,
+      "started_at": 1792758831.7130084,
+      "prompt_id": "38648012-5cec-425c-9e7a-8e5c7ed1d496",
+      "elapsed_seconds": 121.54,
+      "videos": [
+        "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_h3_pose_v02_relaxed_00001_.mp4"
+      ],
+      "media_reports": [
+        {
+          "file": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_h3_pose_v02_relaxed_00001_.mp4",
+          "width": 608,
+          "height": 352,
+          "fps": 24.0,
+          "video_codec": "h264",
+          "container_seconds": 5.167,
+          "decoded_frames": 124,
+          "mean_luma_proxy": 124.01043559658912,
+          "mean_temporal_pixel_change": 2.308231840894474,
+          "frames": {
+            "1": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_h3_pose_v02_relaxed_00001__qa\\frame_001.png",
+            "62": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_h3_pose_v02_relaxed_00001__qa\\frame_062.png",
+            "124": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_h3_pose_v02_relaxed_00001__qa\\frame_124.png"
+          },
+          "audio": {
+            "codec": "aac",
+            "sample_rate": 32000,
+            "channels": 2,
+            "decoded_audio_frames": 162,
+            "rms": 0.010163807532450492,
+            "peak": 0.11281916499137878
+          }
+        }
+      ]
+    }
+  ],
+  "sampling_reproduction": false,
+  "new_motion": true,
+  "strength": 0.55,
+  "control_end_percent": 0.8,
+  "same_old_reference_and_seed": true,
+  "motion_changes_combined": true,
+  "hd_reference_not_introduced": true,
+  "memory_before": {
+    "ram_available_gib": 15.765933990478516,
+    "commit_available_gib": 14.615989685058594,
+    "commit_total_gib": 40.95303726196289
+  },
+  "memory_after": {
+    "ram_available_gib": 15.845661163330078,
+    "commit_available_gib": 14.633888244628906,
+    "commit_total_gib": 40.95303726196289
+  }
+}

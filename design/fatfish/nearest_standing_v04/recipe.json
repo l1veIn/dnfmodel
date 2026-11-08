@@ -1,0 +1,33 @@
+{
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png",
+  "source_sha256": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d",
+  "source_probe": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\qa\\registration_probe\\report.json",
+  "resample": "NEAREST",
+  "resized_size": [
+    147,
+    147
+  ],
+  "translation": [
+    174,
+    250
+  ],
+  "alpha": "preserved",
+  "palette_reduction": false,
+  "sharpening": false,
+  "canvas": [
+    500,
+    500
+  ],
+  "viewport": [
+    186,
+    252,
+    314,
+    400
+  ],
+  "base_npk": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\Fatfish_v03_Pilot\\A_Fatfish_FMage_7Frame_Pilot_v03.NPK",
+  "base_npk_sha256": "b8f2ace519f20a320c9a054657df1c26f93d6a729265f6a27834dc697a84b501",
+  "output_npk": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Nearest_Standing_v04.NPK",
+  "user_request": "我觉得可以试试之前的矫正+最近邻采样方案（附旧站姿校正图）",
+  "generation_provenance": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\journal.json",
+  "source_requests": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\requests.json"
+}

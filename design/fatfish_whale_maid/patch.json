@@ -1,0 +1,85 @@
+{
+ "title": "女法师 · 大肥鱼（鲸鱼娘女仆）",
+ "version": 1,
+ "class": "mage",
+ "equipment": "equipment",
+ "frames": 174,
+ "materials": "fatfish_whale_maid_source",
+ "out": "fatfish_whale_maid_v01",
+ "master": "master_e_0.png",
+ "npk_stem": "A_FatfishWhaleMaid_FMage",
+ "body": "skin/mg_body0000",
+ "composite_order": [
+  "pants/mg_pants0000d",
+  "hair/mg_hair0000b",
+  "skin/mg_body0000",
+  "shoes/mg_shoes0000b",
+  "shoes/mg_shoes0000a",
+  "pants/mg_pants0000a",
+  "coat/mg_coat0000c",
+  "coat/mg_coat0000b",
+  "coat/mg_coat0000a",
+  "face/mg_face0000b",
+  "hair/mg_hair0000a"
+ ],
+ "figure_layers": [
+  "skin/mg_body0000",
+  "pants/mg_pants0000a",
+  "shoes/mg_shoes0000a",
+  "shoes/mg_shoes0000b",
+  "coat/mg_coat0000a",
+  "coat/mg_coat0000b",
+  "coat/mg_coat0000c"
+ ],
+ "cover_layers": [
+  "coat/mg_coat0000a",
+  "coat/mg_coat0000b",
+  "coat/mg_coat0000c",
+  "pants/mg_pants0000a",
+  "hair/mg_hair0000a"
+ ],
+ "standing_frames": [
+  12,
+  13
+ ],
+ "height_ratio": 1.02,
+ "graft_hands": false,
+ "character": {
+  "name": "大肥鱼（DeepSeek 鲸鱼娘）",
+  "reference_image": "C:/Users/A/Desktop/dnfmodel/design/fatfish_whale_maid/three_view.webp",
+  "identity": "the same adult whale maid woman, with the same small head and adult proportions of Image 1. Very long wavy deep-blue hair fading to light blue at the ends, falling behind her back to the hips, a small looped ahoge, a big white ruffled maid headband, a blue hair bow, and large navy whale-fin ears with white scalloped undersides. White ruffled bodice with navy buttons, white collar, big black neck bow with a blue gem, navy corset with gold buttons. Navy sleeves joined directly to the bodice at the shoulder seam, with a white frilled strap along the seam, a navy puff with a small gold cross on each shoulder, and white ruffled cuffs. Her shoulders are covered, never bare. Bare hands. A big white ruffled apron with a navy whale logo, a full navy bell skirt with a periwinkle middle panel, a gold band, gold bows and a thick white ruffle hem. A big white bow at the back of her waist, with its ribbon tails hanging against the skirt. A short, thick, chubby blue whale tail that grows from her hips below the waist bow, not from her waist. It reaches a short way behind the skirt and curves up a little, never drooping, with a pale underside and a wide fluke with short, broad, rounded lobes fading to light blue at the tips. White tights and glossy navy chunky-heeled Mary Janes with gold buckles. Keep the hair, fins, headband, tail, fluke, back bow, skirt and apron at their size from Image 1 in every cell: never shrink, lengthen, thin, fold or omit them.",
+  "hands_rule": "Her hands are empty: no weapon of any kind. Her bare hands and navy sleeves are always drawn in front of her hair, tail and skirt. The back bow stays at her waist and the short thick tail stays at her hips, lifted a little behind her."
+ },
+ "license_note": "大肥鱼是民间二创形象，与 DeepSeek 官方无关：原型「溟月」作者上善无形，女仆版「蓝色大肥鱼」作者 ZipZipPipe，据项目内 UPSTREAM_CREDITS 记载为 CC BY-NC-SA 4.0。本次三视图由用户提供，其作者和授权未核实。仅自用，不得商用。",
+ "weapon": {
+  "kind": "rod",
+  "label": "短杖",
+  "layers": [
+   "mg_rod0000c",
+   "mg_rod0000d"
+  ]
+ },
+ "hand_detect": "arm_end",
+ "grip_fallback": true,
+ "grip_gap": true,
+ "grade": {
+  "contrast": 1.22,
+  "saturation": 1.32,
+  "clean_whites": true
+ },
+ "ink": [
+  30,
+  32,
+  70
+ ],
+ "sheet_style": "clean cel shading with the same colors as Image 1: deep blue hair fading to light blue at the ends, dark navy dress that is never black, clean white apron and ruffles, with even dark navy outlines thick enough to separate shapes at very small size, flat colors.",
+ "skin_rule": {
+  "red_minus_green": [
+   18,
+   75
+  ],
+  "red_min": 215,
+  "blue_min": 150,
+  "blue_below_green": true
+ }
+}

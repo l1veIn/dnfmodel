@@ -1,0 +1,26 @@
+{
+  "name": "master_feet",
+  "category": "master_feet",
+  "source_frame": 10,
+  "model": "gpt-image-2.5",
+  "input": {
+    "prompt": "Clean game sprite of the SAME Fatfish whale-maid DNF female mage. Single full body, transparent alpha, no text or props.\nCompact female-mage anatomy, consistent head size and limb proportions. Navy-to-cyan long wavy hair in about six broad readable locks, one curled ahoge, whale-fin ears, cyan bow and white maid headband. Navy long-sleeved dress, white chest and apron, one simple navy whale emblem, two gold waist buttons, small gold bows, one simple gold hem stripe, opaque white tights, navy Mary-Jane shoes and one compact navy whale tail.\nArt direction: clean low-resolution pixel sprite intended for a 128x128 native canvas, shown enlarged exactly 8x on a 1024 square. Big connected pixel clusters and solid interior colors. Each material has just a base, one shadow and one highlight. Navy outline, flat navy/blue/cyan/white/gold/skin palette. No stipple, grain, embroidery, intricate lace, tiny gold scribbles, isolated sparkle pixels, gritty texture, noisy gradients, blue/purple fringe, soft painted edges or tiny perforations. Simplify details that would collapse at native size. Preserve the costume rather than adding decoration.\nOnly one character. No grid, markers, lettering, scenery, floor, shadow, effects, weapon, bowl or extra limbs. Genuine alpha outside the silhouette, solid opaque colors inside the character.\n\nPrecisely edit Image 1, a standing master sprite. Preserve the same figure scale, face, head, hair, ears, clothing, tail, pixel style and canvas placement. Change ONLY the pose of the lower legs and shoes, and keep the upper body unchanged.\nImage 2 is the original DNF standing pose. Image 3 is a close-up of its lower legs and shoes. These two gray guides specify ONLY limb geometry, not the old clothes.\nCritical foot ordering: the foreground/near shoe must be on the VIEWER'S LEFT and LOWER. The background/far shoe must be on the VIEWER'S RIGHT and HIGHER. Do not reverse this ordering. The feet are staggered closely together, NOT wide apart or parallel at one height.\nOn the full 1024 canvas of Image 1: keep the LEFT foreground shoe sole at roughly (464,912). Put the RIGHT background shoe sole near (512,856). This means moving ONLY the current right/background shoe about 6 native pixels LEFT and about 6 native pixels UP, while the left shoe stays fixed. Bend/reconnect the right lower leg naturally behind the left leg. Preserve navy shoes and fully opaque white tights. Do not swap which foot is the foreground supporting foot.\nKeep the rest of the sprite unchanged, including the simple whale icon and gold hem stripe. Transparent background. No guide images, text or markers in the output.\n",
+    "n": 1,
+    "size": "1:1",
+    "resolution": "1k",
+    "background": "transparent",
+    "output_format": "png",
+    "quality": "high"
+  },
+  "local_reference_paths": [
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_reference_8x.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\references\\master_pose_gray_8x.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\references\\master_feet_closeup.png"
+  ],
+  "reference_sha256": [
+    "1828e9c321792de9a670edd152acaa52756d8e7330856cf994af3ac8f549a154",
+    "1d6efc37c8e881b3e6b1926431591d515a27fbc98554e732f5c746ed31813c04",
+    "3584d5812e951976c28b48cc6d1f1e9b08a62ef87e5f296df6b702573b4f62cd"
+  ],
+  "output_directory": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw"
+}

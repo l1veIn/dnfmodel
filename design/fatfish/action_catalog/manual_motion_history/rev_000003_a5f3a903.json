@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "revision": 3,
+  "frame_count": 174,
+  "clips": [
+    {
+      "id": "3d379021-c913-478e-b9de-9485b8e8a38f",
+      "name": "待机站立",
+      "start": 10,
+      "end": 13,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true,
+      "reviewed": false,
+      "note": "",
+      "source": "manual_editor"
+    },
+    {
+      "id": "7f2e6d77-f4db-458b-abd2-25b7247d89cc",
+      "name": "战斗待机",
+      "start": 14,
+      "end": 17,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true,
+      "reviewed": false,
+      "note": "",
+      "source": "manual_editor"
+    }
+  ],
+  "source": "manual_editor",
+  "ani_parsed": false,
+  "updated_at": "2026-10-23T22:41:14+08:00"
+}

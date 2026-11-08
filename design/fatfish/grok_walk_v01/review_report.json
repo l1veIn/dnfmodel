@@ -1,0 +1,71 @@
+{
+  "trial_completed": true,
+  "provider": "65535",
+  "model": "grok-imagine-video-1.5-preview",
+  "task_id": "vid_bfd86f4224d7e8e23b777a3c5ff37b53",
+  "generation_jobs": 1,
+  "cost_usd": 1.16,
+  "actual_video": {
+    "width": 960,
+    "height": 960,
+    "frames": 97,
+    "fps": 24,
+    "duration_seconds": 4.041667,
+    "alpha": false
+  },
+  "requested": {
+    "seconds": 4,
+    "resolution": "720p",
+    "input_mode": "first_frame"
+  },
+  "metadata_discrepancy": "Task size says 720x1280; decoded H264 is actually square 960x960. Review uses decoded dimensions.",
+  "reference": {
+    "master_sha256": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446",
+    "encoded_reference_sha256": "293392069fe39ab1f916d96db9e0c3fd3fc4b6db3b78ef269d5a3b1ef134c487",
+    "audit": "evidence/request_audit.json"
+  },
+  "processing": {
+    "native_window": "Whole square ->128x128 NEAREST; no coordinate correction, no sharpening, no alpha extraction",
+    "local_inference": false,
+    "review_cycle_source_frames_zero_based": [
+      60,
+      87
+    ],
+    "review_cycle_frame_count": 28,
+    "review_cycle_seconds": 1.1666666666666667,
+    "interpolation": false,
+    "synthetic_endpoint_blending": false,
+    "original_video_preserved": true
+  },
+  "validation": {
+    "full_video_decode": true,
+    "apng_all_frames_pixel_readback": true,
+    "approved_master_unchanged": true,
+    "native_foot_bottom_estimate_y": [
+      112,
+      115
+    ],
+    "estimated_foot_height_range_pixels": 3
+  },
+  "visual_review": {
+    "quality_compared_to_vace": "Substantially better identity and continuous gait",
+    "observations": [
+      "Blue hair, maid dress, whale apron and tail remain recognizable and relatively consistent",
+      "Hands remain attached; alternating leg swing is much more coherent than local VACE output",
+      "Head/face and fringe are still reinterpreted; skirt, cuffs and hair shapes vary across frames",
+      "Native-size vertical bob and shoe contact height vary; complete raw video does not exactly close at frame0",
+      "A 28-frame middle segment is supplied as a candidate repeat, not a certified seamless game cycle"
+    ],
+    "dnf_ready": false,
+    "loop_seam_passed": false,
+    "foot_sliding_passed": false
+  },
+  "limitations": [
+    "First-frame guidance only, no original female-mage action video",
+    "No verified last-frame constraint",
+    "Gray RGB video, not transparent sprites",
+    "No original ANI timing, bone anchors or root velocity verified"
+  ],
+  "game_installation_changed": false,
+  "batch_started": false
+}

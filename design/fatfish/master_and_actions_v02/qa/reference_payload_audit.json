@@ -1,0 +1,184 @@
+[
+  {
+    "name": "master",
+    "audit_type": "Reconstructed actual unmodified skill cmd_image POST body with network intercepted before submission; no duplicate task created",
+    "image_field": "input.image",
+    "image_count_in_post_body": 2,
+    "model": "gpt-image-2.5",
+    "images": [
+      {
+        "source_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\references\\v01_costume_edit_target.png",
+        "encoded_as": "inline data URI",
+        "decoded_bytes": 344553,
+        "decoded_sha256": "2c595bc7ab9272fdd5fa02e2d3231b79e90400065739dcf00fc9651fbcd00149",
+        "matches_record": true
+      },
+      {
+        "source_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\references\\master_pose_gray_8x.png",
+        "encoded_as": "inline data URI",
+        "decoded_bytes": 10506,
+        "decoded_sha256": "1d6efc37c8e881b3e6b1926431591d515a27fbc98554e732f5c746ed31813c04",
+        "matches_record": true
+      }
+    ],
+    "client_script_sha256": "078c4e2a8120e91a5a911865cb49604ae1d12600d2ed02863dda5209f6dbe812"
+  },
+  {
+    "name": "master_refine",
+    "audit_type": "Reconstructed actual unmodified skill cmd_image POST body with network intercepted before submission; no duplicate task created",
+    "image_field": "input.image",
+    "image_count_in_post_body": 2,
+    "model": "gpt-image-2.5",
+    "images": [
+      {
+        "source_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_reference_8x.png",
+        "encoded_as": "inline data URI",
+        "decoded_bytes": 21295,
+        "decoded_sha256": "1828e9c321792de9a670edd152acaa52756d8e7330856cf994af3ac8f549a154",
+        "matches_record": true
+      },
+      {
+        "source_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\references\\master_pose_gray_8x.png",
+        "encoded_as": "inline data URI",
+        "decoded_bytes": 10506,
+        "decoded_sha256": "1d6efc37c8e881b3e6b1926431591d515a27fbc98554e732f5c746ed31813c04",
+        "matches_record": true
+      }
+    ],
+    "client_script_sha256": "078c4e2a8120e91a5a911865cb49604ae1d12600d2ed02863dda5209f6dbe812"
+  },
+  {
+    "name": "master_feet",
+    "audit_type": "Reconstructed actual unmodified skill cmd_image POST body with network intercepted before submission; no duplicate task created",
+    "image_field": "input.image",
+    "image_count_in_post_body": 3,
+    "model": "gpt-image-2.5",
+    "images": [
+      {
+        "source_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_reference_8x.png",
+        "encoded_as": "inline data URI",
+        "decoded_bytes": 21295,
+        "decoded_sha256": "1828e9c321792de9a670edd152acaa52756d8e7330856cf994af3ac8f549a154",
+        "matches_record": true
+      },
+      {
+        "source_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\references\\master_pose_gray_8x.png",
+        "encoded_as": "inline data URI",
+        "decoded_bytes": 10506,
+        "decoded_sha256": "1d6efc37c8e881b3e6b1926431591d515a27fbc98554e732f5c746ed31813c04",
+        "matches_record": true
+      },
+      {
+        "source_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\references\\master_feet_closeup.png",
+        "encoded_as": "inline data URI",
+        "decoded_bytes": 4298,
+        "decoded_sha256": "3584d5812e951976c28b48cc6d1f1e9b08a62ef87e5f296df6b702573b4f62cd",
+        "matches_record": true
+      }
+    ],
+    "client_script_sha256": "078c4e2a8120e91a5a911865cb49604ae1d12600d2ed02863dda5209f6dbe812"
+  },
+  {
+    "name": "walk",
+    "audit_type": "Reconstructed actual unmodified skill cmd_image POST body with network intercepted before submission; no duplicate task created",
+    "image_field": "input.image",
+    "image_count_in_post_body": 2,
+    "model": "gpt-image-2.5",
+    "images": [
+      {
+        "source_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_reference_8x.png",
+        "encoded_as": "inline data URI",
+        "decoded_bytes": 20767,
+        "decoded_sha256": "70ca8180075d7bd8fdcaa28e655e84c2f741aab32d630a8a143a1787d6633977",
+        "matches_record": true
+      },
+      {
+        "source_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\references\\walk_pose_gray_8x.png",
+        "encoded_as": "inline data URI",
+        "decoded_bytes": 11655,
+        "decoded_sha256": "58879443c36f52aa987ef912e01be22b447bb4a1943a97d6134b7362b889dfe0",
+        "matches_record": true
+      }
+    ],
+    "client_script_sha256": "078c4e2a8120e91a5a911865cb49604ae1d12600d2ed02863dda5209f6dbe812"
+  },
+  {
+    "name": "cast",
+    "audit_type": "Reconstructed actual unmodified skill cmd_image POST body with network intercepted before submission; no duplicate task created",
+    "image_field": "input.image",
+    "image_count_in_post_body": 2,
+    "model": "gpt-image-2.5",
+    "images": [
+      {
+        "source_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_reference_8x.png",
+        "encoded_as": "inline data URI",
+        "decoded_bytes": 20767,
+        "decoded_sha256": "70ca8180075d7bd8fdcaa28e655e84c2f741aab32d630a8a143a1787d6633977",
+        "matches_record": true
+      },
+      {
+        "source_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\references\\cast_pose_gray_8x.png",
+        "encoded_as": "inline data URI",
+        "decoded_bytes": 11619,
+        "decoded_sha256": "98e68f301fa02943d0075731bee3b6d7933acece123ffd27f49f967c97630fde",
+        "matches_record": true
+      }
+    ],
+    "client_script_sha256": "078c4e2a8120e91a5a911865cb49604ae1d12600d2ed02863dda5209f6dbe812"
+  },
+  {
+    "name": "jump",
+    "audit_type": "Reconstructed actual unmodified skill cmd_image POST body with network intercepted before submission; no duplicate task created",
+    "image_field": "input.image",
+    "image_count_in_post_body": 2,
+    "model": "gpt-image-2.5",
+    "images": [
+      {
+        "source_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_reference_8x.png",
+        "encoded_as": "inline data URI",
+        "decoded_bytes": 20767,
+        "decoded_sha256": "70ca8180075d7bd8fdcaa28e655e84c2f741aab32d630a8a143a1787d6633977",
+        "matches_record": true
+      },
+      {
+        "source_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\references\\jump_pose_gray_8x.png",
+        "encoded_as": "inline data URI",
+        "decoded_bytes": 10761,
+        "decoded_sha256": "e8c4292aac740d678575fdd0ee9daeb8a3a0d281574e56a6acd7903a9b846f4c",
+        "matches_record": true
+      }
+    ],
+    "client_script_sha256": "078c4e2a8120e91a5a911865cb49604ae1d12600d2ed02863dda5209f6dbe812"
+  },
+  {
+    "name": "jump_fix",
+    "audit_type": "Reconstructed actual unmodified skill cmd_image POST body with network intercepted before submission; no duplicate task created",
+    "image_field": "input.image",
+    "image_count_in_post_body": 3,
+    "model": "gpt-image-2.5",
+    "images": [
+      {
+        "source_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\jump_0.png",
+        "encoded_as": "inline data URI",
+        "decoded_bytes": 475181,
+        "decoded_sha256": "5d6ccfd6a3e9514d7813f53001834d94b36121ad6fcfc178c009491860e62bb9",
+        "matches_record": true
+      },
+      {
+        "source_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\references\\jump_pose_gray_8x.png",
+        "encoded_as": "inline data URI",
+        "decoded_bytes": 10761,
+        "decoded_sha256": "e8c4292aac740d678575fdd0ee9daeb8a3a0d281574e56a6acd7903a9b846f4c",
+        "matches_record": true
+      },
+      {
+        "source_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_reference_8x.png",
+        "encoded_as": "inline data URI",
+        "decoded_bytes": 20767,
+        "decoded_sha256": "70ca8180075d7bd8fdcaa28e655e84c2f741aab32d630a8a143a1787d6633977",
+        "matches_record": true
+      }
+    ],
+    "client_script_sha256": "078c4e2a8120e91a5a911865cb49604ae1d12600d2ed02863dda5209f6dbe812"
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "base_scale": 0.38823529411764707,
+  "anchor_clip": "clip_010_013",
+  "method": "One fixed standing-derived scale range, no per-frame rescale."
+}

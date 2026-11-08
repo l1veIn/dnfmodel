@@ -1,0 +1,5 @@
+{
+  "master": "Cleaner surfaces; supporting sole fits, rear shoe too far right and low; eye residual about 3 native px",
+  "master_refine": "Not selected: foreground/background feet reversed during generative edit",
+  "next": "Targeted feet-only edit with close-up reference"
+}

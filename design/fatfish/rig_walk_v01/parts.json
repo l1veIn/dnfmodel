@@ -1,0 +1,144 @@
+{
+  "rear_hair": {
+    "source_box": [
+      290,
+      294,
+      685,
+      790
+    ],
+    "file": "parts/rear_hair.png",
+    "sha256": "0346816dfd99af0297cf526b503c0f37160854059a0ff4edf48812015705b0e7"
+  },
+  "tail": {
+    "source_box": [
+      290,
+      649,
+      475,
+      799
+    ],
+    "file": "parts/tail.png",
+    "sha256": "8ba0b165ae1b6c04f5a238598fdafbc0f29692a7f47c13af448f07de1f994728"
+  },
+  "body": {
+    "source_box": [
+      372,
+      433,
+      676,
+      768
+    ],
+    "file": "parts/body.png",
+    "sha256": "8f9a72e0b3874015601638156243ffbc5ae8fcb1f60b88d0e516f49266b2b062"
+  },
+  "head": {
+    "source_box": [
+      428,
+      244,
+      610,
+      454
+    ],
+    "file": "parts/head.png",
+    "sha256": "2433627f1714ab44d33bc8377ce05c4e6e06a285e1dcf20cb2843edb4456c451"
+  },
+  "near_thigh": {
+    "source_box": [
+      467,
+      749,
+      531,
+      817
+    ],
+    "file": "parts/near_thigh.png",
+    "sha256": "abcc2c1db0ea93a966933ddeac2bc0bcf502b6c43cf4853844ea6c563a082208"
+  },
+  "near_shin": {
+    "source_box": [
+      452,
+      798,
+      515,
+      887
+    ],
+    "file": "parts/near_shin.png",
+    "sha256": "8d9e5051e16f75cb02e2a6daffaefff4692b4bf5f017ac7f8543ebc3b77073df"
+  },
+  "near_shoe": {
+    "source_box": [
+      443,
+      870,
+      521,
+      952
+    ],
+    "file": "parts/near_shoe.png",
+    "sha256": "f237f1af9d02e2288b46cf640347b4e7553e8b37400f26bacd2190204b4b477e"
+  },
+  "far_thigh": {
+    "source_box": [
+      532,
+      750,
+      579,
+      819
+    ],
+    "file": "parts/far_thigh.png",
+    "sha256": "1e14709de53d358a95eb0fdd6a9a1d7cbc22dd3fe360ad4e52b468b186ca4487"
+  },
+  "far_shin": {
+    "source_box": [
+      526,
+      800,
+      572,
+      884
+    ],
+    "file": "parts/far_shin.png",
+    "sha256": "6eb94866913f84686e9393dc846e1a2cd119c7598f7dfe43652e41137aa73ad0"
+  },
+  "far_shoe": {
+    "source_box": [
+      517,
+      867,
+      596,
+      934
+    ],
+    "file": "parts/far_shoe.png",
+    "sha256": "d39db7a513b16764829e2b57368c3143963bc38ded77eefd22696f450f850943"
+  },
+  "near_upper_arm": {
+    "source_box": [
+      465,
+      505,
+      524,
+      562
+    ],
+    "file": "parts/near_upper_arm.png",
+    "sha256": "497cdfd75749dd7aae0491b6f5435ba7dc1db7de0b2bb1ea241c0b337a409162"
+  },
+  "near_forearm_hand": {
+    "source_box": [
+      443,
+      541,
+      515,
+      667
+    ],
+    "file": "parts/near_forearm_hand.png",
+    "sha256": "df6ec1f021d88c799c05e3a6b4e8b7141fde07384fb163ded8e9bf917858837e"
+  },
+  "far_upper_arm": {
+    "source_box": [
+      465,
+      505,
+      524,
+      562
+    ],
+    "file": "parts/far_upper_arm.png",
+    "sha256": "497cdfd75749dd7aae0491b6f5435ba7dc1db7de0b2bb1ea241c0b337a409162",
+    "reuse_note": "Occluded far arm reconstructed by reusing the same visible near-arm artwork; not independently redrawn."
+  },
+  "far_forearm_hand": {
+    "source_box": [
+      443,
+      541,
+      515,
+      667
+    ],
+    "file": "parts/far_forearm_hand.png",
+    "sha256": "df6ec1f021d88c799c05e3a6b4e8b7141fde07384fb163ded8e9bf917858837e",
+    "reuse_note": "Occluded far arm reconstructed by reusing the same visible near-arm artwork; not independently redrawn."
+  }
+}

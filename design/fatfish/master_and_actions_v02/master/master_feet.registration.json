@@ -1,0 +1,53 @@
+{
+  "name": "master_feet",
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\master_feet_0.png",
+  "sha256": "9bc66c0b05ad91d0354f763d0674c55a70a054e51c2dfca0653a88afac9b50c2",
+  "raw_eye": [
+    530.0,
+    257.0
+  ],
+  "raw_sole": [
+    475.0,
+    910.0
+  ],
+  "target_eye": [
+    249.0,
+    305.0
+  ],
+  "target_sole": [
+    244.0,
+    386.0
+  ],
+  "actual_eye": [
+    250.732421875,
+    304.8740234375
+  ],
+  "actual_sole": [
+    243.9111328125,
+    385.861328125
+  ],
+  "resized_canvas": [
+    127,
+    127
+  ],
+  "scale_x": 0.1240234375,
+  "scale_y": 0.1240234375,
+  "translation": [
+    185,
+    273
+  ],
+  "landmark_method": "Manually annotated visible eye and sole, approximate 1-2 native pixels; no skeleton detector.",
+  "processing": "Global uniform resize + translation; nearest/box candidates. Clean candidate thresholds alpha at 128, no palette reduction or repainting.",
+  "source_modified": false,
+  "game_ready": false,
+  "outputs": [
+    {
+      "method": "nearest",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_nearest_canvas.png"
+    },
+    {
+      "method": "box",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_box_canvas.png"
+    }
+  ]
+}

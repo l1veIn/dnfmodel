@@ -1,0 +1,248 @@
+{
+  "configs": [
+    {
+      "name": "embedded_3x3",
+      "columns": 3,
+      "rows": 3,
+      "size": [
+        2048,
+        2048
+      ],
+      "xs": [
+        48,
+        704,
+        1360
+      ],
+      "ys": [
+        48,
+        704,
+        1360
+      ],
+      "ratio": "1:1",
+      "targets": 8,
+      "cells": [
+        {
+          "index": 0,
+          "slot": null,
+          "role": "approved_identity_reference",
+          "cell": [
+            48,
+            48,
+            688,
+            688
+          ]
+        },
+        {
+          "index": 1,
+          "slot": 0,
+          "role": "pose_edit_target",
+          "cell": [
+            704,
+            48,
+            1344,
+            688
+          ]
+        },
+        {
+          "index": 2,
+          "slot": 1,
+          "role": "pose_edit_target",
+          "cell": [
+            1360,
+            48,
+            2000,
+            688
+          ]
+        },
+        {
+          "index": 3,
+          "slot": 2,
+          "role": "pose_edit_target",
+          "cell": [
+            48,
+            704,
+            688,
+            1344
+          ]
+        },
+        {
+          "index": 4,
+          "slot": 3,
+          "role": "pose_edit_target",
+          "cell": [
+            704,
+            704,
+            1344,
+            1344
+          ]
+        },
+        {
+          "index": 5,
+          "slot": 4,
+          "role": "pose_edit_target",
+          "cell": [
+            1360,
+            704,
+            2000,
+            1344
+          ]
+        },
+        {
+          "index": 6,
+          "slot": 5,
+          "role": "pose_edit_target",
+          "cell": [
+            48,
+            1360,
+            688,
+            2000
+          ]
+        },
+        {
+          "index": 7,
+          "slot": 6,
+          "role": "pose_edit_target",
+          "cell": [
+            704,
+            1360,
+            1344,
+            2000
+          ]
+        },
+        {
+          "index": 8,
+          "slot": 7,
+          "role": "pose_edit_target",
+          "cell": [
+            1360,
+            1360,
+            2000,
+            2000
+          ]
+        }
+      ],
+      "input_path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\embedded_grid_compare_v01\\references\\embedded_3x3_input.png"
+    },
+    {
+      "name": "embedded_2x3",
+      "columns": 2,
+      "rows": 3,
+      "size": [
+        1365,
+        2048
+      ],
+      "xs": [
+        34,
+        690
+      ],
+      "ys": [
+        48,
+        704,
+        1360
+      ],
+      "ratio": "2:3",
+      "targets": 5,
+      "cells": [
+        {
+          "index": 0,
+          "slot": null,
+          "role": "approved_identity_reference",
+          "cell": [
+            34,
+            48,
+            674,
+            688
+          ]
+        },
+        {
+          "index": 1,
+          "slot": 0,
+          "role": "pose_edit_target",
+          "cell": [
+            690,
+            48,
+            1330,
+            688
+          ]
+        },
+        {
+          "index": 2,
+          "slot": 1,
+          "role": "pose_edit_target",
+          "cell": [
+            34,
+            704,
+            674,
+            1344
+          ]
+        },
+        {
+          "index": 3,
+          "slot": 2,
+          "role": "pose_edit_target",
+          "cell": [
+            690,
+            704,
+            1330,
+            1344
+          ]
+        },
+        {
+          "index": 4,
+          "slot": 3,
+          "role": "pose_edit_target",
+          "cell": [
+            34,
+            1360,
+            674,
+            2000
+          ]
+        },
+        {
+          "index": 5,
+          "slot": 4,
+          "role": "pose_edit_target",
+          "cell": [
+            690,
+            1360,
+            1330,
+            2000
+          ]
+        }
+      ],
+      "input_path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\embedded_grid_compare_v01\\references\\embedded_2x3_input.png"
+    }
+  ],
+  "jobs_max": 2,
+  "cell_size": 640,
+  "native_window_world": [
+    170,
+    250,
+    330,
+    410
+  ],
+  "native_size": [
+    160,
+    160
+  ],
+  "common_slots": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "master_sha256": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446",
+  "protected_files_before": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\nearest_standing_v04\\standing_canvas.png": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20"
+  },
+  "experiment_limitations": [
+    "One stochastic sample per layout; not statistical proof of attention limits.",
+    "Equal input cell scale; canvas aspect ratio and target arrangement change alongside target count.",
+    "First cell is a standing identity exemplar and must not be included in walking playback.",
+    "Existing walk-test slot order only; ANI sequence/timing and complete gait not established."
+  ],
+  "authorization": "Two requested sheets only, one reference each; no retry, batch expansion, NPK or game writes."
+}

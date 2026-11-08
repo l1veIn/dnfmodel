@@ -1,0 +1,68 @@
+{
+ "title": "女鬼剑 · GPT 龙娘",
+ "version": 1,
+ "class": "swordman",
+ "equipment": "atequipment",
+ "frames": 246,
+ "materials": "gpt_dragon_slayer_source",
+ "out": "gpt_dragon_slayer_v01",
+ "master": "master_a_0.png",
+ "npk_stem": "A_GPTDragon_FSlayer",
+ "body": "skin/sg_body0000",
+ "composite_order": [
+  "pants/sg_pants0000d",
+  "hair/sg_hair0000d",
+  "hair/sg_hair0000b",
+  "skin/sg_body0000",
+  "shoes/sg_shoes0000b",
+  "shoes/sg_shoes0000a",
+  "pants/sg_pants0000a",
+  "coat/sg_coat0000d",
+  "coat/sg_coat0000c",
+  "coat/sg_coat0000b",
+  "coat/sg_coat0000a",
+  "face/sg_face0000b",
+  "face/sg_face0000c",
+  "hair/sg_hair0000a"
+ ],
+ "figure_layers": [
+  "skin/sg_body0000",
+  "pants/sg_pants0000a",
+  "shoes/sg_shoes0000a",
+  "shoes/sg_shoes0000b",
+  "coat/sg_coat0000a",
+  "coat/sg_coat0000b",
+  "coat/sg_coat0000c"
+ ],
+ "cover_layers": [
+  "coat/sg_coat0000a",
+  "coat/sg_coat0000b",
+  "coat/sg_coat0000c",
+  "coat/sg_coat0000d",
+  "pants/sg_pants0000a",
+  "hair/sg_hair0000a"
+ ],
+ "standing_frames": [
+  0,
+  3
+ ],
+ "height_ratio": 1.02,
+ "graft_hands": false,
+ "grip_fallback": true,
+ "character": {
+  "name": "GPT 龙娘",
+  "reference_image": "C:/Users/A/Desktop/fatfish_game/refs/ai_girl/chatgpt.jpg",
+  "identity": "the same tall slim calm young dragon woman, with the same small head and long-legged adult proportions, very long soft bright white hair in one large smooth mass behind her back, two curved ridged slate-violet horns, pointed ears, violet-blue eyes, a black knot ornament in her hair, a dark indigo high collar band, a white sleeveless fitted dress with lavender-blue flat shadows, bare peach shoulders and upper arms, fitted white sleeves from above the elbow to the wrist with dark indigo wrist cuffs, a broad dark indigo waist sash with one large black knot at the hip, a long white skirt with a high front slit and dark indigo lining that shows one bare leg, a hem above the ankles, white high heels with dark indigo straps, two small periwinkle folded dragon wings with dark indigo bones at her upper back, and one slim periwinkle scaled tail curving down behind her to knee height. Warm peach skin. Bare hands. Bold dark indigo outlines everywhere so white shapes stay separate. The wings and tail stay small and never cover her arms, hands or legs.",
+  "hands_rule": "All her hands are empty: no sword, no scabbard, no weapon of any kind, and where the sprite's hand is a fist, draw a closed bare fist gripping nothing. Ignore the sprite's black sleeves, gloves, boots and shorts. Any dark streak in Image 2 is motion blur of a black sleeve, so draw a normal arm there. In wide stances and strides the skirt opens at the slit and both legs show, matching the sprite's legs. The wings stay small and folded at her shoulder blades, and the tail stays small and slim, behind her."
+ },
+ "license_note": "GPT 龙娘是民间二创形象，不是 OpenAI 官方形象。参考图来自用户本地 refs/ai_girl/chatgpt.jpg，原作者和授权未核实，请仅自用。",
+ "weapon": {
+  "kind": "katana",
+  "label": "太刀",
+  "layers": [
+   "(tn)sg_katana0000a",
+   "(tn)sg_katana0000b"
+  ]
+ },
+ "hand_detect": "arm_end"
+}

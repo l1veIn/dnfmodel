@@ -1,0 +1,70 @@
+{
+  "name": "walk_001",
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\registered\\walk_001_canvas.png",
+  "source_sha256": "c396f5c7316f584872192a1cfc524a932abb7b39dab923ef0147614119bc253a",
+  "output": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\corrected\\walk_001_canvas.png",
+  "output_sha256": "5b79496974b54d52933b6eafb1b6df59ca36a6ce0878b116c54e06c1cacffa29",
+  "outside_fit_masks_pixels_identical": true,
+  "each_output_pixel_sampled_once_from_raw": true,
+  "head_face_reuse": false,
+  "alpha_preserved": true,
+  "fits": [
+    {
+      "label": "visible_hand",
+      "raw": [
+        730,
+        457
+      ],
+      "target": [
+        271,
+        326
+      ],
+      "root": [
+        264,
+        318
+      ],
+      "polygon": [
+        [
+          265,
+          313
+        ],
+        [
+          287,
+          313
+        ],
+        [
+          287,
+          340
+        ],
+        [
+          265,
+          340
+        ]
+      ],
+      "registered_endpoint": [
+        274.6063792643102,
+        326.11352324618156
+      ],
+      "before_error_native_px": 3.6081655900845404,
+      "raw_to_final_matrix": [
+        [
+          0.09485422383396637,
+          -0.01812405806086936,
+          210.03911113502187
+        ],
+        [
+          0.01812405806086936,
+          0.09485422383396636,
+          269.42105732344277
+        ]
+      ],
+      "local_rotation_degrees": 11.399302421972443,
+      "local_scale": 0.7960377524768163,
+      "fitted_endpoint": [
+        271.0,
+        326.0
+      ]
+    }
+  ],
+  "caution": "These manual endpoints are local fitting constraints, not independent proof of correct anatomy or no sliding; inspect shoe pixels and joint seams."
+}

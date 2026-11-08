@@ -1,0 +1,12 @@
+Use case: identity-preserve / animation sprite pose edit.
+One full-body Fatfish whale-maid female mage game sprite, genuine transparent RGBA background.
+Image 1 is the EDIT TARGET and strict pose/geometry guide: repaint this gray DNF sprite into the approved character while keeping its skeletal pose and frame placement. Ignore the guide's original hair, hat, clothes and equipment.
+Image 2 is the APPROVED STANDING MASTER: preserve this exact character's face, proportions, costume, fine wavy navy-to-cyan hair, curled ahoge, whale-fin ears, cyan bow, white maid headband, dark long sleeves, white chest/apron, whale emblem, gold edging/bows/buttons, opaque white stockings, dark Mary-Jane shoes and compact whale tail. Match its existing rendering and delicacy. Do not simplify the hair into thick cyan blobs, enlarge the face, redesign the skirt or invent decorations.
+Image 3 is supplementary identity/detail or motion continuity, NOT a substitute for the pose in Image 1.
+Keep the same three-quarter facing-screen-right body/head view as the guide. Keep hair volume and the whale-tail silhouette consistent; allow only a small natural response to the pose. Match the master's light direction, colors, line weight and head size.
+Framing: 1024 square representing a fixed 128x128 native game window enlarged 8 times. Keep all important body parts inside the same window. Head/shoulders/pelvis/elbows/hands/knees and both shoes must follow Image 1, not a generic action pose. Copy the guide's actual leg overlap and foot spacing.
+Only the character; no weapon, spell, motion blur, shadow, floor, grid, labels, markers, checkerboard or scenery. No new accessories or alternate costume. Do not output a sheet, panels or multiple figures. Preserve true alpha outside the figure.
+
+Image 3 is the immediately preceding registered walking frame. Keep the same head size, face, hair locks, hem details and tail volume with minimal inter-frame changes. Do not copy its limb pose.
+ACTION: Walk/contact pose. Follow this exact guide frame; do not reuse the master's standing legs or invent a wide stride.
+Original IMG slot 1. Visible eye near output [544, 256]; support/lowest shoe sole [600, 896]. Other shoe sole [408, 832]. Visible hand target(s) [[680, 432]] (output pixels).

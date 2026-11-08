@@ -1,0 +1,250 @@
+{
+  "scope": "Three local limb repairs, then a four-adjacent-frame fragment (IMG 0-3), not full animation production",
+  "model": "gpt-image-2.5",
+  "provider": "65535",
+  "budget_authorization": "User previously authorized spending without fixed ceiling and now explicitly requested these repairs and a small preview/NPK",
+  "game_canvas": [
+    500,
+    500
+  ],
+  "window": [
+    186,
+    272,
+    314,
+    400
+  ],
+  "fixes": {
+    "fix_walk": {
+      "frame": 0,
+      "source": "registered/walk_reference_8x.png",
+      "eye": [
+        251,
+        304
+      ],
+      "sole": [
+        278,
+        381
+      ],
+      "patches": [
+        [
+          [
+            218,
+            351
+          ],
+          [
+            251,
+            351
+          ],
+          [
+            251,
+            386
+          ],
+          [
+            218,
+            386
+          ]
+        ],
+        [
+          [
+            219,
+            324
+          ],
+          [
+            242,
+            324
+          ],
+          [
+            242,
+            348
+          ],
+          [
+            219,
+            348
+          ]
+        ],
+        [
+          [
+            261,
+            305
+          ],
+          [
+            291,
+            305
+          ],
+          [
+            291,
+            329
+          ],
+          [
+            261,
+            329
+          ]
+        ]
+      ],
+      "changes": "Move the screen-left/trailing shoe LEFT by 7 native pixels to sole (328,856), reconnect its lower leg naturally. Move the screen-left hand about 2 pixels left and 2 pixels up to (336,504); move the screen-right hand about 2 pixels left and 4 pixels up to (744,352). These are output-pixel targets on the 1024 canvas; stated movement amounts are native pixels, each enlarged 8x.",
+      "target_points": {
+        "rear_shoe": [
+          227,
+          379
+        ],
+        "left_hand": [
+          228,
+          335
+        ],
+        "right_hand": [
+          279,
+          316
+        ]
+      }
+    },
+    "fix_cast": {
+      "frame": 65,
+      "source": "registered/cast_reference_8x.png",
+      "eye": [
+        246,
+        305
+      ],
+      "sole": [
+        238,
+        387
+      ],
+      "patches": [
+        [
+          [
+            198,
+            301
+          ],
+          [
+            232,
+            301
+          ],
+          [
+            232,
+            326
+          ],
+          [
+            198,
+            326
+          ]
+        ],
+        [
+          [
+            251,
+            325
+          ],
+          [
+            270,
+            325
+          ],
+          [
+            270,
+            348
+          ],
+          [
+            251,
+            348
+          ]
+        ],
+        [
+          [
+            249,
+            349
+          ],
+          [
+            275,
+            349
+          ],
+          [
+            275,
+            379
+          ],
+          [
+            249,
+            379
+          ]
+        ]
+      ],
+      "changes": "Move the screen-left outstretched hand about 1 native pixel left and 3 down to output (184,344). Move the screen-right lower hand about 2-3 native pixels UP to (592,520). Move the raised/background shoe RIGHT by 5 native pixels and UP by 3 to output sole (616,760), reconnecting its white-stocking lower leg. Keep the supporting leg fixed.",
+      "target_points": {
+        "raised_shoe": [
+          263,
+          367
+        ],
+        "left_hand": [
+          209,
+          315
+        ],
+        "right_hand": [
+          260,
+          337
+        ]
+      }
+    },
+    "fix_jump": {
+      "frame": 23,
+      "source": "registered/jump_fix_reference_8x.png",
+      "eye": [
+        253,
+        309
+      ],
+      "sole": [
+        230,
+        386
+      ],
+      "patches": [
+        [
+          [
+            213,
+            294
+          ],
+          [
+            237,
+            294
+          ],
+          [
+            237,
+            315
+          ],
+          [
+            213,
+            315
+          ]
+        ]
+      ],
+      "changes": "Move the visible bent-back hand LEFT by about 3 native pixels and DOWN by about 1 native pixel, to output (304,264). Preserve the raised bent elbow and all legs/shoes. Do not straighten the arm, increase forward lean, or move the whole character.",
+      "target_points": {
+        "rear_hand": [
+          224,
+          305
+        ]
+      }
+    }
+  },
+  "planned_unique_pilot_frames": [
+    0,
+    1,
+    2,
+    3,
+    10,
+    23,
+    65
+  ],
+  "animation_timing": "Original ANI not parsed; engineering preview timing must be labelled",
+  "test_package_scope": "All 38 female-mage skin paths plus default avatar layers only; other slots use selected standing master; requires unequipped costume for clean test",
+  "game_installation_changed": false,
+  "phase": "pilot_packaged_offline_validated",
+  "selected_slots": [
+    0,
+    1,
+    2,
+    3,
+    10,
+    23,
+    65
+  ],
+  "generation_tasks": 7,
+  "reported_cost_usd": 0.266,
+  "npk": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_7Frame_Pilot_v03.NPK",
+  "npk_sha256": "b8f2ace519f20a320c9a054657df1c26f93d6a729265f6a27834dc697a84b501",
+  "runtime_validated": false
+}

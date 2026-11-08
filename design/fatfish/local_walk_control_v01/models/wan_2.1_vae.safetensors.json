@@ -1,0 +1,9 @@
+{
+  "repository": "Comfy-Org/Wan_2.1_ComfyUI_repackaged",
+  "file": "split_files/vae/wan_2.1_vae.safetensors",
+  "local_path": "D:\\VideoStudio\\comfyUI\\shared\\models\\vae\\wan_2.1_vae.safetensors",
+  "bytes": 253815318,
+  "sha256": "2fc39d31359a4b0a64f55876d8ff7fa8d780956ae2cb13463b0223e15148976b",
+  "verified": true,
+  "transport": "Official Comfy-Org ModelScope mirror"
+}

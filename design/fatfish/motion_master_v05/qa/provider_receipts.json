@@ -1,0 +1,79 @@
+[
+  {
+    "name": "walk_000",
+    "id": "img_7183be17edac23e695b399daddd6c860",
+    "status": "done",
+    "model": "gpt-image-2.5",
+    "cost_usd": 0.038,
+    "created_at": "2026-10-22T12:32:04.224915Z",
+    "completed_at": null,
+    "local_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\walk_000_0.png",
+    "sha256": "7b4c5a41c7bd1daf50b4c61385ec29afc6e7fcd2a56c8edc39baf41e966595b2"
+  },
+  {
+    "name": "cast_065",
+    "id": "img_cb17b44e11b636d21f147b827bbebf5b",
+    "status": "done",
+    "model": "gpt-image-2.5",
+    "cost_usd": 0.038,
+    "created_at": "2026-10-22T12:32:04.09311Z",
+    "completed_at": null,
+    "local_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\cast_065_0.png",
+    "sha256": "afbf2113f1c0b1091f1f5fdf03485162371bc7f60726e0aec68ea50b8ee74de6"
+  },
+  {
+    "name": "jump_023",
+    "id": "img_f720227b53e01a4bb861dae8adee36d7",
+    "status": "done",
+    "model": "gpt-image-2.5",
+    "cost_usd": 0.038,
+    "created_at": "2026-10-22T12:32:04.116454Z",
+    "completed_at": null,
+    "local_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\jump_023_0.png",
+    "sha256": "304f40b608185b58f1a8dc0879dd35248c48507c07dfeb8e574cee5bfb8be107"
+  },
+  {
+    "name": "walk_001",
+    "id": "img_b29a704c8b2085f74db08f4a53390b42",
+    "status": "done",
+    "model": "gpt-image-2.5",
+    "cost_usd": 0.038,
+    "created_at": "2026-10-22T12:34:37.137304Z",
+    "completed_at": null,
+    "local_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\walk_001_0.png",
+    "sha256": "f0b63a9e5ad91e1c5d03116fe5103dbc1985b83ddf918473ec2adf384de3f581"
+  },
+  {
+    "name": "walk_002",
+    "id": "img_419e4503b09d3ab73db53fe68eaed22e",
+    "status": "done",
+    "model": "gpt-image-2.5",
+    "cost_usd": 0.038,
+    "created_at": "2026-10-22T12:36:52.509041Z",
+    "completed_at": null,
+    "local_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\walk_002_0.png",
+    "sha256": "1b1a9d7a3bee9d39937937d4a7009663fe7612ee97095a540543b8bf59479ebc"
+  },
+  {
+    "name": "walk_003",
+    "id": "img_f8b09b64542e9997b4eb9c36f127f2d9",
+    "status": "done",
+    "model": "gpt-image-2.5",
+    "cost_usd": 0.038,
+    "created_at": "2026-10-22T12:40:30.50111Z",
+    "completed_at": null,
+    "local_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\walk_003_0.png",
+    "sha256": "4cd939113afa77096483379dc6ce08f5ed2b4eb41f4aa6b26fd0ddb6f09d961d"
+  },
+  {
+    "name": "walk_003_wrist_fix",
+    "id": "img_0da0528b3c4d0de270c7df27f721179f",
+    "status": "done",
+    "model": "gpt-image-2.5",
+    "cost_usd": 0.038,
+    "created_at": "2026-10-22T12:52:55.555783Z",
+    "completed_at": null,
+    "local_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\walk_003_wrist_fix_0.png",
+    "sha256": "a3712f40803127697ef1f4ad261d1e0297eafe1f7a2ddc6e16d37028e1aff367"
+  }
+]

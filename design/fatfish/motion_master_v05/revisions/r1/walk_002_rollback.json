@@ -1,0 +1,5 @@
+{
+  "reason": "Overbroad rear-shoe correction mask duplicated foreground calf and ankle. Restore globally registered lower-body pixels; retain only hand correction.",
+  "leg_pixels_identical_to_global_registration": true,
+  "original_reference_files_unchanged": true
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>原版动作分段 · 肥鱼工坊</title><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head>
+<body>
+<header><div><a href="/">← 动作工作台</a><span class="kicker">FATFISH / MOTION EDITOR</span><h1>划出一段，马上看动作。</h1><p>原版女法师 174 个帧位 · 拖选连续范围，手工确认动作与配时</p></div><div class="header-state"><span id="connection">正在连接本机</span><span id="saved-count">0 段已保存</span></div></header>
+<main>
+<section class="workspace">
+  <div class="left-column">
+    <section class="card selection-card"><div class="section-title"><h2>01 / 选帧</h2><span id="range-label">000–009 · 10 帧</span></div>
+      <div class="range-controls"><label>起始帧<input id="start" type="number" min="0" max="173" value="0"></label><span>—</span><label>结束帧<input id="end" type="number" min="0" max="173" value="9"></label><button id="new-clip">新建分段</button><button id="next-clip">接着划下一段 →</button></div>
+      <p class="hint">按住鼠标划过缩略图选范围；Shift＋点击扩展。编号为 IMG 帧位，默认时长 100 ms 仅供试播。</p>
+      <div class="frame-grid" id="frame-grid" aria-label="174 个原版帧位"></div>
+      <div class="legend"><span><i class="selected-dot"></i>当前选段</span><span><i class="saved-dot"></i>已有手工标注</span><span id="image-status">加载原图…</span></div>
+    </section>
+    <section class="card saved-card"><div class="section-title"><h2>已保存的动作</h2><button id="download-json" class="subtle">↓ 导出 JSON</button></div><div id="saved-list"></div><p class="hint">手工标注独立保存，不改动原始 IMG / ANI；走路已通过记录保留在原面板。</p><button id="undo-delete" hidden>撤回上次移除</button></section>
+  </div>
+  <div class="right-column">
+    <section class="card preview-card"><div class="section-title"><h2>02 / 连续预览</h2><label class="compact">背景<select id="background"><option value="checker">棋盘格</option><option value="dark">深色</option><option value="gray">中灰</option></select></label></div>
+      <div class="stages"><figure><figcaption>原版女法师 <b id="current-slot">#000</b></figcaption><div class="stage checker"><img id="original-image" alt="原版当前帧"><span class="ground"></span><span class="root"></span></div></figure><figure><figcaption>现有大肥鱼素材 <small id="fatfish-label"></small></figcaption><div class="stage checker"><img id="fatfish-image" alt="大肥鱼当前帧"><span id="missing" hidden>这一帧尚无肥鱼素材</span><span class="ground"></span><span class="root"></span></div></figure></div>
+      <div class="play-controls"><button id="previous" aria-label="上一帧">←</button><button id="play" class="primary">播放</button><button id="next" aria-label="下一帧">→</button><label class="compact">速度<select id="speed"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label><label class="inline"><input id="guides" type="checkbox" checked>坐标线</label></div>
+      <input id="scrub" type="range" min="0" max="9" value="0" aria-label="当前帧"><div class="play-meta"><span id="frame-counter"></span><span id="time-counter"></span></div>
+      <div class="timing-strip" id="timing-strip" aria-label="逐帧时长轨道"></div><p class="hint">点时长条切换帧，拖动每条右侧把手调整时长。空格播放；左右方向键逐帧。</p>
+    </section>
+    <section class="card edit-card"><div class="section-title"><h2>03 / 名称与配时</h2><span id="draft-state">未保存草稿</span></div>
+      <label>动作名称<input id="name" maxlength="80" placeholder="例如：站立 / 前走 / 受击…由你确认"></label>
+      <div class="timing-controls"><label>全段每帧（ms）<input id="bulk-ms" type="number" min="1" max="10000" value="100"></label><button id="apply-ms">应用全段</button><label>当前帧（ms）<input id="frame-ms" type="number" min="1" max="10000" value="100"></label></div>
+      <div class="checkboxes"><label class="inline"><input id="loop" type="checkbox" checked>循环播放</label><label class="inline"><input id="reviewed" type="checkbox">我已确认这段动作与配时</label></div>
+      <label>备注<textarea id="note" rows="2" maxlength="3000" placeholder="如：最后一帧是衔接帧、某帧需要停顿…"></textarea></label>
+      <div class="save-controls"><button id="save" class="primary">保存这段动作</button><button id="restore-draft">恢复上次草稿</button><span id="message" role="status"></span></div>
+    </section>
+    <details class="card export-card"><summary>导出动作参考视频 <span>供 H3 / 动作迁移测试使用</span></summary><div class="export-content"><p>固定坐标画布＋中灰背景，24 fps，只按配时重复原图；不生成中间帧。</p><div class="export-controls"><label>时长<select id="export-mode"><option value="h3_5s">补足 5.17 秒 · 124 帧</option><option value="single">单轮原速 · 最长 15 秒</option></select></label><label>尺寸<select id="export-scale"><option value="2">384 × 320（2×）</option><option value="4">768 × 640（4×）</option></select></label><button id="export-video">生成 MP4</button></div><p class="hint">补足模式：勾选循环就重复本段，否则停在末帧；预览速度不影响导出。</p><div id="export-result" role="status"></div></div></details>
+  </div>
+</section>
+</main><footer>手工动作标注 · 尚未解析游戏 ANI 时序 · 数据保存在本机工作目录</footer>
+</body></html>

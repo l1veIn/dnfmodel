@@ -1,0 +1,89 @@
+{
+ "title": "女鬼剑 · GPT 龙娘",
+ "version": 2,
+ "class": "swordman",
+ "equipment": "atequipment",
+ "frames": 246,
+ "materials": "gpt_dragon_slayer_source",
+ "out": "gpt_dragon_slayer_v02",
+ "master": "master_b_0.png",
+ "npk_stem": "A_GPTDragon_FSlayer",
+ "body": "skin/sg_body0000",
+ "composite_order": [
+  "pants/sg_pants0000d",
+  "hair/sg_hair0000d",
+  "hair/sg_hair0000b",
+  "skin/sg_body0000",
+  "shoes/sg_shoes0000b",
+  "shoes/sg_shoes0000a",
+  "pants/sg_pants0000a",
+  "coat/sg_coat0000d",
+  "coat/sg_coat0000c",
+  "coat/sg_coat0000b",
+  "coat/sg_coat0000a",
+  "face/sg_face0000b",
+  "face/sg_face0000c",
+  "hair/sg_hair0000a"
+ ],
+ "figure_layers": [
+  "skin/sg_body0000",
+  "pants/sg_pants0000a",
+  "shoes/sg_shoes0000a",
+  "shoes/sg_shoes0000b",
+  "coat/sg_coat0000a",
+  "coat/sg_coat0000b",
+  "coat/sg_coat0000c"
+ ],
+ "cover_layers": [
+  "coat/sg_coat0000a",
+  "coat/sg_coat0000b",
+  "coat/sg_coat0000c",
+  "coat/sg_coat0000d",
+  "pants/sg_pants0000a",
+  "hair/sg_hair0000a"
+ ],
+ "standing_frames": [
+  0,
+  3
+ ],
+ "height_ratio": 1.02,
+ "graft_hands": false,
+ "grip_fallback": true,
+ "character": {
+  "name": "GPT 龙娘",
+  "reference_image": "C:/Users/A/Desktop/dnfmodel/design/gpt_dragon_slayer_v02/three_view.webp",
+  "identity": "the same tall slim calm young dragon woman, with the same small head and long-legged adult proportions. Very long wavy bright white hair falling behind her back to the knees, two long curved ridged white horns, pointed ears, pale violet eyes, and a black-and-white knot ornament with a small tassel in her hair. A white sleeveless high-collar fitted bodice with small waist cutouts, a thin waist chain with three tassels, black-and-white knot ornaments at both hips and on the lower skirt. White bands on her upper arms, each with a wide ruffled drape hanging to about knee height behind the forearm. Bare peach forearms and hands with lace wrist bracelets. A long white gown with a high slit on the front leg and a ruffled floor-length hem with a short train, rising at the front to show white high heels with ankle bands. Large white bat-like dragon wings spreading wide behind her shoulders, with pointed scalloped tips reaching hip height. A long thick white scaled tail with small spines, sweeping down behind her to the floor and curling at the tip. Everything white is shaded with soft pale lilac and outlined in clean dark violet. Warm peach skin. Keep the sleeve drapes, wings, tail, hair and gown at their full size from Image 1 in every cell: never shrink, fold or omit them.",
+  "hands_rule": "All her hands are empty: no sword, no scabbard, no weapon of any kind, and where the sprite's hand is a fist, draw a closed bare fist gripping nothing. Ignore the sprite's black sleeves, gloves, boots and shorts. Any dark streak in Image 2 is motion blur of a black sleeve, so draw a normal arm there. Her bare peach forearms and hands are always drawn in front of the sleeve drapes, hair, wings and skirt, standing out clearly against the white. The drapes hang from her upper arms and swing behind the forearm. In wide stances and strides the skirt opens at the slit so both legs and both heels show, matching the sprite's legs. The wings stay spread behind her shoulders and the tail stays behind her legs."
+ },
+ "license_note": "GPT 龙娘是民间二创形象，不是 OpenAI 官方形象。三视图由用户提供，原作者和授权未核实，请仅自用。",
+ "weapon": {
+  "kind": "katana",
+  "label": "太刀",
+  "layers": [
+   "(tn)sg_katana0000a",
+   "(tn)sg_katana0000b"
+  ]
+ },
+ "hand_detect": "arm_end",
+ "grade": {
+  "contrast": 1.12,
+  "saturation": 1.0,
+  "cool_hue_shift": -14
+ },
+ "ink": [
+  58,
+  42,
+  92
+ ],
+ "sheet_style": "clean cel shading with the same colors as Image 1: clean bright white with soft pale lilac shadows and dark violet outlines, never blue, cyan or gray, the outlines a little heavier than in Image 1 so white shapes stay separate at very small size, flat colors.",
+ "skin_rule": {
+  "red_minus_green": [
+   12,
+   70
+  ],
+  "red_min": 215,
+  "blue_min": 150,
+  "blue_below_green": true
+ },
+ "grip_gap": true
+}

@@ -1,0 +1,2346 @@
+{
+  "sha": "e4e624c13f5335e5e04c0ae3d3d67c1ee059fb98",
+  "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/e4e624c13f5335e5e04c0ae3d3d67c1ee059fb98",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "872d712de2499ed549e6372acb719c8643e6b0c7",
+      "size": 423,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/872d712de2499ed549e6372acb719c8643e6b0c7"
+    },
+    {
+      "path": ".tmp-preview-harness",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "193dbc6f06e7cbd311e80d5cc5e79149af076545",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/193dbc6f06e7cbd311e80d5cc5e79149af076545"
+    },
+    {
+      "path": ".tmp-preview-harness/npk-index.sqlite",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "946ccb9d32be2b2148fb7d1af8a86cc5a4808295",
+      "size": 12288,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/946ccb9d32be2b2148fb7d1af8a86cc5a4808295"
+    },
+    {
+      "path": ".vs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cb9c514532494971f2b52ca73be1c2cc1b6ec029",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/cb9c514532494971f2b52ca73be1c2cc1b6ec029"
+    },
+    {
+      "path": ".vs/VSWorkspaceState.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92396a5b33a66f4bf7e2f3578d1ce6c6d6c0f3b8",
+      "size": 143,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/92396a5b33a66f4bf7e2f3578d1ce6c6d6c0f3b8"
+    },
+    {
+      "path": ".vs/pvf-parser-ts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef7d6796bef3b003c861cab5d612e6af7ae849bf",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/ef7d6796bef3b003c861cab5d612e6af7ae849bf"
+    },
+    {
+      "path": ".vs/pvf-parser-ts/v17",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a569dc5e90834658e6873ed43f7d0f1b6931c84c",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/a569dc5e90834658e6873ed43f7d0f1b6931c84c"
+    },
+    {
+      "path": ".vs/pvf-parser-ts/v17/.wsuo",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e531ae28c38c41505e66479180de461dc2a3b671",
+      "size": 13312,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/e531ae28c38c41505e66479180de461dc2a3b671"
+    },
+    {
+      "path": ".vs/pvf-parser-ts/v17/DocumentLayout.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63e2c135e7d35732af93296d04dfdd9e6a8a2a06",
+      "size": 778,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/63e2c135e7d35732af93296d04dfdd9e6a8a2a06"
+    },
+    {
+      "path": ".vscode",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2847ac2d203e39c5fa43094a340a5ba31232f8d8",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/2847ac2d203e39c5fa43094a340a5ba31232f8d8"
+    },
+    {
+      "path": ".vscode/extensions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e91f162eae51c98645f3d879a727d1e78cc71efb",
+      "size": 63,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/e91f162eae51c98645f3d879a727d1e78cc71efb"
+    },
+    {
+      "path": ".vscode/launch.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8e3327ef32024addb00c480c87ef07dd8dc12b2",
+      "size": 383,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/a8e3327ef32024addb00c480c87ef07dd8dc12b2"
+    },
+    {
+      "path": ".vscode/tasks.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e42b7b4eb62170702aec378bbc24f0155f99e886",
+      "size": 401,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/e42b7b4eb62170702aec378bbc24f0155f99e886"
+    },
+    {
+      "path": ".vscodeignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "765b4242c772ce952c434605e113ebe3d856e4eb",
+      "size": 180,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/765b4242c772ce952c434605e113ebe3d856e4eb"
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e8920932b30bc8519962fb5601148cb58b6739d",
+      "size": 20948,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/9e8920932b30bc8519962fb5601148cb58b6739d"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ad25db4bd1d86c452db3f9602ccdbe172438f52",
+      "size": 34523,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/0ad25db4bd1d86c452db3f9602ccdbe172438f52"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8873524be8627dd8d7926f0088aa8c52656320b",
+      "size": 22242,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/d8873524be8627dd8d7926f0088aa8c52656320b"
+    },
+    {
+      "path": "media",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e3a0aec0f18cf9e1968df2b9713eb014568c2acf",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/e3a0aec0f18cf9e1968df2b9713eb014568c2acf"
+    },
+    {
+      "path": "media/icons",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3eb312489a1455aba534fae944a9b0039b99872b",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/3eb312489a1455aba534fae944a9b0039b99872b"
+    },
+    {
+      "path": "media/icons/icons8-placeholder-thumbnail-xml-28.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f3d12df97e907a4678a856a63a4174f2f0baab0",
+      "size": 504,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/4f3d12df97e907a4678a856a63a4174f2f0baab0"
+    },
+    {
+      "path": "media/icons/icons8-层-48.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c129641529c20e81d4ba7f663083dbc479bd494",
+      "size": 1831,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/4c129641529c20e81d4ba7f663083dbc479bd494"
+    },
+    {
+      "path": "media/icons/icons8-微软-clipchamp-48.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58c9fa9ed12653a1a745e1c032abf7d90964b58d",
+      "size": 1259,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/58c9fa9ed12653a1a745e1c032abf7d90964b58d"
+    },
+    {
+      "path": "media/icons/icons8-编号列表-32.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a752a5132b06e6eca648ce7e989ee65c56256ba2",
+      "size": 396,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/a752a5132b06e6eca648ce7e989ee65c56256ba2"
+    },
+    {
+      "path": "media/icons/icons8-语言-28.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae42e873ee30336cc3fbb257a94584e9759dbfae",
+      "size": 876,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/ae42e873ee30336cc3fbb257a94584e9759dbfae"
+    },
+    {
+      "path": "media/icons8-源代码-48.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64939f408c5935cdeb490898522f4ce08c29c676",
+      "size": 1271,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/64939f408c5935cdeb490898522f4ce08c29c676"
+    },
+    {
+      "path": "media/pvf-icon-theme.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90d19b46ab748118a01a07a02dc52c552eec1a21",
+      "size": 804,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/90d19b46ab748118a01a07a02dc52c552eec1a21"
+    },
+    {
+      "path": "package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbb986622091f43158eda71a687b642104ea5b9f",
+      "size": 260985,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/dbb986622091f43158eda71a687b642104ea5b9f"
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b48d70d79a2f2e4e38bffcfea4be3f8f195f34c",
+      "size": 54811,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/5b48d70d79a2f2e4e38bffcfea4be3f8f195f34c"
+    },
+    {
+      "path": "pvf-parser-ts.code-workspace",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed0f65e79a229d6b80e336fdd46510e6d5509011",
+      "size": 186,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/ed0f65e79a229d6b80e336fdd46510e6d5509011"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5927b010c3efc67a19f17ac9cd294d3a6a454c22",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/5927b010c3efc67a19f17ac9cd294d3a6a454c22"
+    },
+    {
+      "path": "scripts/build-webview.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0205f8f813900adaf04326a5ce9a6fd44bec33ae",
+      "size": 2995,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/0205f8f813900adaf04326a5ce9a6fd44bec33ae"
+    },
+    {
+      "path": "scripts/check-icons.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "178c8430d27da8b5977d045e68ba6e0d4344ab45",
+      "size": 1784,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/178c8430d27da8b5977d045e68ba6e0d4344ab45"
+    },
+    {
+      "path": "scripts/copy-script-tags.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c079480ad224ae73776eb917ebf4582dfe5a8610",
+      "size": 1582,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/c079480ad224ae73776eb917ebf4582dfe5a8610"
+    },
+    {
+      "path": "scripts/copy-webview.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70032c147ebcefedbf61da2ea9048ac99974202a",
+      "size": 495,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/70032c147ebcefedbf61da2ea9048ac99974202a"
+    },
+    {
+      "path": "scripts/generate-skill-animation-resources.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31f48ecb5f009cd031b702fb1dbf15e3969888fa",
+      "size": 16402,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/31f48ecb5f009cd031b702fb1dbf15e3969888fa"
+    },
+    {
+      "path": "scripts/generate-skill-data-parameters.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fb15effb4bb9ce58237769fc807c75b6b2943d0",
+      "size": 20773,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/3fb15effb4bb9ce58237769fc807c75b6b2943d0"
+    },
+    {
+      "path": "scripts/import-official-tag-comments.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b323b95f606c68aac2b4f9b773b645eff12d39e6",
+      "size": 21231,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/b323b95f606c68aac2b4f9b773b645eff12d39e6"
+    },
+    {
+      "path": "scripts/sync-tab-comments.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bd343989840af42b4889a0f1dd95753beec79c3",
+      "size": 14510,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/4bd343989840af42b4889a0f1dd95753beec79c3"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ce0ece33813d7938a91fca9bcb83ac6496a6f1c6",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/ce0ece33813d7938a91fca9bcb83ac6496a6f1c6"
+    },
+    {
+      "path": "src/commander",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "127f4586a788d384684b7495d8394ab05f5c68ec",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/127f4586a788d384684b7495d8394ab05f5c68ec"
+    },
+    {
+      "path": "src/commander/aniEditor.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e208f6258e52db1fec0b0090939838281780051",
+      "size": 11065,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/7e208f6258e52db1fec0b0090939838281780051"
+    },
+    {
+      "path": "src/commander/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "730aa01bb097f45033f499d6cc06173b2675e5fe",
+      "size": 660,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/730aa01bb097f45033f499d6cc06173b2675e5fe"
+    },
+    {
+      "path": "src/commander/openNpk.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "722d82e6cb646032224f04cc16cf7b319eb2bff9",
+      "size": 3440,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/722d82e6cb646032224f04cc16cf7b319eb2bff9"
+    },
+    {
+      "path": "src/commander/openers.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3ae1547522ec0d9b65c9330686accf5b5a76ce7",
+      "size": 5713,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/c3ae1547522ec0d9b65c9330686accf5b5a76ce7"
+    },
+    {
+      "path": "src/commander/previewAni.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2baee465e5b0f4e69189ed2550bce86636b71db5",
+      "size": 18436,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/2baee465e5b0f4e69189ed2550bce86636b71db5"
+    },
+    {
+      "path": "src/commander/previewAni",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0b3b8465c1642b9c18a22f132e9bf4fe1b688d33",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/0b3b8465c1642b9c18a22f132e9bf4fe1b688d33"
+    },
+    {
+      "path": "src/commander/previewAni/buildTimeline.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0dd57ef8f4365adfd2fdf88d8ee32ae0fce95827",
+      "size": 27864,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/0dd57ef8f4365adfd2fdf88d8ee32ae0fce95827"
+    },
+    {
+      "path": "src/commander/previewAni/npkResolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f581a65e4086a0f96c7cf57d90f9224dc6821a01",
+      "size": 8393,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/f581a65e4086a0f96c7cf57d90f9224dc6821a01"
+    },
+    {
+      "path": "src/commander/previewAni/parseAls.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00e11bf39cc2008cf4128cba7b41c37c6365f6ed",
+      "size": 5819,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/00e11bf39cc2008cf4128cba7b41c37c6365f6ed"
+    },
+    {
+      "path": "src/commander/previewAni/parseAni.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a161eb38367423e79973bb40b4358d4c494dcc8",
+      "size": 5181,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/7a161eb38367423e79973bb40b4358d4c494dcc8"
+    },
+    {
+      "path": "src/commander/previewAni/parseAniAls.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "src/commander/previewAni/pvfResolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "555ecfdc95e05b4a3b9ac314bc9e030a22c82770",
+      "size": 4424,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/555ecfdc95e05b4a3b9ac314bc9e030a22c82770"
+    },
+    {
+      "path": "src/commander/previewAni/types.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32101b745e2ee063af109fdbc64012b8ca8ad9cf",
+      "size": 933,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/32101b745e2ee063af109fdbc64012b8ca8ad9cf"
+    },
+    {
+      "path": "src/commander/previewAni/webviewHtml.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "702c3e3dfe752a4514084c7b5df5cdfe7744ccce",
+      "size": 42128,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/702c3e3dfe752a4514084c7b5df5cdfe7744ccce"
+    },
+    {
+      "path": "src/commander/pvfFileOps.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c170f3ff4bc327f5d330aa13d0b1f253f4eca9d9",
+      "size": 25665,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/c170f3ff4bc327f5d330aa13d0b1f253f4eca9d9"
+    },
+    {
+      "path": "src/commander/setNpkRoot.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3a9fecc2ac8e06ed5c069ae75c21361e1d6ff32",
+      "size": 660,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/b3a9fecc2ac8e06ed5c069ae75c21361e1d6ff32"
+    },
+    {
+      "path": "src/commander/types.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6aff84299a05f59967cd6ae20d32d9cad41d20b",
+      "size": 339,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/f6aff84299a05f59967cd6ae20d32d9cad41d20b"
+    },
+    {
+      "path": "src/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "19762ef52ab48ec5d36ad68ffecf13407ced77bb",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/19762ef52ab48ec5d36ad68ffecf13407ced77bb"
+    },
+    {
+      "path": "src/config/pvf",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4a0772c096e566488e4d9ca559f5224272422f29",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/4a0772c096e566488e4d9ca559f5224272422f29"
+    },
+    {
+      "path": "src/config/pvf/bookmarks.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ed61f5d55e486a576fce43ddccee4e861ebadf8",
+      "size": 50074,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/5ed61f5d55e486a576fce43ddccee4e861ebadf8"
+    },
+    {
+      "path": "src/config/pvf/skillAnimationResources.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2c0451b91abc68c7e48fdc822981ffb08b1f035",
+      "size": 228357,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/e2c0451b91abc68c7e48fdc822981ffb08b1f035"
+    },
+    {
+      "path": "src/config/pvf/skillDataParameters.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "759b44e183ca868713c08563c16ed8fee7bbe6f6",
+      "size": 1685914,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/759b44e183ca868713c08563c16ed8fee7bbe6f6"
+    },
+    {
+      "path": "src/config/pvf/treeComments.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e46be314f728f50fe69955cdb874ae7d8d97e8d",
+      "size": 117014,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/8e46be314f728f50fe69955cdb874ae7d8d97e8d"
+    },
+    {
+      "path": "src/config/scriptLang",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8f670b20349b6ad4022b502908cc516a2e673056",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/8f670b20349b6ad4022b502908cc516a2e673056"
+    },
+    {
+      "path": "src/config/scriptLang/itemCodeHoverConfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f98dfcfb50998470d266e934e2bf9400cc7ccf98",
+      "size": 13699,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/f98dfcfb50998470d266e934e2bf9400cc7ccf98"
+    },
+    {
+      "path": "src/config/scriptLang/languageConfigurations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3ae780fec81b07827d08bf83d1f23afac3a80896",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/3ae780fec81b07827d08bf83d1f23afac3a80896"
+    },
+    {
+      "path": "src/config/scriptLang/languageConfigurations/act.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a1b1e30e2858af5e24b8f505ef43781c6c2a2c4",
+      "size": 543,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/9a1b1e30e2858af5e24b8f505ef43781c6c2a2c4"
+    },
+    {
+      "path": "src/config/scriptLang/languageConfigurations/ai.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f43b2effc75505cadf699532449f4b9d6364b0b9",
+      "size": 307,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/f43b2effc75505cadf699532449f4b9d6364b0b9"
+    },
+    {
+      "path": "src/config/scriptLang/languageConfigurations/aic.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f43b2effc75505cadf699532449f4b9d6364b0b9",
+      "size": 307,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/f43b2effc75505cadf699532449f4b9d6364b0b9"
+    },
+    {
+      "path": "src/config/scriptLang/languageConfigurations/ani.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c83f92ba99e8247078b1c546ce850fac96de6eb0",
+      "size": 363,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/c83f92ba99e8247078b1c546ce850fac96de6eb0"
+    },
+    {
+      "path": "src/config/scriptLang/languageConfigurations/equ.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b1d6682027752f09f9be73bc5d640bf822713d7",
+      "size": 473,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/3b1d6682027752f09f9be73bc5d640bf822713d7"
+    },
+    {
+      "path": "src/config/scriptLang/languageConfigurations/generic.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31fe1e6fe6c64129b9cb34a2a6c833127c2ed93e",
+      "size": 519,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/31fe1e6fe6c64129b9cb34a2a6c833127c2ed93e"
+    },
+    {
+      "path": "src/config/scriptLang/languageConfigurations/key.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f971fa024d8c127ea1a662242b718606bcf5fa5",
+      "size": 277,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/7f971fa024d8c127ea1a662242b718606bcf5fa5"
+    },
+    {
+      "path": "src/config/scriptLang/languageConfigurations/lst.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7a0d585983d06c03fc588a8ce3cae811af23551",
+      "size": 117,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/e7a0d585983d06c03fc588a8ce3cae811af23551"
+    },
+    {
+      "path": "src/config/scriptLang/languageConfigurations/skl.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e10ba3256bec98715d86e10e0b49b0e89b2288a",
+      "size": 627,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/8e10ba3256bec98715d86e10e0b49b0e89b2288a"
+    },
+    {
+      "path": "src/config/scriptLang/languageConfigurations/str.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7a0d585983d06c03fc588a8ce3cae811af23551",
+      "size": 117,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/e7a0d585983d06c03fc588a8ce3cae811af23551"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a204e57aa4e05fb3af92e4263a9615adb2bc78f5",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/a204e57aa4e05fb3af92e4263a9615adb2bc78f5"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/act.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "232ba8b647420639ef535d07881c9e827cc64a82",
+      "size": 589312,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/232ba8b647420639ef535d07881c9e827cc64a82"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/ai.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9426319f9f44aa0e45a216bab03adf01f66ec85",
+      "size": 9336,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/a9426319f9f44aa0e45a216bab03adf01f66ec85"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/aic.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2c73f79c1a3a07570240862a51ce8b16f3b35aa",
+      "size": 13786,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/f2c73f79c1a3a07570240862a51ce8b16f3b35aa"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/ani.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00e1cb67e0e7cac07d3eb1bf0640e34fdc694442",
+      "size": 13700,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/00e1cb67e0e7cac07d3eb1bf0640e34fdc694442"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/atk.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e7cd5a1e94043cc8638059966e9dc231d22c8c4",
+      "size": 36653,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/4e7cd5a1e94043cc8638059966e9dc231d22c8c4"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/blu.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67f879411d93c8075ebdd5d3dffe60a3625c582e",
+      "size": 239,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/67f879411d93c8075ebdd5d3dffe60a3625c582e"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/bm.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "161c31819da27a2fa78db463e41ff6873fa72283",
+      "size": 245,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/161c31819da27a2fa78db463e41ff6873fa72283"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/chr.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8547761b114005f50c58e32ceaf675ceb0961fd",
+      "size": 17735,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/a8547761b114005f50c58e32ceaf675ceb0961fd"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/co.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d74e20c8b38464d3aad8e9286ec80137492a43a",
+      "size": 5485,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/9d74e20c8b38464d3aad8e9286ec80137492a43a"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/cre.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68fe5efdcda5b4b36b15a33ce764feb895f980c9",
+      "size": 929,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/68fe5efdcda5b4b36b15a33ce764feb895f980c9"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/dgn.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5cf5619650e4458499080d61a7a62eb470c3b1d",
+      "size": 41062,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/f5cf5619650e4458499080d61a7a62eb470c3b1d"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/equ.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e18bfa8711fb21127f701df7a8ecc5ce92df20bf",
+      "size": 60313,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/e18bfa8711fb21127f701df7a8ecc5ce92df20bf"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/etc.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1db20e6029701180bb8b474e14c944b7d7efbcbe",
+      "size": 29097,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/1db20e6029701180bb8b474e14c944b7d7efbcbe"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/evt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77f268a95fdd7237b31d30d377b79cace4d51b46",
+      "size": 1876,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/77f268a95fdd7237b31d30d377b79cace4d51b46"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/exj.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58906019505462f2c64e31b5c8c2b41f1d3b8873",
+      "size": 2245,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/58906019505462f2c64e31b5c8c2b41f1d3b8873"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/global.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f481e73263967f009dee6de91245899c2f11655b",
+      "size": 806541,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/f481e73263967f009dee6de91245899c2f11655b"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/key.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d67edec7211669469b94d7c98ad950259c7b9284",
+      "size": 2642,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/d67edec7211669469b94d7c98ad950259c7b9284"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/lay.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc59c4233bedb4fb16f40e0277cef5a27dc3d37e",
+      "size": 170,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/bc59c4233bedb4fb16f40e0277cef5a27dc3d37e"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/map.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4aae884f6ce5f72695430b4b55f2980ecb23d8b",
+      "size": 28998,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/f4aae884f6ce5f72695430b4b55f2980ecb23d8b"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/mm.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51da947752b30812b63da4ae6643658a44889c77",
+      "size": 4888,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/51da947752b30812b63da4ae6643658a44889c77"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/mob.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a0fa220247468338c3b6b46ca90b0dd0d2b390e",
+      "size": 118032,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/0a0fa220247468338c3b6b46ca90b0dd0d2b390e"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/npc.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cce57cba4bb6e9f167ce04241397645ef62576af",
+      "size": 14835,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/cce57cba4bb6e9f167ce04241397645ef62576af"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/nut.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a5f6cc7902fffc9554c9827dae1f205617ca076",
+      "size": 2995,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/3a5f6cc7902fffc9554c9827dae1f205617ca076"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/obj.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c510fc919d109b43b891b88562983a29e2312257",
+      "size": 25325,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/c510fc919d109b43b891b88562983a29e2312257"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/pos.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3e44d09a701471fe617298cb9b96cbfac1069f6",
+      "size": 339,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/e3e44d09a701471fe617298cb9b96cbfac1069f6"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/ptl.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f38025dbd04dd33137f0018f06740cf6a813f6c",
+      "size": 9651,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/9f38025dbd04dd33137f0018f06740cf6a813f6c"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/qst.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0d7b1ab98f498d460caac32359ece4f2f262a98",
+      "size": 40629,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/b0d7b1ab98f498d460caac32359ece4f2f262a98"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/rgn.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb6941bf6951f27a7a447fffca7fcc8a20f0989f",
+      "size": 226,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/cb6941bf6951f27a7a447fffca7fcc8a20f0989f"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/sd.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8070d954b7bc68ccfa427da0ca840f4366c0fa6",
+      "size": 907,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/b8070d954b7bc68ccfa427da0ca840f4366c0fa6"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/shp.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7789823d093e00df4f69ab844c0dc21bc4dfcca",
+      "size": 2471,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/c7789823d093e00df4f69ab844c0dc21bc4dfcca"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/skl.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1166e7d6cd86bd500b7f9f1cba497fbabb33968a",
+      "size": 38953,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/1166e7d6cd86bd500b7f9f1cba497fbabb33968a"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/stk.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13e37acc691fadcd0fd48e0f10a3f2e06671bcce",
+      "size": 23002,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/13e37acc691fadcd0fd48e0f10a3f2e06671bcce"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/stm.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cc096b12a14d3c3e05ad8793c3ee66a4844f4b0",
+      "size": 150,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/1cc096b12a14d3c3e05ad8793c3ee66a4844f4b0"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/tbl.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a56f33effbd59b414a3c0248332a92b26d2407ed",
+      "size": 9040,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/a56f33effbd59b414a3c0248332a92b26d2407ed"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/twn.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb2240ee4ad4df8ae2cc2ca5cb932cb8b465f17a",
+      "size": 3277,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/eb2240ee4ad4df8ae2cc2ca5cb932cb8b465f17a"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/ui.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7430986bd250a8ed865143876a295d94972aab3d",
+      "size": 9504,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/7430986bd250a8ed865143876a295d94972aab3d"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variantRules.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4071e0f16055aeba48234aa941480f9aeb437f1a",
+      "size": 4780,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/4071e0f16055aeba48234aa941480f9aeb437f1a"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef89547b54830802dec3c299414ad84caa3c0359",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/ef89547b54830802dec3c299414ad84caa3c0359"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/equ",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed5ac082ad6fba10383734feced84fa2780434b6",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/ed5ac082ad6fba10383734feced84fa2780434b6"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/equ/avatar.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c543cd851cf2461184a7400c7d8eba952c948337",
+      "size": 8902,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/c543cd851cf2461184a7400c7d8eba952c948337"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/equ/creature.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2382fdffda0a4d1205d084e612d3e677e4258cfe",
+      "size": 5252,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/2382fdffda0a4d1205d084e612d3e677e4258cfe"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/equ/equipment.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcb47850cd98c32962003d02cec91eb5a9fc7dd2",
+      "size": 103709,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/fcb47850cd98c32962003d02cec91eb5a9fc7dd2"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/equ/piece-set.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84686249aaf87b86d1c5018cd34c308626f1e245",
+      "size": 17,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/84686249aaf87b86d1c5018cd34c308626f1e245"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/etc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6637f4f85195d80a93c170dac2d899a594ed76ae",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/6637f4f85195d80a93c170dac2d899a594ed76ae"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/etc/cashshop.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac65702a093601226566a4cfbfbe2b1bfce88262",
+      "size": 1270,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/ac65702a093601226566a4cfbfbe2b1bfce88262"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/etc/compoundavatar.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a82173913019769c05f98084e4dee0e5bdb4b9d",
+      "size": 1955,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/5a82173913019769c05f98084e4dee0e5bdb4b9d"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/etc/disjoint.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b524581bba80b557246b909f49f90c7608399650",
+      "size": 4382,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/b524581bba80b557246b909f49f90c7608399650"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/etc/questparameter.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d1e1a06989923ed40d6a09120e0e5136b69b904",
+      "size": 3312,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/0d1e1a06989923ed40d6a09120e0e5136b69b904"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/etc/tutorialtip.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16c0d76ab6b90bf20a99cf12977a23111e337b7c",
+      "size": 430,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/16c0d76ab6b90bf20a99cf12977a23111e337b7c"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/etc/ultimateskillcutscene.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0bbd6bb20a458e3a0a61a234098284618512919",
+      "size": 2691,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/a0bbd6bb20a458e3a0a61a234098284618512919"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/stk",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "af08a70232394ab962bd872d25757c413346bf73",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/af08a70232394ab962bd872d25757c413346bf73"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/stk/booster.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d453c0c6fd91ec9219beb7e90fbbc8378b1dc2ec",
+      "size": 10019,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/d453c0c6fd91ec9219beb7e90fbbc8378b1dc2ec"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/stk/legacy.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d179dd3ade58c09a17513755a30d284f4f623a5",
+      "size": 851,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/9d179dd3ade58c09a17513755a30d284f4f623a5"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/stk/monster-card.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9c02742174a57ae8c267e85dd1222a51a197989",
+      "size": 11633,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/d9c02742174a57ae8c267e85dd1222a51a197989"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/stk/pandora.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8020059740f00ff7578ec071ef75ee7fa56a7b6b",
+      "size": 948,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/8020059740f00ff7578ec071ef75ee7fa56a7b6b"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/stk/recipe.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7788de845a0ab5565ca90dd9bd241c4700cee5d3",
+      "size": 1720,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/7788de845a0ab5565ca90dd9bd241c4700cee5d3"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/stk/stackable-legacy.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1695376b52324f9d9f498b823bae22994747c4d3",
+      "size": 953,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/1695376b52324f9d9f498b823bae22994747c4d3"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/stk/stackable.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0e3f3563d451f2522283738cf813e0d01031769",
+      "size": 19170,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/e0e3f3563d451f2522283738cf813e0d01031769"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/variants/stk/throwitem.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c8bed7b9c01c111c95e146b57a23684d575a815",
+      "size": 1923,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/3c8bed7b9c01c111c95e146b57a23684d575a815"
+    },
+    {
+      "path": "src/config/scriptLang/scriptTags/wdm.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "038355ca36bb6dbc441b9e901b0567a846b1b208",
+      "size": 4021,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/038355ca36bb6dbc441b9e901b0567a846b1b208"
+    },
+    {
+      "path": "src/config/syntaxes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c94ff098a4358179b74960d5a1f94f0091244eb",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/6c94ff098a4358179b74960d5a1f94f0091244eb"
+    },
+    {
+      "path": "src/config/syntaxes/pvf-act.tmLanguage.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebb6b2a355feb3244517b4db8f3a38960d533842",
+      "size": 1735,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/ebb6b2a355feb3244517b4db8f3a38960d533842"
+    },
+    {
+      "path": "src/config/syntaxes/pvf-ai.tmLanguage.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6e01489e5956682078b4674819f534740d61459",
+      "size": 1247,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/c6e01489e5956682078b4674819f534740d61459"
+    },
+    {
+      "path": "src/config/syntaxes/pvf-aic.tmLanguage.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a893d95ca51ab1ac8603d6cc4f0ce8dc4d736ec4",
+      "size": 1257,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/a893d95ca51ab1ac8603d6cc4f0ce8dc4d736ec4"
+    },
+    {
+      "path": "src/config/syntaxes/pvf-ani.tmLanguage.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4666775deb5d218fb9bde4a06f7d4e010dac019",
+      "size": 918,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/f4666775deb5d218fb9bde4a06f7d4e010dac019"
+    },
+    {
+      "path": "src/config/syntaxes/pvf-equ.tmLanguage.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a47f8f11d4ec4d2bc2dfad8684be9b3b0c50a963",
+      "size": 1557,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/a47f8f11d4ec4d2bc2dfad8684be9b3b0c50a963"
+    },
+    {
+      "path": "src/config/syntaxes/pvf-generic.tmLanguage.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "833000fda379bb5cea2f624b619db9b8b0244fba",
+      "size": 1868,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/833000fda379bb5cea2f624b619db9b8b0244fba"
+    },
+    {
+      "path": "src/config/syntaxes/pvf-key.tmLanguage.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8a3d2294df475956664c4957ad2ac78f48bf9b2",
+      "size": 1447,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/d8a3d2294df475956664c4957ad2ac78f48bf9b2"
+    },
+    {
+      "path": "src/config/syntaxes/pvf-lst.tmLanguage.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3c73390fdb49861be1e15dc51f21fe707b64ac0",
+      "size": 1322,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/a3c73390fdb49861be1e15dc51f21fe707b64ac0"
+    },
+    {
+      "path": "src/config/syntaxes/pvf-skl.tmLanguage.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53bae7ec9f891494b135041fd08dac000057fe03",
+      "size": 1211,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/53bae7ec9f891494b135041fd08dac000057fe03"
+    },
+    {
+      "path": "src/config/syntaxes/pvf-str.tmLanguage.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da4605bde778cf07f9b23e53df68590079393faf",
+      "size": 1557,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/da4605bde778cf07f9b23e53df68590079393faf"
+    },
+    {
+      "path": "src/extension.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6f5b65e7b4e9cc009a887c2d8462359906827ef",
+      "size": 28969,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/e6f5b65e7b4e9cc009a887c2d8462359906827ef"
+    },
+    {
+      "path": "src/npk",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d7d5d4a6acbe4087be56ed72c933fc4ca31615b3",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/d7d5d4a6acbe4087be56ed72c933fc4ca31615b3"
+    },
+    {
+      "path": "src/npk/colors.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "264a079d0c555c8e015e31e9fa3c3048fa8afa41",
+      "size": 1398,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/264a079d0c555c8e015e31e9fa3c3048fa8afa41"
+    },
+    {
+      "path": "src/npk/imgReader.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31a88ac0d93896047a54b365673761a4e522f9ee",
+      "size": 11223,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/31a88ac0d93896047a54b365673761a4e522f9ee"
+    },
+    {
+      "path": "src/npk/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70203782149f4ba29632d1330c54068d305aab1f",
+      "size": 92,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/70203782149f4ba29632d1330c54068d305aab1f"
+    },
+    {
+      "path": "src/npk/indexer.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7443796548ca572d845d24860961053f975541c",
+      "size": 8044,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/d7443796548ca572d845d24860961053f975541c"
+    },
+    {
+      "path": "src/npk/npkReader.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "300fb5705095c2b22a0d4b498c12401aa0ea1eeb",
+      "size": 3130,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/300fb5705095c2b22a0d4b498c12401aa0ea1eeb"
+    },
+    {
+      "path": "src/npk/streams.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "159c7c7856327bb2c0cf4afe325866e7894c02d8",
+      "size": 1751,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/159c7c7856327bb2c0cf4afe325866e7894c02d8"
+    },
+    {
+      "path": "src/npk/types.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8464e152b979bf8ead7eaf05f55be3ec31c2053",
+      "size": 1603,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/c8464e152b979bf8ead7eaf05f55be3ec31c2053"
+    },
+    {
+      "path": "src/pvf",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f3e808663c5bbdda0f3598d0f62c4ecfabc91405",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/f3e808663c5bbdda0f3598d0f62c4ecfabc91405"
+    },
+    {
+      "path": "src/pvf/aniCompiler.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04289aa4b68c8a50bbfc23ed1cf0569499c0059b",
+      "size": 14083,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/04289aa4b68c8a50bbfc23ed1cf0569499c0059b"
+    },
+    {
+      "path": "src/pvf/binaryAni.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a8845c4f2d409ac51953229180516079aed5653",
+      "size": 7207,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/0a8845c4f2d409ac51953229180516079aed5653"
+    },
+    {
+      "path": "src/pvf/bookmarkProvider.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6736c6c97f04cd050e4a5f59ea89257f04dc47c1",
+      "size": 18693,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/6736c6c97f04cd050e4a5f59ea89257f04dc47c1"
+    },
+    {
+      "path": "src/pvf/chineseConversion.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12b8f8c46df467aa6dbb01f234b207d1b90d02db",
+      "size": 839,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/12b8f8c46df467aa6dbb01f234b207d1b90d02db"
+    },
+    {
+      "path": "src/pvf/crypto.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1bb307e0f9a58c7b1adeaa8129165263fb51a0d",
+      "size": 3349,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/b1bb307e0f9a58c7b1adeaa8129165263fb51a0d"
+    },
+    {
+      "path": "src/pvf/decorations.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f93f48f3b4ad5703cc927d154de4b8e55f34f18",
+      "size": 1664,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/9f93f48f3b4ad5703cc927d154de4b8e55f34f18"
+    },
+    {
+      "path": "src/pvf/directoryArchive.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ba33e40c2c3cd2d52dd30f02eacb74b40626287",
+      "size": 7003,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/0ba33e40c2c3cd2d52dd30f02eacb74b40626287"
+    },
+    {
+      "path": "src/pvf/diskTreeCommentDecorations.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3358fad6a5275d2b6c99aa052839d13db064a8ce",
+      "size": 6191,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/3358fad6a5275d2b6c99aa052839d13db064a8ce"
+    },
+    {
+      "path": "src/pvf/fileIcons.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09f26f28f197414c5363bfab81a4e43df00f1bb7",
+      "size": 2393,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/09f26f28f197414c5363bfab81a4e43df00f1bb7"
+    },
+    {
+      "path": "src/pvf/helpers.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c27787ce8f862636055f0ba1ec675c04751aa39",
+      "size": 4685,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/9c27787ce8f862636055f0ba1ec675c04751aa39"
+    },
+    {
+      "path": "src/pvf/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "021b39b72edd280f9ca65dfcb38c8af4ce424c50",
+      "size": 304,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/021b39b72edd280f9ca65dfcb38c8af4ce424c50"
+    },
+    {
+      "path": "src/pvf/lstDecompiler.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f95bb42aef61661d88bae241fdfc00ceba8d6e63",
+      "size": 2907,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/f95bb42aef61661d88bae241fdfc00ceba8d6e63"
+    },
+    {
+      "path": "src/pvf/metadata.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3394a403616b6ba2ecf09d0d0c93fc933f3dc474",
+      "size": 10146,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/3394a403616b6ba2ecf09d0d0c93fc933f3dc474"
+    },
+    {
+      "path": "src/pvf/model.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "477c5d68431e776dbe61c7c01ef91d0832dfe28b",
+      "size": 47604,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/477c5d68431e776dbe61c7c01ef91d0832dfe28b"
+    },
+    {
+      "path": "src/pvf/modelIO.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a697aad71a13ac1b808c93c82b3c962e282c597",
+      "size": 20846,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/9a697aad71a13ac1b808c93c82b3c962e282c597"
+    },
+    {
+      "path": "src/pvf/pathLinkProvider.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9825f4f38e52719164394e6bdd134d82be90512e",
+      "size": 10669,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/9825f4f38e52719164394e6bdd134d82be90512e"
+    },
+    {
+      "path": "src/pvf/provider.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0df71de3b1ed1f0afcd201ae75a6ac4a302eb27",
+      "size": 4890,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/a0df71de3b1ed1f0afcd201ae75a6ac4a302eb27"
+    },
+    {
+      "path": "src/pvf/pvfFile.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29620e9750c0084afc52b1eb0260a20af5bda55d",
+      "size": 3500,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/29620e9750c0084afc52b1eb0260a20af5bda55d"
+    },
+    {
+      "path": "src/pvf/runtimeModel.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab8bb1666bbbfbae22b165ea2e18329e1067d4fc",
+      "size": 197,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/ab8bb1666bbbfbae22b165ea2e18329e1067d4fc"
+    },
+    {
+      "path": "src/pvf/scriptCompiler.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d4870b65309bc6fc8f137daadc3d2e6d9d1b2aa",
+      "size": 6331,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/7d4870b65309bc6fc8f137daadc3d2e6d9d1b2aa"
+    },
+    {
+      "path": "src/pvf/scriptDecompiler.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6f92c818ab08623cee91701c7431f86b48ce311",
+      "size": 9614,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/a6f92c818ab08623cee91701c7431f86b48ce311"
+    },
+    {
+      "path": "src/pvf/searchQuickOpen.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f472d18a2e59b771862770c34dd0d397bc7fe21",
+      "size": 9341,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/5f472d18a2e59b771862770c34dd0d397bc7fe21"
+    },
+    {
+      "path": "src/pvf/services",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6eafc98a7d6f0c4e52d6061628bf47de78204288",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/6eafc98a7d6f0c4e52d6061628bf47de78204288"
+    },
+    {
+      "path": "src/pvf/services/codeSearchService.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "784372a8c610131e4f51443c958b353ba8c61c8e",
+      "size": 2097,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/784372a8c610131e4f51443c958b353ba8c61c8e"
+    },
+    {
+      "path": "src/pvf/services/fileSearchService.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e19e264cde022bb5f8656d7b4a7481548b817b2d",
+      "size": 2208,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/e19e264cde022bb5f8656d7b4a7481548b817b2d"
+    },
+    {
+      "path": "src/pvf/services/getIconFrame.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "530009db8f42f58761d2640330bf870f4f26342c",
+      "size": 3279,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/530009db8f42f58761d2640330bf870f4f26342c"
+    },
+    {
+      "path": "src/pvf/services/getPvfContent.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d982aef932953e8fedc91365e6d89abbeff320a",
+      "size": 15742,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/1d982aef932953e8fedc91365e6d89abbeff320a"
+    },
+    {
+      "path": "src/pvf/services/stringRefSearchService.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "307ff7b8e007db770dc1cdec1f79486392baa600",
+      "size": 5638,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/307ff7b8e007db770dc1cdec1f79486392baa600"
+    },
+    {
+      "path": "src/pvf/services/stringTableCodeLens.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c63b9e7539fcffd4e0cb7498061e221928a3c68",
+      "size": 4619,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/1c63b9e7539fcffd4e0cb7498061e221928a3c68"
+    },
+    {
+      "path": "src/pvf/stringTable.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec636766377481f2cc0910c8318a167a13e4adf3",
+      "size": 2744,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/ec636766377481f2cc0910c8318a167a13e4adf3"
+    },
+    {
+      "path": "src/pvf/stringView.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae88ad092cf1ab877f3fef55fe0116a1d82d3d4e",
+      "size": 1636,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/ae88ad092cf1ab877f3fef55fe0116a1d82d3d4e"
+    },
+    {
+      "path": "src/pvf/treeComments.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb597c13f1a40c6bd19a5c26fe03bf5a71c6d375",
+      "size": 12310,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/fb597c13f1a40c6bd19a5c26fe03bf5a71c6d375"
+    },
+    {
+      "path": "src/pvf/unpackEnv.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c730ccad6916cbf66af85a86e243c6ef7b953e5",
+      "size": 3117,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/4c730ccad6916cbf66af85a86e243c6ef7b953e5"
+    },
+    {
+      "path": "src/pvf/unpackExplorerProvider.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "548cf7f1c04d6ec3a2f27511a68e373497abcfeb",
+      "size": 12200,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/548cf7f1c04d6ec3a2f27511a68e373497abcfeb"
+    },
+    {
+      "path": "src/pvf/unpackExplorerWebview.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74d8377d42f919516cc26812477a692947004c9b",
+      "size": 49574,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/74d8377d42f919516cc26812477a692947004c9b"
+    },
+    {
+      "path": "src/pvf/unpackMetadata.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "207984a68f0fc7afce9a7780630516b0afc10390",
+      "size": 39541,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/207984a68f0fc7afce9a7780630516b0afc10390"
+    },
+    {
+      "path": "src/pvf/unpackPreview.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc6682d76f4d8a6c2b1b44ae6fe5b3446f2d705d",
+      "size": 150272,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/dc6682d76f4d8a6c2b1b44ae6fe5b3446f2d705d"
+    },
+    {
+      "path": "src/pvf/unpackPreviewPanel.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0bfdfc659f1ad7d4b04186089f3df521de952ea",
+      "size": 34215,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/a0bfdfc659f1ad7d4b04186089f3df521de952ea"
+    },
+    {
+      "path": "src/pvf/util.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c54211ef707ece62100e17d802234755d6976b19",
+      "size": 960,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/c54211ef707ece62100e17d802234755d6976b19"
+    },
+    {
+      "path": "src/pvf/webApi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "20d87cc29d648c2251510830efa4379fa4f53331",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/20d87cc29d648c2251510830efa4379fa4f53331"
+    },
+    {
+      "path": "src/pvf/webApi/result.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a15b8b88a47db6a22234650d72382ef99c6b211f",
+      "size": 1127,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/a15b8b88a47db6a22234650d72382ef99c6b211f"
+    },
+    {
+      "path": "src/pvf/webApi/scriptParser.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c32731da539be59ef17bc04e73941141957095f5",
+      "size": 3609,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/c32731da539be59ef17bc04e73941141957095f5"
+    },
+    {
+      "path": "src/pvf/webApi/server.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa77e842f15dada1bdb6c9568b5b55a8e5fa014d",
+      "size": 21224,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/aa77e842f15dada1bdb6c9568b5b55a8e5fa014d"
+    },
+    {
+      "path": "src/pvf/webApi/settings.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7510c09b251cec14d42aaeb4c5c214d602b602ae",
+      "size": 1936,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/7510c09b251cec14d42aaeb4c5c214d602b602ae"
+    },
+    {
+      "path": "src/pvf/webApi/types.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "763946c53b4a6596b4e536a7c8500bdac4b2b617",
+      "size": 1208,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/763946c53b4a6596b4e536a7c8500bdac4b2b617"
+    },
+    {
+      "path": "src/pvf/webApi/workspace.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bdfb3e5d24c27e68edfb67cf7f913746f147b5d",
+      "size": 20186,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/4bdfb3e5d24c27e68edfb67cf7f913746f147b5d"
+    },
+    {
+      "path": "src/scriptLang",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e32eec6472580a0d77fa5dd7544d1a118fc94d0b",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/e32eec6472580a0d77fa5dd7544d1a118fc94d0b"
+    },
+    {
+      "path": "src/scriptLang/act",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4e7785dd9ba41c57758f815937a83f94c69d29ff",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/4e7785dd9ba41c57758f815937a83f94c69d29ff"
+    },
+    {
+      "path": "src/scriptLang/act/formatter.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45c4963b5537fc38e728497d9e56d02250bb1fd1",
+      "size": 5444,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/45c4963b5537fc38e728497d9e56d02250bb1fd1"
+    },
+    {
+      "path": "src/scriptLang/act/registerAct.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee5dad02b79da930bc4a375e99f3f12740090869",
+      "size": 2968,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/ee5dad02b79da930bc4a375e99f3f12740090869"
+    },
+    {
+      "path": "src/scriptLang/ai",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "45f0b0a68ea22c737f95b88c3ca83e8050a06ddb",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/45f0b0a68ea22c737f95b88c3ca83e8050a06ddb"
+    },
+    {
+      "path": "src/scriptLang/ai/formatter.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e0bcc5a42b4f29b506a52eeae714b4683ea3335",
+      "size": 3822,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/3e0bcc5a42b4f29b506a52eeae714b4683ea3335"
+    },
+    {
+      "path": "src/scriptLang/ai/registerAi.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ad71d5507384f7d7264e3952007df9ccf5bf96b",
+      "size": 431,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/0ad71d5507384f7d7264e3952007df9ccf5bf96b"
+    },
+    {
+      "path": "src/scriptLang/aic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4a8b460437958200d412e05e6df0f86cac0121de",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/4a8b460437958200d412e05e6df0f86cac0121de"
+    },
+    {
+      "path": "src/scriptLang/aic/formatter.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56851f989ef49fe4a05b79630c81e3114f2eb313",
+      "size": 3759,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/56851f989ef49fe4a05b79630c81e3114f2eb313"
+    },
+    {
+      "path": "src/scriptLang/aic/registerAic.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "050da127bc97e6547c8ab45f5ab004086437bf62",
+      "size": 366,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/050da127bc97e6547c8ab45f5ab004086437bf62"
+    },
+    {
+      "path": "src/scriptLang/ani",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9b4837e5bd4063cd475f76930524510e50e02640",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/9b4837e5bd4063cd475f76930524510e50e02640"
+    },
+    {
+      "path": "src/scriptLang/ani/formatter.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccf6655e44cc017df7cea73da1ab8f39e645647a",
+      "size": 5509,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/ccf6655e44cc017df7cea73da1ab8f39e645647a"
+    },
+    {
+      "path": "src/scriptLang/ani/registerAni.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6042319f784e97e6bca2b6f3c545772568af4b2e",
+      "size": 4500,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/6042319f784e97e6bca2b6f3c545772568af4b2e"
+    },
+    {
+      "path": "src/scriptLang/apc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09eac24498ffac3d187e4bb555bc7298d920db4a",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/09eac24498ffac3d187e4bb555bc7298d920db4a"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6d3d5a28419dab905ceb64fe32b04e5fc3f6e959",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/6d3d5a28419dab905ceb64fe32b04e5fc3f6e959"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/aic_sample_aic.aic",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9276ad7cf62b9b75419c71f9c8c3b6c00d55fa9d",
+      "size": 2475,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/9276ad7cf62b9b75419c71f9c8c3b6c00d55fa9d"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/apc function & use.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c60f754bad1bbde3c50de5fa6812228744278ef3",
+      "size": 538,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/c60f754bad1bbde3c50de5fa6812228744278ef3"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/apc function history.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fe531691d9286c3d1ad33e40515424104e1d080",
+      "size": 5429,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/5fe531691d9286c3d1ad33e40515424104e1d080"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/apc tool info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b41240664079a49f4b2158c3b8c2ced716f488cd",
+      "size": 2127,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/b41240664079a49f4b2158c3b8c2ced716f488cd"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/destination select.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72c646b77666b3496fd7cee6ae81068e2f37be7b",
+      "size": 3760,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/72c646b77666b3496fd7cee6ae81068e2f37be7b"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8d6c7a2793a367a526d0e613c37a2c581a5294ad",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/8d6c7a2793a367a526d0e613c37a2c581a5294ad"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/action",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1330676b69312833b76a65589d91dd0e7d19068b",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/1330676b69312833b76a65589d91dd0e7d19068b"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/action/attack.act",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7166fc66ac76c0763bc301fb8f438a9fa038585f",
+      "size": 209,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/7166fc66ac76c0763bc301fb8f438a9fa038585f"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/action/move.act",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c782a29afa9346cc1b989153dd501a1d5c16213",
+      "size": 68,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/4c782a29afa9346cc1b989153dd501a1d5c16213"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/action/proc.act",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fec2db1662aed3c70297953d7167b448cadf05e8",
+      "size": 286,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/fec2db1662aed3c70297953d7167b448cadf05e8"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/action/rest.act",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a81d6883a1c62360aa24acfc19bce3e85be7fb4d",
+      "size": 68,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/a81d6883a1c62360aa24acfc19bce3e85be7fb4d"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/ai",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "536dca67b93a574704fed2f56e3b59731d967cda",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/536dca67b93a574704fed2f56e3b59731d967cda"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/ai/action.ai",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "156a26ca39e60e9831448bf63086306d50f02ca7",
+      "size": 230,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/156a26ca39e60e9831448bf63086306d50f02ca7"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/ai/destinationselect.ai",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b808e721c17a22ad82e2f9153229a29f94ed447",
+      "size": 52,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/2b808e721c17a22ad82e2f9153229a29f94ed447"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/ai/event.ai",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3345050cbcd9d227fd2625e67075db80bffb567b",
+      "size": 53,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/3345050cbcd9d227fd2625e67075db80bffb567b"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/ai/movemethod.ai",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3714aca3d4889537c50ff3c2d1638f1ea20ec52f",
+      "size": 142,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/3714aca3d4889537c50ff3c2d1638f1ea20ec52f"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/animation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d4e9c11b8570c1674f16119e613ff3c085cf9b21",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/d4e9c11b8570c1674f16119e613ff3c085cf9b21"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/animation/attack.ani",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2acb5f09e0f829df5035bcc8d57df4147ad2cf05",
+      "size": 1403,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/2acb5f09e0f829df5035bcc8d57df4147ad2cf05"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/animation/choppinghammer.ani",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc4502e9810bb8065a1522a68fdb14216fa38979",
+      "size": 986,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/bc4502e9810bb8065a1522a68fdb14216fa38979"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/animation/move.ani",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "553024d50da9c4e5a5d5391afd15f9680435a9d8",
+      "size": 1308,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/553024d50da9c4e5a5d5391afd15f9680435a9d8"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/animation/proc.ani",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe07f2d112d080ba8368d401aafda7add12a0c77",
+      "size": 402,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/fe07f2d112d080ba8368d401aafda7add12a0c77"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/animation/rest.ani",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6384b7ec3535e675d09ec0376688bc058821279",
+      "size": 2581,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/d6384b7ec3535e675d09ec0376688bc058821279"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/expc_test.aic",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f810629083ca673a49db57982294515c8a0f9bc8",
+      "size": 1796,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/f810629083ca673a49db57982294515c8a0f9bc8"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "971ee2a2c7f9d7901a7e493645f47fc84f962db7",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/971ee2a2c7f9d7901a7e493645f47fc84f962db7"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/backstep.key",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0a13bc2d9ddf3c37d438d71f8095b7ef62063f9",
+      "size": 40,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/f0a13bc2d9ddf3c37d438d71f8095b7ef62063f9"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/combo3.key",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b51d3ae08b69c6e99053cd922b2c492db9140456",
+      "size": 30,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/b51d3ae08b69c6e99053cd922b2c492db9140456"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/d.key",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d3ae6cd55cd5a04f73ad306b937965adf43c005",
+      "size": 39,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/0d3ae6cd55cd5a04f73ad306b937965adf43c005"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/damage.key",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0d9b3aee6108d010806853549e5f2a78bce72ec",
+      "size": 231,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/c0d9b3aee6108d010806853549e5f2a78bce72ec"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/damage2.key",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0d9b3aee6108d010806853549e5f2a78bce72ec",
+      "size": 231,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/c0d9b3aee6108d010806853549e5f2a78bce72ec"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/dangong.key",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fcede8aa8ce1545156fd07d78191d79335c2955",
+      "size": 88,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/3fcede8aa8ce1545156fd07d78191d79335c2955"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/dangongcombo.key",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7f7d1f50ce236653bef2431cf8440781ec96505",
+      "size": 493,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/d7f7d1f50ce236653bef2431cf8440781ec96505"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/dangongcombo2.key",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7f7d1f50ce236653bef2431cf8440781ec96505",
+      "size": 493,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/d7f7d1f50ce236653bef2431cf8440781ec96505"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/dummy.ptl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4c0fe7df36c0cb9c5bd18008348db5108f764e3",
+      "size": 125,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/c4c0fe7df36c0cb9c5bd18008348db5108f764e3"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/dummy2.ptl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c105573fff4f515ac55097587f77e4ef89a5dd9",
+      "size": 124,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/3c105573fff4f515ac55097587f77e4ef89a5dd9"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/f.key",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82730ca2e808ae02dca31dde5a2924b67f8d3361",
+      "size": 39,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/82730ca2e808ae02dca31dde5a2924b67f8d3361"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/flash.key",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b1871b9010d60a658d4f7afda5d03a1876710c4",
+      "size": 90,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/8b1871b9010d60a658d4f7afda5d03a1876710c4"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/g.key",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af915e1db11e703c262521e8b54ac78935802c4d",
+      "size": 97,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/af915e1db11e703c262521e8b54ac78935802c4d"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/grab.key",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b98587b7d8976bd73d74f1134d6bec55e1b21ac4",
+      "size": 90,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/b98587b7d8976bd73d74f1134d6bec55e1b21ac4"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/nakbong.key",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02dfa6d975d28a54eba73da9136e1c2260d00f23",
+      "size": 90,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/02dfa6d975d28a54eba73da9136e1c2260d00f23"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/s.key",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "914d36780af73fcd6dd4493403d0f5c094254769",
+      "size": 39,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/914d36780af73fcd6dd4493403d0f5c094254769"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/x.key",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c132810979947dab2472bfe624fa74ad883571a1",
+      "size": 39,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/c132810979947dab2472bfe624fa74ad883571a1"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/expc_sample/key/z.key",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad3d8519011c66881523cba38e9730553faca964",
+      "size": 39,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/ad3d8519011c66881523cba38e9730553faca964"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/on off skill list.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60c694bac857b3c18501f45c36aba7d9b84b9637",
+      "size": 358,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/60c694bac857b3c18501f45c36aba7d9b84b9637"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/如何编辑.aic文件.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97ec199616e3bb12ffec6ac66450e790eadfb5b6",
+      "size": 2619,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/97ec199616e3bb12ffec6ac66450e790eadfb5b6"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/如何编辑.ai文件.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00f4320ae4869820e5a2d0f12133eef7b01ccfaa",
+      "size": 12680,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/00f4320ae4869820e5a2d0f12133eef7b01ccfaa"
+    },
+    {
+      "path": "src/scriptLang/apc/ai_doc/如何编辑.key文件.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20f44bf6f73a2b0abf2232dc2b4c6c4e6fdd4a03",
+      "size": 4654,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/20f44bf6f73a2b0abf2232dc2b4c6c4e6fdd4a03"
+    },
+    {
+      "path": "src/scriptLang/equ",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3fe65380ed0d45fcf4b316200c20ce331b483d35",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/3fe65380ed0d45fcf4b316200c20ce331b483d35"
+    },
+    {
+      "path": "src/scriptLang/equ/formatter.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "149956f9aa6b2129211fd8c67084ad144410a1ff",
+      "size": 4724,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/149956f9aa6b2129211fd8c67084ad144410a1ff"
+    },
+    {
+      "path": "src/scriptLang/equ/inlinePreview.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40a775a5ebda71c8e3bcd896f95053f1c1ec9c8f",
+      "size": 4818,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/40a775a5ebda71c8e3bcd896f95053f1c1ec9c8f"
+    },
+    {
+      "path": "src/scriptLang/equ/previewLens.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b107deaa0bd6b8951ad55707c486217d2059722",
+      "size": 33310,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/3b107deaa0bd6b8951ad55707c486217d2059722"
+    },
+    {
+      "path": "src/scriptLang/equ/registerEqu.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d809aa87d0bc37750b5872f9c45915df0d61bb9c",
+      "size": 367,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/d809aa87d0bc37750b5872f9c45915df0d61bb9c"
+    },
+    {
+      "path": "src/scriptLang/format",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b3a8ea1911901fc6925db6790ecbd4b279e2575",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/1b3a8ea1911901fc6925db6790ecbd4b279e2575"
+    },
+    {
+      "path": "src/scriptLang/format/base.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8996d40a82b0bd7bb88ba83b948f178d2f317700",
+      "size": 710,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/8996d40a82b0bd7bb88ba83b948f178d2f317700"
+    },
+    {
+      "path": "src/scriptLang/genericTags.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4a679c8ff026c28fb7ea75b8bf2a70b0a0cc92e",
+      "size": 1514,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/b4a679c8ff026c28fb7ea75b8bf2a70b0a0cc92e"
+    },
+    {
+      "path": "src/scriptLang/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d2f19ae37393cd00e8242e856f81590745279b6",
+      "size": 2035,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/8d2f19ae37393cd00e8242e856f81590745279b6"
+    },
+    {
+      "path": "src/scriptLang/itemCodeHover.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dadbfea354c5bed33d62bdafd58ff57421469ae",
+      "size": 31578,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/6dadbfea354c5bed33d62bdafd58ff57421469ae"
+    },
+    {
+      "path": "src/scriptLang/key",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd9faea2a59836ea21ac8483cec6d49d4178621b",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/fd9faea2a59836ea21ac8483cec6d49d4178621b"
+    },
+    {
+      "path": "src/scriptLang/key/formatter.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a54af4e907daec5b2bfbce7300e8b1c184d8ed1a",
+      "size": 2494,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/a54af4e907daec5b2bfbce7300e8b1c184d8ed1a"
+    },
+    {
+      "path": "src/scriptLang/key/registerKey.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55dc1a1dcb7a087a48edd7512b121772743fe4bc",
+      "size": 270,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/55dc1a1dcb7a087a48edd7512b121772743fe4bc"
+    },
+    {
+      "path": "src/scriptLang/lst",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b9971eda5be48cc67ffe99ff58d504a4ae3034ef",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/b9971eda5be48cc67ffe99ff58d504a4ae3034ef"
+    },
+    {
+      "path": "src/scriptLang/lst/registerLst.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17091c315e1e08fc57f14173a07d173e0db811eb",
+      "size": 2280,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/17091c315e1e08fc57f14173a07d173e0db811eb"
+    },
+    {
+      "path": "src/scriptLang/skl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "90e6d25ee0f8b0fd375b3191df6776f94f51e0c8",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/90e6d25ee0f8b0fd375b3191df6776f94f51e0c8"
+    },
+    {
+      "path": "src/scriptLang/skl/example.skl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0c627cf9a828b015a28fa457943a78572c96fc5",
+      "size": 1011,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/e0c627cf9a828b015a28fa457943a78572c96fc5"
+    },
+    {
+      "path": "src/scriptLang/skl/formatter.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4877333b8d7c949bb4dd32c6eea978b67a0a42c",
+      "size": 492,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/f4877333b8d7c949bb4dd32c6eea978b67a0a42c"
+    },
+    {
+      "path": "src/scriptLang/skl/registerSkl.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f051c2b76f3350c80d1c1456a7e567a3044ef12d",
+      "size": 6089,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/f051c2b76f3350c80d1c1456a7e567a3044ef12d"
+    },
+    {
+      "path": "src/scriptLang/str",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00de853439e1405cc1f7129f70a7b66075d913f8",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/00de853439e1405cc1f7129f70a7b66075d913f8"
+    },
+    {
+      "path": "src/scriptLang/str/registerStr.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1d389daccd930768ea6f3246472aa5302c75152",
+      "size": 1949,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/c1d389daccd930768ea6f3246472aa5302c75152"
+    },
+    {
+      "path": "src/scriptLang/tagCommentEditor.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe2cd0e73f71f80242d56dd9699c03866234f6bd",
+      "size": 28547,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/fe2cd0e73f71f80242d56dd9699c03866234f6bd"
+    },
+    {
+      "path": "src/scriptLang/tagRegistry.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fda6ee9d9ff64092b3d4b32741d2f3d6a61bb06",
+      "size": 36980,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/5fda6ee9d9ff64092b3d4b32741d2f3d6a61bb06"
+    },
+    {
+      "path": "src/webview",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dad221b8cd914a77695de473b16279c7e229777b",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/dad221b8cd914a77695de473b16279c7e229777b"
+    },
+    {
+      "path": "src/webview/aniPreview.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eddea0157139f660a010f24a8b8da3e0855dfb1a",
+      "size": 60852,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/eddea0157139f660a010f24a8b8da3e0855dfb1a"
+    },
+    {
+      "path": "src/webview/apcEditor.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcb2ef78aae83bc2e756cbff832a3c898c4fc8dd",
+      "size": 28220,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/fcb2ef78aae83bc2e756cbff832a3c898c4fc8dd"
+    },
+    {
+      "path": "src/webview/apcPage",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6a43cc2e9bd0c0ba3c54f61708cd9a0795ec8ac5",
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/trees/6a43cc2e9bd0c0ba3c54f61708cd9a0795ec8ac5"
+    },
+    {
+      "path": "src/webview/apcPage/apc_parser.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38bec9846e354a194c75b7829ba6e0a5640c6f6a",
+      "size": 8881,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/38bec9846e354a194c75b7829ba6e0a5640c6f6a"
+    },
+    {
+      "path": "src/webview/apcPage/apc_types.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b128950ad54a49e2648805f3d1d2b3ed2b33218",
+      "size": 1886,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/5b128950ad54a49e2648805f3d1d2b3ed2b33218"
+    },
+    {
+      "path": "src/webview/reactDemo.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c4f64e1a53eed05abd7b028af11ce221b7fea3d",
+      "size": 3354,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/8c4f64e1a53eed05abd7b028af11ce221b7fea3d"
+    },
+    {
+      "path": "src/webview/theme.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4727c1459d95c71b4cbd13712e7604ed5f00253e",
+      "size": 1370,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/4727c1459d95c71b4cbd13712e7604ed5f00253e"
+    },
+    {
+      "path": "src/webview/unpackExplorerClient.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f6a4fbee041766b78f29588ebcda6dbbe6d83eb",
+      "size": 42227,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/6f6a4fbee041766b78f29588ebcda6dbbe6d83eb"
+    },
+    {
+      "path": "tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "178365234ce567ed3bb5a457a8c4ce9f4894862c",
+      "size": 427,
+      "url": "https://api.github.com/repos/zjysun/dnf-pvf-parser-ts/git/blobs/178365234ce567ed3bb5a457a8c4ce9f4894862c"
+    }
+  ],
+  "truncated": false
+}

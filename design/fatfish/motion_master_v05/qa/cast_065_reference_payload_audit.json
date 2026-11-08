@@ -1,0 +1,25 @@
+{
+  "cli": "C:\\Users\\A\\Desktop\\fatfish_game\\.agents\\skills\\65535\\scripts\\s65535.py",
+  "model": "gpt-image-2.5",
+  "reference_count": 3,
+  "references": [
+    {
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\references\\cast_065_pose.png",
+      "sha256": "5f76f8f91747592047edb8a762dad0329948e8ed82f5395c2952104bc7708016",
+      "bytes": 11603
+    },
+    {
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\references\\master_approved_8x.png",
+      "sha256": "69b3de02e55aa6ebda3e5192d67055a893819258d5acf1e9ba2ae1ce948f7308",
+      "bytes": 23245
+    },
+    {
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png",
+      "sha256": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d",
+      "bytes": 380772
+    }
+  ],
+  "actual_cli_body_captured_before_http": true,
+  "network_requests_during_audit": 0,
+  "caution": "Local payload proof; server task receipt does not echo image inputs."
+}

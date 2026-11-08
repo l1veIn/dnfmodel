@@ -1,0 +1,83 @@
+{
+  "package": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK",
+  "sha256": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+  "bytes": 5082298,
+  "entry_count": 64,
+  "skin_paths": 38,
+  "default_avatar_hide_paths": 26,
+  "img_frame_slots": 174,
+  "updated_slots": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "source_frames_rgba": 28,
+  "actual_walk_keyframes_in_npk": 10,
+  "roundtrip_frame_checks": 11136,
+  "all_pixel_and_coordinate_roundtrips_passed": true,
+  "non_walk_skin_frame_checks_unchanged": 6232,
+  "standing_master_pixels_unchanged": true,
+  "unmodified_default_hide_layer_payloads": 26,
+  "alpha_check": {
+    "true_rgba_frames": 28,
+    "native_size": [
+      128,
+      128
+    ],
+    "background_removed": true,
+    "opaque_subject_present": true,
+    "no_canvas_clipping": true
+  },
+  "alignment": {
+    "native_lowest_solid_shoe_y": 114,
+    "world_shoe_y": 386,
+    "before_y_range": [
+      112,
+      115
+    ],
+    "after_y_range": [
+      114,
+      114
+    ],
+    "method": "Integer vertical translation and per-bridge final correction",
+    "support_points_are_fitting_constraints": true
+  },
+  "seam": {
+    "modified_frames": [
+      25,
+      26,
+      27
+    ],
+    "method": "DIS motion estimation; final 3 frames nearest-warped from frame24/0; no color crossfade, no duplicated endpoint",
+    "before_tail_transition_max_rgb_mae": 63.73151959353919,
+    "after_tail_transition_max_rgb_mae": 48.86090311372861,
+    "last_to_first_rgb_mae": 18.216976327116214,
+    "normal_transition_max_rgb_mae": 63.96726784774809,
+    "note": "Engineering continuity check and frame inspection; not proof of no foot sliding in game"
+  },
+  "limits": [
+    "Original ANI selection/delay not parsed; client determines actual playback",
+    "Only existing movement slots0..9 replaced",
+    "All 28 RGBA source frames supplied separately; NPK does not force playback of28 frames",
+    "Weapon/turnclass overlays may not match the new motion",
+    "Other actions retain v04 test behavior/standing fallbacks"
+  ],
+  "new_generation_jobs": 0,
+  "local_gpu_inference": false,
+  "batch_started": false,
+  "game_installation_changed": false,
+  "game_runtime_validated": false,
+  "baseline_sha256_unchanged": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\Fatfish_Nearest_Standing_v04\\A_Fatfish_FMage_Nearest_Standing_v04.NPK": "37930546b52ba2824752007fe7d96f159c752e469c8980da123c6830c71f24c1",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\nearest_standing_v04\\standing_canvas.png": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\Fatfish_Grok_Walk_v01\\grok_walk_original.mp4": "92917f6152327cd2f4f521e6e3b57424ac78193d5db9811291bbaea8f4cb1fd5",
+    "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\A_Fatfish_FMage_Nearest_Standing_v04.NPK": "37930546b52ba2824752007fe7d96f159c752e469c8980da123c6830c71f24c1"
+  }
+}

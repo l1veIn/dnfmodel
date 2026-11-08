@@ -1,0 +1,146 @@
+{
+  "researched_at_utc": "2026-10-22T13:39:31.321099+00:00",
+  "user_task": "Assess local video generation for Fatfish DNF female-mage sprite animation; research only",
+  "hardware_observed": {
+    "gpu": "NVIDIA GeForce RTX 4070 SUPER",
+    "vram_total_MiB": 12282,
+    "vram_free_MiB": 9183,
+    "driver": "610.88",
+    "cpu": "AMD Ryzen 7 9800X3D",
+    "physical_ram_GiB": 31.19,
+    "free_ram_GiB": 7.6,
+    "pagefile_allocated_MiB": 10000,
+    "drive_C_free_GiB": 101.9,
+    "drive_D_free_GiB": 195.7,
+    "availability_is_point_in_time": true
+  },
+  "sources": [
+    {
+      "url": "https://zenn.dev/nekod/articles/c557520d347256",
+      "role": "User-supplied first-hand benchmark, not our machine",
+      "observations": "4070 12GB, RAM32GB; H3 5s T2V 608x352 ~2m32s warm, 864x480 ~5m12s; close to RAM exhaustion. No transfer of timings to this host."
+    },
+    {
+      "url": "https://docs.comfy.org/tutorials/video/wan/wan2_2",
+      "role": "ComfyUI primary docs",
+      "facts": [
+        "5B should fit 8GB VRAM using native offloading",
+        "5B I2V is separate from documented 14B first-last-frame workflow"
+      ]
+    },
+    {
+      "url": "https://docs.comfy.org/tutorials/video/wan/vace",
+      "role": "ComfyUI primary docs",
+      "facts": [
+        "1.3B and 14B variants",
+        "Reference-image and control-video workflows",
+        "First-last and custom keyframe sequences; length minus one divisible by four"
+      ]
+    },
+    {
+      "url": "https://docs.comfy.org/tutorials/video/minimax/minimax-h3",
+      "role": "ComfyUI primary docs",
+      "facts": [
+        "pruned_w6a8 16GB requires ComfyUI0.38+",
+        "I2V first-last control, R2V and multiframe templates",
+        "H3 native frame grid 17k+5; do not use Wan frame grid for H3"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
+      "role": "Model publisher",
+      "facts": [
+        "FL2VA accepts zero/one/two images",
+        "Ref2VA supports reference images/videos/audio"
+      ]
+    },
+    {
+      "url": "https://github.com/lllyasviel/FramePack",
+      "role": "Original implementation",
+      "facts": [
+        "Windows/Linux RTX30/40/50, at least6GBVRAM",
+        "More than30GB download; lower VRAM does not mean fast"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union-2.0",
+      "role": "Control-model author",
+      "facts": [
+        "Pose, Gray, Layout, edges and masks",
+        "Additional branch weights; not proven to fit this 12GB host"
+      ]
+    }
+  ],
+  "verified_model_file_metadata": {
+    "method": "Read-only Hugging Face tree API; no weight download",
+    "Wan2.2_5B": [
+      {
+        "file": "split_files/diffusion_models/wan2.2_ti2v_5B_fp16.safetensors",
+        "bytes": 9999658848
+      },
+      {
+        "file": "split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        "bytes": 6735906897
+      },
+      {
+        "file": "split_files/vae/wan2.2_vae.safetensors",
+        "bytes": 1409400960
+      }
+    ],
+    "H3_first_last_w6a8": [
+      {
+        "file": "diffusion_models/minimax_h3_fl2va_pruned_w6a8.safetensors",
+        "bytes": 15983746636
+      },
+      {
+        "file": "text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "bytes": 15687142551
+      },
+      {
+        "file": "vae/minimax_h3_video_vae_int8_convrot.safetensors",
+        "bytes": 2811065184
+      },
+      {
+        "file": "vae/minimax_h3_audio_vae_fp32.safetensors",
+        "bytes": 605254808
+      }
+    ]
+  },
+  "recommendation": {
+    "first_hardware_smoke_test": "ComfyUI native Wan2.2 TI2V5B, offloading enabled",
+    "motion_control_feasibility_test": "Wan VACE1.3B reference plus prepared motion/control sequence, quality/VRAM unmeasured on this host",
+    "H3": "Second-stage candidate using quantization/offload; not first install for current RAM headroom",
+    "working_generation_resolution": [
+      512,
+      512
+    ],
+    "optional_second_resolution": [
+      640,
+      640
+    ],
+    "native_sprite_window": [
+      128,
+      128
+    ],
+    "Wan_proposed_frames": 49,
+    "frame_counts_are_model_specific": true,
+    "generation_fps_and_DNF_ANI_are_not_interchangeable": true,
+    "preserve_selected_v04_master": true,
+    "inspect_loop_full_pose_sequence_and_native_pixels": true
+  },
+  "limits": [
+    "Low output resolution reduces activation/attention cost, not fixed checkpoint size",
+    "Generic video coherence does not guarantee anatomical continuity or game foot placement",
+    "No RGBA guarantee for ordinary I2V models; plan matte extraction or separately assess alpha-specific models",
+    "Original DNF ANI group/timing not yet parsed",
+    "Higher-resolution input and NN reduction can still produce temporal aliasing; inspect native frame sequence",
+    "A tiny 4-frame source fragment is not a verified complete walk cycle"
+  ],
+  "executed": {
+    "large_model_downloads": false,
+    "environment_installation": false,
+    "GPU_generation_benchmark": false,
+    "system_settings_changed": false,
+    "game_installation_changed": false
+  }
+}

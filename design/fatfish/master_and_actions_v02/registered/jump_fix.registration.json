@@ -1,0 +1,67 @@
+{
+  "name": "jump_fix",
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\jump_fix_0.png",
+  "sha256": "14d8d98da65543f82b4fb56b1a9b2ef5341809e71fac4130d1c835f783ce5f9b",
+  "raw_eye": [
+    632.0,
+    287.0
+  ],
+  "raw_sole": [
+    388.0,
+    934.0
+  ],
+  "target_eye": [
+    253.0,
+    309.0
+  ],
+  "target_sole": [
+    230.0,
+    386.0
+  ],
+  "actual_eye": [
+    252.99999999999997,
+    309.0
+  ],
+  "actual_sole": [
+    229.99999999999997,
+    386.0
+  ],
+  "resized_canvas": [
+    122,
+    122
+  ],
+  "scale_x": 0.11621687972288088,
+  "scale_y": 0.11621687972288088,
+  "translation": [
+    177.3875790816593,
+    280.8924740403016
+  ],
+  "transform_type": "global_similarity",
+  "matrix_2x3": [
+    [
+      0.11592926831818799,
+      0.008171161467755598,
+      177.3875790816593
+    ],
+    [
+      -0.008171161467755598,
+      0.11592926831818799,
+      280.8924740403016
+    ]
+  ],
+  "rotation_degrees": -4.031769381238026,
+  "landmark_method": "Manually annotated visible eye and sole, approximate 1-2 native pixels; no skeleton detector.",
+  "processing": "Single-pass global similarity (if requested) or uniform resize + translation. Nearest and filtered candidates. Clean candidate thresholds alpha at 128, no palette reduction, local deformation or repainting. Eye/sole are fitting anchors, not independent validation.",
+  "source_modified": false,
+  "game_ready": false,
+  "outputs": [
+    {
+      "method": "nearest",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\registered\\jump_fix_nearest_canvas.png"
+    },
+    {
+      "method": "bicubic",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\registered\\jump_fix_bicubic_canvas.png"
+    }
+  ]
+}

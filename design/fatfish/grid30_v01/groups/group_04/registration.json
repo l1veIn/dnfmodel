@@ -1,0 +1,191 @@
+{
+  "shared_scale_from_640_to_native": 0.18390313764650235,
+  "shared_translation_native": [
+    10.34679337257581,
+    24.932050507174015
+  ],
+  "per_frame_scaling": false,
+  "frames": [
+    {
+      "slot": 0,
+      "eye_annotation_640": [
+        429,
+        207
+      ],
+      "integer_translation_native": [
+        -1,
+        0
+      ],
+      "translation_native": [
+        9.34679337257581,
+        24.932050507174015
+      ],
+      "target_sole_y": 131,
+      "nearest_sole_y": 131,
+      "nearest_bbox": [
+        25,
+        46,
+        117,
+        132
+      ],
+      "hd_bbox": [
+        100,
+        182,
+        465,
+        527
+      ],
+      "local_limb_warp": false
+    },
+    {
+      "slot": 1,
+      "eye_annotation_640": [
+        435,
+        191
+      ],
+      "integer_translation_native": [
+        -2,
+        0
+      ],
+      "translation_native": [
+        8.34679337257581,
+        24.932050507174015
+      ],
+      "target_sole_y": 131,
+      "nearest_sole_y": 131,
+      "nearest_bbox": [
+        27,
+        42,
+        118,
+        132
+      ],
+      "hd_bbox": [
+        107,
+        167,
+        470,
+        527
+      ],
+      "local_limb_warp": false
+    },
+    {
+      "slot": 2,
+      "eye_annotation_640": [
+        372,
+        193
+      ],
+      "integer_translation_native": [
+        1,
+        1
+      ],
+      "translation_native": [
+        11.34679337257581,
+        25.932050507174015
+      ],
+      "target_sole_y": 135,
+      "nearest_sole_y": 135,
+      "nearest_bbox": [
+        38,
+        41,
+        111,
+        136
+      ],
+      "hd_bbox": [
+        152,
+        164,
+        440,
+        543
+      ],
+      "local_limb_warp": false
+    },
+    {
+      "slot": 3,
+      "eye_annotation_640": [
+        329,
+        169
+      ],
+      "integer_translation_native": [
+        16,
+        1
+      ],
+      "translation_native": [
+        26.34679337257581,
+        25.932050507174015
+      ],
+      "target_sole_y": 135,
+      "nearest_sole_y": 135,
+      "nearest_bbox": [
+        41,
+        39,
+        116,
+        136
+      ],
+      "hd_bbox": [
+        162,
+        153,
+        462,
+        542
+      ],
+      "local_limb_warp": false
+    },
+    {
+      "slot": 4,
+      "eye_annotation_640": [
+        465,
+        223
+      ],
+      "integer_translation_native": [
+        -8,
+        -1
+      ],
+      "translation_native": [
+        2.34679337257581,
+        23.932050507174015
+      ],
+      "target_sole_y": 131,
+      "nearest_sole_y": 131,
+      "nearest_bbox": [
+        18,
+        48,
+        115,
+        132
+      ],
+      "hd_bbox": [
+        71,
+        189,
+        460,
+        526
+      ],
+      "local_limb_warp": false
+    },
+    {
+      "slot": 5,
+      "eye_annotation_640": [
+        468,
+        301
+      ],
+      "integer_translation_native": [
+        8,
+        1
+      ],
+      "translation_native": [
+        18.34679337257581,
+        25.932050507174015
+      ],
+      "target_sole_y": 129,
+      "nearest_sole_y": 129,
+      "nearest_bbox": [
+        39,
+        64,
+        131,
+        130
+      ],
+      "hd_bbox": [
+        152,
+        254,
+        522,
+        520
+      ],
+      "local_limb_warp": false
+    }
+  ],
+  "limitations": "Manual eye x and source shoe rows are fitting controls, not independent proof of no foot sliding. No correction of limb pose, anatomy or costume drift."
+}

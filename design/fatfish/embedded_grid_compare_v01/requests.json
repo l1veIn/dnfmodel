@@ -1,0 +1,42 @@
+{
+  "requests": [
+    {
+      "name": "embedded_3x3",
+      "model": "gpt-image-2.5",
+      "input": {
+        "prompt": "Use case: identity-preserve. Edit the ONE attached sprite sheet.\nThere are 3 columns x 3 rows, read left-to-right then top-to-bottom. The FIRST / TOP-LEFT cell marked REF is the approved blue Fatfish whale-maid. KEEP THIS FIRST SPRITE UNCHANGED. It is the identity, costume and pixel-art style reference, not a walking pose.\nReplace the original red-haired female mage in EACH of the remaining 8 cells (IMG000 through IMG007) with this SAME blue Fatfish character. Copy the first cell's face, proportions, navy-to-cyan wavy hair, curled ahoge, white maid headband, whale-fin ears, navy long sleeves, white whale apron, gold trim, white tights, navy shoes and whale tail consistently. Do not copy the original character's red hair, hat or clothes.\nEACH TARGET CELL controls its OWN exact pose: preserve that cell's head position, torso lean, shoulder/elbow/wrist/hand positions, knees/ankles, shoe positions and left/right limb overlaps. In particular match each distinct arm swing and leg spread; do not repeat the first cell's standing pose. Sleeves must meet hands, legs stay slender, and all joints remain connected. Only adapt the character appearance to the pose. No invented intermediate poses, reordered cells, missing figures or duplicate poses.\nKeep exactly the existing sheet layout and fixed camera. Output 2048x2048 RGBA PNG. Each cell is 640x640, representing the same fixed 160x160 game-coordinate window at 4x scale. Do not auto-center or enlarge individual sprites. Keep the thin dividers and small original cell labels, remove the solid gray cell backgrounds to real alpha transparency. No painted checkerboard, floor, cast shadow, effects, weapons, motion blur, extra text or decoration. Keep the reference's restrained pixel shading and avoid smooth illustration-style repainting. Fit every full figure, hair, hands, tail and shoes wholly inside its cell.\n",
+        "n": 1,
+        "size": "1:1",
+        "resolution": "2k",
+        "background": "transparent",
+        "quality": "high"
+      },
+      "local_reference_paths": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\embedded_grid_compare_v01\\references\\embedded_3x3_input.png"
+      ],
+      "reference_sha256": [
+        "8c93390a5fe9c0d96749870ea0a342a8a0a951934d0932d16c0cf51ca4e406fe"
+      ],
+      "output_directory": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\embedded_grid_compare_v01\\raw"
+    },
+    {
+      "name": "embedded_2x3",
+      "model": "gpt-image-2.5",
+      "input": {
+        "prompt": "Use case: identity-preserve. Edit the ONE attached sprite sheet.\nThere are 2 columns x 3 rows, read left-to-right then top-to-bottom. The FIRST / TOP-LEFT cell marked REF is the approved blue Fatfish whale-maid. KEEP THIS FIRST SPRITE UNCHANGED. It is the identity, costume and pixel-art style reference, not a walking pose.\nReplace the original red-haired female mage in EACH of the remaining 5 cells (IMG000 through IMG004) with this SAME blue Fatfish character. Copy the first cell's face, proportions, navy-to-cyan wavy hair, curled ahoge, white maid headband, whale-fin ears, navy long sleeves, white whale apron, gold trim, white tights, navy shoes and whale tail consistently. Do not copy the original character's red hair, hat or clothes.\nEACH TARGET CELL controls its OWN exact pose: preserve that cell's head position, torso lean, shoulder/elbow/wrist/hand positions, knees/ankles, shoe positions and left/right limb overlaps. In particular match each distinct arm swing and leg spread; do not repeat the first cell's standing pose. Sleeves must meet hands, legs stay slender, and all joints remain connected. Only adapt the character appearance to the pose. No invented intermediate poses, reordered cells, missing figures or duplicate poses.\nKeep exactly the existing sheet layout and fixed camera. Output 1365x2048 RGBA PNG. Each cell is 640x640, representing the same fixed 160x160 game-coordinate window at 4x scale. Do not auto-center or enlarge individual sprites. Keep the thin dividers and small original cell labels, remove the solid gray cell backgrounds to real alpha transparency. No painted checkerboard, floor, cast shadow, effects, weapons, motion blur, extra text or decoration. Keep the reference's restrained pixel shading and avoid smooth illustration-style repainting. Fit every full figure, hair, hands, tail and shoes wholly inside its cell.\n",
+        "n": 1,
+        "size": "2:3",
+        "resolution": "2k",
+        "background": "transparent",
+        "quality": "high"
+      },
+      "local_reference_paths": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\embedded_grid_compare_v01\\references\\embedded_2x3_input.png"
+      ],
+      "reference_sha256": [
+        "802ed2acfe9640c48c26acb274c6cb150f93ebc8a444ae848a6d45a46bddb1e0"
+      ],
+      "output_directory": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\embedded_grid_compare_v01\\raw"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+ "title": "女枪手 · Claude 大小姐",
+ "version": 2,
+ "class": "gunner",
+ "equipment": "atequipment",
+ "frames": 143,
+ "materials": "female_gunner",
+ "out": "Claude_Gunner_v02",
+ "master": "claude_a_0.png",
+ "npk_stem": "A_Claude_FGunner",
+ "body": "skin/gg_body0000",
+ "composite_order": [
+  "pants/gg_pants0000d",
+  "hair/gg_hair0000d",
+  "hair/gg_hair0000b",
+  "skin/gg_body0000",
+  "shoes/gg_shoes0000b",
+  "shoes/gg_shoes0000a",
+  "pants/gg_pants0000a",
+  "coat/gg_coat0000d",
+  "coat/gg_coat0000c",
+  "coat/gg_coat0000b",
+  "coat/gg_coat0000a",
+  "face/gg_face10000b",
+  "hair/gg_hair0000a",
+  "cap/gg_cap0000c"
+ ],
+ "figure_layers": [
+  "skin/gg_body0000",
+  "pants/gg_pants0000a",
+  "shoes/gg_shoes0000a",
+  "shoes/gg_shoes0000b",
+  "coat/gg_coat0000a",
+  "coat/gg_coat0000b",
+  "coat/gg_coat0000c"
+ ],
+ "cover_layers": [
+  "coat/gg_coat0000a",
+  "coat/gg_coat0000b",
+  "coat/gg_coat0000c",
+  "coat/gg_coat0000d",
+  "pants/gg_pants0000a",
+  "hair/gg_hair0000a"
+ ],
+ "weapon": {
+  "kind": "rev",
+  "label": "左轮",
+  "layers": [
+   "gg_rev0000b",
+   "gg_rev0000c"
+  ]
+ },
+ "standing_frames": [
+  14,
+  20
+ ],
+ "height_ratio": 0.9764,
+ "preview_box": [
+  110,
+  170,
+  400,
+  350
+ ],
+ "character": {
+  "name": "Claude 大小姐",
+  "reference_image": "C:/Users/A/Desktop/fatfish_game/refs/ai_girl/claude.jpg",
+  "identity": "the same tall slim elegant lady, with the same head size and proportions, very long straight orange hair, orange flower hair ornament with a black ribbon, high ruffled collar with an orange flower brooch and black cravat, cream capelet, full cream sleeves with frilled cuffs, black corset with gold buttons, floor-length bell gown with a cream center, orange front panel, black side panels, gold trim, orange flower bows and a frilled hem, white lace-up boots. Pale skin. Bare hands.",
+  "hands_rule": "All her hands are empty: no gun, no weapon, no book."
+ },
+ "license_note": "Claude 娘是民间二创形象，不是 Anthropic 官方形象，原作者和授权未核实，请仅自用。",
+ "hand_detect": "visible_skin"
+}

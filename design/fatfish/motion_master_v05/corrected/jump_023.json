@@ -1,0 +1,82 @@
+{
+  "name": "jump_023",
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\registered\\jump_023_canvas.png",
+  "source_sha256": "1801862e781302f8f3e61246bb4a3a7eb0bfc44cd28d7c6ef10df470f125ca9d",
+  "output": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\corrected\\jump_023_canvas.png",
+  "output_sha256": "e440a732569c7ad2d447ba7119d062036fae84cba52b8f232272c6916b82b180",
+  "outside_fit_masks_pixels_identical": true,
+  "each_output_pixel_sampled_once_from_raw": true,
+  "head_face_reuse": false,
+  "alpha_preserved": true,
+  "fits": [
+    {
+      "label": "rear_hand",
+      "raw": [
+        300,
+        277
+      ],
+      "target": [
+        224,
+        305
+      ],
+      "root": [
+        236,
+        302
+      ],
+      "polygon": [
+        [
+          232,
+          297
+        ],
+        [
+          238,
+          300
+        ],
+        [
+          237,
+          306
+        ],
+        [
+          227,
+          312
+        ],
+        [
+          215,
+          314
+        ],
+        [
+          212,
+          307
+        ],
+        [
+          220,
+          301
+        ]
+      ],
+      "registered_endpoint": [
+        219.60700939415193,
+        309.12529751980594
+      ],
+      "before_error_native_px": 6.026312810499172,
+      "raw_to_final_matrix": [
+        [
+          0.0833806775036423,
+          -0.012630823869177894,
+          202.4845349606696
+        ],
+        [
+          0.012630823869177896,
+          0.0833806775036423,
+          278.1143051707377
+        ]
+      ],
+      "local_rotation_degrees": 9.456179304699054,
+      "local_scale": 0.6920066696352253,
+      "fitted_endpoint": [
+        224.00000000000003,
+        304.99999999999994
+      ]
+    }
+  ],
+  "caution": "These manual endpoints are local fitting constraints, not independent proof of correct anatomy or no sliding; inspect shoe pixels and joint seams."
+}

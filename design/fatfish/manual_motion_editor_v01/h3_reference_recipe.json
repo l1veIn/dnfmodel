@@ -1,0 +1,40 @@
+{
+  "status": "prepared_reference_recipe_only_not_submitted",
+  "model": "MiniMax H3 R2V / rv2v",
+  "inputs": {
+    "appearance_image": "design/fatfish/action_samples_v01/raw/idle_01_0.png",
+    "motion_video": "Choose the user's saved action and export its MP4 from the motion editor."
+  },
+  "roles": {
+    "appearance": "Use Picture 1 for character identity, costume, whale ears, ahoge, long blue hair, and a separate whale tail attached behind the lower back.",
+    "motion": "Use Video 1 for body movement, stepping rhythm, arm height, foot contacts, direction, and camera framing."
+  },
+  "prompt": "Use <Picture 1> as the character design reference. Use <Video 1> as the motion and timing reference. Replace the original female mage with the blue whale maid from <Picture 1>, retaining the source body's head, torso, arm and leg movement, foot contacts and walking rhythm. Locked camera, fixed sprite framing, neutral flat gray background. Keep the same costume and proportions throughout. The long hair, whale ears, ahoge and separate fleshy whale tail move naturally with the gait; the tail is attached behind the lower back and is distinct from the skirt. One continuous action, no cuts, no zoom, no extra characters, no props, no text.",
+  "cloud_payload_template": {
+    "prompt": "Use the prompt above; verify service tag syntax at submission.",
+    "imageUrls": [
+      "UPLOADED_APPEARANCE_IMAGE_URL"
+    ],
+    "videoUrls": [
+      "UPLOADED_MOTION_VIDEO_URL"
+    ],
+    "resolution": "768P",
+    "duration": "5",
+    "ratio": "adaptive",
+    "aigc_watermark": false
+  },
+  "local_requirements": {
+    "model": "Ref2VA checkpoint required; not installed or memory-validated on this 12GB GPU.",
+    "reference_fps": 24,
+    "suggested_steps": 20,
+    "two_pass": false,
+    "pose_control": false,
+    "source_video": "Use original RGB source clip, not the extracted skeleton."
+  },
+  "notes": [
+    "Cloud payload placeholders are not local filesystem paths or ready-to-send URLs.",
+    "Clip default trial timing must be reviewed before any model test.",
+    "No API key has been read or configured and no paid generation has been submitted.",
+    "Local 124-frame clip is5.1667s; confirm cloud output duration/cropping before comparing timing."
+  ]
+}

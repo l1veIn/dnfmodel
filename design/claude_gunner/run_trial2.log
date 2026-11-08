@@ -1,0 +1,28 @@
+{"event": "accepted", "stage": "execute", "prompt_id": "c1f7a4ab-fa86-407f-9fcd-dcd8c01a4466"}
+{"event": "running", "stage": "execute", "prompt_id": "c1f7a4ab-fa86-407f-9fcd-dcd8c01a4466", "ram_available_GiB": 15.7, "gpu": "1320, 6"}
+{"event": "running", "stage": "execute", "prompt_id": "c1f7a4ab-fa86-407f-9fcd-dcd8c01a4466", "ram_available_GiB": 11.17, "gpu": "9112, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "c1f7a4ab-fa86-407f-9fcd-dcd8c01a4466", "ram_available_GiB": 10.67, "gpu": "11448, 95"}
+{"event": "running", "stage": "execute", "prompt_id": "c1f7a4ab-fa86-407f-9fcd-dcd8c01a4466", "ram_available_GiB": 10.66, "gpu": "11448, 91"}
+{"event": "running", "stage": "execute", "prompt_id": "c1f7a4ab-fa86-407f-9fcd-dcd8c01a4466", "ram_available_GiB": 10.62, "gpu": "11448, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "c1f7a4ab-fa86-407f-9fcd-dcd8c01a4466", "ram_available_GiB": 10.64, "gpu": "11448, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "c1f7a4ab-fa86-407f-9fcd-dcd8c01a4466", "ram_available_GiB": 10.67, "gpu": "11448, 96"}
+{"event": "running", "stage": "execute", "prompt_id": "c1f7a4ab-fa86-407f-9fcd-dcd8c01a4466", "ram_available_GiB": 10.64, "gpu": "11448, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "c1f7a4ab-fa86-407f-9fcd-dcd8c01a4466", "ram_available_GiB": 10.64, "gpu": "11448, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "c1f7a4ab-fa86-407f-9fcd-dcd8c01a4466", "ram_available_GiB": 10.73, "gpu": "11448, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "c1f7a4ab-fa86-407f-9fcd-dcd8c01a4466", "ram_available_GiB": 10.71, "gpu": "11448, 95"}
+{"event": "stage_completed", "stage": "execute", "seconds": 323.68, "videos": ["D:\\VideoStudio\\comfyUI\\shared\\output\\video\\claude_gunner_v01\\clip_068_075_a02_00001_.mp4"]}
+{"clip": "clip_068_075", "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\claude_gunner_v01\\clip_068_075_a02_00001_.mp4", "seconds": 323.68, "ram": {"ram_available_gib": 15.820018768310547, "commit_available_gib": 15.06143569946289, "commit_total_gib": 40.95303726196289}}
+{"event": "accepted", "stage": "execute", "prompt_id": "49596261-ea04-4797-82d6-6c6511c0d6a3"}
+{"event": "running", "stage": "execute", "prompt_id": "49596261-ea04-4797-82d6-6c6511c0d6a3", "ram_available_GiB": 15.82, "gpu": "1320, 1"}
+{"event": "running", "stage": "execute", "prompt_id": "49596261-ea04-4797-82d6-6c6511c0d6a3", "ram_available_GiB": 11.26, "gpu": "9272, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "49596261-ea04-4797-82d6-6c6511c0d6a3", "ram_available_GiB": 10.72, "gpu": "11448, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "49596261-ea04-4797-82d6-6c6511c0d6a3", "ram_available_GiB": 10.96, "gpu": "11448, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "49596261-ea04-4797-82d6-6c6511c0d6a3", "ram_available_GiB": 10.99, "gpu": "11448, 95"}
+{"event": "running", "stage": "execute", "prompt_id": "49596261-ea04-4797-82d6-6c6511c0d6a3", "ram_available_GiB": 10.93, "gpu": "11448, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "49596261-ea04-4797-82d6-6c6511c0d6a3", "ram_available_GiB": 10.98, "gpu": "11448, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "49596261-ea04-4797-82d6-6c6511c0d6a3", "ram_available_GiB": 10.99, "gpu": "11448, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "49596261-ea04-4797-82d6-6c6511c0d6a3", "ram_available_GiB": 11.0, "gpu": "11448, 95"}
+{"event": "running", "stage": "execute", "prompt_id": "49596261-ea04-4797-82d6-6c6511c0d6a3", "ram_available_GiB": 11.02, "gpu": "11448, 100"}
+{"event": "running", "stage": "execute", "prompt_id": "49596261-ea04-4797-82d6-6c6511c0d6a3", "ram_available_GiB": 10.98, "gpu": "11448, 100"}
+{"event": "stage_completed", "stage": "execute", "seconds": 323.74, "videos": ["D:\\VideoStudio\\comfyUI\\shared\\output\\video\\claude_gunner_v01\\clip_108_112_a02_00001_.mp4"]}
+{"clip": "clip_108_112", "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\claude_gunner_v01\\clip_108_112_a02_00001_.mp4", "seconds": 323.74, "ram": {"ram_available_gib": 16.076892852783203, "commit_available_gib": 15.099800109863281, "commit_total_gib": 40.95303726196289}}

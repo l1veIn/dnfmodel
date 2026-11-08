@@ -1,0 +1,57 @@
+{
+  "submitted_jobs": 1,
+  "decoded_reference_payload_hashes_verified": true,
+  "references": [
+    {
+      "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\fixed_three_trial_v01\\references\\input_grid_2048.png",
+      "decoded_bytes": 449299,
+      "decoded_sha256": "4550172019e39627dbbb6d0ba403fdf107166928239e479dbae242d62724015d"
+    },
+    {
+      "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\fixed_three_trial_v01\\references\\appearance_original_1024.png",
+      "decoded_bytes": 380772,
+      "decoded_sha256": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d"
+    }
+  ],
+  "frame_counts": {
+    "original": 6,
+    "registered_hd": 6,
+    "nearest": 6,
+    "raw_nearest": 6
+  },
+  "frame_sizes": {
+    "original": [
+      160,
+      160
+    ],
+    "registered_hd": [
+      640,
+      640
+    ],
+    "nearest": [
+      160,
+      160
+    ],
+    "raw_nearest": [
+      160,
+      160
+    ]
+  },
+  "no_registered_sprite_bbox_touches_window_edge": true,
+  "six_nearest_frames_distinct": true,
+  "apng_six_frames_pixel_verified_by_exporter": true,
+  "protected_files_unchanged": true,
+  "npk_created": false,
+  "ani_sequence_verified": false,
+  "human_acceptance": "pending",
+  "browser_checks": {
+    "all_three_comparison_views_visible": true,
+    "thumbnail_selection_IMG004_and_IMG000": true,
+    "dark_and_checker_backgrounds": true,
+    "original_overlay_toggle": true,
+    "registration_toggle": true,
+    "six_frame_playback_stopped_at_IMG005": true,
+    "screenshot": "evidence/preview_verified.jpg"
+  },
+  "main_dashboard_links_to_trial": true
+}

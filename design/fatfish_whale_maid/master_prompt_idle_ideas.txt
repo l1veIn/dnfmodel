@@ -1,0 +1,13 @@
+Image 1 is the finished appearance master for a 2D action game character. Draw this exact same character four times, side by side in one image, in four different relaxed idle poses. Same face, hair, headband, fins, ahoge, maid dress, apron, sleeves joined at the shoulder, white tights, shoes, the same short thick whale tail growing from her hips and lifting a little behind her, and the same colors, outlines and small head with adult proportions. Do not redesign anything.
+
+Each pose is a calm, carefree moment: she has nothing to do and is enjoying herself. Her shoulders drop, her body has a soft S-curve instead of standing straight, and her head tilts a little. A happy relaxed smile. Three-quarter view facing RIGHT in all four, like Image 1. Her hands are empty. Both feet are on the same ground line, both legs and both shoes clearly visible below the skirt.
+
+From left to right:
+1. Both hands clasped loosely behind her back, chest a little forward, head tilted to one side, leaning back on her heels with the toes of her front shoe lifted, playful.
+2. Her weight on her rear leg with the hip pushed out, the near hand resting on her hip with the elbow out, the far arm hanging loose, the front knee relaxed and bent, head tilted, easygoing.
+3. Both hands held loosely together low in front of her apron, shoulders relaxed, her front foot crossed lightly in front of the other on its toe, head tilted down a little with smiling closed eyes, gentle.
+4. The far hand playing with a lock of hair at her chest, the near arm hanging loose, her weight on one leg and the other knee bent with the heel lifted, looking up to the right as if daydreaming.
+
+Layout: exactly four separate full-body figures in a single row, each centered in its own quarter of the image width, the same height, the soles on the same line, about 0.85 of the image height tall. Nothing overlaps, and hair, tail and hands stay inside each figure's own quarter with a clear gap between figures.
+
+Style: the same clean cel shading, flat colors and crisp outlines as Image 1. Every shape is fully opaque. Background: completely flat uniform medium gray, RGB 128 128 128. No shadow, no floor, no effects, no grid lines, no numbers, no text.

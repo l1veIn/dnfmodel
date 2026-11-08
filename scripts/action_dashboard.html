@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>大肥鱼 · 女法动作工作台</title>
+  <link rel="stylesheet" href="app.css">
+  <script src="catalog.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="./" aria-label="动作工作台首页"><span class="brand-mark">ϟ</span><span>肥鱼工坊<small>女法师 · 动作制作</small></span></a>
+      <div class="master-card"><img id="master-thumb" alt="已确认的大肥鱼造型"><div><span class="eyebrow">当前造型</span><strong>蓝色大肥鱼</strong><span class="master-check">✓ 主帧已确认</span></div></div>
+      <span class="nav-label">素材与动作目录</span>
+      <nav id="status-nav" aria-label="素材与归类视图"></nav>
+      <div class="sidebar-evidence"><strong>归类规则</strong><p>本轮25段采用你的手工标注；素材完成与游戏内验收分别记录。</p><a href="evidence/research_report.md" target="_blank">查看查证记录 ↗</a></div>
+      <div class="sidebar-bottom"><span id="connection" class="connection">正在连接进度记录</span><small>备注与验收记录保存在本机</small><button id="export-progress" class="text-button">导出进度</button></div>
+    </aside>
+
+    <main>
+      <header class="page-header"><div><div class="eyebrow">FATFISH / MOTION LIBRARY</div><h1>动作工作台</h1><p>原版与肥鱼逐帧对照，动作归类与素材验收分别记录。</p></div><a class="secondary-button download-link" href="downloads/A_Fatfish_FMage_Grok_Walk_Test_v01.NPK" download>↓ 走路测试 NPK</a></header>
+      <section class="summary evidence-summary" aria-label="归类与素材记录">
+        <div class="metric"><span>已通过制作片段</span><strong id="approved-total">1</strong><small>保留你的验收记录</small></div>
+        <div class="metric"><span>手工标注动作</span><strong id="verified-total">0</strong><small>覆盖本次174帧模板</small></div>
+        <div class="metric"><span>待补齐帧位</span><strong id="unclassified-total">174</strong><small>按实际透明素材统计</small></div>
+        <div class="metric"><span>已有肥鱼素材帧位</span><strong id="asset-total">0</strong><small>本轮实际透明素材</small></div>
+      </section>
+      <section class="accepted-banner"><span class="check-symbol">✓</span><div><strong>步行制作片段已通过</strong><span>28 帧源片段 · 入包 10 帧 · ANI 引用关系另待核实</span></div><button id="open-walk" class="text-button">查看对照 →</button></section>
+      <p class="catalog-note"><a href="trials/full_ref2va_v01/preview.html"><strong>本轮完整制作进度 · 25段 / 174帧 →</strong></a></p>
+      <!-- GROWTYPE_ADDON -->
+      <details class="trial-history"><summary>历史试验与方法对照</summary>
+      <p class="catalog-note" style="margin:12px 0">新方法小样：<a href="trials/grid_walk_v01/preview.html">九宫格重绘步行 · 9帧对照预览 →</a>　待验收，单独保留。</p>
+      <p class="catalog-note" style="margin:12px 0">最新对照：<a href="trials/embedded_grid_compare_v01/preview.html">主帧放入同图 · 九宫格 / 六宫格同步比较 →</a>　各生成一张，比较共同 5 帧，待验收。</p>
+      <p class="catalog-note" style="margin:12px 0">宫格递进：<a href="trials/grid_progression_v01/preview.html">高清设定参考 · 两组14帧 / 跨组接缝 / 鱼尾检查 →</a>　待验收；独立保留，未全量。</p>
+      <p class="catalog-note" style="margin:12px 0">当前实验：<a href="trials/endpoint_grid_v01/preview.html">只给首尾＋AI补四个中间帧 · 旧新同步对照 →</a>　单张候选，未验收。<a href="trials/grid30_v01/preview.html">之前30帧NPK</a>（用户反馈抖动较大） · <a href="trials/fixed_three_trial_v01/preview.html">首轮六帧小样</a></p>
+      <p class="catalog-note" style="margin:12px 0">最新拆件试验：<a href="trials/rig_walk_v01/preview.html">固定部件＋一次局部补画 · 原版 / 宫格 / Grok 同步对照 →</a>　20帧短循环，待验收；未批量，未生成NPK。</p>
+      <p class="catalog-note" style="margin:12px 0">最新视频对照：<a href="trials/h3_walk_v01/preview.html">本机 H3 一采 / 二采 / 上轮 Grok · 同首帧对照 →</a>　单段测试，待验收；未批量、未生成NPK。</p>
+      <p class="catalog-note" style="margin:12px 0">最新 Pose 试验：<a href="trials/h3_pose_walk_v01/preview.html">原版骨架 / H3 Pose / 旧 H3 / Grok · 六路同步对照 →</a>　单段一采，待验收。</p>
+      <p class="catalog-note" style="margin:12px 0">最新Pose调整：<a href="trials/h3_pose_walk_v02/preview.html">解码排查 / 补全躯干＋弱Pose / 旧Pose / Grok →</a>　单段测试，待验收。</p>
+      <p class="catalog-note" style="margin:12px 0">手工分段与配时：<a href="http://127.0.0.1:8791/motion-editor/">拖选原版连续帧 · 立即预览 · 导出动作参考视频 →</a></p>
+      <p class="catalog-note" style="margin:12px 0">最新完整视频参考：<a href="trials/h3_reference_walk_v01/preview.html">Ref2VA＋高清造型 / 用户配时原版 / 弱Pose / Grok →</a>　仅一段，待验收。</p>
+      </details>
+      <section class="mapping-notice" aria-label="动作归类依据"><div><span class="mapping-symbol">!</span><div><strong>本轮按25段手工标注制作；游戏内验收另记</strong><p id="mapping-summary"></p></div></div><details><summary>查看 ANI 解析与查证依据</summary><div id="mapping-checks"></div><p id="mapping-admission"></p><div id="mapping-links" class="evidence-links"></div></details></section>
+      <div class="library-toolbar"><div><h2 id="list-heading">全部动作片段</h2><span id="list-count"></span></div><div class="library-controls"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="查找动作或 IMG 帧号" aria-label="搜索动作或帧号"></label><label class="animate-toggle"><input id="animate-thumbs" type="checkbox" checked>播放缩略图</label></div></div>
+      <p class="catalog-note" id="catalog-note"></p>
+      <section id="clip-grid" class="clip-grid" aria-label="素材与动作列表"></section>
+      <div id="empty" class="empty-search" hidden></div>
+      <details class="frame-index"><summary>全部 174 个原始帧位索引 <span>点击对照；颜色仅表示素材状态</span></summary><div id="slot-grid" class="slot-grid" aria-label="174帧位制作索引"></div><p class="index-legend"><i class="dot approved"></i>本轮验收通过 <i class="dot partial"></i>本轮已产出 <i class="dot missing"></i>暂无肥鱼素材</p></details>
+      <footer>同一游戏坐标窗口 · 每段固定缩放 · 按你的手工标注预览，游戏内配时仍由客户端 ANI 决定</footer>
+    </main>
+  </div>
+
+  <dialog id="detail" aria-labelledby="detail-title">
+    <div class="detail-top"><div><div class="detail-breadcrumb" id="detail-category"></div><h2 id="detail-title"></h2></div><button id="close-detail" class="icon-button" aria-label="关闭动作对照">×</button></div>
+    <div class="detail-info"><span id="detail-status"></span><span id="detail-coverage"></span><span id="detail-range"></span></div>
+    <p id="detail-note" class="detail-note"></p>
+    <p id="detail-evidence" class="detail-evidence"></p>
+    <div class="viewer-toolbar"><div class="segmented" role="group" aria-label="对照方式"><button id="view-side" aria-pressed="true">并排对照</button><button id="view-overlay" aria-pressed="false">叠加对齐</button></div><label id="version-label" hidden>片段 <select id="version" aria-label="片段版本"><option value="mapped">入包 10 帧</option><option value="source28">完整源片段 28 帧</option></select></label><label>倍率 <select id="zoom" aria-label="预览倍率"><option value="1">1×</option><option value="2" selected>2×</option><option value="3">3×</option></select></label><label>背景 <select id="background" aria-label="预览背景"><option value="checker">棋盘格</option><option value="dark">深色</option><option value="white">白色</option></select></label><label class="guide-label"><input id="show-guides" type="checkbox">坐标线</label></div>
+    <div id="viewers" class="viewers" style="--zoom:2"><figure><figcaption><span class="original-dot"></span>原版女法师 <span id="original-label"></span></figcaption><div class="sprite-stage checker"><img id="original-frame" alt="原版当前动作帧"><span class="h-guide"></span><span class="v-guide"></span></div></figure><figure id="fatfish-figure"><figcaption><span class="fatfish-dot"></span>大肥鱼 <span id="fatfish-label"></span></figcaption><div id="fatfish-stage" class="sprite-stage checker"><img id="fatfish-frame" alt="肥鱼版当前动作帧"><img id="overlay-original" class="overlay-original" alt="原版轮廓叠加参考"><span id="missing-frame" class="missing-frame" hidden>这一帧尚未制作</span><span class="h-guide"></span><span class="v-guide"></span></div></figure></div>
+    <div class="playback-toolbar"><button id="play" class="primary-button">暂停</button><button id="previous" class="secondary-button" aria-label="上一帧">← 上一帧</button><button id="next" class="secondary-button" aria-label="下一帧">下一帧 →</button><input id="timeline" type="range" min="0" max="9" value="0" aria-label="当前动作帧"><span id="frame-counter"></span><label>速度 <select id="speed" aria-label="预览速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label></div>
+    <p class="timing-note" id="timing-note"></p>
+    <div id="filmstrip" class="filmstrip" aria-label="逐帧选择"></div>
+    <section class="review-panel"><div class="review-heading"><div><h3>验收记录</h3><span id="review-help"></span></div><span id="review-updated"></span></div><textarea id="review-note" rows="3" maxlength="4000" placeholder="记录手脚、造型、接缝或需要修改的具体帧号…" aria-label="动作验收备注"></textarea><div class="review-actions"><button id="approve" class="primary-button">✓ 验收通过</button><button id="request-changes" class="secondary-button">退回修改</button><button id="save-note" class="secondary-button">保存备注</button><span id="save-state" role="status"></span></div></section>
+    <div id="detail-links" class="detail-links"></div>
+  </dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

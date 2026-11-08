@@ -1,0 +1,117 @@
+{
+  "provider": "65535",
+  "model": "gpt-image-2.5",
+  "created_at": "2026-10-22T12:32:02.118762+00:00",
+  "baseline_usage_cost": 21.118,
+  "usage_unit": "USD",
+  "budget_authorization": "Existing unlimited authorization; limited to six requested preview images",
+  "jobs": {
+    "walk_000": {
+      "state": "downloaded",
+      "source_frame": 0,
+      "category": "walk_000",
+      "started_at": "2026-10-22T12:32:02.144758+00:00",
+      "task_id": "img_7183be17edac23e695b399daddd6c860",
+      "submitted_at": "2026-10-22T12:32:04.730889+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T12:33:12.861043+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\walk_000_0.png"
+      ],
+      "stdout": "design\\fatfish\\motion_master_v05\\logs\\walk_000.stdout.txt",
+      "stderr": "design\\fatfish\\motion_master_v05\\logs\\walk_000.stderr.txt"
+    },
+    "cast_065": {
+      "state": "downloaded",
+      "source_frame": 65,
+      "category": "cast_065",
+      "started_at": "2026-10-22T12:32:02.145758+00:00",
+      "task_id": "img_cb17b44e11b636d21f147b827bbebf5b",
+      "submitted_at": "2026-10-22T12:32:04.582695+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T12:32:51.192026+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\cast_065_0.png"
+      ],
+      "stdout": "design\\fatfish\\motion_master_v05\\logs\\cast_065.stdout.txt",
+      "stderr": "design\\fatfish\\motion_master_v05\\logs\\cast_065.stderr.txt"
+    },
+    "jump_023": {
+      "state": "downloaded",
+      "source_frame": 23,
+      "category": "jump_023",
+      "started_at": "2026-10-22T12:32:02.146759+00:00",
+      "task_id": "img_f720227b53e01a4bb861dae8adee36d7",
+      "submitted_at": "2026-10-22T12:32:04.605413+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T12:32:55.976929+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\jump_023_0.png"
+      ],
+      "stdout": "design\\fatfish\\motion_master_v05\\logs\\jump_023.stdout.txt",
+      "stderr": "design\\fatfish\\motion_master_v05\\logs\\jump_023.stderr.txt"
+    },
+    "walk_001": {
+      "state": "downloaded",
+      "source_frame": 1,
+      "category": "walk_001",
+      "started_at": "2026-10-22T12:34:35.983146+00:00",
+      "task_id": "img_b29a704c8b2085f74db08f4a53390b42",
+      "submitted_at": "2026-10-22T12:34:37.594750+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T12:35:29.016810+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\walk_001_0.png"
+      ],
+      "stdout": "design\\fatfish\\motion_master_v05\\logs\\walk_001.stdout.txt",
+      "stderr": "design\\fatfish\\motion_master_v05\\logs\\walk_001.stderr.txt"
+    },
+    "walk_002": {
+      "state": "downloaded",
+      "source_frame": 2,
+      "category": "walk_002",
+      "started_at": "2026-10-22T12:36:51.381200+00:00",
+      "task_id": "img_419e4503b09d3ab73db53fe68eaed22e",
+      "submitted_at": "2026-10-22T12:36:52.954035+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T12:38:14.873525+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\walk_002_0.png"
+      ],
+      "stdout": "design\\fatfish\\motion_master_v05\\logs\\walk_002.stdout.txt",
+      "stderr": "design\\fatfish\\motion_master_v05\\logs\\walk_002.stderr.txt"
+    },
+    "walk_003": {
+      "state": "downloaded",
+      "source_frame": 3,
+      "category": "walk_003",
+      "started_at": "2026-10-22T12:40:29.301464+00:00",
+      "task_id": "img_f8b09b64542e9997b4eb9c36f127f2d9",
+      "submitted_at": "2026-10-22T12:40:30.940999+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T12:41:17.588411+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\walk_003_0.png"
+      ],
+      "stdout": "design\\fatfish\\motion_master_v05\\logs\\walk_003.stdout.txt",
+      "stderr": "design\\fatfish\\motion_master_v05\\logs\\walk_003.stderr.txt"
+    },
+    "walk_003_wrist_fix": {
+      "state": "downloaded",
+      "source_frame": 3,
+      "category": "walk_003_wrist_fix",
+      "started_at": "2026-10-22T12:52:53.498896+00:00",
+      "task_id": "img_0da0528b3c4d0de270c7df27f721179f",
+      "submitted_at": "2026-10-22T12:52:55.964078+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T12:54:03.856550+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\walk_003_wrist_fix_0.png"
+      ],
+      "stdout": "design\\fatfish\\motion_master_v05\\logs\\walk_003_wrist_fix.stdout.txt",
+      "stderr": "design\\fatfish\\motion_master_v05\\logs\\walk_003_wrist_fix.stderr.txt"
+    }
+  },
+  "observed_cost_delta": 0.2660000000000018,
+  "status": "six_motion_tests_and_one_wrist_repair_reviewed"
+}

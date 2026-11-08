@@ -1,0 +1,10 @@
+{
+  "url": "http://127.0.0.1:8786/preview.html",
+  "playback_verified": true,
+  "observed_counter": "8 / 24",
+  "observed_image": "frames_full/0008.png",
+  "scrubber_end_verified": "24 / 24",
+  "paused_at_end_of_review": true,
+  "images_complete": true,
+  "screenshot_capture": "CDP Page.captureScreenshot timed out twice; source PNGs inspected directly"
+}

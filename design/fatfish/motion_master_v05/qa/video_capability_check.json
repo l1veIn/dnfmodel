@@ -1,0 +1,18 @@
+{
+  "checked_at_utc": "2026-10-22T12:59:36.605544+00:00",
+  "relay_video_models": [
+    "grok-imagine-video",
+    "grok-imagine-video-1.5-preview"
+  ],
+  "formal_grok_imagine_video_1_5_in_relay_model_list": false,
+  "relay_last_frame_or_keyframes_passthrough_verified": false,
+  "official_formal_1_5_supports_first_last_and_up_to_four_keyframes": true,
+  "official_classic_model_rejects_last_frame_and_keyframes": true,
+  "official_preview_release_documents_starting_image": true,
+  "rgba_video_output_not_documented_in_reviewed_official_generation_docs": true,
+  "video_generation_jobs_submitted": 0,
+  "sources": [
+    "https://docs.x.ai/developers/model-capabilities/video/generation",
+    "https://x.ai/news/grok-imagine-1-5"
+  ]
+}

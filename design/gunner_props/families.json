@@ -1,0 +1,362 @@
+{
+  "weapons": {
+    "flamer": {
+      "sources": [
+        "flamethrower/atflamethrowerguna",
+        "flamethrower/atflamethrowergunb"
+      ],
+      "item": "a backpack-style flamethrower gun: a pistol grip and nozzle at the left, a perforated heat-shield barrel at the right, and a fuel tank slung underneath. The tank is smooth cream ceramic with a clay orange spark emblem on its side, the barrel shroud is near-black with cream ends, and small glowing clay orange seams mark the fuel lines."
+    },
+    "flamer_boost": {
+      "sources": [
+        "flamethrowerboost/atflamethrowergunb",
+        "flamethrowerboost/atflamethrowergunf",
+        "blizzardthrowerboost_female/behind",
+        "blizzardthrowerboost_female/front",
+        "EQ105/atflamethrowergunb",
+        "EQ105/atflamethrowergunf"
+      ],
+      "item": "a heavy upgraded flamethrower with a thick perforated barrel, twin tanks and a curved hose ending in a handle. Tanks are cream ceramic with one clay orange spark emblem on the biggest flat side, the perforated barrel is near-black with thin gold bands, the hose is near-black with a glowing clay orange core line.",
+      "design_from": "flamer"
+    },
+    "laser": {
+      "sources": [
+        "laserriflecharge/atlaserguncharge",
+        "laserriflecharge_90lvhcannon/atlaserguncharge",
+        "ROOT/lasergunata",
+        "ROOT/lasergunata_90lvhcannon",
+        "ROOT/lasergunatb",
+        "ROOT/lasergunatb_90lvhcannon",
+        "heavyweaponalteration/chargelaser_guncharge",
+        "heavyweaponalteration/fullchange_change2",
+        "heavyweaponalteration/laserguncharge2",
+        "heavyweaponalteration/lasergunconvert_gun",
+        "heavyweaponalteration_90lvhcannon/chargelaser_guncharge",
+        "heavyweaponalteration_90lvhcannon/fullchange_change2",
+        "heavyweaponalteration_90lvhcannon/laserguncharge2",
+        "heavyweaponalteration_90lvhcannon/lasergunconvert_gun"
+      ],
+      "item": "a huge shoulder laser cannon built from several stacked modules, with a round rear housing, a long energy tube and side machinery. The casing is cream ceramic and near-black, and the long energy tube that is blue in the sprite glows clay orange with a pale cream core. Leave one clean flat cream panel with a small clay orange spark emblem.",
+      "recolor_ids": [
+        21,
+        22,
+        23,
+        32
+      ]
+    },
+    "bomb": {
+      "master": "output/gunner_props_sample/raw/bomb_v1_0.png",
+      "sources": [
+        "aturaniumbomb/aturaniumbombvpmissile",
+        "uraniumbomb/missile",
+        "uraniumbomb_90lvhcannon/missile",
+        "dropbomblight/missile"
+      ],
+      "item": "a huge warhead seen from the side, tilted, with a funnel-shaped tail ring with open struts, a narrow neck, a clamp band with an angular hexagonal plate, and a long straight cylindrical body. The body stops at the same flat cut as the sprite. The body is cream ceramic with the clay orange stencil mark A\\ on it, the plate and clamp are near-black with gold edges, the funnel ring is near-black with a glowing clay orange inner rim, and one thin glowing clay orange seam circles the body."
+    },
+    "steyr": {
+      "sources": [
+        "steyrheavyrifle/at_gun_back",
+        "steyrheavyrifle/at_gun_front",
+        "steyrheavyrifle_90lvhcannon/at_gun_back",
+        "steyrheavyrifle_90lvhcannon/at_gun_front"
+      ],
+      "item": "a very long slim fictional science-fiction energy lance prop from a 2D fantasy action game, with a thin tube, a small sight and a handle assembly at one end. The tube is cream ceramic with a glowing clay orange energy channel that replaces the sprite's blue diagonal stripes, the handle assembly and sight are near-black with thin gold trim."
+    },
+    "gatling": {
+      "sources": [
+        "ROOT/atgatlinggun",
+        "ROOT/atgatlinggunreinforce",
+        "ROOT/gatlingheavyweapon"
+      ],
+      "item": "a heavy rotary gatling gun with a cluster of long barrels and a large carrying handle. The receiver is cream ceramic with a clay orange spark emblem on its flat side, the barrels are near-black with thin gold rings, and the muzzle ends glow faintly clay orange."
+    },
+    "stinger": {
+      "sources": [
+        "atstinger/gun1",
+        "atstinger/gun2"
+      ],
+      "item": "a large shoulder rocket launcher with a wide tube and a side grip. The tube is cream ceramic with near-black end caps and a thin clay orange seam.",
+      "design_from": "fsc7"
+    },
+    "pt15": {
+      "sources": [
+        "atpt-15prototype/cannon"
+      ],
+      "item": "a massive prototype cannon with a ribbed barrel and heavy breech. The barrel ribs are near-black, the breech and shell are cream ceramic with thin gold lines and a glowing clay orange channel."
+    },
+    "operation": {
+      "sources": [
+        "atoperationraze/operationdot",
+        "atoperationraze/operationdot2",
+        "atoperationraze/missile01"
+      ],
+      "item": "a multi-part heavy weapon system with long barrels and a tripod-like mount, plus small missile pods. Barrels are near-black, housings are cream ceramic, seams glow clay orange.",
+      "design_from": "pt15",
+      "original_ids": [
+        23
+      ]
+    },
+    "phlegethon": {
+      "sources": [
+        "atphlegethon/weaponc",
+        "atphlegethon/weapond"
+      ],
+      "item": "a jagged long-barreled heavy weapon. Keep its aggressive outline, with cream ceramic blades and shell, near-black barrels and machinery, and glowing clay orange lines where the sprite is red."
+    },
+    "extruder": {
+      "sources": [
+        "extruder/extruder_body_dot",
+        "extruder_90lvhcannon/extruder_body_dot"
+      ],
+      "item": "a large deployed siege cannon on a low mount. The barrel shroud is cream ceramic with near-black ribs, the mount is near-black with thin gold edges, and its core glows clay orange.",
+      "design_from": "pt15"
+    },
+    "fm31": {
+      "sources": [
+        "fm-31/01_fegun_normal"
+      ],
+      "item": "a compact grenade launcher with a round drum magazine. The body is cream ceramic, the drum and grip are near-black with thin gold edges.",
+      "design_from": "fsc7"
+    },
+    "wgg": {
+      "sources": [
+        "plasmaboost/wgg",
+        "atplasmaboost/atplasmaboostvpwgg"
+      ],
+      "item": "a long pointed plasma weapon with a round glowing core near the grip and spiked rear fins. The shell is near-black with cream plates, and the core glows clay orange.",
+      "design_from": "phlegethon"
+    },
+    "fsc7": {
+      "sources": [
+        "atfsc7/0101"
+      ],
+      "item": "a long rocket launcher with a curved cable. The tube is cream ceramic with near-black ends, the cable is near-black, and a thin seam glows clay orange."
+    },
+    "defsol": {
+      "sources": [
+        "atdefinitesolution/addon_01",
+        "atdefinitesolution/addon_02"
+      ],
+      "item": "a long slim add-on rifle module. The body is near-black with cream ceramic plates and one thin glowing clay orange line.",
+      "design_from": "fsc7"
+    },
+    "solasys": {
+      "sources": [
+        "atsolasystem/solasystemweaponback",
+        "atsolasystem/solasystemweaponfront"
+      ],
+      "item": "a large stacked launcher weapon with side tubes. Casing is cream ceramic and near-black, with glowing clay orange lines replacing any bright sprite color.",
+      "design_from": "laser"
+    },
+    "carbine": {
+      "sources": [
+        "pistolcarbine/ggweapon",
+        "pistolcarbine/gweapon"
+      ],
+      "item": "a small carbine with a stock. The body is cream ceramic and the barrel and grip are near-black, with a small clay orange accent.",
+      "design_from": "fsc7"
+    },
+    "ordnance": {
+      "sources": [
+        "atthermobaricgranade/granade",
+        "atzerodistance/grenade",
+        "grenade/light",
+        "grenade/none",
+        "grenade/water",
+        "grenade_reload/light",
+        "grenade_reload/none",
+        "grenade_reload/water",
+        "atlightmine/lm-61_body",
+        "atlightmine/lmine_body",
+        "m18claymore/clay",
+        "m18claymore/claymore"
+      ],
+      "item": "small grenades, mines and charges, only about 20 pixels wide in the game. Each is one or two big shapes: a cream ceramic shell, a near-black band or cap, and one glowing clay orange dot.",
+      "design_from": "bomb",
+      "original_ids": [
+        52
+      ]
+    }
+  },
+  "robots": {
+    "mech": {
+      "master": "output/gunner_props_sample/raw/mech_v1_0.png",
+      "sources": [
+        "atmechboltmx/01_appear",
+        "atmechboltmx/02_attack1",
+        "atmechboltmx/03_backfly",
+        "atmechboltmx/04_gun1",
+        "atmechboltmx/04_gun2",
+        "atmechboltmx/04_gun3",
+        "atmechboltmx/04_gun4",
+        "atmechboltmx/05_sword",
+        "atmechboltmx/06_parts",
+        "atmechboltmx/07_backfly2",
+        "atmechboltmx/castingnormal"
+      ],
+      "item": "a humanoid combat mecha. Cream ceramic armor plates with near-black joints, a head with one smooth dark visor with a soft clay orange glow, a glowing clay orange spark emblem in the center of the chest, swept fins behind the shoulders, thin gold trim on shoulders and belt, and a long matte near-black rifle with one glowing clay orange line. Any sword blade is a pale cream edge with a clay orange glow."
+    },
+    "walker": {
+      "sources": [
+        "at_sowalker/walkerfront",
+        "at_sowalker/walker",
+        "at_sowalker/weapon"
+      ],
+      "item": "a four-legged assault walker robot with a compact head and a very long heavy cannon. The hull and leg armor are cream ceramic where the sprite is crimson, the joints and cannon are near-black, thin gold trim runs along the hull, a clay orange spark emblem sits on the largest flat hull plate, and the sensor glows clay orange."
+    },
+    "g0": {
+      "sources": [
+        "g0/g0_body",
+        "g0/g0_body_fly_booster",
+        "g0/g0_union_body",
+        "g0/trans_g0core_body",
+        "g0/trans_g0_body"
+      ],
+      "item": "a heavy armored combat robot assembled from many modules, with a glowing round core at its center. Armor modules are cream ceramic with near-black machinery and thin gold edges, the core is one big glowing clay orange circle with a pale cream spark. Booster flames in the sprite become clay orange.",
+      "original_ids": [
+        2
+      ]
+    },
+    "corona": {
+      "sources": [
+        "atg5falcon/corona",
+        "atg5falcon/coronatransforma",
+        "atg5falcon/coronatransformb",
+        "atg5falcon/coronatransformc"
+      ],
+      "item": "a sleek flying attack drone seen from above and the side, with long thin swept wings, a slim fuselage and a round ring-shaped weapon at the front. Wings are cream ceramic with near-black tips and thin gold lines, the fuselage is near-black with cream plates, and the ring glows clay orange where the sprite is blue."
+    },
+    "rolling": {
+      "sources": [
+        "atg5falcon/rollingthunder",
+        "atg5falcon/rollingthundertransforma",
+        "atg5falcon/rollingthundertransformb",
+        "atg5falcon/rollingthundertransformc"
+      ],
+      "item": "a sleek flying attack drone with long thin swept wings, a slim fuselage and a boxy forked cannon at the front. Wings are cream ceramic with near-black tips and thin gold lines, the fuselage and cannon are near-black with cream plates, and small glowing clay orange lines replace the sprite's blue.",
+      "design_from": "corona"
+    },
+    "raptor": {
+      "sources": [
+        "atg5falcon/rapter",
+        "atg5falcon/raptertransforma",
+        "atg5falcon/raptertransformb",
+        "atg5falcon/raptertransformc"
+      ],
+      "item": "a sleek flying attack drone with long thin swept wings, a slim fuselage and a very long tapered lance at the front. Wings and lance are cream ceramic with near-black tips and thin gold lines, the fuselage is near-black, and small glowing clay orange lines replace the sprite's blue.",
+      "design_from": "corona"
+    },
+    "small_g1": {
+      "sources": [
+        "g1/g1_body",
+        "g1/trans_g1_body",
+        "atlimitover/g1normal"
+      ],
+      "item": "a small hovering cannon robot, about 59 pixels wide in the game, so only big shapes. A rounded cream ceramic shell, a near-black barrel with one gold ring, and one big glowing clay orange lens.",
+      "design_from": "small_g2"
+    },
+    "small_g2": {
+      "master": "output/gunner_props_sample/raw/g2_v1_0.png",
+      "sources": [
+        "g2/g2_body",
+        "g2/g-2_rolling_thunder",
+        "g2/trans_g2_body"
+      ],
+      "item": "a very small round spinning robot, only about 28 pixels wide in the game, so only big shapes. A smooth cream ceramic shell with a thin gold edge, a near-black band and lens rim, and one big glowing clay orange lens with a pale cream center. As it spins, the lens moves around the body exactly as the sprite's lens does."
+    },
+    "small_g3": {
+      "sources": [
+        "g3/body",
+        "g3/trans_g3_body"
+      ],
+      "item": "a very small bat-like flying robot, about 34 pixels wide in the game, so only big shapes. Cream ceramic wings, a near-black body and one glowing clay orange eye.",
+      "design_from": "small_g2"
+    },
+    "limit_g4": {
+      "sources": [
+        "atlimitover/g4normal"
+      ],
+      "item": "a small overheated drone wrapped in tall sharp crystal-like blades, about 79 pixels tall in the game. Cream ceramic blades with glowing clay orange edges and a molten pale cream core.",
+      "design_from": "small_g2"
+    },
+    "tempester": {
+      "sources": [
+        "TEMPESTERAT/tempester"
+      ],
+      "item": "a heavily armed armored robot with massive shoulder cannons and a very long gun arm. Armor is cream ceramic where the sprite is gold or bronze, machinery and gun are near-black, thin gold stripes replace the sprite's hazard stripes, and its sensors and core glow clay orange."
+    },
+    "overdrone": {
+      "sources": [
+        "atoverpowerlaser/overpowerlaserdrone",
+        "atoverpowerlaser/overpowerlasertalismandrone1",
+        "atoverpowerlaser/pinfunnel"
+      ],
+      "item": "a tiny flying laser drone, about 30 pixels in the game, so only big shapes. A rounded cream ceramic head and near-black tail, with one glowing clay orange eye.",
+      "design_from": "small_g2"
+    },
+    "bits": {
+      "sources": [
+        "atg-operater/gbody",
+        "atg-4_frisbee/body_spin",
+        "atg-4_frisbee/tarns",
+        "atc_aed/dronetransform",
+        "atstandby-ready/flashdot",
+        "atstandby-ready/frozendot",
+        "atstandby-ready/grenadedot",
+        "atmagneticfield/shelldot",
+        "atmagneticfield/weapondot",
+        "atparamedicdot/apius"
+      ],
+      "item": "small gadgets, drones and a spinning disc, all only 20 to 80 pixels in the game, so only big shapes. Cream ceramic shells, near-black machinery, thin gold edges, and one glowing clay orange lens or core on each. Keep each object's outline and its own shape; they are different objects.",
+      "design_from": "small_g2"
+    },
+    "awake_launcher": {
+      "person": true,
+      "sources": [
+        "atdecisivebattle/awakebody_atlauncher_0000"
+      ],
+      "item": "this lady operating a huge fictional science-fiction exo-rig, seen small and whole. She wears near-black harness straps over her long dress, and the machine parts stand in the same places as the sprite's: long cream ceramic gun barrels with thin gold rings and glowing clay orange channels, near-black rocket pods with rows of clay orange lights, and heavy cream and near-black mechanical legs. Her orange hair and dress stay clearly visible where the sprite's person is."
+    },
+    "awake_spitfire": {
+      "person": true,
+      "sources": [
+        "atdefinitesolution/awakebody_atspitfire_0000"
+      ],
+      "item": "this lady in fast acrobatic flight, seen small and whole, with small fictional thruster boots and sharp cream and near-black fin blades on her back where the sprite has them. Her very long orange hair follows the same long curve as the sprite's braid. Her long dress flows with the motion but always covers her legs, elegant and modest."
+    },
+    "awake_mech": {
+      "person": true,
+      "sources": [
+        "atgxstardust/awakebody_atmechanic_0000"
+      ],
+      "item": "this lady standing calmly, seen small and whole, in her long dress with her long orange hair falling straight, with a slim cream and near-black staff or device where the sprite has one."
+    },
+    "awake_ranger": {
+      "person": true,
+      "sources": [
+        "atcrimsongarden/awakebody_ranger_00000"
+      ],
+      "item": "this lady moving through fast martial acrobatics, seen small and whole, keeping the sprite's pose, with her long orange hair flying in the motion. Her long dress flows with the motion but always covers her legs, elegant and modest."
+    },
+    "awake_paramedic": {
+      "person": true,
+      "sources": [
+        "athalo/awakebody_paramedic_0000"
+      ],
+      "item": "this lady in graceful acrobatic motion, seen whole, keeping the sprite's pose, with a small cream and near-black device on her hip where the sprite has one. Her long orange hair flies with the motion. When the sprite sits on a large machine case, the case is cream ceramic and near-black with glowing clay orange lights. Her long dress flows with the motion but always covers her legs, elegant and modest."
+    },
+    "awake_dday": {
+      "person": true,
+      "sources": [
+        "atdday/dday_body_00",
+        "atdday/dday_body_01",
+        "atdday/dday_body_02",
+        "atdday/add_body_a_nor",
+        "atdday/add_body_b_nor",
+        "atdday/add_body_c_nor"
+      ],
+      "item": "this lady standing or running, seen small and whole, holding a long fictional science-fiction tube device with both hands where the sprite holds one. The device is cream ceramic and near-black with thin gold rings and a glowing clay orange seam. Her long orange hair follows the motion. Her long dress flows with the motion but always covers her legs, elegant and modest."
+    }
+  }
+}

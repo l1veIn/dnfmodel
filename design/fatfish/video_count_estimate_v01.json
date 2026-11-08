@@ -1,0 +1,90 @@
+{
+  "character_scope": "Female mage / elementalist common actions; exclude other subclasses skill-specific completion",
+  "template_counts": {
+    "slots": 174,
+    "direct_images": 137,
+    "linked_slots": 37
+  },
+  "count_is": "Planning estimate from visual pose groups, not an extracted ANI inventory or measured acceptance rate",
+  "groups": [
+    {
+      "group": "Standing and locomotion",
+      "examples": [
+        "breathing idle",
+        "walking",
+        "running",
+        "jump launch/air/landing"
+      ],
+      "accepted_videos_range": [
+        4,
+        6
+      ]
+    },
+    {
+      "group": "Common attacks and spellcasting",
+      "examples": [
+        "ground basic attacks",
+        "air attack",
+        "casting/charge/release gestures"
+      ],
+      "accepted_videos_range": [
+        6,
+        10
+      ]
+    },
+    {
+      "group": "Hit reactions and recovery",
+      "examples": [
+        "hurt",
+        "knockback",
+        "fall/grounded/get-up",
+        "crouch/defensive or auxiliary poses"
+      ],
+      "accepted_videos_range": [
+        5,
+        9
+      ]
+    }
+  ],
+  "elementalist_common_actions": {
+    "accepted_videos_range": [
+      15,
+      25
+    ],
+    "planning_generation_calls_range": [
+      25,
+      45
+    ]
+  },
+  "broader_full_template_if_required": {
+    "accepted_videos_range": [
+      25,
+      40
+    ],
+    "planning_generation_calls_range": [
+      40,
+      70
+    ],
+    "note": "Includes uncommon base poses/weapon motions/emotes beyond elementalist common use"
+  },
+  "cost_basis": {
+    "observed_model": "grok-imagine-video-1.5-preview",
+    "observed_request_seconds": 4,
+    "observed_resolution_tier": "720p",
+    "observed_cost_usd": 1.16,
+    "common_actions_call_budget_usd_range": [
+      29.0,
+      52.2
+    ],
+    "not_a_quote": true,
+    "note": "Arithmetic projection only; duration, billing and repeat rate can differ"
+  },
+  "production_gates": [
+    "Validate current walk NPK in game before further calls",
+    "One action family per video, not one video per IMG slot",
+    "Reuse linked slots and compatible poses",
+    "NPK alone does not expand client ANI frame references/timing"
+  ],
+  "extra_video_calls_this_turn": 0,
+  "batch_started": false
+}

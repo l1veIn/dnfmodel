@@ -1,0 +1,90 @@
+{
+  "name": "walk_003",
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\registered\\walk_003_canvas.png",
+  "source_sha256": "7bba6cb8659e7546e237a3afca8b9d0442fd2cb1f057bef9fb8f6760b6d143ac",
+  "output": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\corrected\\walk_003_canvas.png",
+  "output_sha256": "0706342abe5543bd21166f1270e115b1be3ffadcad89473051eb15b234f9b711",
+  "outside_fit_masks_pixels_identical": true,
+  "each_output_pixel_sampled_once_from_raw": true,
+  "head_face_reuse": false,
+  "alpha_preserved": true,
+  "fits": [
+    {
+      "label": "other_shoe",
+      "raw": [
+        626,
+        868
+      ],
+      "target": [
+        265,
+        376
+      ],
+      "root": [
+        254,
+        349
+      ],
+      "polygon": [
+        [
+          251,
+          348
+        ],
+        [
+          258,
+          348
+        ],
+        [
+          263,
+          358
+        ],
+        [
+          269,
+          363
+        ],
+        [
+          276,
+          375
+        ],
+        [
+          273,
+          383
+        ],
+        [
+          256,
+          383
+        ],
+        [
+          252,
+          373
+        ],
+        [
+          250,
+          361
+        ]
+      ],
+      "registered_endpoint": [
+        261.71476988361707,
+        379.420994348474
+      ],
+      "before_error_native_px": 4.742988430291639,
+      "raw_to_final_matrix": [
+        [
+          0.1135607062731006,
+          0.013919848312647285,
+          181.82856953766114
+        ],
+        [
+          -0.013919848312647285,
+          0.11356070627310061,
+          286.1431319986658
+        ]
+      ],
+      "local_rotation_degrees": -7.936125697860588,
+      "local_scale": 0.9289693017067924,
+      "fitted_endpoint": [
+        264.99999999999994,
+        375.99999999999994
+      ]
+    }
+  ],
+  "caution": "These manual endpoints are local fitting constraints, not independent proof of correct anatomy or no sliding; inspect shoe pixels and joint seams."
+}

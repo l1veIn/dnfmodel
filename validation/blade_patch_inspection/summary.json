@@ -1,0 +1,52 @@
+[
+  {
+    "kind": "skill_effect",
+    "source": "a(剑魂x刃风格技能) .npk",
+    "entries": 396,
+    "unique_payload_ranges": 392,
+    "transparent_aliases": 66,
+    "visible_img_aliases": 326,
+    "decode_errors": 4,
+    "report": "C:\\Users\\A\\Desktop\\dnfmodel\\validation\\blade_patch_inspection\\skill_effect\\report.json"
+  },
+  {
+    "kind": "costume_gloomy",
+    "source": "a(鬼剑士全时装改刃1. 1阴沉脸 含隐藏鬼手241119).NPK",
+    "entries": 16334,
+    "unique_payload_ranges": 9,
+    "transparent_aliases": 16230,
+    "visible_img_aliases": 104,
+    "decode_errors": 0,
+    "report": "C:\\Users\\A\\Desktop\\dnfmodel\\validation\\blade_patch_inspection\\costume_gloomy\\report.json"
+  },
+  {
+    "kind": "costume_normal",
+    "source": "a(鬼剑士全时装改刃1. 2普通脸 含隐藏鬼手241122).NPK",
+    "entries": 16334,
+    "unique_payload_ranges": 9,
+    "transparent_aliases": 16230,
+    "visible_img_aliases": 104,
+    "decode_errors": 0,
+    "report": "C:\\Users\\A\\Desktop\\dnfmodel\\validation\\blade_patch_inspection\\costume_normal\\report.json"
+  },
+  {
+    "kind": "weapon",
+    "source": "a(鬼剑士全武器改低配支离剑241115).NPK",
+    "entries": 2699,
+    "unique_payload_ranges": 1,
+    "transparent_aliases": 0,
+    "visible_img_aliases": 2699,
+    "decode_errors": 0,
+    "report": "C:\\Users\\A\\Desktop\\dnfmodel\\validation\\blade_patch_inspection\\weapon\\report.json"
+  },
+  {
+    "kind": "voice",
+    "source": "a(Blade Master Blade).npk",
+    "entries": 75,
+    "unique_payload_ranges": 70,
+    "transparent_aliases": 0,
+    "visible_img_aliases": 0,
+    "decode_errors": 0,
+    "report": "C:\\Users\\A\\Desktop\\dnfmodel\\validation\\blade_patch_inspection\\voice\\report.json"
+  }
+]

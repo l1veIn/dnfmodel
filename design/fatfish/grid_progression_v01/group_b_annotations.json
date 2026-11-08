@@ -1,0 +1,92 @@
+{
+  "eyes": [
+    [
+      327,
+      225
+    ],
+    [
+      336,
+      231
+    ],
+    [
+      382,
+      238
+    ],
+    [
+      346,
+      212
+    ],
+    [
+      351,
+      218
+    ],
+    [
+      389,
+      220
+    ],
+    [
+      348,
+      217
+    ],
+    [
+      354,
+      222
+    ],
+    [
+      382,
+      223
+    ]
+  ],
+  "tail_reviews": [
+    {
+      "visible_hd": true,
+      "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+      "status": "待验收"
+    },
+    {
+      "visible_hd": true,
+      "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+      "status": "待验收"
+    },
+    {
+      "visible_hd": true,
+      "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+      "status": "待验收"
+    },
+    {
+      "visible_hd": true,
+      "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+      "status": "待验收"
+    },
+    {
+      "visible_hd": true,
+      "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+      "status": "待验收"
+    },
+    {
+      "visible_hd": true,
+      "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+      "status": "待验收"
+    },
+    {
+      "visible_hd": true,
+      "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+      "status": "待验收"
+    },
+    {
+      "visible_hd": true,
+      "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+      "status": "待验收"
+    },
+    {
+      "visible_hd": true,
+      "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+      "status": "待验收"
+    }
+  ],
+  "pose_notes": {
+    "8": "IMG1 前伸手臂明显高于原版，姿势偏差待修。",
+    "1": "与A末帧为同一参考姿势，但已被模型重新绘制。"
+  },
+  "method": "Manually inspected blue-eye centers in normalized 640px cells, approximate fitting hints."
+}

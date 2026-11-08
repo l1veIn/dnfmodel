@@ -1,0 +1,60 @@
+{
+  "job_id": "fatfish_final_clip_158_162_dee97e2a36df424aadab7bcb6eba7fc7",
+  "status": "completed",
+  "mode": "one-pass",
+  "frozen_api_sha256": "513004fb26da6ec9c069bee86544431ed0cb80ef283620773032e5b7ca7fbe14",
+  "frozen_gui_sha256": "7e87932e88010a820c8c66e8181e4c3d9f4a46aa1bdd3332564ca1b66a34ec47",
+  "stages": [
+    {
+      "name": "execute",
+      "node": "20",
+      "width": 512,
+      "height": 512,
+      "client_id": "552688c6-186a-4c72-9936-4aba05a74d8e",
+      "status": "completed",
+      "submission_attempted": true,
+      "started_at": 1793946317.0963595,
+      "prompt_id": "bb945639-2e2e-43f3-8443-bf88a3b89177",
+      "elapsed_seconds": 323.63,
+      "videos": [
+        "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_158_162_a02_00001_.mp4"
+      ],
+      "media_reports": [
+        {
+          "file": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_158_162_a02_00001_.mp4",
+          "width": 512,
+          "height": 512,
+          "fps": 24.0,
+          "video_codec": "h264",
+          "container_seconds": 5.167,
+          "decoded_frames": 124,
+          "mean_luma_proxy": 120.03731210770145,
+          "mean_temporal_pixel_change": 0.586332496649366,
+          "frames": {
+            "1": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_158_162_a02_00001__qa\\frame_001.png",
+            "62": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_158_162_a02_00001__qa\\frame_062.png",
+            "124": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_final_v06\\clip_158_162_a02_00001__qa\\frame_124.png"
+          },
+          "audio": {
+            "codec": "aac",
+            "sample_rate": 32000,
+            "channels": 2,
+            "decoded_audio_frames": 162,
+            "rms": 0.02407909031813047,
+            "peak": 0.7743302583694458
+          }
+        }
+      ]
+    }
+  ],
+  "memory_before": {
+    "ram_available_gib": 19.162818908691406,
+    "commit_available_gib": 16.870254516601562,
+    "commit_total_gib": 40.95303726196289
+  },
+  "memory_after": {
+    "ram_available_gib": 19.134658813476562,
+    "commit_available_gib": 16.761734008789062,
+    "commit_total_gib": 40.95303726196289
+  }
+}

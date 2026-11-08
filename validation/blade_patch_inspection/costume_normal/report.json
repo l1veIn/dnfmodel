@@ -1,0 +1,245 @@
+{
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\dnf刃\\a(鬼剑士全时装改刃1. 2普通脸 含隐藏鬼手241122).NPK",
+  "file_bytes": 4833349,
+  "sha256": "d8c70964674f0c9e9c267e7ee6c0a7dc49877d9a6e5984a91f3aea24387530af",
+  "entry_count": 16334,
+  "index_bytes": 4312196,
+  "unique_payload_ranges": 9,
+  "entry_folders": {
+    "sprite/character/swordman/equipment/growtype/basics": 2,
+    "sprite/character/swordman/equipment/growtype": 2,
+    "sprite/character/swordman/equipment/growtype/bloodevil": 3,
+    "meow": 2,
+    "sprite/character/swordman/equipment/avatar/skin": 103,
+    "sprite/character/swordman/equipment/avatar/cap": 1846,
+    "sprite/character/swordman/equipment/avatar/hair": 1846,
+    "sprite/character/swordman/equipment/avatar/face": 1053,
+    "sprite/character/swordman/equipment/avatar/neck": 2207,
+    "sprite/character/swordman/equipment/avatar/coat": 3356,
+    "sprite/character/swordman/equipment/avatar/pants": 2117,
+    "sprite/character/swordman/equipment/avatar/belt": 1639,
+    "sprite/character/swordman/equipment/avatar/shoes": 2158
+  },
+  "payloads": [
+    {
+      "offset": 4312228,
+      "length": 1508,
+      "sha256": "73e0f195e142dc5ae627bb2f3026bc7ff56c9d6159e0d7da7b58138fbfcae653",
+      "alias_count": 1,
+      "representative_paths": [
+        "sprite/character/swordman/equipment/growtype/basics/ghosthand.img"
+      ],
+      "folders": {
+        "sprite/character/swordman/equipment/growtype/basics": 1
+      },
+      "version": 2,
+      "frame_count": 180,
+      "stored_frames": 1,
+      "linked_frames": 179,
+      "visible_frame_count": 0,
+      "entirely_transparent": true,
+      "unique_pixel_frames": 1,
+      "consumed_bytes": 1508,
+      "trailing_bytes": 0
+    },
+    {
+      "offset": 4313736,
+      "length": 1508,
+      "sha256": "73e0f195e142dc5ae627bb2f3026bc7ff56c9d6159e0d7da7b58138fbfcae653",
+      "alias_count": 1,
+      "representative_paths": [
+        "sprite/character/swordman/equipment/growtype/basics/pinkghosthand.img"
+      ],
+      "folders": {
+        "sprite/character/swordman/equipment/growtype/basics": 1
+      },
+      "version": 2,
+      "frame_count": 180,
+      "stored_frames": 1,
+      "linked_frames": 179,
+      "visible_frame_count": 0,
+      "entirely_transparent": true,
+      "unique_pixel_frames": 1,
+      "consumed_bytes": 1508,
+      "trailing_bytes": 0
+    },
+    {
+      "offset": 4315244,
+      "length": 1508,
+      "sha256": "73e0f195e142dc5ae627bb2f3026bc7ff56c9d6159e0d7da7b58138fbfcae653",
+      "alias_count": 1,
+      "representative_paths": [
+        "sprite/character/swordman/equipment/growtype/swordghostglove.img"
+      ],
+      "folders": {
+        "sprite/character/swordman/equipment/growtype": 1
+      },
+      "version": 2,
+      "frame_count": 180,
+      "stored_frames": 1,
+      "linked_frames": 179,
+      "visible_frame_count": 0,
+      "entirely_transparent": true,
+      "unique_pixel_frames": 1,
+      "consumed_bytes": 1508,
+      "trailing_bytes": 0
+    },
+    {
+      "offset": 4316752,
+      "length": 1508,
+      "sha256": "73e0f195e142dc5ae627bb2f3026bc7ff56c9d6159e0d7da7b58138fbfcae653",
+      "alias_count": 1,
+      "representative_paths": [
+        "sprite/character/swordman/equipment/growtype/weaponmaster.img"
+      ],
+      "folders": {
+        "sprite/character/swordman/equipment/growtype": 1
+      },
+      "version": 2,
+      "frame_count": 180,
+      "stored_frames": 1,
+      "linked_frames": 179,
+      "visible_frame_count": 0,
+      "entirely_transparent": true,
+      "unique_pixel_frames": 1,
+      "consumed_bytes": 1508,
+      "trailing_bytes": 0
+    },
+    {
+      "offset": 4318260,
+      "length": 1508,
+      "sha256": "73e0f195e142dc5ae627bb2f3026bc7ff56c9d6159e0d7da7b58138fbfcae653",
+      "alias_count": 1,
+      "representative_paths": [
+        "sprite/character/swordman/equipment/growtype/bloodevil/berserkerhand.img"
+      ],
+      "folders": {
+        "sprite/character/swordman/equipment/growtype/bloodevil": 1
+      },
+      "version": 2,
+      "frame_count": 180,
+      "stored_frames": 1,
+      "linked_frames": 179,
+      "visible_frame_count": 0,
+      "entirely_transparent": true,
+      "unique_pixel_frames": 1,
+      "consumed_bytes": 1508,
+      "trailing_bytes": 0
+    },
+    {
+      "offset": 4319768,
+      "length": 1508,
+      "sha256": "73e0f195e142dc5ae627bb2f3026bc7ff56c9d6159e0d7da7b58138fbfcae653",
+      "alias_count": 1,
+      "representative_paths": [
+        "sprite/character/swordman/equipment/growtype/bloodevil/bloodevil_scar.img"
+      ],
+      "folders": {
+        "sprite/character/swordman/equipment/growtype/bloodevil": 1
+      },
+      "version": 2,
+      "frame_count": 180,
+      "stored_frames": 1,
+      "linked_frames": 179,
+      "visible_frame_count": 0,
+      "entirely_transparent": true,
+      "unique_pixel_frames": 1,
+      "consumed_bytes": 1508,
+      "trailing_bytes": 0
+    },
+    {
+      "offset": 4321276,
+      "length": 1756,
+      "sha256": "9bf18b2f025cb18c3fa03047f4f496602724f1474613aa4c6e77ddbb1ef0ccde",
+      "alias_count": 1,
+      "representative_paths": [
+        "sprite/character/swordman/equipment/growtype/bloodevil/bloodevil_stand_effect_all.img"
+      ],
+      "folders": {
+        "sprite/character/swordman/equipment/growtype/bloodevil": 1
+      },
+      "version": 2,
+      "frame_count": 211,
+      "stored_frames": 1,
+      "linked_frames": 210,
+      "visible_frame_count": 0,
+      "entirely_transparent": true,
+      "unique_pixel_frames": 1,
+      "consumed_bytes": 1756,
+      "trailing_bytes": 0
+    },
+    {
+      "offset": 4323032,
+      "length": 508305,
+      "sha256": "5cd096e3bf8006afd18644781bcd480cdf316189b52e7a7d16ca5a9db3587294",
+      "alias_count": 104,
+      "representative_paths": [
+        "meow/本体图层.img",
+        "sprite/character/swordman/equipment/avatar/skin/sm_body0000.img",
+        "sprite/character/swordman/equipment/avatar/skin/sm_body90100.img",
+        "sprite/character/swordman/equipment/avatar/skin/sm_body0001.img",
+        "sprite/character/swordman/equipment/avatar/skin/sm_body0002.img",
+        "sprite/character/swordman/equipment/avatar/skin/sm_body0003.img",
+        "sprite/character/swordman/equipment/avatar/skin/sm_body0004.img",
+        "sprite/character/swordman/equipment/avatar/skin/sm_body0005.img",
+        "sprite/character/swordman/equipment/avatar/skin/sm_body0006.img",
+        "sprite/character/swordman/equipment/avatar/skin/sm_body0007.img",
+        "sprite/character/swordman/equipment/avatar/skin/sm_body0008.img",
+        "sprite/character/swordman/equipment/avatar/skin/sm_body0009.img"
+      ],
+      "folders": {
+        "meow": 1,
+        "sprite/character/swordman/equipment/avatar/skin": 103
+      },
+      "version": 2,
+      "frame_count": 179,
+      "stored_frames": 179,
+      "linked_frames": 0,
+      "visible_frame_count": 179,
+      "entirely_transparent": false,
+      "unique_pixel_frames": 177,
+      "consumed_bytes": 508305,
+      "trailing_bytes": 0
+    },
+    {
+      "offset": 4831337,
+      "length": 2012,
+      "sha256": "07c3bff84504eeeae06e84d204168a799fb36f21ed3843994b6a64c040729a3a",
+      "alias_count": 16223,
+      "representative_paths": [
+        "meow/隐藏图层.img, ",
+        "sprite/character/swordman/equipment/avatar/cap/sm_cap0000c.img",
+        "sprite/character/swordman/equipment/avatar/cap/sm_cap0000c_mask1.img",
+        "sprite/character/swordman/equipment/avatar/cap/sm_cap0001c.img",
+        "sprite/character/swordman/equipment/avatar/cap/sm_cap0002c.img",
+        "sprite/character/swordman/equipment/avatar/cap/sm_cap0003c.img",
+        "sprite/character/swordman/equipment/avatar/cap/sm_cap0100c.img",
+        "sprite/character/swordman/equipment/avatar/cap/sm_cap0100c_mask1.img",
+        "sprite/character/swordman/equipment/avatar/cap/sm_cap0101c.img",
+        "sprite/character/swordman/equipment/avatar/cap/sm_cap0102c.img",
+        "sprite/character/swordman/equipment/avatar/cap/sm_cap0103c.img",
+        "sprite/character/swordman/equipment/avatar/cap/sm_cap0200c.img"
+      ],
+      "folders": {
+        "meow": 1,
+        "sprite/character/swordman/equipment/avatar/cap": 1846,
+        "sprite/character/swordman/equipment/avatar/hair": 1846,
+        "sprite/character/swordman/equipment/avatar/face": 1053,
+        "sprite/character/swordman/equipment/avatar/neck": 2207,
+        "sprite/character/swordman/equipment/avatar/coat": 3356,
+        "sprite/character/swordman/equipment/avatar/pants": 2117,
+        "sprite/character/swordman/equipment/avatar/belt": 1639,
+        "sprite/character/swordman/equipment/avatar/shoes": 2158
+      },
+      "version": 2,
+      "frame_count": 243,
+      "stored_frames": 1,
+      "linked_frames": 242,
+      "visible_frame_count": 0,
+      "entirely_transparent": true,
+      "unique_pixel_frames": 1,
+      "consumed_bytes": 2012,
+      "trailing_bytes": 0
+    }
+  ]
+}

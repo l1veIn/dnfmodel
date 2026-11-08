@@ -1,0 +1,75 @@
+{
+  "system": {
+    "os": "win32",
+    "ram_total": 33487228928,
+    "ram_free": 20794224640,
+    "comfyui_version": "0.30.2",
+    "required_frontend_version": "1.47.12",
+    "installed_templates_version": "0.11.31",
+    "required_templates_version": "0.11.31",
+    "comfy_package_versions": [
+      {
+        "name": "comfyui-frontend-package",
+        "installed": "1.47.12",
+        "required": "1.47.12"
+      },
+      {
+        "name": "comfyui-workflow-templates",
+        "installed": "0.11.31",
+        "required": "0.11.31"
+      },
+      {
+        "name": "comfyui-embedded-docs",
+        "installed": "0.5.9",
+        "required": "0.5.9"
+      },
+      {
+        "name": "comfy-kitchen",
+        "installed": "0.2.26",
+        "required": "0.2.26"
+      },
+      {
+        "name": "comfy-aimdo",
+        "installed": "0.4.11",
+        "required": "0.4.11"
+      }
+    ],
+    "python_version": "3.13.12 (main, Feb 12 2026, 00:38:53) [MSC v.1944 64 bit (AMD64)]",
+    "pytorch_version": "2.12.1+cu130",
+    "embedded_python": false,
+    "deploy_environment": "local-desktop2-standalone",
+    "argv": [
+      "main.py",
+      "--listen",
+      "127.0.0.1",
+      "--port",
+      "8188",
+      "--cuda-device",
+      "0",
+      "--disable-all-custom-nodes",
+      "--disable-api-nodes",
+      "--cache-none",
+      "--reserve-vram",
+      "1.5",
+      "--disable-async-offload",
+      "--disable-pinned-memory",
+      "--extra-model-paths-config",
+      "D:\\VideoStudio\\comfyUI\\shared_model_paths.yaml",
+      "--input-directory",
+      "D:\\VideoStudio\\comfyUI\\shared\\input",
+      "--output-directory",
+      "D:\\VideoStudio\\comfyUI\\shared\\output"
+    ]
+  },
+  "devices": [
+    {
+      "name": "cuda:0 NVIDIA GeForce RTX 4070 SUPER : cudaMallocAsync",
+      "type": "cuda",
+      "index": 0,
+      "vram_total": 12878086144,
+      "vram_free": 11606687744,
+      "torch_vram_total": 0,
+      "torch_vram_free": 0
+    }
+  ]
+}

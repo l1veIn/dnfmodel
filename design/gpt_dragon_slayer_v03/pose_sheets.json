@@ -1,0 +1,2438 @@
+{
+ "idle": {
+  "frames": [
+   0,
+   4,
+   5,
+   9,
+   146,
+   150,
+   185,
+   232
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   5,
+   6,
+   7
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Eight separate standing poses, all calm and at her full height. Cells 1, 2 and 3: she stands relaxed in three-quarter view facing right, feet apart with the front heel a little forward, the rear arm hanging straight down with its fist on the dot beside her rear thigh. Cell 1: the front arm hangs relaxed at her side. Cell 2: the front hand comes forward at hip height. Cell 3: the front open hand is raised to chest height in front of her, fingers loose. Cell 4: feet wider apart, body turned more towards the viewer, the front hand on her waist with the elbow bent out to the right, the rear arm hanging with its fist on the dot beside her rear hip. Cells 5 and 6: a low wide battle stance with bent knees, her body and face turned to the LEFT, leaning forward, the near forearm held across in front of her chest with its fist on the dot at the left, her hair flowing behind her to the right. Cell 7: she stands square and faces the viewer, feet wide, one open hand raised beside her right shoulder with the fingers up, the other arm hanging with its fist on the dot at the left of her hip. Cell 8: she faces LEFT, seen partly from behind, tall with her feet apart; the near arm hangs down in front at the left with an open hand, and the far arm reaches behind her with its fist on the dot at the right of her hip, outside her hair and tail.",
+  "clips": {
+   "clip_009_012": [
+    {
+     "slot": 9,
+     "cell": 3
+    },
+    {
+     "slot": 10,
+     "cell": 3
+    },
+    {
+     "slot": 11,
+     "cell": 3
+    },
+    {
+     "slot": 12,
+     "cell": 3
+    }
+   ],
+   "clip_146_149": [
+    {
+     "slot": 146,
+     "cell": 4
+    },
+    {
+     "slot": 147,
+     "cell": 4
+    },
+    {
+     "slot": 148,
+     "cell": 4
+    },
+    {
+     "slot": 149,
+     "cell": 4
+    }
+   ],
+   "clip_150_150": [
+    {
+     "slot": 150,
+     "cell": 5
+    }
+   ],
+   "clip_185_188": [
+    {
+     "slot": 185,
+     "cell": 6
+    },
+    {
+     "slot": 186,
+     "cell": 6
+    },
+    {
+     "slot": 187,
+     "cell": 6
+    },
+    {
+     "slot": 188,
+     "cell": 6
+    }
+   ],
+   "clip_232_235": [
+    {
+     "slot": 232,
+     "cell": 7
+    },
+    {
+     "slot": 233,
+     "cell": 7
+    },
+    {
+     "slot": 234,
+     "cell": 7
+    },
+    {
+     "slot": 235,
+     "cell": 7
+    }
+   ]
+  },
+  "micro": {
+   "10": {
+    "lift": [
+     [
+      0,
+      0
+     ],
+     [
+      0.21,
+      0
+     ],
+     [
+      0.27,
+      -1
+     ],
+     [
+      0.38,
+      -1
+     ],
+     [
+      0.48,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   },
+   "11": {
+    "lift": [
+     [
+      0,
+      0
+     ],
+     [
+      0.21,
+      0
+     ],
+     [
+      0.27,
+      -1
+     ],
+     [
+      0.32,
+      -2
+     ],
+     [
+      0.4,
+      -1
+     ],
+     [
+      0.48,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   },
+   "12": {
+    "lift": [
+     [
+      0,
+      0
+     ],
+     [
+      0.22,
+      0
+     ],
+     [
+      0.28,
+      -1
+     ],
+     [
+      0.34,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   },
+   "147": {
+    "shear": [
+     [
+      0,
+      0
+     ],
+     [
+      0.23,
+      0
+     ],
+     [
+      0.3,
+      -1
+     ],
+     [
+      0.4,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   },
+   "148": {
+    "shear": [
+     [
+      0,
+      0
+     ],
+     [
+      0.23,
+      0
+     ],
+     [
+      0.3,
+      -2
+     ],
+     [
+      0.38,
+      -1
+     ],
+     [
+      0.45,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   },
+   "149": {
+    "shear": [
+     [
+      0,
+      0
+     ],
+     [
+      0.23,
+      0
+     ],
+     [
+      0.3,
+      -1
+     ],
+     [
+      0.38,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   },
+   "186": {
+    "lift": [
+     [
+      0,
+      0
+     ],
+     [
+      0.1,
+      -1
+     ],
+     [
+      0.45,
+      -1
+     ],
+     [
+      0.52,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   },
+   "187": {
+    "lift": [
+     [
+      0,
+      -2
+     ],
+     [
+      0.3,
+      -2
+     ],
+     [
+      0.4,
+      -1
+     ],
+     [
+      0.48,
+      -1
+     ],
+     [
+      0.53,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   },
+   "188": {
+    "lift": [
+     [
+      0,
+      -1
+     ],
+     [
+      0.45,
+      -1
+     ],
+     [
+      0.52,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   },
+   "233": {
+    "lift": [
+     [
+      0,
+      0
+     ],
+     [
+      0.21,
+      0
+     ],
+     [
+      0.27,
+      -1
+     ],
+     [
+      0.38,
+      -1
+     ],
+     [
+      0.48,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   },
+   "234": {
+    "lift": [
+     [
+      0,
+      0
+     ],
+     [
+      0.21,
+      0
+     ],
+     [
+      0.27,
+      -1
+     ],
+     [
+      0.32,
+      -2
+     ],
+     [
+      0.4,
+      -1
+     ],
+     [
+      0.48,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   }
+  }
+ },
+ "idle_hold": {
+  "frames": [
+   0,
+   4,
+   5,
+   6
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "mark_grips": true,
+  "motion": "Composed locally by idle_hand_edit.py, never sent to the model.",
+  "clips": {
+   "clip_000_003": [
+    {
+     "slot": 0,
+     "cell": 0
+    },
+    {
+     "slot": 1,
+     "cell": 0
+    },
+    {
+     "slot": 2,
+     "cell": 0
+    },
+    {
+     "slot": 3,
+     "cell": 0
+    }
+   ],
+   "clip_004_008": [
+    {
+     "slot": 4,
+     "cell": 1
+    },
+    {
+     "slot": 5,
+     "cell": 2
+    },
+    {
+     "slot": 6,
+     "cell": 3
+    },
+    {
+     "slot": 7,
+     "cell": 3
+    },
+    {
+     "slot": 8,
+     "cell": 3
+    }
+   ]
+  },
+  "hold": true,
+  "pad_y": 40,
+  "micro": {
+   "1": {
+    "lift": [
+     [
+      0,
+      0
+     ],
+     [
+      0.21,
+      0
+     ],
+     [
+      0.27,
+      -1
+     ],
+     [
+      0.38,
+      -1
+     ],
+     [
+      0.48,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   },
+   "2": {
+    "lift": [
+     [
+      0,
+      0
+     ],
+     [
+      0.21,
+      0
+     ],
+     [
+      0.27,
+      -1
+     ],
+     [
+      0.32,
+      -2
+     ],
+     [
+      0.4,
+      -1
+     ],
+     [
+      0.48,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   },
+   "3": {
+    "lift": [
+     [
+      0,
+      0
+     ],
+     [
+      0.22,
+      0
+     ],
+     [
+      0.28,
+      -1
+     ],
+     [
+      0.34,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   }
+  }
+ },
+ "walk": {
+  "frames": [
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22
+  ],
+  "cols": 5,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. These are the ten frames of one walk cycle to the right, with long clear strides. Her head and torso stay at the same height and upright in every cell; only the legs and arms move. Her legs drive the gown: it opens at the slit around the leading leg, and each white heel steps clearly out from under the hem exactly where the sprite's boot is, while the train drags behind her to the left. In cells 4, 5, 9 and 10 the rear foot kicks up behind her and the hem lifts with it. In cells 1 and 6 the legs pass close together with one knee bent forward. The near arm hangs low and swings with the stride, its fist on the dot: behind her hip in cells 1 to 5 and 10, in front of her thigh in cells 6 to 9. The other hand stays low in front of her. The drapes, hair and tail sway gently behind her.",
+  "clips": {
+   "clip_013_022": [
+    {
+     "slot": 13,
+     "cell": 0
+    },
+    {
+     "slot": 14,
+     "cell": 1
+    },
+    {
+     "slot": 15,
+     "cell": 2
+    },
+    {
+     "slot": 16,
+     "cell": 3
+    },
+    {
+     "slot": 17,
+     "cell": 4
+    },
+    {
+     "slot": 18,
+     "cell": 5
+    },
+    {
+     "slot": 19,
+     "cell": 6
+    },
+    {
+     "slot": 20,
+     "cell": 7
+    },
+    {
+     "slot": 21,
+     "cell": 8
+    },
+    {
+     "slot": 22,
+     "cell": 9
+    }
+   ]
+  }
+ },
+ "reach": {
+  "frames": [
+   23,
+   24,
+   25,
+   26,
+   27,
+   28
+  ],
+  "cols": 3,
+  "size": "3:2",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. One long forward lunge to the right held for six frames, the rear leg stretched far to the left and the front leg planted with the knee bent, the gown open at the slit around both legs so both heels show. Cells 1, 2, 4 and 5: the front arm is stretched straight out to the right at shoulder height with the fingers spread wide, the open hand clearly visible. Cells 3 and 6: the reaching arm is bent and pulled in, the open hand in front of her face. The other arm is bent across her chest. Her hair streams to the left, away from the arms. Her hands are open and hold nothing.",
+  "clips": {
+   "clip_023_028": [
+    {
+     "slot": 23,
+     "cell": 0
+    },
+    {
+     "slot": 24,
+     "cell": 1
+    },
+    {
+     "slot": 25,
+     "cell": 2
+    },
+    {
+     "slot": 26,
+     "cell": 3
+    },
+    {
+     "slot": 27,
+     "cell": 4
+    },
+    {
+     "slot": 28,
+     "cell": 5
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "dash": {
+  "frames": [
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cell 1: a wide step facing right, the rear arm stretched down and back to the left with its fist on the dot, the front fist at her chest. Cell 2: in the air with both knees tucked up and leaning forward, the rear arm low with its fist on the dot in front of her knee. Cells 3 and 4: a very low dash to the right, torso nearly level, the rear leg stretched straight to the left along the ground and the front knee driven forward; the rear arm reaches back along her side with its fist on the dot at her hip, the front fist tucked at her chest, hair, drapes and skirt streaming to the left. Cells 5 and 6: the same low dash with the rear arm thrown up and back over her shoulder, its fist on the dot above her back at the upper left, in front of the hair. Cell 7: rising out of the dash, the rear arm bent high behind her head with its fist on the dot above it. Cell 8: stopped in a wide square stance facing the viewer, knees bent, one fist on the dot at the left of her chest, the other fist at her right hip.",
+  "clips": {
+   "clip_029_032": [
+    {
+     "slot": 29,
+     "cell": 0
+    },
+    {
+     "slot": 30,
+     "cell": 1
+    },
+    {
+     "slot": 31,
+     "cell": 2
+    },
+    {
+     "slot": 32,
+     "cell": 3
+    }
+   ],
+   "clip_033_033": [
+    {
+     "slot": 33,
+     "cell": 4
+    }
+   ],
+   "clip_034_036": [
+    {
+     "slot": 34,
+     "cell": 5
+    },
+    {
+     "slot": 35,
+     "cell": 6
+    },
+    {
+     "slot": 36,
+     "cell": 7
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "air": {
+  "frames": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   4,
+   5
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cell 1: springing up on one foot with the other knee high, the rear arm reaching back to the left at shoulder height with its fist on the dot, in front of the wing and hair, the other fist at her chest. Cell 2: curled tightly in the air, knees up to her chest, leaning forward, the rear fist on the dot at the upper left beside her hair, the other fist under her chin. Cells 3 and 4: airborne and stretched upright, legs hanging down with one knee bent, both arms spread low, the rear fist on the dot far out at the left at hip height, the other hand open at the right, hair and drapes blown straight upward. Cell 5: landed in a wide stance facing the viewer, both fists at her chest, the rear one on the dot at the left. Cell 6: in the air with one knee raised high, the rear arm bent up with its fist on the dot beside her head at the upper left. Cell 7: in the air leaning back, both knees bent, one arm flung up over her head with an open hand, the other arm straight down along her side with its fist on the dot beside her knee. Cell 8: a wide stance, one arm thrust straight up to the upper right with its fist on the dot high above her head, the other hand open low at the left.",
+  "clips": {
+   "clip_037_044": [
+    {
+     "slot": 37,
+     "cell": 0
+    },
+    {
+     "slot": 38,
+     "cell": 1
+    },
+    {
+     "slot": 39,
+     "cell": 2
+    },
+    {
+     "slot": 40,
+     "cell": 3
+    },
+    {
+     "slot": 41,
+     "cell": 4
+    },
+    {
+     "slot": 42,
+     "cell": 5
+    },
+    {
+     "slot": 43,
+     "cell": 6
+    },
+    {
+     "slot": 44,
+     "cell": 7
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "slash_a": {
+  "frames": [
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cell 1: a wide low stance facing right with bent knees, one arm straight down in front of her body with its fist on the dot low between her knees, the other open hand raised at the upper left. Cell 2: standing on one leg with the other knee lifted, both fists raised beside her head, the near one on the dot at the left. Cell 3: stepping into a wide stance, arms bent, the fist on the dot beside her head at the left. Cell 4: tall wide stance, the rear arm out to the left with its fist on the dot at hip height, the other fist at her waist. Cell 5: a stride leaning right, the rear arm low with its fist on the dot at the left of her hip, the other hand open at the right. Cells 6, 7 and 8: a long stride with the rear leg stretched to the left, seen partly from behind, one arm bent up over her head with the elbow high and its fist on the dot just above the back of her head, not out to the right; the other hand open low at the left, her hair streaming down and to the left across her back.",
+  "clips": {
+   "clip_045_049": [
+    {
+     "slot": 45,
+     "cell": 0
+    },
+    {
+     "slot": 46,
+     "cell": 1
+    },
+    {
+     "slot": 47,
+     "cell": 2
+    },
+    {
+     "slot": 48,
+     "cell": 3
+    },
+    {
+     "slot": 49,
+     "cell": 4
+    }
+   ],
+   "clip_050_052": [
+    {
+     "slot": 50,
+     "cell": 5
+    },
+    {
+     "slot": 51,
+     "cell": 6
+    },
+    {
+     "slot": 52,
+     "cell": 7
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "slash_b": {
+  "frames": [
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   5,
+   6
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cells 1 and 2: a long stride to the right with the rear leg stretched left, one arm bent up over her head with its fist on the dot above the top of her head, the other open hand out to the left at head height, hair streaming left. Cell 3: the torso drops forward, the open hand high at the upper left, the other arm sweeping low across her body with its fist on the dot at the left of her waist. Cells 4 and 5: the same stride, one fist high beside her head, the other arm crossing low in front of her hips with its fist on the dot at the left. Cell 6: a wide stance facing the viewer, one arm stretched out to the left at shoulder height with its fist on the dot, the other arm bent over her head. Cell 7: tall on straight wide legs facing the viewer, both arms raised above her head, one stretched to the upper left with its fist on the dot, the other hand open above her head. Cell 8: tall, leaning left, both arms above her head with the fist on the dot at the upper left, one knee bending.",
+  "clips": {
+   "clip_053_060": [
+    {
+     "slot": 53,
+     "cell": 0
+    },
+    {
+     "slot": 54,
+     "cell": 1
+    },
+    {
+     "slot": 55,
+     "cell": 2
+    },
+    {
+     "slot": 56,
+     "cell": 3
+    },
+    {
+     "slot": 57,
+     "cell": 4
+    },
+    {
+     "slot": 58,
+     "cell": 5
+    },
+    {
+     "slot": 59,
+     "cell": 6
+    },
+    {
+     "slot": 60,
+     "cell": 7
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "lunge_a": {
+  "frames": [
+   61,
+   62,
+   63,
+   64,
+   65,
+   66,
+   67,
+   68
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cells 1, 2 and 3: an extremely low lunge to the right, the rear leg stretched straight along the ground to the left, the front knee deeply bent, torso nearly level and head forward, both arms reaching low and down in front, one fist on the dot just behind her front knee, hair, drapes and skirt streaming to the left. Cell 4: a compact square stance facing the viewer with knees bent, the rear arm out to the left at chest height with its fist on the dot, the other fist at her waist. Cell 5: a wide stance turned to the right, the rear arm stretched straight out and down to the left with its fist on the dot at the far left at hip height; any dark streak there is only sleeve blur, so draw a normal arm. The other arm is bent with its fist at her shoulder, hair flung up to the left. Cells 6, 7 and 8: a long low lunge with the rear leg straight to the left, one arm bent over her head with its fist on the dot just above the back of her head, the other arm low and tucked in front of her chest, hair streaming to the left below the raised arm, her face visible.",
+  "clips": {
+   "clip_061_063": [
+    {
+     "slot": 61,
+     "cell": 0
+    },
+    {
+     "slot": 62,
+     "cell": 1
+    },
+    {
+     "slot": 63,
+     "cell": 2
+    }
+   ],
+   "clip_064_065": [
+    {
+     "slot": 64,
+     "cell": 3
+    },
+    {
+     "slot": 65,
+     "cell": 4
+    }
+   ],
+   "clip_066_068": [
+    {
+     "slot": 66,
+     "cell": 5
+    },
+    {
+     "slot": 67,
+     "cell": 6
+    },
+    {
+     "slot": 68,
+     "cell": 7
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "lunge_b": {
+  "frames": [
+   69,
+   70,
+   71,
+   72,
+   73,
+   74
+  ],
+  "cols": 3,
+  "size": "3:2",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cell 1: the long low lunge to the right, rear leg straight to the left, both hands up in front of her face, hair streaming left. Cells 2, 3 and 4: lower still, torso level and leaning far right, the rear arm reaching back along her side with its fist on the dot at the back of her hip, the other arm flung up behind her with an open hand at the upper left, hair streaming to the left. Cells 5 and 6: a wide stance, bent forward at the waist towards the lower right, both arms reaching down to the right with both fists together on the dot at the lower right in front of her, hair falling to the left.",
+  "clips": {
+   "clip_069_072": [
+    {
+     "slot": 69,
+     "cell": 0
+    },
+    {
+     "slot": 70,
+     "cell": 1
+    },
+    {
+     "slot": 71,
+     "cell": 2
+    },
+    {
+     "slot": 72,
+     "cell": 3
+    }
+   ],
+   "clip_073_074": [
+    {
+     "slot": 73,
+     "cell": 4
+    },
+    {
+     "slot": 74,
+     "cell": 5
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "spread": {
+  "frames": [
+   75,
+   76,
+   77,
+   78,
+   79,
+   80,
+   81,
+   82,
+   83
+  ],
+  "cols": 5,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   6,
+   7,
+   8
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cells 1, 2 and 3: a wide square stance facing the viewer, both arms spread in one big diagonal: one arm stretched straight up to the upper left with its fist on the dot, the other arm down at the lower right with an open hand. Cells 4, 5 and 6: seen mostly from behind in a long stride to the right, the hair down the middle of her back, one arm bent straight up overhead with its fist on the dot at the top, the other hand open low at the left. Cell 7: tall and upright facing right, both forearms in front of her chest, the near fist on the dot at the left of her chest, looking down. Cells 8 and 9: tall and upright, one arm bent up over her head with the elbow high at the right, the other arm bent with its fist on the dot beside her head at the left, cell 9 a moment after cell 8 with the arm a little higher.",
+  "clips": {
+   "clip_075_077": [
+    {
+     "slot": 75,
+     "cell": 0
+    },
+    {
+     "slot": 76,
+     "cell": 1
+    },
+    {
+     "slot": 77,
+     "cell": 2
+    }
+   ],
+   "clip_078_080": [
+    {
+     "slot": 78,
+     "cell": 3
+    },
+    {
+     "slot": 79,
+     "cell": 4
+    },
+    {
+     "slot": 80,
+     "cell": 5
+    }
+   ],
+   "clip_081_083": [
+    {
+     "slot": 81,
+     "cell": 6
+    },
+    {
+     "slot": 82,
+     "cell": 7
+    },
+    {
+     "slot": 83,
+     "cell": 8
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "low_cut": {
+  "frames": [
+   84,
+   85,
+   86,
+   87,
+   88,
+   89,
+   90,
+   91
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   7
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cell 1: a wide stance leaning back and turned to the right, one arm bent up over her head with its fist on the dot above her head, the other open hand out at the left, hair streaming to the left. Cells 2, 3 and 4: a low lunge with the rear leg stretched left, one arm raised high over her head with an open hand at the upper left, the other arm hanging straight down in front with its fist on the dot low beside her front knee, in front of the skirt. Cells 5, 6 and 7: an extremely low lunge, head at knee height, rear leg stretched along the ground to the left, the front arm reaching down to the ground at the lower right with its fist on the dot, the other elbow raised over her back with an open hand. Cell 8: tall on one leg with the other foot kicked back to the right, facing right, one fist on the dot just in front of her face at the left, the other fist at her chest.",
+  "clips": {
+   "clip_084_091": [
+    {
+     "slot": 84,
+     "cell": 0
+    },
+    {
+     "slot": 85,
+     "cell": 1
+    },
+    {
+     "slot": 86,
+     "cell": 2
+    },
+    {
+     "slot": 87,
+     "cell": 3
+    },
+    {
+     "slot": 88,
+     "cell": 4
+    },
+    {
+     "slot": 89,
+     "cell": 5
+    },
+    {
+     "slot": 90,
+     "cell": 6
+    },
+    {
+     "slot": 91,
+     "cell": 7
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "arm_out": {
+  "frames": [
+   92,
+   93,
+   94,
+   95,
+   96,
+   97,
+   98,
+   99
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cells 1 and 2: seen from behind in a tall wide stance, the hair down the middle of her back, one arm bent up over her head with its fist on the dot at the upper left above her head. Cells 3, 4 and 5: a wide stance turned towards the viewer, the front arm stretched out to the upper right with an open hand, the rear arm stretched down to the lower left with its fist on the dot, clear of her body and in front of the wing. Cell 6: a stance facing right, the rear arm stretched out to the left at shoulder height with its fist on the dot, the other hand low at the right. Cell 7: in the air with knees bent, the rear arm stretched to the upper left with its fist on the dot, the other hand open low at the right. Cell 8: a long flat leap to the right with the legs split, the front arm bent with its fist on the dot just in front of her face, her hair, drapes and wings streaming flat to the left.",
+  "clips": {
+   "clip_092_093": [
+    {
+     "slot": 92,
+     "cell": 0
+    },
+    {
+     "slot": 93,
+     "cell": 1
+    }
+   ],
+   "clip_094_096": [
+    {
+     "slot": 94,
+     "cell": 2
+    },
+    {
+     "slot": 95,
+     "cell": 3
+    },
+    {
+     "slot": 96,
+     "cell": 4
+    }
+   ],
+   "clip_097_099": [
+    {
+     "slot": 97,
+     "cell": 5
+    },
+    {
+     "slot": 98,
+     "cell": 6
+    },
+    {
+     "slot": 99,
+     "cell": 7
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "back_thrust": {
+  "frames": [
+   100,
+   101,
+   102,
+   103,
+   104,
+   105,
+   106,
+   107,
+   108
+  ],
+  "cols": 5,
+  "size": "16:9",
+  "ref_cells": [
+   3,
+   4
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cells 1, 2 and 3: seen from behind in a wide straddle, the hair straight down the middle of her back, one arm stretched straight out to the right at shoulder height with its fist on the dot, the other arm out to the left with an open hand. Cell 4: tall and facing the viewer, one arm stretched out to the left at shoulder height with its fist on the dot, the other hand at her chest. Cell 5: tall, both arms raised and crossing, one fist on the dot at the upper left beside her head. Cell 6: a step to the right, turned to the right, one arm bent with its fist on the dot behind her head at the upper left, the other hand reaching out at the right. Cells 7, 8 and 9: seen from behind in a long stride, the hair down her back, one elbow up with the fist beside her head, the other arm stretched straight down to the lower right with its fist on the dot, clear of her body.",
+  "clips": {
+   "clip_100_102": [
+    {
+     "slot": 100,
+     "cell": 0
+    },
+    {
+     "slot": 101,
+     "cell": 1
+    },
+    {
+     "slot": 102,
+     "cell": 2
+    }
+   ],
+   "clip_103_105": [
+    {
+     "slot": 103,
+     "cell": 3
+    },
+    {
+     "slot": 104,
+     "cell": 4
+    },
+    {
+     "slot": 105,
+     "cell": 5
+    }
+   ],
+   "clip_106_108": [
+    {
+     "slot": 106,
+     "cell": 6
+    },
+    {
+     "slot": 107,
+     "cell": 7
+    },
+    {
+     "slot": 108,
+     "cell": 8
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "flip": {
+  "frames": [
+   109,
+   110,
+   111,
+   112,
+   113,
+   114
+  ],
+  "cols": 3,
+  "size": "3:2",
+  "ref_cells": [
+   0,
+   5
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. One big forward flip in the air, and the body really does turn over; she is seen from behind in most cells. Cell 1: rising and tilted to the lower left, seen from behind, the hair down her back, one arm bent over her head at the top and the other arm stretched out to the right with its fist on the dot. Cell 2: tipping over, one leg kicked up to the upper left and the other leg hanging straight down, seen from behind, one arm bent with its fist on the dot at the right of her body. Cell 3: fully upside down, both legs in the air at the top of the cell, her hips above her head, the hair flaring out to the left, one arm straight down with its fist on the dot at the very bottom below her head. Cell 4: upside down and tilted, her head at the lower left with hair flaring to the left, her legs stretching to the upper right, one arm reaching straight down to the lower left with its fist on the dot. Cell 5: righting herself, seen from behind, the hair on top, one arm stretched down to the lower left with its fist on the dot, legs to the lower right. Cell 6: landing seen from behind, hair down her back, one arm out to the left with an open hand and the other arm bent with its fist on the dot at her right shoulder. The gown falls with gravity close around her legs, and her legs stay visible.",
+  "clips": {
+   "clip_109_114": [
+    {
+     "slot": 109,
+     "cell": 0
+    },
+    {
+     "slot": 110,
+     "cell": 1
+    },
+    {
+     "slot": 111,
+     "cell": 2
+    },
+    {
+     "slot": 112,
+     "cell": 3
+    },
+    {
+     "slot": 113,
+     "cell": 4
+    },
+    {
+     "slot": 114,
+     "cell": 5
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "rise_cut": {
+  "frames": [
+   115,
+   116,
+   117,
+   118,
+   119,
+   120,
+   121,
+   122
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   3,
+   4
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cells 1, 2 and 3: a low lunge to the right, rear leg stretched far to the left, torso leaning right, the rear arm stretched back to the left over her rear thigh with its fist on the dot, the front arm bent forward with an open hand up in front of her face, hair streaming up and to the left, above the rear arm. Cell 4: tall in a wide stance facing right, the rear arm bent with its fist on the dot at the left of her waist, the other hand at her hip. Cells 5 and 6: a wide stance seen from the side, leaning back, one arm bent up with its fist on the dot above her head, her face fully visible beside that arm, the other fist at her hip, her hair falling to the left away from her face. Cell 7: tall facing the viewer, one arm raised straight up at the upper right with its fist on the dot above her head, the other hand open out at the left. Cell 8: tall, one arm stretched out to the upper right with its fist on the dot, the other hand open low at the left.",
+  "clips": {
+   "clip_115_122": [
+    {
+     "slot": 115,
+     "cell": 0
+    },
+    {
+     "slot": 116,
+     "cell": 1
+    },
+    {
+     "slot": 117,
+     "cell": 2
+    },
+    {
+     "slot": 118,
+     "cell": 3
+    },
+    {
+     "slot": 119,
+     "cell": 4
+    },
+    {
+     "slot": 120,
+     "cell": 5
+    },
+    {
+     "slot": 121,
+     "cell": 6
+    },
+    {
+     "slot": 122,
+     "cell": 7
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "gesture_a": {
+  "frames": [
+   123,
+   124,
+   125,
+   126,
+   127,
+   128,
+   129,
+   130,
+   131
+  ],
+  "cols": 5,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. She stands tall with her feet apart, facing right, in every cell. Cells 1 and 2: one arm stretched straight out to the right at chest height with its fist on the dot, the other hand open low at the left of her hip. Cell 3: the rear arm hanging with its fist on the dot at the left of her hip, the front hand on her chest. Cells 4 and 5: the rear fist on the dot at the left of her hip, the front hand raised beside her face with the elbow bent. Cell 6: the rear fist on the dot at the left of her hip, the front arm bent across her chest with the hand out at the left at shoulder height. Cells 7, 8 and 9: the front arm stretched straight out to the right at shoulder height with an open hand, the rear arm hanging with its fist on the dot at the left of her hip.",
+  "clips": {
+   "clip_123_128": [
+    {
+     "slot": 123,
+     "cell": 0
+    },
+    {
+     "slot": 124,
+     "cell": 1
+    },
+    {
+     "slot": 125,
+     "cell": 2
+    },
+    {
+     "slot": 126,
+     "cell": 3
+    },
+    {
+     "slot": 127,
+     "cell": 4
+    },
+    {
+     "slot": 128,
+     "cell": 5
+    }
+   ],
+   "clip_129_131": [
+    {
+     "slot": 129,
+     "cell": 6
+    },
+    {
+     "slot": 130,
+     "cell": 7
+    },
+    {
+     "slot": 131,
+     "cell": 8
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "gesture_b": {
+  "frames": [
+   132,
+   133,
+   134,
+   135,
+   136,
+   137,
+   138,
+   139
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. She stands tall with her feet apart, facing right. Cells 1 and 2: the near hand raised to her chin, the rear arm hanging with its fist on the dot at the left of her hip. Cells 3 and 4: the near hand raised beside and above her head with the elbow bent, the rear fist on the dot at the left of her hip. Cells 5, 6 and 7: the front arm opened down and out to the lower right with an open hand, the rear arm hanging with its fist on the dot at the left of her hip. Cell 8: a low wide crouch with bent knees, her body turned to the right, the rear arm out to the left with its fist on the dot at chest height, the other fist at her waist.",
+  "clips": {
+   "clip_132_135": [
+    {
+     "slot": 132,
+     "cell": 0
+    },
+    {
+     "slot": 133,
+     "cell": 1
+    },
+    {
+     "slot": 134,
+     "cell": 2
+    },
+    {
+     "slot": 135,
+     "cell": 3
+    }
+   ],
+   "clip_136_138": [
+    {
+     "slot": 136,
+     "cell": 4
+    },
+    {
+     "slot": 137,
+     "cell": 5
+    },
+    {
+     "slot": 138,
+     "cell": 6
+    }
+   ],
+   "clip_139_139": [
+    {
+     "slot": 139,
+     "cell": 7
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "down": {
+  "frames": [
+   140,
+   141,
+   142,
+   143,
+   144,
+   145
+  ],
+  "cols": 3,
+  "size": "3:2",
+  "ref_cells": [
+   0,
+   5
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cell 1: knocked back, standing but leaning back to the left, head tilted back, one arm hanging with its fist on the dot at the left of her hip, the other forearm behind her. Cell 2: thrown on her back on the ground, her head at the lower left, both legs up in the air to the right, one arm down with its fist on the dot on the ground beside her hips. Cell 3: on her back, head at the left on the ground, one leg raised to the upper right and the other bent, the arm with its fist on the dot at her hip, hair spread on the ground. Cell 4: lying fully flat on the ground on her side, head at the left and toes at the right, her arms tucked against her body, the hair spread on the ground. Cell 5: curled in a low crouch on the ground facing right, one knee up, the hand with its fist on the dot at her hip. Cell 6: risen, tall and upright facing the viewer, both fists together at the front of her waist on the dot. The gown stays around her legs with both legs and heels showing, and the wings fold close to her back when she lies down.",
+  "clips": {
+   "clip_140_143": [
+    {
+     "slot": 140,
+     "cell": 0
+    },
+    {
+     "slot": 141,
+     "cell": 1
+    },
+    {
+     "slot": 142,
+     "cell": 2
+    },
+    {
+     "slot": 143,
+     "cell": 3
+    }
+   ],
+   "clip_144_145": [
+    {
+     "slot": 144,
+     "cell": 4
+    },
+    {
+     "slot": 145,
+     "cell": 5
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "run": {
+  "frames": [
+   151,
+   152,
+   153,
+   154,
+   155,
+   156,
+   157,
+   158
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. These are the eight frames of a fast run to the right, leaning forward. The front arm is bent with its fist tucked in front of her chest. The rear arm is bent behind her with the elbow raised high, so its fist is on the dot behind her back; that fist is drawn in front of the hair, wings and drapes. Her legs follow the sprite exactly: cells 1, 2, 5 and 6 are long strides with the rear leg stretched to the left and the front knee driving forward; cells 3, 4, 7 and 8 have the rear foot kicked up behind her and the other leg straight under her. The gown is swept back and opens at the slit so both legs and both white heels show clearly. Hair, drapes and tail stream to the left.",
+  "clips": {
+   "clip_151_158": [
+    {
+     "slot": 151,
+     "cell": 0
+    },
+    {
+     "slot": 152,
+     "cell": 1
+    },
+    {
+     "slot": 153,
+     "cell": 2
+    },
+    {
+     "slot": 154,
+     "cell": 3
+    },
+    {
+     "slot": 155,
+     "cell": 4
+    },
+    {
+     "slot": 156,
+     "cell": 5
+    },
+    {
+     "slot": 157,
+     "cell": 6
+    },
+    {
+     "slot": 158,
+     "cell": 7
+    }
+   ]
+  },
+  "pad_y": 40,
+  "micro": {
+   "155": {
+    "lift": [
+     [
+      0,
+      0
+     ],
+     [
+      0.45,
+      0
+     ],
+     [
+      1,
+      5
+     ]
+    ]
+   },
+   "157": {
+    "lift": [
+     [
+      0,
+      0
+     ],
+     [
+      0.45,
+      0
+     ],
+     [
+      1,
+      6
+     ]
+    ]
+   },
+   "158": {
+    "lift": [
+     [
+      0,
+      0
+     ],
+     [
+      0.45,
+      0
+     ],
+     [
+      1,
+      5
+     ]
+    ]
+   }
+  }
+ },
+ "stance": {
+  "frames": [
+   159,
+   160,
+   161,
+   162,
+   163,
+   164
+  ],
+  "cols": 3,
+  "size": "3:2",
+  "ref_cells": [
+   0,
+   2,
+   5
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cell 1: a wide stance facing right with bent knees, the front arm stretched straight out to the right at shoulder height with its fist on the dot, the other hand at her hip. Cells 2 and 3: a long stride to the right, the rear arm bent up over her head with its fist on the dot at the upper left, the other forearm across her chest, hair streaming to the left. Cell 4: a wide stance facing the viewer, one arm out to the right with its fist on the dot at waist height, the other hand open at the left. Cell 5: a long stride, one arm raised high behind her head with its fist on the dot at the upper left, the other forearm at her chest. Cell 6: a stride facing the viewer, one arm thrust straight up overhead at the right with its fist on the dot at the top, the other hand open out at the left.",
+  "clips": {
+   "clip_159_164": [
+    {
+     "slot": 159,
+     "cell": 0
+    },
+    {
+     "slot": 160,
+     "cell": 1
+    },
+    {
+     "slot": 161,
+     "cell": 2
+    },
+    {
+     "slot": 162,
+     "cell": 3
+    },
+    {
+     "slot": 163,
+     "cell": 4
+    },
+    {
+     "slot": 164,
+     "cell": 5
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "flurry": {
+  "frames": [
+   165,
+   166,
+   167,
+   168,
+   169,
+   170,
+   172
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cell 1: a wide stance facing right, one bent arm up at the upper left with an open hand, the other arm down at the right with its fist on the dot beside her hip. Cell 2: facing LEFT and leaning low, her hair streaming to the right, one open hand reaching forward at the left, the other arm down with its fist on the dot in front of her knee. Cell 3: a wide stance facing LEFT, hunched, one fist on the dot in front of her face at the left. Cells 4, 6 and 7: a low wide stance facing right, one elbow raised behind her, the other arm stretched straight out to the right with its fist on the dot at the end, far from her body: in cell 4 level with her shoulder, in cell 6 high to the upper right, in cell 7 low to the lower right. The dark streak along the arm is only sleeve blur, so draw one normal straight bare arm reaching to the dot. Cell 5: the same low wide stance with the rear arm low and its fist on the dot at the left of her hip.",
+  "clips": {
+   "clip_165_167": [
+    {
+     "slot": 165,
+     "cell": 0
+    },
+    {
+     "slot": 166,
+     "cell": 1
+    },
+    {
+     "slot": 167,
+     "cell": 2
+    }
+   ],
+   "clip_168_173": [
+    {
+     "slot": 168,
+     "cell": 3
+    },
+    {
+     "slot": 169,
+     "cell": 4
+    },
+    {
+     "slot": 170,
+     "cell": 5
+    },
+    {
+     "slot": 171,
+     "cell": 4
+    },
+    {
+     "slot": 172,
+     "cell": 6
+    },
+    {
+     "slot": 173,
+     "cell": 4
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "sweep": {
+  "frames": [
+   174,
+   175,
+   176,
+   177,
+   178,
+   179,
+   180,
+   181
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   7
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cells 1, 2 and 3: facing LEFT in a low wide stance, hair streaming to the right, both fists together in front of her chest on the dot at the left. Cell 4: a very low level dash to the right, rear leg stretched left, hair and drapes streaming left, one fist on the dot at her waist. Cell 5: a long leap to the right, seen from behind, one leg kicked up behind, one arm stretched straight out to the right at shoulder height with its fist on the dot. Cell 6: seen from behind and low in the air, hair on top, one arm bent up with its fist on the dot above her right shoulder, the other hand open out at the left. Cell 7: airborne, knees bent, facing LEFT, one arm stretched out to the upper left with its fist on the dot, hair flung up to the right. Cell 8: a long stride to the right, one arm stretched out to the left with its fist on the dot, the other hand open at the right, hair flung up.",
+  "clips": {
+   "clip_174_181": [
+    {
+     "slot": 174,
+     "cell": 0
+    },
+    {
+     "slot": 175,
+     "cell": 1
+    },
+    {
+     "slot": 176,
+     "cell": 2
+    },
+    {
+     "slot": 177,
+     "cell": 3
+    },
+    {
+     "slot": 178,
+     "cell": 4
+    },
+    {
+     "slot": 179,
+     "cell": 5
+    },
+    {
+     "slot": 180,
+     "cell": 6
+    },
+    {
+     "slot": 181,
+     "cell": 7
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "poise": {
+  "frames": [
+   182,
+   183,
+   184,
+   190,
+   191,
+   192,
+   193,
+   194
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   4,
+   7
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cells 1, 2 and 3: an extremely low lunge to the right, rear leg straight to the left along the ground, torso leaning far forward, both arms reaching down with the fist on the dot near the ground at the lower right in front of her front foot, hair streaming up and to the left. Cell 4: seen from behind in a stride, hair down the middle of her back, one arm stretched out to the left at shoulder height with its fist on the dot, outside the hair and wing, the other leg kicked back to the right. Cells 5, 6 and 7: a wide stride facing right, both arms stretched straight out to the right at chest height with both fists together on the dot, hair streaming flat to the left. Cell 8: seen from behind, tall and straddled, hair down her back, one arm bent with its fist on the dot at the upper right beside her head, the other fist at the upper left.",
+  "clips": {
+   "clip_182_184": [
+    {
+     "slot": 182,
+     "cell": 0
+    },
+    {
+     "slot": 183,
+     "cell": 1
+    },
+    {
+     "slot": 184,
+     "cell": 2
+    }
+   ],
+   "clip_189_191": [
+    {
+     "slot": 189,
+     "cell": 3
+    },
+    {
+     "slot": 190,
+     "cell": 3
+    },
+    {
+     "slot": 191,
+     "cell": 4
+    }
+   ],
+   "clip_192_193": [
+    {
+     "slot": 192,
+     "cell": 5
+    },
+    {
+     "slot": 193,
+     "cell": 6
+    }
+   ],
+   "clip_194_194": [
+    {
+     "slot": 194,
+     "cell": 7
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "thrust": {
+  "frames": [
+   195,
+   196,
+   197,
+   198,
+   199,
+   200
+  ],
+  "cols": 3,
+  "size": "3:2",
+  "ref_cells": [
+   3,
+   4,
+   5
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cell 1: seen from behind, tall and straddled, hair down her back, both arms thrust straight up, the right fist on the dot above her head. Cell 2: in the air on one leg, the other knee bent behind her, both arms bent up over her head with the fist on the dot at the upper left, face turned down, hair flung to the right. Cells 3, 4 and 5: facing LEFT in a stride, bent forward, hair flying up and to the right, both arms down with both fists together on the dot in front of her thigh. Cell 6: a compact stance facing right, the forearms at her chest, the rear arm reaching out to the left with its fist on the dot at chest height.",
+  "clips": {
+   "clip_195_200": [
+    {
+     "slot": 195,
+     "cell": 0
+    },
+    {
+     "slot": 196,
+     "cell": 1
+    },
+    {
+     "slot": 197,
+     "cell": 2
+    },
+    {
+     "slot": 198,
+     "cell": 3
+    },
+    {
+     "slot": 199,
+     "cell": 4
+    },
+    {
+     "slot": 200,
+     "cell": 5
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "cleave_a": {
+  "frames": [
+   201,
+   202,
+   203,
+   204,
+   205,
+   206,
+   207,
+   208
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cell 1: leaning forward to the right in a stride, one hand open out at the right, the rear arm low with its fist on the dot at the left of her waist, hair streaming left. Cells 2, 3 and 4: seen from behind in a stride, the hair down her back, one arm stretched up to the upper left with its fist on the dot, the other hand open low at the left. Cell 5: twisting in a stride facing right, one arm bent high with an open hand above her head, the rear arm low with its fist on the dot at the left of her hip. Cell 6: a stride facing right, one arm stretched out to the upper left with its fist on the dot, the other arm out to the right with a fist. Cells 7 and 8: a low lunge to the right, bending forward, one arm bent over her head with its fist on the dot above her head, the other arm down in front of her front knee.",
+  "clips": {
+   "clip_201_204": [
+    {
+     "slot": 201,
+     "cell": 0
+    },
+    {
+     "slot": 202,
+     "cell": 1
+    },
+    {
+     "slot": 203,
+     "cell": 2
+    },
+    {
+     "slot": 204,
+     "cell": 3
+    }
+   ],
+   "clip_205_208": [
+    {
+     "slot": 205,
+     "cell": 4
+    },
+    {
+     "slot": 206,
+     "cell": 5
+    },
+    {
+     "slot": 207,
+     "cell": 6
+    },
+    {
+     "slot": 208,
+     "cell": 7
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "cleave_b": {
+  "frames": [
+   209,
+   210,
+   211,
+   212,
+   213,
+   214,
+   215,
+   230,
+   231
+  ],
+  "cols": 5,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   7
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cell 1: bent low in a stride, one arm stretched out to the upper left above her head with its fist on the dot, the other fist low in front of her knees, the hair falling to the right. Cell 2: leaning back on one straight leg with the other leg forward, one arm bent with its fist on the dot above her head at the left, the hair hanging to the right. Cell 3: tipping back with one leg kicked high to the upper left, one arm thrust up to the top, the other arm out at the right with its fist on the dot, in front of her hair. Cell 4: leaping up to the right with one knee bent, one arm raised to the top right with an open hand, the other arm out at the left with its fist on the dot. Cells 5, 6 and 7: an extremely low lunge to the right, rear leg straight along the ground to the left, both fists down at the ground on the dot below her front knee, hair streaming up to the left. Cell 8: a high kick to the upper right, standing on one straight leg, the kicking leg straight with the heel at the upper right, the gown falling away along the raised leg, torso leaning left, one arm bent with its fist on the dot at the left of her chest. Cell 9: standing on one leg with the other knee tucked up, the rear fist on the dot at the left of her chest.",
+  "clips": {
+   "clip_209_216": [
+    {
+     "slot": 209,
+     "cell": 0
+    },
+    {
+     "slot": 210,
+     "cell": 1
+    },
+    {
+     "slot": 211,
+     "cell": 2
+    },
+    {
+     "slot": 212,
+     "cell": 3
+    },
+    {
+     "slot": 213,
+     "cell": 4
+    },
+    {
+     "slot": 214,
+     "cell": 5
+    },
+    {
+     "slot": 215,
+     "cell": 6
+    },
+    {
+     "slot": 216,
+     "cell": 6
+    }
+   ],
+   "clip_230_231": [
+    {
+     "slot": 230,
+     "cell": 7
+    },
+    {
+     "slot": 231,
+     "cell": 8
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "rising": {
+  "frames": [
+   222,
+   223,
+   224,
+   225,
+   226,
+   227,
+   228,
+   229
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   2,
+   3,
+   6,
+   7
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cell 1: a low leap to the right, leaning forward, legs bent, the front fist on the dot at her waist. Cells 2 and 3: seen from behind in a long split stride, one arm stretched straight to the upper left with its fist on the dot, the other hand at her head, hair streaming to the left. Cell 4: tall facing the viewer, knees close, one fist on the dot at the left of her hip, the other hand at her waist. Cell 5: a wide stance facing the viewer, both arms bent out wide, the near arm raised with its fist on the dot at the upper left above her shoulder, the other hand open low at the right. Cell 6: seen from behind running on one leg, the other foot kicked out to the left, one arm bent with its fist on the dot at the upper left above her head height, hair flying to the right. Cell 7: seen from behind and bent far over one straight leg, the hair hanging at the center, one arm stretched to the upper left with an open hand, the other fist on the dot at the top beside her head. Cell 8: a high kick to the upper right, standing on one straight leg, the kicking leg straight with the heel at the upper right, the gown falling away along the raised leg, torso leaning left, her head and shoulders clear, one fist on the dot at the left of her chest.",
+  "clips": {
+   "clip_217_224": [
+    {
+     "slot": 217,
+     "cell": 0
+    },
+    {
+     "slot": 218,
+     "cell": 0
+    },
+    {
+     "slot": 219,
+     "cell": 0
+    },
+    {
+     "slot": 220,
+     "cell": 0
+    },
+    {
+     "slot": 221,
+     "cell": 0
+    },
+    {
+     "slot": 222,
+     "cell": 0
+    },
+    {
+     "slot": 223,
+     "cell": 1
+    },
+    {
+     "slot": 224,
+     "cell": 2
+    }
+   ],
+   "clip_225_229": [
+    {
+     "slot": 225,
+     "cell": 3
+    },
+    {
+     "slot": 226,
+     "cell": 4
+    },
+    {
+     "slot": 227,
+     "cell": 5
+    },
+    {
+     "slot": 228,
+     "cell": 6
+    },
+    {
+     "slot": 229,
+     "cell": 7
+    }
+   ]
+  },
+  "pad_y": 40
+ },
+ "finish": {
+  "frames": [
+   236,
+   237,
+   238,
+   240,
+   241,
+   242,
+   243,
+   244,
+   245
+  ],
+  "cols": 5,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "mark_grips": true,
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Cell 1: seen from behind and facing LEFT, tall with feet apart, the near hand open at the left, the far arm reaching back with its fist on the dot at the right of her hip. Cells 2, 3 and 4: tall, facing LEFT, both forearms in front of her, the fist on the dot out at the left at chest height, the hair and tail hanging at the right. Cell 5: seen from behind, low in a wide stride, one arm stretched out to the left with its fist on the dot at shoulder height. Cell 6: a very low lunge to the right, rear leg stretched far to the left, torso level, the fist on the dot tucked at her front hip. Cells 7 and 8: bent far forward in a very wide stance, head low between her shoulders, one arm thrust straight up to the top with its fist on the dot above her back. Cell 9: tall on one straight leg with the other knee bent high, one arm thrust straight up overhead with a fist, the other arm down with its fist on the dot at her hip.",
+  "clips": {
+   "clip_236_237": [
+    {
+     "slot": 236,
+     "cell": 0
+    },
+    {
+     "slot": 237,
+     "cell": 1
+    }
+   ],
+   "clip_238_239": [
+    {
+     "slot": 238,
+     "cell": 2
+    },
+    {
+     "slot": 239,
+     "cell": 2
+    }
+   ],
+   "clip_240_240": [
+    {
+     "slot": 240,
+     "cell": 3
+    }
+   ],
+   "clip_241_245": [
+    {
+     "slot": 241,
+     "cell": 4
+    },
+    {
+     "slot": 242,
+     "cell": 5
+    },
+    {
+     "slot": 243,
+     "cell": 6
+    },
+    {
+     "slot": 244,
+     "cell": 7
+    },
+    {
+     "slot": 245,
+     "cell": 8
+    }
+   ]
+  },
+  "pad_y": 40,
+  "micro": {
+   "239": {
+    "shear": [
+     [
+      0,
+      -1
+     ],
+     [
+      0.6,
+      -1
+     ],
+     [
+      0.85,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   }
+  }
+ },
+ "repair_a": {
+  "frames": [
+   85,
+   86,
+   87,
+   181,
+   190,
+   168
+  ],
+  "cols": 3,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "mark_grips": true,
+  "pad_x": 110,
+  "pad_y": 50,
+  "replace": {
+   "85": 0,
+   "86": 1,
+   "87": 2,
+   "181": 3,
+   "190": 4,
+   "168": 5
+  },
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Six separate poses. In every cell the closed bare fist sits exactly on the magenta dot, and that arm ends at the dot: the forearm reaches it and stops there, never past it and never short of it. Cells 1, 2 and 3: a low lunge to the right with the rear leg stretched far to the left, torso upright and turned to the right; the near arm hangs straight down in front of her body, from the shoulder down past her hip, with its fist on the dot low between her knees, drawn in front of the gown; the other arm is raised and bent with an open hand above her head at the upper left. Cell 4: a long low stride to the right, the rear arm stretched straight out to the LEFT at chest height with its fist on the dot at the far left, the other hand open at the right, hair flung up. Cell 5: seen from behind in a running stride, the hair down her back, one arm stretched out to the left at shoulder height, its fist on the dot just left of her shoulder, outside the hair and wing. Cell 6: a low wide stance facing right, one elbow raised behind her, the other arm stretched perfectly straight out to the upper right with its fist on the dot far from her body; any dark streak there is only sleeve blur, so draw one long straight bare arm reaching all the way to the dot."
+ },
+ "repair_b": {
+  "frames": [
+   121,
+   159,
+   164,
+   226,
+   227
+  ],
+  "cols": 3,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "mark_grips": true,
+  "pad_x": 110,
+  "pad_y": 50,
+  "replace": {
+   "121": 0,
+   "159": 1,
+   "164": 2,
+   "226": 3,
+   "227": 4
+  },
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Five separate poses. In every cell the closed bare fist sits exactly on the magenta dot, and that arm ends at the dot: the forearm reaches it and stops there, never past it and never short of it. Cell 1: tall facing the viewer, one arm bent straight up with its fist on the dot just above the top of her head, the other hand open out at the left. Cell 2: a wide stance turned to the right, one arm stretched straight out to the right at shoulder height with its fist on the dot, the other forearm across her chest. Cell 3: a stride facing right, one arm thrust straight up overhead with its fist on the dot high above her head, the elbow straight, the other hand open out at the left. Cell 4: a wide stance facing the viewer, one arm raised out to the upper left with its fist on the dot beside her head, the other arm down at the right with an open hand. Cell 5: seen from behind running on one leg, the other foot kicked out to the left, one arm bent up with its fist on the dot at the upper left above her head height, outside the hair, hair flying to the right."
+ },
+ "repair_c": {
+  "frames": [
+   121,
+   164,
+   190
+  ],
+  "cols": 3,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2
+  ],
+  "mark_grips": true,
+  "pad_x": 110,
+  "pad_y": 50,
+  "replace": {
+   "121": 0,
+   "164": 1,
+   "190": 2
+  },
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Three separate poses. In every cell one closed bare fist sits exactly on the magenta dot, and the dot is higher than you would expect: the arm is fully straight and long, reaching all the way up to it. Cell 1: tall facing the viewer, one arm thrust straight up with a straight elbow, its fist on the dot ABOVE the tips of her horns, the other hand open out at the left. Cell 2: a stride facing right, one arm thrust straight up overhead with a straight elbow, its fist on the dot high above her horns, well above her head; the other hand open out at the left. Cell 3: seen from behind in a running stride, the hair down her back, one arm stretched straight out to the left at shoulder height, its fist on the dot level with her shoulder, not lower, outside the hair and wing."
+ },
+ "repair_d": {
+  "frames": [
+   6,
+   126,
+   127,
+   131
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "mark_grips": true,
+  "pad_x": 110,
+  "pad_y": 50,
+  "replace": {
+   "126": 1,
+   "127": 2,
+   "131": 3
+  },
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Four separate standing poses, facing right, tall with her feet apart. In every cell the rear arm hangs straight down at the left of her hip with its closed bare fist exactly on the magenta dot, the forearm reaching the dot and ending there, drawn in front of the gown and wing. Cell 1: the front arm is bent with the hand held up at chest height in front of her, at the right, closed into a tight fist. Cells 2 and 3: the other arm is bent up tight across the front of her chest, so its closed fist is raised beside the LEFT side of her face at chin height, the elbow pointing down in front of her chest; nothing is raised at the right of her head. Cell 4: the front arm is stretched straight out to the right at shoulder height with an open hand."
+ },
+ "repair_e": {
+  "frames": [
+   230,
+   231,
+   243,
+   244,
+   245
+  ],
+  "cols": 3,
+  "size": "16:9",
+  "ref_cells": [
+   1,
+   4
+  ],
+  "mark_grips": true,
+  "pad_x": 150,
+  "pad_y": 70,
+  "replace": {
+   "230": 0,
+   "231": 1,
+   "243": 2,
+   "244": 2,
+   "245": 4
+  },
+  "motion": "Copy each cell's facing, body angle, lean and limb positions from Image 2: some cells face left, show her back, lean far over, lie down or are in the air. Both of her feet are always drawn exactly where the sprite's two boots are, and never dropped: in strides and lunges the gown opens at the slit and lifts with the legs, so each leg and white heel shows at the sprite's leg and boot. In every pose the wings stay attached at her upper back and turn with her torso, the tail grows from her lower back, and the sleeve drapes hang from her upper arms; in leaps and fast moves they trail behind the motion, and they never cover her forearms or fists. Seen from behind, her hair falls down her back between the wings, the tail hangs below it, and her arms stay outside the hair. Five separate poses. Every part of her stays inside her own cell with clear empty space on all four sides: the wings, gown, train, tail and the raised arm or leg never touch the cell's edge. Where a closed bare fist sits on a magenta dot, the forearm reaches the dot and ends there. Cell 1: a high kick to the upper right, standing on one straight leg, the kicking leg straight with the heel at the upper right, the gown falling away along the raised leg, torso leaning back to the left, one arm bent with its fist on the dot at the left of her chest. Cell 2: standing on one leg with the other knee tucked up in front, the rear fist on the dot at the left of her chest, the other hand open at the right. Cells 3 and 4: bent far forward in a very wide stance, legs straight and far apart, her head low between her shoulders, one arm thrust straight up from her shoulder with its fist on the dot high above her back, her hair hanging down. Cell 5: tall on one straight leg with the other knee bent up behind her, one arm thrust straight up overhead with a closed fist at the top, the other arm down with its fist on the dot at her hip."
+ }
+}

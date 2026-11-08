@@ -1,0 +1,46 @@
+# Code, configuration, prompts and documents are versioned. Generated output, game-derived assets and media stay on disk only.
+
+# Generated output: NPKs, frames, previews, release packages (several GB)
+output/
+validation/roundtrip/
+
+# Copies and extracts of the official game resources
+sources/
+materials/
+dnf刃/
+
+# Third-party tools and downloads (Krita, vendor sources)
+tools/
+
+# Resource library: the SQLite cache is rebuilt by scripts/dnf_kb.py; community data is kept local (COLG table is for personal use only)
+kb/kb.sqlite
+kb/scan.log
+kb/sources/
+
+# Media and archives anywhere (masters, sheets, trial images, videos)
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.apng
+*.mp4
+*.webm
+*.npk
+*.NPK
+*.img
+*.zip
+*.rar
+*.7z
+*.psd
+*.kra
+
+# Python and editors
+__pycache__/
+*.pyc
+.venv/
+*.tmp
+.claude/settings.local.json
+
+# Skill assets that are part of the tool, not output
+!.claude/skills/**/assets/*.png

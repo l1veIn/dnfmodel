@@ -1,0 +1,33 @@
+{
+  "name": "fatfish_grok_walk_v01",
+  "created_at": "2026-10-22T21:10:27.748170+00:00",
+  "provider": "65535",
+  "model": "grok-imagine-video-1.5-preview",
+  "max_generation_jobs": 1,
+  "seconds": 4,
+  "resolution": "720p",
+  "aspect_ratio": "inherited square reference",
+  "reference": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grok_walk_v01\\input\\master_gray_1024.png",
+  "reference_sha256": "293392069fe39ab1f916d96db9e0c3fd3fc4b6db3b78ef269d5a3b1ef134c487",
+  "master": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\nearest_standing_v04\\standing_canvas.png",
+  "master_sha256": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446",
+  "reference_preparation": "Approved 128x128 window -> nearest 8x -> alpha-composite onto RGB128 gray; no generative image edits",
+  "prompt": "Animate the supplied first-frame image as a precise 2D game sprite walk-cycle test. The image is the approved character design, proportions, pixel-art style, outfit and fixed three-quarter view facing right. Preserve that exact character throughout: navy-to-cyan long wavy hair, curled ahoge, small whale-fin ears, white frilled maid headband, blue eyes, navy long-sleeved dress, white whale-emblem apron with gold trim, opaque white tights, navy Mary Jane shoes, and compact whale tail. Keep her face, head size, hair silhouette, costume colors and all accessories consistent.\n\nThe character walks IN PLACE at a steady moderate cadence, repeatedly alternating left and right legs through a complete natural gait. Clearly bend knees and ankles, lift each foot during swing, and show continuous connected arms and hands with small counter-swing. Each planted foot travels backward smoothly during support and returns forward only while lifted, like a treadmill walk. The head and torso remain almost fixed, with only tiny natural vertical bobbing; the pelvis does not drift across the canvas. Hair, skirt and tail follow with restrained secondary motion. Keep the same right-facing three-quarter orientation; never turn toward the camera.\n\nShow approximately four evenly timed repetitions in four seconds. Continue the walk right to the end, reaching the starting gait phase for a clean repeat; do not pause to pose. Locked camera and scale, entire body and both shoes visible within the original margins, constant ground-contact height. Preserve the deliberately pixelated game-sprite appearance; no conversion to 3D, realistic rendering or smooth anime illustration. Background stays a perfectly flat uniform neutral gray RGB(128,128,128) with no floor, shadows, scenery, grid, text, effects, additional characters or camera movement. Silent clip, no speech.",
+  "motion_guidance": "Prompt only; no original motion video / hard pose control",
+  "authorization": "User requested one 65535 Grok test; prior unrestricted spend authorization persists",
+  "game_installation_changed": false,
+  "batch_generation": false,
+  "acceptance": [
+    "same costume and face",
+    "connected hands/arms",
+    "stable leg widths",
+    "alternating complete gait",
+    "constant ground and scale",
+    "inspect first-last seam"
+  ],
+  "limitations": [
+    "No verified hard last-frame constraint",
+    "RGB background, not transparent video",
+    "Original ANI timings and game root motion unverified"
+  ]
+}

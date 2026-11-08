@@ -1,0 +1,26 @@
+{
+  "name": "jump_023",
+  "category": "jump_023",
+  "source_frame": 23,
+  "model": "gpt-image-2.5",
+  "input": {
+    "prompt": "Use case: identity-preserve / animation sprite pose edit.\nOne full-body Fatfish whale-maid female mage game sprite, genuine transparent RGBA background.\nImage 1 is the EDIT TARGET and strict pose/geometry guide: repaint this gray DNF sprite into the approved character while keeping its skeletal pose and frame placement. Ignore the guide's original hair, hat, clothes and equipment.\nImage 2 is the APPROVED STANDING MASTER: preserve this exact character's face, proportions, costume, fine wavy navy-to-cyan hair, curled ahoge, whale-fin ears, cyan bow, white maid headband, dark long sleeves, white chest/apron, whale emblem, gold edging/bows/buttons, opaque white stockings, dark Mary-Jane shoes and compact whale tail. Match its existing rendering and delicacy. Do not simplify the hair into thick cyan blobs, enlarge the face, redesign the skirt or invent decorations.\nImage 3 is supplementary identity/detail or motion continuity, NOT a substitute for the pose in Image 1.\nKeep the same three-quarter facing-screen-right body/head view as the guide. Keep hair volume and the whale-tail silhouette consistent; allow only a small natural response to the pose. Match the master's light direction, colors, line weight and head size.\nFraming: 1024 square representing a fixed 128x128 native game window enlarged 8 times. Keep all important body parts inside the same window. Head/shoulders/pelvis/elbows/hands/knees and both shoes must follow Image 1, not a generic action pose. Copy the guide's actual leg overlap and foot spacing.\nOnly the character; no weapon, spell, motion blur, shadow, floor, grid, labels, markers, checkerboard or scenery. No new accessories or alternate costume. Do not output a sheet, panels or multiple figures. Preserve true alpha outside the figure.\n\nImage 3 is the original higher-resolution artwork behind the approved master: use only to resolve the same facial and clothing details. Its standing pose and larger figure scale are not the target.\nACTION: Airborne-style key pose: preserve the guide's lean, bent-back hand and leg pose; do not add world-space jump height, because the game controls vertical motion.\nOriginal IMG slot 23. Visible eye near output [536, 296]; support/lowest shoe sole [352, 912]. Visible hand target(s) [[304, 264]] (output pixels).\n",
+    "n": 1,
+    "size": "1:1",
+    "resolution": "1k",
+    "background": "transparent",
+    "output_format": "png",
+    "quality": "high"
+  },
+  "local_reference_paths": [
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\references\\jump_023_pose.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\references\\master_approved_8x.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png"
+  ],
+  "reference_sha256": [
+    "47e03a3a26e0a860e36c5b721f76f751e0b7a595e62667439a39c029e167734c",
+    "69b3de02e55aa6ebda3e5192d67055a893819258d5acf1e9ba2ae1ce948f7308",
+    "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d"
+  ],
+  "output_directory": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw"
+}

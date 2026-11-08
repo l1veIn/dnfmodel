@@ -1,0 +1,6 @@
+{
+  "TimeCreated": "2026-10-22T22:30:38.2440519+08:00",
+  "Id": 1000,
+  "ProviderName": "Application Error",
+  "Message": "出错应用程序名称： codex.exe，版本： 0.0.0.0，时间戳： 0x6ad93442\r\n出错模块名称： codex.exe， 版本： 0.0.0.0，时间戳： 0x6ad93442\r\n异常代码： 0xc0000409\r\n错误偏移： 0x000000000eac0711\r\n出错进程 ID： 0x5910\r\n出错应用程序开始时间： 0x1DD622D11E53D36\r\nFaulting 应用程序路径： C:\\Users\\A\\AppData\\Local\\OpenAI\\Codex\\bin\\a96ca4c1eee0cf35\\codex.exe\r\nFaulting 模块路径： C:\\Users\\A\\AppData\\Local\\OpenAI\\Codex\\bin\\a96ca4c1eee0cf35\\codex.exe\r\nReport ID： a772ffdc-53f8-4566-9d52-d336add75afe\r\nFaulting 包全名： \r\nFaulting 程序包相对应用程序 ID：  个"
+}

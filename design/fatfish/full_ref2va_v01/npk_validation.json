@@ -1,0 +1,260 @@
+{
+  "package": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Complete_v01.NPK",
+  "sha256": "3572338ebc443f571e68afe1ba363f673d14ac298321146c2d1778a2fb7b1395",
+  "bytes": 79853264,
+  "entries": 64,
+  "skin_paths": 38,
+  "hidden_default_avatar_paths": 26,
+  "slots_per_img": 174,
+  "all174_slots_replaced": true,
+  "action_segments": 25,
+  "unique_skin_images": 174,
+  "deduplicated_links": 0,
+  "pixel_coordinate_roundtrip_checks": 11136,
+  "transparent_hidden_layer_checks": 4524,
+  "all_roundtrips_passed": true,
+  "game_runtime_validated": false,
+  "game_directory_changed": false,
+  "npk_changes_ani": false,
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK",
+  "source_sha256": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+  "sampling": "Premultiplied Lanczos directly to original game geometry. Full color RGBA, no palette quantization.",
+  "scope": "Default avatar174-slot template. Weapons, independent class effects, non-default costume overlays excluded.",
+  "protected_files_unchanged": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\manual_motion.json": "3587dd94d67763e176c3f265ab0508222018e806fe1849c5428038075d8b9fa9",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d"
+  },
+  "content_review": {
+    "purpose": "First complete default-avatar174-slot game-test package; offline content review does not equal user approval or game verification.",
+    "reviewed_at": 1792776143.458399,
+    "reviewed_clip_ids": [
+      "clip_000_009",
+      "clip_010_013",
+      "clip_014_017",
+      "clip_018_021",
+      "clip_022_025",
+      "clip_026_034",
+      "clip_035_041",
+      "clip_042_052",
+      "clip_053_054",
+      "clip_055_061",
+      "clip_062_075",
+      "clip_076_083",
+      "clip_084_096",
+      "clip_097_108",
+      "clip_109_127",
+      "clip_128_129",
+      "clip_130_134",
+      "clip_135_143",
+      "clip_144_147",
+      "clip_148_154",
+      "clip_155_157",
+      "clip_158_162",
+      "clip_163_165",
+      "clip_166_169",
+      "clip_170_173"
+    ],
+    "video_frames_inspected_zero_based": [
+      0,
+      61,
+      123
+    ],
+    "native_frame_atlases_inspected": [
+      "qa/native_atlas_01.png",
+      "qa/native_atlas_02.png",
+      "qa/native_atlas_03.png",
+      "qa/native_atlas_04.png"
+    ],
+    "all174_nonempty": true,
+    "unresolved_blockers": [],
+    "repairs": [
+      {
+        "clip": "clip_055_061",
+        "attempt": 2,
+        "finding": "Unwanted blue magic circle and glow in attempt01. Replaced by empty-hand gesture version; first/middle/last and transparent atlas checked, no added energy."
+      },
+      {
+        "clip": "clip_062_075",
+        "attempt": 2,
+        "finding": "Raised fingertip hit upper edge in attempt01. Expanded reference camera margins. Rebuilt14 frames; subject no longer touches edge."
+      }
+    ],
+    "selection_corrections": {
+      "clip_018_021": {
+        "video_sha256": "ed3624f73c4248e9e21d719c743ba33c4b0963eef043bfaab57035ed64db33d3",
+        "frames": [
+          60,
+          62,
+          64,
+          66
+        ],
+        "reason": "Visual inspection of raw frames60..83: fundamental running gait is8 output frames. Automated period33 sampled near-repeated phases; select four quarter-cycle poses60,62,64,66."
+      },
+      "clip_170_173": {
+        "video_sha256": "e35e5486fb97682719f20dcefaccad90166a7652fc8a501b7461c2572d504520",
+        "frames": [
+          16,
+          24,
+          36,
+          52
+        ],
+        "reason": "Visual inspection of raw frames0..120: H3 compressed the action into frames28..48; uniform source-time sampling missed the overhead-hands apex. Select monotonic16,24,36,52 to retain hand-forward, overhead and lowering poses."
+      }
+    },
+    "viewport_adjustment": {
+      "slots": [
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154
+      ],
+      "original_and_fatfish_window": [
+        182,
+        250,
+        374,
+        410
+      ],
+      "native_npk_coordinates_changed": false,
+      "reason": "Show complete forward-reaching outline; original narrow preview cut last5px of costume on slots152..154."
+    },
+    "retained_limitations": [
+      "H3 changes some exact arm heights, head angles, leg bends and secondary hair/tail shapes relative to source.",
+      "Per-clip identity and scale can vary; original sprite-bottom registration is not semantic foot locking.",
+      "One-shot action timing may be compressed; selected frames preserve key phases but are not pixel-perfect pose transfer.",
+      "Weapon intersections, independent class effects, costume overlays and runtime ANI coverage require game testing."
+    ],
+    "videos": [
+      {
+        "clip": "clip_000_009",
+        "video_sha256": "3e5e70b7574d7012c973e3d36e8d93f1a0d7b4f7611ae8a4e289325a3b86a692",
+        "mapping_sha256": "039d6b1f96095ae2226dc5b38f352ac41df0983dfff24944a58bcce0e86251e6"
+      },
+      {
+        "clip": "clip_010_013",
+        "video_sha256": "d7e5ab6430a55eea8cd3ea1f598545a80d701efc61d139933c76b2ea0830322b",
+        "mapping_sha256": "9dba6a68fb90eb5e5e85f6f729bca7221d6e7cb9d1a67802b507611ada84b9c2"
+      },
+      {
+        "clip": "clip_014_017",
+        "video_sha256": "3420a06e351b05704246a8b688ef7ef2f19f7481a64e069a1e279656b2bc013d",
+        "mapping_sha256": "184f6d6ff567e905d91fc15dd6c32f01db70f82abfd1e703757bd16e93149325"
+      },
+      {
+        "clip": "clip_018_021",
+        "video_sha256": "ed3624f73c4248e9e21d719c743ba33c4b0963eef043bfaab57035ed64db33d3",
+        "mapping_sha256": "3afbb3c9aaa59a4392fb7b064e41ff08f95620bff9a82935fda1937f596c5410"
+      },
+      {
+        "clip": "clip_022_025",
+        "video_sha256": "cb6b59b6e21900859f80e738e77585853c4226a118d220fee9aec396ffcb2457",
+        "mapping_sha256": "04a88f976a126b123b2d40ab8a1757771602f2cae9bf0edd644ffa2869cafd16"
+      },
+      {
+        "clip": "clip_026_034",
+        "video_sha256": "e90a2bded7bad537e8c7a6de0ece3efabf924f0f75072abd0ce39dabb1cd17fa",
+        "mapping_sha256": "066648c833831cd05600e629eff2201b33df92fa2eaf6aaa1055152dd47f2435"
+      },
+      {
+        "clip": "clip_035_041",
+        "video_sha256": "d0ada7c636c7e8b76013591ab3c1afd2dcf7e7504bf86cbe2d39d07b76c4c380",
+        "mapping_sha256": "f4070ec09c2c64bffa2f4bcfa474a85450b0f9d831ea22c9cc5823959f918f1e"
+      },
+      {
+        "clip": "clip_042_052",
+        "video_sha256": "f77d6a07c3c782289215f76f882b0e6008feb18d54fdba22c2dc0c2606c58f27",
+        "mapping_sha256": "889465f0501fe70d15fee5b54e16376dccde20596538ed7933d64251e1d28bcd"
+      },
+      {
+        "clip": "clip_053_054",
+        "video_sha256": "20b19e2b413029163f1d413211864d86dae57f0e4778738fc286c49904f8b291",
+        "mapping_sha256": "db57bc8c7ba255b658b527e612b46d4ef0619f71c04163ab63d9a6568a432e15"
+      },
+      {
+        "clip": "clip_055_061",
+        "video_sha256": "3114a57eec516b0d205a4315997fd00c2bc21d6b11b889855e114c02183c8ea4",
+        "mapping_sha256": "8df5e9715540e249d11586c4237afae5a59ed1fa9b70665bc1b2cdb2322648e3"
+      },
+      {
+        "clip": "clip_062_075",
+        "video_sha256": "f9b3cfc70c918cf4fd0a8846feebe2c0c8c8cabefec26083520abc81719bbae1",
+        "mapping_sha256": "6638482e9d04d881e6593c54a3c1e83745afab3fd752520a00d058596fd04f58"
+      },
+      {
+        "clip": "clip_076_083",
+        "video_sha256": "69de24ea7f4633132c1ee88a7d15e7d4b5406867fa190b8b785de59c00840db7",
+        "mapping_sha256": "3a01e583e7e675546469ee93b7f3d9eb0816c81b8cef552912dfb5e4bee124ef"
+      },
+      {
+        "clip": "clip_084_096",
+        "video_sha256": "f58a66afaa28e2ba274a3ae456d8afd4b190bb95b741d099b914ed91b685a95a",
+        "mapping_sha256": "b3fe1346f34c3182e1a39217c61444394ed1fc1965b985772fc22f56cb2cdeb2"
+      },
+      {
+        "clip": "clip_097_108",
+        "video_sha256": "b92ff8c2359c7dc40c39aa76ec0a586ea74805f8d3c0417392793d3d383a6add",
+        "mapping_sha256": "ecbef595003ef512958f3fa35b748afe73a7f077f46b86cf1532ed82f4f24bf4"
+      },
+      {
+        "clip": "clip_109_127",
+        "video_sha256": "ed3653244aabbb774cb5c604030f108596ef4484805968f77c66e9092373ca49",
+        "mapping_sha256": "902f6d787db4d288aa8aa33044215d4ef825fb98d18170442746e20dd408253e"
+      },
+      {
+        "clip": "clip_128_129",
+        "video_sha256": "2337ea3c019f2a2a7598b4cc5d9843409db1e15883783abf210774003c70163f",
+        "mapping_sha256": "45214d3daa2b55795f33d818166f17374f104053c15079d2dd0ed93d2d1905d4"
+      },
+      {
+        "clip": "clip_130_134",
+        "video_sha256": "1e6063fdeec3f5e32fe45b316d6a66646a8433825aea7fab4e95bd0536115a50",
+        "mapping_sha256": "44f2c4cd465738f99f451d7add127a69a96a5459bd116adda3154ab750db0bb7"
+      },
+      {
+        "clip": "clip_135_143",
+        "video_sha256": "1da0ec07ba8034a555dfc2ceeb83a0e1dfa693eb5892f28d862e0d8089c87215",
+        "mapping_sha256": "78755e61c2485dbf10234769937dc61f79f86ee191a271479e71bf9bc44c3bff"
+      },
+      {
+        "clip": "clip_144_147",
+        "video_sha256": "64b60a1512b805970e9d629369f416f96811414d55193f0e06b4b89a7c4dcf0a",
+        "mapping_sha256": "c616e1768c3eb0dd7f43944cd017937c4c73eab14d19b43191deb2ce3bbf303d"
+      },
+      {
+        "clip": "clip_148_154",
+        "video_sha256": "f70103388b1fc9fd1b897eb0a276756fbc131b3db8ee010bec1a93a9e417c4ba",
+        "mapping_sha256": "47b53bafc4056a79d373c79c7ef836f4e3e75f77d3be19e18a6d4e22492fb4cc"
+      },
+      {
+        "clip": "clip_155_157",
+        "video_sha256": "4c96e99a7b0e303a0cc2bbbc51ac6481fab0ea40c6b197dd087de9a8d1359899",
+        "mapping_sha256": "d347695302420d7ca7bb17637a15bdc029399c85017dc47256f8994cc969c56a"
+      },
+      {
+        "clip": "clip_158_162",
+        "video_sha256": "d6d41744754cdacf33a1890001e170e21f34cbc7cf0820a6a7c5b99a91c9a586",
+        "mapping_sha256": "85646ea5fb2fc981a79b5774174cebb3e1bb911090c01b662db5a292b74104a2"
+      },
+      {
+        "clip": "clip_163_165",
+        "video_sha256": "c6ab80829f26c7f49e6711e7c8f0c61e6cec5fc340330d25036f0434287e9a05",
+        "mapping_sha256": "ca2132f4a481f5df02de67591dfd9c7198abcfb6dca6ce34c28cae1b467aea54"
+      },
+      {
+        "clip": "clip_166_169",
+        "video_sha256": "7ce59ad7a1dda784dac43a5d3e9794b02fefafcc8dd5b327f3fe4ec128504984",
+        "mapping_sha256": "7ecf03c61380ca171977f0db90c6e903d75eea9f7da63d6ae16633c8bccf6957"
+      },
+      {
+        "clip": "clip_170_173",
+        "video_sha256": "e35e5486fb97682719f20dcefaccad90166a7652fc8a501b7461c2572d504520",
+        "mapping_sha256": "977e0cfc82771665e907a138353b389fde5c54e8e9dc761e951aec2a1e54fa03"
+      }
+    ]
+  },
+  "created_at": 1792776145.0271237
+}

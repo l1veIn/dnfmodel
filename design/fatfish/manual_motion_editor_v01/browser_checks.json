@@ -1,0 +1,14 @@
+{
+  "url": "http://127.0.0.1:8791/motion-editor/",
+  "original_thumbnails_loaded": 174,
+  "drag_range": [0, 9],
+  "per_frame_timing_test": {"bulk_ms": 80, "slot3_ms": 160, "total_ms": 880},
+  "non_loop_playback": {"stopped_at_source_slot": 9, "elapsed_ms": 880},
+  "timing_handle_test": {"initial_ms": 100, "drag_px": 20, "final_ms": 140, "cycle_total_ms": 1040},
+  "missing_fatfish_source_slot19_explicitly_reported": true,
+  "unnamed_save_rejected_without_persisting_fixture": true,
+  "browser_export": {"frames": 124, "fps": 24, "dimensions": [384, 320], "seconds": 5.166666666666667},
+  "user_annotation_document_revision": 0,
+  "user_annotation_document_clips": 0,
+  "note": "Browser tests were performed through the rendered UI. Save/revision/history checks used a separate fixture state file."
+}

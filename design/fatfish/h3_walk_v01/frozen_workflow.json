@@ -1,0 +1,1581 @@
+{
+  "id": "2440887a-0fad-4b1c-981c-d3167ba3102a",
+  "revision": 0,
+  "last_node_id": 15,
+  "last_link_id": 18,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UNETLoader",
+      "pos": [
+        -720,
+        80
+      ],
+      "size": [
+        360,
+        82
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "unet_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "unet_name"
+          },
+          "link": null
+        },
+        {
+          "name": "weight_dtype",
+          "type": "COMBO",
+          "widget": {
+            "name": "weight_dtype"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1,
+            12
+          ]
+        }
+      ],
+      "title": "H3 FL2VA · W6A8 (ComfyUI ≥ 0.38)",
+      "properties": {
+        "Node name for S&R": "UNETLoader",
+        "models": [
+          {
+            "name": "minimax_h3_fl2va_pruned_w6a8.safetensors",
+            "directory": "diffusion_models"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_fl2va_pruned_w6a8.safetensors",
+        "default"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "CLIPLoader",
+      "pos": [
+        -720,
+        220
+      ],
+      "size": [
+        360,
+        106
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_name"
+          },
+          "link": null
+        },
+        {
+          "name": "type",
+          "type": "COMBO",
+          "widget": {
+            "name": "type"
+          },
+          "link": null
+        },
+        {
+          "name": "device",
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "title": "CLIP (minimax / Qwen3-VL)",
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "models": [
+          {
+            "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "directory": "text_encoders"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "minimax",
+        "default"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "VAELoader",
+      "pos": [
+        -720,
+        380
+      ],
+      "size": [
+        360,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vae_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "title": "Video VAE",
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "minimax_h3_video_vae_int8_convrot.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_video_vae_int8_convrot.safetensors"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "VAELoader",
+      "pos": [
+        -720,
+        500
+      ],
+      "size": [
+        360,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vae_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "title": "Audio VAE",
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "minimax_h3_audio_vae_fp32.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_audio_vae_fp32.safetensors"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "MiniMaxH3Director",
+      "pos": [
+        -280,
+        80
+      ],
+      "size": [
+        1050,
+        900
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1
+        },
+        {
+          "name": "video_vae",
+          "type": "VAE",
+          "link": 3
+        },
+        {
+          "name": "audio_vae",
+          "type": "VAE",
+          "link": 4
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 2
+        },
+        {
+          "name": "i2v_groups",
+          "type": "MMX_DIR_GROUP",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "r2v_groups",
+          "type": "MMX_DIR_GROUP",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "semantic_bridge",
+          "type": "MMX_DIR_SEMANTIC_BRIDGE",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "selflift",
+          "type": "MMX_DIR_SELFLIFT",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "refine",
+          "type": "MMX_DIR_REFINE",
+          "shape": 7,
+          "link": 14
+        },
+        {
+          "name": "face_refine",
+          "type": "MMX_DIR_FACE_REFINE",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "task_type",
+          "type": "COMBO",
+          "widget": {
+            "name": "task_type"
+          },
+          "link": null
+        },
+        {
+          "name": "global_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "global_prompt"
+          },
+          "link": null
+        },
+        {
+          "name": "bd_grp_sample",
+          "type": "BDGROUP",
+          "widget": {
+            "name": "bd_grp_sample"
+          },
+          "link": null
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": null
+        },
+        {
+          "name": "ref_max_size",
+          "type": "INT",
+          "widget": {
+            "name": "ref_max_size"
+          },
+          "link": null
+        },
+        {
+          "name": "total_frames",
+          "type": "INT",
+          "widget": {
+            "name": "total_frames"
+          },
+          "link": null
+        },
+        {
+          "name": "timeline_data",
+          "type": "STRING",
+          "widget": {
+            "name": "timeline_data"
+          },
+          "link": null
+        },
+        {
+          "name": "bd_grp_advanced",
+          "type": "BDGROUP",
+          "shape": 7,
+          "widget": {
+            "name": "bd_grp_advanced"
+          },
+          "link": null
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "shape": 7,
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "name": "sampler",
+          "type": "COMBO",
+          "shape": 7,
+          "widget": {
+            "name": "sampler"
+          },
+          "link": null
+        },
+        {
+          "name": "scheduler",
+          "type": "COMBO",
+          "shape": 7,
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "name": "shift_video",
+          "type": "FLOAT",
+          "shape": 7,
+          "widget": {
+            "name": "shift_video"
+          },
+          "link": null
+        },
+        {
+          "name": "shift_audio",
+          "type": "FLOAT",
+          "shape": 7,
+          "widget": {
+            "name": "shift_audio"
+          },
+          "link": null
+        },
+        {
+          "name": "bd_grp_perf",
+          "type": "BDGROUP",
+          "shape": 7,
+          "widget": {
+            "name": "bd_grp_perf"
+          },
+          "link": null
+        },
+        {
+          "name": "clear_vram_between_segments",
+          "type": "BOOLEAN",
+          "shape": 7,
+          "widget": {
+            "name": "clear_vram_between_segments"
+          },
+          "link": null
+        },
+        {
+          "name": "clear_vram_before_refine",
+          "type": "BOOLEAN",
+          "shape": 7,
+          "widget": {
+            "name": "clear_vram_before_refine"
+          },
+          "link": null
+        },
+        {
+          "name": "clear_vram_before_face_refine",
+          "type": "BOOLEAN",
+          "shape": 7,
+          "widget": {
+            "name": "clear_vram_before_face_refine"
+          },
+          "link": null
+        },
+        {
+          "name": "cache_frames_codec",
+          "type": "COMBO",
+          "shape": 7,
+          "widget": {
+            "name": "cache_frames_codec"
+          },
+          "link": null
+        },
+        {
+          "name": "export_source_images",
+          "type": "BOOLEAN",
+          "shape": 7,
+          "widget": {
+            "name": "export_source_images"
+          },
+          "link": null
+        },
+        {
+          "name": "export_pre_face_refine",
+          "type": "BOOLEAN",
+          "shape": 7,
+          "widget": {
+            "name": "export_pre_face_refine"
+          },
+          "link": null
+        },
+        {
+          "name": "cache_name",
+          "type": "STRING",
+          "shape": 7,
+          "widget": {
+            "name": "cache_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            5
+          ],
+          "shape": 6
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            6,
+            16
+          ],
+          "shape": 6
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "links": [
+            7,
+            10,
+            17
+          ]
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": [
+            11
+          ]
+        },
+        {
+          "name": "source_images",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 6
+        },
+        {
+          "name": "report",
+          "type": "STRING",
+          "links": [
+            8
+          ]
+        },
+        {
+          "name": "images_pre_refine",
+          "type": "IMAGE",
+          "links": [
+            15
+          ],
+          "shape": 6
+        },
+        {
+          "name": "images_pre_face_refine",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3Director"
+      },
+      "widgets_values": [
+        "fl2v — 首尾帧生视频(First-Last Frame)",
+        "Picture: Animate the supplied first-frame image as a precise 2D game sprite walk-cycle test. The image is the approved character design, proportions, pixel-art style, outfit and fixed three-quarter view facing right. Preserve that exact character throughout: navy-to-cyan long wavy hair, curled ahoge, small whale-fin ears, white frilled maid headband, blue eyes, navy long-sleeved dress, white whale-emblem apron with gold trim, opaque white tights, navy Mary Jane shoes, and compact whale tail. Keep her face, head size, hair silhouette, costume colors and all accessories consistent.\n\nThe character walks IN PLACE at a steady moderate cadence, repeatedly alternating left and right legs through a complete natural gait. Clearly bend knees and ankles, lift each foot during swing, and show continuous connected arms and hands with small counter-swing. Each planted foot travels backward smoothly during support and returns forward only while lifted, like a treadmill walk. The head and torso remain almost fixed, with only tiny natural vertical bobbing; the pelvis does not drift across the canvas. Hair, skirt and tail follow with restrained secondary motion. Keep the same right-facing three-quarter orientation; never turn toward the camera.\n\nShow five evenly timed walking repetitions across this five-second shot. Continue the walk right to the end, reaching the starting gait phase for a clean repeat; do not pause to pose. Locked camera and scale, entire body and both shoes visible within the original margins, constant ground-contact height. Preserve the deliberately pixelated game-sprite appearance; no conversion to 3D, realistic rendering or smooth anime illustration. Background stays a perfectly flat uniform neutral gray RGB(128,128,128) with no floor, shadows, scenery, grid, text, effects, additional characters or camera movement. \nSound: Soft unchanging room tone. No speech.\nScore: No music.",
+        "采样设置",
+        1,
+        20261023,
+        "fixed",
+        24,
+        608,
+        352,
+        608,
+        124,
+        "{\"version\":5,\"editMode\":\"global\",\"timelineMode\":\"fl2v\",\"totalFrames\":124,\"frameRate\":24,\"width\":608,\"height\":352,\"refMaxSize\":608,\"output\":{\"mode\":\"fixed\",\"longEdge\":608,\"width\":608,\"height\":352,\"maxExportFrames\":0,\"exportMode\":\"all\",\"continuityEnabled\":false,\"continuityOverlapFrames\":22,\"multiple\":32,\"audioMode\":\"generate\"},\"videoClips\":[],\"video\":{\"fileName\":\"\",\"videoFile\":\"\",\"subfolder\":\"\",\"type\":\"input\",\"frames\":[],\"frameMap\":[]},\"global\":{\"taskType\":\"fl2v — 首尾帧生视频(First-Last Frame)\",\"prompt\":\"Picture: Animate the supplied first-frame image as a precise 2D game sprite walk-cycle test. The image is the approved character design, proportions, pixel-art style, outfit and fixed three-quarter view facing right. Preserve that exact character throughout: navy-to-cyan long wavy hair, curled ahoge, small whale-fin ears, white frilled maid headband, blue eyes, navy long-sleeved dress, white whale-emblem apron with gold trim, opaque white tights, navy Mary Jane shoes, and compact whale tail. Keep her face, head size, hair silhouette, costume colors and all accessories consistent.\\n\\nThe character walks IN PLACE at a steady moderate cadence, repeatedly alternating left and right legs through a complete natural gait. Clearly bend knees and ankles, lift each foot during swing, and show continuous connected arms and hands with small counter-swing. Each planted foot travels backward smoothly during support and returns forward only while lifted, like a treadmill walk. The head and torso remain almost fixed, with only tiny natural vertical bobbing; the pelvis does not drift across the canvas. Hair, skirt and tail follow with restrained secondary motion. Keep the same right-facing three-quarter orientation; never turn toward the camera.\\n\\nShow five evenly timed walking repetitions across this five-second shot. Continue the walk right to the end, reaching the starting gait phase for a clean repeat; do not pause to pose. Locked camera and scale, entire body and both shoes visible within the original margins, constant ground-contact height. Preserve the deliberately pixelated game-sprite appearance; no conversion to 3D, realistic rendering or smooth anime illustration. Background stays a perfectly flat uniform neutral gray RGB(128,128,128) with no floor, shadows, scenery, grid, text, effects, additional characters or camera movement. \\nSound: Soft unchanging room tone. No speech.\\nScore: No music.\",\"refs\":[],\"referenceVideo\":{},\"continuousReference\":false,\"genImage\":{\"imageFile\":\"\"},\"refAudios\":[],\"refVideos\":[],\"commonEnabled\":false},\"segments\":[],\"gen\":{\"defaultFrameCount\":124},\"runSelectEnabled\":false,\"runSelection\":[],\"liveTaePreview\":false,\"shots\":[{\"id\":\"fatfish_walk\",\"durationSec\":5,\"prompt\":\"Picture: Animate the supplied first-frame image as a precise 2D game sprite walk-cycle test. The image is the approved character design, proportions, pixel-art style, outfit and fixed three-quarter view facing right. Preserve that exact character throughout: navy-to-cyan long wavy hair, curled ahoge, small whale-fin ears, white frilled maid headband, blue eyes, navy long-sleeved dress, white whale-emblem apron with gold trim, opaque white tights, navy Mary Jane shoes, and compact whale tail. Keep her face, head size, hair silhouette, costume colors and all accessories consistent.\\n\\nThe character walks IN PLACE at a steady moderate cadence, repeatedly alternating left and right legs through a complete natural gait. Clearly bend knees and ankles, lift each foot during swing, and show continuous connected arms and hands with small counter-swing. Each planted foot travels backward smoothly during support and returns forward only while lifted, like a treadmill walk. The head and torso remain almost fixed, with only tiny natural vertical bobbing; the pelvis does not drift across the canvas. Hair, skirt and tail follow with restrained secondary motion. Keep the same right-facing three-quarter orientation; never turn toward the camera.\\n\\nShow five evenly timed walking repetitions across this five-second shot. Continue the walk right to the end, reaching the starting gait phase for a clean repeat; do not pause to pose. Locked camera and scale, entire body and both shoes visible within the original margins, constant ground-contact height. Preserve the deliberately pixelated game-sprite appearance; no conversion to 3D, realistic rendering or smooth anime illustration. Background stays a perfectly flat uniform neutral gray RGB(128,128,128) with no floor, shadows, scenery, grid, text, effects, additional characters or camera movement. \\nSound: Soft unchanging room tone. No speech.\\nScore: No music.\",\"startImage\":{\"imageFile\":\"h3_inputs/fatfish_same_grok_5e3b17371e2008.png\",\"width\":608,\"height\":352},\"negativePrompt\":\"bad video, camera motion, changing clothes, changing face, additional people, detached limbs\"}]}",
+        "高级采样",
+        20,
+        "res_multistep",
+        "simple",
+        12,
+        3,
+        "性能",
+        true,
+        true,
+        false,
+        "raw",
+        false,
+        false,
+        "h3_agent_20261023-190159_fatfish_first_frame_10e4777971d0"
+      ],
+      "title": "02 · first pass 608×352 → refine 864×480",
+      "widgets_values_named": {
+        "task_type": "fl2v — 首尾帧生视频(First-Last Frame)",
+        "global_prompt": "Picture: Animate the supplied first-frame image as a precise 2D game sprite walk-cycle test. The image is the approved character design, proportions, pixel-art style, outfit and fixed three-quarter view facing right. Preserve that exact character throughout: navy-to-cyan long wavy hair, curled ahoge, small whale-fin ears, white frilled maid headband, blue eyes, navy long-sleeved dress, white whale-emblem apron with gold trim, opaque white tights, navy Mary Jane shoes, and compact whale tail. Keep her face, head size, hair silhouette, costume colors and all accessories consistent.\n\nThe character walks IN PLACE at a steady moderate cadence, repeatedly alternating left and right legs through a complete natural gait. Clearly bend knees and ankles, lift each foot during swing, and show continuous connected arms and hands with small counter-swing. Each planted foot travels backward smoothly during support and returns forward only while lifted, like a treadmill walk. The head and torso remain almost fixed, with only tiny natural vertical bobbing; the pelvis does not drift across the canvas. Hair, skirt and tail follow with restrained secondary motion. Keep the same right-facing three-quarter orientation; never turn toward the camera.\n\nShow five evenly timed walking repetitions across this five-second shot. Continue the walk right to the end, reaching the starting gait phase for a clean repeat; do not pause to pose. Locked camera and scale, entire body and both shoes visible within the original margins, constant ground-contact height. Preserve the deliberately pixelated game-sprite appearance; no conversion to 3D, realistic rendering or smooth anime illustration. Background stays a perfectly flat uniform neutral gray RGB(128,128,128) with no floor, shadows, scenery, grid, text, effects, additional characters or camera movement. \nSound: Soft unchanging room tone. No speech.\nScore: No music.",
+        "bd_grp_sample": "采样设置",
+        "cfg": 1,
+        "seed": 20261023,
+        "control_after_generate": "fixed",
+        "frame_rate": 24,
+        "width": 608,
+        "height": 352,
+        "ref_max_size": 608,
+        "total_frames": 124,
+        "timeline_data": "{\"version\":5,\"editMode\":\"global\",\"timelineMode\":\"fl2v\",\"totalFrames\":124,\"frameRate\":24,\"width\":608,\"height\":352,\"refMaxSize\":608,\"output\":{\"mode\":\"fixed\",\"longEdge\":608,\"width\":608,\"height\":352,\"maxExportFrames\":0,\"exportMode\":\"all\",\"continuityEnabled\":false,\"continuityOverlapFrames\":22,\"multiple\":32,\"audioMode\":\"generate\"},\"videoClips\":[],\"video\":{\"fileName\":\"\",\"videoFile\":\"\",\"subfolder\":\"\",\"type\":\"input\",\"frames\":[],\"frameMap\":[]},\"global\":{\"taskType\":\"fl2v — 首尾帧生视频(First-Last Frame)\",\"prompt\":\"Picture: Animate the supplied first-frame image as a precise 2D game sprite walk-cycle test. The image is the approved character design, proportions, pixel-art style, outfit and fixed three-quarter view facing right. Preserve that exact character throughout: navy-to-cyan long wavy hair, curled ahoge, small whale-fin ears, white frilled maid headband, blue eyes, navy long-sleeved dress, white whale-emblem apron with gold trim, opaque white tights, navy Mary Jane shoes, and compact whale tail. Keep her face, head size, hair silhouette, costume colors and all accessories consistent.\\n\\nThe character walks IN PLACE at a steady moderate cadence, repeatedly alternating left and right legs through a complete natural gait. Clearly bend knees and ankles, lift each foot during swing, and show continuous connected arms and hands with small counter-swing. Each planted foot travels backward smoothly during support and returns forward only while lifted, like a treadmill walk. The head and torso remain almost fixed, with only tiny natural vertical bobbing; the pelvis does not drift across the canvas. Hair, skirt and tail follow with restrained secondary motion. Keep the same right-facing three-quarter orientation; never turn toward the camera.\\n\\nShow five evenly timed walking repetitions across this five-second shot. Continue the walk right to the end, reaching the starting gait phase for a clean repeat; do not pause to pose. Locked camera and scale, entire body and both shoes visible within the original margins, constant ground-contact height. Preserve the deliberately pixelated game-sprite appearance; no conversion to 3D, realistic rendering or smooth anime illustration. Background stays a perfectly flat uniform neutral gray RGB(128,128,128) with no floor, shadows, scenery, grid, text, effects, additional characters or camera movement. \\nSound: Soft unchanging room tone. No speech.\\nScore: No music.\",\"refs\":[],\"referenceVideo\":{},\"continuousReference\":false,\"genImage\":{\"imageFile\":\"\"},\"refAudios\":[],\"refVideos\":[],\"commonEnabled\":false},\"segments\":[],\"gen\":{\"defaultFrameCount\":124},\"runSelectEnabled\":false,\"runSelection\":[],\"liveTaePreview\":false,\"shots\":[{\"id\":\"fatfish_walk\",\"durationSec\":5,\"prompt\":\"Picture: Animate the supplied first-frame image as a precise 2D game sprite walk-cycle test. The image is the approved character design, proportions, pixel-art style, outfit and fixed three-quarter view facing right. Preserve that exact character throughout: navy-to-cyan long wavy hair, curled ahoge, small whale-fin ears, white frilled maid headband, blue eyes, navy long-sleeved dress, white whale-emblem apron with gold trim, opaque white tights, navy Mary Jane shoes, and compact whale tail. Keep her face, head size, hair silhouette, costume colors and all accessories consistent.\\n\\nThe character walks IN PLACE at a steady moderate cadence, repeatedly alternating left and right legs through a complete natural gait. Clearly bend knees and ankles, lift each foot during swing, and show continuous connected arms and hands with small counter-swing. Each planted foot travels backward smoothly during support and returns forward only while lifted, like a treadmill walk. The head and torso remain almost fixed, with only tiny natural vertical bobbing; the pelvis does not drift across the canvas. Hair, skirt and tail follow with restrained secondary motion. Keep the same right-facing three-quarter orientation; never turn toward the camera.\\n\\nShow five evenly timed walking repetitions across this five-second shot. Continue the walk right to the end, reaching the starting gait phase for a clean repeat; do not pause to pose. Locked camera and scale, entire body and both shoes visible within the original margins, constant ground-contact height. Preserve the deliberately pixelated game-sprite appearance; no conversion to 3D, realistic rendering or smooth anime illustration. Background stays a perfectly flat uniform neutral gray RGB(128,128,128) with no floor, shadows, scenery, grid, text, effects, additional characters or camera movement. \\nSound: Soft unchanging room tone. No speech.\\nScore: No music.\",\"startImage\":{\"imageFile\":\"h3_inputs/fatfish_same_grok_5e3b17371e2008.png\",\"width\":608,\"height\":352},\"negativePrompt\":\"bad video, camera motion, changing clothes, changing face, additional people, detached limbs\"}]}",
+        "bd_grp_advanced": "高级采样",
+        "steps": 20,
+        "sampler": "res_multistep",
+        "scheduler": "simple",
+        "shift_video": 12,
+        "shift_audio": 3,
+        "bd_grp_perf": "性能",
+        "clear_vram_between_segments": true,
+        "clear_vram_before_refine": true,
+        "clear_vram_before_face_refine": false,
+        "cache_frames_codec": "raw",
+        "export_source_images": false,
+        "export_pre_face_refine": false,
+        "cache_name": "h3_agent_20261023-190159_fatfish_first_frame_10e4777971d0"
+      }
+    },
+    {
+      "id": 6,
+      "type": "CreateVideo",
+      "pos": [
+        900,
+        200
+      ],
+      "size": [
+        280,
+        120
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 5
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": 7
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 6
+        },
+        {
+          "name": "bit_depth",
+          "type": "INT",
+          "widget": {
+            "name": "bit_depth"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        24,
+        8
+      ],
+      "title": "Final video · after refine"
+    },
+    {
+      "id": 7,
+      "type": "SaveVideo",
+      "pos": [
+        1240,
+        200
+      ],
+      "size": [
+        320,
+        120
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 9
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "name": "format",
+          "type": "COMBO",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "name": "codec",
+          "type": "COMBO",
+          "widget": {
+            "name": "codec"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/minimax_h3_agent/20261023-190159_fatfish_first_frame_10e4777971d0/refined",
+        "auto",
+        "auto"
+      ],
+      "title": "Save refined video (second Queue)"
+    },
+    {
+      "id": 8,
+      "type": "PreviewAny",
+      "pos": [
+        900,
+        400
+      ],
+      "size": [
+        640,
+        200
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Director 运行报告",
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 9,
+      "type": "PreviewAny",
+      "pos": [
+        900,
+        640
+      ],
+      "size": [
+        210,
+        100
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "fps",
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 10,
+      "type": "PreviewAny",
+      "pos": [
+        1140,
+        640
+      ],
+      "size": [
+        210,
+        100
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "frame_count",
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 11,
+      "type": "MarkdownNote",
+      "pos": [
+        -720,
+        620
+      ],
+      "size": [
+        400,
+        470
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Two queues · inspect first pass, then refine",
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI >= 0.38.0; recommended v0.42.1. AIMixer main @ 4c6245e518dd8a494f3afc4f3cccd53f22d82d10.\n\nQueue 1: generates and caches 608x352 / 124 frames. Only first-pass video is saved; final images are intentionally blocked.\nQueue 2 with the SAME seed 42 / fixed and first-pass settings: reuses the matching first-pass cache and runs refine.\n\nRefine: H3 latent conv_v1_fp16; 0.4 MP -> 864x480 from this source canvas; 6 steps / denoise 0.25; res_multistep; 2 spatial tiles / overlap 128 px.\nLatent upscaler temporal chunking is enabled; it is distinct from spatially tiled second-pass sampling.\n\nStatic JSON/schema/link checks only. No inference, VRAM or image-quality validation has been performed."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 12,
+      "type": "BasicScheduler",
+      "pos": [
+        -720,
+        1120
+      ],
+      "size": [
+        360,
+        130
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "title": "Refine sigmas · 6 steps / denoise 0.25",
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 12
+        },
+        {
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "denoise"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicScheduler"
+      },
+      "widgets_values": [
+        "simple",
+        6,
+        0.25
+      ]
+    },
+    {
+      "id": 13,
+      "type": "MiniMaxH3DirectorRefine",
+      "pos": [
+        -280,
+        1120
+      ],
+      "size": [
+        620,
+        700
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "title": "Latent upscale + second pass · target 864×480",
+      "inputs": [
+        {
+          "name": "refine_model",
+          "type": "MODEL",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "shape": 7,
+          "link": 13
+        },
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "mode"
+          },
+          "link": null
+        },
+        {
+          "name": "upscale_method",
+          "type": "COMBO",
+          "widget": {
+            "name": "upscale_method"
+          },
+          "link": null
+        },
+        {
+          "name": "latent_upscale_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "latent_upscale_model"
+          },
+          "link": null
+        },
+        {
+          "name": "sampler",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler"
+          },
+          "link": null
+        },
+        {
+          "name": "passes",
+          "type": "INT",
+          "widget": {
+            "name": "passes"
+          },
+          "link": null
+        },
+        {
+          "name": "seed_mode",
+          "type": "COMBO",
+          "shape": 7,
+          "widget": {
+            "name": "seed_mode"
+          },
+          "link": null
+        },
+        {
+          "name": "aspect_ratio",
+          "type": "COMBO",
+          "shape": 7,
+          "widget": {
+            "name": "aspect_ratio"
+          },
+          "link": null
+        },
+        {
+          "name": "megapixels",
+          "type": "FLOAT",
+          "shape": 7,
+          "widget": {
+            "name": "megapixels"
+          },
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "shape": 7,
+          "widget": {
+            "name": "width"
+          },
+          "link": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "shape": 7,
+          "widget": {
+            "name": "height"
+          },
+          "link": null
+        },
+        {
+          "name": "skip_fl2v",
+          "type": "BOOLEAN",
+          "shape": 7,
+          "widget": {
+            "name": "skip_fl2v"
+          },
+          "link": null
+        },
+        {
+          "name": "confirm_first_pass",
+          "type": "BOOLEAN",
+          "shape": 7,
+          "widget": {
+            "name": "confirm_first_pass"
+          },
+          "link": null
+        },
+        {
+          "name": "enable_latent_chunking",
+          "type": "BOOLEAN",
+          "shape": 7,
+          "widget": {
+            "name": "enable_latent_chunking"
+          },
+          "link": null
+        },
+        {
+          "name": "enable_tiling",
+          "type": "BOOLEAN",
+          "shape": 7,
+          "widget": {
+            "name": "enable_tiling"
+          },
+          "link": null
+        },
+        {
+          "name": "tile_count",
+          "type": "INT",
+          "shape": 7,
+          "widget": {
+            "name": "tile_count"
+          },
+          "link": null
+        },
+        {
+          "name": "tile_overlap",
+          "type": "INT",
+          "shape": 7,
+          "widget": {
+            "name": "tile_overlap"
+          },
+          "link": null
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "shape": 7,
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "refine",
+          "type": "MMX_DIR_REFINE",
+          "links": [
+            14
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3DirectorRefine",
+        "models": [
+          {
+            "name": "minimax_h3_latent_upscaler_3d_conv_v1_fp16.safetensors",
+            "directory": "latent_upscale_models"
+          }
+        ]
+      },
+      "widgets_values": [
+        "upscale",
+        "h3_latent",
+        "minimax_h3_latent_upscaler_3d_conv_v1_fp16.safetensors",
+        "res_multistep",
+        1,
+        "inherit",
+        "跟随导演台",
+        0.4,
+        864,
+        480,
+        false,
+        true,
+        true,
+        true,
+        2,
+        128,
+        20261023,
+        128
+      ],
+      "widgets_values_named": {
+        "mode": "upscale",
+        "upscale_method": "h3_latent",
+        "latent_upscale_model": "minimax_h3_latent_upscaler_3d_conv_v1_fp16.safetensors",
+        "sampler": "res_multistep",
+        "passes": 1,
+        "seed_mode": "inherit",
+        "aspect_ratio": "跟随导演台",
+        "megapixels": 0.4,
+        "width": 864,
+        "height": 480,
+        "skip_fl2v": false,
+        "confirm_first_pass": true,
+        "enable_latent_chunking": true,
+        "enable_tiling": true,
+        "tile_count": 2,
+        "tile_overlap": 128,
+        "seed": 20261023,
+        "control_after_generate": "fixed"
+      }
+    },
+    {
+      "id": 14,
+      "type": "CreateVideo",
+      "pos": [
+        900,
+        820
+      ],
+      "size": [
+        280,
+        120
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 15
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": 17
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 16
+        },
+        {
+          "name": "bit_depth",
+          "type": "INT",
+          "widget": {
+            "name": "bit_depth"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        24,
+        8
+      ],
+      "title": "First-pass video · before refine"
+    },
+    {
+      "id": 15,
+      "type": "SaveVideo",
+      "pos": [
+        1240,
+        820
+      ],
+      "size": [
+        320,
+        120
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 18
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "name": "format",
+          "type": "COMBO",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "name": "codec",
+          "type": "COMBO",
+          "widget": {
+            "name": "codec"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/minimax_h3_agent/20261023-190159_fatfish_first_frame_10e4777971d0/first_pass",
+        "auto",
+        "auto"
+      ],
+      "title": "Save first pass (available on first Queue)"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      5,
+      0,
+      "MODEL"
+    ],
+    [
+      2,
+      2,
+      0,
+      5,
+      3,
+      "CLIP"
+    ],
+    [
+      3,
+      3,
+      0,
+      5,
+      1,
+      "VAE"
+    ],
+    [
+      4,
+      4,
+      0,
+      5,
+      2,
+      "VAE"
+    ],
+    [
+      5,
+      5,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      6,
+      5,
+      1,
+      6,
+      2,
+      "AUDIO"
+    ],
+    [
+      7,
+      5,
+      2,
+      6,
+      1,
+      "FLOAT"
+    ],
+    [
+      8,
+      5,
+      5,
+      8,
+      0,
+      "*"
+    ],
+    [
+      9,
+      6,
+      0,
+      7,
+      0,
+      "VIDEO"
+    ],
+    [
+      10,
+      5,
+      2,
+      9,
+      0,
+      "*"
+    ],
+    [
+      11,
+      5,
+      3,
+      10,
+      0,
+      "*"
+    ],
+    [
+      12,
+      1,
+      0,
+      12,
+      0,
+      "MODEL"
+    ],
+    [
+      13,
+      12,
+      0,
+      13,
+      1,
+      "SIGMAS"
+    ],
+    [
+      14,
+      13,
+      0,
+      5,
+      8,
+      "MMX_DIR_REFINE"
+    ],
+    [
+      15,
+      5,
+      6,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      16,
+      5,
+      1,
+      14,
+      2,
+      "AUDIO"
+    ],
+    [
+      17,
+      5,
+      2,
+      14,
+      1,
+      "FLOAT"
+    ],
+    [
+      18,
+      14,
+      0,
+      15,
+      0,
+      "VIDEO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "模型加载 (MiniMax H3)",
+      "bounding": [
+        -760,
+        40,
+        440,
+        560
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "MiniMax H3 Director",
+      "bounding": [
+        -320,
+        40,
+        1120,
+        960
+      ],
+      "color": "#8A8",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "输出",
+      "bounding": [
+        860,
+        40,
+        760,
+        1050
+      ],
+      "color": "#b58",
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "Second pass · confirm first-pass cache",
+      "bounding": [
+        -760,
+        1060,
+        1140,
+        820
+      ],
+      "color": "#69518a",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "frontendVersion": "1.23.0",
+    "note": "MiniMax H3 Director · t2v",
+    "ds": {
+      "scale": 0.85,
+      "offset": [
+        780,
+        40
+      ]
+    },
+    "minimax_h3_4070s": {
+      "source_repository": "https://github.com/AIMixer/ComfyUI_MiniMaxH3_Director",
+      "source_commit": "4c6245e518dd8a494f3afc4f3cccd53f22d82d10",
+      "comfyui_minimum": "0.38.0",
+      "comfyui_recommended": "0.42.1",
+      "validation": "static_only",
+      "director_widget_order": [
+        "task_type",
+        "global_prompt",
+        "bd_grp_sample",
+        "cfg",
+        "seed",
+        "control_after_generate",
+        "frame_rate",
+        "width",
+        "height",
+        "ref_max_size",
+        "total_frames",
+        "timeline_data",
+        "bd_grp_advanced",
+        "steps",
+        "sampler",
+        "scheduler",
+        "shift_video",
+        "shift_audio",
+        "export_source_images",
+        "export_pre_face_refine",
+        "bd_grp_perf",
+        "clear_vram_between_segments",
+        "clear_vram_before_refine",
+        "clear_vram_before_face_refine",
+        "cache_frames_codec",
+        "cache_name"
+      ],
+      "refine_widget_order": [
+        "mode",
+        "upscale_method",
+        "latent_upscale_model",
+        "sampler",
+        "passes",
+        "seed_mode",
+        "seed",
+        "control_after_generate",
+        "aspect_ratio",
+        "megapixels",
+        "width",
+        "height",
+        "skip_fl2v",
+        "confirm_first_pass",
+        "enable_latent_chunking",
+        "enable_tiling",
+        "tile_count",
+        "tile_overlap"
+      ],
+      "refine_target": [
+        864,
+        480
+      ]
+    }
+  },
+  "version": 0.4
+}

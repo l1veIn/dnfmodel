@@ -1,0 +1,8 @@
+{"utc": "2026-10-22T14:18:07.014878+00:00", "gpu_used_mib": 1382.0, "gpu_free_mib": 10616.0, "gpu_util_percent": 1.0, "gpu_watts": 7.16, "system_ram_available_bytes": 18361061376}
+{"utc": "2026-10-22T14:18:09.061756+00:00", "gpu_used_mib": 4088.0, "gpu_free_mib": 7910.0, "gpu_util_percent": 1.0, "gpu_watts": 25.1, "system_ram_available_bytes": 14994575360}
+{"utc": "2026-10-22T14:18:11.123410+00:00", "gpu_used_mib": 4856.0, "gpu_free_mib": 7142.0, "gpu_util_percent": 13.0, "gpu_watts": 107.27, "system_ram_available_bytes": 7873474560}
+{"utc": "2026-10-22T14:18:13.183723+00:00", "gpu_used_mib": 10257.0, "gpu_free_mib": 1741.0, "gpu_util_percent": 48.0, "gpu_watts": 113.82, "system_ram_available_bytes": 5506531328}
+{"utc": "2026-10-22T14:18:15.235318+00:00", "gpu_used_mib": 1457.0, "gpu_free_mib": 10541.0, "gpu_util_percent": 0.0, "gpu_watts": 38.59, "system_ram_available_bytes": 18540179456}
+{"utc": "2026-10-22T14:18:17.272975+00:00", "gpu_used_mib": 1457.0, "gpu_free_mib": 10541.0, "gpu_util_percent": 0.0, "gpu_watts": 21.34, "system_ram_available_bytes": 18577637376}
+{"utc": "2026-10-22T14:18:19.317027+00:00", "gpu_used_mib": 1457.0, "gpu_free_mib": 10541.0, "gpu_util_percent": 1.0, "gpu_watts": 13.34, "system_ram_available_bytes": 18658361344}
+{"utc": "2026-10-22T14:18:21.363454+00:00", "gpu_used_mib": 1457.0, "gpu_free_mib": 10541.0, "gpu_util_percent": 0.0, "gpu_watts": 7.14, "system_ram_available_bytes": 18708295680}

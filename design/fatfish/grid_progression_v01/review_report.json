@@ -1,0 +1,2108 @@
+{
+  "model": "gpt-image-2.5",
+  "jobs": 2,
+  "references_per_job": 2,
+  "groups": {
+    "group_a": {
+      "name": "group_a",
+      "task_id": "img_a659649877f4712148f5bf80c4d94f3a",
+      "cost_usd": 0.038,
+      "actual_sheet_size": [
+        2048,
+        2048
+      ],
+      "actual_alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.7300286293029785,
+      "raw_sheet_sha256": "fb29b786f791141bffff3f5b7eb4184758c8be76e4305ee19550d5602aae6271",
+      "cells": [
+        {
+          "index": 0,
+          "role": "fixed_master",
+          "slot": 10,
+          "cell": [
+            48,
+            48,
+            688,
+            688
+          ],
+          "actual_cell_box": [
+            48,
+            48,
+            688,
+            688
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 12431,
+            "nonzero_alpha_before": 86036,
+            "nonzero_alpha_after": 74270,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "dceab054382a935abd93817298f5c72f827db016374b6a9511d304cbcbccdb5d"
+        },
+        {
+          "index": 1,
+          "role": "carry",
+          "slot": 7,
+          "cell": [
+            704,
+            48,
+            1344,
+            688
+          ],
+          "actual_cell_box": [
+            704,
+            48,
+            1344,
+            688
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 12688,
+            "nonzero_alpha_before": 90370,
+            "nonzero_alpha_after": 78386,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "6f0c64938a357343375118ed5cd732c8241029a98b02553853b911419db50ea5"
+        },
+        {
+          "index": 2,
+          "role": "new_target",
+          "slot": 8,
+          "cell": [
+            1360,
+            48,
+            2000,
+            688
+          ],
+          "actual_cell_box": [
+            1360,
+            48,
+            2000,
+            688
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 16111,
+            "nonzero_alpha_before": 93171,
+            "nonzero_alpha_after": 77884,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "c4089111b6cee865b03d85f471bd5846bc6421df721cc921a9850b48933eb85a"
+        },
+        {
+          "index": 3,
+          "role": "new_target",
+          "slot": 9,
+          "cell": [
+            48,
+            704,
+            688,
+            1344
+          ],
+          "actual_cell_box": [
+            48,
+            704,
+            688,
+            1344
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 17266,
+            "nonzero_alpha_before": 98050,
+            "nonzero_alpha_after": 81603,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "8a396f759203272578f66df75a36290db7761ace441c8c1d499a82d62cc85f96"
+        },
+        {
+          "index": 4,
+          "role": "new_target",
+          "slot": 0,
+          "cell": [
+            704,
+            704,
+            1344,
+            1344
+          ],
+          "actual_cell_box": [
+            704,
+            704,
+            1344,
+            1344
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 17809,
+            "nonzero_alpha_before": 98992,
+            "nonzero_alpha_after": 81972,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "bc891614b93266ec6ac72f681a71dacee1cea0f95838ab3776f5967c2618ee6b"
+        },
+        {
+          "index": 5,
+          "role": "new_target",
+          "slot": 1,
+          "cell": [
+            1360,
+            704,
+            2000,
+            1344
+          ],
+          "actual_cell_box": [
+            1360,
+            704,
+            2000,
+            1344
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 15429,
+            "nonzero_alpha_before": 96605,
+            "nonzero_alpha_after": 82048,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "94bfe6860041a1d2d8f8da56586557da9a931ca9218b81f1c64cfd3b893d340d"
+        },
+        {
+          "index": 6,
+          "role": "new_target",
+          "slot": 2,
+          "cell": [
+            48,
+            1360,
+            688,
+            2000
+          ],
+          "actual_cell_box": [
+            48,
+            1360,
+            688,
+            2000
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 11787,
+            "nonzero_alpha_before": 80981,
+            "nonzero_alpha_after": 69828,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "551b02688cda2f539d77f7e7af80e21af539c3380ac5d6baed3cc6adb8b685ef"
+        },
+        {
+          "index": 7,
+          "role": "new_target",
+          "slot": 3,
+          "cell": [
+            704,
+            1360,
+            1344,
+            2000
+          ],
+          "actual_cell_box": [
+            704,
+            1360,
+            1344,
+            2000
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 14860,
+            "nonzero_alpha_before": 91026,
+            "nonzero_alpha_after": 77004,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "dd1049930ad491115473d5ce11bb8ab1357462b6b601947f5f183364d6359790"
+        },
+        {
+          "index": 8,
+          "role": "new_target",
+          "slot": 4,
+          "cell": [
+            1360,
+            1360,
+            2000,
+            2000
+          ],
+          "actual_cell_box": [
+            1360,
+            1360,
+            2000,
+            2000
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 16738,
+            "nonzero_alpha_before": 96369,
+            "nonzero_alpha_after": 80493,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "df4223b18c45a9f1f7fc64fe87861d3e04f14dde1a269b9bde22a166b136ca16"
+        }
+      ],
+      "layout": {
+        "name": "group_a",
+        "carry_slot": 7,
+        "slots": [
+          8,
+          9,
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "cells": [
+          {
+            "index": 0,
+            "role": "fixed_master",
+            "slot": 10,
+            "cell": [
+              48,
+              48,
+              688,
+              688
+            ]
+          },
+          {
+            "index": 1,
+            "role": "carry",
+            "slot": 7,
+            "cell": [
+              704,
+              48,
+              1344,
+              688
+            ]
+          },
+          {
+            "index": 2,
+            "role": "new_target",
+            "slot": 8,
+            "cell": [
+              1360,
+              48,
+              2000,
+              688
+            ]
+          },
+          {
+            "index": 3,
+            "role": "new_target",
+            "slot": 9,
+            "cell": [
+              48,
+              704,
+              688,
+              1344
+            ]
+          },
+          {
+            "index": 4,
+            "role": "new_target",
+            "slot": 0,
+            "cell": [
+              704,
+              704,
+              1344,
+              1344
+            ]
+          },
+          {
+            "index": 5,
+            "role": "new_target",
+            "slot": 1,
+            "cell": [
+              1360,
+              704,
+              2000,
+              1344
+            ]
+          },
+          {
+            "index": 6,
+            "role": "new_target",
+            "slot": 2,
+            "cell": [
+              48,
+              1360,
+              688,
+              2000
+            ]
+          },
+          {
+            "index": 7,
+            "role": "new_target",
+            "slot": 3,
+            "cell": [
+              704,
+              1360,
+              1344,
+              2000
+            ]
+          },
+          {
+            "index": 8,
+            "role": "new_target",
+            "slot": 4,
+            "cell": [
+              1360,
+              1360,
+              2000,
+              2000
+            ]
+          }
+        ],
+        "carry_input_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grid_progression_v01\\references\\initial_carry_img007_hd.png",
+        "carry_input_sha256": "a63e6c48b1d1c8c9c4254b22baca774fe0363146bd8ff976c12050a63171a5fb",
+        "fixed_master_cell_sha256": "e9992e60db3b39eb9c424eebd6cb924988f7843501386c9e1493487f38533665",
+        "grid_sha256": "4396307beb021188f0d943db96bbd665b4503e9155a1edd27bbf2a85c1cd4a78"
+      },
+      "shared_scale": 0.21333333333333335,
+      "shared_translation": [
+        0.7199999999999989,
+        9.413333333333334
+      ],
+      "records": [
+        {
+          "index": 0,
+          "role": "fixed_master",
+          "slot": 10,
+          "cell": [
+            48,
+            48,
+            688,
+            688
+          ],
+          "actual_cell_box": [
+            48,
+            48,
+            688,
+            688
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 12431,
+            "nonzero_alpha_before": 86036,
+            "nonzero_alpha_after": 74270,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "dceab054382a935abd93817298f5c72f827db016374b6a9511d304cbcbccdb5d",
+          "manual_eye_640": [
+            332,
+            227
+          ],
+          "integer_translation": [
+            8,
+            -6
+          ],
+          "final_translation": [
+            8.719999999999999,
+            3.413333333333334
+          ],
+          "reference_bottom_y": 136,
+          "corrected_bottom_y": 136,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        },
+        {
+          "index": 1,
+          "role": "carry",
+          "slot": 7,
+          "cell": [
+            704,
+            48,
+            1344,
+            688
+          ],
+          "actual_cell_box": [
+            704,
+            48,
+            1344,
+            688
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 12688,
+            "nonzero_alpha_before": 90370,
+            "nonzero_alpha_after": 78386,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "6f0c64938a357343375118ed5cd732c8241029a98b02553853b911419db50ea5",
+          "manual_eye_640": [
+            351,
+            221
+          ],
+          "integer_translation": [
+            7,
+            -7
+          ],
+          "final_translation": [
+            7.719999999999999,
+            2.413333333333334
+          ],
+          "reference_bottom_y": 131,
+          "corrected_bottom_y": 131,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        },
+        {
+          "index": 2,
+          "role": "new_target",
+          "slot": 8,
+          "cell": [
+            1360,
+            48,
+            2000,
+            688
+          ],
+          "actual_cell_box": [
+            1360,
+            48,
+            2000,
+            688
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 16111,
+            "nonzero_alpha_before": 93171,
+            "nonzero_alpha_after": 77884,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "c4089111b6cee865b03d85f471bd5846bc6421df721cc921a9850b48933eb85a",
+          "manual_eye_640": [
+            381,
+            234
+          ],
+          "integer_translation": [
+            0,
+            -5
+          ],
+          "final_translation": [
+            0.7199999999999989,
+            4.413333333333334
+          ],
+          "reference_bottom_y": 132,
+          "corrected_bottom_y": 132,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        },
+        {
+          "index": 3,
+          "role": "new_target",
+          "slot": 9,
+          "cell": [
+            48,
+            704,
+            688,
+            1344
+          ],
+          "actual_cell_box": [
+            48,
+            704,
+            688,
+            1344
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 17266,
+            "nonzero_alpha_before": 98050,
+            "nonzero_alpha_after": 81603,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "8a396f759203272578f66df75a36290db7761ace441c8c1d499a82d62cc85f96",
+          "manual_eye_640": [
+            351,
+            207
+          ],
+          "integer_translation": [
+            8,
+            -2
+          ],
+          "final_translation": [
+            8.719999999999999,
+            7.413333333333334
+          ],
+          "reference_bottom_y": 130,
+          "corrected_bottom_y": 130,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        },
+        {
+          "index": 4,
+          "role": "new_target",
+          "slot": 0,
+          "cell": [
+            704,
+            704,
+            1344,
+            1344
+          ],
+          "actual_cell_box": [
+            704,
+            704,
+            1344,
+            1344
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 17809,
+            "nonzero_alpha_before": 98992,
+            "nonzero_alpha_after": 81972,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "bc891614b93266ec6ac72f681a71dacee1cea0f95838ab3776f5967c2618ee6b",
+          "manual_eye_640": [
+            356,
+            207
+          ],
+          "integer_translation": [
+            4,
+            -1
+          ],
+          "final_translation": [
+            4.719999999999999,
+            8.413333333333334
+          ],
+          "reference_bottom_y": 132,
+          "corrected_bottom_y": 132,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        },
+        {
+          "index": 5,
+          "role": "new_target",
+          "slot": 1,
+          "cell": [
+            1360,
+            704,
+            2000,
+            1344
+          ],
+          "actual_cell_box": [
+            1360,
+            704,
+            2000,
+            1344
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 15429,
+            "nonzero_alpha_before": 96605,
+            "nonzero_alpha_after": 82048,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "94bfe6860041a1d2d8f8da56586557da9a931ca9218b81f1c64cfd3b893d340d",
+          "manual_eye_640": [
+            408,
+            208
+          ],
+          "integer_translation": [
+            -4,
+            2
+          ],
+          "final_translation": [
+            -3.280000000000001,
+            11.413333333333334
+          ],
+          "reference_bottom_y": 134,
+          "corrected_bottom_y": 134,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        },
+        {
+          "index": 6,
+          "role": "new_target",
+          "slot": 2,
+          "cell": [
+            48,
+            1360,
+            688,
+            2000
+          ],
+          "actual_cell_box": [
+            48,
+            1360,
+            688,
+            2000
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 11787,
+            "nonzero_alpha_before": 80981,
+            "nonzero_alpha_after": 69828,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "551b02688cda2f539d77f7e7af80e21af539c3380ac5d6baed3cc6adb8b685ef",
+          "manual_eye_640": [
+            348,
+            209
+          ],
+          "integer_translation": [
+            10,
+            0
+          ],
+          "final_translation": [
+            10.719999999999999,
+            9.413333333333334
+          ],
+          "reference_bottom_y": 134,
+          "corrected_bottom_y": 134,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        },
+        {
+          "index": 7,
+          "role": "new_target",
+          "slot": 3,
+          "cell": [
+            704,
+            1360,
+            1344,
+            2000
+          ],
+          "actual_cell_box": [
+            704,
+            1360,
+            1344,
+            2000
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 14860,
+            "nonzero_alpha_before": 91026,
+            "nonzero_alpha_after": 77004,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "dd1049930ad491115473d5ce11bb8ab1357462b6b601947f5f183364d6359790",
+          "manual_eye_640": [
+            385,
+            214
+          ],
+          "integer_translation": [
+            -1,
+            1
+          ],
+          "final_translation": [
+            -0.28000000000000114,
+            10.413333333333334
+          ],
+          "reference_bottom_y": 135,
+          "corrected_bottom_y": 135,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        },
+        {
+          "index": 8,
+          "role": "new_target",
+          "slot": 4,
+          "cell": [
+            1360,
+            1360,
+            2000,
+            2000
+          ],
+          "actual_cell_box": [
+            1360,
+            1360,
+            2000,
+            2000
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 16738,
+            "nonzero_alpha_before": 96369,
+            "nonzero_alpha_after": 80493,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "df4223b18c45a9f1f7fc64fe87861d3e04f14dde1a269b9bde22a166b136ca16",
+          "manual_eye_640": [
+            394,
+            213
+          ],
+          "integer_translation": [
+            -4,
+            2
+          ],
+          "final_translation": [
+            -3.280000000000001,
+            11.413333333333334
+          ],
+          "reference_bottom_y": 134,
+          "corrected_bottom_y": 134,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        }
+      ],
+      "local_limb_warps": false,
+      "per_frame_rescale": false
+    },
+    "group_b": {
+      "name": "group_b",
+      "task_id": "img_a0416bffcc2d5a53b9ea84875abf5c68",
+      "cost_usd": 0.038,
+      "actual_sheet_size": [
+        2048,
+        2048
+      ],
+      "actual_alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.7704281806945801,
+      "raw_sheet_sha256": "1aeb5ca338a81300e5f30378a260e4fbe1c18909163b23244065d89e2509980d",
+      "cells": [
+        {
+          "index": 0,
+          "role": "fixed_master",
+          "slot": 10,
+          "cell": [
+            48,
+            48,
+            688,
+            688
+          ],
+          "actual_cell_box": [
+            48,
+            48,
+            688,
+            688
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 11278,
+            "nonzero_alpha_before": 72781,
+            "nonzero_alpha_after": 62139,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "3dde59c964ae398d99bcd1108b237414045fc7be9712e5414c416fb456a11875"
+        },
+        {
+          "index": 1,
+          "role": "carry",
+          "slot": 4,
+          "cell": [
+            704,
+            48,
+            1344,
+            688
+          ],
+          "actual_cell_box": [
+            704,
+            48,
+            1344,
+            688
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 15874,
+            "nonzero_alpha_before": 90437,
+            "nonzero_alpha_after": 75360,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "ca1ed59deabaffca5f3cc04de32308311a66df5d92137a97b6bdd057c5616fef"
+        },
+        {
+          "index": 2,
+          "role": "new_target",
+          "slot": 5,
+          "cell": [
+            1360,
+            48,
+            2000,
+            688
+          ],
+          "actual_cell_box": [
+            1360,
+            48,
+            2000,
+            688
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 15877,
+            "nonzero_alpha_before": 85818,
+            "nonzero_alpha_after": 70697,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "fda0f7567a4a8597187e47c4711addd6d3ab87f87f8a607201f1ef549f04a3d3"
+        },
+        {
+          "index": 3,
+          "role": "new_target",
+          "slot": 6,
+          "cell": [
+            48,
+            704,
+            688,
+            1344
+          ],
+          "actual_cell_box": [
+            48,
+            704,
+            688,
+            1344
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 12897,
+            "nonzero_alpha_before": 79762,
+            "nonzero_alpha_after": 67600,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "fa024a779622ebc786988d195131c4308d548c7a460bcf3bab181d4b6d4b2c79"
+        },
+        {
+          "index": 4,
+          "role": "new_target",
+          "slot": 7,
+          "cell": [
+            704,
+            704,
+            1344,
+            1344
+          ],
+          "actual_cell_box": [
+            704,
+            704,
+            1344,
+            1344
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 11269,
+            "nonzero_alpha_before": 70739,
+            "nonzero_alpha_after": 60077,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "dcbdbc2a8a75cff08fda9b7b6d80774a3e2439dd28535733b1f4027a19386ccd"
+        },
+        {
+          "index": 5,
+          "role": "new_target",
+          "slot": 8,
+          "cell": [
+            1360,
+            704,
+            2000,
+            1344
+          ],
+          "actual_cell_box": [
+            1360,
+            704,
+            2000,
+            1344
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 14635,
+            "nonzero_alpha_before": 82439,
+            "nonzero_alpha_after": 68583,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "cc196d07d6c6dc4cfb444d94b3f22e9d4f328331b2d4338549be0cc39833dc5f"
+        },
+        {
+          "index": 6,
+          "role": "new_target",
+          "slot": 9,
+          "cell": [
+            48,
+            1360,
+            688,
+            2000
+          ],
+          "actual_cell_box": [
+            48,
+            1360,
+            688,
+            2000
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 15280,
+            "nonzero_alpha_before": 85158,
+            "nonzero_alpha_after": 70635,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "9266a805e5ad72724c3c8b7de6169dfd787e5ae08d284a17cd483dec988c3450"
+        },
+        {
+          "index": 7,
+          "role": "new_target",
+          "slot": 0,
+          "cell": [
+            704,
+            1360,
+            1344,
+            2000
+          ],
+          "actual_cell_box": [
+            704,
+            1360,
+            1344,
+            2000
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 15213,
+            "nonzero_alpha_before": 83604,
+            "nonzero_alpha_after": 69179,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "bc92a52b1719c939832176137395b50f49d9ba0f5aac374f7744ab5687bed5b3"
+        },
+        {
+          "index": 8,
+          "role": "new_target",
+          "slot": 1,
+          "cell": [
+            1360,
+            1360,
+            2000,
+            2000
+          ],
+          "actual_cell_box": [
+            1360,
+            1360,
+            2000,
+            2000
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 14605,
+            "nonzero_alpha_before": 80723,
+            "nonzero_alpha_after": 66868,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "2e65bf5f01d035c1fa2267a381b20976bc2c76af030769fd0c51bb25f5968ac6"
+        }
+      ],
+      "layout": {
+        "name": "group_b",
+        "carry_slot": 4,
+        "slots": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          0,
+          1
+        ],
+        "cells": [
+          {
+            "index": 0,
+            "role": "fixed_master",
+            "slot": 10,
+            "cell": [
+              48,
+              48,
+              688,
+              688
+            ]
+          },
+          {
+            "index": 1,
+            "role": "carry",
+            "slot": 4,
+            "cell": [
+              704,
+              48,
+              1344,
+              688
+            ]
+          },
+          {
+            "index": 2,
+            "role": "new_target",
+            "slot": 5,
+            "cell": [
+              1360,
+              48,
+              2000,
+              688
+            ]
+          },
+          {
+            "index": 3,
+            "role": "new_target",
+            "slot": 6,
+            "cell": [
+              48,
+              704,
+              688,
+              1344
+            ]
+          },
+          {
+            "index": 4,
+            "role": "new_target",
+            "slot": 7,
+            "cell": [
+              704,
+              704,
+              1344,
+              1344
+            ]
+          },
+          {
+            "index": 5,
+            "role": "new_target",
+            "slot": 8,
+            "cell": [
+              1360,
+              704,
+              2000,
+              1344
+            ]
+          },
+          {
+            "index": 6,
+            "role": "new_target",
+            "slot": 9,
+            "cell": [
+              48,
+              1360,
+              688,
+              2000
+            ]
+          },
+          {
+            "index": 7,
+            "role": "new_target",
+            "slot": 0,
+            "cell": [
+              704,
+              1360,
+              1344,
+              2000
+            ]
+          },
+          {
+            "index": 8,
+            "role": "new_target",
+            "slot": 1,
+            "cell": [
+              1360,
+              1360,
+              2000,
+              2000
+            ]
+          }
+        ],
+        "carry_input_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grid_progression_v01\\references\\group_a_last_corrected_hd.png",
+        "carry_input_sha256": "9bb272d6135e273d1cdb9df92e2fdfb39762becfd89c0a9edcadb51a8a6923af",
+        "fixed_master_cell_sha256": "e9992e60db3b39eb9c424eebd6cb924988f7843501386c9e1493487f38533665",
+        "grid_sha256": "6369b9a2de8c30666a3958bda4f6f7b13916fb195f846142aadca2f5d6a183ed"
+      },
+      "shared_scale": 0.2235294117647059,
+      "shared_translation": [
+        1.8705882352941074,
+        5.494117647058822
+      ],
+      "records": [
+        {
+          "index": 0,
+          "role": "fixed_master",
+          "slot": 10,
+          "cell": [
+            48,
+            48,
+            688,
+            688
+          ],
+          "actual_cell_box": [
+            48,
+            48,
+            688,
+            688
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 11278,
+            "nonzero_alpha_before": 72781,
+            "nonzero_alpha_after": 62139,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "3dde59c964ae398d99bcd1108b237414045fc7be9712e5414c416fb456a11875",
+          "manual_eye_640": [
+            327,
+            225
+          ],
+          "integer_translation": [
+            5,
+            0
+          ],
+          "final_translation": [
+            6.8705882352941074,
+            5.494117647058822
+          ],
+          "reference_bottom_y": 136,
+          "corrected_bottom_y": 136,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "pose_note": "姿势、手脚与细节仍待验收。",
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        },
+        {
+          "index": 1,
+          "role": "carry",
+          "slot": 4,
+          "cell": [
+            704,
+            48,
+            1344,
+            688
+          ],
+          "actual_cell_box": [
+            704,
+            48,
+            1344,
+            688
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 15874,
+            "nonzero_alpha_before": 90437,
+            "nonzero_alpha_after": 75360,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "ca1ed59deabaffca5f3cc04de32308311a66df5d92137a97b6bdd057c5616fef",
+          "manual_eye_640": [
+            336,
+            231
+          ],
+          "integer_translation": [
+            4,
+            -2
+          ],
+          "final_translation": [
+            5.8705882352941074,
+            3.4941176470588218
+          ],
+          "reference_bottom_y": 134,
+          "corrected_bottom_y": 134,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "pose_note": "与A末帧为同一参考姿势，但已被模型重新绘制。",
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        },
+        {
+          "index": 2,
+          "role": "new_target",
+          "slot": 5,
+          "cell": [
+            1360,
+            48,
+            2000,
+            688
+          ],
+          "actual_cell_box": [
+            1360,
+            48,
+            2000,
+            688
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 15877,
+            "nonzero_alpha_before": 85818,
+            "nonzero_alpha_after": 70697,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "fda0f7567a4a8597187e47c4711addd6d3ab87f87f8a607201f1ef549f04a3d3",
+          "manual_eye_640": [
+            382,
+            238
+          ],
+          "integer_translation": [
+            -6,
+            -3
+          ],
+          "final_translation": [
+            -4.1294117647058926,
+            2.4941176470588218
+          ],
+          "reference_bottom_y": 133,
+          "corrected_bottom_y": 133,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "pose_note": "姿势、手脚与细节仍待验收。",
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        },
+        {
+          "index": 3,
+          "role": "new_target",
+          "slot": 6,
+          "cell": [
+            48,
+            704,
+            688,
+            1344
+          ],
+          "actual_cell_box": [
+            48,
+            704,
+            688,
+            1344
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 12897,
+            "nonzero_alpha_before": 79762,
+            "nonzero_alpha_after": 67600,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "fa024a779622ebc786988d195131c4308d548c7a460bcf3bab181d4b6d4b2c79",
+          "manual_eye_640": [
+            346,
+            212
+          ],
+          "integer_translation": [
+            5,
+            -5
+          ],
+          "final_translation": [
+            6.8705882352941074,
+            0.4941176470588218
+          ],
+          "reference_bottom_y": 130,
+          "corrected_bottom_y": 130,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "pose_note": "姿势、手脚与细节仍待验收。",
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        },
+        {
+          "index": 4,
+          "role": "new_target",
+          "slot": 7,
+          "cell": [
+            704,
+            704,
+            1344,
+            1344
+          ],
+          "actual_cell_box": [
+            704,
+            704,
+            1344,
+            1344
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 11269,
+            "nonzero_alpha_before": 70739,
+            "nonzero_alpha_after": 60077,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "dcbdbc2a8a75cff08fda9b7b6d80774a3e2439dd28535733b1f4027a19386ccd",
+          "manual_eye_640": [
+            351,
+            218
+          ],
+          "integer_translation": [
+            3,
+            -4
+          ],
+          "final_translation": [
+            4.8705882352941074,
+            1.4941176470588218
+          ],
+          "reference_bottom_y": 131,
+          "corrected_bottom_y": 131,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "pose_note": "姿势、手脚与细节仍待验收。",
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        },
+        {
+          "index": 5,
+          "role": "new_target",
+          "slot": 8,
+          "cell": [
+            1360,
+            704,
+            2000,
+            1344
+          ],
+          "actual_cell_box": [
+            1360,
+            704,
+            2000,
+            1344
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 14635,
+            "nonzero_alpha_before": 82439,
+            "nonzero_alpha_after": 68583,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "cc196d07d6c6dc4cfb444d94b3f22e9d4f328331b2d4338549be0cc39833dc5f",
+          "manual_eye_640": [
+            389,
+            220
+          ],
+          "integer_translation": [
+            -7,
+            -4
+          ],
+          "final_translation": [
+            -5.1294117647058926,
+            1.4941176470588218
+          ],
+          "reference_bottom_y": 132,
+          "corrected_bottom_y": 132,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "pose_note": "姿势、手脚与细节仍待验收。",
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        },
+        {
+          "index": 6,
+          "role": "new_target",
+          "slot": 9,
+          "cell": [
+            48,
+            1360,
+            688,
+            2000
+          ],
+          "actual_cell_box": [
+            48,
+            1360,
+            688,
+            2000
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 15280,
+            "nonzero_alpha_before": 85158,
+            "nonzero_alpha_after": 70635,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "9266a805e5ad72724c3c8b7de6169dfd787e5ae08d284a17cd483dec988c3450",
+          "manual_eye_640": [
+            348,
+            217
+          ],
+          "integer_translation": [
+            4,
+            0
+          ],
+          "final_translation": [
+            5.8705882352941074,
+            5.494117647058822
+          ],
+          "reference_bottom_y": 130,
+          "corrected_bottom_y": 130,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "pose_note": "姿势、手脚与细节仍待验收。",
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        },
+        {
+          "index": 7,
+          "role": "new_target",
+          "slot": 0,
+          "cell": [
+            704,
+            1360,
+            1344,
+            2000
+          ],
+          "actual_cell_box": [
+            704,
+            1360,
+            1344,
+            2000
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 15213,
+            "nonzero_alpha_before": 83604,
+            "nonzero_alpha_after": 69179,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "bc92a52b1719c939832176137395b50f49d9ba0f5aac374f7744ab5687bed5b3",
+          "manual_eye_640": [
+            354,
+            222
+          ],
+          "integer_translation": [
+            0,
+            3
+          ],
+          "final_translation": [
+            1.8705882352941074,
+            8.494117647058822
+          ],
+          "reference_bottom_y": 132,
+          "corrected_bottom_y": 132,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "pose_note": "姿势、手脚与细节仍待验收。",
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        },
+        {
+          "index": 8,
+          "role": "new_target",
+          "slot": 1,
+          "cell": [
+            1360,
+            1360,
+            2000,
+            2000
+          ],
+          "actual_cell_box": [
+            1360,
+            1360,
+            2000,
+            2000
+          ],
+          "actual_size": [
+            640,
+            640
+          ],
+          "alpha_cleanup": {
+            "alpha_input_1_to_127": 14605,
+            "nonzero_alpha_before": 80723,
+            "nonzero_alpha_after": 66868,
+            "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+            "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+          },
+          "raw_file_sha256": "2e65bf5f01d035c1fa2267a381b20976bc2c76af030769fd0c51bb25f5968ac6",
+          "manual_eye_640": [
+            382,
+            223
+          ],
+          "integer_translation": [
+            -3,
+            3
+          ],
+          "final_translation": [
+            -1.1294117647058926,
+            8.494117647058822
+          ],
+          "reference_bottom_y": 134,
+          "corrected_bottom_y": 134,
+          "tail_review": {
+            "visible_hd": true,
+            "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+            "status": "退回修改（整套尾部方案）",
+            "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+          },
+          "tail_crop_native": [
+            22,
+            70,
+            96,
+            126
+          ],
+          "pose_note": "IMG1 前伸手臂明显高于原版，姿势偏差待修。",
+          "fit_note": "Eye-x and same-frame original shoe row are fitting controls, not independent no-slip validation."
+        }
+      ],
+      "local_limb_warps": false,
+      "per_frame_rescale": false
+    }
+  },
+  "frames": [
+    {
+      "index": 0,
+      "group": "group_a",
+      "cell_index": 2,
+      "slot": 8,
+      "tail_review": {
+        "visible_hd": true,
+        "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+        "status": "退回修改（整套尾部方案）",
+        "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+      },
+      "pose_note": "姿势、手脚与细节仍待验收。"
+    },
+    {
+      "index": 1,
+      "group": "group_a",
+      "cell_index": 3,
+      "slot": 9,
+      "tail_review": {
+        "visible_hd": true,
+        "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+        "status": "退回修改（整套尾部方案）",
+        "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+      },
+      "pose_note": "姿势、手脚与细节仍待验收。"
+    },
+    {
+      "index": 2,
+      "group": "group_a",
+      "cell_index": 4,
+      "slot": 0,
+      "tail_review": {
+        "visible_hd": true,
+        "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+        "status": "退回修改（整套尾部方案）",
+        "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+      },
+      "pose_note": "姿势、手脚与细节仍待验收。"
+    },
+    {
+      "index": 3,
+      "group": "group_a",
+      "cell_index": 5,
+      "slot": 1,
+      "tail_review": {
+        "visible_hd": true,
+        "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+        "status": "退回修改（整套尾部方案）",
+        "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+      },
+      "pose_note": "姿势、手脚与细节仍待验收。"
+    },
+    {
+      "index": 4,
+      "group": "group_a",
+      "cell_index": 6,
+      "slot": 2,
+      "tail_review": {
+        "visible_hd": true,
+        "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+        "status": "退回修改（整套尾部方案）",
+        "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+      },
+      "pose_note": "姿势、手脚与细节仍待验收。"
+    },
+    {
+      "index": 5,
+      "group": "group_a",
+      "cell_index": 7,
+      "slot": 3,
+      "tail_review": {
+        "visible_hd": true,
+        "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+        "status": "退回修改（整套尾部方案）",
+        "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+      },
+      "pose_note": "姿势、手脚与细节仍待验收。"
+    },
+    {
+      "index": 6,
+      "group": "group_a",
+      "cell_index": 8,
+      "slot": 4,
+      "tail_review": {
+        "visible_hd": true,
+        "flukes_readable": "轮廓偏简化，双叶尾鳍需对照设定",
+        "status": "退回修改（整套尾部方案）",
+        "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+      },
+      "pose_note": "姿势、手脚与细节仍待验收。"
+    },
+    {
+      "index": 7,
+      "group": "group_b",
+      "cell_index": 2,
+      "slot": 5,
+      "tail_review": {
+        "visible_hd": true,
+        "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+        "status": "退回修改（整套尾部方案）",
+        "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+      },
+      "pose_note": "姿势、手脚与细节仍待验收。"
+    },
+    {
+      "index": 8,
+      "group": "group_b",
+      "cell_index": 3,
+      "slot": 6,
+      "tail_review": {
+        "visible_hd": true,
+        "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+        "status": "退回修改（整套尾部方案）",
+        "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+      },
+      "pose_note": "姿势、手脚与细节仍待验收。"
+    },
+    {
+      "index": 9,
+      "group": "group_b",
+      "cell_index": 4,
+      "slot": 7,
+      "tail_review": {
+        "visible_hd": true,
+        "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+        "status": "退回修改（整套尾部方案）",
+        "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+      },
+      "pose_note": "姿势、手脚与细节仍待验收。"
+    },
+    {
+      "index": 10,
+      "group": "group_b",
+      "cell_index": 5,
+      "slot": 8,
+      "tail_review": {
+        "visible_hd": true,
+        "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+        "status": "退回修改（整套尾部方案）",
+        "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+      },
+      "pose_note": "姿势、手脚与细节仍待验收。"
+    },
+    {
+      "index": 11,
+      "group": "group_b",
+      "cell_index": 6,
+      "slot": 9,
+      "tail_review": {
+        "visible_hd": true,
+        "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+        "status": "退回修改（整套尾部方案）",
+        "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+      },
+      "pose_note": "姿势、手脚与细节仍待验收。"
+    },
+    {
+      "index": 12,
+      "group": "group_b",
+      "cell_index": 7,
+      "slot": 0,
+      "tail_review": {
+        "visible_hd": true,
+        "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+        "status": "退回修改（整套尾部方案）",
+        "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+      },
+      "pose_note": "姿势、手脚与细节仍待验收。"
+    },
+    {
+      "index": 13,
+      "group": "group_b",
+      "cell_index": 8,
+      "slot": 1,
+      "tail_review": {
+        "visible_hd": true,
+        "flukes_readable": "尾体可见，双叶尾鳍轮廓仍偏简化",
+        "status": "退回修改（整套尾部方案）",
+        "trial_feedback": "这个尾巴表现的不太好，像是衣服的一部分"
+      },
+      "pose_note": "IMG1 前伸手臂明显高于原版，姿势偏差待修。"
+    }
+  ],
+  "seam_indices": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "drift_pairs": [
+    {
+      "slot": 4,
+      "a_cell": 8,
+      "b_cell": 1,
+      "label": "A末帧 / B重新返回的同姿势衔接帧"
+    },
+    {
+      "slot": 8,
+      "a_cell": 2,
+      "b_cell": 5,
+      "label": "跨组重复姿势"
+    },
+    {
+      "slot": 9,
+      "a_cell": 3,
+      "b_cell": 6,
+      "label": "跨组重复姿势"
+    },
+    {
+      "slot": 0,
+      "a_cell": 4,
+      "b_cell": 7,
+      "label": "跨组重复姿势"
+    },
+    {
+      "slot": 1,
+      "a_cell": 5,
+      "b_cell": 8,
+      "label": "跨组重复姿势"
+    }
+  ],
+  "cost_usd": 0.076,
+  "native_size": [
+    160,
+    160
+  ],
+  "preview_timing_ms": 180,
+  "accepted": false,
+  "npk_created": false,
+  "full_batch_started": false,
+  "protected_files_unchanged": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\nearest_standing_v04\\standing_canvas.png": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\concepts\\fatfish_mage_v01.png": "708c2808cee3b3b6b544845069d957d9ff0fec430ca6428196c9c991255b8c6f",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20"
+  },
+  "pose_order_note": "Existing ten-slot walk-test references only. A=[8,9,0,1,2,3,4], B=[5,6,7,8,9,0,1]. Repeated slots are consistency probes, not 14 distinct ANI poses. 9->0 wrap is an experimental sequence; current ANI order/timing remains unknown.",
+  "validation": {
+    "sequential_task_dependency": true,
+    "fixed_master_cell_identical": true,
+    "carry_visible_pixels_and_alpha_identical_to_a_hd_last_frame": true,
+    "transparent_rgb_ignored_in_carry_comparison": true,
+    "fourteen_and_four_frame_apng_pixel_readback": true
+  },
+  "findings": [
+    "你的最新反馈：尾巴像衣服的一部分。本轮尾部方案退回修改；高清设定参考没有充分锁定独立尾根、尾柄和分叉尾鳍。",
+    "两张实际均为2048×2048 RGBA，每次确实上传九宫格与同一张1536×1024高清设定图。",
+    "14个新目标的高清图中均可见深蓝色尾体；尾鳍仍有简化，不能把“可见”当作符合设定。未补画或粘贴尾巴。",
+    "B组IMG1前伸手臂明显高于原版，姿势仍有偏差；清边和平移校正无法修复这类局部错误。",
+    "B返回的衔接格与A末帧并非像素原样保留；同姿势面板保留这次重绘差异，14帧播放不插入重复衔接格。",
+    "已清除分隔线、标签和远处碎点并调整alpha；部分贴着人物的不透明灰边/色边仍需检查。",
+    "每组统一缩放后逐帧平移，鞋底对齐原版对应帧；头脸、袖口、裙边仍存在生成差异，当前不标记通过。"
+  ],
+  "assessment": "尾部方案已按你的反馈退回修改：目前尾体与裙摆混同。两组生成和接缝对照保留，均未标记通过。",
+  "human_review": {
+    "scope": "tail_design_for_trial",
+    "status": "changes_requested",
+    "source": "user_message",
+    "note": "这个尾巴表现的不太好，像是衣服的一部分",
+    "recorded_at": "2026-10-23T01:19:13.873943+00:00"
+  },
+  "tail_revision_plan": {
+    "generation_started": false,
+    "additional_jobs": 0,
+    "approach": "Separate tail asset, anchored behind the hips and composited behind/in front of skirt as appropriate.",
+    "visual_constraints": [
+      "Tail root distinct from skirt hem, connected behind the pelvis; do not form a second skirt border.",
+      "Curved tapered peduncle ending in two clearly separated whale flukes; readable negative space beside skirt.",
+      "Approve the isolated tail silhouette at native size before adapting sway/occlusion across poses."
+    ],
+    "note": "Future method proposal only. No isolated tail has been generated or composited in this trial."
+  }
+}

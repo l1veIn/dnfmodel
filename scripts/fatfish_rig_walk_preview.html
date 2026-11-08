@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>大肥鱼 · 固定部件步行对照</title>
+<style>
+:root{color-scheme:dark;font:15px/1.55 system-ui,"Microsoft YaHei",sans-serif;color:#dbe8f6;background:#101923}*{box-sizing:border-box}body{margin:0}main{max-width:1560px;margin:auto;padding:24px}a{color:#7dc5ff;text-decoration:none}a:hover{text-decoration:underline}h1{font-size:27px;margin:14px 0 8px}h2{font-size:16px;margin:0}.intro{max-width:1120px;color:#b1c2d5;margin:8px 0 18px}.chips{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.chip{background:#1c3042;border:1px solid #344b60;padding:4px 10px;border-radius:20px;font-size:12px}.chip.good{color:#97e0c4;border-color:#326859}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:12px;background:#192838;border:1px solid #30475e;border-radius:10px;margin:12px 0}button,select{border:1px solid #456079;background:#233b50;border-radius:6px;color:#e5f1fe;padding:7px 10px;font:inherit;cursor:pointer}button.primary{background:#2b6d85;border-color:#4d9cb3}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #7dd5e9;outline-offset:3px}label{display:flex;gap:6px;align-items:center;font-size:13px}input[type=range]{width:160px;accent-color:#74d9db}input[type=checkbox]{accent-color:#74d9db}.counter{font-variant-numeric:tabular-nums;min-width:105px}.viewers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}figure{margin:0;background:#192635;border:1px solid #35495e;border-radius:10px;overflow:hidden;min-width:0}.featured{border-color:#5ebbb5;box-shadow:0 0 0 1px #5ebbb540}figcaption{padding:12px 12px 8px;min-height:77px}figcaption p{font-size:12px;margin:4px 0 0;color:#a6bad0}.stage{position:relative;background:#b8c6d7;aspect-ratio:1;overflow:hidden}canvas{display:block;width:100%;height:100%}.bottom-label{font:12px/1.5 system-ui;padding:8px 12px;min-height:52px;color:#b8cbdf}.bottom-label.green{color:#9ed9c5}.note{font-size:13px;color:#a7bbcf;line-height:1.7}.phase-strip{display:flex;gap:8px;margin:15px 0;overflow:auto;padding-bottom:6px}.phase-strip button{flex:0 0 95px;padding:4px;background:#1a2a3b;border-color:#314b64}.phase-strip button.active{border-color:#81d4cc;background:#244657}.phase-strip img{display:block;width:86px;height:86px;background:#34475a}.phase-strip small{display:block;font-size:12px}.review{background:#192838;padding:15px 18px;border:1px solid #33495f;border-radius:10px;margin-top:16px}.review p{margin:5px 0;color:#b4c6d8;font-size:13px}.review strong{color:#dfebf8}.links{display:flex;flex-wrap:wrap;gap:8px 22px;margin:16px 0}details{border-top:1px solid #34475a;padding:14px 0;margin-top:10px}summary{cursor:pointer;color:#c7dced}.assets{display:grid;grid-template-columns:1fr 2fr;gap:16px;margin-top:12px;align-items:start}.assets img{max-width:100%;background:#46596a;border-radius:8px}.assets p{margin:4px 0;font-size:13px;color:#a7bdd1}.error{padding:16px;background:#592b32;color:#ffccd1;border-radius:8px}footer{font-size:12px;color:#8ea7bf;padding:14px 0}body.large .viewers{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1150px;margin:auto}body.large .stage{max-height:520px;aspect-ratio:1}.loading{font-size:13px;color:#b6cde1}@media(max-width:1000px){.viewers{grid-template-columns:repeat(2,minmax(0,1fr))}main{padding:16px}.assets{grid-template-columns:1fr}}@media(max-width:540px){.viewers,body.large .viewers{grid-template-columns:1fr}input[type=range]{width:130px}}
+</style>
+</head>
+<body><main>
+<a href="../../">← 动作工作台</a>
+<h1>固定部件复用：一段步行循环</h1>
+<p class="intro">同一张大肥鱼主帧拆成 14 个部件，四肢沿原版女法参考轨迹运动。只补画一次手臂后方的衣身，脸、头饰、围裙图案和鱼尾固定复用。默认按共同 10 相位对照；切到 20 帧可查看这套部件的连续补间。</p>
+<div class="chips"><span class="chip good">1 次局部补画 · $0.038</span><span class="chip">10 个参考相位 → 20 帧短循环</span><span class="chip">未生成 NPK · 未批量</span><span class="chip">ANI 配时仍未核实</span></div>
+<div class="toolbar">
+<button id="play" class="primary">暂停</button><button id="prev" aria-label="上一帧">←</button><button id="next" aria-label="下一帧">→</button>
+<input id="frame" type="range" min="0" max="9" value="0" step="1" aria-label="当前帧"><span class="counter" id="counter">相位 0 / 10</span>
+<label>比较方式<select id="samples"><option value="10">10 相位同步</option><option value="20">20 帧连续补间</option></select></label>
+<label>速度<select id="speed"><option value="1">1×</option><option value="0.5">0.5×</option><option value="0.25">0.25×</option></select></label>
+<label>画质<select id="quality"><option value="hd">保留高清</option><option value="nn">最近邻 160px</option></select></label>
+<label>部件版脚部<select id="contact"><option value="locked">接地约束</option><option value="raw">直接跟随参考轨迹</option></select></label>
+<label><input id="floor" type="checkbox" checked>移动地面</label><label><input id="joints" type="checkbox">关节与接地点</label><label><input id="large" type="checkbox">放大对照</label>
+<label>背景<select id="background"><option value="checker">棋盘格</option><option value="dark">深色</option><option value="white">白色</option></select></label>
+</div>
+<p id="loading" class="loading" role="status">正在加载动作素材…</p>
+<div class="viewers">
+<figure><figcaption><h2>原版女法参考</h2><p>已有 10 张参考图 · 非 ANI 验证序列</p></figcaption><div class="stage"><canvas id="original" width="640" height="640" aria-label="原版女法步行参考"></canvas></div><div class="bottom-label" id="original-note">IMG 000</div></figure>
+<figure class="featured"><figcaption><h2>新：固定部件＋局部补画</h2><p>脸和服装细节复用 · 可切换接地约束</p></figcaption><div class="stage"><canvas id="rig" width="640" height="640" aria-label="固定部件大肥鱼循环"></canvas></div><div class="bottom-label green" id="rig-note">待加载</div></figure>
+<figure><figcaption><h2>旧：宫格逐帧重画</h2><p>保留之前 30 帧试验的前 10 帧</p></figcaption><div class="stage"><canvas id="grid" width="640" height="640" aria-label="之前宫格生成的大肥鱼"></canvas></div><div class="bottom-label">原处理和定位保持原样，观察脸、发型与衣摆变化。</div></figure>
+<figure><figcaption><h2>已通过：Grok 步行</h2><p>使用已验收测试包的 10 帧素材</p></figcaption><div class="stage"><canvas id="grok" width="640" height="640" aria-label="已通过的Grok步行"></canvas></div><div class="bottom-label">验收记录保留；本页统一周期方便比较。</div></figure>
+</div>
+<p class="note">移动地面是以统一速度运动的检查网格。新方案的支撑脚按这个速度约束，不能据此宣称实机已经无滑步。原版和旧方案在 20 帧模式下按各自 10 相位持帧；判断造型抖动时建议先用默认的 10 相位同步模式。</p>
+<div id="strip" class="phase-strip" aria-label="选择参考相位"></div>
+<div class="review"><p><strong>本轮重点：</strong>同一张脸、围裙图案和尾巴是否保持稳定；袖口与手、膝盖与鞋是否连接；支撑与抬脚的转换，以及第 9 相位回到第 0 相位是否自然。</p><p><strong>目前限制：</strong>这是二维拆件变形，隐藏关节来自人工估计。远侧手臂复用近侧袖子素材；大角度摆臂和腿交叉可能呈现剪纸感，投影拉伸也可能改变袖口或腿型。细节稳定来自素材复用。</p></div>
+<div class="links"><a href="parts_atlas.png" target="_blank">14 个固定部件 ↗</a><a href="qa/ten_phase_contact.png" target="_blank">10 相位静态总览 ↗</a><a href="rig_walk_hd.png" target="_blank">20 帧透明动画 ↗</a><a href="comparison_animation.png" target="_blank">四路动画对照 ↗</a><a href="report.json" target="_blank">任务与处理记录 ↗</a><a href="../grid30_v01/preview.html">之前 30 帧预览</a></div>
+<details><summary>查看主帧、拆件和补画范围</summary><div class="assets"><div><p>已确认的 1024px 主帧</p><img src="master_approved.png" alt="已确认大肥鱼主帧" loading="lazy"><p>补画结果只在原手臂移开的范围内使用，其他区域保留主帧。</p><a href="underpaint_masked.png" target="_blank">查看合并后的衣身底图 ↗</a></div><div><p>14 个部件：后发、鱼尾、衣身、头、两条腿的分段和鞋、两条手臂的分段</p><img src="parts_atlas.png" alt="固定部件拆分图" loading="lazy"><p>远侧手臂在主帧中遮挡较多，因此使用同一套近侧袖子，缩小宽度后放到后层。</p></div></div></details>
+<footer>65535 · gpt-image-2.5 · 1 次局部补画 / $0.038 · img_74e003506f1e4f799fb698b8b4a0f9ac · 候选预览，等待视觉验收。</footer>
+</main>
+<script>
+(() => {
+'use strict';
+const $=id=>document.getElementById(id);
+const state={frame:0,count:10,cycle:0,playing:true,last:0,elapsed:0,quality:'hd',contact:'locked'};
+const images=new Map(); let motion;
+const pad=n=>String(n).padStart(3,'0');
+const url=(kind,index)=>`${kind}/${pad(index)}.png`;
+async function load(path){if(images.has(path))return;const im=new Image();im.src=path;await im.decode();images.set(path,im);}
+function dot(ctx,p,color,r=1.3){ctx.beginPath();ctx.arc(p[0]*4,p[1]*4,r*4,0,Math.PI*2);ctx.fillStyle=color;ctx.fill();}
+function base(ctx,phase){
+ ctx.clearRect(0,0,640,640);const bg=$('background').value;
+ if(bg==='checker'){for(let y=0;y<640;y+=32)for(let x=0;x<640;x+=32){ctx.fillStyle=(x/32+y/32)%2?'#b5c5d7':'#d0dce9';ctx.fillRect(x,y,32,32);}}
+ else{ctx.fillStyle=bg==='white'?'#fff':'#152334';ctx.fillRect(0,0,640,640);}
+ if($('floor').checked){
+  ctx.fillStyle=bg==='dark'?'#263d4e':'#9badc0';ctx.fillRect(0,544,640,96);
+  const shift=((phase+10*state.cycle)*10.8*4)%80;ctx.strokeStyle=bg==='dark'?'#638193':'#728ba2';ctx.lineWidth=2;
+  for(let x=-80-shift;x<720;x+=80){ctx.beginPath();ctx.moveTo(x,546);ctx.lineTo(x-30,640);ctx.stroke();}
+  ctx.strokeStyle='#dca761';ctx.beginPath();ctx.moveTo(0,546);ctx.lineTo(640,546);ctx.stroke();
+ }
+}
+function overlay(ctx,info){
+ for(const side of ['near','far']){
+  const p=info[side],arm=info[side+'_arm'];ctx.strokeStyle=side==='near'?'#e39731':'#5bc7f8';ctx.lineWidth=3;
+  for(const chain of [[p.hip,p.knee,p.ankle,p.sole],[arm.shoulder,arm.elbow,arm.wrist]]){
+   ctx.beginPath();chain.forEach((v,i)=>i?ctx.lineTo(v[0]*4,v[1]*4):ctx.moveTo(v[0]*4,v[1]*4));ctx.stroke();
+   chain.forEach(v=>dot(ctx,v,ctx.strokeStyle,.9));
+  }
+  dot(ctx,p.sole,p.stance?'#14b978':'#5790e5',1.7);
+ }
+}
+function paint(){
+ const index=state.count===10?state.frame*2:state.frame;
+ const phase=index/2, old=Math.floor(phase)%10;
+ const folders={original:'original',rig:state.contact==='raw'?'raw_motion_hd':(state.quality==='hd'?'frames_hd':'frames_nn'),grid:state.quality==='hd'?'previous_grid_hd':'previous_grid_nn',grok:'approved_grok'};
+ for(const kind of ['original','rig','grid','grok']){
+  const ctx=$(kind).getContext('2d');base(ctx,phase);
+  const path=url(folders[kind],kind==='rig'?index:old),im=images.get(path);
+  if(im){ctx.imageSmoothingEnabled=state.quality==='hd' && (kind==='rig'||kind==='grid');ctx.imageSmoothingQuality='high';ctx.drawImage(im,0,0,640,640);}
+  if(kind==='rig' && $('joints').checked && motion){overlay(ctx,state.contact==='raw'?motion.frames[index].raw_guide:motion.frames[index].controlled);}
+ }
+ $('frame').value=state.frame;$('counter').textContent=`相位 ${phase.toFixed(phase%1?1:0)} / 10`;
+ $('original-note').textContent=`IMG ${pad(old)} · 坐标窗口保持原样`;
+ if(motion){const m=motion.frames[index].controlled;const label=p=>p.stance?'支撑':'摆动';$('rig-note').textContent=state.contact==='locked'?`接地约束 · 前层脚${label(m.near)} / 后层脚${label(m.far)}`:'原轨迹 · 未约束鞋底高度与接地速度';}
+ document.querySelectorAll('#strip button').forEach((b,i)=>b.classList.toggle('active',i===old));
+}
+function setPlaying(value){state.playing=value;state.elapsed=0;$('play').textContent=value?'暂停':'播放';}
+function step(delta){setPlaying(false);const total=state.frame+delta;state.cycle+=Math.floor(total/state.count);state.frame=(total+state.count)%state.count;paint();}
+$('play').onclick=()=>setPlaying(!state.playing);$('prev').onclick=()=>step(-1);$('next').onclick=()=>step(1);
+$('frame').oninput=()=>{setPlaying(false);state.cycle=0;state.frame=Number($('frame').value);paint();};
+$('samples').onchange=()=>{const old=state.frame/state.count;state.count=Number($('samples').value);state.frame=Math.floor(old*state.count)%state.count;$('frame').max=state.count-1;state.elapsed=0;paint();};
+$('quality').onchange=()=>{state.quality=$('quality').value;if(state.quality==='nn'&&state.contact==='raw'){$('contact').value='locked';state.contact='locked';}paint();};
+$('contact').onchange=()=>{state.contact=$('contact').value;if(state.contact==='raw'){$('quality').value='hd';state.quality='hd';}paint();};
+for(const id of ['floor','joints','background'])$(id).onchange=paint;
+$('large').onchange=()=>document.body.classList.toggle('large',$('large').checked);
+function tick(now){if(!state.last)state.last=now;const delta=Math.min(250,now-state.last);state.last=now;if(state.playing){state.elapsed+=delta*Number($('speed').value);const step=1000/state.count;if(state.elapsed>=step){const n=Math.floor(state.elapsed/step);state.elapsed%=step;const total=state.frame+n;state.cycle+=Math.floor(total/state.count);state.frame=total%state.count;paint();}}requestAnimationFrame(tick);}
+async function start(){
+ const paths=[];
+ for(let i=0;i<20;i++)for(const folder of ['frames_hd','frames_nn','raw_motion_hd'])paths.push(url(folder,i));
+ for(let i=0;i<10;i++)for(const folder of ['original','previous_grid_hd','previous_grid_nn','approved_grok'])paths.push(url(folder,i));
+ let done=0;
+ for(let at=0;at<paths.length;at+=8){await Promise.all(paths.slice(at,at+8).map(async p=>{await load(p);done++;}));$('loading').textContent=`加载素材 ${done} / ${paths.length}`;}
+ motion=await (await fetch('evidence/motion.json')).json();
+ for(let i=0;i<10;i++){const b=document.createElement('button');b.setAttribute('aria-label',`选择相位 ${i}`);const im=document.createElement('img');im.src=url('frames_hd',i*2);im.alt=`固定部件相位${i}`;b.append(im);const t=document.createElement('small');t.textContent=`相位 ${i}`;b.append(t);b.onclick=()=>{setPlaying(false);state.frame=i*(state.count/10);paint();};$('strip').append(b);}
+ $('loading').textContent='已加载 · 默认同步比较 10 个相位，1 秒一循环；配时为试验值。';paint();requestAnimationFrame(tick);
+}
+start().catch(error=>{setPlaying(false);$('loading').className='error';$('loading').textContent=`素材加载失败：${error.message}。请通过动作工作台的本地地址打开。`;console.error(error);});
+})();
+</script></body></html>

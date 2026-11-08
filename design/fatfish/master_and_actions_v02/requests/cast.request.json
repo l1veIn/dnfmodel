@@ -1,0 +1,24 @@
+{
+  "name": "cast",
+  "category": "cast",
+  "source_frame": 65,
+  "model": "gpt-image-2.5",
+  "input": {
+    "prompt": "Clean game sprite of the SAME Fatfish whale-maid DNF female mage. Single full body, transparent alpha, no text or props.\nCompact female-mage anatomy, consistent head size and limb proportions. Navy-to-cyan long wavy hair in about six broad readable locks, one curled ahoge, whale-fin ears, cyan bow and white maid headband. Navy long-sleeved dress, white chest and apron, one simple navy whale emblem, two gold waist buttons, small gold bows, one simple gold hem stripe, opaque white tights, navy Mary-Jane shoes and one compact navy whale tail.\nArt direction: clean low-resolution pixel sprite intended for a 128x128 native canvas, shown enlarged exactly 8x on a 1024 square. Big connected pixel clusters and solid interior colors. Each material has just a base, one shadow and one highlight. Navy outline, flat navy/blue/cyan/white/gold/skin palette. No stipple, grain, embroidery, intricate lace, tiny gold scribbles, isolated sparkle pixels, gritty texture, noisy gradients, blue/purple fringe, soft painted edges or tiny perforations. Simplify details that would collapse at native size. Preserve the costume rather than adding decoration.\nOnly one character. No grid, markers, lettering, scenery, floor, shadow, effects, weapon, bowl or extra limbs. Genuine alpha outside the silhouette, solid opaque colors inside the character.\n\nImage 1 is the SINGLE APPROVED STANDING MASTER, the sole character/design/pixel-scale reference. It is native 128x128 enlarged 8x. Preserve head size, face, hair color blocks, dress construction, apron emblem, gold trim count and tail size. Change only the pose and natural cloth/hair displacement. Do not add decorative texture.\nImage 2 is POSE/LAYOUT ONLY, a gray DNF female-mage guide in the exact same 128 native-pixel window enlarged 8x. Follow its head, shoulder, pelvis, elbows, hands, knees and shoe positions. Ignore its old costume and hat. Keep hands and feet on guide landmarks instead of centering the whole silhouette. Do not add guide graphics to the result.\nACTION: Casting/action pose: extend the arm toward screen-left exactly as the gray pose guide; keep the other arm, lifted leg and torso direction in the guide. No magic effect. Do not mirror the guide.",
+    "n": 1,
+    "size": "1:1",
+    "resolution": "1k",
+    "background": "transparent",
+    "output_format": "png",
+    "quality": "high"
+  },
+  "local_reference_paths": [
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_reference_8x.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\references\\cast_pose_gray_8x.png"
+  ],
+  "reference_sha256": [
+    "70ca8180075d7bd8fdcaa28e655e84c2f741aab32d630a8a143a1787d6633977",
+    "98e68f301fa02943d0075731bee3b6d7933acece123ffd27f49f967c97630fde"
+  ],
+  "output_directory": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw"
+}

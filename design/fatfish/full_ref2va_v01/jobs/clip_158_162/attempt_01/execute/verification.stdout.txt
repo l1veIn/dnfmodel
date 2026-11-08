@@ -1,0 +1,24 @@
+{
+  "file": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_158_162_a01_00001_.mp4",
+  "width": 608,
+  "height": 352,
+  "fps": 24.0,
+  "video_codec": "h264",
+  "container_seconds": 5.167,
+  "decoded_frames": 124,
+  "mean_luma_proxy": 119.48464264408234,
+  "mean_temporal_pixel_change": 0.6354762093292746,
+  "frames": {
+    "1": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_158_162_a01_00001__qa\\frame_001.png",
+    "62": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_158_162_a01_00001__qa\\frame_062.png",
+    "124": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_158_162_a01_00001__qa\\frame_124.png"
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": 32000,
+    "channels": 2,
+    "decoded_audio_frames": 162,
+    "rms": 0.01952610295359555,
+    "peak": 0.12242865562438965
+  }
+}

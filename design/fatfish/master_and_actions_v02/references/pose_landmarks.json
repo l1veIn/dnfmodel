@@ -1,0 +1,74 @@
+{
+  "coordinate_system": "original 500x500 IMG canvas",
+  "annotation_uncertainty_native_px": "approximately 1-2; manually read, not detected skeletal joints",
+  "poses": {
+    "master": {
+      "frame": 10,
+      "eye": [
+        249,
+        305
+      ],
+      "sole": [
+        244,
+        386
+      ],
+      "note": "Relaxed idle, manually estimated visual landmarks"
+    },
+    "walk": {
+      "frame": 0,
+      "eye": [
+        251,
+        304
+      ],
+      "sole": [
+        278,
+        381
+      ],
+      "hand_screen_left": [
+        228,
+        335
+      ],
+      "hand_screen_right": [
+        279,
+        316
+      ],
+      "note": "Walking/contact pose; source ANI group and timing not certified"
+    },
+    "cast": {
+      "frame": 65,
+      "eye": [
+        246,
+        305
+      ],
+      "sole": [
+        238,
+        387
+      ],
+      "hand_screen_left": [
+        209,
+        315
+      ],
+      "hand_screen_right": [
+        260,
+        337
+      ],
+      "note": "Action pose used as casting test; source ANI group and timing not certified"
+    },
+    "jump": {
+      "frame": 23,
+      "eye": [
+        253,
+        309
+      ],
+      "sole": [
+        230,
+        386
+      ],
+      "hand_screen_left": [
+        224,
+        305
+      ],
+      "note": "Airborne-style action pose; local frame registration, no added world-height translation; source ANI group and timing not certified"
+    }
+  }
+}

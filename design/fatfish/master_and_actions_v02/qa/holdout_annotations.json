@@ -1,0 +1,93 @@
+{
+  "annotation_uncertainty_native_px": "about 1-2 native pixels; estimates from visible hands/shoe soles; some shoes differ in outline from reference boots",
+  "poses": {
+    "master": {
+      "rear_shoe": {
+        "raw": [
+          540,
+          850
+        ],
+        "target_native": [
+          250,
+          379
+        ]
+      }
+    },
+    "walk": {
+      "hand_screen_left": {
+        "raw": [
+          352,
+          550
+        ],
+        "target_native": [
+          228,
+          335
+        ]
+      },
+      "hand_screen_right": {
+        "raw": [
+          808,
+          414
+        ],
+        "target_native": [
+          279,
+          316
+        ]
+      },
+      "trailing_shoe": {
+        "raw": [
+          371,
+          917
+        ],
+        "target_native": [
+          227,
+          379
+        ]
+      }
+    },
+    "cast": {
+      "hand_screen_left": {
+        "raw": [
+          240,
+          350
+        ],
+        "target_native": [
+          209,
+          315
+        ]
+      },
+      "hand_screen_right": {
+        "raw": [
+          664,
+          545
+        ],
+        "target_native": [
+          260,
+          337
+        ]
+      },
+      "raised_shoe": {
+        "raw": [
+          670,
+          800
+        ],
+        "target_native": [
+          263,
+          367
+        ]
+      }
+    },
+    "jump": {
+      "rear_hand": {
+        "raw": [
+          408,
+          229
+        ],
+        "target_native": [
+          224,
+          305
+        ]
+      }
+    }
+  }
+}

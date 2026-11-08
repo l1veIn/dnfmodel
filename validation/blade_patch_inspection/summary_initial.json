@@ -1,0 +1,22 @@
+[
+  {
+    "file": "dnf刃\\a(剑魂x刃风格技能) .npk",
+    "error": "'utf-8' codec can't decode byte 0xb1 in position 54: invalid start byte"
+  },
+  {
+    "file": "dnf刃\\a(鬼剑士全时装改刃1. 1阴沉脸 含隐藏鬼手241119).NPK",
+    "error": "'utf-8' codec can't decode byte 0xb1 in position 5: invalid start byte"
+  },
+  {
+    "file": "dnf刃\\a(鬼剑士全时装改刃1. 2普通脸 含隐藏鬼手241122).NPK",
+    "error": "'utf-8' codec can't decode byte 0xb1 in position 5: invalid start byte"
+  },
+  {
+    "file": "dnf刃\\a(鬼剑士全武器改低配支离剑241115).NPK",
+    "error": "'utf-8' codec can't decode byte 0xb0 in position 2: invalid start byte"
+  },
+  {
+    "file": "dnf刃\\技能语音文件\\a(Blade Master Blade).npk",
+    "error": "'utf-8' codec can't decode byte 0xbe in position 0: invalid start byte"
+  }
+]

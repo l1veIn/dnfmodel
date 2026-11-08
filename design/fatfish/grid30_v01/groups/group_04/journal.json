@@ -1,0 +1,17 @@
+{
+  "jobs": {
+    "group_04": {
+      "state": "downloaded",
+      "started_at": "2026-10-23T02:05:49.460164+00:00",
+      "task_id": "img_949898423e12eec511474b83cef3dc10",
+      "submitted_at": "2026-10-23T02:05:52.138216+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-23T02:07:10.581219+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grid30_v01\\raw\\group_04_0.png"
+      ],
+      "stdout": "design\\fatfish\\grid30_v01\\logs\\group_04.stdout.txt",
+      "stderr": "design\\fatfish\\grid30_v01\\logs\\group_04.stderr.txt"
+    }
+  }
+}

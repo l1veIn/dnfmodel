@@ -1,0 +1,26 @@
+默认走路           0-9   figure-cover 0.729 worst 5:0.645
+待机站立          10-13  figure-cover 0.830 worst 10:0.820
+战斗待机          14-17  figure-cover 0.772 worst 16:0.762
+战斗跑           18-21  figure-cover 0.748 worst 18:0.718
+前冲            22-25  figure-cover 0.914 worst 22:0.883
+前冲摔倒          26-34  figure-cover 0.849 worst 27:0.712
+碎霸            35-41  figure-cover 0.896 worst 38:0.866
+召唤            42-52  figure-cover 0.854 worst 42:0.808
+蹲伏            53-54  figure-cover 0.924 worst 53:0.921
+杰克爆弹          55-61  figure-cover 0.855 worst 56:0.787
+落花掌           62-75  figure-cover 0.827 worst 62:0.752
+跳跃            76-83  figure-cover 0.783 worst 77:0.659
+跳跃平A          84-96  figure-cover 0.812 worst 95:0.616
+啦啦啦           97-108 figure-cover 0.842 worst 97:0.699
+三段平A         109-127 figure-cover 0.874 worst 109:0.669
+受击           128-129 figure-cover 0.871 worst 129:0.854
+受击倒地         130-134 figure-cover 0.854 worst 133:0.833
+魔法星弹         135-143 figure-cover 0.861 worst 136:0.785
+加buff        144-147 figure-cover 0.753 worst 147:0.736
+鞭挞           148-154 figure-cover 0.882 worst 151:0.836
+魔道学者修东西      155-157 figure-cover 0.882 worst 156:0.862
+魔道学者丢东西      158-162 figure-cover 0.861 worst 160:0.804
+魔道学者修东西2     163-165 figure-cover 0.874 worst 164:0.863
+召唤骑士         166-169 figure-cover 0.848 worst 169:0.843
+驱散           170-173 figure-cover 0.699 worst 172:0.602
+overall 0.836

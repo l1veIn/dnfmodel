@@ -1,0 +1,22 @@
+{
+  "jobs_max": 1,
+  "new_motion_generations_max": 1,
+  "first_frame_only_plus_pose": true,
+  "same_reference_and_seed_as_h3_baseline": true,
+  "no_automatic_refine": true,
+  "width": 608,
+  "height": 352,
+  "length": 124,
+  "seed": 20261023,
+  "steps": 20,
+  "control_strength": 1,
+  "pose_cycle_seconds": 1,
+  "original_ani_verified": false,
+  "protected_files_before": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\h3_walk_v01\\references\\same_grok_letterboxed_608x352.png": "5e3b17371e2008b9a4d7a604c3712590dd0d4da65f91adb5acad5d185fb5ed87",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\Fatfish_H3_Walk_v01\\report.json": "16e945faadc6fd0f254467b7045477fa202a807989118e62a0840112d58bc4bd"
+  }
+}

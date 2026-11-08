@@ -1,0 +1,170 @@
+[
+  {
+    "sample": "fix_walk",
+    "task_id": "img_16390ade5eb6b3c52cf2192dd69be879",
+    "model": "gpt-image-2.5",
+    "cost_usd": 0.038,
+    "input_references": [
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\registered\\walk_reference_8x.png",
+        "sha256": "1a52ed4199d2d5fb18fd745ea0f06e88715b3745128b6e3dbb106f59912e0027"
+      },
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\references\\fix_walk_pose.png",
+        "sha256": "15a49bc0fe57b19fed59b8f370bf2e92c020f88b41294762e0c0377ce41c2b71"
+      },
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_reference_8x.png",
+        "sha256": "70ca8180075d7bd8fdcaa28e655e84c2f741aab32d630a8a143a1787d6633977"
+      }
+    ],
+    "output_files": [
+      "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\raw\\fix_walk_0.png"
+    ],
+    "finished_at": "2026-10-22T11:22:26.670034Z"
+  },
+  {
+    "sample": "fix_cast",
+    "task_id": "img_b1a9dec94a77f370f5f4153ea6aae11c",
+    "model": "gpt-image-2.5",
+    "cost_usd": 0.038,
+    "input_references": [
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\registered\\cast_reference_8x.png",
+        "sha256": "2f1f79e04ed62d280155c2066a977c0a65b71440460bc8f1cdf400b81ed4c623"
+      },
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\references\\fix_cast_pose.png",
+        "sha256": "1985b390f69eed917f651bca3c1f56da05ca639f9f282421c36ff6329c419d8c"
+      },
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_reference_8x.png",
+        "sha256": "70ca8180075d7bd8fdcaa28e655e84c2f741aab32d630a8a143a1787d6633977"
+      }
+    ],
+    "output_files": [
+      "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\raw\\fix_cast_0.png"
+    ],
+    "finished_at": "2026-10-22T11:22:32.536792Z"
+  },
+  {
+    "sample": "fix_jump",
+    "task_id": "img_6fab64d005b06fa2de72ff115a01792e",
+    "model": "gpt-image-2.5",
+    "cost_usd": 0.038,
+    "input_references": [
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\registered\\jump_fix_reference_8x.png",
+        "sha256": "714804720c792a1ca10c0f7b724899ac45f308e54660ef18879eaace5b861f77"
+      },
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\references\\fix_jump_pose.png",
+        "sha256": "3ac4908659ad16847e352005a69a9fcedbcc038e32f1e46d302153cecb7e699f"
+      },
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_reference_8x.png",
+        "sha256": "70ca8180075d7bd8fdcaa28e655e84c2f741aab32d630a8a143a1787d6633977"
+      }
+    ],
+    "output_files": [
+      "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\raw\\fix_jump_0.png"
+    ],
+    "finished_at": "2026-10-22T11:22:25.16851Z"
+  },
+  {
+    "sample": "walk_001",
+    "task_id": "img_89f9a1bdde6df93ad0d6b71ee1dfc1de",
+    "model": "gpt-image-2.5",
+    "cost_usd": 0.038,
+    "input_references": [
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\corrected\\fix_walk_reference_8x.png",
+        "sha256": "8a9b3e96b701960a5beb3220468c96c607fdbfa7607e36dc1576936b9b244a40"
+      },
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\references\\walk_001_pose.png",
+        "sha256": "a1f17b937f111a44bc17324f08340e1d49d21aa53f9acadcdb87aaf064f14382"
+      },
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\corrected\\fix_walk_reference_8x.png",
+        "sha256": "8a9b3e96b701960a5beb3220468c96c607fdbfa7607e36dc1576936b9b244a40"
+      }
+    ],
+    "output_files": [
+      "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\raw\\walk_001_0.png"
+    ],
+    "finished_at": "2026-10-22T11:27:45.759001Z"
+  },
+  {
+    "sample": "walk_001_pose",
+    "task_id": "img_0de12a27d14e2a59aac8655478e7751c",
+    "model": "gpt-image-2.5",
+    "cost_usd": 0.038,
+    "input_references": [
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\references\\walk_001_pose.png",
+        "sha256": "a1f17b937f111a44bc17324f08340e1d49d21aa53f9acadcdb87aaf064f14382"
+      },
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\corrected\\fix_walk_reference_8x.png",
+        "sha256": "8a9b3e96b701960a5beb3220468c96c607fdbfa7607e36dc1576936b9b244a40"
+      },
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\corrected\\fix_walk_reference_8x.png",
+        "sha256": "8a9b3e96b701960a5beb3220468c96c607fdbfa7607e36dc1576936b9b244a40"
+      }
+    ],
+    "output_files": [
+      "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\raw\\walk_001_pose_0.png"
+    ],
+    "finished_at": "2026-10-22T11:31:01.550498Z"
+  },
+  {
+    "sample": "walk_002",
+    "task_id": "img_65be179fa60543ca13311a30a89df364",
+    "model": "gpt-image-2.5",
+    "cost_usd": 0.038,
+    "input_references": [
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\references\\walk_002_pose.png",
+        "sha256": "dcd4555b7374a74e807cab93dac2b840b16057694049e22f19487ca4595f62e4"
+      },
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\sequence\\0001_reference_8x.png",
+        "sha256": "7dfb22df75a8ce1543466d25c24a5696f36ef206c2a93226229a32f9fe0a4a06"
+      },
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\corrected\\fix_walk_reference_8x.png",
+        "sha256": "8a9b3e96b701960a5beb3220468c96c607fdbfa7607e36dc1576936b9b244a40"
+      }
+    ],
+    "output_files": [
+      "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\raw\\walk_002_0.png"
+    ],
+    "finished_at": "2026-10-22T11:33:30.046421Z"
+  },
+  {
+    "sample": "walk_003",
+    "task_id": "img_59823e3a9df0147ab0d75f290f6aa30b",
+    "model": "gpt-image-2.5",
+    "cost_usd": 0.038,
+    "input_references": [
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\references\\walk_003_pose.png",
+        "sha256": "ef93bf8f03bc935ef2a5345cbba3f93fca1848512f4793d97d36e3d7bc5af05d"
+      },
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\sequence\\0002_reference_8x.png",
+        "sha256": "e265cbf16978d287cf7a0a642e1d2aca15ec111e716e02135ba89b96b2c47399"
+      },
+      {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\corrected\\fix_walk_reference_8x.png",
+        "sha256": "8a9b3e96b701960a5beb3220468c96c607fdbfa7607e36dc1576936b9b244a40"
+      }
+    ],
+    "output_files": [
+      "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\raw\\walk_003_0.png"
+    ],
+    "finished_at": "2026-10-22T11:36:05.213711Z"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "built_at": "2026-10-23T07:13:20+08:00",
+  "schema_version": 2,
+  "verified_actions": 0,
+  "unclassified_slots": 174,
+  "original_frames": 174,
+  "fatfish_slots": 13,
+  "walk_source_frames": 28,
+  "legacy_visual_groups_in_catalog": 0,
+  "completion_percentage": null,
+  "walk_review_unchanged": true,
+  "source_files_unchanged": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\nearest_standing_v04\\standing_canvas.png": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446"
+  },
+  "no_per_frame_auto_fit": true,
+  "generation_jobs": 0
+}

@@ -1,0 +1,108 @@
+== walk spent so far 0.417
+poses_walk_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_walk_v1_0.png
+clip_013_022 scale 0.855 [(13, [180, 227], 0.797), (14, [182, 225], 0.782), (15, [182, 228], 0.751), (16, [184, 226], 0.787), (17, [180, 226], 0.739), (18, [182, 226], 0.781), (19, [182, 225], 0.756), (20, [180, 225], 0.745), (21, [179, 225], 0.767), (22, [178, 225], 0.739)]
+== reach spent so far 0.617
+poses_reach_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_reach_v1_0.png
+clip_023_028 scale 0.843 [(23, [180, 251], 0.695), (24, [178, 252], 0.68), (25, [167, 251], 0.686), (26, [175, 250], 0.69), (27, [176, 250], 0.696), (28, [164, 250], 0.667)]
+== dash spent so far 0.907
+poses_dash_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_dash_v1_0.png
+clip_029_036 scale 0.784 [(29, [159, 198], 0.664), (30, [209, 202], 0.703), (31, [168, 193], 0.717), (32, [162, 194], 0.759), (33, [160, 194], 0.728), (34, [161, 198], 0.703), (35, [156, 198], 0.683), (36, [161, 189], 0.718)]
+== air spent so far 1.108
+poses_air_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_air_v1_0.png
+clip_037_044 scale 0.844 [(37, [179, 226], 0.728), (38, [177, 228], 0.725), (39, [178, 226], 0.638), (40, [178, 226], 0.635), (41, [180, 224], 0.678), (42, [177, 217], 0.705), (43, [177, 216], 0.677), (44, [171, 217], 0.663)]
+== slash_a spent so far 1.309
+poses_slash_a_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_slash_a_v1_0.png
+clip_045_049 scale 0.854 [(45, [167, 212], 0.673), (46, [166, 212], 0.702), (47, [164, 219], 0.666), (48, [181, 235], 0.739), (49, [195, 236], 0.702)]
+clip_050_052 scale 0.854 [(50, [200, 235], 0.653), (51, [199, 235], 0.686), (52, [199, 235], 0.669)]
+== slash_b spent so far 1.511
+poses_slash_b_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_slash_b_v1_0.png
+clip_053_060 scale 0.879 [(53, [207, 243], 0.758), (54, [208, 243], 0.735), (55, [202, 245], 0.7), (56, [202, 244], 0.724), (57, [203, 237], 0.75), (58, [196, 243], 0.69), (59, [190, 242], 0.771), (60, [191, 236], 0.756)]
+== lunge_a spent so far 1.712
+poses_lunge_a_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_lunge_a_v1_0.png
+clip_061_063 scale 0.826 [(61, [196, 209], 0.694), (62, [196, 209], 0.706), (63, [195, 209], 0.753)]
+clip_064_065 scale 0.826 [(64, [162, 193], 0.708), (65, [177, 212], 0.562)]
+clip_066_068 scale 0.826 [(66, [189, 211], 0.663), (67, [186, 212], 0.654), (68, [188, 213], 0.642)]
+== lunge_b spent so far 1.913
+poses_lunge_b_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_lunge_b_v1_0.png
+clip_069_072 scale 0.827 [(69, [190, 238], 0.668), (70, [196, 239], 0.701), (71, [202, 239], 0.698), (72, [202, 241], 0.756)]
+clip_073_074 scale 0.827 [(73, [202, 241], 0.693), (74, [200, 241], 0.688)]
+== spread spent so far 2.202
+poses_spread_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_spread_v1_0.png
+clip_075_077 scale 0.829 [(75, [197, 234], 0.716), (76, [199, 234], 0.721), (77, [198, 223], 0.724)]
+clip_078_080 scale 0.829 [(78, [207, 232], 0.651), (79, [208, 231], 0.701), (80, [208, 232], 0.699)]
+clip_081_083 scale 0.829 [(81, [168, 232], 0.734), (82, [166, 232], 0.717), (83, [165, 232], 0.758)]
+== low_cut spent so far 2.403
+poses_low_cut_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_low_cut_v1_0.png
+clip_084_091 scale 0.832 [(84, [187, 190], 0.642), (85, [203, 205], 0.648), (86, [206, 204], 0.718), (87, [202, 204], 0.696), (88, [207, 210], 0.689), (89, [209, 209], 0.705), (90, [209, 209], 0.698), (91, [186, 204], 0.654)]
+== arm_out spent so far 2.604
+poses_arm_out_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_arm_out_v1_0.png
+clip_092_093 scale 0.906 [(92, [204, 213], 0.632), (93, [205, 212], 0.634)]
+clip_094_096 scale 0.906 [(94, [212, 213], 0.601), (95, [209, 211], 0.627), (96, [213, 212], 0.643)]
+clip_097_099 scale 0.906 [(97, [146, 210], 0.696), (98, [205, 206], 0.705), (99, [222, 206], 0.755)]
+== back_thrust spent so far 2.806
+poses_back_thrust_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_back_thrust_v1_0.png
+clip_100_102 scale 0.757 [(100, [237, 187], 0.651), (101, [237, 187], 0.664), (102, [236, 189], 0.665)]
+clip_103_105 scale 0.757 [(103, [148, 197], 0.712), (104, [148, 197], 0.769), (105, [182, 199], 0.649)]
+clip_106_108 scale 0.757 [(106, [203, 197], 0.674), (107, [197, 197], 0.71), (108, [197, 197], 0.723)]
+== flip spent so far 3.007
+poses_flip_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_flip_v1_0.png
+clip_109_114 scale 0.827 [(109, [180, 216], 0.731), (110, [171, 226], 0.675), (111, [161, 184], 0.487), (112, [201, 215], 0.641), (113, [183, 225], 0.644), (114, [182, 232], 0.68)]
+== rise_cut spent so far 3.297
+poses_rise_cut_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_rise_cut_v1_0.png
+clip_115_122 scale 0.887 [(115, [210, 221], 0.603), (116, [212, 221], 0.655), (117, [215, 221], 0.708), (118, [163, 223], 0.684), (119, [164, 219], 0.708), (120, [164, 219], 0.706), (121, [159, 221], 0.729), (122, [169, 221], 0.747)]
+== gesture_a spent so far 3.498
+poses_gesture_a_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_gesture_a_v1_0.png
+clip_123_128 scale 0.844 [(123, [179, 231], 0.73), (124, [180, 231], 0.748), (125, [179, 231], 0.793), (126, [177, 231], 0.757), (127, [176, 231], 0.738), (128, [177, 231], 0.75)]
+clip_129_131 scale 0.844 [(129, [179, 231], 0.714), (130, [178, 231], 0.737), (131, [177, 231], 0.733)]
+== gesture_b spent so far 3.7
+poses_gesture_b_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_gesture_b_v1_0.png
+clip_132_135 scale 0.876 [(132, [178, 244], 0.793), (133, [179, 244], 0.772), (134, [179, 244], 0.775), (135, [178, 244], 0.79)]
+clip_136_138 scale 0.876 [(136, [181, 244], 0.706), (137, [180, 244], 0.718), (138, [179, 244], 0.711)]
+clip_139_139 scale 0.876 [(139, [172, 244], 0.725)]
+== down spent so far 3.9
+poses_down_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_down_v1_0.png
+clip_140_143 scale 0.85 [(140, [167, 229], 0.702), (141, [168, 233], 0.658), (142, [159, 227], 0.722), (143, [158, 243], 0.828)]
+clip_144_145 scale 0.85 [(144, [166, 242], 0.845), (145, [161, 241], 0.687)]
+== stance spent so far 4.19
+poses_stance_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_stance_v1_0.png
+clip_146_149 scale 0.815 [(146, [165, 236], 0.73), (147, [165, 236], 0.739), (148, [165, 236], 0.734), (149, [165, 236], 0.729)]
+clip_150_150 scale 0.815 [(150, [162, 236], 0.699)]
+clip_159_164 scale 0.815 [(159, [182, 234], 0.693), (160, [175, 234], 0.722), (161, [177, 232], 0.719), (162, [171, 233], 0.718), (163, [171, 232], 0.709), (164, [175, 231], 0.656)]
+== run spent so far 4.391
+poses_run_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_run_v1_0.png
+clip_151_158 scale 0.863 [(151, [182, 228], 0.766), (152, [173, 233], 0.721), (153, [179, 237], 0.754), (154, [182, 238], 0.761), (155, [175, 237], 0.766), (156, [172, 234], 0.772), (157, [180, 237], 0.772), (158, [186, 236], 0.785)]
+== flurry spent so far 4.592
+poses_flurry_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_flurry_v1_0.png
+clip_165_167 scale 0.805 [(165, [164, 188], 0.662), (166, [154, 190], 0.635), (167, [147, 190], 0.626)]
+clip_168_173 scale 0.805 [(168, [172, 188], 0.555), (169, [149, 196], 0.714), (170, [174, 194], 0.515), (171, [153, 196], 0.719), (172, [184, 194], 0.502), (173, [149, 196], 0.721)]
+== sweep spent so far 4.793
+poses_sweep_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_sweep_v1_0.png
+clip_174_181 scale 0.735 [(174, [131, 174], 0.577), (175, [143, 173], 0.58), (176, [138, 173], 0.653), (177, [165, 173], 0.672), (178, [184, 178], 0.681), (179, [175, 174], 0.616), (180, [172, 182], 0.666), (181, [151, 176], 0.546)]
+== poise spent so far 4.994
+poses_poise_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_poise_v1_0.png
+clip_182_184 scale 0.788 [(182, [172, 208], 0.635), (183, [172, 208], 0.662), (184, [172, 208], 0.717)]
+clip_185_188 scale 0.788 [(185, [157, 208], 0.775), (186, [157, 208], 0.765), (187, [157, 208], 0.792), (188, [157, 208], 0.779)]
+clip_189_191 scale 0.788 [(189, [188, 204], 0.71), (190, [207, 206], 0.666), (191, [221, 209], 0.626)]
+== thrust spent so far 5.196
+poses_thrust_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_thrust_v1_0.png
+clip_192_193 scale 0.854 [(192, [220, 212], 0.619), (193, [218, 212], 0.605)]
+clip_194_200 scale 0.854 [(194, [215, 206], 0.668), (195, [207, 207], 0.671), (196, [168, 207], 0.7), (197, [156, 208], 0.678), (198, [157, 208], 0.68), (199, [157, 208], 0.71), (200, [168, 208], 0.73)]
+== cleave_a spent so far 5.397
+poses_cleave_a_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_cleave_a_v1_0.png
+clip_201_204 scale 0.938 [(201, [197, 220], 0.704), (202, [181, 219], 0.647), (203, [179, 219], 0.65), (204, [179, 219], 0.675)]
+clip_205_208 scale 0.938 [(205, [193, 220], 0.705), (206, [203, 219], 0.684), (207, [188, 220], 0.663), (208, [186, 220], 0.699)]
+== cleave_b spent so far 5.598
+poses_cleave_b_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_cleave_b_v1_0.png
+clip_209_216 scale 0.774 [(209, [187, 204], 0.719), (210, [197, 203], 0.625), (211, [201, 197], 0.63), (212, [204, 193], 0.602), (213, [203, 213], 0.681), (214, [204, 213], 0.673), (215, [203, 212], 0.759), (216, [229, 212], 0.568)]
+== rising spent so far 5.8
+poses_rising_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_rising_v1_0.png
+clip_217_224 scale 0.821 [(217, [209, 201], 0.705), (218, [170, 205], 0.654), (219, [155, 203], 0.702), (220, [153, 203], 0.687), (221, [157, 201], 0.726), (222, [198, 198], 0.714), (223, [219, 202], 0.701), (224, [216, 202], 0.684)]
+== kick spent so far 6.001
+poses_kick_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_kick_v1_0.png
+clip_225_231 scale 0.684 [(225, [164, 211], 0.787), (226, [178, 210], 0.656), (227, [179, 210], 0.615), (228, [178, 210], 0.619), (229, [199, 206], 0.633), (230, [198, 206], 0.623), (231, [180, 206], 0.663)]
+clip_232_235 scale 0.684 [(232, [155, 209], 0.69), (233, [155, 209], 0.689), (234, [155, 209], 0.682), (235, [155, 209], 0.677)]
+== finish spent so far 6.203
+poses_finish_v1 exit 0 C:\Users\A\Desktop\dnfmodel\output\gpt_dragon_slayer_v01\parts\raw\poses_finish_v1_0.png
+clip_236_240 scale 0.725 [(236, [154, 196], 0.713), (237, [147, 198], 0.753), (238, [142, 199], 0.694), (239, [141, 199], 0.675), (240, [140, 199], 0.668)]
+clip_241_245 scale 0.725 [(241, [163, 197], 0.699), (242, [176, 197], 0.683), (243, [155, 197], 0.686), (244, [155, 197], 0.674), (245, [163, 195], 0.696)]
+DONE spent 6.405

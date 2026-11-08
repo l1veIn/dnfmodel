@@ -1,0 +1,934 @@
+{
+  "scope": "Current prepared female mage source assets only. No ANI action grouping inferred. Empty-alpha RGB ignored; nonzero-alpha RGBA and world position compared exactly.",
+  "frame_count": 174,
+  "body": {
+    "unique": 137,
+    "duplicate_slots_beyond_first": 37,
+    "groups": [
+      [
+        10,
+        12
+      ],
+      [
+        18,
+        20
+      ],
+      [
+        22,
+        26
+      ],
+      [
+        23,
+        27
+      ],
+      [
+        24,
+        28
+      ],
+      [
+        31,
+        32
+      ],
+      [
+        45,
+        47
+      ],
+      [
+        50,
+        51,
+        52
+      ],
+      [
+        53,
+        54
+      ],
+      [
+        67,
+        68,
+        69
+      ],
+      [
+        73,
+        74,
+        75
+      ],
+      [
+        76,
+        84,
+        85
+      ],
+      [
+        77,
+        83,
+        86,
+        95
+      ],
+      [
+        78,
+        79,
+        87,
+        88
+      ],
+      [
+        80,
+        81,
+        82
+      ],
+      [
+        92,
+        93
+      ],
+      [
+        101,
+        102
+      ],
+      [
+        105,
+        106,
+        107
+      ],
+      [
+        117,
+        118
+      ],
+      [
+        125,
+        126,
+        127
+      ],
+      [
+        128,
+        130
+      ],
+      [
+        129,
+        131
+      ],
+      [
+        138,
+        139,
+        140,
+        141
+      ],
+      [
+        144,
+        147
+      ]
+    ]
+  },
+  "reference_composite": {
+    "unique": 170,
+    "duplicate_slots_beyond_first": 4,
+    "groups": [
+      [
+        83,
+        95
+      ],
+      [
+        128,
+        130
+      ],
+      [
+        129,
+        131
+      ],
+      [
+        144,
+        147
+      ]
+    ]
+  },
+  "all_27_prepared_layers": {
+    "unique": 173,
+    "duplicate_slots_beyond_first": 1,
+    "groups": [
+      [
+        129,
+        131
+      ]
+    ]
+  },
+  "body_duplicate_pairs": [
+    {
+      "a": 10,
+      "b": 12,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000b",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1"
+      ]
+    },
+    {
+      "a": 18,
+      "b": 20,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1"
+      ]
+    },
+    {
+      "a": 22,
+      "b": 26,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1",
+        "mg_shoes0000a",
+        "mg_shoes0000b"
+      ]
+    },
+    {
+      "a": 23,
+      "b": 27,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1"
+      ]
+    },
+    {
+      "a": 24,
+      "b": 28,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1",
+        "mg_shoes0000a",
+        "mg_shoes0000a_mask1"
+      ]
+    },
+    {
+      "a": 31,
+      "b": 32,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_cap0000c",
+        "mg_cap0000c_mask1",
+        "mg_coat0000a",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1"
+      ]
+    },
+    {
+      "a": 45,
+      "b": 47,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000c",
+        "mg_coat0000c_mask1",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1",
+        "mg_shoes0000b",
+        "mg_shoes0000b_mask1"
+      ]
+    },
+    {
+      "a": 50,
+      "b": 51,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000b",
+        "mg_coat0000b_mask1",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1"
+      ]
+    },
+    {
+      "a": 50,
+      "b": 52,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_coat0000a",
+        "mg_coat0000b",
+        "mg_coat0000b_mask1"
+      ]
+    },
+    {
+      "a": 53,
+      "b": 54,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000c",
+        "mg_coat0000c_mask1",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1"
+      ]
+    },
+    {
+      "a": 67,
+      "b": 68,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_cap0000c",
+        "mg_cap0000c_mask1",
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000b",
+        "mg_coat0000b_mask1",
+        "mg_coat0000c",
+        "mg_coat0000c_mask1",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1",
+        "mg_pants0000d",
+        "mg_pants0000d_mask1"
+      ]
+    },
+    {
+      "a": 67,
+      "b": 69,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_cap0000c",
+        "mg_cap0000c_mask1",
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000b",
+        "mg_coat0000b_mask1",
+        "mg_coat0000c",
+        "mg_coat0000c_mask1",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1",
+        "mg_pants0000d",
+        "mg_pants0000d_mask1"
+      ]
+    },
+    {
+      "a": 73,
+      "b": 74,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000b",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1",
+        "mg_pants0000d",
+        "mg_pants0000d_mask1"
+      ]
+    },
+    {
+      "a": 73,
+      "b": 75,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000b",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1",
+        "mg_pants0000d",
+        "mg_pants0000d_mask1"
+      ]
+    },
+    {
+      "a": 76,
+      "b": 84,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_neck0000d"
+      ]
+    },
+    {
+      "a": 76,
+      "b": 85,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1"
+      ]
+    },
+    {
+      "a": 77,
+      "b": 83,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000c",
+        "mg_coat0000c_mask1",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1"
+      ]
+    },
+    {
+      "a": 77,
+      "b": 86,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1"
+      ]
+    },
+    {
+      "a": 77,
+      "b": 95,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000c",
+        "mg_coat0000c_mask1",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1"
+      ]
+    },
+    {
+      "a": 78,
+      "b": 79,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000b",
+        "mg_coat0000b_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1"
+      ]
+    },
+    {
+      "a": 78,
+      "b": 87,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_coat0000a",
+        "mg_coat0000b",
+        "mg_shoes0000a",
+        "mg_shoes0000b",
+        "mg_shoes0000b_mask1"
+      ]
+    },
+    {
+      "a": 78,
+      "b": 88,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000b",
+        "mg_coat0000b_mask1",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1",
+        "mg_shoes0000a",
+        "mg_shoes0000b",
+        "mg_shoes0000b_mask1"
+      ]
+    },
+    {
+      "a": 80,
+      "b": 81,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1",
+        "mg_neck0000d",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1",
+        "mg_pants0000d",
+        "mg_pants0000d_mask1"
+      ]
+    },
+    {
+      "a": 80,
+      "b": 82,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1",
+        "mg_neck0000d",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1",
+        "mg_pants0000d",
+        "mg_pants0000d_mask1"
+      ]
+    },
+    {
+      "a": 92,
+      "b": 93,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1"
+      ]
+    },
+    {
+      "a": 101,
+      "b": 102,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_coat0000b",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1"
+      ]
+    },
+    {
+      "a": 105,
+      "b": 106,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_coat0000a",
+        "mg_coat0000b",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1"
+      ]
+    },
+    {
+      "a": 105,
+      "b": 107,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000b",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1"
+      ]
+    },
+    {
+      "a": 117,
+      "b": 118,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_coat0000a",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_neck0000d",
+        "mg_neck0000d_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1",
+        "mg_pants0000d",
+        "mg_pants0000d_mask1"
+      ]
+    },
+    {
+      "a": 125,
+      "b": 126,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000c",
+        "mg_coat0000c_mask1",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1"
+      ]
+    },
+    {
+      "a": 125,
+      "b": 127,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000c",
+        "mg_coat0000c_mask1",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1"
+      ]
+    },
+    {
+      "a": 128,
+      "b": 130,
+      "body_identical": true,
+      "composite_identical": true,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1"
+      ]
+    },
+    {
+      "a": 129,
+      "b": 131,
+      "body_identical": true,
+      "composite_identical": true,
+      "all_prepared_layers_identical": true,
+      "different_layers": []
+    },
+    {
+      "a": 138,
+      "b": 139,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000c",
+        "mg_coat0000c_mask1",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1",
+        "mg_neck0000d",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1"
+      ]
+    },
+    {
+      "a": 138,
+      "b": 140,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_coat0000a",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1",
+        "mg_neck0000d",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1"
+      ]
+    },
+    {
+      "a": 138,
+      "b": 141,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000c",
+        "mg_coat0000c_mask1",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1",
+        "mg_neck0000d",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1"
+      ]
+    },
+    {
+      "a": 144,
+      "b": 147,
+      "body_identical": true,
+      "composite_identical": true,
+      "all_prepared_layers_identical": false,
+      "different_layers": [
+        "mg_coat0000a",
+        "mg_coat0000a_mask1",
+        "mg_coat0000c",
+        "mg_coat0000c_mask1",
+        "mg_neck0000d",
+        "mg_neck0000d_mask1"
+      ]
+    }
+  ],
+  "body_reference_links": {
+    "12": 10,
+    "20": 18,
+    "26": 22,
+    "27": 23,
+    "28": 24,
+    "32": 31,
+    "47": 45,
+    "51": 50,
+    "52": 50,
+    "54": 53,
+    "68": 67,
+    "69": 67,
+    "74": 73,
+    "75": 73,
+    "79": 78,
+    "81": 80,
+    "82": 80,
+    "83": 77,
+    "84": 76,
+    "85": 76,
+    "86": 77,
+    "87": 78,
+    "88": 78,
+    "93": 92,
+    "95": 77,
+    "102": 101,
+    "106": 105,
+    "107": 105,
+    "118": 117,
+    "126": 125,
+    "127": 125,
+    "130": 128,
+    "131": 129,
+    "139": 138,
+    "140": 138,
+    "141": 138,
+    "147": 144
+  },
+  "explicit_checks": [
+    {
+      "a": 22,
+      "b": 26,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_27_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1",
+        "mg_shoes0000a",
+        "mg_shoes0000b"
+      ]
+    },
+    {
+      "a": 23,
+      "b": 27,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_27_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1"
+      ]
+    },
+    {
+      "a": 24,
+      "b": 28,
+      "body_identical": true,
+      "composite_identical": false,
+      "all_27_layers_identical": false,
+      "different_layers": [
+        "mg_belt0000a",
+        "mg_belt0000a_mask1",
+        "mg_coat0000a",
+        "mg_hair0000a",
+        "mg_hair0000a_mask1",
+        "mg_hair0000b",
+        "mg_hair0000b_mask1",
+        "mg_pants0000a",
+        "mg_pants0000a_mask1",
+        "mg_shoes0000a",
+        "mg_shoes0000a_mask1"
+      ]
+    }
+  ],
+  "explicit_pixel_difference_checks": [
+    {
+      "a": 22,
+      "b": 26,
+      "reference_composite_differing_pixels": 104,
+      "reference_crop_diff_box": [
+        59,
+        310,
+        75,
+        349
+      ]
+    },
+    {
+      "a": 23,
+      "b": 27,
+      "reference_composite_differing_pixels": 115,
+      "reference_crop_diff_box": [
+        62,
+        306,
+        76,
+        348
+      ]
+    },
+    {
+      "a": 24,
+      "b": 28,
+      "reference_composite_differing_pixels": 623,
+      "reference_crop_diff_box": [
+        20,
+        311,
+        85,
+        376
+      ]
+    }
+  ]
+}

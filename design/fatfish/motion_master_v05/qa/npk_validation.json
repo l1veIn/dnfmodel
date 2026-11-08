@@ -1,0 +1,24 @@
+{
+  "package": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Motion_Pilot_v051.NPK",
+  "sha256": "d889e8b8034b127e1cb68226bceb3c3730807f3e0453b9a44d420380ca3116c9",
+  "bytes": 2850216,
+  "entry_count": 64,
+  "skin_paths": 38,
+  "default_avatar_paths": 26,
+  "direct_slots": [
+    0,
+    1,
+    2,
+    3,
+    10,
+    23,
+    65
+  ],
+  "fallback_slots": 167,
+  "fallback": "Standing master slot 10 remains byte-for-pixel identical to v04",
+  "decoded_frame_checks": 11136,
+  "all_pixel_position_roundtrips_passed": true,
+  "base_unchanged": true,
+  "game_installation_changed": false,
+  "game_runtime_validated": false
+}

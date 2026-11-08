@@ -1,0 +1,22 @@
+{
+  "clip_018_021": {
+    "video_sha256": "ed3624f73c4248e9e21d719c743ba33c4b0963eef043bfaab57035ed64db33d3",
+    "frames": [
+      60,
+      62,
+      64,
+      66
+    ],
+    "reason": "Visual inspection of raw frames60..83: fundamental running gait is8 output frames. Automated period33 sampled near-repeated phases; select four quarter-cycle poses60,62,64,66."
+  },
+  "clip_170_173": {
+    "video_sha256": "e35e5486fb97682719f20dcefaccad90166a7652fc8a501b7461c2572d504520",
+    "frames": [
+      16,
+      24,
+      36,
+      52
+    ],
+    "reason": "Visual inspection of raw frames0..120: H3 compressed the action into frames28..48; uniform source-time sampling missed the overhead-hands apex. Select monotonic16,24,36,52 to retain hand-forward, overhead and lowering poses."
+  }
+}

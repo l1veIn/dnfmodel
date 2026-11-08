@@ -1,0 +1,19 @@
+{
+  "checked_in_browser": true,
+  "controls_checked": [
+    "10-phase comparison",
+    "20-frame interpolation",
+    "0.5x speed",
+    "raw versus locked feet",
+    "nearest versus HD",
+    "phase selection"
+  ],
+  "observations": [
+    "Face, headband and apron emblem use fixed artwork throughout.",
+    "Far arm uses the visible sleeve artwork in a rear layer.",
+    "Projected limb stretch and cutout stiffness remain candidate limitations."
+  ],
+  "user_accepted": false,
+  "in_game_tested": false,
+  "screenshot": "design/fatfish/rig_walk_v01/qa/panel_preview.png"
+}

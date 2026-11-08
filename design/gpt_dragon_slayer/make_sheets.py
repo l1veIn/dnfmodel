@@ -1,0 +1,138 @@
+"""Writes pose_sheets.json and clips.json. Frame numbers start at 0. A cell may serve several frames through `phase` (micro motion on one drawing)."""
+import json
+from pathlib import Path
+
+HERE = Path(__file__).parent
+FACE = "Copy each cell's facing from Image 2: some cells face left or show her back. Seen from behind, her hair covers her back, the two small wings sit at her shoulder blades and the arms stay outside the hair. "
+
+# name: (cell frames, size, cols, ref cells or None for all, {clip: (display name, [(slot, cell, phase or None)])}, motion, extras)
+S = {}
+
+
+def seq(frames, first_cell=0):
+    return [(f, first_cell + k, None) for k, f in enumerate(frames)]
+
+
+def sheet(name, frames, clips, motion, size="16:9", cols=4, ref=None, **extra):
+    S[name] = dict(frames=frames, cols=cols, size=size, ref_cells=list(range(len(frames))) if ref is None else ref, clips=clips, motion=FACE + motion, **extra)
+
+
+sheet("idle", [0, 4, 5, 6, 7, 8, 9, 11], {
+    "待机": [(0, 0, 0), (1, 0, 0.5), (2, 0, 1), (3, 0, 1.5)],
+    "待机抬手": seq([4, 5, 6, 7, 8], 1),
+    "叉腰站": [(9, 6, 0), (10, 6, 0.5), (11, 7, 1), (12, 7, 1.5)],
+}, "Cell 1: she stands relaxed in three-quarter view, the rear arm hanging with a closed fist low at the left of her hip, the front arm hanging at her side, hand visible. Cells 2 to 6 the front arm rises step by step while everything else holds: cell 2 the hand comes forward at hip height, cell 3 the open hand is at chest height in front of her, cells 4 and 5 it closes to a loose fist at chest height, cell 6 the fist pushes a little forward. Cells 7 and 8: feet wider apart, body turned more towards the viewer, the front hand on her waist with the elbow bent out to the right, the rear fist low at the left.")
+
+sheet("walk", list(range(13, 23)), {"走路": seq(range(13, 23))},
+      "These are the ten frames of one walk cycle with long clear strides. Her legs drive the skirt: it opens at the slit around the leading leg and each white heel steps clearly out from under the hem, as far apart as the sprite's feet. In cells 4 and 5 the rear foot kicks up behind her and the skirt lifts with it. Both hands stay low near her hip as closed fists, the rear one at the left of her hip, and they swing a little with the stride. Her hair sways behind her.", cols=5)
+
+sheet("reach", list(range(23, 29)), {"探手": seq(range(23, 29))},
+      "One long forward lunge held for six frames, the rear leg stretched far to the left and the front leg planted, the skirt open around both legs. The front arm is stretched straight out to the right at shoulder height with the fingers spread wide, the rear arm bent across her chest. Cells 3 and 6 the reaching arm is a little bent and closer. Her hair streams to the left, away from the arms.", size="3:2", cols=3, pad_x=40)
+
+sheet("dash", list(range(29, 37)), {"低身突进": seq(range(29, 33)), "低身回刀": seq(range(34, 37), 5)},
+      "Cell 1: wide step, rear fist low at the left, front fist at her chest. Cell 2: airborne with both knees tucked up and both fists together at her waist. Cells 3 and 4: a very low dash to the right, torso nearly level, the rear leg stretched straight to the left along the ground and the front knee driven forward, fists tucked at her chest, hair and skirt streaming to the left. Cells 5 and 6: the same low dash with the rear arm thrown up and back to the upper left. Cell 7: rising out of the dash with the rear arm high behind her. Cell 8: stopped in a wide square stance facing the viewer, knees bent, fists at her hips.")
+
+sheet("air", list(range(37, 45)), {"跃起": seq(range(37, 45))},
+      "Cell 1: springing up on one foot with the other knee high, one fist high at the upper left, the other at her chest. Cell 2: curled tightly in the air, knees up to her chest, fists together. Cells 3 and 4: airborne and stretched out, legs hanging straight down, arms spread at shoulder height with one fist far left, hair and skirt blown straight upward. Cell 5: landed in a low wide stance, fists at her waist. Cell 6: one knee raised high, a fist up beside her head at the left. Cell 7: leaning back with a knee up and one fist up high. Cell 8: square wide stance with one arm thrust straight up to the upper right, fist on top, the other hand open low at the left.", ref=[0, 4, 5, 6, 7])
+
+sheet("slash_a", list(range(45, 53)), {"落步蓄势": seq(range(45, 50)), "上挑": seq([51, 52], 6)},
+      "Cell 1: wide low stance facing right, fists together at the left of her waist. Cell 2: knees together and bent, one fist low in the center. Cell 3: wide low stance, both fists raised beside her right shoulder. Cell 4: wide stance, arms bent, fists at her chest. Cell 5: stepping forward, torso leaning right, one hand thrown low to the left and the other fist at her chest. Cells 6 to 8: a long stride with the rear leg stretched to the left, the front arm thrust straight up to the upper right with the fist at the top, the other hand up beside her head at the left, hair streaming down and to the left across her back but never across the raised arm. Cell 8 is cell 7 a moment later, with the fist a little higher.")
+
+sheet("slash_b", list(range(53, 61)), {"大步下劈": seq(range(53, 61))},
+      "Cells 1 and 2: a long stride, one fist held straight above her head, the other open hand out to the left at head height, hair streaming left. Cell 3: the torso drops forward with one fist still high and the other arm sweeping low across her body. Cells 4 and 5: long stride, one fist high beside her head, the other arm crossing low in front of her hips with the fist at the left. Cell 6: wide stance, rear fist low at the left at the end of a straight arm, the other arm bent over her head. Cell 7: tall on straight wide legs, both fists above her head. Cell 8: tall and leaning left with both hands above her head, one knee bending.")
+
+sheet("lunge_a", list(range(61, 69)), {"低身冲刺": seq([61, 62, 63]), "长弓步": seq([66, 67, 68], 5)},
+      "Cells 1 to 3: an extremely low lunge to the right, rear leg stretched straight along the ground to the left, the front knee deeply bent, torso nearly level, head forward, both arms low in front, hair streaming to the left. Cell 4: compact square stance with knees bent, both forearms across her chest. Cell 5: wide stance, turned, both arms raised to the upper right beside her head, hair flung to the left; any dark streak is only sleeve blur. Cells 6 to 8: a long low lunge with the rear leg straight to the left, one fist raised above her head at the upper right, the other arm low and tucked, hair streaming to the left.")
+
+sheet("lunge_b", list(range(69, 75)), {"长弓步续": seq([69, 70, 71, 72]), "俯身": seq([73, 74], 4)},
+      "Cell 1: the long low lunge with one fist raised above her head. Cells 2 to 4: lower still, both arms sweeping forward low at the right, torso level, one fist up behind her head, hair streaming to the left. Cells 5 and 6: wide stance, bent forward at the waist towards the lower right, both fists together low at the right at the end of straight arms, hair falling to the left.", size="3:2", cols=3, pad_x=50)
+
+sheet("spread", list(range(75, 83)), {"展臂": seq([75, 76, 77]), "背身高举": seq([78, 79, 80], 3), "举手站定": [(81, 6, None), (82, 7, None), (83, 7, 0.5)]},
+      "Cells 1 to 3: wide square stance facing the viewer, both arms spread in one big diagonal, one fist high at the upper left and the other arm down at the lower right with an open hand. Cells 4 to 6: seen mostly from behind in a long stride, the raised arm thrust straight up to the upper right with the fist at the top, the other hand low at the left, the hair down the middle of her back. Cell 7: tall and upright, both fists together at the left of her chest, looking down. Cell 8: tall and upright, one arm bent up over her head with the fist at the upper left, the other hand at her waist.")
+
+sheet("low_cut", list(range(84, 92)), {"低身横斩": seq(range(84, 92))},
+      "Cell 1: wide stance leaning back, one fist raised to the upper right and the other open hand out at the left. Cells 2 to 4: a low lunge with the rear leg straight to the left, one fist raised above her head and the other fist low by her front knee. Cells 5 to 7: an extremely low lunge, head at knee height, rear leg stretched along the ground, both fists near the ground at the lower right, one elbow up over her head. Cell 8: rising on one leg with the other foot kicked back to the right, arms folded across her chest.", ref=[0, 1, 2, 3, 7])
+
+sheet("arm_out", list(range(92, 100)), {"举刀": seq([92, 93]), "前指": seq([94, 95, 96], 2), "腾跃": seq([97, 98, 99], 5)},
+      "Cells 1 and 2: tall wide stance, one arm bent up over her head with the fist at the upper right, the hair a big mass at the left. Cells 3 to 5: wide square stance turned towards the viewer, the front arm stretched out to the upper right with an open hand, the rear arm straight down to the lower left with a fist. Cell 6: springing off one foot, rear fist low at the left, the other hand at her chest. Cell 7: in the air with knees bent, the rear arm stretched to the upper left, fist at the end, the other hand low at the right. Cell 8: a long flat leap to the right with the legs split, the front arm tucked, hair streaming flat to the left.")
+
+sheet("back_thrust", [100, 101, 103, 104, 105, 106, 107, 108], {"背身前刺": [(100, 0, None), (101, 1, None), (102, 1, 0.5)], "交臂": seq([103, 104, 105], 2), "背身下刺": seq([106, 107, 108], 5)},
+      "Cells 1 and 2: seen from behind in a wide straddle, the hair straight down the middle of her back, one arm stretched straight out to the right at shoulder height with a fist, the other arm out to the left with an open hand. Cells 3 and 4: tall and facing the viewer, arms raised and crossing with a fist at the upper left beside her head. Cell 5: a long step with both arms folded high. Cells 6 to 8: seen from behind in a long stride, one elbow up with the fist at her head, the other arm stretched straight down to the lower right with a fist.")
+
+sheet("flip", list(range(109, 115)), {"翻转": seq(range(109, 115))},
+      "One big forward flip, and the body really does turn over. Cell 1: seen from behind and rising, one arm straight down to the lower right. Cell 2: tipping over with one leg kicked up to the upper left, hair in the center, one arm straight down. Cell 3: fully upside down, legs in the air at the top of the cell, head near the bottom, hair flaring to the left, arm straight down. Cell 4: upside down and tilted, head at the lower left with hair flaring to the left, legs stretching to the right, arm straight down. Cell 5: righting herself in a long diagonal, hair on top, one arm stretched down to the lower left, legs to the lower right. Cell 6: landing seen from behind, hair down her back, arms out left and right. The skirt falls with gravity and stays close around her legs, and her legs stay visible.", size="3:2", cols=3, pad_x=40, pad_y=40, ref=[0, 5])
+
+sheet("rise_cut", list(range(115, 123)), {"低步上撩": seq(range(115, 123))},
+      "Cells 1 to 3: a low lunge to the right, rear leg stretched left, torso leaning right. The rear arm is stretched straight out to the LEFT and a little down, over her rear thigh, with its fist clearly visible at the end, well to the left of her hip. The front arm is bent forward with its fist up in front of her at the upper right of her face. Hair streams up and to the left, above the rear arm. Cell 4: tall wide stance, a fist low at the left, the other hand at her waist. Cells 5 and 6: springing up with one knee bent high, seen from the side, one arm bent up with the fist held above and to the right of her head at forehead height; her face stays fully visible beside that arm, and her hair falls to the left, away from her face and arm. Cell 7: tall, one arm straight up overhead at the right with a fist, the other hand open out at the left. Cell 8: tall, the raised fist lower at the upper right, the other hand low at the left.")
+
+sheet("gesture_a", list(range(123, 131)), {"挥臂": seq(range(123, 129)), "平举": [(129, 6, None), (130, 7, None), (131, 7, 0.5)]},
+      "She stands tall with her feet apart, facing right throughout. Cell 1: one arm extended to the upper right with a fist. Cell 2: that arm straight out to the right at chest height, fist forward. Cells 3 and 4: arms pulled in front of her, one hand at her shoulder, the rear fist low at the left. Cell 5: one fist raised beside her face, the rear fist low at the left. Cell 6: one arm out to the left at shoulder height, the rear fist low at the left of her hip. Cells 7 and 8: the front arm stretched straight out to the right at shoulder height with an open hand, the rear fist low at the left of her hip.")
+
+sheet("gesture_b", list(range(132, 140)), {"举手": seq([132, 133, 134, 135]), "摊手": seq([136, 137, 138], 4), "下蹲": seq([139], 7)},
+      "She stands tall with her feet apart, facing right. Cells 1 and 2: one hand raised to her chin, the rear fist low at the left of her hip. Cells 3 and 4: the hand raised beside her head with the elbow bent, the rear fist low at the left. Cells 5 to 7: the front arm opened down and out to the lower right with an open hand, the rear fist low at the left. Cell 8: crouched low and wide with bent knees, both fists at her lower chest.", ref=[0, 1, 2, 3, 4, 5, 6])
+
+sheet("down", list(range(140, 146)), {"击倒": seq([140, 141, 142, 143]), "蹲起": seq([144, 145], 4)},
+      "Cell 1: knocked back, leaning far back to the left with one forearm across her body. Cell 2: thrown on her back on the ground, head at the lower left, legs up to the right. Cell 3: flat on her back, head at the left, knees up to the right, hair spread on the ground. Cell 4: lying fully flat on the ground, head at the left and toes at the right. Cell 5: curled in a low crouch on the ground, knees up, facing right. Cell 6: risen, tall and upright with both fists low at her hips. The skirt stays around her legs with both legs showing.", size="3:2", cols=3, pad_x=60, ref=[0, 5])
+
+sheet("stance", [146, 150, 159, 160, 161, 162, 163, 164], {"战斗站姿": [(146, 0, 0), (147, 0, 0.5), (148, 0, 1), (149, 0, 1.5)], "战斗站姿收": seq([150], 1), "连斩": seq(range(159, 165), 2)},
+      "Cells 1 and 2: a wide ready stance facing right with bent knees, both fists together in front of her chest. Cell 2 is a little lower and turned. Cell 3: wide stance, both arms up to the upper right with the fists together. Cells 4 and 5: stride, one fist straight above her head at the upper left, the other hand at her chest. Cell 6: wide stance in three-quarter view, both hands low at the right. Cell 7: stride, a fist high above her head at the upper left. Cell 8: stride, a fist straight up overhead, the other hand out at the left.")
+
+sheet("run", list(range(151, 159)), {"跑步": seq(range(151, 159))},
+      "These are the eight frames of a fast run to the right, leaning forward. The arms are bent with both fists tucked in front of her chest and the rear elbow raised behind her, as in the sprite. Her legs follow the sprite exactly: cells 1, 2, 5 and 6 are long strides with the rear leg stretched to the left and the front knee driving forward; cells 3, 4, 7 and 8 have the rear foot kicked up behind her and the other leg under her. The skirt is swept back and opens at the slit so both legs and white heels show clearly. Hair streams to the left, above her arms.", pad_x=40)
+
+sheet("flurry", list(range(165, 173)), {"俯身回斩": seq([165, 166, 167]), "连续横扫": [(168, 3, None), (169, 4, None)], "横扫收": [(171, 6, None)], "横扫再斩": [(172, 7, None)], "横扫再收": [(173, 6, 0.5)]},
+      "Cell 1: wide stance, one bent arm up at the upper left, the other fist low at the right. Cell 2: facing LEFT and leaning low with her hair streaming to the right, one fist low. Cell 3: wide ready stance facing right, fists at her chest. Cells 4, 6 and 8: a low wide stance, one elbow raised behind her and the other arm stretched straight out to the right, the fist at the end; any dark streak is only sleeve blur, so draw a normal arm. Cells 5 and 7: the same low wide stance with both fists pulled in low at her waist.")
+
+sheet("sweep", list(range(174, 182)), {"回身突进": seq(range(174, 182))},
+      "Cells 1 to 3: facing LEFT in a low wide stance, hair streaming to the right, fists together at her chest. Cell 4: a very low level dash to the right, rear leg stretched left, hair streaming left, arms forward. Cell 5: a long leap with one leg kicked up behind and one arm out to the upper right. Cell 6: seen from behind and low, hair on top, one arm stretched to the upper right. Cell 7: airborne, knees bent, one fist out at the upper left, hair flung up to the right. Cell 8: a long stride, one arm stretched out to the left with a fist, the other out to the right with an open hand.", ref=[0, 1, 2, 7])
+
+sheet("poise", [182, 183, 184, 185, 187, 189, 190, 191], {"低身压刀": seq([182, 183, 184]), "胸前举手": [(185, 3, 0), (186, 3, 0.5), (187, 4, 1), (188, 4, 1.5)], "转身刺": seq([189, 190, 191], 5)},
+      "Cells 1 to 3: an extremely low lunge to the right, rear leg straight to the left, both fists low at the right near the ground, one elbow up, hair streaming up and to the left. Cells 4 and 5: tall square stance facing the viewer, one hand raised in front of her chest with the fingers open, the other fist low at the left. Cell 6: one foot kicked behind her, a fist high at the upper left, the other hand low. Cell 7: seen from behind in a stride, hair down the middle of her back, one fist out at the left and the other arm stretched to the right. Cell 8: a wide stride facing right, both fists together straight out to the right at chest height, hair streaming to the left.", ref=[3, 4, 7])
+
+sheet("thrust", [192, 194, 195, 196, 197, 198, 199, 200], {"平刺": [(192, 0, None), (193, 0, 0.5)], "回身斩": seq(range(194, 201), 1)},
+      "Cell 1: a wide stride facing right, both fists together straight out to the right at chest height, hair streaming flat to the left. Cell 2: seen from behind in a wide straddle, hair down her back, fists up at the right beside her head. Cell 3: seen from behind, tall and straddled, both arms thrust straight up with the fists on top. Cell 4: airborne on one leg, the other knee bent behind, both fists straight overhead, face turned down, hair flung to the right. Cells 5 to 7: facing LEFT, hair flying up and to the right, in a stride with both fists low at the right of her hip. Cell 8: compact stance facing right, fists at her chest.", ref=[0, 1, 2, 4, 5, 6, 7])
+
+sheet("cleave_a", list(range(201, 209)), {"背身劈": seq([201, 202, 203, 204]), "回旋": seq([205, 206, 207, 208], 4)},
+      "Cell 1: leaning forward to the right in a stride, one fist out at the right and the other low at the left, hair streaming left. Cells 2 to 4: seen from behind in a stride, the hair down her back, one arm stretched out to the upper left with a fist, the other hand low at the left. Cell 5: twisting in a low stride with one fist high and the other low, hair across the top. Cell 6: stride, one arm stretched to the left at shoulder height and the other fist out at the right. Cell 7: bending low with both fists up at the top right of her head, a knee driven forward. Cell 8: bent low, both fists out to the left at head height, the hair falling to the right.")
+
+sheet("cleave_b", list(range(209, 217)), {"下潜上挑": seq(range(209, 217))},
+      "Cell 1: bent low in a stride, both fists out to the left at head height, the hair falling to the right. Cell 2: leaning back on one straight leg with the other foot forward, one fist up to the left and the hair hanging to the right. Cell 3: tipping back with one leg kicked high, a fist out at the lower right, the hair flaring at the center. Cell 4: leaping up to the right with one knee bent, the upper arm raised to the top right with a fist, the other fist low. Cells 5 to 7: an extremely low lunge to the right, rear leg straight along the ground, both fists at the ground on the right, hair streaming up to the left. Cell 8: a wide stride facing right, both fists out to the right at chest height, hair streaming left.", ref=[0, 1, 3, 7])
+
+sheet("rising", list(range(217, 225)), {"上撩转身": seq(range(217, 225))},
+      "Cell 1: seen from behind, tall and straddled, both arms thrust straight up with the fists on top. Cell 2: airborne on one leg, the other knee bent behind, fists overhead, face down, hair flung to the right. Cells 3 and 4: facing LEFT in a stride with both fists low at the right of her hip, hair flying up to the right. Cell 5: facing LEFT, standing with one knee bent, fists low at her hip. Cell 6: flat and low, leaping to the right, arms stretched forward and level, hair flat along her back. Cells 7 and 8: seen from behind in a long split stride, one arm stretched straight to the upper left with a fist, hair streaming to the right.", ref=[0, 2, 3, 4])
+
+sheet("kick", [225, 226, 227, 228, 229, 230, 231, 232], {"回身高踢": seq(range(225, 232)), "背刀站": [(232, 7, 0), (233, 7, 0.5), (234, 7, 1), (235, 7, 1.5)]},
+      "Keep the same long-legged body size in every cell. Cell 1: facing the viewer, knees close together and bent, one fist low at the left of her hip with the elbow out, the other hand up at her shoulder. Cell 2: bending at the waist with knees wide, one fist up at the left at shoulder height, the other arm straight down to the lower right with a fist. Cell 3: seen from behind in a low run on one leg, the other foot kicked out to the left, one fist raised at the upper left above her head height, the other arm low at the right, hair flying to the right. Cell 4: seen from behind and bent far over one straight standing leg, hair hanging at the center, the other leg lifted high behind her with its foot at the top left above her head level, one fist at the top center beside that foot. Cells 5 and 6: a high kick to the upper right, standing on one straight leg, the kicking leg straight with the heel at the upper right, the skirt falling away along the raised leg, torso leaning left, her head and shoulders clear, one arm bent with its fist at the left of her chest. Cell 7: on one leg with the other knee tucked up, both fists low at the left of her waist. Cell 8: facing LEFT, tall at her full height with her feet apart, hair and tail hanging behind her at the right but not covering her hip. The far arm reaches behind her with its fist clearly visible at the right of her hip, and the near arm hangs down in front at the left with an open hand.", ref=[0, 1, 6, 7])
+
+sheet("fix64", [64], {"收势": seq([64], 0)},
+      "A compact square stance with both knees bent, her body turned slightly to the right. One arm is stretched out to the LEFT at chest height with the elbow a little bent, and its closed fist is clearly visible at the far left of her body, well clear of her hair. The other forearm lies across her waist with its fist at the right side. Her hair swings behind her to the left, above that arm, away from her face.", size="1:1", cols=1, pad_x=50, ref=[0])
+
+sheet("fix", [65, 170, 33, 50], {"收势挥刀": seq([65], 0), "横扫上挑": seq([170], 1), "低身挥臂": seq([33], 2), "上挑起手": seq([50], 3)},
+      "Four separate poses. Cell 1: wide stance turned towards the right, one arm stretched straight down and out to the lower LEFT with its fist at knee height, clear of her skirt; the other arm raised and bent with its fist beside her head at the upper right; hair flung to the left. Cell 2: a low wide stance, one elbow raised behind her, the other arm stretched straight UP and out to the upper right at 45 degrees with its fist at the end, far from her body and above her head height. Cell 3: a very low dash to the right, torso nearly level, the rear leg stretched left along the ground, the rear arm stretched straight up and back to the upper LEFT from her shoulder with its fist at the end, the front arm tucked at her chest, hair streaming to the left below the raised arm. Cell 4: a long stride with the rear leg stretched left, one arm raised straight up to the upper right with a straight elbow and its fist high above her head, her face fully visible beside that arm, her hair behind her falling down and to the left, the other hand low at the left of her hip.", size="3:2", cols=2, pad_x=50, ref=[0, 3])
+
+sheet("finish", [236, 237, 238, 240, 241, 242, 243, 245], {"收刀": [(236, 0, None), (237, 1, None), (238, 2, None), (239, 2, 0.5), (240, 3, None)], "终结": [(241, 4, None), (242, 5, None), (243, 6, None), (244, 6, 0.5), (245, 7, None)]},
+      "Cell 1: seen from behind, tall with feet apart, one fist low at the right. Cells 2 and 3: tall, facing LEFT with her legs crossing, both fists together at the upper left of her hip. Cell 4: facing LEFT, tall, seen slightly from behind, both fists together at her hip, long hair at the right. Cell 5: seen from behind, low in a wide stride, one arm out to the upper left with a fist. Cell 6: a very low lunge to the right, rear leg stretched far to the left, torso level, arms tucked in. Cell 7: bent far forward in a very wide stance, head low between her arms, one arm thrust straight up to the top with the fist at the top. Cell 8: tall on one straight leg with the other knee bent high, one arm thrust straight up overhead with a fist, the other fist at her hip.", ref=[0, 1, 2, 3, 7])
+
+sheets, clips = {}, []
+for name, data in S.items():
+    entry = {k: v for k, v in data.items() if k != "clips"}
+    entry["clips"] = {}
+    for label, slots in data["clips"].items():
+        slots = [(s if isinstance(s, tuple) else s) for s in slots]
+        start, end = slots[0][0], slots[-1][0]
+        ident = f"clip_{start:03d}_{end:03d}"
+        rows = []
+        for slot, cell, phase in slots:
+            row = dict(slot=slot, cell=cell)
+            if phase is not None:
+                row["phase"] = phase
+            rows.append(row)
+        entry["clips"][ident] = rows
+        clips.append(dict(name=label, start=start, end=end, sheet=name))
+    sheets[name] = entry
+clips.sort(key=lambda c: c["start"])
+note = "Clips drawn from pose sheets, split by reading the armed source frames at 2x. Names describe the look of the frames; they are not parsed game ANI definitions. Generated by make_sheets.py."
+(HERE / "pose_sheets.json").write_text(json.dumps(sheets, ensure_ascii=False, indent=1), "utf-8")
+(HERE / "clips.json").write_text(json.dumps(dict(note=note, clips=clips), ensure_ascii=False, indent=1), "utf-8")
+covered = [s for c in clips for s in range(c["start"], c["end"] + 1)]
+print(len(sheets), "sheets", len(clips), "clips", "missing", sorted(set(range(246)) - set(covered)), "doubled", sorted({s for s in covered if covered.count(s) > 1}))

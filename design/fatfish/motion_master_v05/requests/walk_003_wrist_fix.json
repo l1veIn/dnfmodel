@@ -1,0 +1,26 @@
+{
+  "name": "walk_003_wrist_fix",
+  "category": "local_wrist_repair",
+  "source_frame": 3,
+  "model": "gpt-image-2.5",
+  "input": {
+    "prompt": "Edit only the visible forward forearm and wrist connection of the SAME Fatfish whale maid in Image 1. Keep the current pose, fist position, face, head, hair, body, apron, legs and shoes unchanged. Preserve the exact 1024 square framing and character scale of Image 1.\nThe existing navy sleeve ends in a dangling empty white ruffled cuff TOO LOW and to the LEFT of the visible clenched hand. The hand near output (657,515) is not anatomically joined to that sleeve. Fix this specific defect: raise and angle the forward forearm and its cuff upward/right to meet the existing wrist at the LEFT edge of that fist. Draw one continuous natural arm from its existing shoulder through elbow, forearm, a SINGLE white cuff and wrist into the fist. Remove the redundant low dangling empty cuff. Do not leave a gap, an extra cuff, floating fist, second hand or duplicate forearm. Preserve the fist's current center and gesture. The shoulder is around (489,340), elbow around (535,435); the cuff should end at the wrist around (625,504), directly connecting to the fist near (657,515). Keep the forearm supported by the same visible sleeve, not a separate arm sprouting from the waist.\nImage 2 is the matching original DNF walking pose only: follow its shoulder-elbow-wrist connection; ignore the old costume. Image 3 is the approved Fatfish identity/style master only. Preserve the same navy sleeve with gold edging, white ruffle, skin tones and existing pixel-like painted rendering. Do not change any other clothing, shift the character or alter leg pose.\nOne complete full-body transparent RGBA PNG, no labels, marks, effects, shadows or scenery. Final integration will retain only the repaired sleeve/wrist region.\n",
+    "n": 1,
+    "size": "1:1",
+    "resolution": "1k",
+    "background": "transparent",
+    "output_format": "png",
+    "quality": "high"
+  },
+  "local_reference_paths": [
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\walk_003_0.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\references\\walk_003_pose.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\references\\master_approved_8x.png"
+  ],
+  "reference_sha256": [
+    "4cd939113afa77096483379dc6ce08f5ed2b4eb41f4aa6b26fd0ddb6f09d961d",
+    "85b92aa4b9a05572cfa5dbbf0ddbd63fe6495c7456015574c91a03d807d5f1bf",
+    "69b3de02e55aa6ebda3e5192d67055a893819258d5acf1e9ba2ae1ce948f7308"
+  ],
+  "output_directory": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw"
+}

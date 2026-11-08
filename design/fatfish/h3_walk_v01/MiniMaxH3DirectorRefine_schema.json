@@ -1,0 +1,288 @@
+{
+  "MiniMaxH3DirectorRefine": {
+    "input": {
+      "required": {
+        "mode": [
+          [
+            "refine",
+            "upscale",
+            "latent_upscale"
+          ],
+          {
+            "default": "refine",
+            "tooltip": "refine = 同分辨率二采（精修）。upscale = 先放大到目标画布再二采。latent_upscale = 只放大 H3 latent，不再二采。"
+          }
+        ],
+        "upscale_method": [
+          [
+            "lanczos",
+            "nvidia_rtx_vsr",
+            "h3_latent"
+          ],
+          {
+            "default": "h3_latent",
+            "tooltip": "仅 mode=upscale。h3_latent = 先按目标画布放大 H3 视频 latent，再二采（下方选 3D 权重）。lanczos = 像素插值；可另接 upscale_model（RealESRGAN 等）。nvidia_rtx_vsr = NVIDIA RTX Video Super Resolution（需 nvidia-vfx + NVIDIA GPU）。"
+          }
+        ],
+        "latent_upscale_model": [
+          [
+            "minimax_h3_latent_upscaler_3d_conv_v1_fp16.safetensors"
+          ],
+          {
+            "tooltip": "H3 3D latent 放大权重。放到 ComfyUI/models/latent_upscale_models/，目录里的 H3 系权重会自动列出（如 minimax_h3_latent_upscaler_3d_*.safetensors、h3_upscaler_lms_*.safetensors）。mode=latent_upscale，或 upscale + h3_latent 时使用。"
+          }
+        ],
+        "sampler": [
+          [
+            "euler",
+            "euler_cfg_pp",
+            "euler_ancestral",
+            "euler_ancestral_cfg_pp",
+            "heun",
+            "heunpp2",
+            "exp_heun_2_x0",
+            "exp_heun_2_x0_sde",
+            "dpm_2",
+            "dpm_2_ancestral",
+            "lms",
+            "dpm_fast",
+            "dpm_adaptive",
+            "dpmpp_2s_ancestral",
+            "dpmpp_2s_ancestral_cfg_pp",
+            "dpmpp_sde",
+            "dpmpp_sde_gpu",
+            "dpmpp_2m",
+            "dpmpp_2m_cfg_pp",
+            "dpmpp_2m_sde",
+            "dpmpp_2m_sde_gpu",
+            "dpmpp_2m_sde_heun",
+            "dpmpp_2m_sde_heun_gpu",
+            "dpmpp_3m_sde",
+            "dpmpp_3m_sde_gpu",
+            "ddpm",
+            "lcm",
+            "ipndm",
+            "ipndm_v",
+            "deis",
+            "cfgpp_ud10_ab",
+            "res_multistep",
+            "res_multistep_cfg_pp",
+            "res_multistep_ancestral",
+            "res_multistep_ancestral_cfg_pp",
+            "gradient_estimation",
+            "gradient_estimation_cfg_pp",
+            "er_sde",
+            "seeds_2",
+            "seeds_3",
+            "sa_solver",
+            "sa_solver_pece",
+            "ddim",
+            "uni_pc",
+            "uni_pc_bh2"
+          ],
+          {
+            "default": "euler",
+            "tooltip": "二采采样器。海螺案例用 euler；BasicScheduler 高质量二采常用 res_multistep。"
+          }
+        ],
+        "passes": [
+          "INT",
+          {
+            "default": 1,
+            "min": 1,
+            "max": 9999,
+            "tooltip": "精修次数。1 = 一次二采。upscale 时只有第 1 次放大，之后都是同分辨率精修。latent_upscale 不二采，此值无效。"
+          }
+        ]
+      },
+      "optional": {
+        "refine_model": [
+          "MODEL",
+          {
+            "tooltip": "Second-pass UNET (二采模型)。不接则用导演台主模型。适合一采挂 Turbo LoRA、二采卸掉或换另一套。"
+          }
+        ],
+        "sigmas": [
+          "SIGMAS",
+          {
+            "forceInput": true,
+            "tooltip": "二采噪声表。接 Comfy 自带 BasicScheduler 或 ManualSigmas。mode=refine / upscale 时必须接线。BasicScheduler 请接和二采相同的 MODEL（导演台主模型或 refine_model）。H3 的 SigmaShift 仍由 Refine 内部套上。"
+          }
+        ],
+        "upscale_model": [
+          "UPSCALE_MODEL",
+          {
+            "tooltip": "可选。用「加载放大模型」接入，例如 RealESRGAN_x2plus。仅 mode=upscale 且 upscale_method=lanczos 时使用。不接则纯 lanczos 插值。选 nvidia_rtx_vsr / h3_latent 时忽略此口。"
+          }
+        ],
+        "seed_mode": [
+          [
+            "inherit",
+            "offset",
+            "independent"
+          ],
+          {
+            "default": "inherit",
+            "tooltip": "二采种子从哪来。inherit = 跟随导演台（一采和二采用同一个 seed）。offset = 导演台 seed+1（二采和一采错开一号）。independent = 独立种子：只用下方 seed / 生成后控制，不改导演台 seed，确认二采仍可跳过一采。"
+          }
+        ],
+        "aspect_ratio": [
+          [
+            "跟随导演台",
+            "1:1 (方形)",
+            "2:3 (竖版照片)",
+            "3:2 (横版照片)",
+            "3:4 (竖版标准)",
+            "4:3 (标准)",
+            "9:16 (竖屏)",
+            "16:9 (宽屏)",
+            "21:9 (超宽)",
+            "自定义"
+          ],
+          {
+            "default": "跟随导演台",
+            "tooltip": "已废弃：二采比例始终跟随导演台一采画布。请只用百万像素控制放大尺寸。"
+          }
+        ],
+        "megapixels": [
+          "FLOAT",
+          {
+            "default": 1.0,
+            "min": 0.0,
+            "max": 16.0,
+            "step": 0.1,
+            "tooltip": "放大目标百万像素。比例始终与导演台一采画布相同。例如一采 864×480（16:9），1.8 MP → 1824×1024。"
+          }
+        ],
+        "width": [
+          "INT",
+          {
+            "default": 1280,
+            "min": 0,
+            "max": 8192,
+            "step": 32,
+            "tooltip": "自定义宽度（×32）。仅「自定义」时生效。"
+          }
+        ],
+        "height": [
+          "INT",
+          {
+            "default": 720,
+            "min": 0,
+            "max": 8192,
+            "step": 32,
+            "tooltip": "自定义高度（×32）。仅「自定义」时生效。"
+          }
+        ],
+        "skip_fl2v": [
+          "BOOLEAN",
+          {
+            "default": true,
+            "tooltip": "跳过首尾帧（fl2v）镜头的二采/放大。二采会改画面，容易把钉死的首尾帧画飘；默认跳过以保护关键帧。关掉则 fl2v 也走精修 / latent 放大。"
+          }
+        ],
+        "confirm_first_pass": [
+          "BOOLEAN",
+          {
+            "default": false,
+            "tooltip": "先确认一采再二采。默认关：一采完立刻二采（与现在相同）。开：没有一采缓存时只跑一采并写出缓存/_pre.mp4；已有精确匹配的一采缓存（同一 seed、一采参数、SelfLift、Semantic Bridge 接线与 alpha / magnitude_match）则跳过一采只跑二采。seed 请用 fixed，或第二次 Queue 前改回写出缓存时的 seed。Refine 面板「确认二采」与执行层用同一套指纹，不一致时不会跳过一采。"
+          }
+        ],
+        "enable_latent_chunking": [
+          "BOOLEAN",
+          {
+            "default": false,
+            "tooltip": "H3 latent 放大的时间分块（省显存，默认关）。开：latent 超过 24 帧时按 24 帧切块、重叠区加权融合，放大网峰值更低，长段不易在这一步 OOM；接缝可能和整段前向不同。≤24 帧仍走整段。关则与现在完全一致。"
+          }
+        ],
+        "enable_tiling": [
+          "BOOLEAN",
+          {
+            "default": false,
+            "tooltip": "二采空间分块（省显存，默认关）。开：沿画面长边切开视频 latent，每步分块前向再叠回；音频整段参与，不切空间。关：整幅一次采样，与现在完全一致。mode=latent_upscale（不二采）时无效。"
+          }
+        ],
+        "tile_count": [
+          "INT",
+          {
+            "default": 2,
+            "min": 1,
+            "max": 8,
+            "step": 1,
+            "tooltip": "分块数量。越大单块显存越低，但前向次数更多、更慢。1 等同不分块。"
+          }
+        ],
+        "tile_overlap": [
+          "INT",
+          {
+            "default": 128,
+            "min": 0,
+            "max": 2048,
+            "step": 64,
+            "tooltip": "块间重叠，单位为输出像素（步长 64）。越大接缝越轻，单块也越大，省显存越少。"
+          }
+        ],
+        "seed": [
+          "INT",
+          {
+            "default": 0,
+            "min": 0,
+            "max": 18446744073709551615,
+            "control_after_generate": true,
+            "tooltip": "仅 seed_mode=independent 时生效。生成后控制：fixed=每次同一颗；increment=每次+1；decrement=每次-1；randomize=每次随机新种子。都不改导演台一采 seed。"
+          }
+        ]
+      }
+    },
+    "input_order": {
+      "required": [
+        "mode",
+        "upscale_method",
+        "latent_upscale_model",
+        "sampler",
+        "passes"
+      ],
+      "optional": [
+        "refine_model",
+        "sigmas",
+        "upscale_model",
+        "seed_mode",
+        "aspect_ratio",
+        "megapixels",
+        "width",
+        "height",
+        "skip_fl2v",
+        "confirm_first_pass",
+        "enable_latent_chunking",
+        "enable_tiling",
+        "tile_count",
+        "tile_overlap",
+        "seed"
+      ]
+    },
+    "is_input_list": false,
+    "output": [
+      "MMX_DIR_REFINE",
+      "INT",
+      "INT"
+    ],
+    "output_is_list": [
+      false,
+      false,
+      false
+    ],
+    "output_name": [
+      "refine",
+      "width",
+      "height"
+    ],
+    "name": "MiniMaxH3DirectorRefine",
+    "display_name": "MiniMax H3 Director Refine",
+    "description": "MiniMax H3 Director Refine: connect to Director.refine. Director.images is the refined / upscaled result; Director.images_pre_refine is the first-pass video (before second sample). Second sample uses SIGMAS from BasicScheduler / ManualSigmas. Upscale canvas keeps the Director first-pass aspect; megapixels sets the enlarge size. Director first-pass stays at its own resolution; Refine target is the enlarge size. width / height are the resolved target canvas (×32). Does not sample by itself — no IMAGE output. confirm_first_pass: first Queue writes first-pass cache; second Queue with the same seed runs refine only.",
+    "python_module": "custom_nodes.ComfyUI_MiniMaxH3_Director",
+    "category": "MiniMaxH3",
+    "output_node": false,
+    "has_intermediate_output": false,
+    "search_aliases": []
+  }
+}

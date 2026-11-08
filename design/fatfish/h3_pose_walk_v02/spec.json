@@ -1,0 +1,13 @@
+{
+  "stages": "Decoder probe first; one relaxed-motion generation second.",
+  "max_new_motion_samples": 1,
+  "max_reproduction_samples": 1,
+  "cache_unavailable_reason": "Server cache-none; original native graph did not save latent.",
+  "original_ani_verified": false,
+  "protected_files": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\Fatfish_H3_Pose_Walk_v01\\report.json": "d80aaaccd1a988bd805a4974e108188068ca58714d0627690d0acfffe9d59323",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d"
+  }
+}

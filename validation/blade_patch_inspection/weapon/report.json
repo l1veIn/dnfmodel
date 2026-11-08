@@ -1,0 +1,67 @@
+{
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\dnf刃\\a(鬼剑士全武器改低配支离剑241115).NPK",
+  "file_bytes": 852514,
+  "sha256": "d8885c8c59906756a52e46e5d1d5719aa86630c41d107a3fe4e2c4910508e100",
+  "entry_count": 2699,
+  "index_bytes": 712556,
+  "unique_payload_ranges": 1,
+  "entry_folders": {
+    ".": 1,
+    "sprite/character/swordman/equipment/weapon/sswd": 367,
+    "sprite/character/swordman/equipment/weapon/mswd": 6,
+    "sprite/character/swordman/equipment/weapon/lswd/teen": 44,
+    "sprite/character/swordman/equipment/weapon/lswd": 509,
+    "sprite/character/swordman/equipment/weapon/lkatana": 12,
+    "sprite/character/swordman/equipment/weapon/lgswd": 36,
+    "sprite/character/swordman/equipment/weapon/katana": 527,
+    "sprite/character/swordman/equipment/weapon/gemswd": 2,
+    "sprite/character/swordman/equipment/weapon/club": 281,
+    "sprite/character/swordman/equipment/weapon/boneswd": 77,
+    "sprite/character/swordman/equipment/weapon/beamswd": 837
+  },
+  "payloads": [
+    {
+      "offset": 712588,
+      "length": 139926,
+      "sha256": "f754a9e0f101e0d3411934b12f87db59762e11cc3e904fcb7328c2477d01f12c",
+      "alias_count": 2699,
+      "representative_paths": [
+        "丐版-支离剑.img",
+        "sprite/character/swordman/equipment/weapon/sswd/(tn)lswd2205c.img",
+        "sprite/character/swordman/equipment/weapon/sswd/lswd2205c.img",
+        "sprite/character/swordman/equipment/weapon/sswd/(tn)sswd0100b.img",
+        "sprite/character/swordman/equipment/weapon/sswd/(tn)sswd0100c.img",
+        "sprite/character/swordman/equipment/weapon/sswd/(tn)sswd0200b.img",
+        "sprite/character/swordman/equipment/weapon/sswd/(tn)sswd0200c.img",
+        "sprite/character/swordman/equipment/weapon/sswd/(tn)sswd0400b.img",
+        "sprite/character/swordman/equipment/weapon/sswd/(tn)sswd0400c.img",
+        "sprite/character/swordman/equipment/weapon/sswd/(tn)sswd0500b.img",
+        "sprite/character/swordman/equipment/weapon/sswd/(tn)sswd0500c.img",
+        "sprite/character/swordman/equipment/weapon/sswd/(tn)sswd0600b.img"
+      ],
+      "folders": {
+        ".": 1,
+        "sprite/character/swordman/equipment/weapon/sswd": 367,
+        "sprite/character/swordman/equipment/weapon/mswd": 6,
+        "sprite/character/swordman/equipment/weapon/lswd/teen": 44,
+        "sprite/character/swordman/equipment/weapon/lswd": 509,
+        "sprite/character/swordman/equipment/weapon/lkatana": 12,
+        "sprite/character/swordman/equipment/weapon/lgswd": 36,
+        "sprite/character/swordman/equipment/weapon/katana": 527,
+        "sprite/character/swordman/equipment/weapon/gemswd": 2,
+        "sprite/character/swordman/equipment/weapon/club": 281,
+        "sprite/character/swordman/equipment/weapon/boneswd": 77,
+        "sprite/character/swordman/equipment/weapon/beamswd": 837
+      },
+      "version": 4,
+      "frame_count": 179,
+      "stored_frames": 179,
+      "linked_frames": 0,
+      "visible_frame_count": 174,
+      "entirely_transparent": false,
+      "unique_pixel_frames": 110,
+      "consumed_bytes": 139926,
+      "trailing_bytes": 0
+    }
+  ]
+}

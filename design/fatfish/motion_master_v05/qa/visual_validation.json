@@ -1,0 +1,431 @@
+{
+  "frames": [
+    {
+      "name": "walk_000",
+      "solid_bbox": [
+        216,
+        286,
+        289,
+        382
+      ],
+      "nearest_support_shoe_pixel_distance": 1.0,
+      "support_point_is_fitting_constraint": true,
+      "real_transparency": true,
+      "local_fit_count": 3,
+      "revision_applied": false,
+      "global_registration": {
+        "name": "walk_000",
+        "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\walk_000_0.png",
+        "source_sha256": "7b4c5a41c7bd1daf50b4c61385ec29afc6e7fcd2a56c8edc39baf41e966595b2",
+        "manual_raw_eye": [
+          550.0,
+          284.0
+        ],
+        "manual_raw_sole": [
+          699.0,
+          922.0
+        ],
+        "target_eye": [
+          251,
+          304
+        ],
+        "target_sole": [
+          278,
+          381
+        ],
+        "transformed_eye": [
+          251.0,
+          304.0
+        ],
+        "transformed_sole": [
+          278.0,
+          381.0
+        ],
+        "matrix_2x3": [
+          [
+            0.12381972999103076,
+            0.013402602243474006,
+            179.09280946778645
+          ],
+          [
+            -0.013402602243474006,
+            0.12381972999103076,
+            276.206627916458
+          ]
+        ],
+        "rotation_degrees": -6.177806756597659,
+        "uniform_scale": 0.12454298567943735,
+        "visible_bbox": [
+          215,
+          286,
+          289,
+          382
+        ],
+        "method": "One raw-to-native similarity transform using NEAREST; source alpha preserved; no local/head compositing",
+        "caution": "Eye and supporting shoe are manually annotated fitting constraints, not independent validation or proof of no foot sliding."
+      },
+      "head_or_face_reused": false
+    },
+    {
+      "name": "walk_001",
+      "solid_bbox": [
+        217,
+        287,
+        274,
+        385
+      ],
+      "nearest_support_shoe_pixel_distance": 1.0,
+      "support_point_is_fitting_constraint": true,
+      "real_transparency": true,
+      "local_fit_count": 1,
+      "revision_applied": false,
+      "global_registration": {
+        "name": "walk_001",
+        "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\walk_001_0.png",
+        "source_sha256": "f0b63a9e5ad91e1c5d03116fe5103dbc1985b83ddf918473ec2adf384de3f581",
+        "manual_raw_eye": [
+          562.0,
+          273.0
+        ],
+        "manual_raw_sole": [
+          613.0,
+          933.0
+        ],
+        "target_eye": [
+          254,
+          304
+        ],
+        "target_sole": [
+          261,
+          384
+        ],
+        "transformed_eye": [
+          254.0,
+          304.0
+        ],
+        "transformed_sole": [
+          261.0,
+          384.0
+        ],
+        "matrix_2x3": [
+          [
+            0.12130734525936727,
+            0.0012323111996549528,
+            185.4888510067298
+          ],
+          [
+            -0.0012323111996549528,
+            0.12130734525936727,
+            271.5756536383988
+          ]
+        ],
+        "rotation_degrees": -0.5820241305692654,
+        "uniform_scale": 0.12131360436805153,
+        "visible_bbox": [
+          217,
+          286,
+          295,
+          385
+        ],
+        "method": "One raw-to-native similarity transform using NEAREST; source alpha preserved; no local/head compositing",
+        "caution": "Eye and supporting shoe are manually annotated fitting constraints, not independent validation or proof of no foot sliding."
+      },
+      "head_or_face_reused": false
+    },
+    {
+      "name": "walk_002",
+      "solid_bbox": [
+        220,
+        284,
+        274,
+        385
+      ],
+      "nearest_support_shoe_pixel_distance": 1.0,
+      "support_point_is_fitting_constraint": true,
+      "real_transparency": true,
+      "local_fit_count": 1,
+      "revision_applied": true,
+      "global_registration": {
+        "name": "walk_002",
+        "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\walk_002_0.png",
+        "source_sha256": "1b1a9d7a3bee9d39937937d4a7009663fe7612ee97095a540543b8bf59479ebc",
+        "manual_raw_eye": [
+          557.0,
+          271.0
+        ],
+        "manual_raw_sole": [
+          550.0,
+          930.0
+        ],
+        "target_eye": [
+          255,
+          304
+        ],
+        "target_sole": [
+          256,
+          384
+        ],
+        "transformed_eye": [
+          255.0,
+          304.0
+        ],
+        "transformed_sole": [
+          256.0,
+          384.0
+        ],
+        "matrix_2x3": [
+          [
+            0.12136624225819077,
+            0.002806621693182603,
+            186.63840858333526
+          ],
+          [
+            -0.002806621693182603,
+            0.12136624225819077,
+            272.673036631133
+          ]
+        ],
+        "rotation_degrees": -1.3247416955914728,
+        "uniform_scale": 0.12139868980018893,
+        "visible_bbox": [
+          220,
+          284,
+          274,
+          395
+        ],
+        "method": "One raw-to-native similarity transform using NEAREST; source alpha preserved; no local/head compositing",
+        "caution": "Eye and supporting shoe are manually annotated fitting constraints, not independent validation or proof of no foot sliding."
+      },
+      "head_or_face_reused": false
+    },
+    {
+      "name": "walk_003",
+      "solid_bbox": [
+        218,
+        285,
+        271,
+        386
+      ],
+      "nearest_support_shoe_pixel_distance": 1.0,
+      "support_point_is_fitting_constraint": true,
+      "real_transparency": true,
+      "local_fit_count": 1,
+      "revision_applied": true,
+      "global_registration": {
+        "name": "walk_003",
+        "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\walk_003_0.png",
+        "source_sha256": "4cd939113afa77096483379dc6ce08f5ed2b4eb41f4aa6b26fd0ddb6f09d961d",
+        "manual_raw_eye": [
+          537.0,
+          257.0
+        ],
+        "manual_raw_sole": [
+          410.0,
+          925.0
+        ],
+        "target_eye": [
+          252,
+          304
+        ],
+        "target_sole": [
+          235,
+          386
+        ],
+        "transformed_eye": [
+          252.0,
+          303.99999999999994
+        ],
+        "transformed_sole": [
+          235.0,
+          385.99999999999994
+        ],
+        "matrix_2x3": [
+          [
+            0.12314184183946032,
+            -0.002037404320940926,
+            186.3964438426916
+          ],
+          [
+            0.002037404320940926,
+            0.12314184183946032,
+            271.2584605269134
+          ]
+        ],
+        "rotation_degrees": 0.9478826773077155,
+        "uniform_scale": 0.12315869529993263,
+        "visible_bbox": [
+          217,
+          285,
+          271,
+          396
+        ],
+        "method": "One raw-to-native similarity transform using NEAREST; source alpha preserved; no local/head compositing",
+        "caution": "Eye and supporting shoe are manually annotated fitting constraints, not independent validation or proof of no foot sliding."
+      },
+      "head_or_face_reused": false
+    },
+    {
+      "name": "cast_065",
+      "solid_bbox": [
+        205,
+        288,
+        269,
+        387
+      ],
+      "nearest_support_shoe_pixel_distance": 1.0,
+      "support_point_is_fitting_constraint": true,
+      "real_transparency": true,
+      "local_fit_count": 3,
+      "revision_applied": false,
+      "global_registration": {
+        "name": "cast_065",
+        "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\cast_065_0.png",
+        "source_sha256": "afbf2113f1c0b1091f1f5fdf03485162371bc7f60726e0aec68ea50b8ee74de6",
+        "manual_raw_eye": [
+          503.0,
+          273.0
+        ],
+        "manual_raw_sole": [
+          446.0,
+          925.0
+        ],
+        "target_eye": [
+          246,
+          305
+        ],
+        "target_sole": [
+          238,
+          387
+        ],
+        "transformed_eye": [
+          246.0,
+          305.00000000000006
+        ],
+        "transformed_sole": [
+          238.0,
+          387.00000000000006
+        ],
+        "matrix_2x3": [
+          [
+            0.12587748889350606,
+            -0.0012653115537885808,
+            183.02905314075073
+          ],
+          [
+            0.0012653115537885808,
+            0.12587748889350606,
+            269.9989938205172
+          ]
+        ],
+        "rotation_degrees": 0.5759136987589055,
+        "uniform_scale": 0.12588384814368717,
+        "visible_bbox": [
+          202,
+          287,
+          270,
+          391
+        ],
+        "method": "One raw-to-native similarity transform using NEAREST; source alpha preserved; no local/head compositing",
+        "caution": "Eye and supporting shoe are manually annotated fitting constraints, not independent validation or proof of no foot sliding."
+      },
+      "head_or_face_reused": false
+    },
+    {
+      "name": "jump_023",
+      "solid_bbox": [
+        219,
+        291,
+        276,
+        386
+      ],
+      "nearest_support_shoe_pixel_distance": 1.0,
+      "support_point_is_fitting_constraint": true,
+      "real_transparency": true,
+      "local_fit_count": 1,
+      "revision_applied": false,
+      "global_registration": {
+        "name": "jump_023",
+        "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\jump_023_0.png",
+        "source_sha256": "304f40b608185b58f1a8dc0879dd35248c48507c07dfeb8e574cee5bfb8be107",
+        "manual_raw_eye": [
+          574.0,
+          280.0
+        ],
+        "manual_raw_sole": [
+          376.0,
+          909.0
+        ],
+        "target_eye": [
+          253,
+          309
+        ],
+        "target_sole": [
+          230,
+          386
+        ],
+        "transformed_eye": [
+          253.0,
+          309.0
+        ],
+        "transformed_sole": [
+          230.0,
+          386.0
+        ],
+        "matrix_2x3": [
+          [
+            0.12185261414986949,
+            0.0017914429279398407,
+            182.55499545815175
+          ],
+          [
+            -0.0017914429279398407,
+            0.12185261414986949,
+            275.909556278674
+          ]
+        ],
+        "rotation_degrees": -0.8422857863418289,
+        "uniform_scale": 0.1218657820839018,
+        "visible_bbox": [
+          216,
+          277,
+          276,
+          387
+        ],
+        "method": "One raw-to-native similarity transform using NEAREST; source alpha preserved; no local/head compositing",
+        "caution": "Eye and supporting shoe are manually annotated fitting constraints, not independent validation or proof of no foot sliding."
+      },
+      "head_or_face_reused": false
+    }
+  ],
+  "master_pixels_unchanged": true,
+  "new_generation_jobs": 7,
+  "motion_test_images": 6,
+  "additional_local_wrist_repair_jobs": 1,
+  "actual_reference_images_per_request": 3,
+  "reference_byte_audits_passed": true,
+  "all_reference_files_unchanged": true,
+  "raw_outputs_real_alpha_passed": 6,
+  "head_or_face_reuse": false,
+  "no_palette_reduction": true,
+  "no_alpha_threshold": true,
+  "zero_alpha_rgb_canonicalized_at_export": true,
+  "sampling": "Single-pass nearest sampling from raw, including composed local limb-fit matrices",
+  "observed_account_cost_delta_usd": 0.2660000000000018,
+  "reported_receipt_cost_usd": 0.266,
+  "original_ani_timing_known": false,
+  "preview_ms_per_frame": 140,
+  "complete_walk_loop": false,
+  "ground_motion": "Inferred from original sole coordinates; shared by reference and generated tracks",
+  "sliding_validation": "Engineering inspection only; no game motion/timing/root trajectory verification",
+  "game_runtime_validated": false,
+  "game_installation_changed": false,
+  "revisions": [
+    "Frame 2 lower-body overbroad local fit removed; original registered legs retained",
+    "Frame 3 forearm/cuff/wrist repaired via one local image edit; all pixels outside arm mask unchanged"
+  ],
+  "remaining_visual_review": [
+    "Small changes in face/head silhouette and hair tips",
+    "Gold hem marks change between generated poses",
+    "Local-fit joint seams and shoe shapes need further visual/game review"
+  ]
+}

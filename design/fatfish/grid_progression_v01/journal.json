@@ -1,0 +1,36 @@
+{
+  "provider": "65535",
+  "model": "gpt-image-2.5",
+  "max_jobs": 2,
+  "created_at": "2026-10-23T01:00:15.709484+00:00",
+  "jobs": {
+    "group_a": {
+      "state": "downloaded",
+      "started_at": "2026-10-23T01:00:22.391820+00:00",
+      "task_id": "img_a659649877f4712148f5bf80c4d94f3a",
+      "submitted_at": "2026-10-23T01:00:25.733995+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-23T01:02:11.293886+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grid_progression_v01\\raw\\group_a_0.png"
+      ],
+      "stdout": "design\\fatfish\\grid_progression_v01\\logs\\group_a.stdout.txt",
+      "stderr": "design\\fatfish\\grid_progression_v01\\logs\\group_a.stderr.txt"
+    },
+    "group_b": {
+      "state": "downloaded",
+      "depends_on_task": "img_a659649877f4712148f5bf80c4d94f3a",
+      "carry_sha256": "9bb272d6135e273d1cdb9df92e2fdfb39762becfd89c0a9edcadb51a8a6923af",
+      "started_at": "2026-10-23T01:05:35.993741+00:00",
+      "task_id": "img_a0416bffcc2d5a53b9ea84875abf5c68",
+      "submitted_at": "2026-10-23T01:05:39.325850+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-23T01:07:10.615531+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grid_progression_v01\\raw\\group_b_0.png"
+      ],
+      "stdout": "design\\fatfish\\grid_progression_v01\\logs\\group_b.stdout.txt",
+      "stderr": "design\\fatfish\\grid_progression_v01\\logs\\group_b.stderr.txt"
+    }
+  }
+}

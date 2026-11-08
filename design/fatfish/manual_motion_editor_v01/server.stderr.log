@@ -1,0 +1,136 @@
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 61942)
+Traceback (most recent call last):
+  File "C:\ProgramData\miniconda3\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\ProgramData\miniconda3\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\A\Desktop\dnfmodel\scripts\serve_action_dashboard.py", line 26, in __init__
+    def __init__(self,*args,**kwargs):super().__init__(*args,directory=str(WEB),**kwargs)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\ProgramData\miniconda3\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\A\Desktop\dnfmodel\scripts\serve_action_dashboard.py", line 93, in do_GET
+    return super().do_GET()
+           ^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 679, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\A\Desktop\dnfmodel\scripts\serve_action_dashboard.py", line 71, in copyfile
+    if remaining is None:return super().copyfile(source,outputfile)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 878, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\ProgramData\miniconda3\Lib\shutil.py", line 204, in copyfileobj
+    fdst_write(buf)
+  File "C:\ProgramData\miniconda3\Lib\socketserver.py", line 840, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 50449)
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53297)
+Traceback (most recent call last):
+----------------------------------------
+Traceback (most recent call last):
+Exception occurred during processing of request from ('127.0.0.1', 59649)
+  File "C:\ProgramData\miniconda3\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\ProgramData\miniconda3\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\ProgramData\miniconda3\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\ProgramData\miniconda3\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\A\Desktop\dnfmodel\scripts\serve_action_dashboard.py", line 26, in __init__
+    def __init__(self,*args,**kwargs):super().__init__(*args,directory=str(WEB),**kwargs)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\A\Desktop\dnfmodel\scripts\serve_action_dashboard.py", line 26, in __init__
+    def __init__(self,*args,**kwargs):super().__init__(*args,directory=str(WEB),**kwargs)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\ProgramData\miniconda3\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+  File "C:\ProgramData\miniconda3\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+Traceback (most recent call last):
+  File "C:\ProgramData\miniconda3\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\ProgramData\miniconda3\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\A\Desktop\dnfmodel\scripts\serve_action_dashboard.py", line 93, in do_GET
+    return super().do_GET()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\A\Desktop\dnfmodel\scripts\serve_action_dashboard.py", line 26, in __init__
+    def __init__(self,*args,**kwargs):super().__init__(*args,directory=str(WEB),**kwargs)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 679, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\A\Desktop\dnfmodel\scripts\serve_action_dashboard.py", line 71, in copyfile
+    if remaining is None:return super().copyfile(source,outputfile)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\miniconda3\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 878, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\ProgramData\miniconda3\Lib\shutil.py", line 204, in copyfileobj
+    fdst_write(buf)
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\ProgramData\miniconda3\Lib\socketserver.py", line 840, in write
+    self._sock.sendall(b)
+  File "C:\Users\A\Desktop\dnfmodel\scripts\serve_action_dashboard.py", line 93, in do_GET
+    return super().do_GET()
+           ^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 679, in do_GET
+    self.copyfile(f, self.wfile)
+----------------------------------------
+  File "C:\Users\A\Desktop\dnfmodel\scripts\serve_action_dashboard.py", line 71, in copyfile
+    if remaining is None:return super().copyfile(source,outputfile)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\A\Desktop\dnfmodel\scripts\serve_action_dashboard.py", line 93, in do_GET
+    return super().do_GET()
+           ^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 878, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\ProgramData\miniconda3\Lib\shutil.py", line 204, in copyfileobj
+    fdst_write(buf)
+  File "C:\ProgramData\miniconda3\Lib\socketserver.py", line 840, in write
+    self._sock.sendall(b)
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 679, in do_GET
+    self.copyfile(f, self.wfile)
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+  File "C:\Users\A\Desktop\dnfmodel\scripts\serve_action_dashboard.py", line 71, in copyfile
+    if remaining is None:return super().copyfile(source,outputfile)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\miniconda3\Lib\http\server.py", line 878, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\ProgramData\miniconda3\Lib\shutil.py", line 204, in copyfileobj
+    fdst_write(buf)
+  File "C:\ProgramData\miniconda3\Lib\socketserver.py", line 840, in write
+    self._sock.sendall(b)
+----------------------------------------
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+----------------------------------------

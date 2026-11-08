@@ -1,0 +1,15 @@
+{
+  "checked_first_middle_last_both_h3_stages": true,
+  "checked_motion_contact_sheets": true,
+  "observations": [
+    "H3 produces recognizable alternating leg motion from the supplied first frame.",
+    "First-pass face/hair/apron contain coarse colored blocks.",
+    "Refinement reduces some blocks but does not restore the reference details.",
+    "The tail elongates into a pointed shape; hands and apron ornament also drift.",
+    "The prior Grok sample has clearer facial/costume details at equal display height."
+  ],
+  "recommendation": "One-pass for motion screening; refine only accepted candidates. Test HD reference and sparse guide anchors separately.",
+  "model_ranking_claimed": false,
+  "user_accepted": false,
+  "in_game_tested": false
+}

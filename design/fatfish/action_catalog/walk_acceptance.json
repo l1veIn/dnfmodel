@@ -1,0 +1,10 @@
+{
+  "accepted": true,
+  "at": "2026-10-23T06:19:33+08:00",
+  "source": "user_message",
+  "quote": "走路这段没问题，可以通过",
+  "npk": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK",
+  "npk_sha256": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+  "scope": "Walking clip accepted by user; no inferred acceptance for other actions",
+  "explicit_in_game_statement": false
+}

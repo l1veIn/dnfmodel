@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-10-22T21:10:27.747166+00:00",
+  "available_model": {
+    "id": "grok-imagine-video-1.5-preview",
+    "object": "model",
+    "name": "grok-imagine-video-1.5-preview"
+  },
+  "pricing_entry": {
+    "id": "grok-imagine-video-1.5-preview",
+    "name": "grok-imagine-video-1.5-preview",
+    "mode": "usage",
+    "input_micro_per_1k": 0,
+    "output_micro_per_1k": 0,
+    "cached_micro_per_1k": 0,
+    "cache_write_micro_per_1k": 0,
+    "per_request_micro": 0,
+    "online": true,
+    "description": "grok video 1.5, 未通过审核扣费0.02",
+    "provider": "xAi",
+    "supported_endpoints": [
+      "video"
+    ],
+    "tags": [
+      "video"
+    ],
+    "endpoints": [
+      "video"
+    ],
+    "groups": [
+      "任务专用分组"
+    ]
+  },
+  "sources": [
+    "https://my.65535.space/api/docs/grok-video",
+    "https://my.65535.space/api/docs/async-native-api",
+    "https://x.ai/news/grok-imagine-1-5",
+    "https://docs.x.ai/developers/model-capabilities/video/image-to-video"
+  ],
+  "selected_mode": "first_frame",
+  "last_frame_support_verified": false,
+  "original_pose_video_sent": false,
+  "alpha_video_requested": false,
+  "note": "Grok formal 1.5 examples do not establish preview-model last-frame support"
+}

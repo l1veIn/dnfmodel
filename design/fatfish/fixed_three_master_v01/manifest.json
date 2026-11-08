@@ -1,0 +1,132 @@
+{
+  "name": "fixed_three_master_v01",
+  "reference_source": "User-approved Grok 28-frame walk clip, original 960px exports",
+  "source_task_id": "vid_bfd86f4224d7e8e23b777a3c5ff37b53",
+  "source_video_path": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\Fatfish_Grok_Walk_v01\\grok_walk_original.mp4",
+  "source_video_sha256": "92917f6152327cd2f4f521e6e3b57424ac78193d5db9811291bbaea8f4cb1fd5",
+  "selected_references": [
+    {
+      "file_frame": 60,
+      "clip_index": 0,
+      "label": "前摆臂 · 张步",
+      "reason": "展示正面围裙、张开的袖口与迈步腿部。",
+      "raw_source_path": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\Fatfish_Grok_Walk_v01\\frames_raw\\0060.png",
+      "raw_source_sha256": "03ddfe6557511928c3809cfeae2f1c8c9e9d35e97c92d16214d9eb9bff2239ab",
+      "source_size": [
+        960,
+        960
+      ],
+      "rgba_hd_sha256": "54f090edbf8f6a3a3885c0a1e4f7cabc909d193e40624eecdd4a9b39ea12b978",
+      "cell_sha256": "0d5434fae4c078d54df129ddd71841e16cd808022c7c85fd19360cb736ee1611",
+      "key": {
+        "background_median_rgb": [
+          129.0,
+          129.0,
+          129.0
+        ],
+        "method": "Same gray-key thresholds as accepted walk, applied at original 960px resolution; central components retained; edge RGB unmatting.",
+        "nontransparent": 180939,
+        "no_native_size_round_trip": true
+      },
+      "fixed_scale_to_cell": 0.5333333333333333,
+      "translation_to_cell": [
+        64,
+        85.86666666666667
+      ],
+      "source_sole_row": 859,
+      "tail_note": "来自已通过视频，未补画尾巴；部分阶段尾根被头发和裙摆遮挡，不据此证明完整尾部结构。"
+    },
+    {
+      "file_frame": 68,
+      "clip_index": 8,
+      "label": "侧身 · 收腿交叉",
+      "reason": "展示侧面裙摆、垂下的袖口，以及较清楚的尾部轮廓。",
+      "raw_source_path": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\Fatfish_Grok_Walk_v01\\frames_raw\\0068.png",
+      "raw_source_sha256": "c589e8378aed996e41bbd9ca0393644b2954cb2943641c35bd94be62a39fbba4",
+      "source_size": [
+        960,
+        960
+      ],
+      "rgba_hd_sha256": "1ac69cbba83e30e8150e45e1ccbdd1d036f6391575c17974adcf1e0613296a4b",
+      "cell_sha256": "92cb6528a621baf90e98a114594dac872fd67b861450f30d5881f7153da0d480",
+      "key": {
+        "background_median_rgb": [
+          129.0,
+          129.0,
+          129.0
+        ],
+        "method": "Same gray-key thresholds as accepted walk, applied at original 960px resolution; central components retained; edge RGB unmatting.",
+        "nontransparent": 161278,
+        "no_native_size_round_trip": true
+      },
+      "fixed_scale_to_cell": 0.5333333333333333,
+      "translation_to_cell": [
+        64,
+        84.26666666666665
+      ],
+      "source_sole_row": 862,
+      "tail_note": "来自已通过视频，未补画尾巴；部分阶段尾根被头发和裙摆遮挡，不据此证明完整尾部结构。"
+    },
+    {
+      "file_frame": 74,
+      "clip_index": 14,
+      "label": "反向摆臂 · 张步",
+      "reason": "展示另一摆臂阶段，补充前侧袖口和裙摆遮挡关系。",
+      "raw_source_path": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\Fatfish_Grok_Walk_v01\\frames_raw\\0074.png",
+      "raw_source_sha256": "fa06db40cc96df0c7d9ea31994073d36d82342853fcb33678dd2a9eec095513c",
+      "source_size": [
+        960,
+        960
+      ],
+      "rgba_hd_sha256": "d65d9de069803198383d479d5a0958ecff0912c91d87854505b52a9a50b35832",
+      "cell_sha256": "fc06a12cea7cdb402227317f3698e3fd556a88962cad0bbdd8021926eaaedb48",
+      "key": {
+        "background_median_rgb": [
+          129.0,
+          129.0,
+          129.0
+        ],
+        "method": "Same gray-key thresholds as accepted walk, applied at original 960px resolution; central components retained; edge RGB unmatting.",
+        "nontransparent": 175235,
+        "no_native_size_round_trip": true
+      },
+      "fixed_scale_to_cell": 0.5333333333333333,
+      "translation_to_cell": [
+        64,
+        86.93333333333334
+      ],
+      "source_sole_row": 857,
+      "tail_note": "来自已通过视频，未补画尾巴；部分阶段尾根被头发和裙摆遮挡，不据此证明完整尾部结构。"
+    }
+  ],
+  "layout": {
+    "canvas": [
+      2048,
+      2048
+    ],
+    "cell": [
+      640,
+      640
+    ],
+    "top_row": "three fixed Grok references",
+    "bottom_rows": "six original female-mage poses IMG0..5 for layout preview",
+    "top_row_canonical_path": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\Fatfish_Fixed_Three_Master_v01\\fixed_reference_row.png",
+    "top_row_sha256": "cc483363496888d5acb71ebe709a27b90000cf2af7e149b5f4cc081d78ea4834",
+    "top_row_byte_identical_in_input_grid": true
+  },
+  "new_generation_jobs": 0,
+  "new_cost_usd": 0,
+  "generated_target_frames": 0,
+  "npk_created": false,
+  "game_changed": false,
+  "limitations": [
+    "Original-resolution video frames retain the pixel-style detail already present; not extra detail created by upscaling.",
+    "These references are from the same approved animation, but individual anchor choices are newly selected.",
+    "Six lower cells are a prepared edit target, not newly generated Fatfish frames. ANI sequence/timing remains unverified."
+  ],
+  "protected_files_unchanged": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\nearest_standing_v04\\standing_canvas.png": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20"
+  }
+}

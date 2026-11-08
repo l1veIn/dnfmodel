@@ -1,0 +1,9 @@
+{
+  "state": "done",
+  "created_at": "2026-10-22T21:10:27.754194+00:00",
+  "idempotency_key": "fatfish-walk-c6cb67cd-8883-4126-a747-7eb4be3c125f",
+  "started_at": "2026-10-22T21:10:33.893677+00:00",
+  "task_id": "vid_bfd86f4224d7e8e23b777a3c5ff37b53",
+  "submitted_at": "2026-10-22T21:10:35.185840+00:00",
+  "collected_at": "2026-10-22T21:11:11.196145+00:00"
+}

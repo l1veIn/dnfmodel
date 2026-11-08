@@ -1,0 +1,44 @@
+{
+  "max_jobs": 1,
+  "model": "gpt-image-2.5",
+  "reference_count": 2,
+  "uploaded_original_pose_slots": [
+    0,
+    5
+  ],
+  "blank_inbetween_cells_verified": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "uploaded_intermediate_original_pose_count": 0,
+  "output_sequence_labels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "comparison_old_slots": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "fixed_top_row_sha256": "cc483363496888d5acb71ebe709a27b90000cf2af7e149b5f4cc081d78ea4834",
+  "motion_note": "Experimental endpoint-conditioned motion segment. Synthesized in-betweens have no verified IMG/ANI correspondence.",
+  "registration_plan": "One shared scale; only endpoint eye/sole alignment controls. Interpolate endpoint translation corrections; no fitting to original intermediate eyes or shoe heights.",
+  "protected_files_before": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\Fatfish_Fixed_Three_Master_v01\\fixed_reference_row.png": "cc483363496888d5acb71ebe709a27b90000cf2af7e149b5f4cc081d78ea4834",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grid30_Test_v01.NPK": "78c66b478d2c05ad2bc38b099a3bbd55f8fb36ee9f4b47363cc4af79a6e16fc6",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20"
+  },
+  "npk_requested": false,
+  "full_batch_started": false
+}

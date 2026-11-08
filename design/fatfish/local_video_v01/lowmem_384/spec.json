@@ -1,0 +1,17 @@
+{
+  "size": 384,
+  "frames": 25,
+  "fps": 24,
+  "steps": 12,
+  "sampler": "euler",
+  "unet": "wan2.2_ti2v_5B_fp8_local_read.pt",
+  "input_sha256": "298ecdf0ee4b000cd4654c63b906a38294a494138153c5cde7cf997c74b57aa6",
+  "resize": "128 to 384 NEAREST",
+  "batch_size": 1,
+  "memory_guard": {
+    "min_ram_free_gib": 4,
+    "min_commit_free_gib": 4,
+    "min_gpu_free_mib": 1536,
+    "sample_interval_seconds": 1
+  }
+}

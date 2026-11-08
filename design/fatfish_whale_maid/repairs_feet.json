@@ -1,0 +1,144 @@
+{
+ "fix_c": {
+  "frames": [
+   18,
+   25,
+   49,
+   50,
+   51,
+   56,
+   110
+  ],
+  "ref_cells": [
+   0,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "pad_x": 110,
+  "pad_y": 50,
+  "also": {
+   "19": 0,
+   "20": 0,
+   "21": 0,
+   "52": 3
+  },
+  "motion": "The most important thing in this image: every cell shows BOTH of her legs in white tights and BOTH of her shoes, exactly where Image 2 has its two boots. Never hide a leg behind the skirt. Keep a clear margin of background around her in each cell, with nothing touching the edge of a cell, and draw her at the same size in every cell. Cell 1: she is floating forward on magic, weightless, not running: her whole body leans forward to the right with her head at the upper right, both legs hang down and back together with both feet in the air and the toes pointing down, the rear shoe at the lower left and the other shoe just to its right, the skirt and ruffles streaming up and back to the left, her hair streaming to the left, and her near arm straight down along the skirt with the hand showing below the cuff. Cell 2: a flying lunge, both arms straight to the right at shoulder height with a closed fist on the dot, the rear leg bent and kicked up behind her with its shoe at the far left at waist height, the front leg straight down with its shoe at the bottom. Cells 3, 4 and 5: both arms raised high in a wide V with open hands, her head up, her legs apart below the hem, the rear leg reaching down to the lower left with its shoe on tiptoe and the front leg straight down with its shoe under her; in cells 4 and 5 the V tilts a little to the left. Cell 6: she bends back from the hips with her torso leaning to the upper left, both arms stretched straight out to the left with open hands, her hips at the lower right, and both legs below the hem with the two shoes side by side, one a little lower and to the left of the other. Cell 7: both elbows raised in front of her, one closed fist above her head and the other closed fist on the dot at the upper right, her legs apart below the hem, the rear shoe at the lower left and the front shoe at the right.",
+  "micro": {
+   "19": {
+    "moves": [
+     {
+      "poly": [
+       [
+        150,
+        240
+       ],
+       [
+        262,
+        240
+       ],
+       [
+        262,
+        335
+       ],
+       [
+        172,
+        350
+       ],
+       [
+        150,
+        300
+       ]
+      ],
+      "dx": -0.8,
+      "dy": 0.3,
+      "feather": 16
+     }
+    ]
+   },
+   "20": {
+    "moves": [
+     {
+      "poly": [
+       [
+        150,
+        240
+       ],
+       [
+        262,
+        240
+       ],
+       [
+        262,
+        335
+       ],
+       [
+        172,
+        350
+       ],
+       [
+        150,
+        300
+       ]
+      ],
+      "dx": 0.2,
+      "dy": 0.5,
+      "feather": 16
+     }
+    ]
+   },
+   "21": {
+    "moves": [
+     {
+      "poly": [
+       [
+        150,
+        240
+       ],
+       [
+        262,
+        240
+       ],
+       [
+        262,
+        335
+       ],
+       [
+        172,
+        350
+       ],
+       [
+        150,
+        300
+       ]
+      ],
+      "dx": 0.8,
+      "dy": 0.2,
+      "feather": 16
+     }
+    ]
+   }
+  }
+ },
+ "fix_d": {
+  "frames": [
+   92,
+   93,
+   101,
+   102,
+   103,
+   104
+  ],
+  "ref_cells": [
+   2,
+   3,
+   4,
+   5
+  ],
+  "pad_x": 110,
+  "pad_y": 50,
+  "motion": "The most important thing in this image: every cell shows BOTH of her legs in white tights and BOTH of her shoes, exactly where Image 2 has its two boots. Never hide a leg behind the skirt. Keep a clear margin of background around her in each cell, with nothing touching the edge of a cell, and draw her at the same size in every cell. Cells 1 and 2: she is tumbling through a flip in the air with her hips and the round skirt at the left and her head at the upper right, her hair and hair ends lifted straight up. One leg is bent forward with its shoe at the far right, level with her chin, sole facing right. Her other leg comes down from under the skirt with its shoe at the bottom, just right of the middle of her body, in front of everything else. Her near arm runs straight down the middle of her body, and its white cuff ends just to the left of that lower shoe, with the hand hidden behind the shoe. Do not draw a fist in place of that shoe. Only the hair ends differ between cells 1 and 2. Cells 3 and 4: a low forward lunge, both arms straight to the right at shoulder height with a closed fist on the dot, her head low behind them, her rear leg stretched far to the lower left with its shoe at the far lower left, her front knee bent with its shoe under her, the skirt tilted nearly level, and her hair streaming to the left. Cells 5 and 6: the same lunge a little more upright, both arms straight to the right with a closed fist on the dot, the rear leg stretched to the lower left with its shoe at the far lower left and the front shoe under her at the right, the skirt round and tilted a little less."
+ }
+}

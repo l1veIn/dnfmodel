@@ -1,0 +1,36 @@
+{
+  "version": "v01",
+  "stage": "concept draft; not an installable IMG/NPK",
+  "character": "DNF female mage cosplaying Fatfish / DeepSeek whale maid",
+  "approved_user_direction": "参考 C:/Users/A/Desktop/fatfish_game 中的大肥鱼／鲸鱼娘，设计女法师 cosplay 时装",
+  "references": [
+    {
+      "path": "design/fatfish/references/fatfish_game_body.png",
+      "role": "character identity, hairstyle, palette, whale motifs"
+    },
+    {
+      "path": "design/fatfish/references/maid_fullbody_reference.jpg",
+      "role": "maid costume construction and gold trim"
+    },
+    {
+      "path": "materials/female_mage/reference_composite/contact_01.png",
+      "role": "DNF female mage body proportions, pose language and small-sprite readability"
+    }
+  ],
+  "proposed_design": {
+    "proportions": "retain the female mage base proportions and original movement silhouette",
+    "hair": "long navy-to-cyan waves ending near lower calves, one curled ahoge",
+    "head": "white frilled maid headband, whale-fin ear ornaments with pale undersides, small cyan bow",
+    "clothing": "navy long-sleeved maid dress, white front blouse, waist band with gold buttons, white whale-emblem apron, compact knee-length bell skirt with modest gold hem accents",
+    "footwear": "opaque white tights and navy Mary-Jane shoes",
+    "back": "navy whale tail worn as a waist/rear accessory, constrained so it does not obscure the hands",
+    "layering": "back hair/tail; body and legs; outfit and cuffs; front hair/head accessories; split front and rear pieces where actions require",
+    "awaiting_feedback": [
+      "skirt length and volume",
+      "tail size",
+      "whether the user also wants the separate basin/headgear variant"
+    ]
+  },
+  "validation_scope": "Visual concept only. No game resource replacement or animation-frame certification.",
+  "attribution": "References originate from fatfish_game. Upstream credits identify 溟月 by 上善无形 and the whale maid version by ZipZipPipe, CC BY-NC-SA 4.0. Copies of references and upstream credits are retained locally."
+}

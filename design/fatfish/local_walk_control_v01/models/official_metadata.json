@@ -1,0 +1,26 @@
+[
+  {
+    "type": "file",
+    "oid": "3dc03f8feb4e6b68e5fae7ea1973be49c7da1d47",
+    "size": 4309519800,
+    "lfs": {
+      "oid": "640ccc0577e6a5d4bb15cd91b11b699ef914fc55f126c5a1c544e152130784f2",
+      "size": 4309519800,
+      "pointerSize": 135
+    },
+    "xetHash": "261c2e35cfc32d3d55a35e07a19a517cd0b23b9fdc63ce67d9818f3635ade0b3",
+    "path": "split_files/diffusion_models/wan2.1_vace_1.3B_fp16.safetensors"
+  },
+  {
+    "type": "file",
+    "oid": "5ff32b52dac309662138ca42604696d34eaad7b8",
+    "size": 253815318,
+    "lfs": {
+      "oid": "2fc39d31359a4b0a64f55876d8ff7fa8d780956ae2cb13463b0223e15148976b",
+      "size": 253815318,
+      "pointerSize": 134
+    },
+    "xetHash": "2e358d90f91ce658dc1be053d44cf2d6437e5f517c71ae89fcb2c89fd54ca67e",
+    "path": "split_files/vae/wan_2.1_vae.safetensors"
+  }
+]

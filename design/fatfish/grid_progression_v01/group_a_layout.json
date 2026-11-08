@@ -1,0 +1,118 @@
+{
+  "name": "group_a",
+  "carry_slot": 7,
+  "slots": [
+    8,
+    9,
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "cells": [
+    {
+      "index": 0,
+      "role": "fixed_master",
+      "slot": 10,
+      "cell": [
+        48,
+        48,
+        688,
+        688
+      ]
+    },
+    {
+      "index": 1,
+      "role": "carry",
+      "slot": 7,
+      "cell": [
+        704,
+        48,
+        1344,
+        688
+      ]
+    },
+    {
+      "index": 2,
+      "role": "new_target",
+      "slot": 8,
+      "cell": [
+        1360,
+        48,
+        2000,
+        688
+      ]
+    },
+    {
+      "index": 3,
+      "role": "new_target",
+      "slot": 9,
+      "cell": [
+        48,
+        704,
+        688,
+        1344
+      ]
+    },
+    {
+      "index": 4,
+      "role": "new_target",
+      "slot": 0,
+      "cell": [
+        704,
+        704,
+        1344,
+        1344
+      ]
+    },
+    {
+      "index": 5,
+      "role": "new_target",
+      "slot": 1,
+      "cell": [
+        1360,
+        704,
+        2000,
+        1344
+      ]
+    },
+    {
+      "index": 6,
+      "role": "new_target",
+      "slot": 2,
+      "cell": [
+        48,
+        1360,
+        688,
+        2000
+      ]
+    },
+    {
+      "index": 7,
+      "role": "new_target",
+      "slot": 3,
+      "cell": [
+        704,
+        1360,
+        1344,
+        2000
+      ]
+    },
+    {
+      "index": 8,
+      "role": "new_target",
+      "slot": 4,
+      "cell": [
+        1360,
+        1360,
+        2000,
+        2000
+      ]
+    }
+  ],
+  "carry_input_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grid_progression_v01\\references\\initial_carry_img007_hd.png",
+  "carry_input_sha256": "a63e6c48b1d1c8c9c4254b22baca774fe0363146bd8ff976c12050a63171a5fb",
+  "fixed_master_cell_sha256": "e9992e60db3b39eb9c424eebd6cb924988f7843501386c9e1493487f38533665",
+  "grid_sha256": "4396307beb021188f0d943db96bbd665b4503e9155a1edd27bbf2a85c1cd4a78"
+}

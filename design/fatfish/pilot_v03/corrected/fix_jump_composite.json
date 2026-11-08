@@ -1,0 +1,58 @@
+{
+  "old_source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\registered\\jump_fix_clean_canvas.png",
+  "normalized_generated": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\registered\\fix_jump_clean_canvas.png",
+  "output": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\corrected\\fix_jump_canvas.png",
+  "changed_pixels": 300,
+  "outside_mask_identical": true,
+  "patch_polygons": [
+    [
+      [
+        213,
+        294
+      ],
+      [
+        237,
+        294
+      ],
+      [
+        237,
+        315
+      ],
+      [
+        213,
+        315
+      ]
+    ]
+  ],
+  "local_fits": [
+    {
+      "label": "rear_hand",
+      "generated_point_before_local_fit": [
+        226.3165085442948,
+        311.9445118425916
+      ],
+      "target_native": [
+        224,
+        305
+      ],
+      "fixed_root": [
+        236,
+        302
+      ],
+      "local_matrix": [
+        [
+          0.7579825316810704,
+          -0.4686084852283815,
+          198.63588506223857
+        ],
+        [
+          0.4686084852283815,
+          0.7579825316810704,
+          -37.50232708158131
+        ]
+      ],
+      "note": "The endpoint is a fitting constraint, not an independent zero-error validation. Final pixels/joint seams require inspection."
+    }
+  ],
+  "note": "Only generated local repair regions are fitted/composited; no manual pixel painting. Visible limb anchors and joint seams still require independent checks."
+}

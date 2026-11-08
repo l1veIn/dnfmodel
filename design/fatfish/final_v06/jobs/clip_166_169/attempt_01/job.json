@@ -1,0 +1,25 @@
+{
+  "job_id": "fatfish_final_clip_166_169_21a13b1adcfa4ab29b2711f71838829e",
+  "status": "prepared",
+  "mode": "one-pass",
+  "frozen_api_sha256": "f92e521790898416b8b2a3fa4f7c1b39e14208fb33929056ba0ad7faf80fcf9f",
+  "frozen_gui_sha256": "cbbd4efa03073a57bce89c958e8c90cf9abfd2c018f15c8489beec7c3bff4521",
+  "stages": [
+    {
+      "name": "execute",
+      "node": "20",
+      "width": 512,
+      "height": 512,
+      "client_id": "2cc5d178-d1e0-40a7-9a6a-374443464ddd",
+      "status": "running",
+      "submission_attempted": true,
+      "started_at": 1793903289.1300242,
+      "prompt_id": "9123529e-1c29-413f-8db2-fb2cb8dff807"
+    }
+  ],
+  "memory_before": {
+    "ram_available_gib": 15.86648941040039,
+    "commit_available_gib": 16.127471923828125,
+    "commit_total_gib": 40.95303726196289
+  }
+}

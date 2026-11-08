@@ -1,0 +1,9 @@
+{
+  "npk": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Complete_v01.NPK",
+  "npk_sha256": "3572338ebc443f571e68afe1ba363f673d14ac298321146c2d1778a2fb7b1395",
+  "archive": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\fatfish_complete_v01.zip",
+  "archive_sha256": "e4bd8182e9d0a29e25a9094dfd908b7e14f1bf420ba0275f03f9204ebff18b86",
+  "archive_bytes": 126721528,
+  "archive_crc_passed": true,
+  "game_runtime_validated": false
+}

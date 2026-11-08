@@ -1,0 +1,321 @@
+{
+  "sha": "2dd7e73e8ce9bd677fd8db0ae32053763477a56e",
+  "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/trees/2dd7e73e8ce9bd677fd8db0ae32053763477a56e",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b522a6393d4326ece7d6115931027350bc954801",
+      "size": 395,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/b522a6393d4326ece7d6115931027350bc954801"
+    },
+    {
+      "path": "App.xaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12376c5bee90635eaa53e93feafbe87fd81c17d2",
+      "size": 1381,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/12376c5bee90635eaa53e93feafbe87fd81c17d2"
+    },
+    {
+      "path": "App.xaml.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c4fc8626f701244a731c233855e396adec84909",
+      "size": 10136,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/6c4fc8626f701244a731c233855e396adec84909"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52224c380874b22b987ffa3a854d3b3c78adbbcb",
+      "size": 2263,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/52224c380874b22b987ffa3a854d3b3c78adbbcb"
+    },
+    {
+      "path": "Core",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4951e0a135223de8d273d2ece3750e34d2442554",
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/trees/4951e0a135223de8d273d2ece3750e34d2442554"
+    },
+    {
+      "path": "Core/CoreRegressionRunner.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bd207c950aab2679dfece38d7c6bb3d21023252",
+      "size": 10905,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/0bd207c950aab2679dfece38d7c6bb3d21023252"
+    },
+    {
+      "path": "Core/Crc32.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbf34ee5b863421fbc1dc5bb986926ad2943604d",
+      "size": 719,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/dbf34ee5b863421fbc1dc5bb986926ad2943604d"
+    },
+    {
+      "path": "Core/EquipmentIndex.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfe080793dfd59f5e59f4b0f3cd46b6da4cb138a",
+      "size": 3643,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/cfe080793dfd59f5e59f4b0f3cd46b6da4cb138a"
+    },
+    {
+      "path": "Core/LittleEndian.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8d470b051edf9a1dedf6543c010b3ad44f2c9c5",
+      "size": 572,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/b8d470b051edf9a1dedf6543c010b3ad44f2c9c5"
+    },
+    {
+      "path": "Core/PortablePaths.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "843b0f0f654ba215bbcc737339b7531c5648c0d2",
+      "size": 718,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/843b0f0f654ba215bbcc737339b7531c5648c0d2"
+    },
+    {
+      "path": "Core/PvfArchive.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cf9f6467b257d2c52aebe9279c3bbe40facf1a6",
+      "size": 5377,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/6cf9f6467b257d2c52aebe9279c3bbe40facf1a6"
+    },
+    {
+      "path": "Core/PvfArchiveSession.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3a332b1bbe95856712bf19f9ce8a40133cfdb91",
+      "size": 16024,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/f3a332b1bbe95856712bf19f9ce8a40133cfdb91"
+    },
+    {
+      "path": "Core/PvfArchiveWriter.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c898315cf959662715404209f4fe92c1e115aad6",
+      "size": 8031,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/c898315cf959662715404209f4fe92c1e115aad6"
+    },
+    {
+      "path": "Core/PvfFormats.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be37edf45299ce69aa5b48c56b334d9a8ca03136",
+      "size": 16110,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/be37edf45299ce69aa5b48c56b334d9a8ca03136"
+    },
+    {
+      "path": "Core/PvfSearchService.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b715cdd7f4b0045c16c736a4d3cc2b5c65d6b72e",
+      "size": 2339,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/b715cdd7f4b0045c16c736a4d3cc2b5c65d6b72e"
+    },
+    {
+      "path": "Dialogs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "252c747ee24508d4cc9a03e867429e764241c1b2",
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/trees/252c747ee24508d4cc9a03e867429e764241c1b2"
+    },
+    {
+      "path": "Dialogs/TextPromptDialog.xaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b9ccc11b2f2a3ac05449e220d40963de978edd3",
+      "size": 872,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/6b9ccc11b2f2a3ac05449e220d40963de978edd3"
+    },
+    {
+      "path": "Dialogs/TextPromptDialog.xaml.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c7fd15301d11c96ad959b3f0d5a802d630416fe",
+      "size": 485,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/6c7fd15301d11c96ad959b3f0d5a802d630416fe"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83daa2999d2209b31aeff260bcc57a5e8109d6d0",
+      "size": 1063,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/83daa2999d2209b31aeff260bcc57a5e8109d6d0"
+    },
+    {
+      "path": "MainWindow.xaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c40e8c1e1e3600372ddcf6bca62ff615936a6295",
+      "size": 11679,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/c40e8c1e1e3600372ddcf6bca62ff615936a6295"
+    },
+    {
+      "path": "MainWindow.xaml.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56354c1fa2b25d15c580ae1e7593510716b64f77",
+      "size": 39221,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/56354c1fa2b25d15c580ae1e7593510716b64f77"
+    },
+    {
+      "path": "Models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8f1aaecdb470ab69433419fa05c4a27c095d4a74",
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/trees/8f1aaecdb470ab69433419fa05c4a27c095d4a74"
+    },
+    {
+      "path": "Models/EquipmentItem.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b108e1f91622035cc26aa3dd5111ceb9415c20e7",
+      "size": 480,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/b108e1f91622035cc26aa3dd5111ceb9415c20e7"
+    },
+    {
+      "path": "Models/WorkspaceModels.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b6d53084eec3e6b639316f894762240306cd56e",
+      "size": 4955,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/7b6d53084eec3e6b639316f894762240306cd56e"
+    },
+    {
+      "path": "PvfEquipmentBrowser.csproj",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8f76bcab5c7046e7fee100871125cc6fd4059b8",
+      "size": 954,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/f8f76bcab5c7046e7fee100871125cc6fd4059b8"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2ef4c14a5e30da4274d2a5170ddcb55385a94f3",
+      "size": 5159,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/a2ef4c14a5e30da4274d2a5170ddcb55385a94f3"
+    },
+    {
+      "path": "THIRD-PARTY-NOTICES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "777548d7970132a40b9b903e0405f938d09534a7",
+      "size": 4505,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/777548d7970132a40b9b903e0405f938d09534a7"
+    },
+    {
+      "path": "ViewModels",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "31eefb135ebdc0c85a8b32fed6d757843808b73a",
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/trees/31eefb135ebdc0c85a8b32fed6d757843808b73a"
+    },
+    {
+      "path": "ViewModels/MainViewModel.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2e4c86a7925b5a93f7fbffea2696ef820eaf18e",
+      "size": 430,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/b2e4c86a7925b5a93f7fbffea2696ef820eaf18e"
+    },
+    {
+      "path": "ViewModels/ObservableObject.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3bc14f89c1913b0e458fc70d2c66b9b164d2186",
+      "size": 703,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/c3bc14f89c1913b0e458fc70d2c66b9b164d2186"
+    },
+    {
+      "path": "ViewModels/PvfDocumentViewModel.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd13632301bcaac55fa854d107c314def2bf886c",
+      "size": 4786,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/bd13632301bcaac55fa854d107c314def2bf886c"
+    },
+    {
+      "path": "Views",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1990ad3e97f28d06ab43b5d416da26e09e609a10",
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/trees/1990ad3e97f28d06ab43b5d416da26e09e609a10"
+    },
+    {
+      "path": "Views/BinaryDocumentControl.xaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bae77947b991168e1fbc68146342b8b2d0bdd69f",
+      "size": 1078,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/bae77947b991168e1fbc68146342b8b2d0bdd69f"
+    },
+    {
+      "path": "Views/BinaryDocumentControl.xaml.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c3666d25674cc76430590c2e9b2977b56d7cebf",
+      "size": 725,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/6c3666d25674cc76430590c2e9b2977b56d7cebf"
+    },
+    {
+      "path": "Views/EditorDocumentControl.xaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23b93a36f2559ccb90582c9824172abe9caf5c74",
+      "size": 4504,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/23b93a36f2559ccb90582c9824172abe9caf5c74"
+    },
+    {
+      "path": "Views/EditorDocumentControl.xaml.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82460e83380c29057eb12c4067910ad925a5120b",
+      "size": 9188,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/82460e83380c29057eb12c4067910ad925a5120b"
+    },
+    {
+      "path": "Views/StartPageControl.xaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcd1b3e3c97df3733c2639eaba70fb6057cf1808",
+      "size": 1840,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/dcd1b3e3c97df3733c2639eaba70fb6057cf1808"
+    },
+    {
+      "path": "Views/StartPageControl.xaml.cs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba848db49d1008d55ad5c85bf60a9e46fa018319",
+      "size": 380,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/ba848db49d1008d55ad5c85bf60a9e46fa018319"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e46ab77da1fd1b9d39775e55c27acf0ad2c19f38",
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/trees/e46ab77da1fd1b9d39775e55c27acf0ad2c19f38"
+    },
+    {
+      "path": "docs/PVF_FORMATS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddc89913426f500517915a36182e3af35e500604",
+      "size": 4004,
+      "url": "https://api.github.com/repos/syqg88/PvfEquipmentBrowser/git/blobs/ddc89913426f500517915a36182e3af35e500604"
+    }
+  ],
+  "truncated": false
+}

@@ -1,0 +1,35 @@
+{
+  "jobs_max": 1,
+  "seed": 20261023,
+  "reference_mode": "first frame only",
+  "image_uploaded_and_verified": true,
+  "last_frame_supplied": false,
+  "intermediate_frames_supplied": false,
+  "guide_video_supplied": false,
+  "grok_reference_source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grok_walk_v01\\input\\master_gray_1024.png",
+  "reference_preparation": "Original Grok reference ->352-square nearest; gray padding x128..480 in608x352. No stretching.",
+  "original_ani_verified": false,
+  "initial_profile": {
+    "width": 608,
+    "height": 352,
+    "frames": 124,
+    "fps": 24,
+    "refine_width": 864,
+    "refine_height": 480
+  },
+  "stage_decision": "Inspect first before spending on refinement",
+  "memory_before": {
+    "ram_available_gib": 16.753437042236328,
+    "commit_available_gib": 20.52547836303711,
+    "commit_total_gib": 40.95303726196289
+  },
+  "protected_files_before": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grok_walk_v01\\input\\master_gray_1024.png": "293392069fe39ab1f916d96db9e0c3fd3fc4b6db3b78ef269d5a3b1ef134c487",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\Fatfish_Grok_Walk_v01\\grok_walk_original.mp4": "92917f6152327cd2f4f521e6e3b57424ac78193d5db9811291bbaea8f4cb1fd5",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d"
+  },
+  "api_sha256": "fa90856688bc4d3553f1a1da79fb07c555bf38f8fa027c6499d8e79b49bbd198",
+  "gui_sha256": "a06fc82ac0517316a90d2d25c4dc6ea56167c9592dd575c04a7a646b3c2af92f"
+}

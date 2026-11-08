@@ -1,0 +1,20 @@
+{
+  "generated_full_image_used_as_final": false,
+  "ai_merge_area_pixels": 12009,
+  "ai_changed_pixels_outside_mask": 0,
+  "unchanged_outside_mask_verified_before_cleanup": true,
+  "cleanup": {
+    "alpha_threshold": 128,
+    "minimum_component_pixels": 80,
+    "changed_alpha_pixels": 14157,
+    "rgb_of_retained_pixels_unchanged": true
+  },
+  "original_cleanup": {
+    "alpha_threshold": 128,
+    "minimum_component_pixels": 80,
+    "changed_alpha_pixels": 14431,
+    "rgb_of_retained_pixels_unchanged": true
+  },
+  "fixed_part_count": 14,
+  "source_parts_are_not_regenerated_per_frame": true
+}

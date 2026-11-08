@@ -1,0 +1,10 @@
+{
+  "run_second_pass": true,
+  "reason": "First-pass walk is recognizable and connected; blocky texture and tail drift warrant one6-step denoise0.25 refinement test. Refinement is not expected to repair incorrect gait.",
+  "inspected_frames": [
+    1,
+    62,
+    124
+  ],
+  "same_first_pass_cache": true
+}

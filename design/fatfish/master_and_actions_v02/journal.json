@@ -1,0 +1,122 @@
+{
+  "provider": "65535",
+  "model": "gpt-image-2.5",
+  "created_at": "2026-10-22T10:34:26.744202+00:00",
+  "budget_authorization": "User authorized this bounded round without a numeric ceiling: 随便用，额度管够",
+  "numeric_user_ceiling": null,
+  "baseline_usage_cost": 20.586,
+  "usage_unit": "USD",
+  "spending_note": "Observed cumulative account usage delta; other concurrent activity may contribute. No per-request billing cap exposed.",
+  "jobs": {
+    "master": {
+      "state": "downloaded",
+      "source_frame": 10,
+      "category": "master",
+      "started_at": "2026-10-22T10:34:26.754719+00:00",
+      "task_id": "img_7bf13ddef19a0aa314ab3e31936fcabd",
+      "submitted_at": "2026-10-22T10:34:29.015733+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:36:00.974939+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\master_0.png"
+      ],
+      "stdout": "design\\fatfish\\master_and_actions_v02\\logs\\master.stdout.txt",
+      "stderr": "design\\fatfish\\master_and_actions_v02\\logs\\master.stderr.txt"
+    },
+    "master_refine": {
+      "state": "downloaded",
+      "source_frame": 10,
+      "category": "master_refine",
+      "started_at": "2026-10-22T10:37:38.930820+00:00",
+      "task_id": "img_0f4a0069d7b703eaa07a2d71b638435b",
+      "submitted_at": "2026-10-22T10:37:40.372425+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:38:44.935199+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\master_refine_0.png"
+      ],
+      "stdout": "design\\fatfish\\master_and_actions_v02\\logs\\master_refine.stdout.txt",
+      "stderr": "design\\fatfish\\master_and_actions_v02\\logs\\master_refine.stderr.txt"
+    },
+    "master_feet": {
+      "state": "downloaded",
+      "source_frame": 10,
+      "category": "master_feet",
+      "started_at": "2026-10-22T10:41:07.389107+00:00",
+      "task_id": "img_e2914b5e5c7024c9ccddc62307f85593",
+      "submitted_at": "2026-10-22T10:41:08.887655+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:41:54.900315+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\master_feet_0.png"
+      ],
+      "stdout": "design\\fatfish\\master_and_actions_v02\\logs\\master_feet.stdout.txt",
+      "stderr": "design\\fatfish\\master_and_actions_v02\\logs\\master_feet.stderr.txt"
+    },
+    "walk": {
+      "state": "downloaded",
+      "source_frame": 0,
+      "category": "walk",
+      "started_at": "2026-10-22T10:43:10.502292+00:00",
+      "task_id": "img_a225a1aa7c0bd78c6d8a4f36b6512806",
+      "submitted_at": "2026-10-22T10:43:12.135092+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:44:07.955179+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\walk_0.png"
+      ],
+      "stdout": "design\\fatfish\\master_and_actions_v02\\logs\\walk.stdout.txt",
+      "stderr": "design\\fatfish\\master_and_actions_v02\\logs\\walk.stderr.txt"
+    },
+    "cast": {
+      "state": "downloaded",
+      "source_frame": 65,
+      "category": "cast",
+      "started_at": "2026-10-22T10:43:10.503430+00:00",
+      "task_id": "img_d95924a7f41e132beef217b8e1136115",
+      "submitted_at": "2026-10-22T10:43:12.115166+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:44:04.663020+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\cast_0.png"
+      ],
+      "stdout": "design\\fatfish\\master_and_actions_v02\\logs\\cast.stdout.txt",
+      "stderr": "design\\fatfish\\master_and_actions_v02\\logs\\cast.stderr.txt"
+    },
+    "jump": {
+      "state": "downloaded",
+      "source_frame": 23,
+      "category": "jump",
+      "started_at": "2026-10-22T10:43:10.505430+00:00",
+      "task_id": "img_32a5f5425dd29f7300182c1e6e10d29f",
+      "submitted_at": "2026-10-22T10:43:12.069053+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:44:03.530579+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\jump_0.png"
+      ],
+      "stdout": "design\\fatfish\\master_and_actions_v02\\logs\\jump.stdout.txt",
+      "stderr": "design\\fatfish\\master_and_actions_v02\\logs\\jump.stderr.txt"
+    },
+    "jump_fix": {
+      "state": "downloaded",
+      "source_frame": 23,
+      "category": "jump_fix",
+      "started_at": "2026-10-22T10:47:51.588809+00:00",
+      "task_id": "img_1b28a06037078fe2e9d3413a6d5ce84c",
+      "submitted_at": "2026-10-22T10:47:54.120801+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:48:48.840513+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\jump_fix_0.png"
+      ],
+      "stdout": "design\\fatfish\\master_and_actions_v02\\logs\\jump_fix.stdout.txt",
+      "stderr": "design\\fatfish\\master_and_actions_v02\\logs\\jump_fix.stderr.txt"
+    }
+  },
+  "observed_cost_delta": 0.2660000000000018,
+  "last_updated_at": "2026-10-22T10:48:49.469049+00:00",
+  "status": "selected_master_and_three_pose_tests_downloaded_and_reviewed",
+  "reported_task_cost_total_usd": 0.266,
+  "finished_at": "2026-10-22T10:52:14.469687+00:00"
+}

@@ -1,0 +1,396 @@
+{
+  "name": "group_b",
+  "task_id": "img_a0416bffcc2d5a53b9ea84875abf5c68",
+  "cost_usd": 0.038,
+  "actual_sheet_size": [
+    2048,
+    2048
+  ],
+  "actual_alpha_extrema": [
+    0,
+    255
+  ],
+  "transparent_fraction": 0.7704281806945801,
+  "raw_sheet_sha256": "1aeb5ca338a81300e5f30378a260e4fbe1c18909163b23244065d89e2509980d",
+  "cells": [
+    {
+      "index": 0,
+      "role": "fixed_master",
+      "slot": 10,
+      "cell": [
+        48,
+        48,
+        688,
+        688
+      ],
+      "actual_cell_box": [
+        48,
+        48,
+        688,
+        688
+      ],
+      "actual_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 11278,
+        "nonzero_alpha_before": 72781,
+        "nonzero_alpha_after": 62139,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      },
+      "raw_file_sha256": "3dde59c964ae398d99bcd1108b237414045fc7be9712e5414c416fb456a11875"
+    },
+    {
+      "index": 1,
+      "role": "carry",
+      "slot": 4,
+      "cell": [
+        704,
+        48,
+        1344,
+        688
+      ],
+      "actual_cell_box": [
+        704,
+        48,
+        1344,
+        688
+      ],
+      "actual_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 15874,
+        "nonzero_alpha_before": 90437,
+        "nonzero_alpha_after": 75360,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      },
+      "raw_file_sha256": "ca1ed59deabaffca5f3cc04de32308311a66df5d92137a97b6bdd057c5616fef"
+    },
+    {
+      "index": 2,
+      "role": "new_target",
+      "slot": 5,
+      "cell": [
+        1360,
+        48,
+        2000,
+        688
+      ],
+      "actual_cell_box": [
+        1360,
+        48,
+        2000,
+        688
+      ],
+      "actual_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 15877,
+        "nonzero_alpha_before": 85818,
+        "nonzero_alpha_after": 70697,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      },
+      "raw_file_sha256": "fda0f7567a4a8597187e47c4711addd6d3ab87f87f8a607201f1ef549f04a3d3"
+    },
+    {
+      "index": 3,
+      "role": "new_target",
+      "slot": 6,
+      "cell": [
+        48,
+        704,
+        688,
+        1344
+      ],
+      "actual_cell_box": [
+        48,
+        704,
+        688,
+        1344
+      ],
+      "actual_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 12897,
+        "nonzero_alpha_before": 79762,
+        "nonzero_alpha_after": 67600,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      },
+      "raw_file_sha256": "fa024a779622ebc786988d195131c4308d548c7a460bcf3bab181d4b6d4b2c79"
+    },
+    {
+      "index": 4,
+      "role": "new_target",
+      "slot": 7,
+      "cell": [
+        704,
+        704,
+        1344,
+        1344
+      ],
+      "actual_cell_box": [
+        704,
+        704,
+        1344,
+        1344
+      ],
+      "actual_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 11269,
+        "nonzero_alpha_before": 70739,
+        "nonzero_alpha_after": 60077,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      },
+      "raw_file_sha256": "dcbdbc2a8a75cff08fda9b7b6d80774a3e2439dd28535733b1f4027a19386ccd"
+    },
+    {
+      "index": 5,
+      "role": "new_target",
+      "slot": 8,
+      "cell": [
+        1360,
+        704,
+        2000,
+        1344
+      ],
+      "actual_cell_box": [
+        1360,
+        704,
+        2000,
+        1344
+      ],
+      "actual_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 14635,
+        "nonzero_alpha_before": 82439,
+        "nonzero_alpha_after": 68583,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      },
+      "raw_file_sha256": "cc196d07d6c6dc4cfb444d94b3f22e9d4f328331b2d4338549be0cc39833dc5f"
+    },
+    {
+      "index": 6,
+      "role": "new_target",
+      "slot": 9,
+      "cell": [
+        48,
+        1360,
+        688,
+        2000
+      ],
+      "actual_cell_box": [
+        48,
+        1360,
+        688,
+        2000
+      ],
+      "actual_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 15280,
+        "nonzero_alpha_before": 85158,
+        "nonzero_alpha_after": 70635,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      },
+      "raw_file_sha256": "9266a805e5ad72724c3c8b7de6169dfd787e5ae08d284a17cd483dec988c3450"
+    },
+    {
+      "index": 7,
+      "role": "new_target",
+      "slot": 0,
+      "cell": [
+        704,
+        1360,
+        1344,
+        2000
+      ],
+      "actual_cell_box": [
+        704,
+        1360,
+        1344,
+        2000
+      ],
+      "actual_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 15213,
+        "nonzero_alpha_before": 83604,
+        "nonzero_alpha_after": 69179,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      },
+      "raw_file_sha256": "bc92a52b1719c939832176137395b50f49d9ba0f5aac374f7744ab5687bed5b3"
+    },
+    {
+      "index": 8,
+      "role": "new_target",
+      "slot": 1,
+      "cell": [
+        1360,
+        1360,
+        2000,
+        2000
+      ],
+      "actual_cell_box": [
+        1360,
+        1360,
+        2000,
+        2000
+      ],
+      "actual_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 14605,
+        "nonzero_alpha_before": 80723,
+        "nonzero_alpha_after": 66868,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      },
+      "raw_file_sha256": "2e65bf5f01d035c1fa2267a381b20976bc2c76af030769fd0c51bb25f5968ac6"
+    }
+  ],
+  "layout": {
+    "name": "group_b",
+    "carry_slot": 4,
+    "slots": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      0,
+      1
+    ],
+    "cells": [
+      {
+        "index": 0,
+        "role": "fixed_master",
+        "slot": 10,
+        "cell": [
+          48,
+          48,
+          688,
+          688
+        ]
+      },
+      {
+        "index": 1,
+        "role": "carry",
+        "slot": 4,
+        "cell": [
+          704,
+          48,
+          1344,
+          688
+        ]
+      },
+      {
+        "index": 2,
+        "role": "new_target",
+        "slot": 5,
+        "cell": [
+          1360,
+          48,
+          2000,
+          688
+        ]
+      },
+      {
+        "index": 3,
+        "role": "new_target",
+        "slot": 6,
+        "cell": [
+          48,
+          704,
+          688,
+          1344
+        ]
+      },
+      {
+        "index": 4,
+        "role": "new_target",
+        "slot": 7,
+        "cell": [
+          704,
+          704,
+          1344,
+          1344
+        ]
+      },
+      {
+        "index": 5,
+        "role": "new_target",
+        "slot": 8,
+        "cell": [
+          1360,
+          704,
+          2000,
+          1344
+        ]
+      },
+      {
+        "index": 6,
+        "role": "new_target",
+        "slot": 9,
+        "cell": [
+          48,
+          1360,
+          688,
+          2000
+        ]
+      },
+      {
+        "index": 7,
+        "role": "new_target",
+        "slot": 0,
+        "cell": [
+          704,
+          1360,
+          1344,
+          2000
+        ]
+      },
+      {
+        "index": 8,
+        "role": "new_target",
+        "slot": 1,
+        "cell": [
+          1360,
+          1360,
+          2000,
+          2000
+        ]
+      }
+    ],
+    "carry_input_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grid_progression_v01\\references\\group_a_last_corrected_hd.png",
+    "carry_input_sha256": "9bb272d6135e273d1cdb9df92e2fdfb39762becfd89c0a9edcadb51a8a6923af",
+    "fixed_master_cell_sha256": "e9992e60db3b39eb9c424eebd6cb924988f7843501386c9e1493487f38533665",
+    "grid_sha256": "6369b9a2de8c30666a3958bda4f6f7b13916fb195f846142aadca2f5d6a183ed"
+  }
+}

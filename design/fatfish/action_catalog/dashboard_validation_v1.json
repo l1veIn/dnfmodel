@@ -1,0 +1,42 @@
+{
+  "catalog_groups": 36,
+  "covered_original_slots": 174,
+  "fatfish_available_slots": 13,
+  "initial_status_counts": {
+    "approved": 1,
+    "partial": 3,
+    "missing": 32
+  },
+  "http_asset_checks": {
+    "images": 215,
+    "failed": 0
+  },
+  "browser_checks": {
+    "all36cards_rendered": true,
+    "frame_index174_buttons": true,
+    "approved_filter_only_walk": true,
+    "search173_opens_exact_frame": true,
+    "missing_fatfish_not_filled_with_master": true,
+    "incomplete_clip_cannot_be_approved": true,
+    "walk10_and_source28_switch": true,
+    "next_frame_and_pause": true,
+    "background_dark": true,
+    "overlay_and_guides": true,
+    "zoom3": true,
+    "jump_note_saved_and_survives_reload": true,
+    "loaded_image_errors": 0,
+    "desktop_horizontal_overflow": false
+  },
+  "screenshot": {
+    "format": "JPEG",
+    "size": [
+      1419,
+      1013
+    ],
+    "file": "dashboard_overview.jpg"
+  },
+  "launcher_health_check_passed": true,
+  "new_generation_jobs": 0,
+  "game_installation_changed": false,
+  "review_state_file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json"
+}

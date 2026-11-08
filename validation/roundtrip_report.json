@@ -1,0 +1,171 @@
+{
+  "status": "passed",
+  "layers": 27,
+  "frames": 4698,
+  "npk_entry_count": 27,
+  "results": [
+    {
+      "layer": "mg_belt0000a",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_belt0000a_mask1",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_body0000",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 37
+    },
+    {
+      "layer": "mg_cap0000c",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_cap0000c_mask1",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_coat0000a",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_coat0000a_mask1",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_coat0000b",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_coat0000b_mask1",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_coat0000c",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_coat0000c_mask1",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_face0000b",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_face0000b_mask1",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_hair0000a",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_hair0000a_mask1",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_hair0000b",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_hair0000b_mask1",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_neck0000d",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_neck0000d_mask1",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_pants0000a",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_pants0000a_mask1",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_pants0000d",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_pants0000d_mask1",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_shoes0000a",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_shoes0000a_mask1",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_shoes0000b",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    },
+    {
+      "layer": "mg_shoes0000b_mask1",
+      "frames": 174,
+      "pixels_and_coordinates_match": true,
+      "links_preserved": 0
+    }
+  ],
+  "scope": "Offline pixel/coordinate/link and archive roundtrip only; not installed or tested in game."
+}

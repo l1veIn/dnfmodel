@@ -1,0 +1,68 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大肥鱼 · Pose 步行与 H3 / Grok 对照</title>
+<style>
+:root{color-scheme:dark;font:15px/1.65 system-ui,"Microsoft YaHei",sans-serif;color:#deecf6;background:#101c28}*{box-sizing:border-box}body{margin:0}main{max-width:1410px;margin:auto;padding:22px}a{color:#82cffa;text-decoration:none}a:hover{text-decoration:underline}h1{font-size:26px;line-height:1.4;margin:10px 0}h2{font-size:16px;margin:0}.intro{color:#b3c8d8;max-width:1130px;margin:8px 0 12px}.tags{display:flex;gap:8px;flex-wrap:wrap}.tag{font-size:12px;background:#20364a;border:1px solid #3e566b;border-radius:18px;padding:3px 10px}.tag.new{border-color:#5cbaad;color:#b1f0d9}.controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:12px;background:#1a2e40;border:1px solid #3a5267;border-radius:9px;margin-top:16px}button,select{font:inherit;color:#e1eff9;background:#28455d;border:1px solid #52718b;border-radius:6px;padding:6px 10px;cursor:pointer}button.primary{background:#276f78;border-color:#65c6bb}button:disabled{opacity:.5;cursor:wait}label{font-size:13px;display:flex;align-items:center;gap:5px}input{accent-color:#6fdbcb}input[type=range]{width:160px}input:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid #8de8d9;outline-offset:2px}.counter{min-width:145px;font-variant-numeric:tabular-nums;font-size:13px}.loaded,.note{color:#a9c4d7;font-size:13px;margin:8px 0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:14px 0}.card{margin:0;background:#1a2c3e;border:1px solid #395369;border-radius:9px;overflow:hidden;min-width:0}.card.new{border-color:#60bba9;box-shadow:0 0 0 1px #376e65}.heading{padding:9px 12px}.heading p{font-size:12px;color:#9fb9cc;margin:2px 0}.stage{aspect-ratio:1;background:#808080}.stage canvas{width:100%;height:100%;display:block}.pixel canvas{image-rendering:pixelated}.caption{padding:8px 12px;color:#abc3d6;font-size:12px;min-height:54px}.finding{padding:12px 16px;background:#1b3042;border:1px solid #435e73;border-radius:9px;margin:16px 0}.finding p{margin:4px 0;font-size:13px;color:#bed2e1}.finding strong{color:#e5f4fa}.links{display:flex;gap:10px 22px;flex-wrap:wrap;margin:14px 0;font-size:14px}details{border-top:1px solid #354d62;padding:13px 0}summary{cursor:pointer;color:#cae1f0}.qa{width:100%;height:auto;border-radius:6px;margin-top:12px}.decoder{position:fixed;left:-5px;top:-5px;width:2px;height:2px;opacity:0;pointer-events:none}.large .grid{grid-template-columns:1fr;max-width:650px;margin:auto}.error{color:#ffbfc2}footer{font-size:12px;color:#88a6bd;padding:10px 0}@media(min-width:1550px){.stage{max-height:370px}.stage canvas{object-fit:contain}}@media(max-width:780px){main{padding:14px}.grid{grid-template-columns:1fr}.stage{max-height:470px}.stage canvas{object-fit:contain}h1{font-size:23px}}
+</style></head><body><main>
+<a href="../../">← 动作工作台</a>　<a href="../h3_walk_v01/preview.html">上一轮 H3 / Grok</a>
+<h1>原版骨架驱动大肥鱼 · 一轮 Pose 步行测试</h1>
+<p class="intro">新结果与旧 H3、Grok 同步播放。下方保留原版动作和实际输入骨架；可以逐帧、半速、叠加骨架检查手脚位置，也可以反复看中段一秒的循环接缝。</p>
+<div class="tags"><span class="tag new">本轮：首帧 + Pose 控制 · 仅一采</span><span class="tag">608×352 · 124帧 · 24fps</span><span class="tag">生成约111秒 · 无新增云端调用</span><span class="tag">原版10姿态 · 人工骨架</span><span class="tag">原ANI时序未核实 · 待验收</span></div>
+<div class="controls"><button id="play" class="primary" disabled>加载中</button><button id="prev" aria-label="上一帧" disabled>←</button><button id="next" aria-label="下一帧" disabled>→</button><input id="frame" type="range" min="0" max="95" value="0" aria-label="当前帧" disabled><span id="counter" class="counter">0.00秒 · 帧0 / 95</span>
+<label>片段<select id="range"><option value="common">共同前4秒</option><option value="loop">中段一秒 · 48–71帧</option><option value="full">完整输出 · Grok末帧保持</option></select></label>
+<label>速度<select id="speed"><option value="1">1×</option><option value="0.5">0.5×</option><option value="0.25">0.25×</option></select></label>
+<label>显示<select id="quality"><option value="hd">原始细节</option><option value="nn">128px最近邻</option></select></label>
+<label><input id="overlay" type="checkbox">叠加骨架到新结果</label><label><input id="guides" type="checkbox">参考线</label><label><input id="large" type="checkbox">放大</label></div>
+<p id="loaded" class="loaded" role="status">正在加载六路视频…</p>
+<p class="note">比较使用固定居中方形裁切，未逐帧重定位。旧视频按同一时间播放，步行相位未强行对齐。“中段一秒”重复原始切片，接缝没有混合修饰。</p>
+<div id="grid" class="grid">
+<figure class="card new"><figcaption class="heading"><h2>新：H3 + Pose</h2><p>608×352 · 20步 · 控制强度1.0</p></figcaption><div class="stage"><canvas id="h3_pose" width="384" height="384" aria-label="H3 Pose控制步行"></canvas></div><div class="caption">与旧H3同首帧、同种子。手脚有响应；纹样和手部仍有碎块，接地待看。</div></figure>
+<figure class="card"><figcaption class="heading"><h2>Grok · 上轮原始视频</h2><p>960×960 · 97帧 · 24fps</p></figcaption><div class="stage"><canvas id="grok" width="384" height="384" aria-label="Grok上轮步行"></canvas></div><div class="caption">仅首帧输入。这里是原视频；之前修整后通过的28帧记录保留。</div></figure>
+<figure class="card"><figcaption class="heading"><h2>H3 · 上轮二采</h2><p>864×480 · 124帧 · 24fps</p></figcaption><div class="stage"><canvas id="h3_refined" width="384" height="384" aria-label="H3上轮二采步行"></canvas></div><div class="caption">没有骨架控制。二采分辨率更高，与新结果属于方法对照。</div></figure>
+<figure class="card"><figcaption class="heading"><h2>原版女法 · 动作来源</h2><p>IMG0–9 · 实验配时一秒一轮</p></figcaption><div class="stage"><canvas id="original" width="384" height="384" aria-label="原版女法步行参考"></canvas></div><div class="caption">保留原图像素，按骨架相位选择最近的原版姿态；没有AI重绘。</div></figure>
+<figure class="card"><figcaption class="heading"><h2>实际输入的 Pose 骨架</h2><p>人工关节点 · 连续插值 · 24fps</p></figcaption><div class="stage"><canvas id="pose" width="384" height="384" aria-label="实际Pose控制骨架"></canvas></div><div class="caption">手腕、脚踝沿原图描点；隐藏关节及头部点为估计值，不包含鱼尾和呆毛。</div></figure>
+<figure class="card"><figcaption class="heading"><h2>H3 · 上轮一采</h2><p>608×352 · 124帧 · 24fps</p></figcaption><div class="stage"><canvas id="h3_first" width="384" height="384" aria-label="H3上轮一采步行"></canvas></div><div class="caption">相同首帧、相同种子，仅由提示词驱动。本轮换用原生节点加控制权重。</div></figure>
+</div>
+<div class="finding"><p><strong>本轮观察：</strong>迈腿与摆臂能响应骨架，仍有面部、手部和围裙碎块；尚不能认为已解决滑步或循环接缝。</p><p><strong>资源：</strong>记录到整卡显存峰值约10.9GiB，系统RAM最低可用约9.9GiB；后半程提交内存保护监测最低剩余约2.7GiB，未触发中止。</p><p><strong>比较范围：</strong>只生成了一段，未二采。原版ANI时序未核实；Pose只控制身体，尾巴、头发与耳部的动态仍由模型生成。</p></div>
+<div class="links"><a href="pose_walk_loop.png" target="_blank">新结果 · 中段24帧循环动画 ↗</a><a href="pose_walk_loop.mp4" target="_blank">一秒循环视频 ↗</a><a href="comparison_first4s.mp4" target="_blank">六路对照视频 ↗</a><a href="qa/generated_motion_strip.png" target="_blank">生成动作总览 ↗</a><a href="report.json" target="_blank">参数与资源记录 ↗</a></div>
+<details><summary>原版骨架叠加检查 · 10个姿态</summary><img class="qa" src="qa/source_pose_overlay.png" alt="原版十个步行姿态及人工骨架叠加" loading="lazy"><p class="note">关节点来自既有人工描点，裙内髋、膝、肘等遮挡位置仍为估计。原PNG先还原到统一坐标，再进行固定缩放，没有逐帧自动居中。</p></details>
+<details><summary>本次实际参考图与工作流</summary><img src="actual_reference.png" alt="与旧H3相同的实际参考首帧" class="qa" style="max-width:608px"><p class="note">沿用上一轮旧像素主帧，内容来自128px贴图。本轮不同时更换高清母版，便于检查控制效果。原生工作流与上一轮AIMixer流程存在差异，不能当作严格的单变量实验。</p><div class="links"><a href="evidence/workflow.json" target="_blank">ComfyUI工作流 ↗</a><a href="evidence/prompt.api.json" target="_blank">冻结的API输入 ↗</a><a href="evidence/motion.json" target="_blank">逐帧骨架坐标 ↗</a><a href="media/h3_pose_original.mp4" target="_blank">完整有声原文件 ↗</a></div></details>
+<footer>本轮结果待验收；没有全量生成、NPK或游戏目录修改。原走路通过记录与已有测试NPK保留。</footer>
+<video id="v-h3_pose" class="decoder" muted playsinline preload="auto" src="media/h3_pose_silent.mp4"></video>
+<video id="v-grok" class="decoder" muted playsinline preload="auto" src="media/grok_silent.mp4"></video>
+<video id="v-h3_refined" class="decoder" muted playsinline preload="auto" src="media/h3_refined_silent.mp4"></video>
+<video id="v-original" class="decoder" muted playsinline preload="auto" src="original_walk.mp4"></video>
+<video id="v-pose" class="decoder" muted playsinline preload="auto" src="pose_control.mp4"></video>
+<video id="v-h3_first" class="decoder" muted playsinline preload="auto" src="media/h3_first_silent.mp4"></video>
+</main><script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id),ids=['h3_pose','grok','h3_refined','original','pose','h3_first'],videos=ids.map(id=>$('v-'+id));
+const s={ready:false,playing:false,seeking:false,epoch:0,frame:0,start:0,frames:96,quality:'hd',pending:null};
+function paint(){
+ for(let i=0;i<ids.length;i++){
+  const v=videos[i],c=$(ids[i]),n=s.quality==='nn'?128:384;if(c.width!==n){c.width=n;c.height=n;}
+  const x=c.getContext('2d');x.fillStyle=ids[i]==='pose'?'#000':'#808080';x.fillRect(0,0,n,n);x.imageSmoothingEnabled=s.quality!=='nn';x.imageSmoothingQuality='high';
+  if(v.readyState>=2){const h=v.videoHeight,w=v.videoWidth;x.drawImage(v,(w-h)/2,0,h,h,0,0,n,n);}
+  if($('overlay').checked&&ids[i]==='h3_pose'&&videos[4].readyState>=2){const p=videos[4],h=p.videoHeight;x.globalCompositeOperation='screen';x.globalAlpha=.75;x.drawImage(p,(p.videoWidth-h)/2,0,h,h,0,0,n,n);x.globalAlpha=1;x.globalCompositeOperation='source-over';}
+  if($('guides').checked){x.strokeStyle='#f3c772';x.lineWidth=1;x.beginPath();x.moveTo(0,315/352*n);x.lineTo(n,315/352*n);x.stroke();x.strokeStyle='#69d8e577';x.beginPath();x.moveTo(n/2,0);x.lineTo(n/2,n);x.stroke();}
+ }
+ $('frame').value=s.frame;$('counter').textContent=`${((s.start+s.frame)/24).toFixed(2)}秒 · 帧${s.start+s.frame} / ${s.start+s.frames-1}`;
+}
+function pause(){s.epoch++;s.playing=false;videos.forEach(v=>v.pause());$('play').textContent='播放';}
+function at(v,time){return new Promise((resolve,reject)=>{const target=Math.min(time,Math.max(0,v.duration-1/24));if(Math.abs(v.currentTime-target)<.001&&v.readyState>=2){resolve();return;}const done=()=>{v.removeEventListener('seeked',done);resolve();};v.addEventListener('seeked',done,{once:true});v.currentTime=target;});}
+async function seek(frame){
+ if(!s.ready)return;s.pending=Math.max(0,Math.min(frame,s.frames-1));if(s.seeking)return;
+ s.seeking=true;try{while(s.pending!==null){const f=s.pending;s.pending=null;s.frame=f;await Promise.all(videos.map(v=>at(v,(s.start+f)/24)));paint();}}finally{s.seeking=false;}
+}
+async function play(token=s.epoch){if(!s.ready||token!==s.epoch)return;await Promise.all(videos.map(v=>v.play().catch(()=>{})));if(token!==s.epoch){if(!s.playing)videos.forEach(v=>v.pause());return;}s.playing=true;$('play').textContent='暂停';}
+async function restart(){if(s.seeking)return;pause();const token=s.epoch;await seek(0);if(token===s.epoch)await play(token);}
+$('play').onclick=()=>s.playing?pause():play();
+$('prev').onclick=async()=>{pause();await seek((s.frame-1+s.frames)%s.frames);};$('next').onclick=async()=>{pause();await seek((s.frame+1)%s.frames);};
+$('frame').oninput=async()=>{pause();await seek(Number($('frame').value));};
+$('range').onchange=async()=>{pause();const r=$('range').value;s.start=r==='loop'?48:0;s.frames=r==='loop'?24:r==='full'?124:96;$('frame').max=s.frames-1;await seek(0);$('loaded').textContent=r==='loop'?'已切到48–71帧：重复未经混合修饰的一秒片段；各视频未强行校相。':'六路已加载 · 可同步播放、逐帧与半速检查。';};
+$('speed').onchange=()=>videos.forEach(v=>v.playbackRate=Number($('speed').value));
+$('quality').onchange=()=>{s.quality=$('quality').value;$('grid').classList.toggle('pixel',s.quality==='nn');paint();};
+for(const id of ['overlay','guides'])$(id).onchange=paint;$('large').onchange=()=>document.body.classList.toggle('large',$('large').checked);
+function tick(){if(s.ready&&!s.seeking&&s.playing){const t=videos[0].currentTime;if(t>=(s.start+s.frames)/24-.012||videos[0].ended){restart();}else{s.frame=Math.max(0,Math.min(s.frames-1,Math.floor(t*24+.001)-s.start));for(const v of videos){const target=Math.min(t,Math.max(0,v.duration-1/24));if(Math.abs(v.currentTime-target)>.12)v.currentTime=target;}paint();}}requestAnimationFrame(tick);}
+async function ready(){await Promise.all(videos.map(v=>new Promise((resolve,reject)=>{if(v.readyState>=2)return resolve();v.addEventListener('loadeddata',resolve,{once:true});v.addEventListener('error',()=>reject(new Error('视频加载失败：'+v.getAttribute('src'))),{once:true});})));s.ready=true;for(const id of ['play','prev','next','frame'])$(id).disabled=false;$('play').textContent='播放';$('loaded').textContent='六路已加载 · 可同步播放、逐帧与半速检查。';await seek(0);requestAnimationFrame(tick);await play();}
+document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});ready().catch(e=>{$('loaded').textContent=e.message;$('loaded').classList.add('error');console.error(e);});
+})();
+</script></body></html>

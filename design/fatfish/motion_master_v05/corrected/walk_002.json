@@ -1,0 +1,154 @@
+{
+  "name": "walk_002",
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\registered\\walk_002_canvas.png",
+  "source_sha256": "463de7abd32530722e35b3a31340ef1c381a278ada4f4ad4626e124120a08399",
+  "output": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\corrected\\walk_002_canvas.png",
+  "output_sha256": "91f34f20942cfe9a092cb15ea22da52e8026fe8eaed5cfae0eb47bc6c3683b88",
+  "outside_fit_masks_pixels_identical": true,
+  "each_output_pixel_sampled_once_from_raw": true,
+  "head_face_reuse": false,
+  "alpha_preserved": true,
+  "fits": [
+    {
+      "label": "other_shoe",
+      "raw": [
+        478,
+        855
+      ],
+      "target": [
+        241,
+        376
+      ],
+      "root": [
+        255,
+        350
+      ],
+      "polygon": [
+        [
+          251,
+          350
+        ],
+        [
+          257,
+          351
+        ],
+        [
+          254,
+          363
+        ],
+        [
+          252,
+          372
+        ],
+        [
+          252,
+          380
+        ],
+        [
+          240,
+          382
+        ],
+        [
+          234,
+          376
+        ],
+        [
+          238,
+          369
+        ],
+        [
+          244,
+          359
+        ]
+      ],
+      "registered_endpoint": [
+        247.05113393042157,
+        375.0996085925449
+      ],
+      "before_error_native_px": 6.1177550237418155,
+      "raw_to_final_matrix": [
+        [
+          0.13433075332519154,
+          -0.02224648477388004,
+          195.8106443922259
+        ],
+        [
+          0.02224648477388004,
+          0.13433075332519154,
+          250.51338618504656
+        ]
+      ],
+      "local_rotation_degrees": 10.728134586088771,
+      "local_scale": 1.1215970343119552,
+      "fitted_endpoint": [
+        241.0,
+        376.0
+      ]
+    },
+    {
+      "label": "visible_hand",
+      "raw": [
+        502,
+        568
+      ],
+      "target": [
+        255,
+        340
+      ],
+      "root": [
+        254,
+        327
+      ],
+      "polygon": [
+        [
+          247,
+          326
+        ],
+        [
+          257,
+          326
+        ],
+        [
+          263,
+          336
+        ],
+        [
+          262,
+          345
+        ],
+        [
+          250,
+          347
+        ],
+        [
+          244,
+          340
+        ]
+      ],
+      "registered_endpoint": [
+        249.15842331867475,
+        340.20013814380775
+      ],
+      "before_error_native_px": 5.845004140324431,
+      "raw_to_final_matrix": [
+        [
+          0.10129960624183115,
+          0.049113284165254435,
+          176.25125226073618
+        ],
+        [
+          -0.04911328416525443,
+          0.10129960624183115,
+          307.11669230559755
+        ]
+      ],
+      "local_rotation_degrees": -24.54084736500656,
+      "local_scale": 0.9273381751044967,
+      "fitted_endpoint": [
+        254.99999999999994,
+        339.99999999999994
+      ]
+    }
+  ],
+  "caution": "These manual endpoints are local fitting constraints, not independent proof of correct anatomy or no sliding; inspect shoe pixels and joint seams."
+}

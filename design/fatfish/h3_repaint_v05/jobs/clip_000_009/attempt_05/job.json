@@ -1,0 +1,27 @@
+{
+  "job_id": "fatfish_full_clip_000_009_7f54c9f561b3493dade7bbead75c95b6",
+  "status": "needs_attention",
+  "mode": "one-pass",
+  "frozen_api_sha256": "01acb703fb4dd76f99a34872a3bab7ec7225868b75b756d0479ee852ac08db5c",
+  "frozen_gui_sha256": "5cf1f68002b94e14ed80fcd8067467df2614fb196d92341f140aa4dbabda37ed",
+  "stages": [
+    {
+      "name": "execute",
+      "node": "20",
+      "width": 608,
+      "height": 352,
+      "client_id": "54edd2a6-9345-4fea-89f6-e872a0e9391b",
+      "status": "running",
+      "submission_attempted": true,
+      "started_at": 1793868878.846063,
+      "prompt_id": "ddf99183-22df-4c5b-a4be-cdc43e381406",
+      "elapsed_seconds": 15.25
+    }
+  ],
+  "memory_before": {
+    "ram_available_gib": 12.945053100585938,
+    "commit_available_gib": 12.418636322021484,
+    "commit_total_gib": 40.95303726196289
+  },
+  "last_error": "ComfyUI execution failed; inspect C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\h3_repaint_v05\\jobs\\clip_000_009\\attempt_05\\execute\\history.json"
+}

@@ -1,0 +1,25 @@
+{
+  "reference_count": 1,
+  "actual_cli_body_captured_before_http": true,
+  "network_requests_during_audit": 0,
+  "wire_bytes": 78782,
+  "wire_sha256": "25242e0bf6d739c580b3a862bb1a762455c59608ee1627cc326d8e6c661b162c",
+  "request": {
+    "kind": "image",
+    "model": "gpt-image-2.5",
+    "input": {
+      "prompt": "Use case: identity-preserve. Edit the ONE attached sprite sheet.\nThere are 2 columns x 3 rows, read left-to-right then top-to-bottom. The FIRST / TOP-LEFT cell marked REF is the approved blue Fatfish whale-maid. KEEP THIS FIRST SPRITE UNCHANGED. It is the identity, costume and pixel-art style reference, not a walking pose.\nReplace the original red-haired female mage in EACH of the remaining 5 cells (IMG000 through IMG004) with this SAME blue Fatfish character. Copy the first cell's face, proportions, navy-to-cyan wavy hair, curled ahoge, white maid headband, whale-fin ears, navy long sleeves, white whale apron, gold trim, white tights, navy shoes and whale tail consistently. Do not copy the original character's red hair, hat or clothes.\nEACH TARGET CELL controls its OWN exact pose: preserve that cell's head position, torso lean, shoulder/elbow/wrist/hand positions, knees/ankles, shoe positions and left/right limb overlaps. In particular match each distinct arm swing and leg spread; do not repeat the first cell's standing pose. Sleeves must meet hands, legs stay slender, and all joints remain connected. Only adapt the character appearance to the pose. No invented intermediate poses, reordered cells, missing figures or duplicate poses.\nKeep exactly the existing sheet layout and fixed camera. Output 1365x2048 RGBA PNG. Each cell is 640x640, representing the same fixed 160x160 game-coordinate window at 4x scale. Do not auto-center or enlarge individual sprites. Keep the thin dividers and small original cell labels, remove the solid gray cell backgrounds to real alpha transparency. No painted checkerboard, floor, cast shadow, effects, weapons, motion blur, extra text or decoration. Keep the reference's restrained pixel shading and avoid smooth illustration-style repainting. Fit every full figure, hair, hands, tail and shoes wholly inside its cell.\n",
+      "n": 1,
+      "size": "2:3",
+      "resolution": "2k",
+      "image": {
+        "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\embedded_grid_compare_v01\\references\\embedded_2x3_input.png",
+        "decoded_bytes": 57511,
+        "decoded_sha256": "802ed2acfe9640c48c26acb274c6cb150f93ebc8a444ae848a6d45a46bddb1e0"
+      },
+      "background": "transparent",
+      "output_format": "png",
+      "quality": "high"
+    }
+  }
+}

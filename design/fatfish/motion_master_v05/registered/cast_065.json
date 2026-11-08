@@ -1,0 +1,51 @@
+{
+  "name": "cast_065",
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\cast_065_0.png",
+  "source_sha256": "afbf2113f1c0b1091f1f5fdf03485162371bc7f60726e0aec68ea50b8ee74de6",
+  "manual_raw_eye": [
+    503.0,
+    273.0
+  ],
+  "manual_raw_sole": [
+    446.0,
+    925.0
+  ],
+  "target_eye": [
+    246,
+    305
+  ],
+  "target_sole": [
+    238,
+    387
+  ],
+  "transformed_eye": [
+    246.0,
+    305.00000000000006
+  ],
+  "transformed_sole": [
+    238.0,
+    387.00000000000006
+  ],
+  "matrix_2x3": [
+    [
+      0.12587748889350606,
+      -0.0012653115537885808,
+      183.02905314075073
+    ],
+    [
+      0.0012653115537885808,
+      0.12587748889350606,
+      269.9989938205172
+    ]
+  ],
+  "rotation_degrees": 0.5759136987589055,
+  "uniform_scale": 0.12588384814368717,
+  "visible_bbox": [
+    202,
+    287,
+    270,
+    391
+  ],
+  "method": "One raw-to-native similarity transform using NEAREST; source alpha preserved; no local/head compositing",
+  "caution": "Eye and supporting shoe are manually annotated fitting constraints, not independent validation or proof of no foot sliding."
+}

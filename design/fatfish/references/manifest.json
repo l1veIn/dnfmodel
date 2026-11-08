@@ -1,0 +1,26 @@
+[
+  {
+    "source": "C:\\Users\\A\\Desktop\\fatfish_game\\game\\assets\\fatfish\\rig\\body.png",
+    "copy": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\references\\fatfish_game_body.png",
+    "sha256": "0F7862B147199D91F8B07309AB6376359D9B35C68D50324AF14A483A7135EBE4",
+    "role": "identity and costume reference"
+  },
+  {
+    "source": "C:\\Users\\A\\Desktop\\fatfish_game\\refs\\fatfish\\148186519_p0_master1200.jpg",
+    "copy": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\references\\maid_fullbody_reference.jpg",
+    "sha256": "588E624961406814E27B1185C9819639704323654373B49ADF09F11BDAC200C6",
+    "role": "identity and costume reference"
+  },
+  {
+    "source": "C:\\Users\\A\\Desktop\\fatfish_game\\refs\\fatfish\\147822486_p1_master1200.jpg",
+    "copy": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\references\\chibi_identity_reference.jpg",
+    "sha256": "66E642531B7F233273BBDEED05DE0E32CD8233D6D87ED15D83ECE7927C3ECDEE",
+    "role": "identity and costume reference"
+  },
+  {
+    "source": "C:\\Users\\A\\Desktop\\fatfish_game\\refs\\fatfish\\148216744_p0_master1200.jpg",
+    "copy": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\references\\character_expression_reference.jpg",
+    "sha256": "2CB16DA0067072822773868DF5ABE44560643DC6787CCA79D67F64F97CAA6662",
+    "role": "identity and costume reference"
+  }
+]

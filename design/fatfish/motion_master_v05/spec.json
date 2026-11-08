@@ -1,0 +1,159 @@
+{
+  "scope": "Six small tests only: walk slots 0-3 and one cast/jump key pose each. No full production batch or automatic game installation.",
+  "provider": "65535",
+  "model": "gpt-image-2.5",
+  "standing_master": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\nearest_standing_v04\\standing_canvas.png",
+  "master_sha256": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446",
+  "master_pixels_frozen": true,
+  "source_detail": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png",
+  "detail_sha256": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d",
+  "original_canvas": [
+    500,
+    500
+  ],
+  "window": [
+    186,
+    272,
+    314,
+    400
+  ],
+  "target_landmarks": {
+    "walk_000": {
+      "frame": 0,
+      "eye": [
+        251,
+        304
+      ],
+      "sole": [
+        278,
+        381
+      ],
+      "other_shoe": [
+        227,
+        379
+      ],
+      "hands": [
+        [
+          228,
+          335
+        ],
+        [
+          279,
+          316
+        ]
+      ]
+    },
+    "walk_001": {
+      "frame": 1,
+      "eye": [
+        254,
+        304
+      ],
+      "sole": [
+        261,
+        384
+      ],
+      "other_shoe": [
+        237,
+        376
+      ],
+      "hands": [
+        [
+          271,
+          326
+        ]
+      ]
+    },
+    "walk_002": {
+      "frame": 2,
+      "eye": [
+        255,
+        304
+      ],
+      "sole": [
+        256,
+        384
+      ],
+      "other_shoe": [
+        241,
+        376
+      ],
+      "hands": [
+        [
+          255,
+          340
+        ]
+      ]
+    },
+    "walk_003": {
+      "frame": 3,
+      "eye": [
+        252,
+        304
+      ],
+      "sole": [
+        235,
+        386
+      ],
+      "other_shoe": [
+        265,
+        376
+      ],
+      "hands": [
+        [
+          265,
+          335
+        ]
+      ]
+    },
+    "cast_065": {
+      "frame": 65,
+      "eye": [
+        246,
+        305
+      ],
+      "sole": [
+        238,
+        387
+      ],
+      "other_shoe": [
+        263,
+        367
+      ],
+      "hands": [
+        [
+          209,
+          315
+        ],
+        [
+          260,
+          337
+        ]
+      ]
+    },
+    "jump_023": {
+      "frame": 23,
+      "eye": [
+        253,
+        309
+      ],
+      "sole": [
+        230,
+        386
+      ],
+      "hands": [
+        [
+          224,
+          305
+        ]
+      ]
+    }
+  },
+  "alpha": "preserve generated alpha",
+  "normalization": "Single-pass similarity and NEAREST; no palette reduction, sharpen or alpha threshold",
+  "planned_generation_jobs": 6,
+  "budget_authorization": "Existing user instruction: 随便用，额度管够; current request authorizes a small motion preview only.",
+  "original_ani_timing_known": false,
+  "preview_timing_ms": 140,
+  "game_installation_changed": false
+}

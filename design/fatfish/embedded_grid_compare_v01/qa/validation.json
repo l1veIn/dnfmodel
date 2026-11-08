@@ -1,0 +1,57 @@
+{
+  "generation_jobs": 2,
+  "task_ids": [
+    "img_ab49440996f28629a6a6e8e2ae5a5e86",
+    "img_4df1395879b8d497545a4b022590f974"
+  ],
+  "reference_count_per_job": 1,
+  "matching_master_and_five_target_input_cells_pixel_identical": [
+    {
+      "role": "reference",
+      "slot": null,
+      "cell_pixels_sha256": "23dc5d5ef7606a5d37c58da534fdce385fd47ae29844962b3a3b3c7dacf50cb7"
+    },
+    {
+      "role": "target",
+      "slot": 0,
+      "cell_pixels_sha256": "09a35e8322dd7a33d5cc943ac7e4060f6f7d63e50e3cec037ee4b8d0c5a65fcd"
+    },
+    {
+      "role": "target",
+      "slot": 1,
+      "cell_pixels_sha256": "52dd8f15de04439254773238c850163b279a94d9c1134efdf5069e66344799a5"
+    },
+    {
+      "role": "target",
+      "slot": 2,
+      "cell_pixels_sha256": "429e1a707935ce9510e7b813d2470c77e6374f62907116a9cef7598e15567700"
+    },
+    {
+      "role": "target",
+      "slot": 3,
+      "cell_pixels_sha256": "30ee43ef5c502debea711d7b426bfb1b8b3539bae9309b6fed73bd07eef799d4"
+    },
+    {
+      "role": "target",
+      "slot": 4,
+      "cell_pixels_sha256": "3461d05a008e2e54ecce4cc5a7bfcf2653ff1953175e8c641b9b014075276584"
+    }
+  ],
+  "protected_files_unchanged": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\nearest_standing_v04\\standing_canvas.png": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20"
+  },
+  "ui": {
+    "native_160x160": true,
+    "range_8_missing_six_targets_explicitly_marked": true,
+    "range_5_single_pass_stops_at_img4": true,
+    "switch_raw_registered": true,
+    "dark_checker_backgrounds": true,
+    "original_overlay": true,
+    "images_loaded": true,
+    "horizontal_overflow": false
+  },
+  "review_state": "pending",
+  "no_extra_generation_or_npk": true
+}

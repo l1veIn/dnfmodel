@@ -1,0 +1,15 @@
+{
+  "tool": "built-in image_gen",
+  "source": "C:\\Users\\A\\.codex\\generated_images\\01a162d3-3486-7672-b581-c61f156990e2\\exec-b23b4a16-e824-4071-868f-84e723acae31.png",
+  "output": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\concepts\\fatfish_mage_v01.png",
+  "sha256": "708C2808CEE3B3B6B544845069D957D9FF0FEC430CA6428196C9C991255B8C6F",
+  "prompt": "v01_prompt.txt",
+  "references": [
+    "../references/fatfish_game_body.png",
+    "../references/maid_fullbody_reference.jpg",
+    "../../../materials/female_mage/reference_composite/contact_01.png"
+  ],
+  "purpose": "costume concept turnaround with illustrative pixel studies",
+  "status": "draft, awaiting design feedback; not a game-ready sprite sheet",
+  "created_utc": "2026-10-22T09:51:59.4154842Z"
+}

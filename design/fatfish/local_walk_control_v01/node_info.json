@@ -1,0 +1,397 @@
+{
+  "WanVaceToVideo": {
+    "WanVaceToVideo": {
+      "input": {
+        "required": {
+          "positive": [
+            "CONDITIONING",
+            {}
+          ],
+          "negative": [
+            "CONDITIONING",
+            {}
+          ],
+          "vae": [
+            "VAE",
+            {}
+          ],
+          "width": [
+            "INT",
+            {
+              "default": 832,
+              "min": 16,
+              "max": 16384,
+              "step": 16
+            }
+          ],
+          "height": [
+            "INT",
+            {
+              "default": 480,
+              "min": 16,
+              "max": 16384,
+              "step": 16
+            }
+          ],
+          "length": [
+            "INT",
+            {
+              "default": 81,
+              "min": 1,
+              "max": 16384,
+              "step": 4
+            }
+          ],
+          "batch_size": [
+            "INT",
+            {
+              "default": 1,
+              "min": 1,
+              "max": 4096
+            }
+          ],
+          "strength": [
+            "FLOAT",
+            {
+              "default": 1.0,
+              "min": 0.0,
+              "max": 1000.0,
+              "step": 0.01
+            }
+          ]
+        },
+        "optional": {
+          "control_video": [
+            "IMAGE",
+            {}
+          ],
+          "control_masks": [
+            "MASK",
+            {}
+          ],
+          "reference_image": [
+            "IMAGE",
+            {}
+          ]
+        }
+      },
+      "input_order": {
+        "required": [
+          "positive",
+          "negative",
+          "vae",
+          "width",
+          "height",
+          "length",
+          "batch_size",
+          "strength"
+        ],
+        "optional": [
+          "control_video",
+          "control_masks",
+          "reference_image"
+        ]
+      },
+      "is_input_list": false,
+      "output": [
+        "CONDITIONING",
+        "CONDITIONING",
+        "LATENT",
+        "INT"
+      ],
+      "output_is_list": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "output_name": [
+        "positive",
+        "negative",
+        "latent",
+        "trim_latent"
+      ],
+      "output_tooltips": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "output_matchtypes": null,
+      "name": "WanVaceToVideo",
+      "display_name": null,
+      "description": "",
+      "python_module": "comfy_extras.nodes_wan",
+      "category": "model/conditioning/wan/vace",
+      "output_node": false,
+      "deprecated": false,
+      "experimental": false,
+      "dev_only": false,
+      "api_node": false,
+      "price_badge": null,
+      "search_aliases": [
+        "video conditioning",
+        "video control"
+      ],
+      "essentials_category": null,
+      "has_intermediate_output": false
+    }
+  },
+  "ModelSamplingSD3": {
+    "ModelSamplingSD3": {
+      "input": {
+        "required": {
+          "model": [
+            "MODEL"
+          ],
+          "shift": [
+            "FLOAT",
+            {
+              "default": 3.0,
+              "min": 0.0,
+              "max": 100.0,
+              "step": 0.01
+            }
+          ]
+        }
+      },
+      "input_order": {
+        "required": [
+          "model",
+          "shift"
+        ]
+      },
+      "is_input_list": false,
+      "output": [
+        "MODEL"
+      ],
+      "output_is_list": [
+        false
+      ],
+      "output_name": [
+        "MODEL"
+      ],
+      "name": "ModelSamplingSD3",
+      "display_name": "ModelSamplingSD3",
+      "description": "",
+      "python_module": "comfy_extras.nodes_model_advanced",
+      "category": "model/patch/stable diffusion",
+      "output_node": false,
+      "has_intermediate_output": false,
+      "search_aliases": []
+    }
+  },
+  "LoadImage": {
+    "LoadImage": {
+      "input": {
+        "required": {
+          "image": [
+            [
+              "fatfish_local_lowmem_v01_master_gray_384.png",
+              "fatfish_local_v01_master_gray_512.png"
+            ],
+            {
+              "image_upload": true
+            }
+          ]
+        }
+      },
+      "input_order": {
+        "required": [
+          "image"
+        ]
+      },
+      "is_input_list": false,
+      "output": [
+        "IMAGE",
+        "MASK"
+      ],
+      "output_is_list": [
+        false,
+        false
+      ],
+      "output_name": [
+        "IMAGE",
+        "MASK"
+      ],
+      "name": "LoadImage",
+      "display_name": "Load Image",
+      "description": "",
+      "python_module": "nodes",
+      "category": "image",
+      "output_node": false,
+      "has_intermediate_output": false,
+      "search_aliases": [
+        "load image",
+        "open image",
+        "import image",
+        "image input",
+        "upload image",
+        "read image",
+        "image loader"
+      ],
+      "essentials_category": "Basics"
+    }
+  },
+  "ImageBatch": {
+    "ImageBatch": {
+      "input": {
+        "required": {
+          "image1": [
+            "IMAGE"
+          ],
+          "image2": [
+            "IMAGE"
+          ]
+        }
+      },
+      "input_order": {
+        "required": [
+          "image1",
+          "image2"
+        ]
+      },
+      "is_input_list": false,
+      "output": [
+        "IMAGE"
+      ],
+      "output_is_list": [
+        false
+      ],
+      "output_name": [
+        "IMAGE"
+      ],
+      "name": "ImageBatch",
+      "display_name": "Batch Images (DEPRECATED)",
+      "description": "",
+      "python_module": "nodes",
+      "category": "image/batch",
+      "output_node": false,
+      "has_intermediate_output": false,
+      "deprecated": true,
+      "search_aliases": [
+        "combine images",
+        "merge images",
+        "stack images"
+      ]
+    }
+  },
+  "VHS_LoadImages": {},
+  "LoadVideo": {
+    "LoadVideo": {
+      "input": {
+        "required": {
+          "file": [
+            "COMBO",
+            {
+              "multiselect": false,
+              "options": [],
+              "video_upload": true
+            }
+          ]
+        }
+      },
+      "input_order": {
+        "required": [
+          "file"
+        ]
+      },
+      "is_input_list": false,
+      "output": [
+        "VIDEO"
+      ],
+      "output_is_list": [
+        false
+      ],
+      "output_name": [
+        "VIDEO"
+      ],
+      "output_tooltips": [
+        null
+      ],
+      "output_matchtypes": null,
+      "name": "LoadVideo",
+      "display_name": "Load Video",
+      "description": "",
+      "python_module": "comfy_extras.nodes_video",
+      "category": "video",
+      "output_node": false,
+      "deprecated": false,
+      "experimental": false,
+      "dev_only": false,
+      "api_node": false,
+      "price_badge": null,
+      "search_aliases": [
+        "import video",
+        "open video",
+        "video file"
+      ],
+      "essentials_category": "Basics",
+      "has_intermediate_output": false
+    }
+  },
+  "GetVideoComponents": {
+    "GetVideoComponents": {
+      "input": {
+        "required": {
+          "video": [
+            "VIDEO",
+            {
+              "tooltip": "The video to extract components from."
+            }
+          ]
+        }
+      },
+      "input_order": {
+        "required": [
+          "video"
+        ]
+      },
+      "is_input_list": false,
+      "output": [
+        "IMAGE",
+        "AUDIO",
+        "FLOAT",
+        "INT"
+      ],
+      "output_is_list": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "output_name": [
+        "images",
+        "audio",
+        "fps",
+        "bit_depth"
+      ],
+      "output_tooltips": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "output_matchtypes": null,
+      "name": "GetVideoComponents",
+      "display_name": "Get Video Components",
+      "description": "Extracts all components from a video: frames, audio, framerate, and bit depth.",
+      "python_module": "comfy_extras.nodes_video",
+      "category": "video",
+      "output_node": false,
+      "deprecated": false,
+      "experimental": false,
+      "dev_only": false,
+      "api_node": false,
+      "price_badge": null,
+      "search_aliases": [
+        "extract frames",
+        "split video",
+        "video to images",
+        "demux"
+      ],
+      "essentials_category": null,
+      "has_intermediate_output": false
+    }
+  }
+}

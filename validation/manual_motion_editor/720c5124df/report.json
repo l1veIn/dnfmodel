@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "save_and_reload": true,
+    "revision_conflict": true,
+    "foreign_origin_rejected": true,
+    "invalid_edits_preserve_state": true,
+    "cpu_video_124_frames_fixed_canvas_and_timing": true,
+    "video_byte_range_seek": true,
+    "history_backup": true,
+    "walk_review_and_npk_unchanged": true
+  },
+  "qa_export": {
+    "video_url": "/motion-editor/exports/reference_000_009_8ec3a2a261.mp4",
+    "metadata_url": "/motion-editor/exports/reference_000_009_8ec3a2a261.json",
+    "frames": 124,
+    "fps": 24,
+    "seconds": 5.166666666666667,
+    "dimensions": [
+      384,
+      320
+    ]
+  },
+  "protected_sha256": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7"
+  },
+  "fixture_state": "C:\\Users\\A\\Desktop\\dnfmodel\\validation\\manual_motion_editor\\720c5124df\\fixture_manual_motion.json",
+  "note": "Fixture labels are not written to the user annotation file."
+}

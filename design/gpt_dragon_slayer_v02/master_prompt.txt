@@ -1,0 +1,33 @@
+Full-body character art for a 2D action game, used as the appearance master for animation. Draw exactly one figure. This is not a turnaround sheet.
+
+Image 1 is a three-view design sheet of one character, and it is the authority on her design: front, side and back views. Reproduce this exact design and its overall silhouette: the same very long white hair, the same long curved ridged white horns, the same large wings, the same long thick scaled tail, the same flowing ruffled sleeve drapes and the same long white gown with its side slit. Keep the design faithful. Use the side view to see how the wings, tail and sleeve drapes attach to her body.
+Image 2 is only the pose and body proportions to copy: a tall slim woman in three-quarter view facing RIGHT, standing with her legs apart and both arms hanging down at her sides. Copy only her pose, head size and body proportions, none of her colors, clothes or hair.
+
+Keep these large shapes at their full size, as in Image 1:
+- Sleeve drapes: from a band on each upper arm, a wide flowing drape with a big ruffled edge hangs down to about knee height. The drape hangs behind the forearm. Each forearm and hand stays bare and fully visible in front of it, with a lace bracelet at the wrist. Do not replace the drapes with fitted sleeves.
+- Wings: one pair of large white bat-like dragon wings from her upper back, spreading wide behind her shoulders, with clear ribs and pointed scalloped tips reaching down to about hip height. Each wing reaches about 0.28 of her height out from her back. Do not make them small or folded.
+- Tail: one long thick white scaled dragon tail from her lower back, as thick as in Image 1, with a row of small spines along its outer edge. It sweeps down behind her to the floor and curls at the tip. It reaches about 0.32 of her height behind her and passes behind her legs. Do not make it thin or short.
+- Gown: fitted high-collar sleeveless bodice with small side cutouts at the waist, and a long skirt with a high slit on the front leg. The back and side of the skirt fall to the floor in a ruffled hem with a short train behind her. At the front the hem rises so both shoes stay visible. The hem is no wider than 0.55 of her height.
+- Hair: very long wavy white hair falling behind her back to about the knees, in a few large wave shapes with several soft locks at the ends. Her face, forearms and hands stay clear of hair.
+
+Simplify only what is inside these shapes, because the game sprite is very small. Keep the silhouette and do not shrink anything to do this:
+- Knot ornaments: one in her hair, one at each hip, and two or three on the lower skirt, each drawn large and simple, as in Image 1.
+- A thin waist chain with three simple tassels instead of many small charms.
+- Tail scales as a few rows of large clear scales instead of a fine net.
+- Wing ribs as a few clean lines. A few large ruffle folds instead of many small ones.
+- White high heels with a simple ankle band.
+
+Proportions, as fractions of total height from the top of her hair to the soles of her shoes (horns may rise a little above this):
+- Chin at 0.13: a small head, about eight heads tall with long legs. Tall adult proportions, NOT chibi, no big head, no big eyes.
+- Waist at 0.32, hips at 0.46.
+
+Colors, the same as Image 1, all white and soft violet with no added color blocks:
+- Hair, gown, sleeve drapes, wings, tail and horns are clean bright white.
+- All shadows on white are soft pale lilac, RGB 208 192 232, with deeper folds in RGB 172 148 208. Never blue, never cyan, never neutral gray.
+- All outlines are dark violet, RGB 78 58 112, clean and of even weight, a little finer than bold, thick enough to separate white from white when the image is small.
+- Pale violet eyes. Warm peach skin.
+- Black line work only on the knot ornaments.
+- Do not add a dark sash, dark collar, dark cuffs, dark skirt lining, purple wings or a purple tail. None of these exist in Image 1.
+
+Style: clean cel shading, flat colors, crisp edges. No painterly texture, no pixel art.
+Fill most of the image height, with head, horns, feet, both wing tips and the tail tip fully visible and a small margin. Every shape is fully opaque. Background: completely flat uniform medium gray, RGB 128 128 128. No shadow, no floor, no effects, no text.

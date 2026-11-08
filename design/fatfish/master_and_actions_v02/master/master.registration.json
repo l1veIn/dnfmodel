@@ -1,0 +1,53 @@
+{
+  "name": "master",
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\master_0.png",
+  "sha256": "1fc0b84eb47d0dec02e83888a41d149bf7f99ce22141a9ae61230bdd11c3c418",
+  "raw_eye": [
+    565.0,
+    253.0
+  ],
+  "raw_sole": [
+    495.0,
+    993.0
+  ],
+  "target_eye": [
+    249.0,
+    305.0
+  ],
+  "target_sole": [
+    244.0,
+    386.0
+  ],
+  "actual_eye": [
+    251.796875,
+    304.671875
+  ],
+  "actual_sole": [
+    244.140625,
+    385.609375
+  ],
+  "resized_canvas": [
+    112,
+    112
+  ],
+  "scale_x": 0.109375,
+  "scale_y": 0.109375,
+  "translation": [
+    190,
+    277
+  ],
+  "landmark_method": "Manually annotated visible eye and sole, approximate 1-2 native pixels; no skeleton detector.",
+  "processing": "Global uniform resize + translation; nearest/box candidates. Clean candidate thresholds alpha at 128, no palette reduction or repainting.",
+  "source_modified": false,
+  "game_ready": false,
+  "outputs": [
+    {
+      "method": "nearest",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_nearest_canvas.png"
+    },
+    {
+      "method": "box",
+      "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_box_canvas.png"
+    }
+  ]
+}

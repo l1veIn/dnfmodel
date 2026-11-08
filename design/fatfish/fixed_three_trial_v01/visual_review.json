@@ -1,0 +1,18 @@
+{
+  "status": "awaiting_user_review",
+  "summary": "六帧均有肥鱼造型和可见尾体，高清保留版细节更清楚；IMG004–005 的后摆臂仍与原版有差异。仅局部试验，尚未通过。",
+  "observations": [
+    "Output is a 2048x2048 RGBA sheet with actual transparent pixels, nine figures and six replaced targets.",
+    "The six target faces, maid garments, hair palette and exposed dark tail bodies are visually recognizable. Tail bases remain obscured; this is not proof of correct tail attachment or structure.",
+    "The model redrew and enlarged the top three reference figures despite the keep-unchanged instruction. The frozen input reference row remains unchanged and will remain the canonical source.",
+    "HD cleaned cells retain fine costume detail. The nearest-sampled 160px version loses that fine detail and has a more speckled appearance, visible in side-by-side inspection.",
+    "The original IMG004 and IMG005 show a rear arm/hand swung behind the torso that is not faithfully reproduced in the replacements; positioning correction does not solve that local pose mismatch.",
+    "Six poses were registered by one shared scale and per-frame translation only. Eye and shoe-row alignment are fitting controls, not a no-sliding result.",
+    "Raw output has low-alpha colored RGB values outside the subject; inspect composited images on light and dark backgrounds rather than RGB alone. Exact cells and unmodified sheet are preserved separately from alpha cleanup."
+  ],
+  "manual_pose_review_complete": false,
+  "tail_body_visible_target_count": 6,
+  "tail_structure_approved": false,
+  "top_reference_figures_preserved_by_model": false,
+  "accepted_walk_record_changed": false
+}

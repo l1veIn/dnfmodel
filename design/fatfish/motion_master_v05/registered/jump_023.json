@@ -1,0 +1,51 @@
+{
+  "name": "jump_023",
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\raw\\jump_023_0.png",
+  "source_sha256": "304f40b608185b58f1a8dc0879dd35248c48507c07dfeb8e574cee5bfb8be107",
+  "manual_raw_eye": [
+    574.0,
+    280.0
+  ],
+  "manual_raw_sole": [
+    376.0,
+    909.0
+  ],
+  "target_eye": [
+    253,
+    309
+  ],
+  "target_sole": [
+    230,
+    386
+  ],
+  "transformed_eye": [
+    253.0,
+    309.0
+  ],
+  "transformed_sole": [
+    230.0,
+    386.0
+  ],
+  "matrix_2x3": [
+    [
+      0.12185261414986949,
+      0.0017914429279398407,
+      182.55499545815175
+    ],
+    [
+      -0.0017914429279398407,
+      0.12185261414986949,
+      275.909556278674
+    ]
+  ],
+  "rotation_degrees": -0.8422857863418289,
+  "uniform_scale": 0.1218657820839018,
+  "visible_bbox": [
+    216,
+    277,
+    276,
+    387
+  ],
+  "method": "One raw-to-native similarity transform using NEAREST; source alpha preserved; no local/head compositing",
+  "caution": "Eye and supporting shoe are manually annotated fitting constraints, not independent validation or proof of no foot sliding."
+}

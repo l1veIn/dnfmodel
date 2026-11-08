@@ -1,0 +1,372 @@
+{
+  "task_id": "img_02a8fa9e01d3420f5c9955669cdcfe9d",
+  "sheet_size": [
+    2048,
+    2048
+  ],
+  "sheet_sha256": "5eb2fb05c14f4e88b7a96d285a69046cf5665860968c2e66feea5a5ca51b9c67",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "transparent_fraction": 0.6926860809326172,
+  "cells": [
+    {
+      "slot": 0,
+      "cell_box": [
+        48,
+        704,
+        688,
+        1344
+      ],
+      "cell_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 18748,
+        "nonzero_alpha_before": 127830,
+        "nonzero_alpha_after": 109925,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      }
+    },
+    {
+      "slot": 1,
+      "cell_box": [
+        704,
+        704,
+        1344,
+        1344
+      ],
+      "cell_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 17777,
+        "nonzero_alpha_before": 126615,
+        "nonzero_alpha_after": 109666,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      }
+    },
+    {
+      "slot": 2,
+      "cell_box": [
+        1360,
+        704,
+        2000,
+        1344
+      ],
+      "cell_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 14162,
+        "nonzero_alpha_before": 114764,
+        "nonzero_alpha_after": 101318,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      }
+    },
+    {
+      "slot": 3,
+      "cell_box": [
+        48,
+        1360,
+        688,
+        2000
+      ],
+      "cell_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 15167,
+        "nonzero_alpha_before": 107769,
+        "nonzero_alpha_after": 93319,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      }
+    },
+    {
+      "slot": 4,
+      "cell_box": [
+        704,
+        1360,
+        1344,
+        2000
+      ],
+      "cell_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 19430,
+        "nonzero_alpha_before": 121130,
+        "nonzero_alpha_after": 102592,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      }
+    },
+    {
+      "slot": 5,
+      "cell_box": [
+        1360,
+        1360,
+        2000,
+        2000
+      ],
+      "cell_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 18896,
+        "nonzero_alpha_before": 123079,
+        "nonzero_alpha_after": 105011,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      }
+    }
+  ],
+  "model": "gpt-image-2.5",
+  "provider": "65535",
+  "cost_usd": 0.038,
+  "new_jobs": 1,
+  "target_slots": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "reference_count": 2,
+  "appearance_source_original_hd": true,
+  "registration": {
+    "shared_scale_from_640_to_native": 0.17453967029788875,
+    "shared_translation_native": [
+      18.35667116552589,
+      27.12089077412513
+    ],
+    "per_frame_scaling": false,
+    "frames": [
+      {
+        "slot": 0,
+        "eye_annotation_640": [
+          366,
+          145
+        ],
+        "integer_translation_native": [
+          -1,
+          1
+        ],
+        "translation_native": [
+          17.35667116552589,
+          28.12089077412513
+        ],
+        "target_sole_y": 132,
+        "nearest_sole_y": 132,
+        "nearest_bbox": [
+          39,
+          39,
+          112,
+          134
+        ],
+        "hd_bbox": [
+          153,
+          155,
+          445,
+          534
+        ],
+        "local_limb_warp": false
+      },
+      {
+        "slot": 1,
+        "eye_annotation_640": [
+          376,
+          156
+        ],
+        "integer_translation_native": [
+          0,
+          0
+        ],
+        "translation_native": [
+          18.35667116552589,
+          27.12089077412513
+        ],
+        "target_sole_y": 134,
+        "nearest_sole_y": 134,
+        "nearest_bbox": [
+          39,
+          38,
+          104,
+          135
+        ],
+        "hd_bbox": [
+          154,
+          151,
+          417,
+          540
+        ],
+        "local_limb_warp": false
+      },
+      {
+        "slot": 2,
+        "eye_annotation_640": [
+          365,
+          140
+        ],
+        "integer_translation_native": [
+          3,
+          1
+        ],
+        "translation_native": [
+          21.35667116552589,
+          28.12089077412513
+        ],
+        "target_sole_y": 134,
+        "nearest_sole_y": 134,
+        "nearest_bbox": [
+          48,
+          39,
+          110,
+          135
+        ],
+        "hd_bbox": [
+          192,
+          155,
+          440,
+          539
+        ],
+        "local_limb_warp": false
+      },
+      {
+        "slot": 3,
+        "eye_annotation_640": [
+          337,
+          158
+        ],
+        "integer_translation_native": [
+          5,
+          2
+        ],
+        "translation_native": [
+          23.35667116552589,
+          29.12089077412513
+        ],
+        "target_sole_y": 135,
+        "nearest_sole_y": 135,
+        "nearest_bbox": [
+          45,
+          40,
+          103,
+          136
+        ],
+        "hd_bbox": [
+          178,
+          159,
+          411,
+          542
+        ],
+        "local_limb_warp": false
+      },
+      {
+        "slot": 4,
+        "eye_annotation_640": [
+          366,
+          161
+        ],
+        "integer_translation_native": [
+          -1,
+          1
+        ],
+        "translation_native": [
+          17.35667116552589,
+          28.12089077412513
+        ],
+        "target_sole_y": 134,
+        "nearest_sole_y": 134,
+        "nearest_bbox": [
+          41,
+          39,
+          118,
+          135
+        ],
+        "hd_bbox": [
+          163,
+          155,
+          473,
+          538
+        ],
+        "local_limb_warp": false
+      },
+      {
+        "slot": 5,
+        "eye_annotation_640": [
+          359,
+          152
+        ],
+        "integer_translation_native": [
+          0,
+          1
+        ],
+        "translation_native": [
+          18.35667116552589,
+          28.12089077412513
+        ],
+        "target_sole_y": 133,
+        "nearest_sole_y": 133,
+        "nearest_bbox": [
+          40,
+          39,
+          118,
+          134
+        ],
+        "hd_bbox": [
+          156,
+          155,
+          472,
+          535
+        ],
+        "local_limb_warp": false
+      }
+    ],
+    "limitations": "Manual eye x and source shoe rows are fitting controls, not independent proof of no foot sliding. No correction of limb pose, anatomy or costume drift."
+  },
+  "review": {
+    "status": "awaiting_user_review",
+    "summary": "六帧均有肥鱼造型和可见尾体，高清保留版细节更清楚；IMG004–005 的后摆臂仍与原版有差异。仅局部试验，尚未通过。",
+    "observations": [
+      "Output is a 2048x2048 RGBA sheet with actual transparent pixels, nine figures and six replaced targets.",
+      "The six target faces, maid garments, hair palette and exposed dark tail bodies are visually recognizable. Tail bases remain obscured; this is not proof of correct tail attachment or structure.",
+      "The model redrew and enlarged the top three reference figures despite the keep-unchanged instruction. The frozen input reference row remains unchanged and will remain the canonical source.",
+      "HD cleaned cells retain fine costume detail. The nearest-sampled 160px version loses that fine detail and has a more speckled appearance, visible in side-by-side inspection.",
+      "The original IMG004 and IMG005 show a rear arm/hand swung behind the torso that is not faithfully reproduced in the replacements; positioning correction does not solve that local pose mismatch.",
+      "Six poses were registered by one shared scale and per-frame translation only. Eye and shoe-row alignment are fitting controls, not a no-sliding result.",
+      "Raw output has low-alpha colored RGB values outside the subject; inspect composited images on light and dark backgrounds rather than RGB alone. Exact cells and unmodified sheet are preserved separately from alpha cleanup."
+    ],
+    "manual_pose_review_complete": false,
+    "tail_body_visible_target_count": 6,
+    "tail_structure_approved": false,
+    "top_reference_figures_preserved_by_model": false,
+    "accepted_walk_record_changed": false
+  },
+  "accepted": false,
+  "complete_walk_cycle": false,
+  "verified_ani_sequence": false,
+  "timing": "180ms per pose for inspection only; original ANI timing unknown.",
+  "protected_files_unchanged": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\nearest_standing_v04\\standing_canvas.png": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\Fatfish_Fixed_Three_Master_v01\\fixed_reference_row.png": "cc483363496888d5acb71ebe709a27b90000cf2af7e149b5f4cc081d78ea4834",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20"
+  },
+  "npk_created": false,
+  "full_batch_started": false,
+  "game_changed": false
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "revision": 2,
+  "reviews": {
+    "walk": {
+      "decision": "approved",
+      "note": "用户确认：走路这段没问题，可以通过。",
+      "updated_at": "2026-10-23T06:13:55+08:00",
+      "source": "user_message"
+    },
+    "jump": {
+      "decision": "pending",
+      "note": "已有 IMG23 单帧小样；其余起跳、空中和落地帧待补齐，整段尚未验收。",
+      "updated_at": "2026-10-23T06:16:21+08:00",
+      "source": "local_dashboard"
+    }
+  },
+  "events": [
+    {
+      "clip_id": "walk",
+      "decision": "approved",
+      "at": "2026-10-23T06:13:55+08:00",
+      "source": "user_walk_acceptance_2026_10_23",
+      "quote": "走路这段没问题，可以通过"
+    },
+    {
+      "clip_id": "jump",
+      "decision": "pending",
+      "note": "已有 IMG23 单帧小样；其余起跳、空中和落地帧待补齐，整段尚未验收。",
+      "updated_at": "2026-10-23T06:16:21+08:00",
+      "source": "local_dashboard",
+      "revision": 2
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "task_id": "img_540e7207382d5c76b9a83d49965c70a9",
+  "sheet_size": [
+    2048,
+    2048
+  ],
+  "sheet_sha256": "7118b7e14403481958240cabd020876bb470467107f841d037b64e3b338568e1",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "transparent_fraction": 0.721771240234375,
+  "cells": [
+    {
+      "slot": 0,
+      "cell_box": [
+        48,
+        704,
+        688,
+        1344
+      ],
+      "cell_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 12730,
+        "nonzero_alpha_before": 95488,
+        "nonzero_alpha_after": 83356,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      }
+    },
+    {
+      "slot": 1,
+      "cell_box": [
+        704,
+        704,
+        1344,
+        1344
+      ],
+      "cell_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 13211,
+        "nonzero_alpha_before": 97274,
+        "nonzero_alpha_after": 84652,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      }
+    },
+    {
+      "slot": 2,
+      "cell_box": [
+        1360,
+        704,
+        2000,
+        1344
+      ],
+      "cell_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 15213,
+        "nonzero_alpha_before": 100818,
+        "nonzero_alpha_after": 86283,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      }
+    },
+    {
+      "slot": 3,
+      "cell_box": [
+        48,
+        1360,
+        688,
+        2000
+      ],
+      "cell_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 14333,
+        "nonzero_alpha_before": 98276,
+        "nonzero_alpha_after": 84698,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      }
+    },
+    {
+      "slot": 4,
+      "cell_box": [
+        704,
+        1360,
+        1344,
+        2000
+      ],
+      "cell_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 15038,
+        "nonzero_alpha_before": 99151,
+        "nonzero_alpha_after": 84793,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      }
+    },
+    {
+      "slot": 5,
+      "cell_box": [
+        1360,
+        1360,
+        2000,
+        2000
+      ],
+      "cell_size": [
+        640,
+        640
+      ],
+      "alpha_cleanup": {
+        "alpha_input_1_to_127": 14479,
+        "nonzero_alpha_before": 98459,
+        "nonzero_alpha_after": 84726,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      }
+    }
+  ]
+}

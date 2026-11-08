@@ -1,0 +1,234 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_ref2va_pruned_w6a8.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "fatfish_final_v06/clip_018_021/attempt_02/appearance.png"
+    }
+  },
+  "7": {
+    "class_type": "LoadVideo",
+    "inputs": {
+      "file": "fatfish_final_v06/clip_018_021/attempt_02/motion.mp4"
+    }
+  },
+  "8": {
+    "class_type": "GetVideoComponents",
+    "inputs": {
+      "video": [
+        "7",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Picture: Use <Picture 1> for the exact identity and costume. Use <Video 1> as the complete motion and pose timeline: replace only the character in the video. Run briskly in place with a forward torso lean and strongly alternating arms and legs. Match the source torso tilt, head orientation, arm height, hand trajectory, leg bends and body orientation in every frame, with both arms and both legs always clearly visible. Repeat this one action smoothly.Keep the exact character and body proportions from <Picture 1>: whale-girl maid with a small head, oval face, thick wavy very long deep-blue hair with a large bright sky-blue fade over its lower half, white ruffled headband, sky-blue bow, navy whale-fin ears, curled antenna hair, navy puffed sleeves with white frilled cuffs, white blouse, navy corset with gold buttons, large white frilled apron with a small blue whale emblem, navy skirt with gold trim and gold bows, white frilled hem, white stockings, navy Mary Jane shoes, and a short chubby navy whale tail with pale belly, coming out from under the skirt and hanging close behind her legs. The tail stays short and separate from the skirt and hair. Hair, ears, antenna hair and tail react naturally to the movement. Clean cel-shaded anime game sprite with bold dark outlines of even weight and flat saturated colors. Locked camera, full body always visible, flat uniform medium-gray background, no ground shadow, no scene, no cuts, no zoom, no extra people, no red hair or red clothes, no hat, no glasses, no weapons, no spell effects, no text.\nSound: Quiet neutral room tone, no speech.\nScore: No music.",
+      "width": 512,
+      "height": 512,
+      "length": 124,
+      "ref_image_size": "match",
+      "ref_images.ref_image_0": [
+        "5",
+        0
+      ],
+      "ref_videos.ref_video_0": [
+        "8",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift_video": 12.0,
+      "shift_audio": 3.0
+    }
+  },
+  "12": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 20263124
+    }
+  },
+  "13": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "10",
+        0
+      ],
+      "conditioning": [
+        "6",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "15": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "model": [
+        "10",
+        0
+      ],
+      "scheduler": "simple",
+      "steps": 20,
+      "denoise": 1.0
+    }
+  },
+  "16": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "12",
+        0
+      ],
+      "guider": [
+        "13",
+        0
+      ],
+      "sampler": [
+        "14",
+        0
+      ],
+      "sigmas": [
+        "15",
+        0
+      ],
+      "latent_image": [
+        "6",
+        1
+      ]
+    }
+  },
+  "21": {
+    "class_type": "LTXVSeparateAVLatent",
+    "inputs": {
+      "av_latent": [
+        "16",
+        0
+      ]
+    }
+  },
+  "22": {
+    "class_type": "SaveLatent",
+    "inputs": {
+      "samples": [
+        "21",
+        0
+      ],
+      "filename_prefix": "latents/fatfish_final_v06/clip_018_021_a02_video"
+    }
+  },
+  "23": {
+    "class_type": "SaveLatent",
+    "inputs": {
+      "samples": [
+        "21",
+        1
+      ],
+      "filename_prefix": "latents/fatfish_final_v06/clip_018_021_a02_audio"
+    }
+  },
+  "17": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "22",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "tile_size": 256,
+      "overlap": 64,
+      "temporal_size": 32,
+      "temporal_overlap": 8
+    }
+  },
+  "18": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "23",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ]
+    }
+  },
+  "19": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "17",
+        0
+      ],
+      "audio": [
+        "18",
+        0
+      ],
+      "fps": 24
+    }
+  },
+  "20": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "19",
+        0
+      ],
+      "filename_prefix": "video/fatfish_final_v06/clip_018_021_a02",
+      "format": "auto",
+      "format.codec": "auto"
+    }
+  }
+}

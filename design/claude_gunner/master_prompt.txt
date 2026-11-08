@@ -1,0 +1,18 @@
+Full-body character art for a 2D action game, used as the appearance master for animation at very small size, so every shape must be large and readable.
+
+Image 1 is the identity and costume authority: the same elegant young noble lady with long straight orange hair, amber eyes, calm composed expression, orange flower hair ornament with a black ribbon, high ruffled collar with an orange flower brooch and black cravat, cream-white blouse with a short capelet and full sleeves with frilled cuffs, black corset with gold buttons, and a long layered cream, black and orange gown with gold trim, orange flower bows and tassels, and a frilled hem. Keep her character and her color scheme, and simplify small ornaments into a few large clear shapes.
+Image 2 is the pose and body proportions to copy: a tall slim woman in three-quarter view facing RIGHT, with both hands held together low in front of her. Copy only her pose, head size and body proportions, none of her colors, clothes or hair.
+
+Do not draw the book. Her hands are empty.
+
+Proportions, as fractions of total height from the top of her hair to the soles of her boots:
+- Chin at 0.13: a small head, about eight heads tall with long legs. Tall adult proportions, NOT chibi.
+- Waist at 0.32.
+- Gown: floor-length, ending at 0.95 so both white lace-up boots stay visible below the hem. A full bell shape, 0.45 of her height wide at the hem, narrower than Image 1, with bold panels: cream center, orange front panel, black side panels.
+
+Hair: very long straight orange hair falling behind her back, reaching the back of her knees, held together as one large smooth mass with a few clean strands. It extends behind her no more than 0.15 of her height and never covers the front of her body. No thin flying strands.
+
+Colors: saturated warm orange hair, clean cream-white dress areas, true black panels, a little gold. Large flat areas of each.
+
+Style: clean cel shading, bold dark outlines of even weight around every shape, flat saturated colors. No painterly texture, no pixel art.
+Fill most of the image height, head and feet fully visible with a small margin. Background: completely flat uniform medium gray, RGB 128 128 128. No shadow, no floor, no effects, no text.

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>大肥鱼 · 本地低显存视频小样 v01</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,"Microsoft YaHei",sans-serif;background:#151b24;color:#e5edf6}body{max-width:1260px;margin:24px auto;padding:0 24px}h1{font-size:26px;margin-bottom:8px}p{color:#aebed0;line-height:1.7}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:#202a38;padding:16px;border-radius:12px}h2{font-size:17px;margin-top:0}video,canvas{width:100%;max-width:512px;display:block;margin:auto;background:#808080;border-radius:4px}#native,#still{image-rendering:pixelated}input{width:100%}.toolbar{display:flex;gap:16px;align-items:center;flex-wrap:wrap}button,a{background:#344a68;color:#e6f1ff;border:0;border-radius:6px;padding:9px 14px;cursor:pointer;font:inherit;text-decoration:none}.sheet{width:100%;image-rendering:pixelated}small{color:#a8b8ca}pre{white-space:pre-wrap;background:#202a38;padding:16px;border-radius:10px}summary{cursor:pointer;padding:14px 0}@media(max-width:760px){.grid{grid-template-columns:1fr}body{padding:0 12px}}
+</style>
+<h1>大肥鱼 · 本地低显存视频小样 v01</h1>
+<p>RTX 4070 SUPER · Wan2.2 TI2V 5B / FP8 · 首帧图生视频 · 384 × 384 / 25 帧 / 24 fps<br>
+这是动作可行性测试。原始视频为灰底 RGB；尚未抠透明、校正 DNF 锚点或制作动作循环。</p>
+<div class="grid">
+ <section class="panel"><h2>模型原始输出 · 384 × 384</h2><img id="full" src="frames_full/0000.png" width="384" height="384" style="display:block;width:100%;height:auto;max-width:512px;margin:auto" alt="当前原始帧"></section>
+ <section class="panel"><h2>最近邻缩至 128 × 128 · 放大查看</h2><canvas id="native" width="128" height="128"></canvas><p><small>逐帧 PNG 显示，无减色、锐化或插帧；画质判断以 PNG 为准。</small></p></section>
+</div>
+<div class="toolbar"><button id="play">播放 / 暂停</button><button id="reset">回到开头</button><label>帧 <output id="counter">0 / 24</output></label><a href="walk_full.mp4" download>下载原始视频</a><a href="walk_native_lossless.png" download>下载无损原尺寸 APNG</a></div>
+<input id="frame" type="range" min="0" max="24" step="1" value="0" aria-label="视频帧">
+<details><summary>主帧对照与无损逐帧放大</summary><div class="grid"><section class="panel"><h2>确认的站姿主帧</h2><img src="input_master.png" width="512" style="width:100%;image-rendering:pixelated"></section><section class="panel"><h2>当前帧 · 最近邻放大</h2><canvas id="still" width="128" height="128"></canvas></section></div></details>
+<h2>每 3 帧抽查 · 最近邻原尺寸</h2><img class="sheet" src="contact_sheet.png" alt="第0到24帧动作抽查">
+<p>这段测试动作偏小，仍有腿部和裙摆细节变化；末帧尚未与首帧配成循环。它验证了本机生成流程，不能直接作为 DNF 动作帧使用。</p>
+<details open><summary>实测信息</summary><pre id="metrics">载入中…</pre></details>
+<script>
+const full=document.querySelector('#full'),slider=document.querySelector('#frame'),counter=document.querySelector('#counter');
+const native=document.querySelector('#native').getContext('2d'),still=document.querySelector('#still').getContext('2d');
+const frames=Array.from({length:25},(_,i)=>{const image=new Image();image.src=`frames_native_128/${String(i).padStart(4,'0')}.png`;return image});
+const originals=Array.from({length:25},(_,i)=>{const image=new Image();image.src=`frames_full/${String(i).padStart(4,'0')}.png`;return image});
+let playing=false,startedAt=0,currentFrame=0;
+function draw(index){index=Math.max(0,Math.min(24,index));currentFrame=index;slider.value=index;counter.textContent=`${index} / 24`;const image=frames[index];if(image.complete&&image.naturalWidth){native.drawImage(image,0,0);still.drawImage(image,0,0)}if(originals[index].complete&&originals[index].naturalWidth)full.src=originals[index].src}
+frames[0].onload=()=>draw(0);
+slider.oninput=()=>{playing=false;draw(Number(slider.value))};
+document.querySelector('#play').onclick=()=>{playing=!playing;if(playing)startedAt=performance.now()-currentFrame*1000/24};
+document.querySelector('#reset').onclick=()=>{playing=false;draw(0)};
+function tick(now){if(playing)draw(Math.floor((now-startedAt)*24/1000)%25);requestAnimationFrame(tick)}requestAnimationFrame(tick);
+fetch('run_metrics.json').then(r=>r.json()).then(m=>{document.querySelector('#metrics').textContent=`首次推理总耗时：${m.elapsed_seconds.toFixed(2)} 秒（含模型载入）\n采样显存峰值：${(m.peak_gpu_used_mib_sampled/1024).toFixed(2)} GiB（整张显卡，1 秒采样）\n采样系统剩余内存最低：${m.min_system_ram_available_gib_sampled.toFixed(2)} GiB\n采样剩余提交额度最低：${m.min_commit_available_gib_sampled.toFixed(2)} GiB\n输出：${m.frames} 帧 / ${m.fps} fps / ${m.duration_seconds.toFixed(3)} 秒\n采样器：${m.sampler} / ${m.steps} 步 / FP8 权重\n固定种子：${m.seed}\n输出没有透明通道；未做 DNF 动作适配。`});
+</script>
+</html>

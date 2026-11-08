@@ -1,0 +1,22 @@
+{
+  "inspected_at": "2026-10-23T07:03:03+08:00",
+  "file": "C:\\WeGameApps\\地下城与勇士：创新世纪\\Script.pvf",
+  "bytes": 850309289,
+  "sha256": "544f282eb32402b12cb7c99e30e4f09fc2b06bb2bad863c244f1cd998e00fa32",
+  "header_hex": "363d0eca280c03c9f8285443ef9b062b80a141ae1e845a4bdf904b229ea5e7d303462685d73fe2a8b55f691b708500a2ad9c04997b10dbce815b0c000b03cfce",
+  "first_uint32_le": 3389930806,
+  "act1_magic_match": false,
+  "classic_uuid_header_plausible": false,
+  "status": "unsupported_container",
+  "plaintext_signature_matches": {
+    "character/mage/animation/": [],
+    "character\\mage\\animation/": [],
+    "mg_body0000.img": []
+  },
+  "extracted_ani_count": 0,
+  "notes": [
+    "Header compared with public ACT1 / classic UUID PVF layouts.",
+    "No matching plaintext signatures does not prove no ANI exists; encrypted content remains unread.",
+    "No process memory access, injection, game writes, or full-file memory loading."
+  ]
+}

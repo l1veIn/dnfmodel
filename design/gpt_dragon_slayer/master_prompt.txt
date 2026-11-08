@@ -1,0 +1,31 @@
+Full-body character art for a 2D action game, used as the appearance master for animation at very small size, so every shape must be large and readable.
+
+Image 1 is the identity and costume authority: the same calm, gentle young dragon woman with very long soft white hair, a pair of curved ridged dragon horns rising from her head, pointed ears, violet-blue eyes and a quiet composed expression, wearing a long white sleeveless high-collar dress with a high slit at the front of one leg, a knot-shaped flower ornament in her hair and at her hip, small dragon wings and a scaled dragon tail. Keep her character and her gentle mood, and simplify small ornaments, lace, tassels, chains and frills into a few large clear shapes.
+Image 2 is the pose and body proportions to copy: a tall slim woman in three-quarter view facing RIGHT, standing with her legs apart and both arms hanging down at her sides. Copy only her pose, head size and body proportions, none of her colors, clothes or hair.
+
+Do not draw the small blue cloud creature. Do not draw the long hanging drapes from her sleeves. Her hands are empty and bare, with warm peach skin.
+
+Proportions, as fractions of total height from the top of her hair to the soles of her shoes (horns may rise a little above this):
+- Chin at 0.13: a small head, about eight heads tall with long legs. Tall adult proportions, NOT chibi, no big head, no big eyes.
+- Waist at 0.32, hips at 0.46.
+- Dress: slim from the waist to the knee, opening gently to a hem that ends at 0.94, so both shoes stay visible below it. The hem is no wider than 0.42 of her height. The front slit shows her whole front leg from mid-thigh down, with a dark indigo lining visible along the slit, so her legs read clearly.
+
+Attachments, kept small and tucked behind her:
+- Wings: one pair of small folded dragon wings at her upper back, pointing up and out behind her shoulders. Each wing reaches no more than 0.14 of her height from her back, and stays above her waist. They never cover her arms.
+- Tail: one slim tapering tail from her lower back, curving down behind her to knee height. It reaches no more than 0.14 of her height behind her and never crosses her legs.
+
+Hair: very long soft white hair falling behind her back to her upper thighs, held together as one large smooth mass with a few clean wave shapes. It extends behind her no more than 0.13 of her height and never covers her arms, hands or the front of her body. Her face is clear of hair. No thin flying strands.
+
+Arms: bare shoulders and upper arms. A fitted white sleeve from just above the elbow to the wrist with a dark indigo cuff at the wrist. Her hands stay fully visible.
+
+Colors, chosen so the all-white design stays readable when tiny. Everything white is a clean bright white, and all white areas are shaded with clearly lavender-blue flat shadow shapes, never neutral gray:
+- Bright white: hair, dress and sleeves. The hair is separated from the dress by a thick dark outline.
+- Dark indigo, RGB 40 38 90: all outlines, a broad waist sash, the wrist cuffs, the slit lining, the high collar band and the shoe straps.
+- Deep slate violet: horns, with a pale tip.
+- Medium periwinkle violet: wing membranes and the tail scales, with dark indigo wing bones and tail ridge, so they stand out from the white hair and dress.
+- A single black knot ornament in her hair and a single larger black knot ornament at her hip on the sash, as the small accents.
+- Warm peach skin, so her arms, hands and legs stand out clearly from the white.
+- White high-heeled shoes with dark indigo straps and soles.
+
+Style: clean cel shading, bold dark indigo outlines of even, heavy weight around every shape, flat colors with strong separation. No painterly texture, no pixel art.
+Fill most of the image height, head and feet fully visible with a small margin. Background: completely flat uniform medium gray, RGB 128 128 128. No shadow, no floor, no effects, no text.

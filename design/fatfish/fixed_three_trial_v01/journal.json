@@ -1,0 +1,21 @@
+{
+  "provider": "65535",
+  "model": "gpt-image-2.5",
+  "max_jobs": 1,
+  "created_at": "2026-10-23T01:51:43.496180+00:00",
+  "jobs": {
+    "fixed_three_six_hd": {
+      "state": "downloaded",
+      "started_at": "2026-10-23T01:51:55.345387+00:00",
+      "task_id": "img_02a8fa9e01d3420f5c9955669cdcfe9d",
+      "submitted_at": "2026-10-23T01:51:58.149363+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-23T01:53:15.624446+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\fixed_three_trial_v01\\raw\\fixed_three_six_hd_0.png"
+      ],
+      "stdout": "design\\fatfish\\fixed_three_trial_v01\\logs\\fixed_three_six_hd.stdout.txt",
+      "stderr": "design\\fatfish\\fixed_three_trial_v01\\logs\\fixed_three_six_hd.stderr.txt"
+    }
+  }
+}

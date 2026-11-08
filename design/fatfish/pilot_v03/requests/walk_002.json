@@ -1,0 +1,26 @@
+{
+  "name": "walk_002",
+  "category": "walk_002",
+  "source_frame": 2,
+  "model": "gpt-image-2.5",
+  "input": {
+    "prompt": "Clean game sprite of the SAME Fatfish whale-maid DNF female mage. Single full body, transparent alpha, no text or props.\nCompact female-mage anatomy, consistent head size and limb proportions. Navy-to-cyan long wavy hair in about six broad readable locks, one curled ahoge, whale-fin ears, cyan bow and white maid headband. Navy long-sleeved dress, white chest and apron, one simple navy whale emblem, two gold waist buttons, small gold bows, one simple gold hem stripe, opaque white tights, navy Mary-Jane shoes and one compact navy whale tail.\nArt direction: clean low-resolution pixel sprite intended for a 128x128 native canvas, shown enlarged exactly 8x on a 1024 square. Big connected pixel clusters and solid interior colors. Each material has just a base, one shadow and one highlight. Navy outline, flat navy/blue/cyan/white/gold/skin palette. No stipple, grain, embroidery, intricate lace, tiny gold scribbles, isolated sparkle pixels, gritty texture, noisy gradients, blue/purple fringe, soft painted edges or tiny perforations. Simplify details that would collapse at native size. Preserve the costume rather than adding decoration.\nOnly one character. No grid, markers, lettering, scenery, floor, shadow, effects, weapon, bowl or extra limbs. Genuine alpha outside the silhouette, solid opaque colors inside the character.\n\nEDIT TARGET / STRICT GEOMETRY = Image 1, the gray DNF female mage. Repaint this exact sprite into the Fatfish whale maid; change appearance and clothing ONLY. Preserve Image 1's exact skeleton, body direction, frame coordinates, head position, shoulders, elbows, wrists, hips, knees and both shoes. Do not copy the wide-stride pose of the other references.\nIDENTITY/STYLE ONLY = Image 2, immediately preceding Fatfish frame. Image 3 is the corrected contact/identity master. Use their costume, face, pixel density, hair palette and tail design, but NOT their arm or leg pose.\nThis is adjacent original IMG frame 2. Maintain the fixed native 128x128 window enlarged 8x. Visible eye target [552, 256]; supporting/lowest shoe sole [560, 896]; other shoe sole [440, 832]; visible hand [552, 544]. Preserve the GRAY GUIDE's leg overlap and foot spacing, even if the feet are much closer together than in Image 2. Do not invent another wide walking stride. Hair/dress may naturally move, but must keep the same volume, trim and emblem.\nSingle transparent full-body output. No markers, old gray clothes/hat, text, effects, floor or shadow.\n",
+    "n": 1,
+    "size": "1:1",
+    "resolution": "1k",
+    "background": "transparent",
+    "output_format": "png",
+    "quality": "high"
+  },
+  "local_reference_paths": [
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\references\\walk_002_pose.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\sequence\\0001_reference_8x.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\corrected\\fix_walk_reference_8x.png"
+  ],
+  "reference_sha256": [
+    "dcd4555b7374a74e807cab93dac2b840b16057694049e22f19487ca4595f62e4",
+    "7dfb22df75a8ce1543466d25c24a5696f36ef206c2a93226229a32f9fe0a4a06",
+    "8a9b3e96b701960a5beb3220468c96c607fdbfa7607e36dc1576936b9b244a40"
+  ],
+  "output_directory": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\raw"
+}

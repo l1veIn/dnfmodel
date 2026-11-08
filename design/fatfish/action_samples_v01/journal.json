@@ -1,0 +1,196 @@
+{
+  "provider": "65535",
+  "model": "gpt-image-2.5",
+  "created_at": "2026-10-22T10:05:33.238340+00:00",
+  "budget_usd": 20.0,
+  "authorized_count": 12,
+  "concurrency": 4,
+  "usage_unit": "USD",
+  "baseline_usage_cost": 20.13,
+  "observed_cost_delta": 0.4559999999999995,
+  "spending_note": "Observed account usage checked before and after each four-job wave; API exposes no per-request billing cap. Other concurrent account activity can contribute to observed deltas.",
+  "jobs": {
+    "idle_01": {
+      "state": "downloaded",
+      "source_frame": 10,
+      "category": "idle",
+      "started_at": "2026-10-22T10:05:33.974188+00:00",
+      "task_id": "img_944f828ae9a17ee1d7c5d1b5cf20f57e",
+      "submitted_at": "2026-10-22T10:05:38.532210+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:06:24.825432+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png"
+      ],
+      "stdout": "design\\fatfish\\action_samples_v01\\logs\\idle_01.stdout.txt",
+      "stderr": "design\\fatfish\\action_samples_v01\\logs\\idle_01.stderr.txt"
+    },
+    "idle_02": {
+      "state": "downloaded",
+      "source_frame": 13,
+      "category": "idle",
+      "started_at": "2026-10-22T10:05:33.975183+00:00",
+      "task_id": "img_414c634849f072ff52215d9695fa23b0",
+      "submitted_at": "2026-10-22T10:05:40.897185+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:06:27.241463+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_02_0.png"
+      ],
+      "stdout": "design\\fatfish\\action_samples_v01\\logs\\idle_02.stdout.txt",
+      "stderr": "design\\fatfish\\action_samples_v01\\logs\\idle_02.stderr.txt"
+    },
+    "idle_03": {
+      "state": "downloaded",
+      "source_frame": 17,
+      "category": "idle",
+      "started_at": "2026-10-22T10:05:33.976183+00:00",
+      "task_id": "img_0e6d8d62b997d89394bc242d081ac127",
+      "submitted_at": "2026-10-22T10:05:39.570437+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:06:25.359046+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_03_0.png"
+      ],
+      "stdout": "design\\fatfish\\action_samples_v01\\logs\\idle_03.stdout.txt",
+      "stderr": "design\\fatfish\\action_samples_v01\\logs\\idle_03.stderr.txt"
+    },
+    "walk_01": {
+      "state": "downloaded",
+      "source_frame": 0,
+      "category": "walk",
+      "started_at": "2026-10-22T10:05:33.977183+00:00",
+      "task_id": "img_f9baceaf72a712c48e0c4c88d7c4cba0",
+      "submitted_at": "2026-10-22T10:05:40.327332+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:06:37.632099+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\walk_01_0.png"
+      ],
+      "stdout": "design\\fatfish\\action_samples_v01\\logs\\walk_01.stdout.txt",
+      "stderr": "design\\fatfish\\action_samples_v01\\logs\\walk_01.stderr.txt"
+    },
+    "walk_02": {
+      "state": "downloaded",
+      "source_frame": 3,
+      "category": "walk",
+      "started_at": "2026-10-22T10:06:38.930076+00:00",
+      "task_id": "img_19ffef1d2998fb2b81d0b610c50e452a",
+      "submitted_at": "2026-10-22T10:06:42.254845+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:07:28.613447+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\walk_02_0.png"
+      ],
+      "stdout": "design\\fatfish\\action_samples_v01\\logs\\walk_02.stdout.txt",
+      "stderr": "design\\fatfish\\action_samples_v01\\logs\\walk_02.stderr.txt"
+    },
+    "walk_03": {
+      "state": "downloaded",
+      "source_frame": 6,
+      "category": "walk",
+      "started_at": "2026-10-22T10:06:38.931077+00:00",
+      "task_id": "img_c2c03349f23f16f2a38ced79fc7eae46",
+      "submitted_at": "2026-10-22T10:06:42.187335+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:07:30.089831+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\walk_03_0.png"
+      ],
+      "stdout": "design\\fatfish\\action_samples_v01\\logs\\walk_03.stdout.txt",
+      "stderr": "design\\fatfish\\action_samples_v01\\logs\\walk_03.stderr.txt"
+    },
+    "cast_01": {
+      "state": "downloaded",
+      "source_frame": 62,
+      "category": "cast",
+      "started_at": "2026-10-22T10:06:38.932077+00:00",
+      "task_id": "img_c02de318d4ae712c1a83c051c9ce300c",
+      "submitted_at": "2026-10-22T10:06:42.080231+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:07:44.216038+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\cast_01_0.png"
+      ],
+      "stdout": "design\\fatfish\\action_samples_v01\\logs\\cast_01.stdout.txt",
+      "stderr": "design\\fatfish\\action_samples_v01\\logs\\cast_01.stderr.txt"
+    },
+    "cast_02": {
+      "state": "downloaded",
+      "source_frame": 64,
+      "category": "cast",
+      "started_at": "2026-10-22T10:06:38.933075+00:00",
+      "task_id": "img_04af018317629d2907f8d8881dd9069a",
+      "submitted_at": "2026-10-22T10:06:42.133331+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:07:30.883359+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\cast_02_0.png"
+      ],
+      "stdout": "design\\fatfish\\action_samples_v01\\logs\\cast_02.stdout.txt",
+      "stderr": "design\\fatfish\\action_samples_v01\\logs\\cast_02.stderr.txt"
+    },
+    "cast_03": {
+      "state": "downloaded",
+      "source_frame": 65,
+      "category": "cast",
+      "started_at": "2026-10-22T10:07:45.416372+00:00",
+      "task_id": "img_a14ce4bed5d1de812ede307ba1293358",
+      "submitted_at": "2026-10-22T10:07:48.557566+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:08:55.676514+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\cast_03_0.png"
+      ],
+      "stdout": "design\\fatfish\\action_samples_v01\\logs\\cast_03.stdout.txt",
+      "stderr": "design\\fatfish\\action_samples_v01\\logs\\cast_03.stderr.txt"
+    },
+    "jump_01": {
+      "state": "downloaded",
+      "source_frame": 22,
+      "category": "jump",
+      "started_at": "2026-10-22T10:07:45.419373+00:00",
+      "task_id": "img_97518880dab73b2f01d9e8c395733ae0",
+      "submitted_at": "2026-10-22T10:07:48.958884+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:08:59.056002+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\jump_01_0.png"
+      ],
+      "stdout": "design\\fatfish\\action_samples_v01\\logs\\jump_01.stdout.txt",
+      "stderr": "design\\fatfish\\action_samples_v01\\logs\\jump_01.stderr.txt"
+    },
+    "jump_02": {
+      "state": "downloaded",
+      "source_frame": 23,
+      "category": "jump",
+      "started_at": "2026-10-22T10:07:45.420372+00:00",
+      "task_id": "img_ffab5d24800ad616a0d382a63e9ee4b3",
+      "submitted_at": "2026-10-22T10:07:48.607630+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:08:53.111736+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\jump_02_0.png"
+      ],
+      "stdout": "design\\fatfish\\action_samples_v01\\logs\\jump_02.stdout.txt",
+      "stderr": "design\\fatfish\\action_samples_v01\\logs\\jump_02.stderr.txt"
+    },
+    "jump_03": {
+      "state": "downloaded",
+      "source_frame": 26,
+      "category": "jump",
+      "started_at": "2026-10-22T10:07:45.422373+00:00",
+      "task_id": "img_06fac7eb462e9779ca8924aeaed251fe",
+      "submitted_at": "2026-10-22T10:07:49.045068+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-22T10:08:36.640020+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\jump_03_0.png"
+      ],
+      "stdout": "design\\fatfish\\action_samples_v01\\logs\\jump_03.stdout.txt",
+      "stderr": "design\\fatfish\\action_samples_v01\\logs\\jump_03.stderr.txt"
+    }
+  },
+  "status": "all_12_downloaded",
+  "finished_at": "2026-10-22T10:08:59.719034+00:00"
+}

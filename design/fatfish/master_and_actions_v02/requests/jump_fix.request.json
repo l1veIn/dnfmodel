@@ -1,0 +1,26 @@
+{
+  "name": "jump_fix",
+  "category": "jump_fix",
+  "source_frame": 23,
+  "model": "gpt-image-2.5",
+  "input": {
+    "prompt": "Clean game sprite of the SAME Fatfish whale-maid DNF female mage. Single full body, transparent alpha, no text or props.\nCompact female-mage anatomy, consistent head size and limb proportions. Navy-to-cyan long wavy hair in about six broad readable locks, one curled ahoge, whale-fin ears, cyan bow and white maid headband. Navy long-sleeved dress, white chest and apron, one simple navy whale emblem, two gold waist buttons, small gold bows, one simple gold hem stripe, opaque white tights, navy Mary-Jane shoes and one compact navy whale tail.\nArt direction: clean low-resolution pixel sprite intended for a 128x128 native canvas, shown enlarged exactly 8x on a 1024 square. Big connected pixel clusters and solid interior colors. Each material has just a base, one shadow and one highlight. Navy outline, flat navy/blue/cyan/white/gold/skin palette. No stipple, grain, embroidery, intricate lace, tiny gold scribbles, isolated sparkle pixels, gritty texture, noisy gradients, blue/purple fringe, soft painted edges or tiny perforations. Simplify details that would collapse at native size. Preserve the costume rather than adding decoration.\nOnly one character. No grid, markers, lettering, scenery, floor, shadow, effects, weapon, bowl or extra limbs. Genuine alpha outside the silhouette, solid opaque colors inside the character.\n\nEDIT TARGET = Image 1, the existing jumping test of the same character. Preserve the exact face/design/head size/hair colors/dress/tail/pixel density. Correct ONLY the action pose. Image 2 is the STRICT gray pose/layout guide. Image 3 is the selected standing master, identity/style only.\nThe current jumping test leans too far forward and has a straight backward arm. Fix these errors to match Image 2: reduce the excessive forward lean so the head is closer above the hips and supporting/local foot; raise and BEND the elbows with hands near the back/side of the HEAD, rather than a straight arm extending at shoulder/waist level. Preserve the guide's bent arm contours and leg geometry.\nAll coordinates refer to the 1024 output canvas: target visible eye approximately (536,296), lowest/local shoe sole approximately (352,912), and visible rear hand approximately (304,264). The target eye is NOT as far right as the current image. Keep the gray guide's pelvis and knee positions. This is a local sprite-frame pose, do not add world-height displacement or dramatic perspective.\nDo not change character size to fill the frame. No props or effects. Preserve the simple gold stripe, navy whale apron emblem, white tights and single tail. Genuine transparent background; no gray guide, markers or text in the result.\n",
+    "n": 1,
+    "size": "1:1",
+    "resolution": "1k",
+    "background": "transparent",
+    "output_format": "png",
+    "quality": "high"
+  },
+  "local_reference_paths": [
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw\\jump_0.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\references\\jump_pose_gray_8x.png",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_reference_8x.png"
+  ],
+  "reference_sha256": [
+    "5d6ccfd6a3e9514d7813f53001834d94b36121ad6fcfc178c009491860e62bb9",
+    "e8c4292aac740d678575fdd0ee9daeb8a3a0d281574e56a6acd7903a9b846f4c",
+    "70ca8180075d7bd8fdcaa28e655e84c2f741aab32d630a8a143a1787d6633977"
+  ],
+  "output_directory": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\raw"
+}

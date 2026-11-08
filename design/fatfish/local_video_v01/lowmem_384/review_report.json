@@ -1,0 +1,89 @@
+{
+  "result": "One completed local feasibility video, not a game patch",
+  "successful_prompt_id": "b44e1003-726c-43bf-81b8-8f26b3a8a7a9",
+  "metrics": {
+    "elapsed_seconds": 11.622,
+    "client_observed_elapsed_seconds": 15.02,
+    "frames": 25,
+    "dimensions": [
+      384,
+      384
+    ],
+    "steps": 12,
+    "model_weight_dtype": "FP8 e4m3fn",
+    "sampler": "euler",
+    "fps": 24,
+    "duration_seconds": 1.0416666666666667,
+    "unique_png_files": 25,
+    "peak_gpu_used_mib_sampled": 10410.0,
+    "gpu_query_failures": 0,
+    "min_system_ram_available_gib_sampled": 12.494075775146484,
+    "monitor_interval_seconds": 1,
+    "alpha_output": false,
+    "seed": 20261022,
+    "min_commit_available_gib_sampled": 6.374183654785156,
+    "lossless_frame_sha256": [
+      "1e40e1a5df36d38edc2bd53fb250658e19fdf478f2abf8deee497b948a7fa2e4",
+      "cf559ed922de984ef47b14b8d9f88bf4ef797f59470a8ab1ed69076f4a194e91",
+      "6e73d1e59f7281ad2f8daaf333ccadb0d3ae4b67b4c53deb7514dd2846603b9c",
+      "efe7f8c6fce9890d5580fee49839ab63ec9ea6197cd0ec72a998dc8521c22841",
+      "6d1ea662cf1d35e8eb0fe4b4d5e3ca1f16bcddfcaf6aa88955a83a64152321c3",
+      "224c1181000cbe20e6941371b779ffb7ced41ba16c5824ad4a497cfb4dd4ebdd",
+      "100f18750761dd5a595962728076116eb4682eb2721209fe1da8d2a7752e482c",
+      "f74b4c8f2c297b1c0050274c8187073caa1a6b2c9243bfb60a5d9e64b4b6fbd6",
+      "ca42320a768237565a0abba9877745e8e1e1c81ae2a2bad922ba34c1e2888f78",
+      "e969a8f39378604ecbf5c8023d348fa039d380b09d3014b67e1163bd036e98ce",
+      "bf29e3f085d6ce7b9ad6e8de1ec765b9cd9dc5930569f5fef67ab12a7565ea9f",
+      "ce00db45332edbf61c16b146505eede51584187e76e9f11a900e6a087e32bcd6",
+      "8b896d02000c7cddcc459f32df552ca4271f35a9e867958399bae88610109cdb",
+      "6df7e98695cc61147a2685c61dc1c0c79255e6bd56aa6ce71785065aed71a46d",
+      "ac405ce6885ea5a17a62d67d2f6c8c731c15b44f5df8b7b92ee651b89970c821",
+      "ea25992dace08d76ee9bc45b6f1c2385fdd41fbb9830705a7cf980304cb0937d",
+      "79b761c25e21883c8052f711ce57c770e24fa3eda42a65b82a2a45442e29d980",
+      "d391dde8971f8ae837cc9a0e83847b2c88cddbf8ef5df72f9cdbe7718a087d31",
+      "c8a9194195714124df18a5b3b4dfbd80177e4736bb6798dc605a461248be9804",
+      "9850e4ea8bd9300c514ccf7abd4a108139feee4bf6283a35025f67f67c2d5d2a",
+      "0e40dc7064d191dca6a40aea2e11dbdc8a6c653fcbda5372df72569e5f421503",
+      "886afbd6d41a7d1f325f38c32b8ae632ea4e1d54f671011615a451b83e5e3427",
+      "6f8bd6caa7b6013821eecec648b3b244b8942e14965448b3eac47ac775878a49",
+      "823f8a4f4adb52596b18ffd529bac0b0a97d535b1ab8f5a9f548e4eb1d89bd56",
+      "e4431c90ccce75e41b9fe157f2c92ea96d0c7cf13b1bf81b7434668aa64903d2"
+    ],
+    "game_ready": false
+  },
+  "validation": {
+    "source_png_sha256": true,
+    "native_nearest_pixel_readback": true,
+    "apng_pixel_readback": true,
+    "ffprobe": {
+      "width": 384,
+      "height": 384,
+      "r_frame_rate": "24/1",
+      "duration": "1.041667",
+      "nb_frames": "25"
+    },
+    "memory_guard_triggered": false
+  },
+  "visual_review": {
+    "character_identity": "Broad silhouette, colors and costume retained",
+    "motion": "Small stepping/weight shift; not a full walk cycle",
+    "issues": [
+      "Leg/shoe and apron/hem details vary",
+      "First/last poses are not matched",
+      "Gray RGB background, no alpha",
+      "No DNF ANI timing/anchor adaptation"
+    ]
+  },
+  "attempt_history": "Six preceding FP16 startup/solver/interruption attempts saved in design/fatfish/local_video_v01/attempts",
+  "previous_system_events": "22:30 app crash and NVIDIA event observed; causal relationship unconfirmed",
+  "source_files_changed": false,
+  "game_installation_changed": false,
+  "paid_api_used": false,
+  "next_step": "Review the small clip before any increased resolution, length or batch; motion controls still needed",
+  "memory_guard_limits": "Interrupts at execution boundaries; reserve-vram is not a hard cap and one-second telemetry can miss shorter peaks",
+  "technical_sources": [
+    "https://docs.comfy.org/tutorials/video/wan/wan2_2",
+    "https://github.com/Comfy-Org/ComfyUI/issues/15255",
+    "https://github.com/Comfy-Org/ComfyUI/issues/14250"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "canvas": [
+    500,
+    500
+  ],
+  "frames": [
+    {
+      "frame_index": 0,
+      "file": "0000.png",
+      "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\corrected\\fix_walk_canvas.png",
+      "sha256": "ecc2390b3dad041468a102b7225d270dc93fe36c8b12e69ec2813e68c85d9702"
+    },
+    {
+      "frame_index": 1,
+      "file": "0001.png",
+      "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\sequence\\0001_canvas.png",
+      "sha256": "6310d2579d5ad222cca6ed3825750fab61d8225ae046cd1215d9cb2f6587ba4e"
+    },
+    {
+      "frame_index": 2,
+      "file": "0002.png",
+      "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\sequence\\0002_canvas.png",
+      "sha256": "dd94165c67cc5f568dcbdfa1b9d375e2d07fab21a8021b1a5b8ae224d8261e00"
+    },
+    {
+      "frame_index": 3,
+      "file": "0003.png",
+      "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\sequence\\0003_canvas.png",
+      "sha256": "5ba28f2b6ab350970ea7a009244ee4bfbcafe3e1426eefdf7b16137f597fd757"
+    },
+    {
+      "frame_index": 10,
+      "file": "0010.png",
+      "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\master_and_actions_v02\\master\\master_feet_clean_canvas.png",
+      "sha256": "df18b70d927eb86205e783d5c2881fc44b967bf4ec9764adf3680156da121ab8"
+    },
+    {
+      "frame_index": 23,
+      "file": "0023.png",
+      "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\corrected\\fix_jump_canvas.png",
+      "sha256": "5796bc10867d767d4bf39a1499dfed1e5354ab396f607bc93573d446f645ea44"
+    },
+    {
+      "frame_index": 65,
+      "file": "0065.png",
+      "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\corrected\\fix_cast_canvas.png",
+      "sha256": "8f7cb704f35ee410d807ce7fb28c44b9bca4edc163e12bb5e36e4d95419b9f40"
+    }
+  ],
+  "unlisted_slots": "Standing frame 10 in pilot IMG"
+}

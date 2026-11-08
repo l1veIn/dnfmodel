@@ -1,0 +1,18 @@
+{
+  "status": "candidate_for_motion_review",
+  "summary": "四个空格已补出完整肥鱼人物，尾体也保留；中间摆臂仍有重复回摆，头部和衣摆仍有变化。先看连续播放，尚不能判定已解决抖动。",
+  "observations": [
+    "Exactly six lower figures were produced from only two original pose anchors. The four initially empty cells contain visible intermediate characters with hair, costume, tail bodies, hands and shoes.",
+    "The model moved grid dividers and enlarged the effective cells. Actual-output split windows were measured and revised to retain the complete shoe soles. Original input and output sheets remain preserved.",
+    "Each old/new sequence uses its own constant scale and the same endpoint-only registration algorithm. Original intermediate landmarks were not used for fitting either sequence.",
+    "Middle poses are synthesized alternatives, not established replacements for IMG001..004. End-pose wrist overlap is not precisely locked to the original guide.",
+    "Arm placement alternates through similar front/back presentations across the middle panels rather than forming a strictly monotonic swing. Face/hair/hem/tail shapes still vary; a smoother result is not assumed from successful filling alone.",
+    "No local limb warping, repainting, extra image task or NPK creation was performed. Prior NPK files and accepted walk record remain unchanged."
+  ],
+  "filled_middle_cells": 4,
+  "lower_full_figures": 6,
+  "tail_bodies_visible": 6,
+  "all_jitter_solved": false,
+  "game_ready": false,
+  "accepted": false
+}

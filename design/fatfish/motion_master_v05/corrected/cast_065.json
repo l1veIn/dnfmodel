@@ -1,0 +1,210 @@
+{
+  "name": "cast_065",
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\registered\\cast_065_canvas.png",
+  "source_sha256": "0b44f1e4c1ce88b298f94e689daae8c230aa25870973c7e88ead38a38984d987",
+  "output": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\motion_master_v05\\corrected\\cast_065_canvas.png",
+  "output_sha256": "750560d96ef49b3d64fbe7f94778bc4f40690250317df633dec651d13e74ed52",
+  "outside_fit_masks_pixels_identical": true,
+  "each_output_pixel_sampled_once_from_raw": true,
+  "head_face_reuse": false,
+  "alpha_preserved": true,
+  "fits": [
+    {
+      "label": "left_hand",
+      "raw": [
+        195,
+        356
+      ],
+      "target": [
+        209,
+        315
+      ],
+      "root": [
+        232,
+        313
+      ],
+      "polygon": [
+        [
+          198,
+          301
+        ],
+        [
+          232,
+          301
+        ],
+        [
+          232,
+          326
+        ],
+        [
+          198,
+          326
+        ]
+      ],
+      "registered_endpoint": [
+        207.12471256183568,
+        315.05811561959416
+      ],
+      "before_error_native_px": 1.8761877307395747,
+      "raw_to_final_matrix": [
+        [
+          0.11643314631440652,
+          -0.0006826077913876258,
+          186.53854484242473
+        ],
+        [
+          0.0006826077913876258,
+          0.1164331463144065,
+          273.4166913927507
+        ]
+      ],
+      "local_rotation_degrees": -0.24001195024466,
+      "local_scale": 0.9249411180419631,
+      "fitted_endpoint": [
+        209.0,
+        315.0
+      ]
+    },
+    {
+      "label": "right_hand",
+      "raw": [
+        597,
+        545
+      ],
+      "target": [
+        260,
+        337
+      ],
+      "root": [
+        253,
+        329
+      ],
+      "polygon": [
+        [
+          251,
+          327
+        ],
+        [
+          258,
+          327
+        ],
+        [
+          264,
+          338
+        ],
+        [
+          263,
+          344
+        ],
+        [
+          254,
+          343
+        ],
+        [
+          249,
+          337
+        ]
+      ],
+      "registered_endpoint": [
+        257.4883192133591,
+        339.3576162650898
+      ],
+      "before_error_native_px": 3.44483596523798,
+      "raw_to_final_matrix": [
+        [
+          0.11325450423856476,
+          0.035017474404153384,
+          173.30253741931324
+        ],
+        [
+          -0.03501747440415338,
+          0.11325450423856476,
+          296.1817274092618
+        ]
+      ],
+      "local_rotation_degrees": -17.757144652918008,
+      "local_scale": 0.9416977197161543,
+      "fitted_endpoint": [
+        260.0,
+        337.0
+      ]
+    },
+    {
+      "label": "other_shoe",
+      "raw": [
+        619,
+        756
+      ],
+      "target": [
+        263,
+        367
+      ],
+      "root": [
+        251,
+        352
+      ],
+      "polygon": [
+        [
+          249,
+          352
+        ],
+        [
+          255,
+          352
+        ],
+        [
+          256,
+          356
+        ],
+        [
+          262,
+          358
+        ],
+        [
+          265,
+          365
+        ],
+        [
+          267,
+          374
+        ],
+        [
+          256,
+          375
+        ],
+        [
+          252,
+          369
+        ],
+        [
+          249,
+          362
+        ]
+      ],
+      "registered_endpoint": [
+        259.9906432311668,
+        365.9456032758029
+      ],
+      "before_error_native_px": 3.188727115028765,
+      "raw_to_final_matrix": [
+        [
+          0.14512035451655877,
+          0.013396685441394818,
+          163.04260636055562
+        ],
+        [
+          -0.013396685441394818,
+          0.14512035451655877,
+          265.581560273705
+        ]
+      ],
+      "local_rotation_degrees": -5.850185636750703,
+      "local_scale": 1.1577132233209921,
+      "fitted_endpoint": [
+        263.0,
+        367.00000000000006
+      ]
+    }
+  ],
+  "caution": "These manual endpoints are local fitting constraints, not independent proof of correct anatomy or no sliding; inspect shoe pixels and joint seams."
+}

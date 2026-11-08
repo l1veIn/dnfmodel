@@ -1,0 +1,98 @@
+{
+  "static": {
+    "counter": "2.25秒 · 帧54 / 71",
+    "decoderEvidenceAvailable": true,
+    "mainVideos": [
+      {
+        "id": "v-h3_pose",
+        "paused": true,
+        "ready": 4,
+        "seekableEnd": 5.166667,
+        "time": 2.25
+      },
+      {
+        "id": "v-grok",
+        "paused": true,
+        "ready": 4,
+        "seekableEnd": 4.041667,
+        "time": 2.25
+      },
+      {
+        "id": "v-h3_refined",
+        "paused": true,
+        "ready": 4,
+        "seekableEnd": 5.166667,
+        "time": 2.25
+      },
+      {
+        "id": "v-original",
+        "paused": true,
+        "ready": 4,
+        "seekableEnd": 5.166667,
+        "time": 2.25
+      },
+      {
+        "id": "v-pose",
+        "paused": true,
+        "ready": 4,
+        "seekableEnd": 5.166667,
+        "time": 2.25
+      },
+      {
+        "id": "v-h3_first",
+        "paused": true,
+        "ready": 4,
+        "seekableEnd": 5.166667,
+        "time": 2.25
+      }
+    ],
+    "url": "http://127.0.0.1:8790/trials/h3_pose_walk_v02/preview.html"
+  },
+  "playing": {
+    "counter": "2.92秒 · 帧70 / 71",
+    "mainVideos": [
+      {
+        "id": "v-h3_pose",
+        "paused": false,
+        "rate": 0.5,
+        "ready": 4,
+        "time": 2.947668
+      },
+      {
+        "id": "v-grok",
+        "paused": false,
+        "rate": 0.5,
+        "ready": 4,
+        "time": 2.947628
+      },
+      {
+        "id": "v-h3_refined",
+        "paused": false,
+        "rate": 0.5,
+        "ready": 4,
+        "time": 2.9476
+      },
+      {
+        "id": "v-original",
+        "paused": false,
+        "rate": 0.5,
+        "ready": 4,
+        "time": 2.947589
+      },
+      {
+        "id": "v-pose",
+        "paused": false,
+        "rate": 0.5,
+        "ready": 4,
+        "time": 2.947588
+      },
+      {
+        "id": "v-h3_first",
+        "paused": false,
+        "rate": 0.5,
+        "ready": 4,
+        "time": 2.947581
+      }
+    ]
+  }
+}

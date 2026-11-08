@@ -1,0 +1,24 @@
+{
+  "embedded_3x3": {
+    "id": "img_ab49440996f28629a6a6e8e2ae5a5e86",
+    "model": "gpt-image-2.5",
+    "status": "done",
+    "cost_usd": 0.038,
+    "error_code": "",
+    "error_message": "",
+    "created_at": "2026-10-23T00:27:00.02269Z",
+    "started_at": "2026-10-23T00:27:00.026106Z",
+    "finished_at": "2026-10-23T00:27:51.073294Z"
+  },
+  "embedded_2x3": {
+    "id": "img_4df1395879b8d497545a4b022590f974",
+    "model": "gpt-image-2.5",
+    "status": "done",
+    "cost_usd": 0.038,
+    "error_code": "",
+    "error_message": "",
+    "created_at": "2026-10-23T00:26:59.998987Z",
+    "started_at": "2026-10-23T00:27:00.00231Z",
+    "finished_at": "2026-10-23T00:27:59.000268Z"
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "inspected_at": "2026-10-23T07:03:01+08:00",
+  "source_file": "C:\\Users\\A\\Desktop\\dnfmodel\\docs\\ani_research\\format_sample_move.ani",
+  "sha256": "1a8d88e792f5b16f21c2d2e79d93eeb964b6a49c0779a407538e4a732c123a7b",
+  "format": "text_ani",
+  "frame_count": 8,
+  "overall_tags": [
+    {
+      "tag": "LOOP",
+      "value": "1",
+      "line": 2
+    },
+    {
+      "tag": "FRAME MAX",
+      "value": "8",
+      "line": 5
+    }
+  ],
+  "frames": [
+    {
+      "ani_frame": 0,
+      "line": 7,
+      "image": {
+        "path": "Character/Priest/Equipment/Avatar/skin/pr_body%04d.img",
+        "img_slot": 65
+      },
+      "image_pos": [
+        -222,
+        -314
+      ],
+      "delay_ms": 100,
+      "tags": [
+        {
+          "tag": "IMAGE",
+          "value": "`Character/Priest/Equipment/Avatar/skin/pr_body%04d.img`\n\t\t65",
+          "line": 9
+        },
+        {
+          "tag": "IMAGE POS",
+          "value": "-222\t-314",
+          "line": 12
+        },
+        {
+          "tag": "DELAY",
+          "value": "100",
+          "line": 14
+        },
+        {
+          "tag": "DAMAGE BOX",
+          "value": "-17\t-7\t0\t38\t14\t115",
+          "line": 16
+        }
+      ]
+    },
+    {
+      "ani_frame": 1,
+      "line": 18,
+      "image": {
+        "path": "Character/Priest/Equipment/Avatar/skin/pr_body%04d.img",
+        "img_slot": 66
+      },
+      "image_pos": [
+        -222,
+        -314
+      ],
+      "delay_ms": 100,
+      "tags": [
+        {
+          "tag": "IMAGE",
+          "value": "`Character/Priest/Equipment/Avatar/skin/pr_body%04d.img`\n\t\t66",
+          "line": 20
+        },
+        {
+          "tag": "IMAGE POS",
+          "value": "-222\t-314",
+          "line": 23
+        },
+        {
+          "tag": "DELAY",
+          "value": "100",
+          "line": 25
+        },
+        {
+          "tag": "DAMAGE BOX",
+          "value": "-17\t-7\t0\t38\t14\t115",
+          "line": 27
+        }
+      ]
+    },
+    {
+      "ani_frame": 2,
+      "line": 29,
+      "image": {
+        "path": "Character/Priest/Equipment/Avatar/skin/pr_body%04d.img",
+        "img_slot": 67
+      },
+      "image_pos": [
+        -222,
+        -314
+      ],
+      "delay_ms": 100,
+      "tags": [
+        {
+          "tag": "IMAGE",
+          "value": "`Character/Priest/Equipment/Avatar/skin/pr_body%04d.img`\n\t\t67",
+          "line": 31
+        },
+        {
+          "tag": "IMAGE POS",
+          "value": "-222\t-314",
+          "line": 34
+        },
+        {
+          "tag": "DELAY",
+          "value": "100",
+          "line": 36
+        },
+        {
+          "tag": "DAMAGE BOX",
+          "value": "-17\t-7\t0\t38\t14\t115",
+          "line": 38
+        }
+      ]
+    },
+    {
+      "ani_frame": 3,
+      "line": 40,
+      "image": {
+        "path": "Character/Priest/Equipment/Avatar/skin/pr_body%04d.img",
+        "img_slot": 68
+      },
+      "image_pos": [
+        -222,
+        -314
+      ],
+      "delay_ms": 100,
+      "tags": [
+        {
+          "tag": "IMAGE",
+          "value": "`Character/Priest/Equipment/Avatar/skin/pr_body%04d.img`\n\t\t68",
+          "line": 42
+        },
+        {
+          "tag": "IMAGE POS",
+          "value": "-222\t-314",
+          "line": 45
+        },
+        {
+          "tag": "DELAY",
+          "value": "100",
+          "line": 47
+        },
+        {
+          "tag": "DAMAGE BOX",
+          "value": "-17\t-7\t0\t38\t14\t115",
+          "line": 49
+        }
+      ]
+    },
+    {
+      "ani_frame": 4,
+      "line": 51,
+      "image": {
+        "path": "Character/Priest/Equipment/Avatar/skin/pr_body%04d.img",
+        "img_slot": 69
+      },
+      "image_pos": [
+        -222,
+        -314
+      ],
+      "delay_ms": 100,
+      "tags": [
+        {
+          "tag": "IMAGE",
+          "value": "`Character/Priest/Equipment/Avatar/skin/pr_body%04d.img`\n\t\t69",
+          "line": 53
+        },
+        {
+          "tag": "IMAGE POS",
+          "value": "-222\t-314",
+          "line": 56
+        },
+        {
+          "tag": "DELAY",
+          "value": "100",
+          "line": 58
+        },
+        {
+          "tag": "DAMAGE BOX",
+          "value": "-17\t-7\t0\t38\t14\t115",
+          "line": 60
+        }
+      ]
+    },
+    {
+      "ani_frame": 5,
+      "line": 62,
+      "image": {
+        "path": "Character/Priest/Equipment/Avatar/skin/pr_body%04d.img",
+        "img_slot": 70
+      },
+      "image_pos": [
+        -222,
+        -314
+      ],
+      "delay_ms": 100,
+      "tags": [
+        {
+          "tag": "IMAGE",
+          "value": "`Character/Priest/Equipment/Avatar/skin/pr_body%04d.img`\n\t\t70",
+          "line": 64
+        },
+        {
+          "tag": "IMAGE POS",
+          "value": "-222\t-314",
+          "line": 67
+        },
+        {
+          "tag": "DELAY",
+          "value": "100",
+          "line": 69
+        },
+        {
+          "tag": "DAMAGE BOX",
+          "value": "-17\t-7\t0\t38\t14\t115",
+          "line": 71
+        }
+      ]
+    },
+    {
+      "ani_frame": 6,
+      "line": 73,
+      "image": {
+        "path": "Character/Priest/Equipment/Avatar/skin/pr_body%04d.img",
+        "img_slot": 71
+      },
+      "image_pos": [
+        -222,
+        -314
+      ],
+      "delay_ms": 100,
+      "tags": [
+        {
+          "tag": "IMAGE",
+          "value": "`Character/Priest/Equipment/Avatar/skin/pr_body%04d.img`\n\t\t71",
+          "line": 75
+        },
+        {
+          "tag": "IMAGE POS",
+          "value": "-222\t-314",
+          "line": 78
+        },
+        {
+          "tag": "DELAY",
+          "value": "100",
+          "line": 80
+        },
+        {
+          "tag": "DAMAGE BOX",
+          "value": "-17\t-7\t0\t38\t14\t115",
+          "line": 82
+        }
+      ]
+    },
+    {
+      "ani_frame": 7,
+      "line": 84,
+      "image": {
+        "path": "Character/Priest/Equipment/Avatar/skin/pr_body%04d.img",
+        "img_slot": 72
+      },
+      "image_pos": [
+        -222,
+        -314
+      ],
+      "delay_ms": 100,
+      "tags": [
+        {
+          "tag": "IMAGE",
+          "value": "`Character/Priest/Equipment/Avatar/skin/pr_body%04d.img`\n\t\t72",
+          "line": 86
+        },
+        {
+          "tag": "IMAGE POS",
+          "value": "-222\t-314",
+          "line": 89
+        },
+        {
+          "tag": "DELAY",
+          "value": "100",
+          "line": 91
+        },
+        {
+          "tag": "DAMAGE BOX",
+          "value": "-17\t-7\t0\t38\t14\t115",
+          "line": 93
+        }
+      ]
+    }
+  ],
+  "timing_complete": true,
+  "version_verified": false,
+  "character_state_reference_verified": false,
+  "admitted_to_dashboard": false
+}

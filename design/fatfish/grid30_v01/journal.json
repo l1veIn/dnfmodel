@@ -1,0 +1,60 @@
+{
+  "provider": "65535",
+  "model": "gpt-image-2.5",
+  "max_jobs": 4,
+  "created_at": "2026-10-23T02:05:49.324827+00:00",
+  "jobs": {
+    "group_01": {
+      "state": "downloaded",
+      "started_at": "2026-10-23T02:05:49.457163+00:00",
+      "task_id": "img_909ad9d03526186164818aeeb4c09263",
+      "submitted_at": "2026-10-23T02:05:52.532327+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-23T02:06:43.857139+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grid30_v01\\raw\\group_01_0.png"
+      ],
+      "stdout": "design\\fatfish\\grid30_v01\\logs\\group_01.stdout.txt",
+      "stderr": "design\\fatfish\\grid30_v01\\logs\\group_01.stderr.txt"
+    },
+    "group_02": {
+      "state": "downloaded",
+      "started_at": "2026-10-23T02:05:49.458162+00:00",
+      "task_id": "img_540e7207382d5c76b9a83d49965c70a9",
+      "submitted_at": "2026-10-23T02:05:52.175757+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-23T02:06:46.300358+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grid30_v01\\raw\\group_02_0.png"
+      ],
+      "stdout": "design\\fatfish\\grid30_v01\\logs\\group_02.stdout.txt",
+      "stderr": "design\\fatfish\\grid30_v01\\logs\\group_02.stderr.txt"
+    },
+    "group_03": {
+      "state": "downloaded",
+      "started_at": "2026-10-23T02:05:49.459163+00:00",
+      "task_id": "img_1d6995484616b46b79480e443f97ccaf",
+      "submitted_at": "2026-10-23T02:05:52.336442+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-23T02:06:49.163018+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grid30_v01\\raw\\group_03_0.png"
+      ],
+      "stdout": "design\\fatfish\\grid30_v01\\logs\\group_03.stdout.txt",
+      "stderr": "design\\fatfish\\grid30_v01\\logs\\group_03.stderr.txt"
+    },
+    "group_04": {
+      "state": "downloaded",
+      "started_at": "2026-10-23T02:05:49.460164+00:00",
+      "task_id": "img_949898423e12eec511474b83cef3dc10",
+      "submitted_at": "2026-10-23T02:05:52.138216+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-10-23T02:07:10.581219+00:00",
+      "files": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grid30_v01\\raw\\group_04_0.png"
+      ],
+      "stdout": "design\\fatfish\\grid30_v01\\logs\\group_04.stdout.txt",
+      "stderr": "design\\fatfish\\grid30_v01\\logs\\group_04.stderr.txt"
+    }
+  }
+}

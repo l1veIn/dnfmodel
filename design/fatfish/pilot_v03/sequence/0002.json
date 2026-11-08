@@ -1,0 +1,55 @@
+{
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\pilot_v03\\registered\\walk_002_clean_canvas.png",
+  "original_img_frame": 2,
+  "head_lock_source": "corrected/fix_walk_canvas.png",
+  "head_translation": [
+    4,
+    0
+  ],
+  "head_mask_polygon": [
+    [
+      236,
+      280
+    ],
+    [
+      269,
+      280
+    ],
+    [
+      272,
+      311
+    ],
+    [
+      261,
+      322
+    ],
+    [
+      245,
+      320
+    ],
+    [
+      234,
+      308
+    ]
+  ],
+  "head_lock_is_explicit_compositing": true,
+  "targets": {
+    "eye": [
+      255,
+      304
+    ],
+    "sole": [
+      256,
+      384
+    ],
+    "other_shoe": [
+      241,
+      376
+    ],
+    "visible_hand": [
+      255,
+      340
+    ]
+  },
+  "note": "Inspect legs, hands and hair/skirt continuity separately; locked face is not an independent consistency result."
+}

@@ -1,0 +1,10 @@
+{
+  "response": {
+    "name": "fatfish_same_grok_5e3b17371e2008.png",
+    "subfolder": "h3_inputs",
+    "type": "input"
+  },
+  "actual_input_file": "D:\\VideoStudio\\comfyUI\\shared\\input\\h3_inputs\\fatfish_same_grok_5e3b17371e2008.png",
+  "uploaded_sha256": "5e3b17371e2008b9a4d7a604c3712590dd0d4da65f91adb5acad5d185fb5ed87",
+  "verified_uploaded_bytes": true
+}

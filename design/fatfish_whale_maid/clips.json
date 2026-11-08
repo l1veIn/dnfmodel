@@ -1,0 +1,391 @@
+{
+ "note": "Segments from the user's annotation (manual_motion.json revision 26), not parsed ANI; split where one sheet cannot hold them. action names the annotated segment.",
+ "clips": [
+  {
+   "name": "默认走路",
+   "action": "默认走路",
+   "start": 0,
+   "end": 9,
+   "sheet": "walk",
+   "anchor": "head"
+  },
+  {
+   "name": "待机站立",
+   "action": "待机站立",
+   "start": 10,
+   "end": 13,
+   "sheet": "idle_stand"
+  },
+  {
+   "name": "战斗待机",
+   "action": "战斗待机",
+   "start": 14,
+   "end": 17,
+   "sheet": "idle"
+  },
+  {
+   "name": "战斗跑",
+   "action": "战斗跑",
+   "start": 18,
+   "end": 21,
+   "sheet": "run"
+  },
+  {
+   "name": "前冲 举杖",
+   "action": "前冲",
+   "start": 22,
+   "end": 23,
+   "sheet": "run"
+  },
+  {
+   "name": "前冲 飞扑",
+   "action": "前冲",
+   "start": 24,
+   "end": 24,
+   "sheet": "run"
+  },
+  {
+   "name": "前冲 飞扑二",
+   "action": "前冲",
+   "start": 25,
+   "end": 25,
+   "sheet": "run"
+  },
+  {
+   "name": "前冲摔倒 举杖",
+   "action": "前冲摔倒",
+   "start": 26,
+   "end": 26,
+   "sheet": "fall"
+  },
+  {
+   "name": "前冲摔倒 举杖二",
+   "action": "前冲摔倒",
+   "start": 27,
+   "end": 27,
+   "sheet": "fall"
+  },
+  {
+   "name": "前冲摔倒",
+   "action": "前冲摔倒",
+   "start": 28,
+   "end": 34,
+   "sheet": "fall"
+  },
+  {
+   "name": "碎霸",
+   "action": "碎霸",
+   "start": 35,
+   "end": 41,
+   "sheet": "smash"
+  },
+  {
+   "name": "召唤 起手",
+   "action": "召唤",
+   "start": 42,
+   "end": 47,
+   "sheet": "summon_a"
+  },
+  {
+   "name": "蹲伏",
+   "action": "蹲伏",
+   "start": 53,
+   "end": 54,
+   "sheet": "summon_a"
+  },
+  {
+   "name": "召唤 举手",
+   "action": "召唤",
+   "start": 48,
+   "end": 48,
+   "sheet": "summon_b"
+  },
+  {
+   "name": "召唤 举手二",
+   "action": "召唤",
+   "start": 49,
+   "end": 52,
+   "sheet": "summon_b"
+  },
+  {
+   "name": "杰克爆弹 起手",
+   "action": "杰克爆弹",
+   "start": 55,
+   "end": 55,
+   "sheet": "summon_b"
+  },
+  {
+   "name": "杰克爆弹 后仰",
+   "action": "杰克爆弹",
+   "start": 56,
+   "end": 56,
+   "sheet": "summon_b"
+  },
+  {
+   "name": "杰克爆弹 后仰二",
+   "action": "杰克爆弹",
+   "start": 57,
+   "end": 57,
+   "sheet": "summon_b"
+  },
+  {
+   "name": "杰克爆弹 跃起",
+   "action": "杰克爆弹",
+   "start": 58,
+   "end": 61,
+   "sheet": "jack"
+  },
+  {
+   "name": "落花掌 起手",
+   "action": "落花掌",
+   "start": 62,
+   "end": 65,
+   "sheet": "jack"
+  },
+  {
+   "name": "落花掌 踢",
+   "action": "落花掌",
+   "start": 66,
+   "end": 73,
+   "sheet": "kick"
+  },
+  {
+   "name": "落花掌 收",
+   "action": "落花掌",
+   "start": 74,
+   "end": 75,
+   "sheet": "jump_a"
+  },
+  {
+   "name": "跳跃 起跳",
+   "action": "跳跃",
+   "start": 76,
+   "end": 81,
+   "sheet": "jump_a"
+  },
+  {
+   "name": "跳跃 落下",
+   "action": "跳跃",
+   "start": 82,
+   "end": 83,
+   "sheet": "jump_b"
+  },
+  {
+   "name": "跳跃平A 起手",
+   "action": "跳跃平A",
+   "start": 84,
+   "end": 88,
+   "sheet": "jump_b"
+  },
+  {
+   "name": "跳跃平A 举杖",
+   "action": "跳跃平A",
+   "start": 89,
+   "end": 89,
+   "sheet": "jump_b"
+  },
+  {
+   "name": "跳跃平A 挥",
+   "action": "跳跃平A",
+   "start": 90,
+   "end": 90,
+   "sheet": "jump_c"
+  },
+  {
+   "name": "跳跃平A 翻",
+   "action": "跳跃平A",
+   "start": 91,
+   "end": 91,
+   "sheet": "jump_c"
+  },
+  {
+   "name": "跳跃平A 倒转",
+   "action": "跳跃平A",
+   "start": 92,
+   "end": 93,
+   "sheet": "jump_c"
+  },
+  {
+   "name": "跳跃平A 收",
+   "action": "跳跃平A",
+   "start": 94,
+   "end": 96,
+   "sheet": "jump_c"
+  },
+  {
+   "name": "啦啦啦 起手",
+   "action": "啦啦啦",
+   "start": 97,
+   "end": 100,
+   "sheet": "lala_a"
+  },
+  {
+   "name": "啦啦啦 一",
+   "action": "啦啦啦",
+   "start": 101,
+   "end": 104,
+   "sheet": "lala_a"
+  },
+  {
+   "name": "啦啦啦 二",
+   "action": "啦啦啦",
+   "start": 105,
+   "end": 108,
+   "sheet": "lala_b"
+  },
+  {
+   "name": "三段平A 一",
+   "action": "三段平A",
+   "start": 109,
+   "end": 109,
+   "sheet": "lala_b"
+  },
+  {
+   "name": "三段平A 一举",
+   "action": "三段平A",
+   "start": 110,
+   "end": 110,
+   "sheet": "lala_b"
+  },
+  {
+   "name": "三段平A 一收",
+   "action": "三段平A",
+   "start": 111,
+   "end": 112,
+   "sheet": "lala_b"
+  },
+  {
+   "name": "三段平A 二a",
+   "action": "三段平A",
+   "start": 113,
+   "end": 114,
+   "sheet": "combo_a"
+  },
+  {
+   "name": "三段平A 二b",
+   "action": "三段平A",
+   "start": 115,
+   "end": 115,
+   "sheet": "combo_a"
+  },
+  {
+   "name": "三段平A 二c",
+   "action": "三段平A",
+   "start": 116,
+   "end": 118,
+   "sheet": "combo_a"
+  },
+  {
+   "name": "三段平A 二d",
+   "action": "三段平A",
+   "start": 119,
+   "end": 119,
+   "sheet": "combo_a"
+  },
+  {
+   "name": "三段平A 二e",
+   "action": "三段平A",
+   "start": 120,
+   "end": 120,
+   "sheet": "combo_a"
+  },
+  {
+   "name": "三段平A 三 举杖",
+   "action": "三段平A",
+   "start": 121,
+   "end": 122,
+   "sheet": "combo_b"
+  },
+  {
+   "name": "三段平A 三",
+   "action": "三段平A",
+   "start": 123,
+   "end": 127,
+   "sheet": "combo_b"
+  },
+  {
+   "name": "受击",
+   "action": "受击",
+   "start": 128,
+   "end": 129,
+   "sheet": "hit"
+  },
+  {
+   "name": "受击倒地",
+   "action": "受击倒地",
+   "start": 130,
+   "end": 134,
+   "sheet": "hit"
+  },
+  {
+   "name": "魔法星弹 一",
+   "action": "魔法星弹",
+   "start": 135,
+   "end": 142,
+   "sheet": "star"
+  },
+  {
+   "name": "魔法星弹 二",
+   "action": "魔法星弹",
+   "start": 143,
+   "end": 143,
+   "sheet": "buff"
+  },
+  {
+   "name": "加buff",
+   "action": "加buff",
+   "start": 144,
+   "end": 147,
+   "sheet": "buff"
+  },
+  {
+   "name": "鞭挞 一",
+   "action": "鞭挞",
+   "start": 148,
+   "end": 150,
+   "sheet": "buff"
+  },
+  {
+   "name": "鞭挞 二",
+   "action": "鞭挞",
+   "start": 151,
+   "end": 154,
+   "sheet": "whip"
+  },
+  {
+   "name": "魔道学者修东西",
+   "action": "魔道学者修东西",
+   "start": 155,
+   "end": 157,
+   "sheet": "whip"
+  },
+  {
+   "name": "魔道学者丢东西",
+   "action": "魔道学者丢东西",
+   "start": 158,
+   "end": 162,
+   "sheet": "scholar"
+  },
+  {
+   "name": "魔道学者修东西2",
+   "action": "魔道学者修东西2",
+   "start": 163,
+   "end": 165,
+   "sheet": "scholar"
+  },
+  {
+   "name": "召唤骑士",
+   "action": "召唤骑士",
+   "start": 166,
+   "end": 169,
+   "sheet": "knight"
+  },
+  {
+   "name": "驱散",
+   "action": "驱散",
+   "start": 170,
+   "end": 173,
+   "sheet": "knight"
+  }
+ ]
+}

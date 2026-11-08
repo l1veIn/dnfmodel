@@ -1,0 +1,911 @@
+{
+  "version": 1,
+  "status": "packaged",
+  "started_at": 1792772565.7110603,
+  "updated_at": 1792776145.0323238,
+  "scope_slots": 174,
+  "annotation_revision": 26,
+  "clips": [
+    {
+      "id": "clip_000_009",
+      "name": "默认走路",
+      "start": 0,
+      "end": 9,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": true,
+      "status": "packaged",
+      "attempts": [],
+      "available_slots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_h3_reference_walk_v01_00001_.mp4",
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\h3_reference_walk_v01",
+      "reuse": "User accepted Ref2VA walk baseline",
+      "issues": [],
+      "mapping": "clips/clip_000_009/mapping.json",
+      "contact_sheet": "clips/clip_000_009/contact_sheet.png"
+    },
+    {
+      "id": "clip_010_013",
+      "name": "待机站立",
+      "start": 10,
+      "end": 13,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": true,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_010_013\\attempt_01"
+      ],
+      "available_slots": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_010_013\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_010_013_a01_00001_.mp4",
+      "seconds": 126.6,
+      "issues": [],
+      "mapping": "clips/clip_010_013/mapping.json",
+      "contact_sheet": "clips/clip_010_013/contact_sheet.png"
+    },
+    {
+      "id": "clip_014_017",
+      "name": "战斗待机",
+      "start": 14,
+      "end": 17,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": true,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_014_017\\attempt_01"
+      ],
+      "available_slots": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_014_017\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_014_017_a01_00001_.mp4",
+      "seconds": 126.52,
+      "issues": [],
+      "mapping": "clips/clip_014_017/mapping.json",
+      "contact_sheet": "clips/clip_014_017/contact_sheet.png"
+    },
+    {
+      "id": "clip_018_021",
+      "name": "战斗跑",
+      "start": 18,
+      "end": 21,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": true,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_018_021\\attempt_01"
+      ],
+      "available_slots": [
+        18,
+        19,
+        20,
+        21
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_018_021\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_018_021_a01_00001_.mp4",
+      "seconds": 126.58,
+      "issues": [],
+      "mapping": "clips/clip_018_021/mapping.json",
+      "contact_sheet": "clips/clip_018_021/contact_sheet.png"
+    },
+    {
+      "id": "clip_022_025",
+      "name": "前冲",
+      "start": 22,
+      "end": 25,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_022_025\\attempt_01"
+      ],
+      "available_slots": [
+        22,
+        23,
+        24,
+        25
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_022_025\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_022_025_a01_00001_.mp4",
+      "seconds": 121.65,
+      "issues": [],
+      "mapping": "clips/clip_022_025/mapping.json",
+      "contact_sheet": "clips/clip_022_025/contact_sheet.png"
+    },
+    {
+      "id": "clip_026_034",
+      "name": "前冲摔倒",
+      "start": 26,
+      "end": 34,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_026_034\\attempt_01"
+      ],
+      "available_slots": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_026_034\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_026_034_a01_00001_.mp4",
+      "seconds": 126.6,
+      "issues": [],
+      "mapping": "clips/clip_026_034/mapping.json",
+      "contact_sheet": "clips/clip_026_034/contact_sheet.png"
+    },
+    {
+      "id": "clip_035_041",
+      "name": "碎霸",
+      "start": 35,
+      "end": 41,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_035_041\\attempt_01"
+      ],
+      "available_slots": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_035_041\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_035_041_a01_00001_.mp4",
+      "seconds": 126.65,
+      "issues": [],
+      "mapping": "clips/clip_035_041/mapping.json",
+      "contact_sheet": "clips/clip_035_041/contact_sheet.png"
+    },
+    {
+      "id": "clip_042_052",
+      "name": "召唤",
+      "start": 42,
+      "end": 52,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_042_052\\attempt_01"
+      ],
+      "available_slots": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_042_052\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_042_052_a01_00001_.mp4",
+      "seconds": 126.68,
+      "issues": [],
+      "mapping": "clips/clip_042_052/mapping.json",
+      "contact_sheet": "clips/clip_042_052/contact_sheet.png"
+    },
+    {
+      "id": "clip_053_054",
+      "name": "蹲伏",
+      "start": 53,
+      "end": 54,
+      "frame_ms": [
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": true,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_053_054\\attempt_01"
+      ],
+      "available_slots": [
+        53,
+        54
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_053_054\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_053_054_a01_00001_.mp4",
+      "seconds": 126.55,
+      "issues": [],
+      "mapping": "clips/clip_053_054/mapping.json",
+      "contact_sheet": "clips/clip_053_054/contact_sheet.png"
+    },
+    {
+      "id": "clip_055_061",
+      "name": "杰克爆弹",
+      "start": 55,
+      "end": 61,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_055_061\\attempt_01",
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_055_061\\attempt_02"
+      ],
+      "available_slots": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_055_061\\attempt_02",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_055_061_a02_00001_.mp4",
+      "seconds": 126.66,
+      "issues": [],
+      "mapping": "clips/clip_055_061/mapping.json",
+      "contact_sheet": "clips/clip_055_061/contact_sheet.png"
+    },
+    {
+      "id": "clip_062_075",
+      "name": "落花掌",
+      "start": 62,
+      "end": 75,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_062_075\\attempt_01",
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_062_075\\attempt_02"
+      ],
+      "available_slots": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_062_075\\attempt_02",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_062_075_a02_00001_.mp4",
+      "seconds": 126.59,
+      "issues": [],
+      "mapping": "clips/clip_062_075/mapping.json",
+      "contact_sheet": "clips/clip_062_075/contact_sheet.png"
+    },
+    {
+      "id": "clip_076_083",
+      "name": "跳跃",
+      "start": 76,
+      "end": 83,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_076_083\\attempt_01"
+      ],
+      "available_slots": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_076_083\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_076_083_a01_00001_.mp4",
+      "seconds": 126.66,
+      "issues": [],
+      "mapping": "clips/clip_076_083/mapping.json",
+      "contact_sheet": "clips/clip_076_083/contact_sheet.png"
+    },
+    {
+      "id": "clip_084_096",
+      "name": "跳跃平A",
+      "start": 84,
+      "end": 96,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_084_096\\attempt_01"
+      ],
+      "available_slots": [
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_084_096\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_084_096_a01_00001_.mp4",
+      "seconds": 126.58,
+      "issues": [],
+      "mapping": "clips/clip_084_096/mapping.json",
+      "contact_sheet": "clips/clip_084_096/contact_sheet.png"
+    },
+    {
+      "id": "clip_097_108",
+      "name": "啦啦啦",
+      "start": 97,
+      "end": 108,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_097_108\\attempt_01"
+      ],
+      "available_slots": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_097_108\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_097_108_a01_00001_.mp4",
+      "seconds": 126.57,
+      "issues": [],
+      "mapping": "clips/clip_097_108/mapping.json",
+      "contact_sheet": "clips/clip_097_108/contact_sheet.png"
+    },
+    {
+      "id": "clip_109_127",
+      "name": "三段平A",
+      "start": 109,
+      "end": 127,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_109_127\\attempt_01"
+      ],
+      "available_slots": [
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_109_127\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_109_127_a01_00001_.mp4",
+      "seconds": 126.58,
+      "issues": [],
+      "mapping": "clips/clip_109_127/mapping.json",
+      "contact_sheet": "clips/clip_109_127/contact_sheet.png"
+    },
+    {
+      "id": "clip_128_129",
+      "name": "受击",
+      "start": 128,
+      "end": 129,
+      "frame_ms": [
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_128_129\\attempt_01"
+      ],
+      "available_slots": [
+        128,
+        129
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_128_129\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_128_129_a01_00001_.mp4",
+      "seconds": 126.66,
+      "issues": [],
+      "mapping": "clips/clip_128_129/mapping.json",
+      "contact_sheet": "clips/clip_128_129/contact_sheet.png"
+    },
+    {
+      "id": "clip_130_134",
+      "name": "受击倒地",
+      "start": 130,
+      "end": 134,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_130_134\\attempt_01"
+      ],
+      "available_slots": [
+        130,
+        131,
+        132,
+        133,
+        134
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_130_134\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_130_134_a01_00001_.mp4",
+      "seconds": 126.56,
+      "issues": [],
+      "mapping": "clips/clip_130_134/mapping.json",
+      "contact_sheet": "clips/clip_130_134/contact_sheet.png"
+    },
+    {
+      "id": "clip_135_143",
+      "name": "魔法星弹",
+      "start": 135,
+      "end": 143,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_135_143\\attempt_01"
+      ],
+      "available_slots": [
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_135_143\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_135_143_a01_00001_.mp4",
+      "seconds": 126.62,
+      "issues": [],
+      "mapping": "clips/clip_135_143/mapping.json",
+      "contact_sheet": "clips/clip_135_143/contact_sheet.png"
+    },
+    {
+      "id": "clip_144_147",
+      "name": "加buff",
+      "start": 144,
+      "end": 147,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_144_147\\attempt_01"
+      ],
+      "available_slots": [
+        144,
+        145,
+        146,
+        147
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_144_147\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_144_147_a01_00001_.mp4",
+      "seconds": 126.65,
+      "issues": [],
+      "mapping": "clips/clip_144_147/mapping.json",
+      "contact_sheet": "clips/clip_144_147/contact_sheet.png"
+    },
+    {
+      "id": "clip_148_154",
+      "name": "鞭挞",
+      "start": 148,
+      "end": 154,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_148_154\\attempt_01"
+      ],
+      "available_slots": [
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_148_154\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_148_154_a01_00001_.mp4",
+      "seconds": 126.56,
+      "issues": [],
+      "mapping": "clips/clip_148_154/mapping.json",
+      "contact_sheet": "clips/clip_148_154/contact_sheet.png"
+    },
+    {
+      "id": "clip_155_157",
+      "name": "魔道学者修东西",
+      "start": 155,
+      "end": 157,
+      "frame_ms": [
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": true,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_155_157\\attempt_01"
+      ],
+      "available_slots": [
+        155,
+        156,
+        157
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_155_157\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_155_157_a01_00001_.mp4",
+      "seconds": 126.6,
+      "issues": [],
+      "mapping": "clips/clip_155_157/mapping.json",
+      "contact_sheet": "clips/clip_155_157/contact_sheet.png"
+    },
+    {
+      "id": "clip_158_162",
+      "name": "魔道学者丢东西",
+      "start": 158,
+      "end": 162,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_158_162\\attempt_01"
+      ],
+      "available_slots": [
+        158,
+        159,
+        160,
+        161,
+        162
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_158_162\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_158_162_a01_00001_.mp4",
+      "seconds": 126.47,
+      "issues": [],
+      "mapping": "clips/clip_158_162/mapping.json",
+      "contact_sheet": "clips/clip_158_162/contact_sheet.png"
+    },
+    {
+      "id": "clip_163_165",
+      "name": "魔道学者修东西2",
+      "start": 163,
+      "end": 165,
+      "frame_ms": [
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": true,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_163_165\\attempt_01"
+      ],
+      "available_slots": [
+        163,
+        164,
+        165
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_163_165\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_163_165_a01_00001_.mp4",
+      "seconds": 126.57,
+      "issues": [],
+      "mapping": "clips/clip_163_165/mapping.json",
+      "contact_sheet": "clips/clip_163_165/contact_sheet.png"
+    },
+    {
+      "id": "clip_166_169",
+      "name": "召唤骑士",
+      "start": 166,
+      "end": 169,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_166_169\\attempt_01"
+      ],
+      "available_slots": [
+        166,
+        167,
+        168,
+        169
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_166_169\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_166_169_a01_00001_.mp4",
+      "seconds": 126.6,
+      "issues": [],
+      "mapping": "clips/clip_166_169/mapping.json",
+      "contact_sheet": "clips/clip_166_169/contact_sheet.png"
+    },
+    {
+      "id": "clip_170_173",
+      "name": "驱散",
+      "start": 170,
+      "end": 173,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "user_loop": true,
+      "cycle": false,
+      "status": "packaged",
+      "attempts": [
+        "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_170_173\\attempt_01"
+      ],
+      "available_slots": [
+        170,
+        171,
+        172,
+        173
+      ],
+      "job_folder": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\full_ref2va_v01\\jobs\\clip_170_173\\attempt_01",
+      "video": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\fatfish_full_v01\\clip_170_173_a01_00001_.mp4",
+      "seconds": 126.63,
+      "issues": [],
+      "mapping": "clips/clip_170_173/mapping.json",
+      "contact_sheet": "clips/clip_170_173/contact_sheet.png"
+    }
+  ],
+  "package": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Complete_v01.NPK",
+  "game_runtime_validated": false,
+  "package_sha256": "3572338ebc443f571e68afe1ba363f673d14ac298321146c2d1778a2fb7b1395"
+}

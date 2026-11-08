@@ -1,0 +1,70 @@
+{
+  "purpose": "Read-only format research; not a verified female mage action map",
+  "files": [
+    {
+      "file": "AvatarMarkerByLuckyKoishi.rar",
+      "bytes": 66217,
+      "sha256": "fdc7fe3dd3a4a6d8a04971fc989e52ff4e029893a5ae17dde7067d6ae798a7c3"
+    },
+    {
+      "file": "current_client_pvf_probe.json",
+      "bytes": 981,
+      "sha256": "416e15ab75ef3847d5f9dca558d9d53a690351ce9eb5d8cad51276a2f22dc925"
+    },
+    {
+      "file": "dnf-pvf-parser-ts_binaryAni.ts",
+      "bytes": 7207,
+      "sha256": "a79cd4ffc628bab4c27d8b258c8ebca01ac7ceb2db82bd2b7f8266af210b07be"
+    },
+    {
+      "file": "dnf-pvf-parser-ts_pvfFile.ts",
+      "bytes": 3500,
+      "sha256": "7e8c5e4e8211cbe2137559d4fb3f1fcfb0f90b27371f3513f0eca7ca3e523041"
+    },
+    {
+      "file": "format_sample_move.ani",
+      "bytes": 1308,
+      "sha256": "1a8d88e792f5b16f21c2d2e79d93eeb964b6a49c0779a407538e4a732c123a7b"
+    },
+    {
+      "file": "KoishiEx_avatar.cpp",
+      "bytes": 8656,
+      "sha256": "09f7d990199aa015a3165b5bada370581720e59f21ddd12bd8a9e0511fd8dd40"
+    },
+    {
+      "file": "KoishiEx_avatar.h",
+      "bytes": 1180,
+      "sha256": "cdc838421e1e490f7819a8ec0bb1cc32aed1a821d73990c706aa96fd86d6decd"
+    },
+    {
+      "file": "KoishiEx_ToolAvatar.cpp",
+      "bytes": 22207,
+      "sha256": "fdadb2de26de42e7745a886770ab03edcb672ee83138f90bb5985e86e02f3a23"
+    },
+    {
+      "file": "loose_animation_inventory.json",
+      "bytes": 28395,
+      "sha256": "207aa3e4111f7be2bf9049be4486f375abbaf6ba00a69aa0069892552177b24f"
+    },
+    {
+      "file": "parsed_format_sample_move.json",
+      "bytes": 6935,
+      "sha256": "b47915cec698f7a9c49072551c6b4511aba6e783e7351eb9e2d8c6db7ca2b85e"
+    },
+    {
+      "file": "PvfEquipmentBrowser_PVF_FORMATS.md",
+      "bytes": 4004,
+      "sha256": "b9506c319c2908bd3a99c0f991fa5c1e35adde227abece2b7438b8cb10218898"
+    },
+    {
+      "file": "PvfEquipmentBrowser_PvfFormats.cs",
+      "bytes": 16110,
+      "sha256": "7f9afd4dfc6c75c45bc27498ef98d36456edd67f23f971991c93b3cce99b6fbd"
+    },
+    {
+      "file": "research_report.md",
+      "bytes": 5263,
+      "sha256": "10bb9cfd03a6d5d5a23ebe497c74e3b24291823b0b9b6b374c381e9d1fff8d1c"
+    }
+  ]
+}

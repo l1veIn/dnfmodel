@@ -1,0 +1,931 @@
+{
+  "source": "C:\\Users\\A\\Desktop\\dnfmodel\\dnf刃\\技能语音文件\\a(Blade Master Blade).npk",
+  "file_bytes": 1373136,
+  "sha256": "1e83e227d941409dbe077e6e177a9608162bc4a3576d4005218913bd67d0afcc",
+  "entry_count": 75,
+  "index_bytes": 19820,
+  "unique_payload_ranges": 70,
+  "entry_folders": {
+    "sounds/char/swordman": 72,
+    ".": 1,
+    "sounds/char/swordman/effect": 2
+  },
+  "payloads": [
+    {
+      "offset": 19852,
+      "length": 18574,
+      "sha256": "55b9142b30d0f244c3a995abfbe183dd4f917add9e13333a38608e255d6c5f7f",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_blood_rave_atk.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 38426,
+      "length": 4519,
+      "sha256": "775c38d3953e7e468dd6e2542fa2908c738541634fe7d4746c3222a324a903d0",
+      "alias_count": 3,
+      "representative_paths": [
+        "静音",
+        "sounds/char/swordman/sm_chargecrash.ogg",
+        "sounds/char/swordman/sm_yeolpa_down.ogg"
+      ],
+      "folders": {
+        ".": 1,
+        "sounds/char/swordman": 2
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 42945,
+      "length": 42588,
+      "sha256": "ac45ff3b55108d5e4195e2f358d1ab0562f877a64a44b57640fae6aaaefc6f41",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_certain_extermination_01_1.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 85533,
+      "length": 42588,
+      "sha256": "ac45ff3b55108d5e4195e2f358d1ab0562f877a64a44b57640fae6aaaefc6f41",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_certain_extermination_01_2.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 128121,
+      "length": 19089,
+      "sha256": "47f57d0441d8e279cb538407c06f86ee7e7ca6b6bffa07af9a907a0074e115a9",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_certain_extermination_02_1.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 147210,
+      "length": 19089,
+      "sha256": "47f57d0441d8e279cb538407c06f86ee7e7ca6b6bffa07af9a907a0074e115a9",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_certain_extermination_02_2.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 166299,
+      "length": 13656,
+      "sha256": "4db373ca034ef5765c6712ed4b50b801d074b90f41bb624377b12663cc84c216",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_certain_extermination_03_1.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 179955,
+      "length": 13656,
+      "sha256": "4db373ca034ef5765c6712ed4b50b801d074b90f41bb624377b12663cc84c216",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_certain_extermination_03_2.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 193611,
+      "length": 16915,
+      "sha256": "692ce9fa88d14f8a11e8d7bc54b81a5a95a242758a0a93c3d82f2a32b2b09f97",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_certain_extermination_04_1.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 210526,
+      "length": 16915,
+      "sha256": "692ce9fa88d14f8a11e8d7bc54b81a5a95a242758a0a93c3d82f2a32b2b09f97",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_certain_extermination_04_2.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 227441,
+      "length": 12175,
+      "sha256": "c8ab17eee29c12f86158c1566fb5c7707b9fc01fae2aee379afe2ac18a0b4aa9",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_certain_extermination_05_1.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 239616,
+      "length": 12175,
+      "sha256": "c8ab17eee29c12f86158c1566fb5c7707b9fc01fae2aee379afe2ac18a0b4aa9",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_certain_extermination_05_2.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 251791,
+      "length": 41701,
+      "sha256": "807542a2a7567b93e4693cbbd68b9151a0b9bfaa6fd4184cf5e2d494b8fc88e6",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_certain_extermination_06_1.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 293492,
+      "length": 41701,
+      "sha256": "807542a2a7567b93e4693cbbd68b9151a0b9bfaa6fd4184cf5e2d494b8fc88e6",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_certain_extermination_06_2.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 335193,
+      "length": 23851,
+      "sha256": "ef7d1f9ac62195c31101ef62dbb3a08b885edaa225e0adff206b08c32e1ee095",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_invisible_swordcut_01.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 359044,
+      "length": 23851,
+      "sha256": "ef7d1f9ac62195c31101ef62dbb3a08b885edaa225e0adff206b08c32e1ee095",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_invisible_swordcut_02.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 382895,
+      "length": 23851,
+      "sha256": "ef7d1f9ac62195c31101ef62dbb3a08b885edaa225e0adff206b08c32e1ee095",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_invisible_swordcut_03.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 406746,
+      "length": 47961,
+      "sha256": "a4153ea0e1c70d67c5609c8989ad927a5cd6fb5b48fe73b4a464dbc7a572866f",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_ex_01.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 454707,
+      "length": 47961,
+      "sha256": "a4153ea0e1c70d67c5609c8989ad927a5cd6fb5b48fe73b4a464dbc7a572866f",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_ex_02.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 502668,
+      "length": 46449,
+      "sha256": "6e703fdbc81851ae7cef670875f9459eb7b01911e0683257b7a76aa57caa13b9",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/effect/w_get_spirits.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman/effect": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 549117,
+      "length": 29325,
+      "sha256": "c821cbbc3a76b11b49bcdc93697cb0fa1de7361e5984e8a59f52ca429e446c07",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/effect/auto_guard.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman/effect": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 578442,
+      "length": 8516,
+      "sha256": "31cc05407ee6b24e4ae15d015e988dc943c08cbe97729281e6d3e4ff2d921f93",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_ancient.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 586958,
+      "length": 15659,
+      "sha256": "35b84d265d342508800207802b27d6a9a4a5975ae7b2e2d2a38ad6aee9d400a1",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_atk_01.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 602617,
+      "length": 10430,
+      "sha256": "a60c4966e5ecdc9b8d46e77ccee81641017c1b1790565d44c55e526175cc378f",
+      "alias_count": 3,
+      "representative_paths": [
+        "sounds/char/swordman/sm_atk_02.ogg",
+        "sounds/char/swordman/sm_bal2.ogg",
+        "sounds/char/swordman/sm_throw.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 3
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 613047,
+      "length": 13751,
+      "sha256": "da40ef65e224e2f5e6cba5f7ec6a86b518b738e348b747187fc3c124ce47a9a0",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_atk_03.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 626798,
+      "length": 12359,
+      "sha256": "065d69796a1bc1688e090280b9e34ff5d60836925acdcb7b8c09f93186c4b6dc",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_back.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 639157,
+      "length": 14415,
+      "sha256": "6aed2947f955ac075a3f3a7d670d86d9f74a53711b520096c9307e6556ee9b16",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_bal1.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 653572,
+      "length": 24991,
+      "sha256": "d442c627b58c79fee5ca4bd5905306fbe75368c789b9602c495524c7105c3ebe",
+      "alias_count": 2,
+      "representative_paths": [
+        "sounds/char/swordman/sm_chargecrash_down.ogg",
+        "sounds/char/swordman/sm_hoanyoung_01.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 2
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 678563,
+      "length": 15659,
+      "sha256": "35b84d265d342508800207802b27d6a9a4a5975ae7b2e2d2a38ad6aee9d400a1",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_chargecrash_up.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 694222,
+      "length": 10667,
+      "sha256": "a4e6c9d387dce91a33dc36c6f0dc6f39e49af25395c2d90c2dfcf15d2e3f65e6",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_cmdpet.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 704889,
+      "length": 27530,
+      "sha256": "d8034de2b0f3e5c81bb05e69609c891cc1a6ee05efaf031e56b15f53863dab4e",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_controlblade_01.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 732419,
+      "length": 30664,
+      "sha256": "e8fd8455b0e3d67261f6045d22a4c460211519f5220ea10365eff98cfa1bdde1",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_controlblade_02.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 763083,
+      "length": 10121,
+      "sha256": "931fef9c3b31b4ed28a84796a46588433e89f910675acee94995e76fef88e4ce",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_cooltime.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 773204,
+      "length": 23200,
+      "sha256": "605ba128208cbbe2baeeace4b50ed943e285669da835e9753908d989559f3963",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_die.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 796404,
+      "length": 11914,
+      "sha256": "5f222697030ec2f5dbfd7ac696e1c144dff254c522c36890a47292bccd6a29b0",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_dmg_01.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 808318,
+      "length": 19980,
+      "sha256": "1166539b5f843af53629dcda65b19974443588ace2178e2900365c979874b444",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_dmg_02.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 828298,
+      "length": 17493,
+      "sha256": "e6bc75edb2aefbf15b9e901b63f7bc29b2db98a42f82d5fb6f99e8af2f73bc18",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_dmg_03.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 845791,
+      "length": 12436,
+      "sha256": "c9a4358531ce861a72eb1e6df3f0440552a712523d5e012ea160885d66e90717",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_flashcut.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 858227,
+      "length": 21201,
+      "sha256": "f8557df3e8857a9df2a93ee7859dd862231d9b7a6d4be2c214eb55d7c92a594b",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_guard.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 879428,
+      "length": 10430,
+      "sha256": "a60c4966e5ecdc9b8d46e77ccee81641017c1b1790565d44c55e526175cc378f",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_gue_01.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 889858,
+      "length": 13751,
+      "sha256": "da40ef65e224e2f5e6cba5f7ec6a86b518b738e348b747187fc3c124ce47a9a0",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_gue_02.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 903609,
+      "length": 29317,
+      "sha256": "567a0dd5b53fc01b9c8cfd6582a24c8a93dbc43dd0035e7002d47e5d5f1a0065",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_gue_charge.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 932926,
+      "length": 19356,
+      "sha256": "0f73f75185d035dddc09b166660524ea6f2c739756865cca2efb7ec9b58a5a1d",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_gue_fleetness.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 952282,
+      "length": 31293,
+      "sha256": "65ce25f9125476080abfc58cd199438464d3bd0b34d1dd19f0348b5eff453354",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_gue_shooting.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 983575,
+      "length": 28228,
+      "sha256": "b46f00d6e7a4731b4f6e40a2da8804413ac905d22c725553bd49a952f602b9b2",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_gue_sword.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1011803,
+      "length": 46722,
+      "sha256": "03ffeb8916aad7cdd7139c0a910f7fb447e14e211674bda99040700245983ed1",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_hoanyoung_02.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1058525,
+      "length": 4519,
+      "sha256": "775c38d3953e7e468dd6e2542fa2908c738541634fe7d4746c3222a324a903d0",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_hoanyoung_03.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1063044,
+      "length": 4519,
+      "sha256": "775c38d3953e7e468dd6e2542fa2908c738541634fe7d4746c3222a324a903d0",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_hoanyoung_04.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1067563,
+      "length": 43517,
+      "sha256": "20c1cd5f1f3edd302f57a4d5eee11eb33c062907d4f90e0bc71f04abb82d9a53",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_hoanyoung_start.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1111080,
+      "length": 22945,
+      "sha256": "684d6c4fc5163cd2f8a75c73afac39ebae08e57334a06aa9790ca4c1e4516ef3",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_hoanyoung_fin.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1134025,
+      "length": 9188,
+      "sha256": "2d8b15bf70a91fabd48dc02f4788b74275395a7a4c615a1554bfe36bfdadca60",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_jump.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1143213,
+      "length": 13751,
+      "sha256": "da40ef65e224e2f5e6cba5f7ec6a86b518b738e348b747187fc3c124ce47a9a0",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_jumpatk_01.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1156964,
+      "length": 15659,
+      "sha256": "35b84d265d342508800207802b27d6a9a4a5975ae7b2e2d2a38ad6aee9d400a1",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_jumpatk_02.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1172623,
+      "length": 8516,
+      "sha256": "31cc05407ee6b24e4ae15d015e988dc943c08cbe97729281e6d3e4ff2d921f93",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_leap_buff.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1181139,
+      "length": 4519,
+      "sha256": "775c38d3953e7e468dd6e2542fa2908c738541634fe7d4746c3222a324a903d0",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_mengryong_01.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1185658,
+      "length": 4519,
+      "sha256": "775c38d3953e7e468dd6e2542fa2908c738541634fe7d4746c3222a324a903d0",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_mengryong_02.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1190177,
+      "length": 4519,
+      "sha256": "775c38d3953e7e468dd6e2542fa2908c738541634fe7d4746c3222a324a903d0",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_mengryong_03.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1194696,
+      "length": 4519,
+      "sha256": "775c38d3953e7e468dd6e2542fa2908c738541634fe7d4746c3222a324a903d0",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_mengryong_fin.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1199215,
+      "length": 15365,
+      "sha256": "e8056b1d5b455726490cefee89a2705a9dcb5c241cc026b6c300c52e7c6c61b9",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_mengryong_start.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1214580,
+      "length": 18045,
+      "sha256": "881145a36c1a2620869a8088652e94daf94a6457c3e36e92e062bb8ae7704964",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_nomana.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1232625,
+      "length": 20923,
+      "sha256": "1c53c37a2a4312ddaf269b7f19c9b89b7544be6434129d72d59dc102ed021ca2",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_overdrive.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1253548,
+      "length": 12730,
+      "sha256": "1585171f7c1a94459fef2f8009d7eb4a72091eeabb4615b65300ff9a7036398a",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_thrust.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1266278,
+      "length": 12787,
+      "sha256": "abfc66675ee58f07662644142ca728ac7db6bbad82bc127a4bc86a35e70f2b0c",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_triple1.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1279065,
+      "length": 12787,
+      "sha256": "abfc66675ee58f07662644142ca728ac7db6bbad82bc127a4bc86a35e70f2b0c",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_triple2.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1291852,
+      "length": 12730,
+      "sha256": "1585171f7c1a94459fef2f8009d7eb4a72091eeabb4615b65300ff9a7036398a",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_triple3.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1304582,
+      "length": 14781,
+      "sha256": "016151ad141dccee5af72a29edea73d75903c50bf2abb3e7b170e59a9b4c069c",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_kghost.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1319363,
+      "length": 12440,
+      "sha256": "e367a9b169ccaf443c53874bfd80e21dcb68a52235f8e5b4424059d012adf9eb",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_gorecross.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1331803,
+      "length": 12730,
+      "sha256": "1585171f7c1a94459fef2f8009d7eb4a72091eeabb4615b65300ff9a7036398a",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_upslash.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1344533,
+      "length": 13751,
+      "sha256": "da40ef65e224e2f5e6cba5f7ec6a86b518b738e348b747187fc3c124ce47a9a0",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_boongsan.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    },
+    {
+      "offset": 1358284,
+      "length": 14852,
+      "sha256": "0a60ad114c2f07605bef82cb0dfdd19f73469b68e6aedfc276f3aba33ddeb883",
+      "alias_count": 1,
+      "representative_paths": [
+        "sounds/char/swordman/sm_yeolpa_up.ogg"
+      ],
+      "folders": {
+        "sounds/char/swordman": 1
+      },
+      "format_signature": "OggS"
+    }
+  ]
+}

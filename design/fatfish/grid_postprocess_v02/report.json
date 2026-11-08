@@ -1,0 +1,220 @@
+{
+  "generation_requests": 0,
+  "source_trial": "embedded_grid_compare_v01",
+  "frame_slots": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "purpose": "Non-generative feasibility probe, not a finished correction or new accepted animation.",
+  "scale_fixed_across_all_frames": 0.20887728459530025,
+  "alpha_variant": "Remap 96..240 to 0..255 without RGB repainting or shape erosion.",
+  "sampling": [
+    "single nearest source lookup",
+    "single premultiplied-alpha box integration"
+  ],
+  "registration": "Constant scale; per-frame integer translations from approximate manual eye-x and same-frame original lowest shoe row.",
+  "no_local_limb_warp": true,
+  "not_complete_walk_loop": true,
+  "accepted": false,
+  "frames": [
+    {
+      "slot": 0,
+      "source_sha256": "7e68b509da7737123bdcfd21681506c98c93036278e1893cfede8a0ebbd3dae6",
+      "alpha": {
+        "alpha_input_1_to_127": 19875,
+        "nonzero_alpha_before": 100552,
+        "nonzero_alpha_after": 81703,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      },
+      "integer_translation_xy": [
+        1,
+        -3
+      ],
+      "original_bottom_y": 132,
+      "before_bottom_y": 136,
+      "clean_nearest_bottom_y": 132,
+      "eye_x_hint_fitted": true,
+      "vertical_alignment": "Same-frame original lowest solid shoe row; no assumption of a flat y across poses.",
+      "limitations": "Eye/sole are fitting controls, not independent foot contact validation; hand poses and anatomy are not corrected."
+    },
+    {
+      "slot": 1,
+      "source_sha256": "99ccef9b51dccb4cc2358971fda621610603729586004a2c44444215aec9adac",
+      "alpha": {
+        "alpha_input_1_to_127": 18017,
+        "nonzero_alpha_before": 97802,
+        "nonzero_alpha_after": 80797,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      },
+      "integer_translation_xy": [
+        -4,
+        -1
+      ],
+      "original_bottom_y": 134,
+      "before_bottom_y": 135,
+      "clean_nearest_bottom_y": 134,
+      "eye_x_hint_fitted": true,
+      "vertical_alignment": "Same-frame original lowest solid shoe row; no assumption of a flat y across poses.",
+      "limitations": "Eye/sole are fitting controls, not independent foot contact validation; hand poses and anatomy are not corrected."
+    },
+    {
+      "slot": 2,
+      "source_sha256": "477a69c62766f4ed844cb7a75572e4d980a423dd5c028e9ec15886d433502da5",
+      "alpha": {
+        "alpha_input_1_to_127": 14248,
+        "nonzero_alpha_before": 83359,
+        "nonzero_alpha_after": 69879,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      },
+      "integer_translation_xy": [
+        3,
+        1
+      ],
+      "original_bottom_y": 134,
+      "before_bottom_y": 133,
+      "clean_nearest_bottom_y": 134,
+      "eye_x_hint_fitted": true,
+      "vertical_alignment": "Same-frame original lowest solid shoe row; no assumption of a flat y across poses.",
+      "limitations": "Eye/sole are fitting controls, not independent foot contact validation; hand poses and anatomy are not corrected."
+    },
+    {
+      "slot": 3,
+      "source_sha256": "ff9d37ae913ea4b9ed1de0d9fd9dd7d00a7e6342d4409150de106ace547df195",
+      "alpha": {
+        "alpha_input_1_to_127": 17257,
+        "nonzero_alpha_before": 88472,
+        "nonzero_alpha_after": 72030,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      },
+      "integer_translation_xy": [
+        0,
+        0
+      ],
+      "original_bottom_y": 135,
+      "before_bottom_y": 135,
+      "clean_nearest_bottom_y": 135,
+      "eye_x_hint_fitted": true,
+      "vertical_alignment": "Same-frame original lowest solid shoe row; no assumption of a flat y across poses.",
+      "limitations": "Eye/sole are fitting controls, not independent foot contact validation; hand poses and anatomy are not corrected."
+    },
+    {
+      "slot": 4,
+      "source_sha256": "207db40bfb11e4f0d5b97c17bf4aa48016ce4ae0cedd3af6ec46303abc65147a",
+      "alpha": {
+        "alpha_input_1_to_127": 18825,
+        "nonzero_alpha_before": 101941,
+        "nonzero_alpha_after": 84189,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      },
+      "integer_translation_xy": [
+        -3,
+        1
+      ],
+      "original_bottom_y": 134,
+      "before_bottom_y": 133,
+      "clean_nearest_bottom_y": 134,
+      "eye_x_hint_fitted": true,
+      "vertical_alignment": "Same-frame original lowest solid shoe row; no assumption of a flat y across poses.",
+      "limitations": "Eye/sole are fitting controls, not independent foot contact validation; hand poses and anatomy are not corrected."
+    },
+    {
+      "slot": 5,
+      "source_sha256": "e2f29c9eb33d8aaa7050da97b317a99992a3131f11f8b19cd58f8270be7ece12",
+      "alpha": {
+        "alpha_input_1_to_127": 19817,
+        "nonzero_alpha_before": 100434,
+        "nonzero_alpha_after": 81603,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      },
+      "integer_translation_xy": [
+        -2,
+        4
+      ],
+      "original_bottom_y": 133,
+      "before_bottom_y": 129,
+      "clean_nearest_bottom_y": 133,
+      "eye_x_hint_fitted": true,
+      "vertical_alignment": "Same-frame original lowest solid shoe row; no assumption of a flat y across poses.",
+      "limitations": "Eye/sole are fitting controls, not independent foot contact validation; hand poses and anatomy are not corrected."
+    },
+    {
+      "slot": 6,
+      "source_sha256": "82276e3bce60ff64342bf96cbe4e03898fe5486d6994503e8b0f40e290a918ba",
+      "alpha": {
+        "alpha_input_1_to_127": 16847,
+        "nonzero_alpha_before": 88718,
+        "nonzero_alpha_after": 72777,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      },
+      "integer_translation_xy": [
+        -2,
+        2
+      ],
+      "original_bottom_y": 130,
+      "before_bottom_y": 128,
+      "clean_nearest_bottom_y": 130,
+      "eye_x_hint_fitted": true,
+      "vertical_alignment": "Same-frame original lowest solid shoe row; no assumption of a flat y across poses.",
+      "limitations": "Eye/sole are fitting controls, not independent foot contact validation; hand poses and anatomy are not corrected."
+    },
+    {
+      "slot": 7,
+      "source_sha256": "2d8ee09144ffd497115c313f3b7ccbbe96b962cdfb4bd7e9f1e2662662c1c500",
+      "alpha": {
+        "alpha_input_1_to_127": 14957,
+        "nonzero_alpha_before": 84542,
+        "nonzero_alpha_after": 70311,
+        "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+        "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+      },
+      "integer_translation_xy": [
+        -1,
+        1
+      ],
+      "original_bottom_y": 131,
+      "before_bottom_y": 130,
+      "clean_nearest_bottom_y": 131,
+      "eye_x_hint_fitted": true,
+      "vertical_alignment": "Same-frame original lowest solid shoe row; no assumption of a flat y across poses.",
+      "limitations": "Eye/sole are fitting controls, not independent foot contact validation; hand poses and anatomy are not corrected."
+    }
+  ],
+  "high_resolution_master": {
+    "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "sha256": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d",
+    "is_source_of_approved_v04": true
+  },
+  "protected_files_unchanged": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\nearest_standing_v04\\standing_canvas.png": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d"
+  },
+  "validation": {
+    "all_eight_apng_frames_pixel_exact": true
+  },
+  "limitations": [
+    "Alpha adjustment can trim thin translucent hair/lace; opaque RGB contamination remains.",
+    "Global translation cannot fix disconnected hands, extra fingers, limb length, pose differences or local costume drift.",
+    "Original foot y and eye x are fitting references, not proof of no sliding.",
+    "Box filtering and nearest have different softness/detail loss; judge at native size.",
+    "No new high-resolution generation has been tested in this probe."
+  ]
+}

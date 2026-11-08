@@ -1,0 +1,278 @@
+{
+  "prompt": [
+    0,
+    "67394fa7-789d-4775-bde8-162fd38ab71c",
+    {
+      "37": {
+        "class_type": "UNETLoader",
+        "inputs": {
+          "unet_name": "wan2.2_ti2v_5B_fp16.safetensors",
+          "weight_dtype": "default"
+        }
+      },
+      "38": {
+        "class_type": "CLIPLoader",
+        "inputs": {
+          "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+          "type": "wan",
+          "device": "default"
+        }
+      },
+      "39": {
+        "class_type": "VAELoader",
+        "inputs": {
+          "vae_name": "wan2.2_vae.safetensors"
+        }
+      },
+      "56": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "fatfish_local_v01_master_gray_512.png"
+        }
+      },
+      "55": {
+        "class_type": "Wan22ImageToVideoLatent",
+        "inputs": {
+          "vae": [
+            "39",
+            0
+          ],
+          "start_image": [
+            "56",
+            0
+          ],
+          "width": 512,
+          "height": 512,
+          "length": 49,
+          "batch_size": 1
+        }
+      },
+      "48": {
+        "class_type": "ModelSamplingSD3",
+        "inputs": {
+          "model": [
+            "37",
+            0
+          ],
+          "shift": 8.0
+        }
+      },
+      "6": {
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+          "clip": [
+            "38",
+            0
+          ],
+          "text": "A single full-body 2D pixel art female whale maid game sprite, exactly the same character and costume as the reference image. She performs a short relaxed walk in place, facing three-quarter right throughout. Her slender legs alternate stepping forward and back, bending naturally at the knees, her feet lifting and touching down, her attached arms swing gently in opposition. Her navy to cyan wavy hair, white frilled maid headband, navy long-sleeved dress, white whale-emblem apron with gold trim, opaque white tights, navy Mary Jane shoes, and compact whale tail remain unchanged. Small controlled motion, stable body proportions and consistent face, full body always inside the frame. Static camera, unchanged character scale, unchanged uniform medium gray background, sprite animation, crisp pixel clusters."
+        }
+      },
+      "7": {
+        "class_type": "CLIPTextEncode",
+        "inputs": {
+          "clip": [
+            "38",
+            0
+          ],
+          "text": "camera movement, camera shake, zoom, pan, scene change, moving background, scenery, walking across the screen, turning around, spinning, facing away, running, jumping, large body deformation, different outfit, changing face, changing hair color, extra limbs, missing limbs, disconnected wrists, floating hands, extra fingers, merged legs, thick swollen legs, changing body size, cropping, blur, photorealism, 3D rendering, text, watermark, particles, lighting changes"
+        }
+      },
+      "3": {
+        "class_type": "KSampler",
+        "inputs": {
+          "model": [
+            "48",
+            0
+          ],
+          "positive": [
+            "6",
+            0
+          ],
+          "negative": [
+            "7",
+            0
+          ],
+          "latent_image": [
+            "55",
+            0
+          ],
+          "seed": 20261022,
+          "steps": 20,
+          "cfg": 5.0,
+          "sampler_name": "uni_pc",
+          "scheduler": "simple",
+          "denoise": 1.0
+        }
+      },
+      "8": {
+        "class_type": "VAEDecode",
+        "inputs": {
+          "samples": [
+            "3",
+            0
+          ],
+          "vae": [
+            "39",
+            0
+          ]
+        }
+      },
+      "60": {
+        "class_type": "SaveImage",
+        "inputs": {
+          "images": [
+            "8",
+            0
+          ],
+          "filename_prefix": "fatfish_local_v01/walk_seed20261022"
+        }
+      }
+    },
+    {
+      "client_id": "fatfish-local-video-v01",
+      "create_time": 1792678686972
+    },
+    [
+      "60"
+    ]
+  ],
+  "outputs": {},
+  "status": {
+    "status_str": "error",
+    "completed": false,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "67394fa7-789d-4775-bde8-162fd38ab71c",
+          "timestamp": 1792678686973
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "67394fa7-789d-4775-bde8-162fd38ab71c",
+          "timestamp": 1792678686974
+        }
+      ],
+      [
+        "execution_error",
+        {
+          "prompt_id": "67394fa7-789d-4775-bde8-162fd38ab71c",
+          "node_id": "3",
+          "node_type": "KSampler",
+          "executed": [
+            "38",
+            "55",
+            "48",
+            "6",
+            "37",
+            "56",
+            "39",
+            "7"
+          ],
+          "exception_message": "HostBuffer.read_file_slice failed\n",
+          "exception_type": "RuntimeError",
+          "traceback": [
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\execution.py\", line 545, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\execution.py\", line 344, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\execution.py\", line 318, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\execution.py\", line 306, in process_inputs\n    result = f(**inputs)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\nodes.py\", line 1607, in sample\n    return common_ksampler(model, seed, steps, cfg, sampler_name, scheduler, positive, negative, latent_image, denoise=denoise)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\nodes.py\", line 1571, in common_ksampler\n    samples = comfy.sample.sample(model, noise, steps, cfg, sampler_name, scheduler, positive, negative, latent_image,\n                                  denoise=denoise, disable_noise=disable_noise, start_step=start_step, last_step=last_step,\n                                  force_full_denoise=force_full_denoise, noise_mask=noise_mask, callback=callback, disable_pbar=disable_pbar, seed=seed)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\sample.py\", line 74, in sample\n    samples = sampler.sample(noise, positive, negative, cfg=cfg, latent_image=latent_image, start_step=start_step, last_step=last_step, force_full_denoise=force_full_denoise, denoise_mask=noise_mask, sigmas=sigmas, callback=callback, disable_pbar=disable_pbar, seed=seed)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\samplers.py\", line 1461, in sample\n    return sample(self.model, noise, positive, negative, cfg, self.device, sampler, sigmas, self.model_options, latent_image=latent_image, denoise_mask=denoise_mask, callback=callback, disable_pbar=disable_pbar, seed=seed)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\samplers.py\", line 1351, in sample\n    return cfg_guider.sample(noise, latent_image, sampler, sigmas, denoise_mask, callback, disable_pbar, seed)\n           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\samplers.py\", line 1333, in sample\n    output = executor.execute(noise, latent_image, sampler, sigmas, denoise_mask, callback, disable_pbar, seed, latent_shapes=latent_shapes)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\patcher_extension.py\", line 113, in execute\n    return self.original(*args, **kwargs)\n           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\samplers.py\", line 1260, in outer_sample\n    output = self.inner_sample(noise, latent_image, device, sampler, sigmas, denoise_mask, callback, disable_pbar, seed, latent_shapes=latent_shapes)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\samplers.py\", line 1235, in inner_sample\n    samples = executor.execute(self, sigmas, extra_args, callback, noise, latent_image, denoise_mask, disable_pbar)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\patcher_extension.py\", line 113, in execute\n    return self.original(*args, **kwargs)\n           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\samplers.py\", line 1005, in sample\n    samples = self.sampler_function(model_k, noise, sigmas, extra_args=extra_args, callback=k_callback, disable=disable_pbar, **self.extra_options)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\extra_samplers\\uni_pc.py\", line 868, in sample_unipc\n    x = uni_pc.sample(noise, timesteps=timesteps, skip_type=\"time_uniform\", method=\"multistep\", order=order, lower_order_final=True, callback=callback, disable_pbar=disable)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\extra_samplers\\uni_pc.py\", line 715, in sample\n    model_prev_list = [self.model_fn(x, vec_t)]\n                       ~~~~~~~~~~~~~^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\extra_samplers\\uni_pc.py\", line 410, in model_fn\n    return self.data_prediction_fn(x, t)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\extra_samplers\\uni_pc.py\", line 394, in data_prediction_fn\n    noise = self.noise_prediction_fn(x, t)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\extra_samplers\\uni_pc.py\", line 388, in noise_prediction_fn\n    return self.model(x, t)\n           ~~~~~~~~~~^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\extra_samplers\\uni_pc.py\", line 329, in model_fn\n    return noise_pred_fn(x, t_continuous)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\extra_samplers\\uni_pc.py\", line 297, in noise_pred_fn\n    output = model(x, t_input, **model_kwargs)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\extra_samplers\\uni_pc.py\", line 859, in <lambda>\n    lambda input, sigma, **kwargs: predict_eps_sigma(model, input, sigma, **kwargs),\n                                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\extra_samplers\\uni_pc.py\", line 843, in predict_eps_sigma\n    return  (input - model(input, sigma_in, **kwargs)) / sigma\n                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\samplers.py\", line 640, in __call__\n    out = self.inner_model(x, sigma, model_options=model_options, seed=seed)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\samplers.py\", line 1208, in __call__\n    return self.outer_predict_noise(*args, **kwargs)\n           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\samplers.py\", line 1215, in outer_predict_noise\n    ).execute(x, timestep, model_options, seed)\n      ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\patcher_extension.py\", line 113, in execute\n    return self.original(*args, **kwargs)\n           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\samplers.py\", line 1218, in predict_noise\n    return sampling_function(self.inner_model, x, timestep, self.conds.get(\"negative\", None), self.conds.get(\"positive\", None), self.cfg, model_options=model_options, seed=seed)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\samplers.py\", line 620, in sampling_function\n    out = calc_cond_batch(model, conds, x, timestep, model_options)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\samplers.py\", line 211, in calc_cond_batch\n    return _calc_cond_batch_outer(model, conds, x_in, timestep, model_options)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\samplers.py\", line 219, in _calc_cond_batch_outer\n    return executor.execute(model, conds, x_in, timestep, model_options)\n           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\patcher_extension.py\", line 113, in execute\n    return self.original(*args, **kwargs)\n           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\samplers.py\", line 335, in _calc_cond_batch\n    output = model.apply_model(input_x, timestep_, **c).chunk(batch_chunks)\n             ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\model_base.py\", line 196, in apply_model\n    return comfy.patcher_extension.WrapperExecutor.new_class_executor(\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    ...<2 lines>...\n        comfy.patcher_extension.get_all_wrappers(comfy.patcher_extension.WrappersMP.APPLY_MODEL, transformer_options)\n        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    ).execute(x, t, c_concat, c_crossattn, control, transformer_options, **kwargs)\n    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\patcher_extension.py\", line 113, in execute\n    return self.original(*args, **kwargs)\n           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\model_base.py\", line 240, in _apply_model\n    model_output = self.diffusion_model(xc, t, context=context, control=control, transformer_options=transformer_options, **extra_conds)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\ldm\\wan\\model.py\", line 671, in forward\n    return comfy.patcher_extension.WrapperExecutor.new_class_executor(\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    ...<2 lines>...\n        comfy.patcher_extension.get_all_wrappers(comfy.patcher_extension.WrappersMP.DIFFUSION_MODEL, transformer_options)\n        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    ).execute(x, timestep, context, clip_fea, time_dim_concat, transformer_options, **kwargs)\n    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\patcher_extension.py\", line 113, in execute\n    return self.original(*args, **kwargs)\n           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\ldm\\wan\\model.py\", line 700, in _forward\n    return self.forward_orig(x, timestep, context, clip_fea=clip_fea, freqs=freqs, transformer_options=transformer_options, **kwargs)[:, :, :t, :h, :w]\n           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\ldm\\wan\\model.py\", line 609, in forward_orig\n    x = block(x, e=e0, freqs=freqs, context=context, context_img_len=context_img_len, transformer_options=transformer_options)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\ldm\\wan\\model.py\", line 252, in forward\n    x = x + self.cross_attn(self.norm3(x), context, context_img_len=context_img_len, transformer_options=transformer_options)\n            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\ldm\\wan\\model.py\", line 109, in forward\n    k = self.norm_k(self.k(context))\n                    ~~~~~~^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\ops.py\", line 547, in forward\n    return self.forward_comfy_cast_weights(*args, **kwargs)\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\ops.py\", line 539, in forward_comfy_cast_weights\n    weight, bias, offload_stream = cast_bias_weight(self, input, offloadable=True)\n                                   ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\ops.py\", line 369, in cast_bias_weight\n    offload_stream = cast_modules_with_vbar([s], dtype, device, bias_dtype, non_blocking)\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\ops.py\", line 228, in cast_modules_with_vbar\n    handle_pin(s, pin, xfer_source, xfer_dest, subset=subset, size=dest_size)\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\ops.py\", line 226, in handle_pin\n    cast_maybe_lowvram_patch(source, pin, offload_stream, xfer_dest2=dest)\n    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\ops.py\", line 217, in cast_maybe_lowvram_patch\n    comfy.model_management.cast_to_gathered(xfer_source, xfer_dest, non_blocking=non_blocking, stream=stream, r2=xfer_dest2)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\model_management.py\", line 1500, in cast_to_gathered\n    if comfy.memory_management.read_tensor_file_slice_into(tensor, dest_view, stream=stream, destination2=dest2_view):\n       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\comfy\\memory_management.py\", line 70, in read_tensor_file_slice_into\n    hostbuf.read_file_slice(file_obj, info.offset, info.size,\n    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                            offset=destination.data_ptr() - hostbuf.get_raw_address(),\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                            stream=stream_ptr,\n                            ^^^^^^^^^^^^^^^^^^\n                            device_ptr=device_ptr,\n                            ^^^^^^^^^^^^^^^^^^^^^^\n                            device=None if destination2 is None else destination2.device.index)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\VideoStudio\\comfyUI\\install\\ComfyUI\\ComfyUI\\.venv\\Lib\\site-packages\\comfy_aimdo\\host_buffer.py\", line 109, in read_file_slice\n    raise RuntimeError(\"HostBuffer.read_file_slice failed\")\n"
+          ],
+          "current_inputs": {
+            "model": [
+              "<comfy.model_patcher.ModelPatcherDynamic object at 0x00000296A2939E50>"
+            ],
+            "positive": [
+              "[[tensor([[[ 0.0011,  0.0067, -0.1429,  ..., -0.0003, -0.0113, -0.0135],\n         [ 0.0016,  0.0071, -0.0903,  ..., -0.0004, -0.0645,  0.0186],\n         [ 0.0018,  0.0838, -0.0239,  ..., -0.0009, -0.0472,  0.0309],\n         ...,\n         [ 0.0000,  0.0000,  0.0000,  ..., -0.0000,  0.0000,  0.0000],\n         [ 0.0000,  0.0000,  0.0000,  ..., -0.0000,  0.0000,  0.0000],\n         [ 0.0000,  0.0000,  0.0000,  ..., -0.0000,  0.0000,  0.0000]]]), {'pooled_output': None}]]"
+            ],
+            "negative": [
+              "[[tensor([[[ 0.0015, -0.0379, -0.0750,  ..., -0.0010, -0.0322, -0.0325],\n         [ 0.0016,  0.0287, -0.1228,  ..., -0.0008,  0.0657, -0.0185],\n         [ 0.0015,  0.0185, -0.0147,  ..., -0.0001,  0.0131,  0.0158],\n         ...,\n         [ 0.0000, -0.0000, -0.0000,  ..., -0.0000,  0.0000,  0.0000],\n         [ 0.0000, -0.0000, -0.0000,  ..., -0.0000,  0.0000,  0.0000],\n         [ 0.0000, -0.0000, -0.0000,  ..., -0.0000,  0.0000,  0.0000]]]), {'pooled_output': None}]]"
+            ],
+            "latent_image": [
+              "{'samples': tensor([[[[[-4.4922e-01, -4.1992e-01, -4.0625e-01,  ..., -4.1992e-01,\n            -4.2188e-01, -4.7656e-01],\n           [-5.1953e-01, -5.0781e-01, -4.9609e-01,  ..., -5.1562e-01,\n            -5.3125e-01, -5.4688e-01],\n           [-5.1953e-01, -5.1953e-01, -5.1172e-01,  ..., -5.3125e-01,\n            -5.4688e-01, -5.5859e-01],\n           ...,\n           [-5.5078e-01, -5.6250e-01, -5.6250e-01,  ..., -5.8203e-01,\n            -5.8984e-01, -5.8594e-01],\n           [-5.5859e-01, -5.7031e-01, -5.7031e-01,  ..., -5.8594e-01,\n            -5.9766e-01, -5.9375e-01],\n           [-5.1562e-01, -5.3125e-01, -5.3125e-01,  ..., -5.3906e-01,\n            -5.4297e-01, -5.4688e-01]],\n\n          [[-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           ...,\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01]],\n\n          [[-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           ...,\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01]],\n\n          ...,\n\n          [[-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           ...,\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01]],\n\n          [[-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           ...,\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01]],\n\n          [[-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           ...,\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01],\n           [-2.2890e-01, -2.2890e-01, -2.2890e-01,  ..., -2.2890e-01,\n            -2.2890e-01, -2.2890e-01]]],\n\n\n         [[[-6.8848e-02,  1.9531e-03,  2.9907e-02,  ...,  2.9419e-02,\n            -4.8828e-04, -5.1758e-02],\n           [-3.4668e-02,  3.6865e-02,  8.2031e-02,  ...,  8.4961e-02,\n             4.2480e-02, -9.2773e-03],\n           [-1.2695e-02,  6.0059e-02,  1.1035e-01,  ...,  1.2012e-01,\n             7.5195e-02,  2.4902e-02],\n           ...,\n           [-1.7090e-02,  5.7861e-02,  1.0986e-01,  ...,  1.1816e-01,\n             7.1777e-02,  2.5879e-02],\n           [-3.4180e-02,  3.7109e-02,  8.3984e-02,  ...,  9.1309e-02,\n             5.4688e-02,  4.8828e-03],\n           [-3.9062e-02,  4.8340e-02,  7.3242e-02,  ...,  8.5938e-02,\n             5.3955e-02, -1.3672e-02]],\n\n          [[-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           ...,\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03]],\n\n          [[-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           ...,\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03]],\n\n          ...,\n\n          [[-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           ...,\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03]],\n\n          [[-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           ...,\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03]],\n\n          [[-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           ...,\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03],\n           [-5.2000e-03, -5.2000e-03, -5.2000e-03,  ..., -5.2000e-03,\n            -5.2000e-03, -5.2000e-03]]],\n\n\n         [[[-1.3086e-01, -1.5625e-01, -1.6602e-01,  ..., -1.5039e-01,\n            -1.0986e-01, -1.5430e-01],\n           [-1.3086e-01, -1.5234e-01, -1.6211e-01,  ..., -1.3867e-01,\n            -7.1289e-02, -1.1768e-01],\n           [-1.4062e-01, -1.5820e-01, -1.7188e-01,  ..., -1.5039e-01,\n            -7.8613e-02, -1.2891e-01],\n           ...,\n           [-1.1475e-01, -1.1279e-01, -1.1865e-01,  ..., -1.0205e-01,\n            -3.9062e-02, -1.0889e-01],\n           [-1.0498e-01, -9.7168e-02, -9.7168e-02,  ..., -7.9590e-02,\n            -2.3926e-02, -1.0693e-01],\n           [-2.0508e-01, -1.8945e-01, -1.7773e-01,  ..., -1.7188e-01,\n            -1.3477e-01, -1.6602e-01]],\n\n          [[-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           ...,\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01]],\n\n          [[-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           ...,\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01]],\n\n          ...,\n\n          [[-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           ...,\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01]],\n\n          [[-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           ...,\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01]],\n\n          [[-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           ...,\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01],\n           [-1.3230e-01, -1.3230e-01, -1.3230e-01,  ..., -1.3230e-01,\n            -1.3230e-01, -1.3230e-01]]],\n\n\n         ...,\n\n\n         [[[-1.8750e-01, -1.9727e-01, -2.3438e-01,  ..., -2.3047e-01,\n            -2.0703e-01, -1.8164e-01],\n           [-1.4258e-01, -1.8945e-01, -2.3633e-01,  ..., -2.2461e-01,\n            -1.8750e-01, -1.6406e-01],\n           [-1.6797e-01, -2.1875e-01, -2.6367e-01,  ..., -2.5586e-01,\n            -2.2070e-01, -1.8359e-01],\n           ...,\n           [-1.7188e-01, -2.2266e-01, -2.7734e-01,  ..., -2.5977e-01,\n            -2.3047e-01, -1.7969e-01],\n           [-1.4355e-01, -1.7188e-01, -2.1875e-01,  ..., -2.0703e-01,\n            -1.7969e-01, -1.3867e-01],\n           [-1.4355e-01, -1.6016e-01, -1.9336e-01,  ..., -1.7969e-01,\n            -1.3281e-01, -1.5234e-01]],\n\n          [[-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           ...,\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02]],\n\n          [[-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           ...,\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02]],\n\n          ...,\n\n          [[-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           ...,\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02]],\n\n          [[-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           ...,\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02]],\n\n          [[-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           ...,\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02],\n           [-5.4800e-02, -5.4800e-02, -5.4800e-02,  ..., -5.4800e-02,\n            -5.4800e-02, -5.4800e-02]]],\n\n\n         [[[-6.9141e-01, -8.0078e-01, -7.8906e-01,  ..., -7.9297e-01,\n            -7.8516e-01, -7.0312e-01],\n           [-7.8516e-01, -8.7109e-01, -8.6328e-01,  ..., -8.6719e-01,\n            -8.5156e-01, -7.6562e-01],\n           [-7.5391e-01, -8.3984e-01, -8.3203e-01,  ..., -8.3594e-01,\n            -8.1641e-01, -7.5000e-01],\n           ...,\n           [-7.2266e-01, -7.9297e-01, -7.7734e-01,  ..., -7.8906e-01,\n            -7.7344e-01, -7.2656e-01],\n           [-7.2656e-01, -7.8906e-01, -7.6953e-01,  ..., -7.7344e-01,\n            -7.5781e-01, -7.2656e-01],\n           [-6.9531e-01, -7.5000e-01, -7.3047e-01,  ..., -7.3828e-01,\n            -7.4609e-01, -6.7188e-01]],\n\n          [[-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           ...,\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01]],\n\n          [[-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           ...,\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01]],\n\n          ...,\n\n          [[-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           ...,\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01]],\n\n          [[-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           ...,\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01]],\n\n          [[-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           ...,\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01],\n           [-1.6810e-01, -1.6810e-01, -1.6810e-01,  ..., -1.6810e-01,\n            -1.6810e-01, -1.6810e-01]]],\n\n\n         [[[-3.9258e-01, -4.9023e-01, -4.7656e-01,  ..., -4.7070e-01,\n            -4.5898e-01, -3.1445e-01],\n           [-4.7266e-01, -5.7031e-01, -5.6250e-01,  ..., -5.5859e-01,\n            -5.4688e-01, -3.8281e-01],\n           [-4.5312e-01, -5.5469e-01, -5.5078e-01,  ..., -5.4297e-01,\n            -5.2344e-01, -3.7891e-01],\n           ...,\n           [-4.6680e-01, -5.7031e-01, -5.7031e-01,  ..., -5.6250e-01,\n            -5.3516e-01, -3.8281e-01],\n           [-4.4922e-01, -5.4688e-01, -5.4297e-01,  ..., -5.3516e-01,\n            -5.1172e-01, -3.7500e-01],\n           [-3.1836e-01, -4.3359e-01, -4.2578e-01,  ..., -4.2383e-01,\n            -4.1406e-01, -2.5391e-01]],\n\n          [[-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           ...,\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02]],\n\n          [[-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           ...,\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02]],\n\n          ...,\n\n          [[-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           ...,\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02]],\n\n          [[-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           ...,\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02]],\n\n          [[-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           ...,\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02],\n           [-6.6700e-02, -6.6700e-02, -6.6700e-02,  ..., -6.6700e-02,\n            -6.6700e-02, -6.6700e-02]]]]]), 'noise_mask': tensor([[[[[0., 0., 0.,  ..., 0., 0., 0.],\n           [0., 0., 0.,  ..., 0., 0., 0.],\n           [0., 0., 0.,  ..., 0., 0., 0.],\n           ...,\n           [0., 0., 0.,  ..., 0., 0., 0.],\n           [0., 0., 0.,  ..., 0., 0., 0.],\n           [0., 0., 0.,  ..., 0., 0., 0.]],\n\n          [[1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           ...,\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.]],\n\n          [[1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           ...,\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.]],\n\n          ...,\n\n          [[1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           ...,\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.]],\n\n          [[1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           ...,\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.]],\n\n          [[1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           ...,\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.],\n           [1., 1., 1.,  ..., 1., 1., 1.]]]]])}"
+            ],
+            "seed": [
+              20261022
+            ],
+            "steps": [
+              20
+            ],
+            "cfg": [
+              5.0
+            ],
+            "sampler_name": [
+              "uni_pc"
+            ],
+            "scheduler": [
+              "simple"
+            ],
+            "denoise": [
+              1.0
+            ]
+          },
+          "current_outputs": [],
+          "timestamp": 1792678693075
+        }
+      ]
+    ]
+  },
+  "meta": {}
+}

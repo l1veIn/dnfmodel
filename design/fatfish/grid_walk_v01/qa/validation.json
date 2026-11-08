@@ -1,0 +1,18 @@
+{
+  "generation_jobs": 1,
+  "actual_reference_images": 2,
+  "actual_2k_rgba": true,
+  "native_rgba_frames": 9,
+  "manifest_all_hashes_match": true,
+  "zip_crc_pass": true,
+  "protected_files_unchanged": true,
+  "browser_three_comparison_panels": true,
+  "browser_filmstrip_frames": 9,
+  "browser_single_pass_reaches_img8_and_stops": true,
+  "browser_native_preview_160_square": true,
+  "browser_background_overlay_anchor_controls": true,
+  "desktop_horizontal_overflow": false,
+  "loaded_broken_images": 0,
+  "npk_created": false,
+  "accepted": false
+}

@@ -1,0 +1,29 @@
+{
+  "generation_requests_exactly_two": true,
+  "sequential_carry_dependency": true,
+  "hd_design_identical_both_jobs": true,
+  "decoded_payload_reference_hashes_verified": true,
+  "references_per_job": 2,
+  "native_size_all_14_rgba": [
+    160,
+    160
+  ],
+  "high_resolution_carry_size": [
+    640,
+    640
+  ],
+  "all_14_fitted_shoe_rows_match_reference": true,
+  "fitting_is_not_no_sliding_validation": true,
+  "manual_tail_visibility_review_all_14": true,
+  "pixel_apng_readback": true,
+  "protected_files_unchanged": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\nearest_standing_v04\\standing_canvas.png": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\concepts\\fatfish_mage_v01.png": "708c2808cee3b3b6b544845069d957d9ff0fec430ca6428196c9c991255b8c6f",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20"
+  },
+  "accepted": false,
+  "full_batch": false,
+  "npk_created": false
+}

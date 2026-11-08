@@ -1,0 +1,80 @@
+{
+  "canvases": [
+    {
+      "height": 384,
+      "id": "h3_pose",
+      "width": 384
+    },
+    {
+      "height": 384,
+      "id": "grok",
+      "width": 384
+    },
+    {
+      "height": 384,
+      "id": "h3_refined",
+      "width": 384
+    },
+    {
+      "height": 384,
+      "id": "original",
+      "width": 384
+    },
+    {
+      "height": 384,
+      "id": "pose",
+      "width": 384
+    },
+    {
+      "height": 384,
+      "id": "h3_first",
+      "width": 384
+    }
+  ],
+  "counter": "2.25秒 · 帧54 / 71",
+  "url": "http://127.0.0.1:8790/trials/h3_pose_walk_v01/preview.html",
+  "videos": [
+    {
+      "id": "v-h3_pose",
+      "paused": true,
+      "ready": 4,
+      "seekableEnd": 5.166667,
+      "time": 2.25
+    },
+    {
+      "id": "v-grok",
+      "paused": true,
+      "ready": 4,
+      "seekableEnd": 4.041667,
+      "time": 2.25
+    },
+    {
+      "id": "v-h3_refined",
+      "paused": true,
+      "ready": 4,
+      "seekableEnd": 5.166667,
+      "time": 2.25
+    },
+    {
+      "id": "v-original",
+      "paused": true,
+      "ready": 4,
+      "seekableEnd": 5.166667,
+      "time": 2.25
+    },
+    {
+      "id": "v-pose",
+      "paused": true,
+      "ready": 4,
+      "seekableEnd": 5.166667,
+      "time": 2.25
+    },
+    {
+      "id": "v-h3_first",
+      "paused": true,
+      "ready": 4,
+      "seekableEnd": 5.166667,
+      "time": 2.25
+    }
+  ]
+}

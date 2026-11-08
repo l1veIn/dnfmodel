@@ -1,0 +1,21 @@
+{
+  "source_task": "img_a659649877f4712148f5bf80c4d94f3a",
+  "source_raw_sheet_sha256": "fb29b786f791141bffff3f5b7eb4184758c8be76e4305ee19550d5602aae6271",
+  "source_cell_index": 8,
+  "source_slot": 4,
+  "corrected_hd_path": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\Fatfish_Grid_Progression_v01\\group_a\\corrected_hd\\08.png",
+  "corrected_hd_sha256": "9bb272d6135e273d1cdb9df92e2fdfb39762becfd89c0a9edcadb51a8a6923af",
+  "native_round_trip": false,
+  "alpha_cleanup": {
+    "alpha_input_1_to_127": 16738,
+    "nonzero_alpha_before": 96369,
+    "nonzero_alpha_after": 80493,
+    "rule": "alpha=clip((original_alpha-96)/144,0,1); RGB unchanged where visible; transparent RGB cleared",
+    "warning": "May remove fine translucent hair/lace. This threshold is only a trial, not a universal matte solution."
+  },
+  "scale_native": 0.21333333333333335,
+  "translation_native": [
+    -3.280000000000001,
+    11.413333333333334
+  ]
+}

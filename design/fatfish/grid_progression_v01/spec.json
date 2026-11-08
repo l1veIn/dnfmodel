@@ -1,0 +1,63 @@
+{
+  "model": "gpt-image-2.5",
+  "jobs_max": 2,
+  "sequential_dependency": true,
+  "references_per_job": 2,
+  "native_size": [
+    160,
+    160
+  ],
+  "configs": {
+    "group_a": {
+      "carry_slot": 7,
+      "slots": [
+        8,
+        9,
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "group_b": {
+      "carry_slot": 4,
+      "slots": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        0,
+        1
+      ]
+    }
+  },
+  "master_source_geometry": {
+    "source_size": [
+      1024,
+      1024
+    ],
+    "factor": 0.57421875,
+    "cell_offset": [
+      16,
+      0
+    ],
+    "native_round_trip": false
+  },
+  "protected_files_before": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\nearest_standing_v04\\standing_canvas.png": "9879ff298f8ba3b5200d0ecd5edee248da34f588cc6fbe63694e75020f277446",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\concepts\\fatfish_mage_v01.png": "708c2808cee3b3b6b544845069d957d9ff0fec430ca6428196c9c991255b8c6f",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20"
+  },
+  "initial_carry": {
+    "path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grid_progression_v01\\references\\initial_carry_img007_hd.png",
+    "source": "C:\\Users\\A\\Desktop\\dnfmodel\\output\\Fatfish_Embedded_Grid_Compare_v01\\embedded_3x3\\split\\007.png",
+    "slot": 7
+  },
+  "pose_order_note": "Existing ten-slot walk-test references only. A=[8,9,0,1,2,3,4], B=[5,6,7,8,9,0,1]. Repeated slots are consistency probes, not 14 distinct ANI poses. 9->0 wrap is an experimental sequence; current ANI order/timing remains unknown.",
+  "tail_review": "Check HD return, cleaned alpha, and native-size silhouette separately; do not mark accessory presence from color counts alone.",
+  "authorization": "Exactly two requested sequential sheets with added HD design reference. Prior unrestricted spending applies; no additional retry, full batch, NPK or game writes."
+}

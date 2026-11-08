@@ -1,0 +1,480 @@
+{
+ "reload": {
+  "frames": [
+   0,
+   2,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   4,
+   5,
+   6,
+   7
+  ],
+  "clips": {
+   "clip_000_003": [
+    {
+     "slot": 0,
+     "cell": 0,
+     "phase": 0
+    },
+    {
+     "slot": 1,
+     "cell": 0,
+     "phase": 0.5
+    },
+    {
+     "slot": 2,
+     "cell": 0,
+     "phase": 1
+    },
+    {
+     "slot": 3,
+     "cell": 0,
+     "phase": 1.5
+    }
+   ],
+   "clip_004_009": [
+    {
+     "slot": 4,
+     "cell": 2
+    },
+    {
+     "slot": 5,
+     "cell": 3
+    },
+    {
+     "slot": 6,
+     "cell": 4
+    },
+    {
+     "slot": 7,
+     "cell": 5
+    },
+    {
+     "slot": 8,
+     "cell": 6
+    },
+    {
+     "slot": 9,
+     "cell": 7
+    }
+   ]
+  },
+  "motion": "In order: cells 1 and 2 she stands relaxed with both hands lightly together low in front of her skirt, visibly clasped. Cells 3 and 4 she sweeps her far arm back and down so its wide sleeve hangs out behind her. Cells 5 to 8 she brings both hands together in front of her hip, one hand gripping and the other working at it, as if loading a small object; the two hands stay in front of the gown, low at hip height."
+ },
+ "clap": {
+  "frames": [
+   10,
+   11,
+   12,
+   13,
+   26,
+   27
+  ],
+  "cols": 3,
+  "size": "3:2",
+  "ref_cells": [
+   0,
+   1,
+   3
+  ],
+  "clips": {
+   "clip_010_013": [
+    {
+     "slot": 10,
+     "cell": 0
+    },
+    {
+     "slot": 11,
+     "cell": 1
+    },
+    {
+     "slot": 12,
+     "cell": 2
+    },
+    {
+     "slot": 13,
+     "cell": 3
+    }
+   ],
+   "clip_026_027": [
+    {
+     "slot": 26,
+     "cell": 4
+    },
+    {
+     "slot": 27,
+     "cell": 5
+    }
+   ]
+  },
+  "motion": "Cells 1 to 4 are a quick hand clap in a wide stance: cell 1 one hand comes to her chest, cell 2 both forearms rise and cross in front of her chest, cell 3 one open hand is up beside her cheek with the other at her chest, cell 4 both palms press together upright in front of her chest. Cell 5 she raises her far hand high beside her head with a bent elbow, and lifts one knee high so that the gown rises with it and one boot shows. Cell 6 she has turned nearly to her back with the raised knee still up and the hand high beside her head."
+ },
+ "walk": {
+  "frames": [
+   68,
+   69,
+   70,
+   71,
+   72,
+   73,
+   74,
+   75
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   4
+  ],
+  "clips": {
+   "clip_068_075": [
+    {
+     "slot": 68,
+     "cell": 0
+    },
+    {
+     "slot": 69,
+     "cell": 1
+    },
+    {
+     "slot": 70,
+     "cell": 2
+    },
+    {
+     "slot": 71,
+     "cell": 3
+    },
+    {
+     "slot": 72,
+     "cell": 4
+    },
+    {
+     "slot": 73,
+     "cell": 5
+    },
+    {
+     "slot": 74,
+     "cell": 6
+    },
+    {
+     "slot": 75,
+     "cell": 7
+    }
+   ]
+  },
+  "motion": "These are the eight frames of one walk cycle with long strides. Her legs drive the gown: the hem swings forward with the leading leg and each white boot steps clearly out from under the frilled hem, as far apart as the sprite's feet. When the sprite's feet are far apart the gown hem must be spread wide around them, lifted at the front; when the feet pass each other the hem falls closed. Her arms swing strongly and visibly, one forward and one back, exactly as in the sprite, with the sleeves swinging. Her long hair sways behind her."
+ },
+ "slide": {
+  "frames": [
+   82,
+   83
+  ],
+  "cols": 2,
+  "size": "16:9",
+  "pad_x": 90,
+  "pad_y": 70,
+  "ref_cells": [],
+  "head_ref": {
+   "sheet": "walk",
+   "ref_head_px": 79,
+   "ref_scale": 0.871,
+   "head_px": 84
+  },
+  "clips": {
+   "clip_082_083": [
+    {
+     "slot": 82,
+     "cell": 0
+    },
+    {
+     "slot": 83,
+     "cell": 1
+    }
+   ]
+  },
+  "motion": "These are the two frames of one fast ground slide moving to the RIGHT of the image, so the air rushes past her from right to left: her boot leads on the right, stretched far out along the ground so it shows clearly past the hem, her upper body is reclined and her other arm trails behind her on the left. Everything loose streams to the LEFT, behind her: her long hair flows from her head to the left of the image, above her trailing arm and never to the right of her head, and the gown's hem and the sleeve are swept to the left as well. The two cells are the same pose a moment apart: between them the hair ends, hem and sleeve flutter a little differently, while her head and body stay in place."
+ },
+ "turn": {
+  "frames": [
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "clips": {
+   "clip_032_039": [
+    {
+     "slot": 32,
+     "cell": 0
+    },
+    {
+     "slot": 33,
+     "cell": 1
+    },
+    {
+     "slot": 34,
+     "cell": 2
+    },
+    {
+     "slot": 35,
+     "cell": 3
+    },
+    {
+     "slot": 36,
+     "cell": 4
+    },
+    {
+     "slot": 37,
+     "cell": 5
+    },
+    {
+     "slot": 38,
+     "cell": 6
+    },
+    {
+     "slot": 39,
+     "cell": 7
+    }
+   ]
+  },
+  "motion": "One quick action in a wide stance: arms spread, the gun arm stretched far out to the right and the other hand out to the left. In cells 3 to 6 she faces mostly away with her torso twisting, yet both arms and bare hands stay visible and her long hair must fall behind her so that it does not cover the arms. In cells 7 and 8 she whips around with one arm raised. The gown swings with the turn."
+ },
+ "lunge": {
+  "frames": [
+   52,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "clips": {
+   "clip_052_059": [
+    {
+     "slot": 52,
+     "cell": 0
+    },
+    {
+     "slot": 53,
+     "cell": 1
+    },
+    {
+     "slot": 54,
+     "cell": 2
+    },
+    {
+     "slot": 55,
+     "cell": 3
+    },
+    {
+     "slot": 56,
+     "cell": 4
+    },
+    {
+     "slot": 57,
+     "cell": 5
+    },
+    {
+     "slot": 58,
+     "cell": 6
+    },
+    {
+     "slot": 59,
+     "cell": 7
+    }
+   ]
+  },
+  "motion": "One fast action in a very wide lunge, with the feet exactly as far apart as the sprite's so the gown is stretched wide around both legs. Cells 1 to 4 one arm is raised high forward and the other crossed low on the opposite side of her body with its hand out to the left. Cells 5 to 8 both forearms come together straight out to the right at chest height, both bare hands visible side by side at the end of her reach. Keep her hair behind her back, away from her face and arms."
+ },
+ "hold": {
+  "frames": [
+   64,
+   65,
+   66,
+   67,
+   99,
+   100,
+   101,
+   102
+  ],
+  "cols": 4,
+  "size": "16:9",
+  "ref_cells": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "clips": {
+   "clip_064_067": [
+    {
+     "slot": 64,
+     "cell": 0
+    },
+    {
+     "slot": 65,
+     "cell": 1
+    },
+    {
+     "slot": 66,
+     "cell": 2
+    },
+    {
+     "slot": 67,
+     "cell": 3
+    }
+   ],
+   "clip_099_102": [
+    {
+     "slot": 99,
+     "cell": 4
+    },
+    {
+     "slot": 100,
+     "cell": 5
+    },
+    {
+     "slot": 101,
+     "cell": 6
+    },
+    {
+     "slot": 102,
+     "cell": 7
+    }
+   ]
+  },
+  "motion": "Cells 1 to 4: in a wide stance one arm is bent up with the hand high near her far shoulder and the other hand low in front of her waist, one forearm across her body; both hands must be visible on top of her costume. Cells 5 to 8: she stands on one leg with the other knee raised under the gown, one arm stretched out and down to the right with the hand clearly away from her body and the other arm out to the left at chest height with the hand open; in cell 8 she has turned to the side with her arms close to her body. The gown has simple clean folds following the raised knee."
+ },
+ "run": {
+  "frames": [
+   76,
+   77,
+   78,
+   79,
+   80,
+   81
+  ],
+  "cols": 3,
+  "size": "3:2",
+  "pad_x": 40,
+  "pad_y": 40,
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "clips": {
+   "clip_076_081": [
+    {
+     "slot": 76,
+     "cell": 0
+    },
+    {
+     "slot": 77,
+     "cell": 1
+    },
+    {
+     "slot": 78,
+     "cell": 2
+    },
+    {
+     "slot": 79,
+     "cell": 3
+    },
+    {
+     "slot": 80,
+     "cell": 4
+    },
+    {
+     "slot": 81,
+     "cell": 5
+    }
+   ]
+  },
+  "motion": "These are the six frames of a fast sprint to the right, with the body leaning far forward and level. Both arms are stretched straight back behind her at waist height, with both bare hands clearly visible at the end of the arms, exactly where the sprite's hands are. Her long hair streams back above her arms, never over them. The gown is swept back and lifted by the run so that both legs and boots show clearly from the knee down, in exactly the sprite's stride: in each cell one leg is thrust back and the other is driving forward."
+ },
+ "finish": {
+  "frames": [
+   21,
+   140,
+   141,
+   142
+  ],
+  "cols": 2,
+  "size": "3:2",
+  "ref_cells": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "clips": {
+   "clip_021_021": [
+    {
+     "slot": 21,
+     "cell": 0
+    }
+   ],
+   "clip_140_142": [
+    {
+     "slot": 140,
+     "cell": 1
+    },
+    {
+     "slot": 141,
+     "cell": 2
+    },
+    {
+     "slot": 142,
+     "cell": 3
+    }
+   ]
+  },
+  "motion": "Cell 1: in a wide stance she has turned to her right, with one forearm bent across her body and the hand at her chest. Cell 2: in a wide stance she stands relaxed, both arms held down close to her sides with the hands by her hips. Cells 3 and 4: in the same wide stance she opens both arms out and low to the sides with her palms showing, in a calm finishing gesture. Her hair hangs behind her."
+ }
+}

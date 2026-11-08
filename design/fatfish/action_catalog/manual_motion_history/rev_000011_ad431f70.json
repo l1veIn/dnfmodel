@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "revision": 11,
+  "frame_count": 174,
+  "clips": [
+    {
+      "id": "3d379021-c913-478e-b9de-9485b8e8a38f",
+      "name": "待机站立",
+      "start": 10,
+      "end": 13,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true,
+      "reviewed": false,
+      "note": "",
+      "source": "manual_editor"
+    },
+    {
+      "id": "7f2e6d77-f4db-458b-abd2-25b7247d89cc",
+      "name": "战斗待机",
+      "start": 14,
+      "end": 17,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true,
+      "reviewed": false,
+      "note": "",
+      "source": "manual_editor"
+    },
+    {
+      "id": "66d06724-2fb8-410b-b3ee-8e48302d01de",
+      "name": "默认走路",
+      "start": 0,
+      "end": 9,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true,
+      "reviewed": false,
+      "note": "",
+      "source": "manual_editor"
+    },
+    {
+      "id": "a2f7df6d-e15b-496f-8d16-0ae1911ca59b",
+      "name": "战斗跑",
+      "start": 18,
+      "end": 21,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true,
+      "reviewed": false,
+      "note": "",
+      "source": "manual_editor"
+    },
+    {
+      "id": "5ed0e5ee-540b-4ebb-9331-03b9197417fa",
+      "name": "前冲",
+      "start": 22,
+      "end": 25,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true,
+      "reviewed": false,
+      "note": "",
+      "source": "manual_editor"
+    },
+    {
+      "id": "7f2de9ac-ebf4-4c5a-91ac-2f11b0e72a5a",
+      "name": "前冲摔倒",
+      "start": 26,
+      "end": 34,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true,
+      "reviewed": false,
+      "note": "",
+      "source": "manual_editor"
+    },
+    {
+      "id": "fb22a5a9-23a1-4e5d-865d-8bd44a6e224a",
+      "name": "碎霸",
+      "start": 35,
+      "end": 41,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true,
+      "reviewed": false,
+      "note": "",
+      "source": "manual_editor"
+    },
+    {
+      "id": "e17feac1-0f46-4431-862f-8e48f639fead",
+      "name": "召唤",
+      "start": 42,
+      "end": 52,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true,
+      "reviewed": false,
+      "note": "",
+      "source": "manual_editor"
+    },
+    {
+      "id": "f91c9802-3a62-4454-9b28-37ad07c226f0",
+      "name": "蹲伏",
+      "start": 53,
+      "end": 54,
+      "frame_ms": [
+        100,
+        100
+      ],
+      "loop": true,
+      "reviewed": false,
+      "note": "",
+      "source": "manual_editor"
+    },
+    {
+      "id": "22aa4cf9-54f0-4ef9-8caa-f5643efe7600",
+      "name": "杰克爆弹",
+      "start": 55,
+      "end": 61,
+      "frame_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true,
+      "reviewed": false,
+      "note": "",
+      "source": "manual_editor"
+    }
+  ],
+  "source": "manual_editor",
+  "ani_parsed": false,
+  "updated_at": "2026-10-23T22:48:50+08:00"
+}

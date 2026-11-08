@@ -1,0 +1,294 @@
+{
+  "old": {
+    "shared_scale": 0.173109464348232,
+    "endpoint_translations": [
+      [
+        17.641936048547095,
+        27.96121192671258
+      ],
+      [
+        18.853702298984715,
+        28.614992998016106
+      ]
+    ],
+    "shared_translation": [
+      18.247819173765905,
+      28.288102462364343
+    ],
+    "fitted_indices": [
+      0,
+      5
+    ],
+    "intermediate_original_landmarks_used": false,
+    "per_frame_resizing": false,
+    "local_limb_warp": false,
+    "frames": [
+      {
+        "index": 0,
+        "phase_t": 0.0,
+        "used_as_fitting_control": true,
+        "translation_native": [
+          17.641936048547095,
+          27.96121192671258
+        ],
+        "fitted_eye_native": [
+          81.0,
+          53.062084257206216
+        ],
+        "lowest_shoe_y": 132,
+        "bbox": [
+          39,
+          39,
+          111,
+          133
+        ]
+      },
+      {
+        "index": 1,
+        "phase_t": 0.2,
+        "used_as_fitting_control": false,
+        "translation_native": [
+          17.88428929863462,
+          28.091968140973286
+        ],
+        "fitted_eye_native": [
+          82.97344789356984,
+          55.097044579297474
+        ],
+        "lowest_shoe_y": 134,
+        "bbox": [
+          38,
+          39,
+          103,
+          135
+        ]
+      },
+      {
+        "index": 2,
+        "phase_t": 0.4,
+        "used_as_fitting_control": false,
+        "translation_native": [
+          18.126642548722142,
+          28.222724355233993
+        ],
+        "fitted_eye_native": [
+          81.31159703582682,
+          52.458049363986476
+        ],
+        "lowest_shoe_y": 133,
+        "bbox": [
+          45,
+          39,
+          106,
+          134
+        ]
+      },
+      {
+        "index": 3,
+        "phase_t": 0.6,
+        "used_as_fitting_control": false,
+        "translation_native": [
+          18.368995798809667,
+          28.353480569494696
+        ],
+        "fitted_eye_native": [
+          76.70688528416385,
+          55.70477593651535
+        ],
+        "lowest_shoe_y": 133,
+        "bbox": [
+          40,
+          39,
+          97,
+          134
+        ]
+      },
+      {
+        "index": 4,
+        "phase_t": 0.8,
+        "used_as_fitting_control": false,
+        "translation_native": [
+          18.61134904889719,
+          28.484236783755403
+        ],
+        "fitted_eye_native": [
+          81.9694130003501,
+          56.35486054382075
+        ],
+        "lowest_shoe_y": 133,
+        "bbox": [
+          42,
+          40,
+          119,
+          134
+        ]
+      },
+      {
+        "index": 5,
+        "phase_t": 1.0,
+        "used_as_fitting_control": true,
+        "translation_native": [
+          18.853702298984715,
+          28.614992998016106
+        ],
+        "fitted_eye_native": [
+          81.0,
+          54.92763157894737
+        ],
+        "lowest_shoe_y": 133,
+        "bbox": [
+          40,
+          40,
+          118,
+          134
+        ]
+      }
+    ]
+  },
+  "new": {
+    "shared_scale": 0.19448480946687513,
+    "endpoint_translations": [
+      [
+        12.346862258193084,
+        13.753235844139923
+      ],
+      [
+        11.957892639259327,
+        21.00432569974555
+      ]
+    ],
+    "shared_translation": [
+      12.152377448726206,
+      17.378780771942736
+    ],
+    "fitted_indices": [
+      0,
+      5
+    ],
+    "intermediate_original_landmarks_used": false,
+    "per_frame_resizing": false,
+    "local_limb_warp": false,
+    "frames": [
+      {
+        "index": 0,
+        "phase_t": 0.0,
+        "used_as_fitting_control": true,
+        "translation_native": [
+          12.346862258193084,
+          13.753235844139923
+        ],
+        "fitted_eye_native": [
+          81.0,
+          51.28880407124682
+        ],
+        "lowest_shoe_y": 132,
+        "bbox": [
+          37,
+          33,
+          111,
+          133
+        ]
+      },
+      {
+        "index": 1,
+        "phase_t": 0.2,
+        "used_as_fitting_control": false,
+        "translation_native": [
+          12.269068334406334,
+          15.20345381526105
+        ],
+        "fitted_eye_native": [
+          82.67256936141513,
+          52.3500524234342
+        ],
+        "lowest_shoe_y": 135,
+        "bbox": [
+          36,
+          34,
+          101,
+          136
+        ]
+      },
+      {
+        "index": 2,
+        "phase_t": 0.4,
+        "used_as_fitting_control": false,
+        "translation_native": [
+          12.191274410619581,
+          16.653671786382176
+        ],
+        "fitted_eye_native": [
+          80.45544253349276,
+          52.82784634722095
+        ],
+        "lowest_shoe_y": 136,
+        "bbox": [
+          36,
+          34,
+          107,
+          138
+        ]
+      },
+      {
+        "index": 3,
+        "phase_t": 0.6,
+        "used_as_fitting_control": false,
+        "translation_native": [
+          12.113480486832831,
+          18.1038897575033
+        ],
+        "fitted_eye_native": [
+          83.29492075170913,
+          51.944246604739575
+        ],
+        "lowest_shoe_y": 134,
+        "bbox": [
+          39,
+          33,
+          104,
+          135
+        ]
+      },
+      {
+        "index": 4,
+        "phase_t": 0.8,
+        "used_as_fitting_control": false,
+        "translation_native": [
+          12.03568656304608,
+          19.554107728624427
+        ],
+        "fitted_eye_native": [
+          82.05021797112113,
+          55.33931267052945
+        ],
+        "lowest_shoe_y": 133,
+        "bbox": [
+          39,
+          35,
+          102,
+          134
+        ]
+      },
+      {
+        "index": 5,
+        "phase_t": 1.0,
+        "used_as_fitting_control": true,
+        "translation_native": [
+          11.957892639259327,
+          21.00432569974555
+        ],
+        "fitted_eye_native": [
+          81.0,
+          57.56746987951807
+        ],
+        "lowest_shoe_y": 133,
+        "bbox": [
+          39,
+          38,
+          110,
+          135
+        ]
+      }
+    ]
+  }
+}

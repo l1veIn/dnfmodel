@@ -1,0 +1,32 @@
+{
+  "actual_cli_body_captured_before_http": true,
+  "network_requests_during_audit": 0,
+  "reference_count": 2,
+  "request": {
+    "kind": "image",
+    "model": "gpt-image-2.5",
+    "input": {
+      "prompt": "Precise occlusion-repair underpainting for a 2D game character cutout rig.\nIMAGE 1 is the EDIT TARGET, the approved Fatfish whale maid at its original 1024x1024 coordinates, with BOTH arms and hands deliberately cut out to transparent holes. IMAGE 2 is the unmodified original and supplies the exact existing costume and hair design.\nFill ONLY those missing arm/hand regions with what would be visible BEHIND the removed arms: continue the navy fitted bodice, white waistband, dress skirt and gold hem ornament where appropriate, and continue the blue/cyan rear hair where the hole is outside the torso. The final character must have NO ARMS AND NO HANDS: this is an underpainting, not an anatomical finished character. Do not recreate arms, sleeves, skin hands or cuffs in the holes. The detached original arms will be placed back over this underpainting later.\nPreserve all unmasked existing pixels, exact figure position and scale, face, head, clothing, legs, shoes, hair, separate whale tail, clear line edges and exact palette. No redesign, pose change, camera change, labels, extra figures or scene. Do not center or resize. Keep real clean transparency around the silhouette, including outside the removed arms. Reconstruct hidden dress material rather than adding body width; preserve the waist and hem contours. Return ONE 1024x1024 transparent RGBA image in exactly the same coordinate system. This is ONE reusable hidden-area repair, NOT an animation and NOT a sprite sheet.",
+      "n": 1,
+      "size": "1:1",
+      "resolution": "1k",
+      "image": [
+        {
+          "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\rig_walk_v01\\references\\arms_removed.png",
+          "decoded_bytes": 335833,
+          "decoded_sha256": "1bc940d8c3f55bf29b40dcd77243dce7b23068558ab89c3d33a21f764e2ab66c"
+        },
+        {
+          "file": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\rig_walk_v01\\references\\master_approved.png",
+          "decoded_bytes": 380772,
+          "decoded_sha256": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d"
+        }
+      ],
+      "background": "transparent",
+      "output_format": "png",
+      "quality": "high"
+    }
+  },
+  "wire_bytes": 957210,
+  "wire_sha256": "a08526ac3ff7536f4150af23b828aa963a9d0e205d5039a3f0c60bbc0af7b104"
+}

@@ -1,0 +1,146 @@
+{
+  "title": "H3 first-frame walk versus prior Grok",
+  "lanes": [
+    {
+      "id": "grok",
+      "video": "media/grok_silent.mp4",
+      "original": "media/grok_original.mp4",
+      "sha256": "92917f6152327cd2f4f521e6e3b57424ac78193d5db9811291bbaea8f4cb1fd5",
+      "media": {
+        "width": 960,
+        "height": 960,
+        "fps": 24.0,
+        "codec": "h264",
+        "audio_present": true,
+        "frames": 97,
+        "seconds": 4.041666666666667,
+        "viewport": "Fixed central square using full frame height; no per-frame tracking or alignment.",
+        "foreground_bottom_range_128": [
+          112,
+          115
+        ],
+        "measurement_note": "Thresholded gray-background silhouette only. Not a foot-slip measurement or anatomical root tracker."
+      },
+      "telemetry": null
+    },
+    {
+      "id": "h3_first",
+      "video": "media/h3_first_silent.mp4",
+      "original": "media/h3_first_original.mp4",
+      "sha256": "0dd9322c797324510971b148b2db88927adbb6b8724b5ba6c2a33b36d9dc346c",
+      "media": {
+        "width": 608,
+        "height": 352,
+        "fps": 24.0,
+        "codec": "h264",
+        "audio_present": true,
+        "frames": 124,
+        "seconds": 5.166666666666667,
+        "viewport": "Fixed central square using full frame height; no per-frame tracking or alignment.",
+        "foreground_bottom_range_128": [
+          111,
+          114
+        ],
+        "measurement_note": "Thresholded gray-background silhouette only. Not a foot-slip measurement or anatomical root tracker."
+      },
+      "telemetry": {
+        "elapsed_seconds": 96.22,
+        "peak_whole_gpu_mib_sampled": 11478.0,
+        "min_system_ram_available_gib_sampled": 9.251922607421875,
+        "sampling_interval_seconds": 5
+      }
+    },
+    {
+      "id": "h3_refined",
+      "video": "media/h3_refined_silent.mp4",
+      "original": "media/h3_refined_original.mp4",
+      "sha256": "887fb7a83fe3158efa6f492c25f905437cc5ebd425fb6ceeb22970b91752f5b7",
+      "media": {
+        "width": 864,
+        "height": 480,
+        "fps": 24.0,
+        "codec": "h264",
+        "audio_present": true,
+        "frames": 124,
+        "seconds": 5.166666666666667,
+        "viewport": "Fixed central square using full frame height; no per-frame tracking or alignment.",
+        "foreground_bottom_range_128": [
+          110,
+          114
+        ],
+        "measurement_note": "Thresholded gray-background silhouette only. Not a foot-slip measurement or anatomical root tracker."
+      },
+      "telemetry": {
+        "elapsed_seconds": 96.48,
+        "peak_whole_gpu_mib_sampled": 11407.0,
+        "min_system_ram_available_gib_sampled": 6.772941589355469,
+        "sampling_interval_seconds": 5
+      }
+    }
+  ],
+  "local_job_id": "20261023-190159_fatfish_first_frame_10e4777971d0",
+  "seed": 20261023,
+  "h3_input": "First frame only; gray padding, identical underlying128px Grok design.",
+  "last_frame_supplied": false,
+  "intermediate_frames_supplied": false,
+  "same_frozen_api_for_two_stages": true,
+  "second_pass_cache_hit_verified": true,
+  "refine_steps": 6,
+  "refine_denoise": 0.25,
+  "local_total_seconds": 192.7,
+  "cloud_calls_this_run": 0,
+  "prior_grok_cost_usd": 1.16,
+  "cloud_cost_excludes_local_energy": true,
+  "telemetry": {
+    "h3_first": {
+      "elapsed_seconds": 96.22,
+      "peak_whole_gpu_mib_sampled": 11478.0,
+      "min_system_ram_available_gib_sampled": 9.251922607421875,
+      "sampling_interval_seconds": 5
+    },
+    "h3_refined": {
+      "elapsed_seconds": 96.48,
+      "peak_whole_gpu_mib_sampled": 11407.0,
+      "min_system_ram_available_gib_sampled": 6.772941589355469,
+      "sampling_interval_seconds": 5
+    }
+  },
+  "full_video_decode": true,
+  "native_apng_pixel_roundtrip": true,
+  "comparison_window": "Fixed central square; common first96 frames at24fps. No pose alignment, stabilization, retiming, background removal or artificial loop closure.",
+  "original_ani_verified": false,
+  "dnf_ready": false,
+  "npk_created": false,
+  "batch_started": false,
+  "game_installation_changed": false,
+  "accepted": false,
+  "protected_files_unchanged": {
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grok_walk_v01\\input\\master_gray_1024.png": "293392069fe39ab1f916d96db9e0c3fd3fc4b6db3b78ef269d5a3b1ef134c487",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\Fatfish_Grok_Walk_v01\\grok_walk_original.mp4": "92917f6152327cd2f4f521e6e3b57424ac78193d5db9811291bbaea8f4cb1fd5",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_catalog\\progress.json": "412926bb6ccb36b416197a290411475fc0fa02efecf75911f372d76487712d20",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\output\\A_Fatfish_FMage_Grok_Walk_Test_v01.NPK": "7989ffc4074e16e28aeac22b58f42ab68d6aebc9e9cc1fadc9cf53c0d5bf9dd7",
+    "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\action_samples_v01\\raw\\idle_01_0.png": "def36f96650567eca3797074e596344bcc74ccf8d637b9671b77b1c30fa40c1d"
+  },
+  "limitations": [
+    "Single seed/sample, different output resolutions and durations; not a general model ranking.",
+    "Both models use the old128px reference artwork, not the newer detailed1024px appearance master.",
+    "H3 was first fitted into the verified low-memory608x352 landscape profile without stretching.",
+    "A central crop can hide movement outside that viewport; complete raw videos are also included.",
+    "Bounding boxes reflect silhouette/background segmentation, not physical foot sliding."
+  ],
+  "visual_review": {
+    "checked_first_middle_last_both_h3_stages": true,
+    "checked_motion_contact_sheets": true,
+    "observations": [
+      "H3 produces recognizable alternating leg motion from the supplied first frame.",
+      "First-pass face/hair/apron contain coarse colored blocks.",
+      "Refinement reduces some blocks but does not restore the reference details.",
+      "The tail elongates into a pointed shape; hands and apron ornament also drift.",
+      "The prior Grok sample has clearer facial/costume details at equal display height."
+    ],
+    "recommendation": "One-pass for motion screening; refine only accepted candidates. Test HD reference and sparse guide anchors separately.",
+    "model_ranking_claimed": false,
+    "user_accepted": false,
+    "in_game_tested": false
+  }
+}

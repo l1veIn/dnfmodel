@@ -1,0 +1,41 @@
+{
+  "name": "refine_preview",
+  "node": "15",
+  "width": 608,
+  "height": 352,
+  "client_id": "2ef9c822-aa4f-4641-b14b-3724091e9cb8",
+  "status": "completed",
+  "submission_attempted": true,
+  "started_at": 1792753329.523955,
+  "prompt_id": "716a672d-cfce-42ed-a397-0de9dfd004f1",
+  "elapsed_seconds": 96.22,
+  "videos": [
+    "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\minimax_h3_agent\\20261023-190159_fatfish_first_frame_10e4777971d0\\first_pass_00001_.mp4"
+  ],
+  "media_reports": [
+    {
+      "file": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\minimax_h3_agent\\20261023-190159_fatfish_first_frame_10e4777971d0\\first_pass_00001_.mp4",
+      "width": 608,
+      "height": 352,
+      "fps": 24.0,
+      "video_codec": "h264",
+      "container_seconds": 5.167,
+      "decoded_frames": 124,
+      "mean_luma_proxy": 124.56662990200904,
+      "mean_temporal_pixel_change": 1.266699482088651,
+      "frames": {
+        "1": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\minimax_h3_agent\\20261023-190159_fatfish_first_frame_10e4777971d0\\first_pass_00001__qa\\frame_001.png",
+        "62": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\minimax_h3_agent\\20261023-190159_fatfish_first_frame_10e4777971d0\\first_pass_00001__qa\\frame_062.png",
+        "124": "D:\\VideoStudio\\comfyUI\\shared\\output\\video\\minimax_h3_agent\\20261023-190159_fatfish_first_frame_10e4777971d0\\first_pass_00001__qa\\frame_124.png"
+      },
+      "audio": {
+        "codec": "aac",
+        "sample_rate": 32000,
+        "channels": 2,
+        "decoded_audio_frames": 162,
+        "rms": 0.015344256371165719,
+        "peak": 0.5089697241783142
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "width": 256,
+  "height": 256,
+  "frames": 25,
+  "fps": 24,
+  "steps": 20,
+  "seed": 20261023,
+  "model": "Wan2.1 VACE 1.3B FP16",
+  "text_encoder_device": "cpu",
+  "sampler": "euler",
+  "batch_size": 1,
+  "guard_min_ram_gib": 4,
+  "guard_min_commit_gib": 4,
+  "guard_min_gpu_free_mib": 2048,
+  "guard_interval_seconds": 0.5
+}

@@ -1,0 +1,9 @@
+Edit Image 1. It shows two standing figures of one 2D game character on a flat gray background. Redraw the whole image at the same size with the same two figures in the same places. Only the LEFT figure's arms change.
+
+Change, on the left figure only: both her hands now rest together in front of her body. Her shoulders are relaxed and her elbows hang soft and close to her sides. Both forearms come forward and meet in front of her, with the hands loosely overlapping low on the front of the skirt, just below the lower ruffled edge of the white apron. The near arm crosses in front of the side of her body and the white ribbon of the back bow. Both white ruffled cuffs and both bare hands are clearly visible. The fingers are relaxed and the hands are empty.
+
+Do not change anything else on the left figure: the same head, face, expression, hair, headband, ahoge, fins, bodice, puffed sleeves joined at the shoulder, apron with its whale logo, back bow, skirt, hem, whale tail, legs and shoes, at the same size, in the same position, with the same colors and outlines. Where her old near arm used to hang, draw what was behind it: the white ribbon and the dark navy skirt, continuing naturally.
+
+Do not change the right figure at all.
+
+Every shape is fully opaque. Background: completely flat uniform medium gray, RGB 128 128 128. No shadow, no floor, no effects, no grid lines, no numbers, no text.

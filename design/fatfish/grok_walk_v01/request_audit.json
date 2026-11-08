@@ -1,0 +1,24 @@
+{
+  "request": {
+    "kind": "video",
+    "model": "grok-imagine-video-1.5-preview",
+    "operation": "generate",
+    "input": {
+      "prompt": "Animate the supplied first-frame image as a precise 2D game sprite walk-cycle test. The image is the approved character design, proportions, pixel-art style, outfit and fixed three-quarter view facing right. Preserve that exact character throughout: navy-to-cyan long wavy hair, curled ahoge, small whale-fin ears, white frilled maid headband, blue eyes, navy long-sleeved dress, white whale-emblem apron with gold trim, opaque white tights, navy Mary Jane shoes, and compact whale tail. Keep her face, head size, hair silhouette, costume colors and all accessories consistent.\n\nThe character walks IN PLACE at a steady moderate cadence, repeatedly alternating left and right legs through a complete natural gait. Clearly bend knees and ankles, lift each foot during swing, and show continuous connected arms and hands with small counter-swing. Each planted foot travels backward smoothly during support and returns forward only while lifted, like a treadmill walk. The head and torso remain almost fixed, with only tiny natural vertical bobbing; the pelvis does not drift across the canvas. Hair, skirt and tail follow with restrained secondary motion. Keep the same right-facing three-quarter orientation; never turn toward the camera.\n\nShow approximately four evenly timed repetitions in four seconds. Continue the walk right to the end, reaching the starting gait phase for a clean repeat; do not pause to pose. Locked camera and scale, entire body and both shoes visible within the original margins, constant ground-contact height. Preserve the deliberately pixelated game-sprite appearance; no conversion to 3D, realistic rendering or smooth anime illustration. Background stays a perfectly flat uniform neutral gray RGB(128,128,128) with no floor, shadows, scenery, grid, text, effects, additional characters or camera movement. Silent clip, no speech.",
+      "seconds": 4,
+      "resolution": "720p",
+      "input_mode": "first_frame",
+      "input_reference": {
+        "image_url": {
+          "transport": "PNG data URI",
+          "local_path": "C:\\Users\\A\\Desktop\\dnfmodel\\design\\fatfish\\grok_walk_v01\\input\\master_gray_1024.png",
+          "decoded_bytes": 21105,
+          "decoded_sha256": "293392069fe39ab1f916d96db9e0c3fd3fc4b6db3b78ef269d5a3b1ef134c487"
+        }
+      }
+    }
+  },
+  "wire_sha256": "31d6c2551451e02b710a857621982f91395bf8ae4dc44119ae52afa938e8d6ce",
+  "wire_bytes": 30238,
+  "reference_encoded_and_verified": true
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "frame": 1,
+    "head_pixels_identical_after_expected_integer_translation": true,
+    "translation": [
+      3,
+      0
+    ],
+    "note": "Identity lock is deliberate compositing; hair beyond this mask and cloth still require sequence inspection."
+  },
+  {
+    "frame": 2,
+    "head_pixels_identical_after_expected_integer_translation": true,
+    "translation": [
+      4,
+      0
+    ],
+    "note": "Identity lock is deliberate compositing; hair beyond this mask and cloth still require sequence inspection."
+  }
+]
