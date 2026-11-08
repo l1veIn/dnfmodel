@@ -1,0 +1,253 @@
+{
+ "note": "Chinese names for skill effect folders (sprite/character/<class>/effect/<folder>), per class folder. Edited from the workbench's resource browser. 'checked' is true once someone confirmed the name in game or from a reliable list.",
+ "classes": {
+  "gunner": {
+   "flamethrower": {
+    "name": "喷火器",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "flamethrowerboost": {
+    "name": "强化喷火器",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "laserriflecharge": {
+    "name": "激光枪",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "heavyweaponalteration": {
+    "name": "激光枪",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "aturaniumbomb": {
+    "name": "原子弹",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "uraniumbomb": {
+    "name": "原子弹",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "dropbomblight": {
+    "name": "原子弹",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "steyrheavyrifle": {
+    "name": "反坦克炮",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atstinger": {
+    "name": "毒刺",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atpt-15prototype": {
+    "name": "PT-15",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atoperationraze": {
+    "name": "Operation Raze",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atphlegethon": {
+    "name": "UHT-03",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "extruder": {
+    "name": "X-1",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "fm-31": {
+    "name": "FM-31",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "plasmaboost": {
+    "name": "等离子武器",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atplasmaboost": {
+    "name": "等离子武器",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atfsc7": {
+    "name": "FS-C7",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atdefinitesolution": {
+    "name": "终解武器件",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atsolasystem": {
+    "name": "Sola System",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "pistolcarbine": {
+    "name": "卡宾",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atthermobaricgranade": {
+    "name": "手雷地雷",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atzerodistance": {
+    "name": "手雷地雷",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "grenade": {
+    "name": "手雷地雷",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atlightmine": {
+    "name": "手雷地雷",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "m18claymore": {
+    "name": "手雷地雷",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atmechboltmx": {
+    "name": "白色机甲",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "at_sowalker": {
+    "name": "SO 步行机",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "g0": {
+    "name": "G-0",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atg5falcon": {
+    "name": "G-1 科罗纳",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "g1": {
+    "name": "小型 G1",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atlimitover": {
+    "name": "小型 G1",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "g2": {
+    "name": "小型 G2",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "g3": {
+    "name": "小型 G3",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atoverpowerlaser": {
+    "name": "无人机",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atdecisivebattle": {
+    "name": "女大枪大招人物帧",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atgxstardust": {
+    "name": "女机械大招人物帧",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atcrimsongarden": {
+    "name": "女漫游大招人物帧",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "athalo": {
+    "name": "女医疗大招人物帧",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "atdday": {
+    "name": "atdday 人物帧",
+    "transfer": "",
+    "source": "女枪手 Claude v03/v05 道具表（design/gunner_props/families.json）里的物件名，不一定是技能名",
+    "checked": false
+   },
+   "cutin": {
+    "name": "切入图",
+    "transfer": "",
+    "source": "目录名",
+    "checked": true
+   },
+   "sparrowfactory": {
+    "name": "拦截机工厂",
+    "transfer": "女机械",
+    "source": "按英文名 Sparrow Factory 推断，未核实",
+    "checked": false
+   }
+  }
+ }
+}

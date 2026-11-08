@@ -1,25 +1,21 @@
-"""Renders one patch project's frames for the workbench. The main server starts one per project on demand; it exits after ten idle minutes.
+"""Renders one design folder's frames for the review board. The main server starts one per design on demand; it exits after an idle hour.
 
-    python scripts/workbench/worker.py <id> <port>
+    python scripts/workbench/worker.py <design id> <port>
 
-Two kinds of assets:
+Assets:
 - character: the main rig, one unit per action (clips.json), via the patch kit. Needs PATCH_ID, which is why this is a separate process.
-- img: any IMG in a built NPK that is not costume or weapon (skill props, robots, awakening frames, cut-ins, recolored glow), one unit per IMG,
-  compared with the official IMG of the same path, found through the resource library (kb/kb.sqlite).
-Assets other than character are listed in design/<id>/workbench/assets.json.
-Only reads the game folder, the project's output and the resource library.
+- one asset per category of the design's built NPK (categories.py): growtype, weapon, cut-in, awakening frames, effects, summons.
+  One unit per IMG, compared with the official IMG of the same path (found through the resource library).
+  design/<id>/workbench/assets.json only gives groups friendlier names.
+Each unit is served as one atlas per side (render.py), cached on disk. Only reads the game folder, the project's output and the library.
 """
 from __future__ import annotations
 
-import io
 import json
 import os
-import re
-import sqlite3
 import sys
 import threading
 import time
-from functools import lru_cache
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -27,20 +23,11 @@ from urllib.parse import parse_qs, urlparse
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from PIL import Image  # noqa: E402
+import categories  # noqa: E402
+import render  # noqa: E402
 
-IDLE = 600
-PAD = 6
-GAME = Path("C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2")
-COSTUME = re.compile(r"^sprite/character/[^/]+/[^/]+/(avatar|weapon)/")
+IDLE = 3600
 last_request = [time.monotonic()]
-render_lock = threading.Lock()
-
-
-def png(image):
-    buffer = io.BytesIO()
-    image.save(buffer, "PNG")
-    return buffer.getvalue()
 
 
 # ---------------------------------------------------------------- character (the main rig)
@@ -54,7 +41,7 @@ class Character:
         sys.path.insert(0, str(ROOT / ".claude/skills/dnf-character-patch/scripts"))
         from kit import review_page, source
         from kit.config import P
-        self.P, self.page, self.source = P, review_page, source
+        self.ident, self.P, self.page, self.source = ident, P, review_page, source
         self.id, self.label = "character", "人物动作"
         self.weapon = P.weapon["label"] if P.weapon else None
         self._units = None
@@ -72,8 +59,9 @@ class Character:
         out = []
         for a in self.page._actions():
             frames = [r["i"] for r in a["frames"]]
-            out.append(dict(id=a["name"], label=a["name"], group="", box=a["box"], frames=frames,
-                            labels=[f"第 {i + 1} 帧" for i in frames], meta=a["frames"], version=self.version_of(frames), player="sprite"))
+            box = a["box"]
+            out.append(dict(id=a["name"], label=a["name"], group="", box=box, frames=frames, meta=a["frames"], version=self.version_of(frames),
+                            player="sprite", atlas=render.layout(box[2] - box[0], box[3] - box[1], len(frames))))
         self._units = {u["id"]: u for u in out}
         return out
 
@@ -82,60 +70,36 @@ class Character:
             self.units()
         return self._units[unit_id]
 
-    def frame(self, unit_id, side, k, weapon):
-        u = self.unit(unit_id)
-        i = u["frames"][k]
-        with render_lock:
+    def _image(self, i, side, weapon):
+        with render.lock:
             image = self.source.native_world(i) if side == "native" else self.page._new(i)
             if weapon and self.weapon:
                 image = self.source.armed(image, i)
-        return png(image.crop(tuple(u["box"])))
+        return image
+
+    def frame(self, unit_id, side, k, weapon):
+        u = self.unit(unit_id)
+        return render.webp(self._image(u["frames"][k], side, weapon).crop(tuple(u["box"])))
+
+    def atlas(self, unit_id, side, weapon):
+        u = self.unit(unit_id)
+        native = [self.P.composites / f"{i:04d}.png" for i in u["frames"]]
+        stamp = max(int(p.stat().st_mtime) for p in native) if side == "native" else u["version"]
+        key = f"char|{self.ident}|{unit_id}|{side}|{int(bool(weapon))}|{stamp}|{u['box']}"
+        return render.cached(key, lambda: render.atlas([self._image(i, side, weapon).crop(tuple(u["box"])) for i in u["frames"]], u["atlas"]))
 
 
-# ---------------------------------------------------------------- img (skill props, robots, cut-ins, glow)
-
-
-@lru_cache(maxsize=None)
-def npk_entries(path_text):
-    from dnf_resources import read_npk
-    return {e["path"]: e for e in read_npk(Path(path_text))}
-
-
-@lru_cache(maxsize=64)
-def load_img(path_text, img_path):
-    from survey_gunner_effects import reader
-    entry = npk_entries(path_text)[img_path]
-    with open(path_text, "rb") as stream:
-        stream.seek(entry["offset"])
-        return reader(stream.read(entry["length"]), entry["version"])
-
-
-def official_npk(img_path):
-    db = sqlite3.connect(f"file:{ROOT / 'kb/kb.sqlite'}?mode=ro", uri=True)
-    row = db.execute("select n.name from img i join npk n on n.id=i.npk where i.path=? and lower(n.name) like 'sprite%' limit 1", (img_path,)).fetchone()
-    db.close()
-    return str(GAME / row[0]) if row else None
-
-
-def geometry(img):
-    """(x, y, w, h, canvas w, canvas h) of each frame from the headers, without decoding pixels."""
-    out = []
-    for k in range(len(img.frames)):
-        f = img.resolve(k)
-        w, h = f.get("w", f.get("width", 0)), f.get("h", f.get("height", 0))
-        out.append((f.get("x", 0), f.get("y", 0), w, h, f.get("cw", f.get("canvas_width")), f.get("ch", f.get("canvas_height"))))
-    return out
+# ---------------------------------------------------------------- one category of the built NPK
 
 
 class ImgAsset:
     kind = "img"
 
     def __init__(self, key, npk, paths, names):
-        """One category of the NPK (see categories.py). names maps a path to a friendlier group label from assets.json; others group by folder."""
-        import categories
+        """names maps a path to a friendlier group label from assets.json; other paths group by folder."""
         self.id, self.label = key, categories.LABEL[key]
         self.npk = str(npk)
-        self.player = categories.PLAYER[key] or "sprite"
+        self.screen = categories.PLAYER[key] == "screen"
         self.paths = {p: names.get(p) or p.rsplit("/", 2)[-2] for p in sorted(paths, key=lambda p: (names.get(p) or p.rsplit("/", 2)[-2], p))}
         self.version = int(Path(self.npk).stat().st_mtime)
         self._units = None
@@ -143,28 +107,11 @@ class ImgAsset:
     def units(self):
         out = []
         for path, group in self.paths.items():
-            new = load_img(self.npk, path)
-            old_npk = official_npk(path)
-            old = load_img(old_npk, path) if old_npk else None
-            count = max(len(new.frames), len(old.frames) if old else 0)
-            boxes = []
-            canvas = None
-            for img in (new, old):
-                if img is None:
-                    continue
-                for x, y, w, h, cw, ch in geometry(img):
-                    if w > 1 and h > 1:
-                        boxes.append((x, y, x + w, y + h))
-                    canvas = canvas or ((cw, ch) if cw and ch else None)
-            if self.player == "screen" and canvas:
-                box = (0, 0, canvas[0], canvas[1])
-            elif boxes:
-                box = (min(b[0] for b in boxes) - PAD, min(b[1] for b in boxes) - PAD, max(b[2] for b in boxes) + PAD, max(b[3] for b in boxes) + PAD)
-            else:
-                box = (0, 0, 8, 8)
-            name = path.rsplit("/", 1)[1][:-4]
-            out.append(dict(id=path, label=name, group=group, box=box, frames=list(range(count)), labels=[f"#{k}" for k in range(count)],
-                            meta=[{}] * count, version=self.version, player=self.player, official=bool(old_npk), npk=Path(old_npk).name if old_npk else None))
+            official = render.official_npk(path)
+            box, count, _ = render.unit_box([self.npk, official], path, self.screen)
+            out.append(dict(id=path, label=path.rsplit("/", 1)[1][:-4], group=group, box=box, frames=list(range(count)), meta=[{}] * count,
+                            version=self.version, player="screen" if self.screen else "sprite", official=bool(official),
+                            npk=Path(official).name if official else None, atlas=render.layout(box[2] - box[0], box[3] - box[1], count, self.screen)))
         self._units = {u["id"]: u for u in out}
         return out
 
@@ -173,21 +120,15 @@ class ImgAsset:
             self.units()
         return self._units[unit_id]
 
+    def _source(self, unit_id, side):
+        return self.npk if side == "new" else render.official_npk(unit_id)
+
     def frame(self, unit_id, side, k, weapon):
+        return render.webp(render.frame(self._source(unit_id, side), unit_id, k, tuple(self.unit(unit_id)["box"])))
+
+    def atlas(self, unit_id, side, weapon):
         u = self.unit(unit_id)
-        x0, y0, x1, y1 = u["box"]
-        canvas = Image.new("RGBA", (x1 - x0, y1 - y0))
-        source = self.npk if side == "new" else official_npk(unit_id)
-        if source:
-            img = load_img(source, unit_id)
-            if k < len(img.frames):
-                with render_lock:
-                    f = img.resolve(k)
-                    pic = img.image(k)
-                if pic is not None:
-                    pic = pic.convert("RGBA")
-                    canvas.paste(pic, (f.get("x", 0) - x0, f.get("y", 0) - y0), pic)  # paste, unlike alpha_composite, accepts offsets outside the box
-        return png(canvas)
+        return render.img_atlas(self._source(unit_id, side), unit_id, tuple(u["box"]), len(u["frames"]), self.screen)
 
 
 # ---------------------------------------------------------------- project and HTTP
@@ -208,7 +149,7 @@ def built_npk(ident):
 
 
 def group_names(ident, paths):
-    """Group labels from design/<id>/workbench/assets.json (optional): {"groups": [{"label", "match": [path tails or stems]}]} under any asset."""
+    """Group labels from design/<id>/workbench/assets.json (optional): {"assets": [{"groups": [{"label", "match": [path tails or IMG stems]}]}]}."""
     spec_path = ROOT / "design" / ident / "workbench" / "assets.json"
     if not spec_path.exists():
         return {}
@@ -225,25 +166,24 @@ def group_names(ident, paths):
 
 
 class Project:
-    """The character asset, then one asset per category of the built NPK, in the same order for every project (categories.py)."""
+    """The character asset, then one asset per category of the built NPK, in the same order for every project."""
 
     def __init__(self, ident):
-        import categories
         self.id = ident
         self.assets = {}
         if Character.available(ident):
             c = Character(ident)
             self.assets[c.id] = c
-        self.npk = built_npk(ident)
-        if self.npk and self.npk.exists():
-            paths = list(npk_entries(str(self.npk)))
+        npk = built_npk(ident)
+        if npk and npk.exists():
+            paths = list(render.npk_entries(str(npk)))
             by_key = {}
             for p in paths:
                 by_key.setdefault(categories.classify(p), []).append(p)
             names = group_names(ident, paths)
             for key, _, _ in categories.CATEGORIES:
                 if key != "avatar" and by_key.get(key):
-                    self.assets[key] = ImgAsset(key, self.npk, by_key[key], names)
+                    self.assets[key] = ImgAsset(key, npk, by_key[key], names)
         self._listing = None
 
     def listing(self):
@@ -254,8 +194,7 @@ class Project:
     def refresh(self):
         """Frames may have been rewritten (final, a repair, a new build): drop what was computed from them."""
         self._listing = None
-        npk_entries.cache_clear()
-        load_img.cache_clear()
+        render.reset()
         for a in self.assets.values():
             a._units = None
 
@@ -288,15 +227,15 @@ def make_handler(project):
                     return self._json(project.listing())
                 if url.path == "/version":
                     asset = project.assets[q["asset"]]
-                    if q.get("refresh", "1") == "1":
-                        asset._units = None
+                    asset._units = None
                     return self._json(dict(version=asset.unit(q["unit"])["version"]))
-                if url.path == "/frame":
-                    asset = project.assets[q["asset"]]
-                    side = q["side"]
+                if url.path in ("/frame", "/atlas"):
+                    asset, side = project.assets[q["asset"]], q["side"]
                     if side not in ("native", "new"):
                         raise ValueError("side")
-                    return self._send(asset.frame(q["unit"], side, int(q["k"]), q.get("weapon") == "1"), "image/png")
+                    weapon = q.get("weapon") == "1"
+                    body = asset.atlas(q["unit"], side, weapon) if url.path == "/atlas" else asset.frame(q["unit"], side, int(q["k"]), weapon)
+                    return self._send(body, "image/webp")
             except (KeyError, IndexError, ValueError) as error:
                 return self._json(dict(error=f"{type(error).__name__}: {error}"), 404)
             return self._json(dict(error="not found"), 404)

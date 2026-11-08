@@ -25,6 +25,7 @@ from urllib.parse import parse_qs, quote, unquote, urlencode, urlparse
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import game  # noqa: E402
 import issues  # noqa: E402
 import progress  # noqa: E402
 
@@ -251,6 +252,15 @@ class Handler(BaseHTTPRequestHandler):
                     if "/" in name or "\\" in name or not name.endswith(".md") or not (ROOT / "docs" / name).is_file():
                         raise KeyError(name)
                     return self._send((ROOT / "docs" / name).read_bytes(), "text/plain; charset=utf-8")
+            if parts[:2] == ["api", "game"] and len(parts) == 3:
+                if parts[2] == "classes":
+                    return self._json(game.classes())
+                if parts[2] == "skills":
+                    return self._json(game.skills(q["cls"]))
+                if parts[2] == "skill":
+                    return self._json(game.skill(q["cls"], q["folder"]))
+                if parts[2] == "atlas":
+                    return self._send(game.atlas(q["path"], q["src"]), "image/webp", cache="max-age=86400")  # the page versions the URL
             if parts == ["api", "designs"]:
                 return self._json(designs())
             if len(parts) >= 4 and parts[:2] == ["api", "p"]:
@@ -259,7 +269,10 @@ class Handler(BaseHTTPRequestHandler):
                     return self._json(design_state(ident, refresh=q.get("refresh") == "1"))
                 if what == "frame":
                     body, kind = ask(ident, "/frame", asset=q["asset"], unit=q["unit"], side=q["side"], k=q["k"], weapon=q.get("weapon", "0"))
-                    return self._send(body, kind or "image/png", cache="max-age=3600")  # the page puts the unit version in the URL
+                    return self._send(body, kind or "image/webp", cache="max-age=86400")  # the page puts the unit version in the URL
+                if what == "atlas":
+                    body, kind = ask(ident, "/atlas", asset=q["asset"], unit=q["unit"], side=q["side"], weapon=q.get("weapon", "0"))
+                    return self._send(body, kind or "image/webp", cache="max-age=86400")
                 if what == "version":
                     body, _ = ask(ident, "/version", asset=q["asset"], unit=q["unit"])
                     units_cache.pop(ident, None)
@@ -287,6 +300,8 @@ class Handler(BaseHTTPRequestHandler):
             if len(parts) == 4 and parts[:2] == ["api", "p"] and parts[3] == "event":
                 event = post_event(parts[2], payload)
                 return self._json(dict(event=event, state=design_state(parts[2])))
+            if parts == ["api", "game", "name"]:
+                return self._json(game.save_name(payload))
             if len(parts) == 4 and parts[:2] == ["api", "projects"]:
                 if parts[3] == "gate":
                     return self._json(dict(event=add_gate(parts[2], payload), project=progress.detail(progress.project(parts[2]))))
@@ -300,10 +315,21 @@ class Handler(BaseHTTPRequestHandler):
         pass
 
 
+def warm():
+    """Start every live project's current design worker and list its units now, so the first visit to the review board is quick."""
+    for p in progress.registry():
+        if p.get("current") and not p.get("archived"):
+            try:
+                units(p["current"])
+            except Exception as error:  # a broken design must not stop the others; the page will show the error when opened
+                print(f"warm {p['current']}: {error}", flush=True)
+
+
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
     port = int(next((a.split("=", 1)[1] for a in sys.argv[1:] if a.startswith("--port=")), 8800))
     print(f"workbench http://127.0.0.1:{port}/", flush=True)
+    threading.Thread(target=warm, daemon=True).start()
     try:
         ThreadingHTTPServer(("127.0.0.1", port), Handler).serve_forever()
     finally:

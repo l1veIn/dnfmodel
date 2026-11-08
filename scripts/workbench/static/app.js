@@ -31,7 +31,7 @@ async function loadProjects() {
   await openProject(wanted, hash.get("a"), hash.get("u"));
 }
 
-async function openProject(pid, assetId, unitId) {
+async function openProject(pid, assetId, unitId, refresh = false) {
   S.pid = pid;
   const owner = S.projects.find(p => p.id === pid)?.project;
   $("back").href = owner ? `/#/p/${encodeURIComponent(owner)}` : "/";
@@ -39,7 +39,7 @@ async function openProject(pid, assetId, unitId) {
   $("unitTitle").textContent = "读取中…（第一次打开要启动渲染进程，约几秒）";
   $("unitSub").textContent = "";
   try {
-    S.data = await api(`/api/p/${encodeURIComponent(pid)}/state?refresh=1`);
+    S.data = await api(`/api/p/${encodeURIComponent(pid)}/state` + (refresh ? "?refresh=1" : ""));
   } catch (error) {
     $("unitTitle").textContent = "读取失败";
     $("unitSub").textContent = error.message;
@@ -111,16 +111,35 @@ function renderList() {
 
 // ---------------------------------------------------------------- player
 
-function image(side, k) {
-  const u = unit(), weapon = asset().kind === "character" && $("weapon").checked ? 1 : 0;
-  const key = `${S.asset}|${u.id}|${side}|${k}|${weapon}|${u.version}`;
-  if (!S.images.has(key)) {
+// A unit's frames come as one atlas per side (a grid of equal cells); full-screen cut-ins are scaled down in it,
+// so a paused cut-in also loads its one frame at full size.
+function load(url, onload) {
+  if (!S.images.has(url)) {
     const img = new Image();
-    img.onload = () => { if (unit() === u) draw(); };
-    img.src = `/api/p/${encodeURIComponent(S.pid)}/frame?` + new URLSearchParams({asset: S.asset, unit: u.id, side, k, weapon, v: u.version});
-    S.images.set(key, img);
+    img.decoding = "async";
+    img.onload = onload;
+    img.src = url;
+    S.images.set(url, img);
   }
-  return S.images.get(key);
+  return S.images.get(url);
+}
+
+function weaponFlag() { return asset().kind === "character" && $("weapon").checked ? 1 : 0; }
+
+function sheet(side) {
+  const u = unit();
+  return load(`/api/p/${encodeURIComponent(S.pid)}/atlas?` + new URLSearchParams({asset: S.asset, unit: u.id, side, weapon: weaponFlag(), v: u.version}),
+    () => { if (unit() === u) { draw(); strip(); } });
+}
+
+function cell(side, k, atlasOnly = false) {
+  const u = unit(), g = u.atlas, img = sheet(side);
+  const src = {img, sx: (k % g.cols) * g.cw, sy: Math.floor(k / g.cols) * g.ch, sw: g.cw, sh: g.ch};
+  if (u.player === "screen" && !S.playing && !atlasOnly) {
+    const full = load(`/api/p/${encodeURIComponent(S.pid)}/frame?` + new URLSearchParams({asset: S.asset, unit: u.id, side, k, weapon: 0, v: u.version}), () => { if (unit() === u) draw(); });
+    if (full.complete && full.naturalWidth) return {img: full, sx: 0, sy: 0, sw: full.naturalWidth, sh: full.naturalHeight};
+  }
+  return src;
 }
 
 function selectUnit(id) {
@@ -133,7 +152,7 @@ function selectUnit(id) {
   $("weaponLabel").textContent = a.weapon ? `带${a.weapon}（武器总画在最上面，遮挡顺序不对）` : "";
   $("fps").value = u.player === "screen" ? 8 : 10;
   $("fpsText").textContent = fpsText();
-  u.frames.forEach((_, k) => { image("native", k); image("new", k); });
+  sheet("native"); sheet("new");
   layout(); strip(); renderList(); renderReview(); draw(); info(); setPlaying(true);
 }
 
@@ -161,8 +180,8 @@ function paint(canvas, layers) {
   g.globalAlpha = 1;
   g.fillStyle = $("backdrop").value;
   g.fillRect(0, 0, canvas.width, canvas.height);
-  for (const [img, alpha] of layers) {
-    if (img.complete && img.naturalWidth) { g.globalAlpha = alpha; g.drawImage(img, 0, 0, canvas.width, canvas.height); }
+  for (const [c, alpha] of layers) {
+    if (c.img.complete && c.img.naturalWidth) { g.globalAlpha = alpha; g.drawImage(c.img, c.sx, c.sy, c.sw, c.sh, 0, 0, canvas.width, canvas.height); }
   }
   g.globalAlpha = 1;
 }
@@ -178,9 +197,9 @@ function ring(canvas, m, color, dashed) {
 function draw() {
   if (!unit()) return;
   const k = S.k, value = unit().frames[k], view = $("view").value, canvases = [...$("stage").querySelectorAll("canvas")];
-  if (view === "overlay") paint(canvases[0], [[image("native", k), 1], [image("new", k), 0.6]]);
-  else if (view === "new") paint(canvases[0], [[image("new", k), 1]]);
-  else { paint(canvases[0], [[image("native", k), 1]]); paint(canvases[1], [[image("new", k), 1]]); }
+  if (view === "overlay") paint(canvases[0], [[cell("native", k), 1], [cell("new", k), 0.6]]);
+  else if (view === "new") paint(canvases[0], [[cell("new", k), 1]]);
+  else { paint(canvases[0], [[cell("native", k), 1]]); paint(canvases[1], [[cell("new", k), 1]]); }
   const target = canvases[canvases.length - 1];
   for (const i of unitIssues()) {
     if (i.status !== "open" && i.status !== "fixed") continue;
@@ -211,8 +230,9 @@ function strip() {
     const c = el("canvas", {width: wide, height: tall});
     const b = el("button", {type: "button", title: frameLabel(u, value)}, c, el("span", {textContent: asset().kind === "character" ? value + 1 : value}));
     b.addEventListener("click", () => { setPlaying(false); go(k); });
-    const img = image("new", k), put = () => { const g = c.getContext("2d"); g.fillStyle = $("backdrop").value; g.fillRect(0, 0, wide, tall); if (img.naturalWidth) g.drawImage(img, 0, 0, wide, tall); };
-    if (img.complete) put(); else img.addEventListener("load", put, {once: true});
+    const src = cell("new", k, true), g = c.getContext("2d");
+    g.fillStyle = $("backdrop").value; g.fillRect(0, 0, wide, tall);
+    if (src.img.complete && src.img.naturalWidth) g.drawImage(src.img, src.sx, src.sy, src.sw, src.sh, 0, 0, wide, tall);
     return b;
   }));
   markStrip();
@@ -367,7 +387,7 @@ function renderOverlay() {
 // ---------------------------------------------------------------- wiring
 
 $("project").addEventListener("change", () => openProject($("project").value));
-$("reload").addEventListener("click", () => { S.images.clear(); openProject(S.pid, S.asset, S.unit); });
+$("reload").addEventListener("click", () => { S.images.clear(); openProject(S.pid, S.asset, S.unit, true); });
 $("filter").addEventListener("change", renderList);
 $("search").addEventListener("input", renderList);
 $("play").addEventListener("click", () => setPlaying(!S.playing));
@@ -376,7 +396,7 @@ $("next").addEventListener("click", () => { setPlaying(false); go(S.k + 1); });
 $("fps").addEventListener("input", () => { $("fpsText").textContent = fpsText(); setPlaying(S.playing); });
 $("view").addEventListener("change", () => { layout(); draw(); });
 $("backdrop").addEventListener("change", () => { strip(); draw(); });
-$("weapon").addEventListener("change", () => { unit().frames.forEach((_, k) => { image("native", k); image("new", k); }); strip(); draw(); });
+$("weapon").addEventListener("change", () => { sheet("native"); sheet("new"); strip(); draw(); });
 $("pass").addEventListener("click", () => send({op: "pass", asset: S.asset, unit: S.unit}).then(() => { const next = firstTodo(); if (next && next.id !== S.unit) selectUnit(next.id); }));
 $("clear").addEventListener("click", () => send({op: "clear", asset: S.asset, unit: S.unit}));
 $("submit").addEventListener("click", submitDraft);

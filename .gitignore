@@ -47,3 +47,4 @@ __pycache__/
 
 # Workbench worker logs (the issue log itself, issues.jsonl, is versioned)
 design/*/workbench/worker.log
+kb/cache/

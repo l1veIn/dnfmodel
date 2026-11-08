@@ -289,8 +289,13 @@ async function showDoc(pid, name) {
 // ---------------------------------------------------------------- routing
 
 async function route() {
-  const m = location.hash.match(/^#\/p\/([^/]+)/);
+  const m = location.hash.match(/^#\/p\/([^/]+)/), g = location.hash.match(/^#\/game(?:\/([^/]+))?(?:\/(.+))?/);
+  $("navProjects").classList.toggle("on", !g);
+  $("navGame").classList.toggle("on", !!g);
   try {
+    if (g) return await gamePage(g[1] && decodeURIComponent(g[1]), g[2] && decodeURIComponent(g[2]));
+    $("page").className = "page";
+    G.skill = null; clearTimeout(G.timer);
     if (m) await projectPage(decodeURIComponent(m[1]));
     else { document.title = "补丁工作台"; await overview(); }
   } catch (error) {

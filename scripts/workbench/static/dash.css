@@ -79,3 +79,31 @@ td a.button, td button { font-size: 12px; padding: 2px 8px; }
 table.matrix td, table.matrix th { white-space: nowrap; }
 table.matrix a.badge { text-decoration: none; }
 table.matrix a.badge:hover { border-color: var(--accent); }
+.nav { display: flex; gap: 4px; }
+.nav a { color: var(--muted); text-decoration: none; padding: 3px 10px; border-radius: 6px; }
+.nav a:hover { color: var(--text); }
+.nav a.on { color: var(--text); background: var(--panel-2); }
+.page.wide { max-width: none; padding: 0; }
+.gamewrap { display: grid; grid-template-columns: 300px minmax(0, 1fr); min-height: calc(100vh - 46px); }
+.gside { background: var(--panel); border-right: 1px solid var(--line); padding: 10px; display: flex; flex-direction: column; gap: 6px; position: sticky; top: 0; height: calc(100vh - 46px); }
+.gside select, .gside input[type="search"] { width: 100%; }
+.gside .row { flex-wrap: nowrap; }
+#skillList { list-style: none; margin: 0; padding: 0; overflow-y: auto; flex: 1; }
+#skillList button { width: 100%; text-align: left; background: none; border: 1px solid transparent; padding: 4px 7px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0 6px; }
+#skillList button:hover { background: var(--panel-2); }
+#skillList button[aria-current="true"] { background: var(--panel-2); border-color: var(--accent); }
+#skillList .code { grid-column: 1 / -1; font-size: 11px; color: var(--muted); }
+#skillList .guess { color: var(--muted); }
+.gmain { padding: 14px 18px 40px; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+.gmain h2 { margin: 0; font-size: 18px; }
+.namebar { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
+.namebar input[type="text"] { background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 3px 7px; width: 170px; }
+.imgs { display: flex; flex-wrap: wrap; gap: 4px; max-height: 120px; overflow-y: auto; }
+.imgs button { font-size: 12px; padding: 1px 8px; }
+.imgs button.mod { border-color: #3f5a7a; color: var(--accent); }
+.imgs button[aria-current="true"] { background: #2f3d55; border-color: var(--accent); color: var(--text); }
+.gstage { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; }
+.gstage figure { margin: 0; }
+.gstage canvas { image-rendering: pixelated; border-radius: 4px; display: block; }
+.empty { display: grid; place-items: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 4px; font-size: 14px; }
+@media (max-width: 860px) { .gamewrap { grid-template-columns: 1fr; } .gside { position: static; height: auto; max-height: 360px; } }
