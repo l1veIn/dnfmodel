@@ -23,7 +23,7 @@ const unitIssues = () => S.data.issues.filter(i => i.asset === S.asset && i.unit
 // ---------------------------------------------------------------- loading
 
 async function loadProjects() {
-  S.projects = await api("/api/projects");
+  S.projects = await api("/api/designs");
   $("project").replaceChildren(...S.projects.map(p => el("option", {value: p.id, textContent: `${p.title}（${p.id}）`})));
   const hash = new URLSearchParams(location.hash.slice(1));
   const wanted = hash.get("p") || (S.projects.find(p => p.events) || S.projects[0]).id;
@@ -33,6 +33,9 @@ async function loadProjects() {
 
 async function openProject(pid, assetId, unitId) {
   S.pid = pid;
+  const owner = S.projects.find(p => p.id === pid)?.project;
+  $("back").href = owner ? `/#/p/${encodeURIComponent(owner)}` : "/";
+  $("back").textContent = owner ? "← 回到项目" : "← 项目总览";
   $("unitTitle").textContent = "读取中…（第一次打开要启动渲染进程，约几秒）";
   $("unitSub").textContent = "";
   try {

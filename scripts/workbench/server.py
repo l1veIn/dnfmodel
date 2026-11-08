@@ -1,14 +1,17 @@
-"""DNF patch workbench: one local page for every patch project. Design: docs/workbench_design.md.
+"""DNF patch workbench: a dashboard of every patch project, each project's progress and versions, and a review board. Design: docs/workbench_design.md.
 
     python scripts/workbench/server.py [--port=8800]
 
-Files stay the source of truth: projects are design/<id>/patch.json, verdicts and issues are design/<id>/workbench/issues.jsonl.
-Frames come from one worker process per project (scripts/workbench/worker.py), started on first use.
+Files stay the source of truth: projects are listed in design/projects.json, their state is read from design/ and output/,
+verdicts and issues are design/<design>/workbench/issues.jsonl. Frames come from one worker process per design folder
+(scripts/workbench/worker.py), started on first use.
 Bound to 127.0.0.1 only. Never writes to the game folder.
 """
 from __future__ import annotations
 
+import io
 import json
+import mimetypes
 import socket
 import subprocess
 import sys
@@ -18,31 +21,35 @@ import urllib.error
 import urllib.request
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import parse_qs, urlencode, urlparse
+from urllib.parse import parse_qs, quote, unquote, urlencode, urlparse
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import issues  # noqa: E402
+import progress  # noqa: E402
 
 STATIC = Path(__file__).resolve().parent / "static"
 DESIGN = ROOT / "design"
+OUTPUT = ROOT / "output"
 LIMIT = 200_000
 TYPES = {".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8"}
 workers, workers_lock = {}, threading.Lock()
-units_cache = {}
+units_cache, cover_cache = {}, {}
 
 
-def projects():
+# ---------------------------------------------------------------- design folders (review board)
+
+
+def designs():
+    owner = {d: p["id"] for p in progress.registry() for d in p["designs"]}
     out = []
     for path in sorted(DESIGN.glob("*/patch.json")):
         ident = path.parent.name
         data = json.loads(path.read_text("utf-8"))
         state = issues.replay(ident)
-        extra = path.parent / "workbench" / "assets.json"
-        assets = ["character"] + ([a["id"] for a in json.loads(extra.read_text("utf-8"))["assets"]] if extra.exists() else [])
-        out.append(dict(id=ident, title=data.get("title", ident), version=data.get("version"), npk_stem=data.get("npk_stem"), assets=assets,
+        out.append(dict(id=ident, title=data.get("title", ident), version=data.get("version"), project=owner.get(ident),
                         open=sum(1 for i in state["issues"] if i["status"] == "open"), fixed=sum(1 for i in state["issues"] if i["status"] == "fixed"),
-                        passed=sum(1 for u in state["units"].values() if u["verdict"] == "pass"), events=bool(issues.read_events(ident))))
+                        events=bool(issues.read_events(ident))))
     return out
 
 
@@ -53,7 +60,7 @@ def free_port():
 
 
 def worker(ident):
-    """The project's worker, started if needed. A worker that went idle and exited is started again."""
+    """The design's worker, started if needed. A worker that went idle and exited is started again."""
     if not (DESIGN / ident / "patch.json").exists():
         raise KeyError(ident)
     with workers_lock:
@@ -61,7 +68,7 @@ def worker(ident):
         if w and w["process"].poll() is None:
             return w["port"]
         port = free_port()
-        log = (DESIGN / ident / "workbench")
+        log = DESIGN / ident / "workbench"
         log.mkdir(parents=True, exist_ok=True)
         process = subprocess.Popen([sys.executable, str(Path(__file__).resolve().parent / "worker.py"), ident, str(port)], cwd=ROOT,
                                    stdout=open(log / "worker.log", "w", encoding="utf-8"), stderr=subprocess.STDOUT)
@@ -96,7 +103,7 @@ def unit_index(ident):
     return {(a["id"], u["id"]): u for a in units(ident) for u in a["units"]}
 
 
-def project_state(ident, refresh=False):
+def design_state(ident, refresh=False):
     listing = units(ident, refresh)
     state = issues.replay(ident)
     for a in listing:
@@ -116,38 +123,143 @@ def post_event(ident, payload):
         return issues.append(ident, event)
 
 
+# ---------------------------------------------------------------- projects (dashboard)
+
+
+def dashboard():
+    projects = [progress.summary(p) for p in progress.registry()]
+    known = {v["name"] for p in progress.registry() for v in progress.versions(p)}
+    stems = [s.lower() for p in progress.registry() for s in p["npk"]]
+    others = [n for n in progress.game_patches() if n not in known and not any(n.lower().startswith(s) for s in stems)]
+    return dict(projects=projects, game=progress.game_patches(), others=others)
+
+
+def version_file(pid, name, kind):
+    """A built NPK or its release zip, only if it belongs to the project (the name comes from the page)."""
+    v = next((v for v in progress.versions(progress.project(pid)) if v["name"] == name), None)
+    if v is None:
+        raise KeyError(name)
+    rel = v["path"] if kind == "npk" else v["zip"]
+    if not rel:
+        raise KeyError(f"{name} has no {kind}")
+    return ROOT / rel
+
+
+def cover_png(pid):
+    path = progress.cover(progress.project(pid))
+    if path is None:
+        raise KeyError("cover")
+    key = (str(path), path.stat().st_mtime)
+    if cover_cache.get(pid, (None,))[0] != key:
+        from PIL import Image
+        image = Image.open(path).convert("RGBA")
+        box = image.getbbox() or (0, 0, image.width, image.height)
+        image = image.crop(box)
+        image.thumbnail((360, 360), Image.LANCZOS)
+        buffer = io.BytesIO()
+        image.save(buffer, "PNG")
+        cover_cache[pid] = (key, buffer.getvalue())
+    return cover_cache[pid][1]
+
+
+def add_gate(pid, payload):
+    p = progress.project(pid)
+    if not p.get("current"):
+        raise ValueError("archived project")
+    names = {v["name"] for v in progress.versions(p)}
+    if payload.get("version") not in names or payload.get("gate") not in ("ingame", "ingame_failed"):
+        raise ValueError("bad gate")
+    note = payload.get("note", "")
+    if not isinstance(note, str) or len(note) > issues.NOTE_LIMIT:
+        raise ValueError("bad note")
+    event = dict(t=time.strftime("%Y-%m-%d %H:%M:%S"), gate=payload["gate"], version=payload["version"], note=note, by="user")
+    path = DESIGN / p["current"] / "workbench" / "gates.jsonl"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with issues.LOCK, path.open("a", encoding="utf-8") as stream:
+        stream.write(json.dumps(event, ensure_ascii=False) + "\n")
+    return event
+
+
+def reveal(pid, payload):
+    """Open Explorer with the file selected. The path is resolved from the project's own versions, never taken from the page."""
+    target = version_file(pid, payload.get("name"), payload.get("kind", "npk"))
+    subprocess.Popen(["explorer", "/select,", str(target)])
+    return dict(opened=str(target.relative_to(ROOT)))
+
+
+def static_output(rel):
+    """Comparison pages under output/<build>/preview/ only."""
+    path = (OUTPUT / rel).resolve()
+    if OUTPUT.resolve() not in path.parents or "preview" not in path.relative_to(OUTPUT.resolve()).parts or not path.is_file():
+        raise KeyError(rel)
+    return path
+
+
 class Handler(BaseHTTPRequestHandler):
     protocol_version = "HTTP/1.1"
 
-    def _send(self, body, kind="application/json; charset=utf-8", code=200, cache="no-store"):
+    def _send(self, body, kind="application/json; charset=utf-8", code=200, cache="no-store", extra=None):
         self.send_response(code)
         self.send_header("Content-Type", kind)
         self.send_header("Content-Length", str(len(body)))
         self.send_header("Cache-Control", cache)
+        for k, v in (extra or {}).items():
+            self.send_header(k, v)
         self.end_headers()
         self.wfile.write(body)
 
     def _json(self, value, code=200):
         self._send(json.dumps(value, ensure_ascii=False).encode("utf-8"), code=code)
 
+    def _file(self, path, download=False):
+        size = path.stat().st_size
+        self.send_response(200)
+        self.send_header("Content-Type", mimetypes.guess_type(path.name)[0] or "application/octet-stream")
+        self.send_header("Content-Length", str(size))
+        if download:
+            self.send_header("Content-Disposition", f"attachment; filename*=UTF-8''{quote(path.name)}")
+        self.end_headers()
+        with path.open("rb") as stream:
+            while chunk := stream.read(1 << 20):
+                self.wfile.write(chunk)
+
     def do_GET(self):
         url = urlparse(self.path)
         q = {k: v[0] for k, v in parse_qs(url.query).items()}
-        parts = [p for p in url.path.split("/") if p]
+        parts = [unquote(p) for p in url.path.split("/") if p]
         try:
             if not parts:
                 return self._send((STATIC / "index.html").read_bytes(), TYPES[".html"])
+            if parts == ["review"]:
+                return self._send((STATIC / "review.html").read_bytes(), TYPES[".html"])
             if parts[0] == "static" and len(parts) == 2 and (STATIC / parts[1]).suffix in TYPES and (STATIC / parts[1]).exists():
                 return self._send((STATIC / parts[1]).read_bytes(), TYPES[(STATIC / parts[1]).suffix])
-            if parts == ["api", "projects"]:
-                return self._json(projects())
+            if parts[0] == "output":
+                return self._file(static_output("/".join(parts[1:])))
+            if parts == ["api", "dashboard"]:
+                return self._json(dashboard())
+            if parts[:2] == ["api", "projects"] and len(parts) >= 3:
+                pid = parts[2]
+                if len(parts) == 3:
+                    return self._json(progress.detail(progress.project(pid)))
+                if parts[3] == "cover.png":
+                    return self._send(cover_png(pid), "image/png", cache="max-age=60")
+                if parts[3] == "download":
+                    return self._file(version_file(pid, q["name"], q.get("kind", "npk")), download=True)
+                if parts[3] == "doc":
+                    name = q["name"]
+                    if "/" in name or "\\" in name or not name.endswith(".md") or not (ROOT / "docs" / name).is_file():
+                        raise KeyError(name)
+                    return self._send((ROOT / "docs" / name).read_bytes(), "text/plain; charset=utf-8")
+            if parts == ["api", "designs"]:
+                return self._json(designs())
             if len(parts) >= 4 and parts[:2] == ["api", "p"]:
                 ident, what = parts[2], parts[3]
                 if what == "state":
-                    return self._json(project_state(ident, refresh=q.get("refresh") == "1"))
+                    return self._json(design_state(ident, refresh=q.get("refresh") == "1"))
                 if what == "frame":
                     body, kind = ask(ident, "/frame", asset=q["asset"], unit=q["unit"], side=q["side"], k=q["k"], weapon=q.get("weapon", "0"))
-                    return self._send(body, kind or "image/png", cache="max-age=3600")  # the page adds the unit version to the URL
+                    return self._send(body, kind or "image/png", cache="max-age=3600")  # the page puts the unit version in the URL
                 if what == "version":
                     body, _ = ask(ident, "/version", asset=q["asset"], unit=q["unit"])
                     units_cache.pop(ident, None)
@@ -156,23 +268,33 @@ class Handler(BaseHTTPRequestHandler):
             return self._json(dict(error=f"unknown {error}"), 404)
         except (RuntimeError, urllib.error.URLError) as error:
             return self._json(dict(error=str(error)), 502)
+        except (ConnectionError, BrokenPipeError):
+            return None
         return self._json(dict(error="not found"), 404)
 
     def do_POST(self):
         url = urlparse(self.path)
-        parts = [p for p in url.path.split("/") if p]
+        parts = [unquote(p) for p in url.path.split("/") if p]
         length = int(self.headers.get("Content-Length") or 0)
-        if len(parts) != 4 or parts[:2] != ["api", "p"] or parts[3] != "event" or length > LIMIT:
-            return self._json(dict(error="not found"), 404)
+        if length > LIMIT:
+            return self._json(dict(error="too large"), 413)
         # A page on another site cannot post here: browsers send Origin on cross-site POSTs.
         origin = self.headers.get("Origin")
         if origin and urlparse(origin).hostname not in ("127.0.0.1", "localhost"):
             return self._json(dict(error="cross-site request refused"), 403)
         try:
-            event = post_event(parts[2], json.loads(self.rfile.read(length)))
-            return self._json(dict(event=event, state=project_state(parts[2])))
+            payload = json.loads(self.rfile.read(length) or b"{}")
+            if len(parts) == 4 and parts[:2] == ["api", "p"] and parts[3] == "event":
+                event = post_event(parts[2], payload)
+                return self._json(dict(event=event, state=design_state(parts[2])))
+            if len(parts) == 4 and parts[:2] == ["api", "projects"]:
+                if parts[3] == "gate":
+                    return self._json(dict(event=add_gate(parts[2], payload), project=progress.detail(progress.project(parts[2]))))
+                if parts[3] == "reveal":
+                    return self._json(reveal(parts[2], payload))
         except (ValueError, TypeError, KeyError) as error:
             return self._json(dict(error=str(error)), 400)
+        return self._json(dict(error="not found"), 404)
 
     def log_message(self, *args):
         pass

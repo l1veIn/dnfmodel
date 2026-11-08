@@ -37,6 +37,8 @@ $PY $K init gpt_dragon_slayer swordman atequipment sg --weapon=katana --stem=A_G
 
 `init` 生成的 `patch.json` 只是初稿，字段见 [references/patch_json.md](references/patch_json.md)。
 
+新项目还要登记到 `design/projects.json`，工作台首页才会列出它：写项目名（如“女鬼剑改 GPT 龙娘”）、`designs`（这个项目所有版本的配置目录）、`current`（当前配置）和 `npk`（NPK 名前缀）。重做形象另建配置目录时，把新目录加进 `designs` 并改 `current`。进度、版本、安装状态和花费都由工作台从文件里读出来，不用手写。只有不在人物 journal 里的花费（道具、视频）写进 `costs`。
+
 资源库 `scripts/dnf_kb.py`（说明见 `kb/README.md`）能查全游戏的东西：`class <职业>` 列出部件、武器、特效包、切入图和已装的补丁，`draw <职业>` 给出真实的图层绘制顺序。`init` 会从资源库读出真实的 `composite_order`，并打印每层的 z 值；某一层没有 z 值时，退回原来的猜测并提示。以前看接触表猜的顺序错过：女鬼剑默认装的白色连裤袜（裤子 d 层）被压到皮肤下面，参考图和审核页里的"原版"成了光腿。龙娘、大小姐、鲸鱼娘女仆三个旧补丁按用户的决定保留旧顺序，没有改。武器图层总是画在最上面，但游戏里武器有的层在腿后面，资源库还没有武器的 z 值，判断武器的遮挡要以实机为准。职业名用 `gunner_at`（女枪手）、`swordman_at`（女鬼剑）、`mage`（女法师）这种写法。
 
 ### 2. 看原版，分段

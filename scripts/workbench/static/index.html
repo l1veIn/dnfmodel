@@ -5,82 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>补丁工作台</title>
 <link rel="stylesheet" href="/static/style.css">
+<link rel="stylesheet" href="/static/dash.css">
 </head>
-<body>
+<body class="dashboard">
 <header class="top">
-  <strong class="brand">补丁工作台</strong>
-  <label class="field">项目 <select id="project"></select></label>
-  <span id="summary" class="muted"></span>
+  <a class="brand" href="#/">补丁工作台</a>
+  <span id="crumb" class="muted"></span>
   <span class="spacer"></span>
-  <button id="allIssues" type="button" aria-pressed="false">问题总表</button>
-  <button id="reload" type="button" title="重新读取帧和审核记录（final 或打包之后）">刷新</button>
+  <span id="gameLine" class="small muted"></span>
+  <button id="refresh" type="button">刷新</button>
 </header>
-<div class="app">
-  <aside class="units">
-    <div class="tabs" id="assets" role="tablist"></div>
-    <div class="filter">
-      <select id="filter" aria-label="筛选">
-        <option value="all">全部</option>
-        <option value="todo">未审</option>
-        <option value="open">有待修问题</option>
-        <option value="fixed">已修待复核</option>
-        <option value="recheck">通过后又改过</option>
-        <option value="pass">已通过</option>
-      </select>
-      <input id="search" type="search" placeholder="搜索名称" aria-label="搜索">
-    </div>
-    <div class="progress"><div class="bar"><i id="bar"></i></div><span id="progress"></span></div>
-    <ul id="list"></ul>
-  </aside>
+<div id="page" class="page"></div>
 
-  <main id="viewer">
-    <div class="title"><h2 id="unitTitle">读取中…</h2><span id="unitSub" class="muted"></span></div>
-    <div id="stage"></div>
-    <div class="controls">
-      <button id="play" type="button">暂停</button>
-      <button id="prev" type="button">上一帧</button>
-      <button id="next" type="button">下一帧</button>
-      <label class="field">速度 <input id="fps" type="range" min="2" max="30" step="1" value="10"> <span id="fpsText"></span></label>
-      <label class="field">显示 <select id="view"><option value="side">并排</option><option value="overlay">叠加</option><option value="new">只看新版</option></select></label>
-      <label class="field">背景 <select id="backdrop"><option value="#56617a">灰蓝</option><option value="#22282a">深色</option><option value="#c2c0ac">浅色</option><option value="#ff00ff">品红</option></select></label>
-      <label class="field" id="weaponField"><input id="weapon" type="checkbox" checked> <span id="weaponLabel">带武器</span></label>
-    </div>
-    <div id="info" class="muted" aria-live="polite"></div>
-    <div id="strip"></div>
-  </main>
-
-  <aside class="review">
-    <section class="card">
-      <h3>这个单元</h3>
-      <div class="row">
-        <button id="pass" type="button" aria-pressed="false">通过 <kbd>1</kbd></button>
-        <button id="clear" type="button">撤销通过</button>
-      </div>
-      <p id="verdictText" class="muted small"></p>
-    </section>
-    <section class="card">
-      <h3>新问题</h3>
-      <p class="muted small">点画面上有问题的位置落标记（再点一下标记去掉），<kbd>F</kbd> 把当前帧加入问题。</p>
-      <div id="draftFrames" class="chips"></div>
-      <div id="draftMarks" class="chips"></div>
-      <textarea id="draftNote" placeholder="哪里不对？比如“左手没握住刀柄”"></textarea>
-      <div class="row"><button id="submit" type="button" class="primary">提交问题</button><button id="discard" type="button">清空</button><span id="saved" class="small muted" aria-live="polite"></span></div>
-    </section>
-    <section class="card grow">
-      <h3 id="issuesTitle">问题</h3>
-      <ol id="issues"></ol>
-    </section>
-  </aside>
-</div>
-
-<div id="overlay" hidden>
-  <div class="sheet" role="dialog" aria-labelledby="overlayTitle">
-    <div class="row"><h3 id="overlayTitle">问题总表</h3><span class="spacer"></span>
-      <select id="overlayFilter"><option value="active">待修和待复核</option><option value="all">全部</option></select>
-      <button id="overlayClose" type="button">关闭</button></div>
-    <ol id="overlayList"></ol>
+<div id="docOverlay" hidden>
+  <div class="sheet doc" role="dialog" aria-labelledby="docTitle">
+    <div class="row"><h3 id="docTitle"></h3><span class="spacer"></span><button id="docClose" type="button">关闭</button></div>
+    <article id="docBody"></article>
   </div>
 </div>
-<script src="/static/app.js"></script>
+<div id="toast" class="toast" role="status" hidden></div>
+<script src="/static/dash.js"></script>
 </body>
 </html>
