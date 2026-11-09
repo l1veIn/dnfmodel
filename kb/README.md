@@ -45,3 +45,15 @@ $PY scripts/dnf_kb.py find awakebody            # 按路径搜 IMG，补丁包�
 - dnfavatar 的数据大约停在 2019 年；新时装的名称只能靠 COLG 套装表。
 - 黑暗武士（`demonicswordsman`）、`imperialknight` 这些社区数据里没有的职业，目前只有本地索引。
 - 男枪手的武器在别的目录结构里，没有解析出来。
+
+## Avatar Studio 的时装目录（2026-11-09 加入）
+
+用户决定只自用时可以借用 DNF Avatar Studio（薛定谔的化裁间）的 `avatar_data.dll`。用 HTTP 分段请求只从 v1.8.1 发布包里取出这个 DLL，放在 `tools/downloads/dnf_avatar_studio_1.8.1/`（不进 git，不外传）。`scripts/avatar_data.py` 用 ctypes 调它的 JSON 接口，`export` 把 18 个职业的目录导到 `kb/sources/avatar_studio/`（约 585MB），`dnf_kb.py import` 再导成三张表：
+
+| 表 | 内容 |
+|---|---|
+| `as_item` | 280,789 条：时装和武器装扮的名称、部位（武器按种类，如 revolver、hcannon）、隐藏规则、能否染色。约一半名为“未知单件” |
+| `as_layer` | 926,958 条：每个图层的绘制深度 z、图层标签（如 `[coat_x]`）、配色变体、调色板序号、IMG 路径（已换成本地索引的写法） |
+| `as_set` | 87,577 条：套装和礼盒名及其成员 |
+
+和本地核对：它的 138,738 个图层 IMG 路径中 96.5% 能在当前客户端找到。`draw` 和 `patch.py init` 的图层顺序现在优先用它的 z 值（逐个 IMG 精确），没有时才退回 dnfavatar。职业名用它自己的写法，女性职业是 `at_gunner`、`at_swordman` 这种；表里同时存了我们的写法（`profession` 列）。

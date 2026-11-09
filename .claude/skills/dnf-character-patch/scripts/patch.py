@@ -67,6 +67,14 @@ def real_order(cls, equipment, layers):
             z[layer] = 0
             continue
         letter = name[-1]
+        try:  # Avatar Studio's catalog has the exact depth of this very IMG when it was imported (scripts/avatar_data.py)
+            exact = db.execute("select z from as_layer where path=? group by z order by count(*) desc limit 1",
+                               (f"sprite/character/{cls}/{equipment}/avatar/{layer}.img",)).fetchone()
+        except sqlite3.OperationalError:
+            exact = None
+        if exact:
+            z[layer] = exact[0]
+            continue
         hit = db.execute("select z from avatar_layer where profession=? and part=? and code=0 and layer=?", (row[0], part, letter)).fetchone() \
             or db.execute("select z from avatar_layer where profession=? and part=? and layer=? group by z order by count(*) desc", (row[0], part, letter)).fetchone()
         if hit:

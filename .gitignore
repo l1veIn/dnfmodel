@@ -52,3 +52,4 @@ kb/cache/
 # Browser and Baidu downloads in progress, and archives dropped in the project root
 *.downloading
 *.baiduyun.*
+kb/*.log

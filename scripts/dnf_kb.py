@@ -43,6 +43,7 @@ SCHEMA = """
 create table if not exists npk(id integer primary key, name text unique, size int, mtime int, entries int, error text);
 create table if not exists img(npk int, path text, version int, frames int);
 create index if not exists img_npk on img(npk);
+create index if not exists img_path on img(path);
 create table if not exists avatar_img(npk int, path text, cls text, eq text, part text, prefix text, code int, layer text, rest text, tag text, version int, frames int);
 create index if not exists avatar_key on avatar_img(cls, eq, part, code);
 create table if not exists weapon_img(npk int, path text, cls text, eq text, kind text, prefix text, code int, layer text, rest text, tag text, version int, frames int);
@@ -238,6 +239,56 @@ def import_index(db):
     print(f"ImagePacks2 index: {len(rows)} NPK notes")
 
 
+AVATAR_STUDIO = SOURCES / "avatar_studio"
+# Avatar Studio's role keys -> ours (dnfavatar profession names) where they differ.
+STUDIO_ROLE = {"at_gunner": "gunner_at", "at_swordman": "swordman_at", "at_fighter": "fighter_at", "at_mage": "mage_at", "at_priest": "priest_at"}
+
+
+def studio_img(visual_img):
+    """'Character/gunner/ATEquipment/Avatar/coat/gg_coat17500c.img' -> our path 'sprite/character/gunner/atequipment/avatar/coat/gg_coat17500c.img'."""
+    p = visual_img.replace("\\", "/").lower()
+    return p if p.startswith("sprite/") else "sprite/" + p
+
+
+def import_avatar_studio(db):
+    """The avatar catalog exported from DNF Avatar Studio's avatar_data.dll (scripts/avatar_data.py export): item names, slots, layer
+    order (z) for every layer including x and weapon layers, hide rules, dye masks, and named sets. Personal use only."""
+    for table in ("as_item", "as_layer", "as_set"):
+        db.execute(f"drop table if exists {table}")
+    db.execute("create table as_item(role text, profession text, item_id text, name text, slot text, path_family text, kind text, hide text, dye1 int, dye2 int, layers int)")
+    db.execute("create table as_layer(role text, profession text, item_id text, slot text, family text, z int, tag text, variation text, palette int, path text, hide text, seq int, status text)")
+    db.execute("create table as_set(role text, profession text, set_id text, name text, source text, member_ids text, member_names text)")
+    if not (AVATAR_STUDIO / "meta.json").exists():
+        return
+    for f in sorted(AVATAR_STUDIO.glob("*.json")):
+        if f.name == "meta.json":
+            continue
+        data = json.loads(f.read_text("utf-8"))
+        role = data["role"]
+        prof = STUDIO_ROLE.get(role, role)
+        db.executemany("insert into as_item values (?,?,?,?,?,?,?,?,?,?,?)", [
+            (role, prof, i["item_id"], i["item_name"], i["slot"], i.get("path_family", ""), i.get("resource_kind", ""), json.dumps(i.get("hide_equipment_types", []), ensure_ascii=False),
+             int(i.get("enable_dye_mask1", False)), int(i.get("enable_dye_mask2", False)), i.get("layer_count", 0)) for i in data["items"]])
+        db.executemany("insert into as_layer values (?,?,?,?,?,?,?,?,?,?,?,?,?)", [
+            (role, prof, l["item_id"], l["slot"], l["visual_family_key"], l["layer_order"], l["layer_tag"], l["variation"], l["palette_index"], studio_img(l["visual_img"]),
+             json.dumps(l.get("hide_equipment_type_enums", [])), l["layer_sequence"], l["status"]) for layers in data["layers"].values() for l in layers])
+        db.executemany("insert into as_set values (?,?,?,?,?,?,?)", [
+            (role, prof, s["set_id"], s["set_name"], s["source"], json.dumps(s["member_ids"]), json.dumps(s["member_names"], ensure_ascii=False)) for s in data["sets"]])
+    for sql in ("create index as_layer_path on as_layer(path)", "create index as_layer_item on as_layer(item_id)", "create index as_item_name on as_item(profession, slot)"):
+        db.execute(sql)
+    n = lambda t: db.execute(f"select count(*) from {t}").fetchone()[0]  # noqa: E731
+    print(f"Avatar Studio catalog: {n('as_item')} items, {n('as_layer')} layers, {n('as_set')} sets")
+
+
+def studio_z(db, path):
+    """Draw depth of one IMG from the Avatar Studio catalog, or None (also when that table was not imported)."""
+    try:
+        row = db.execute("select z from as_layer where path=? group by z order by count(*) desc limit 1", (path,)).fetchone()
+    except sqlite3.OperationalError:
+        return None
+    return row[0] if row else None
+
+
 def import_sources():
     db = connect()
     if not db.execute("select count(*) from avatar_img").fetchone()[0]:
@@ -295,6 +346,7 @@ def import_sources():
             add_set(label_to_prof[m["cls"]], m["label"], category, name, f"COLG {data['source']}", codes)
         print("COLG lines skipped:", skipped)
     import_index(db)
+    import_avatar_studio(db)
     colloc = SOURCES / "dnfavatar" / "collocation.json"
     if colloc.exists():
         for e in json.loads(colloc.read_text("utf-8"))["list"]:
@@ -433,10 +485,13 @@ def draw(name, codes=None):
         zs = {**usual, **zs}
         kind = "body" if part == "skin" else part
         for layer in sorted(layers):
-            rows.append((zs.get(layer), f"{part}/{p[5]}_{kind}{code:04d}{layer}"))
-    for z, label in sorted(rows, key=lambda r: (r[0] is None, r[0] or 0)):
-        print(f"{'?' if z is None else z:>6}  {label}")
-    print("z from dnfavatar; ? = no community value, place by eye")
+            name = f"{p[5]}_{kind}{code:04d}{layer}"
+            exact = studio_z(db, f"sprite/character/{cls}/{eq}/avatar/{part}/{name}.img")
+            z, source = (exact, "studio") if exact is not None else (zs.get(layer), "dnfavatar" if zs.get(layer) is not None else "")
+            rows.append((z, f"{part}/{name}", source))
+    for z, label, source in sorted(rows, key=lambda r: (r[0] is None, r[0] or 0)):
+        print(f"{'?' if z is None else z:>6}  {label:<26} {source}")
+    print("z from Avatar Studio's catalog where it has the exact IMG, else dnfavatar; ? = no value, place by eye")
 
 
 def find(text, limit=50):
