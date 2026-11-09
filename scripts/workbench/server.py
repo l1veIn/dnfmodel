@@ -283,6 +283,11 @@ class Handler(BaseHTTPRequestHandler):
                     return self._json(game.skills(q["cls"]))
                 if parts[2] == "skill":
                     return self._json(game.skill(q["cls"], q["folder"]))
+                if parts[2] == "video_preview":
+                    try:
+                        return self._send(game.video_preview(q["folder"], q["file"]), "image/webp", cache="max-age=3600")
+                    except ValueError:
+                        return self._json(dict(error="这个视频是 Neople 加密格式，无法预览"), 415)
                 if parts[2] == "videos":
                     return self._json(game.videos(q.get("cls")))
                 if parts[2] == "frame":

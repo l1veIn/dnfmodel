@@ -274,6 +274,34 @@ def videos(cls=None):
         else:
             status = "official" if path.stat().st_size == f["size"] and _video_hash(path) == f["sha256"] else "replaced"
         kind = {"Cutscene_buf": "加 buff", "Cutscene_buf_add": "时装专属加 buff", "Cutscene_rage": "觉醒（rage）"}[f["folder"]]
-        rows.append(dict(folder=f["folder"], file=f["file"], name=f["name"], kind=kind, profession=prof, size=f["size"], baseline=data.get("baseline_date"), status=status))
+        plain = False
+        if path.exists():
+            with path.open("rb") as stream:
+                plain = stream.read(3) in (b"BIK", b"KB2")
+        rows.append(dict(folder=f["folder"], file=f["file"], name=f["name"], kind=kind, profession=prof, size=f["size"], baseline=data.get("baseline_date"), status=status, plain=plain))
     return dict(root=str(VIDEO_ROOT), rows=rows)
+
+
+def video_preview(folder, file):
+    """An animated WebP of a buff video, only for plain Bink files (the game's own are Neople-encrypted). Cached in kb/cache.
+
+    Community buff patches ship plain Bink 1 with alpha (BIKi, e.g. 470x668, 19 frames at 15 fps) and the game plays them."""
+    import subprocess
+    import tempfile
+    if folder not in ("Cutscene_buf", "Cutscene_buf_add", "Cutscene_rage") or "/" in file or "\\" in file or not file.endswith(".bk2"):
+        raise KeyError(file)
+    path = VIDEO_ROOT / folder / file
+    if not path.exists():
+        raise KeyError(file)
+    with path.open("rb") as stream:
+        head = stream.read(4)
+    if head[:3] not in (b"BIK", b"KB2"):
+        raise ValueError("encrypted")
+
+    def build():
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "preview.webp"
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(path), "-vf", "format=rgba", "-loop", "0", "-lossless", "1", str(out)], check=True, timeout=120)
+            return out.read_bytes()
+    return render.cached(f"video|{render.token(str(path))}", build)
 

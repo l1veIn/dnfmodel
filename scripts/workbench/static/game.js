@@ -198,9 +198,11 @@ async function renderVideos() {
     el("td", {}, el("b", {textContent: r.name || "—"})),
     el("td", {className: "small", textContent: r.file}),
     el("td", {textContent: `${Math.round(r.size / 1024)} KB`}),
-    el("td", {}, el("span", {className: `badge ${STATE[r.status][0]}`, textContent: STATE[r.status][1]}))));
+    el("td", {}, el("span", {className: `badge ${STATE[r.status][0]}`, textContent: STATE[r.status][1]})),
+    el("td", {}, r.plain ? el("a", {className: "button", target: "_blank", href: `/api/game/video_preview?${new URLSearchParams({folder: r.folder, file: r.file})}`, textContent: "预览"})
+                         : el("span", {className: "muted small", textContent: "加密，不能预览"}))));
   $("gameMain").replaceChildren(
     el("div", {className: "row"}, el("h2", {textContent: "加 buff 和觉醒视频"}), el("span", {className: "muted", textContent: v.root})),
-    el("p", {className: "small muted", textContent: "放 buff 时的人物立绘是视频，不在 ImagePacks2 里：Video\Character\Cutscene_buf（按转职），Cutscene_buf_add（时装专属），Cutscene_rage（觉醒）。文件是 Neople 加密的 Bink 2，暂时无法预览；替换方法是用同名文件覆盖，游戏更新后可能被复原。状态按 2026-11-09 记录的官方文件哈希判断。"}),
-    el("div", {className: "tablewrap"}, el("table", {}, el("thead", {}, el("tr", {}, ...["类型", "转职", "文件", "大小", "状态"].map(h => el("th", {textContent: h})))), el("tbody", {}, ...rows))));
+    el("p", {className: "small muted", textContent: "放 buff 时的人物立绘是视频，不在 ImagePacks2 里：Video\Character\Cutscene_buf（按转职），Cutscene_buf_add（时装专属），Cutscene_rage（觉醒）。官方文件是 Neople 加密的 Bink 2，无法预览；社区 buff 补丁用的是普通 Bink 1（带透明通道，常见 470×668、15 帧/秒、19 帧），游戏也能播放，这种文件可以预览。替换方法是用同名文件覆盖，游戏更新后会被复原。状态按 2026-11-09 记录的官方文件哈希判断。"}),
+    el("div", {className: "tablewrap"}, el("table", {}, el("thead", {}, el("tr", {}, ...["类型", "转职", "文件", "大小", "状态", "预览"].map(h => el("th", {textContent: h})))), el("tbody", {}, ...rows))));
 }

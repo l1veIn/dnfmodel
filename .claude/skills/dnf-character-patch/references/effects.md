@@ -251,5 +251,8 @@ v06 之后的状态：
 - `Cutscene_rage\`：觉醒（rage）视频，同样的编号。
 - 文件头是 `Neople Video Stream`，后面是每个文件各不相同的加密数据，不是普通的 Bink 2（`KB2`），ffmpeg 读不了，也就无法预览。社区的替换方法是用同名文件覆盖，游戏更新后可能被复原。
 - 我们的规则是官方文件只读：覆盖 Video 目录里的文件前必须先问用户，并把原文件备份到项目里。`kb/curated/buff_videos.json` 记录了 2026-11-09 官方文件的 sha256，工作台据此判断是原版、已被替换还是被复原。
-- 能不能自己做替换视频，取决于游戏是否也接受未加密的 Bink 2。需要拿一份社区做好的替换文件看文件头再判断。
+- 2026-11-09 验证过社区补丁（小鸟游的雷电将军和无期迷途 buff 补丁，解压在 `tools/downloads/buff_patch_raiden/`，只读不装）：成品是**普通 Bink 1（文件头 `BIKi`），带透明通道 yuva420p，470×668（个别 800×668），15 帧/秒，19 帧约 1.3 秒，无声**。作者的做法是把文件改名、覆盖游戏里的同名视频。所以游戏也播放未加密的 Bink 1，自制不需要 Neople 的加密。
+- 作者的改名对照表是旧命名（`11Fgunner_buf_meca`，目录 `Video\CharacterCutScene`）。现在的客户端是 `Video\Character\Cutscene_buf\06_gunner_F_buf_meca.bk2`，替换要用新名字。
+- ffmpeg 能解码 Bink 1，工作台视频表对普通 Bink 文件提供预览（转成带透明的动图）。ffmpeg 不能编码 Bink，自制要用 RAD 的免费编码器 RAD Video Tools，需要用户同意后另外下载。
+- 自制步骤：画或生成约 19 帧 470×668 带透明的立绘动画 → 用 RAD Video Tools 编成 Bink 1（保留 alpha）→ 先备份原文件到项目，再改名覆盖。游戏每次更新（包括周四例行更新）都会还原这个目录，要重新覆盖。
 
