@@ -23,6 +23,7 @@ PAD = 6
 MAX_SIDE = 16000          # WebP limit is 16383 px per side
 SCREEN_CELL = 640         # full-screen cut-ins are cached at this width; the page asks for a full frame when paused
 lock = threading.Lock()
+BROKEN = {}  # img path -> first decode error, for the pages to show
 
 
 @lru_cache(maxsize=None)
@@ -85,8 +86,8 @@ def unit_box(sources, img_path, screen=False):
     return (min(b[0] for b in boxes) - PAD, min(b[1] for b in boxes) - PAD, max(b[2] for b in boxes) + PAD, max(b[3] for b in boxes) + PAD), count, canvas
 
 
-def frame(npk, img_path, k, box):
-    """Frame k of an IMG on the box; empty when the NPK lacks the IMG or the frame."""
+def frame(npk, img_path, k, box, palette=0):
+    """Frame k of an IMG on the box; empty when the NPK lacks the IMG or the frame. palette picks a colour variant of indexed IMGs."""
     x0, y0, x1, y1 = box
     canvas = Image.new("RGBA", (x1 - x0, y1 - y0))
     if not npk:
@@ -96,7 +97,14 @@ def frame(npk, img_path, k, box):
         return canvas
     with lock:
         f = img.resolve(k)
-        pic = img.image(k)
+        try:
+            try:
+                pic = img.image(k, palette) if palette else img.image(k)
+            except (IndexError, TypeError):  # no such palette, or a V5 IMG (no palettes): the base colours
+                pic = img.image(k)
+        except Exception as error:  # a frame our reader cannot decode must not take the whole picture down; listed by broken()
+            BROKEN.setdefault(img_path, f"{type(error).__name__}: {error}")
+            pic = None
     if pic is not None:
         pic = pic.convert("RGBA")
         canvas.paste(pic, (f.get("x", 0) - x0, f.get("y", 0) - y0), pic)  # paste, unlike alpha_composite, accepts offsets outside the box

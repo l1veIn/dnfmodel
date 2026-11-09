@@ -28,6 +28,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import game  # noqa: E402
 import issues  # noqa: E402
 import progress  # noqa: E402
+import studio  # noqa: E402
 
 STATIC = Path(__file__).resolve().parent / "static"
 DESIGN = ROOT / "design"
@@ -252,6 +253,24 @@ class Handler(BaseHTTPRequestHandler):
                     if "/" in name or "\\" in name or not name.endswith(".md") or not (ROOT / "docs" / name).is_file():
                         raise KeyError(name)
                     return self._send((ROOT / "docs" / name).read_bytes(), "text/plain; charset=utf-8")
+            if parts[:2] == ["api", "studio"] and len(parts) == 3:
+                what = parts[2]
+                if what == "roles":
+                    return self._json(studio.roles())
+                if what == "role":
+                    r = q["role"]
+                    return self._json(dict(role=studio.role(r), default=studio.default_outfit(r), overlays=studio.overlays(r), actions=studio.actions(r)))
+                if what == "items":
+                    return self._json(studio.items(q["role"], q["slot"], q.get("q", ""), int(q.get("offset", 0))))
+                if what == "sets":
+                    return self._json(studio.sets(q["role"], q.get("q", "")))
+                if what == "wardrobe":
+                    return self._json(studio.wardrobe())
+                if what == "atlas":
+                    outfit = json.loads(q["outfit"])
+                    if not isinstance(outfit, dict) or len(outfit) > 12:
+                        raise KeyError("outfit")
+                    return self._send(studio.atlas(q["role"], outfit, q.get("overlay", "")), "image/webp", cache="max-age=86400")
             if parts[:2] == ["api", "game"] and len(parts) == 3:
                 if parts[2] == "classes":
                     return self._json(game.classes())
@@ -304,6 +323,17 @@ class Handler(BaseHTTPRequestHandler):
             if len(parts) == 4 and parts[:2] == ["api", "p"] and parts[3] == "event":
                 event = post_event(parts[2], payload)
                 return self._json(dict(event=event, state=design_state(parts[2])))
+            if parts == ["api", "studio", "compose"]:
+                outfit = payload.get("outfit", {})
+                if not isinstance(outfit, dict) or len(outfit) > 12:
+                    raise ValueError("bad outfit")
+                plan = studio.compose(payload["role"], outfit, payload.get("overlay", ""))
+                plan.pop("name_key", None)
+                return self._json(plan)
+            if parts == ["api", "studio", "wardrobe", "save"]:
+                return self._json(studio.save_outfit(payload))
+            if parts == ["api", "studio", "wardrobe", "delete"]:
+                return self._json(studio.delete_outfit(payload))
             if parts == ["api", "game", "name"]:
                 return self._json(game.save_name(payload))
             if len(parts) == 4 and parts[:2] == ["api", "projects"]:

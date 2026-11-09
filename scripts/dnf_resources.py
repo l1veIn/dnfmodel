@@ -130,7 +130,8 @@ class ImgArchive:
     def image(self, index: int, palette: int = 0) -> Image.Image:
         f = self.resolve(index)
         width, height = f["width"], f["height"]
-        if width == 0 or height == 0:
+        if width <= 1 and height <= 1:
+            # Empty frames are 1x1 placeholders; some (female slayer's coat 0000c/x) store 4 bytes that are not valid zlib.
             return Image.new("RGBA", (max(1, width), max(1, height)))
         raw = self.data[f["data_offset"]:f["data_offset"] + f["data_length"]]
         if f["compression"] == 6:

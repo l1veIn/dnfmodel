@@ -290,9 +290,12 @@ async function showDoc(pid, name) {
 
 async function route() {
   const m = location.hash.match(/^#\/p\/([^/]+)/), g = location.hash.match(/^#\/game(?:\/([^/]+))?(?:\/(.+))?/);
-  $("navProjects").classList.toggle("on", !g);
+  const st = /^#\/studio/.test(location.hash);
+  $("navProjects").classList.toggle("on", !g && !st);
   $("navGame").classList.toggle("on", !!g);
+  $("navStudio").classList.toggle("on", st);
   try {
+    if (st) { G.skill = null; return await studioPage(); }
     if (g) return await gamePage(g[1] && decodeURIComponent(g[1]), g[2] && decodeURIComponent(g[2]));
     $("page").className = "page";
     G.skill = null; clearTimeout(G.timer);

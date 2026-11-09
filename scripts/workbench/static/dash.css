@@ -107,3 +107,33 @@ table.matrix a.badge:hover { border-color: var(--accent); }
 .gstage canvas { image-rendering: pixelated; border-radius: 4px; display: block; }
 .empty { display: grid; place-items: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 4px; font-size: 14px; }
 @media (max-width: 860px) { .gamewrap { grid-template-columns: 1fr; } .gside { position: static; height: auto; max-height: 360px; } }
+
+.studio { display: grid; grid-template-columns: 300px minmax(0, 1fr) 280px; min-height: calc(100vh - 46px); }
+.stLeft, .stRight { background: var(--panel); padding: 10px; display: flex; flex-direction: column; gap: 8px; position: sticky; top: 0; height: calc(100vh - 46px); overflow-y: auto; }
+.stLeft { border-right: 1px solid var(--line); }
+.stRight { border-left: 1px solid var(--line); }
+.stLeft select { max-width: 100%; }
+#stSlots { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+#stSlots li { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 6px; align-items: center; padding: 4px 6px; border: 1px solid transparent; border-radius: 6px; cursor: pointer; }
+#stSlots li:hover { background: var(--panel-2); }
+#stSlots li.on { border-color: var(--accent); background: var(--panel-2); }
+#stSlots .slotname { color: var(--muted); font-size: 12px; }
+#stSlots .itemname { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#stSlots .x { padding: 0 6px; font-size: 12px; }
+.stPicker { display: flex; flex-direction: column; gap: 6px; min-height: 0; flex: 1; border-top: 1px solid var(--line); padding-top: 8px; }
+.stPicker input[type="search"] { flex: 1; min-width: 0; }
+#stResults { list-style: none; margin: 0; padding: 0; overflow-y: auto; flex: 1; }
+#stResults li { padding: 4px 6px; border-radius: 6px; cursor: pointer; border: 1px solid transparent; }
+#stResults li:hover { background: var(--panel-2); }
+#stResults li.on { border-color: var(--accent); }
+.stMain { padding: 12px 16px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.stMain h2 { margin: 0; font-size: 18px; }
+#stStage { display: flex; justify-content: center; align-items: flex-end; min-height: 260px; }
+#stCanvas { image-rendering: pixelated; border-radius: 6px; }
+ul.plain, ol.plain { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+#stWardrobe li { border-bottom: 1px solid var(--line); padding: 4px 0; }
+#stLayers li .z { display: inline-block; min-width: 38px; color: var(--muted); }
+#stLayers li.bad { color: var(--open); }
+#stSaveName { flex: 1; min-width: 0; background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 3px 7px; }
+@media (max-width: 1100px) { .studio { grid-template-columns: 280px minmax(0, 1fr); } .stRight { grid-column: 1 / -1; position: static; height: auto; } }
+@media (max-width: 760px) { .studio { grid-template-columns: 1fr; } .stLeft { position: static; height: auto; max-height: 70vh; } }
