@@ -22,7 +22,7 @@ NAMES = ROOT / "kb" / "curated" / "skill_names.json"
 ROOT_FOLDER = "(根目录)"
 PORTRAITS = ROOT / "kb" / "curated" / "portraits.json"
 # Pseudo folders listed first for every class: illustrations that live outside the class folder (categories.py).
-SPECIAL = {"@buffart": ("buffart", "技能立绘（加 buff）"), "@portrait": ("portrait", "人物立绘")}
+SPECIAL = {"@buffart": ("buffart", "觉醒特写"), "@portrait": ("portrait", "人物立绘")}
 lock = threading.Lock()
 _cache = {}
 
@@ -114,6 +114,22 @@ def classes():
     return [dict(cls=c, imgs=n, labels=prof.get(c, [])) for c, n in rows if c not in ("common", "character")]
 
 
+def index_names(cls):
+    """Names for effect folders from the COLG ImagePacks2 index (kb table npk_note): folder -> name, transfer, source."""
+    con = db()
+    if not con.execute("select name from sqlite_master where name='npk_note'").fetchone():
+        return {}
+    out = {}
+    prefix = f"sprite_character_{cls}_effect"
+    for npk, note, transfer, heading in con.execute("select npk, note, transfer, heading from npk_note where npk like ? and note <> '' order by line", (f"{prefix}%",)):
+        folder = npk[len(prefix) + 1:-4] if npk != f"{prefix}.npk" else ROOT_FOLDER
+        entry = out.setdefault(folder, dict(name=note, transfer=transfer or "", checked=False, source=f"COLG ImagePacks2 索引（2026-09-21）{'，' + heading if heading else ''}"))
+        if note not in entry["name"].split("；"):
+            entry["name"] += f"；{note}"  # one pack can serve several skills (the index lists it twice)
+    con.close()
+    return out
+
+
 def skills(cls):
     """Every effect folder of a class, with IMG counts, names and which projects changed it."""
     key = ("skills", cls, KB.stat().st_mtime)
@@ -138,6 +154,7 @@ def skills(cls):
             folders[special] = dict(folder=special, imgs=len(paths), frames=0, paths=paths, label=label)
     changed = mods()
     labels = names().get("classes", {}).get(cls, {})
+    index = index_names(cls)
     out = []
     for folder, f in sorted(folders.items(), key=lambda kv: (not kv[0].startswith("@"), kv[0])):
         touched = {}
@@ -145,6 +162,8 @@ def skills(cls):
             for m in changed.get(path, []):
                 touched.setdefault(m["project"], dict(m, imgs=0))["imgs"] += 1
         meta = labels.get(folder, {})
+        if meta.get("source") != "用户在工作台填写" and folder in index:
+            meta = index[folder]  # the community index beats our own guesses, but never what the user typed
         if "label" in f:
             meta = dict(name=f["label"], checked=True, source="游戏界面文件（sprite/interface），按文件名归到职业")
         out.append(dict(folder=folder, special=folder.startswith("@"), imgs=f["imgs"], frames=f["frames"], name=meta.get("name", ""), transfer=meta.get("transfer", ""),

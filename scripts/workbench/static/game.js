@@ -96,7 +96,7 @@ function renderSkill() {
   back.addEventListener("change", gameDraw);
   $("gameMain").replaceChildren(
     el("div", {className: "row"}, el("h2", {id: "skillTitle", textContent: skillTitle(s)}), el("span", {className: "muted", textContent: `sprite/character/${G.cls}/effect/${s.folder === "(根目录)" ? "" : s.folder + "/"} · ${s.imgs} 个 IMG`})),
-    s.special ? el("div", {className: "small muted", textContent: "按文件名归到这个职业目录（男女都列出）。技能立绘是放 buff 等技能时弹出的人物画；人物立绘包括创建角色的立绘、转职立绘（一张 IMG 里每个转职一帧，所有职业共用）和冒险团的小头像动画。"})
+    s.special ? el("div", {className: "small muted", textContent: "按文件名归到这个职业目录（男女都列出）。觉醒特写是放觉醒技能时弹出的职业特写（COLG 索引：使用觉醒时的职业特写）；人物立绘包括创建角色立绘、转职立绘、二次觉醒特写和 PK 场特写（后三种都是一张 IMG 里每个转职一帧、所有职业共用），以及冒险团的小头像动画。加 buff 时的变身外观在时装的 neck 部件 T 图层里，不是单独的立绘。"})
       : el("div", {className: "namebar"}, name, transfer, el("label", {className: "field"}, checked, "已核实"), save, status,
       el("span", {className: "small muted", textContent: s.source ? `来源：${s.source}` : "游戏数据里没有中文名，这里填的名字存在 kb/curated/skill_names.json"})),
     el("div", {className: s.mods.length ? "" : "muted", textContent: `改版：${modsText}`}),

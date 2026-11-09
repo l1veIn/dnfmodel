@@ -232,10 +232,13 @@ v06 之后的状态：
 
 2026-11-08 从资源库查到，工作台“DNF 资源”页每个职业的前两项就是它们，首页“替换范围”表也有这两列。我们的三个补丁都还没改过。
 
-- 技能立绘（放 buff 等技能时弹出的人物画）：`sprite_interface_skillcutscene.NPK`，`sprite/interface/skillcutscene/<前缀><转职>.img`，每个转职一张，约 415×339，大多是 V2。女枪手前缀 `atgunner_`（`atgunner_mecha` 是女机械），女鬼剑 `ghostf_`，女法师 `mage_`，其他见 `scripts/workbench/categories.py` 的 `PREFIXES`。`_event` 后缀是活动用的搞笑版，`(tn)`、`(18)` 是同名变体。
+- 觉醒特写（放觉醒技能时弹出的职业特写；COLG 索引原话“使用觉醒时的职业特写”，之前误以为是加 buff 立绘）：`sprite_interface_skillcutscene.NPK`，`sprite/interface/skillcutscene/<前缀><转职>.img`，每个转职一张，约 415×339，大多是 V2。女枪手前缀 `atgunner_`（`atgunner_mecha` 是女机械），女鬼剑 `ghostf_`，女法师 `mage_`，其他见 `scripts/workbench/categories.py` 的 `PREFIXES`。`_event` 后缀是活动用的搞笑版，`(tn)`、`(18)` 是同名变体。
 - 人物立绘：
   - 创建角色立绘：`sprite/interface2/charactercreatever2/characterillust/<gunnerf|slayerf|magef…>.img`，1067×600 一帧。
   - 转职立绘：`sprite/interface2/classchange/classchange_cha/classchange_cha.img`，一个 IMG 有 78 帧，每帧是一个转职（约 790×600），所有职业共用；女枪手是第 25–29 帧（推断，见 `kb/curated/portraits.json`）。小图版是 `classchange/experienceclassillust.img`（77 帧）。改其中几帧也要整张 IMG 写回，其余帧保持官方。
   - 冒险团小头像动画：`sprite/interface2/adventurer2020/neo_<gunnerf|ghostf…>_<转职>.img`，121×90，约 100 帧。
-- 剧情对话里显示的是哪一种还没在游戏里核实；转职立绘最可能。
+- 另外两张共用的大图：二次觉醒特写 `interface2/awakening2/awakening_cha/awakening2_cha.img`（78 帧）和 PK 场特写 `interface2/powerwar_rvr/assault/character_cut/character_cut.img`（262 帧）。
+- 加 buff 时的变身外观（如神器天空的天使、机甲）在各职业时装 neck 部件的 T 图层里（COLG 索引的注），不是单独的立绘。
+- 剧情对话里显示的是哪一种还没在游戏里核实；转职立绘最可能。各副本的 NPC 对话头像在 `sprite/contents/<年份>/<副本>/ui/dialogue`。
+- 找任何文件先查 `kb/sources/colg/imagepacks2_index_2026-09-21.txt`（表 `npk_note`），它给每个 NPK 写了中文用途。
 

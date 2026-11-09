@@ -18,7 +18,7 @@ CATEGORIES = [
     ("growtype", "转职附加外观", "sprite"),
     ("weapon", "武器", "sprite"),
     ("cutin", "切入图", "screen"),
-    ("buffart", "技能立绘（加 buff）", "still"),
+    ("buffart", "觉醒特写", "still"),
     ("portrait", "人物立绘", "still"),
     ("awake", "大招人物帧", "sprite"),
     ("effect", "技能特效和道具", "sprite"),
@@ -29,12 +29,16 @@ LABEL = {k: label for k, label, _ in CATEGORIES}
 PLAYER = {k: player for k, _, player in CATEGORIES}
 
 
-# Illustrations outside the class folder: the skill portrait shown when a buff is cast (one per transfer), and the class's
+# Illustrations outside the class folder: the close-up shown when an awakening skill is used (one per transfer; the COLG index
+# calls interface/skillcutscene "使用觉醒时的职业特写"), and the class's
 # standing illustrations: character creation, the transfer pictures (one IMG, a frame per transfer for every class) and the
 # small animated faces of the adventure UI. File names carry the class and gender, so each profession has its prefixes.
 PORTRAIT_DIRS = ("sprite/interface2/charactercreatever2/characterillust/", "sprite/interface2/adventurer2020/neo_",
-                 "sprite/interface2/classchange/classchange_cha/", "sprite/interface2/classchange/experienceclassillust")
-SHARED_PORTRAITS = ("sprite/interface2/classchange/classchange_cha/classchange_cha.img", "sprite/interface2/classchange/experienceclassillust.img")
+                 "sprite/interface2/classchange/classchange_cha/", "sprite/interface2/classchange/experienceclassillust",
+                 "sprite/interface2/awakening2/awakening_cha/", "sprite/interface2/powerwar_rvr/assault/character_cut/")
+# One IMG holding a frame per transfer for every class: transfer pictures, second-awakening close-ups, PK close-ups (COLG index).
+SHARED_PORTRAITS = ("sprite/interface2/classchange/classchange_cha/classchange_cha.img", "sprite/interface2/classchange/experienceclassillust.img",
+                    "sprite/interface2/awakening2/awakening_cha/awakening2_cha.img", "sprite/interface2/powerwar_rvr/assault/character_cut/character_cut.img")
 # profession: (skill portrait prefix, creation illustration name, adventure face prefix)
 PREFIXES = {
     "swordman": ("ghost_", "slayerm", "neo_ghostm_"), "swordman_at": ("ghostf_", "slayerf", "neo_ghostf_"),
@@ -74,7 +78,8 @@ def portrait_paths(professions):
         return []
     db = sqlite3.connect(f"file:{KB}?mode=ro", uri=True)
     rows = [r[0] for r in db.execute("select distinct path from img where (path like 'sprite/interface/skillcutscene/%' or path like 'sprite/interface2/charactercreatever2/characterillust/%' "
-                                     "or path like 'sprite/interface2/adventurer2020/neo_%' or path like 'sprite/interface2/classchange/%') "
+                                     "or path like 'sprite/interface2/adventurer2020/neo_%' or path like 'sprite/interface2/classchange/%' "
+                                     "or path like 'sprite/interface2/awakening2/awakening_cha/%' or path like 'sprite/interface2/powerwar_rvr/assault/character_cut/%') "
                                      "and npk in (select id from npk where lower(name) like 'sprite%')")]
     db.close()
     return sorted(p for p in rows if classify(p) in ("buffart", "portrait") and any(portrait_of(p, prof) for prof in professions))

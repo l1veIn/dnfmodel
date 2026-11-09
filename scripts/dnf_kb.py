@@ -196,6 +196,48 @@ def _resolve(codes, code):
     return None, "missing"
 
 
+INDEX = SOURCES / "colg" / "imagepacks2_index_2026-09-21.txt"
+INDEX_NAME = re.compile(r"^(sprite_[\w\-().]+?|sounds_[\w\-().]+?)(\.npk)?(?:\s+(.*))?$", re.I)
+
+
+def import_index(db):
+    """The community index of ImagePacks2 (COLG, 2026-09-21): a Chinese note for each NPK, under class, transfer and section headings.
+
+    Layout: a class starts at a line like 字段「gunner」「atequipment」, a transfer at a line that is only 「女机械」, other short
+    lines are section headings (时装, 武器, 二次觉醒 ...). An NPK line is the name and its note, or the name alone with the note
+    on the next line. Kept as a lead like the other community data: the page shows it with its source."""
+    db.execute("drop table if exists npk_note")
+    db.execute("create table npk_note(npk text, note text, field text, transfer text, heading text, line int)")
+    if not INDEX.exists():
+        return
+    lines = [l.strip() for l in INDEX.read_text("utf-8").splitlines()]
+    field = transfer = heading = ""
+    rows = []
+    for i, line in enumerate(lines):
+        if not line:
+            continue
+        if "字段" in line:
+            field = " ".join(re.findall(r"[「【]([^」】]+)[」】]", line))
+            transfer = heading = ""
+            continue
+        if re.fullmatch(r"「[^」]+」", line):
+            transfer, heading = line[1:-1], ""
+            continue
+        m = INDEX_NAME.match(line)
+        if m:
+            note = (m.group(3) or "").strip()
+            if not note:
+                following = next((l for l in lines[i + 1:i + 3] if l), "")
+                if following and not INDEX_NAME.match(following) and "字段" not in following and not following.startswith("「"):
+                    note = following
+            rows.append((m.group(1).lower() + ".npk", note, field, transfer, heading, i + 1))
+            continue
+        if len(line) <= 30 and not line.startswith(("——", "注", "~")):
+            heading = line
+    db.executemany("insert into npk_note values (?,?,?,?,?,?)", rows)
+    print(f"ImagePacks2 index: {len(rows)} NPK notes")
+
+
 def import_sources():
     db = connect()
     if not db.execute("select count(*) from avatar_img").fetchone()[0]:
@@ -252,6 +294,7 @@ def import_sources():
             category, _, name = m["label"].partition("-")
             add_set(label_to_prof[m["cls"]], m["label"], category, name, f"COLG {data['source']}", codes)
         print("COLG lines skipped:", skipped)
+    import_index(db)
     colloc = SOURCES / "dnfavatar" / "collocation.json"
     if colloc.exists():
         for e in json.loads(colloc.read_text("utf-8"))["list"]:

@@ -22,6 +22,7 @@ $PY scripts/dnf_kb.py find awakebody            # 按路径搜 IMG，补丁包�
 |---|---|---|
 | `kb.sqlite` | 本地索引和合并结果。是缓存，删掉后 `scan` + `import` 就能重建 | 游戏目录（只读）加 `sources/` |
 | `sources/dnfavatar/` | 职业表、15 个职业 × 9 个部件的时装件（代码、名称、各图层 z 值）、395 套搭配。`manifest.json` 记录每个文件的 SHA256 | [panoeade/dnfavatar](https://github.com/panoeade/dnfavatar)（MIT，仅前端）的演示站 `avatar.tools.gamessage.com/api/`，2026-11-08 下载 |
+| `sources/colg/imagepacks2_index_2026-09-21.txt` | 社区整理的 ImagePacks2 全量索引：按职业、转职、栏目给每个 NPK 写了中文说明（技能名、用途）。原文 GBK，已转成 UTF-8。导入为表 `npk_note`，9337 条，对上当前客户端 8786 个 NPK | 用户从 COLG 找到的文档 `dnf_ImagePacks2 2026.9.21.txt`，2026-11-09 导入。只供自用 |
 | `sources/colg/avatar_codes_9551546.json` | 6228 套全职业时装代码，带年份、类型和套装名 | COLG [【木头整理】全职业时装代码-截至20260101](https://bbs.colg.cn/thread-9551546-1-1.html)（基于肥猫池塘的代码表），2026-11-08 从已登录的浏览器读取首楼原文。只供自用，不要转发 |
 
 ## 第一次导入的结果
@@ -39,7 +40,7 @@ $PY scripts/dnf_kb.py find awakebody            # 按路径搜 IMG，补丁包�
 
 ## 还缺的
 
-- 技能名和特效包的对照：本地只有英文包名；COLG 上还没找到对照表，旧版 PVF 要不要用由用户决定。
+- 技能名：ImagePacks2 索引覆盖了大部分特效包（女枪手目录 175/216、女法师 234/289、鬼剑士 139/282），其余仍只有英文名，可在工作台填写。
 - 武器的名称和 z 值：dnfavatar 的武器数据取不到（接口返回 404）。
 - dnfavatar 的数据大约停在 2019 年；新时装的名称只能靠 COLG 套装表。
 - 黑暗武士（`demonicswordsman`）、`imperialknight` 这些社区数据里没有的职业，目前只有本地索引。
