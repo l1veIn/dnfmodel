@@ -4,20 +4,24 @@
 const SLOTS = [["skin", "皮肤"], ["hair", "头部"], ["cap", "帽子"], ["face", "脸部"], ["neck", "胸部"], ["coat", "上衣"], ["belt", "腰带"], ["pants", "下装"], ["shoes", "鞋子"], ["weapon", "武器"]];
 const WEAPON_CN = {revolver: "左轮", automatic: "自动手枪", hcannon: "手炮", musket: "步枪", bowgun: "手弩", weapon: "其他"};
 const T = {roles: [], role: null, info: null, outfit: {}, names: {}, overlay: "", plan: null, k: 0, start: 0, end: 0, playing: true, timer: null,
-           images: new Map(), pick: "coat", weaponKind: "", tab: "items", query: "", wardrobe: []};
+           images: new Map(), pick: "coat", weaponKind: "", tab: "items", query: "", wardrobe: [], current: {}, exports: []};
 
 async function studioPage() {
   $("crumb").textContent = "/ 试衣间";
   document.title = "试衣间 · 补丁工作台";
   $("page").className = "page wide";
   if (!T.roles.length) T.roles = await api("/api/studio/roles");
-  T.wardrobe = (await api("/api/studio/wardrobe")).outfits;
+  const w = await api("/api/studio/wardrobe");
+  T.wardrobe = w.outfits; T.current = w.current || {};
+  T.exports = await api("/api/studio/exports");
   const roleSel = el("select", {id: "stRole", ariaLabel: "职业"}, ...T.roles.map(r => el("option", {value: r.role, textContent: `${r.label}（${r.frames || "?"} 帧）`})));
   roleSel.addEventListener("change", () => setRole(roleSel.value, {}));
   $("page").replaceChildren(el("div", {className: "studio"},
     el("aside", {className: "stLeft"},
       el("div", {className: "row"}, roleSel, el("select", {id: "stOverlay", ariaLabel: "叠加补丁"})),
       el("ul", {id: "stSlots"}),
+      el("div", {className: "stCurrent"}, el("div", {id: "stCurrentText", className: "small"}),
+        el("div", {className: "row"}, button("把这套设为当前穿戴", setCurrent), button("穿上当前穿戴", wearCurrent))),
       el("div", {className: "stPicker"},
         el("div", {className: "row"}, el("b", {id: "stPickTitle"}), el("span", {className: "spacer"}),
           el("button", {type: "button", id: "stTabItems", textContent: "单件"}), el("button", {type: "button", id: "stTabSets", textContent: "套装"})),
@@ -37,6 +41,11 @@ async function studioPage() {
       el("section", {className: "card"}, el("h3", {textContent: "衣橱"}),
         el("div", {className: "row"}, el("input", {type: "text", id: "stSaveName", placeholder: "给这套起个名字"}), button("保存", saveOutfit)),
         el("ul", {id: "stWardrobe", className: "plain"})),
+      el("section", {className: "card"}, el("h3", {textContent: "按当前穿戴导出补丁"}),
+        el("p", {className: "small muted", textContent: "把左边这套（连同叠加的补丁）压成一张图，写进你游戏里当前穿着的那几件时装，其余几件和身体置空；武器保持原样。得到的小 NPK 只影响这几件。导出后会用它模拟游戏画面，和目标逐帧比对。"}),
+        el("div", {id: "stExportPlan", className: "small"}),
+        el("div", {className: "row"}, el("input", {type: "text", id: "stExportName", placeholder: "补丁名字（英文或拼音更好）"}), button("导出", exportOutfit)),
+        el("ul", {id: "stExports", className: "plain small"})),
       el("section", {className: "card grow"}, el("h3", {textContent: "图层（从后到前）"}), el("ol", {id: "stLayers", className: "plain small"})))));
   $("stTabItems").addEventListener("click", () => { T.tab = "items"; renderPicker(); });
   $("stTabSets").addEventListener("click", () => { T.tab = "sets"; renderPicker(); });
@@ -68,7 +77,7 @@ async function setRole(role, outfit) {
   setRange(0, Math.min(n - 1, T.info.actions[0] ? T.info.actions[0].end : n - 1), true);
   $("stAction").value = T.info.actions[0] ? `${T.info.actions[0].start}-${T.info.actions[0].end}` : `0-${n - 1}`;
   await refresh();
-  renderPicker();
+  renderPicker(); renderCurrent(); renderExports();
 }
 
 function setRange(a, b, quiet) {
@@ -83,6 +92,7 @@ async function refresh() {
   T.plan = await api("/api/studio/compose", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({role: T.role, outfit: T.outfit, overlay: T.overlay})});
   for (const l of T.plan.layers) if (l.item_id) T.names[l.item_id] = l.name;
   renderSlots(); renderLayers(); stLayout(); stPlay(true);
+  if ($("stCurrentText")) renderCurrent();
   const patched = T.plan.layers.filter(l => l.patched).length;
   $("stSub").textContent = `${T.info.role.label} · ${T.plan.layers.length} 个图层` + (T.overlay ? `，${patched} 个来自补丁` : "") + (T.plan.hidden.length ? `，被隐藏：${T.plan.hidden.join("、")}` : "") + (T.plan.missing.length ? `，${T.plan.missing.length} 个 IMG 在本地找不到` : "");
 }
@@ -206,3 +216,53 @@ document.addEventListener("keydown", e => {
   if (e.key === "ArrowLeft") { stPlay(false); stGo(T.k - 1); }
   if (e.key === "ArrowRight") { stPlay(false); stGo(T.k + 1); }
 });
+
+const slotSummary = outfit => SLOTS.filter(([s]) => outfit[s]).map(([s, label]) => `${label}:${T.names[outfit[s]] || outfit[s]}`).join("，");
+
+function renderCurrent() {
+  const c = T.current[T.role];
+  $("stCurrentText").textContent = c ? `当前穿戴（${c.saved}）：${slotSummary(c.outfit) || "空"}` : "还没设当前穿戴：在游戏里穿的是什么，就在左边穿成什么，再点“设为当前穿戴”。";
+  const target = slotSummary(Object.fromEntries(Object.entries(T.outfit).filter(([k]) => k !== "weapon")));
+  $("stExportPlan").textContent = c ? `目标：${target || "空"}${T.overlay ? "，叠加 " + $("stOverlay").selectedOptions[0].textContent : ""}` : "先设当前穿戴。";
+}
+
+async function setCurrent() {
+  try {
+    const r = await api("/api/studio/current", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({role: T.role, outfit: T.outfit})});
+    T.current[T.role] = r; renderCurrent(); toast("已设为当前穿戴");
+  } catch (error) { toast(`没设上：${error.message}`); }
+}
+
+async function wearCurrent() {
+  const c = T.current[T.role];
+  if (!c) { toast("还没设当前穿戴"); return; }
+  T.overlay = ""; $("stOverlay").value = ""; T.outfit = {...c.outfit}; await refresh(); renderCurrent();
+}
+
+async function exportOutfit() {
+  const c = T.current[T.role];
+  if (!c) { toast("先设当前穿戴"); return; }
+  const name = $("stExportName").value.trim() || "outfit";
+  toast("导出中…");
+  try {
+    const r = await api("/api/studio/export", {method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({role: T.role, current: c.outfit, target: T.outfit, overlay: T.overlay, name})});
+    T.exports = await api("/api/studio/exports"); renderExports();
+    toast(`已导出 ${r.npk}，${Math.round(r.size / 1024)} KB，模拟画面和目标${r.check.worst_frame_share ? "最多差 " + (r.check.worst_frame_share * 100).toFixed(1) + "%" : "完全一致"}`);
+  } catch (error) { toast(`导出失败：${error.message}`); }
+}
+
+function renderExports() {
+  const mine = T.exports.filter(e => e.role === T.role);
+  $("stExports").replaceChildren(...(mine.length ? mine.map(e => {
+    const folder = e.folder.split("/").pop();
+    const href = kind => `/api/studio/export_file?${new URLSearchParams({folder, kind})}`;
+    const ok = !e.check.worst_frame_share;
+    return el("li", {},
+      el("b", {textContent: e.name}), el("span", {className: "muted", textContent: ` ${e.created.slice(5, 16)} · ${Math.round(e.size / 1024)} KB`}),
+      el("div", {className: "muted", textContent: `载体 ${e.carrier.tag}（z ${e.carrier.z}），置空 ${e.blanked.length} 个；` + (ok ? "模拟和目标一致" : `模拟最多差 ${(e.check.worst_frame_share * 100).toFixed(1)}%`)}),
+      el("div", {className: "row"}, el("a", {className: "button", href: href("npk"), textContent: "下载 NPK"}), el("a", {className: "button", href: href("preview"), target: "_blank", textContent: "预览图"}),
+        button("文件夹", async () => { try { await api("/api/studio/reveal", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({folder})}); } catch (error) { toast(error.message); } })));
+  }) : [el("li", {className: "muted", textContent: "这个职业还没导出过"})]));
+}
+

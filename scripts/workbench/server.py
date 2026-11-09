@@ -266,6 +266,11 @@ class Handler(BaseHTTPRequestHandler):
                     return self._json(studio.sets(q["role"], q.get("q", "")))
                 if what == "wardrobe":
                     return self._json(studio.wardrobe())
+                if what == "exports":
+                    return self._json(studio.exports())
+                if what == "export_file":
+                    path = studio.export_file(q["folder"], q.get("kind", "npk"))
+                    return self._file(path, download=q.get("kind", "npk") == "npk")
                 if what == "atlas":
                     outfit = json.loads(q["outfit"])
                     if not isinstance(outfit, dict) or len(outfit) > 12:
@@ -330,6 +335,16 @@ class Handler(BaseHTTPRequestHandler):
                 plan = studio.compose(payload["role"], outfit, payload.get("overlay", ""))
                 plan.pop("name_key", None)
                 return self._json(plan)
+            if parts == ["api", "studio", "current"]:
+                return self._json(studio.set_current(payload))
+            if parts == ["api", "studio", "export"]:
+                if not isinstance(payload.get("name", ""), str) or not isinstance(payload.get("overlay", ""), str):
+                    raise ValueError("bad export")
+                return self._json(studio.export_outfit(payload))
+            if parts == ["api", "studio", "reveal"]:
+                path = studio.export_file(payload.get("folder", ""), "npk")
+                subprocess.Popen(["explorer", "/select,", str(path)])
+                return self._json(dict(opened=path.name))
             if parts == ["api", "studio", "wardrobe", "save"]:
                 return self._json(studio.save_outfit(payload))
             if parts == ["api", "studio", "wardrobe", "delete"]:

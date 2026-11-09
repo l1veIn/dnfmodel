@@ -137,3 +137,8 @@ ul.plain, ol.plain { list-style: none; margin: 0; padding: 0; display: flex; fle
 #stSaveName { flex: 1; min-width: 0; background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 3px 7px; }
 @media (max-width: 1100px) { .studio { grid-template-columns: 280px minmax(0, 1fr); } .stRight { grid-column: 1 / -1; position: static; height: auto; } }
 @media (max-width: 760px) { .studio { grid-template-columns: 1fr; } .stLeft { position: static; height: auto; max-height: 70vh; } }
+
+.stCurrent { border-top: 1px solid var(--line); padding-top: 6px; display: flex; flex-direction: column; gap: 4px; }
+#stExportName { flex: 1; min-width: 0; background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 3px 7px; }
+#stExports li { border-bottom: 1px solid var(--line); padding: 5px 0; }
+#stExports a.button { display: inline-block; text-decoration: none; color: var(--text); background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 1px 8px; }

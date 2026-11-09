@@ -173,6 +173,8 @@ def overlays(prof):
 def overlay_npks(overlay):
     if not overlay:
         return []
+    if isinstance(overlay, list):  # explicit NPK paths, e.g. a freshly exported outfit patch on top of the installed ones
+        return [str(x) for x in overlay]
     if overlay == "installed":
         return [str(render.GAME / n) for n in progress.game_patches()]
     built = progress.versions(progress.project(overlay))
@@ -308,3 +310,158 @@ def delete_outfit(payload):
             raise ValueError("unknown outfit")
         WARDROBE.write_text(json.dumps(data, ensure_ascii=False, indent=1), "utf-8")
     return dict(deleted=payload.get("id"))
+
+
+# ---------------------------------------------------------------- export by what is worn ("当前穿戴")
+
+EXPORTS = ROOT / "output" / "outfits"
+WEAPON_FRONT = 1500  # weapon layers above this depth are drawn in front of the body (revolver c 2790, katana a 2050)
+
+
+def _frames(plan_, box, n):
+    out = []
+    for k in range(n):
+        canvas = render.Image.new("RGBA", (box[2] - box[0], box[3] - box[1]))
+        for l in plan_["layers"]:
+            if l["source"]:
+                canvas.alpha_composite(render.frame(l["source"], l["path"], k, box, l["palette"]))
+        out.append(canvas)
+    return out
+
+
+def _slug(text):
+    s = re.sub(r"[^A-Za-z0-9]+", "_", text).strip("_")
+    return s[:40] or "outfit"
+
+
+def _write_npk(entries):
+    """An NPK with identical payloads stored once (all blank IMGs of one length share their bytes), like the patch kit's builds."""
+    import hashlib as _h
+    import struct
+    from dnf_resources import NAME_KEY, NPK_MAGIC
+    unique, payloads = {}, []
+    offset = 52 + 264 * len(entries)
+    header = bytearray(NPK_MAGIC + struct.pack("<I", len(entries)))
+    for name, payload in entries:
+        if payload not in unique:
+            unique[payload] = offset
+            payloads.append(payload)
+            offset += len(payload)
+        encoded = name.encode("utf-8")
+        if len(encoded) >= 256:
+            raise ValueError(f"IMG path too long: {name}")
+        header.extend(struct.pack("<II", unique[payload], len(payload)))
+        header.extend(bytes(a ^ b for a, b in zip(encoded.ljust(256, b"\0"), NAME_KEY)))
+    return bytes(header) + _h.sha256(header[:len(header) // 17 * 17]).digest() + b"".join(payloads)
+
+
+def export_outfit(payload):
+    """Write the target look into the IMGs of what is worn now, as one small NPK, and check it against the target.
+
+    current: {slot: item_id} actually worn in game (its weapon is kept as it is). target: {slot: item_id} plus an optional
+    overlay (one of our projects). The target, without weapon, is flattened into one picture per rig frame and written into
+    the carrier: the worn layer drawn highest while still behind the weapon's front layer. Every other worn layer, the body
+    included, gets blank frames. Nothing is installed; the NPK goes to output/outfits/."""
+    from dnf_resources import write_v2
+    prof, current, target = payload["role"], payload.get("current") or {}, payload.get("target") or {}
+    overlay, label = payload.get("overlay", "") or "", (payload.get("name") or "outfit").strip()[:40]
+    if not isinstance(current, dict) or not isinstance(target, dict) or not current:
+        raise ValueError("current and target outfits are required")
+    r = role(prof)
+    n = r["frames"]
+    cur = plan(prof, current)
+    worn = [l for l in cur["layers"] if l["slot"] != "weapon" and l["source"]]
+    if not worn:
+        raise ValueError("nothing worn to carry the look")
+    front = [l["z"] for l in cur["layers"] if l["slot"] == "weapon" and l["z"] > WEAPON_FRONT]
+    below = [l for l in worn if not front or l["z"] < min(front)]
+    carrier = max(below or worn, key=lambda l: l["z"])
+    look = compose(prof, {k: v for k, v in target.items() if k != "weapon"}, overlay)
+    box = tuple(look["box"])
+    frames = _frames(look, box, n)
+    canvas_meta = render.load_img(carrier["source"], carrier["path"]).resolve(0)
+    cw, ch = canvas_meta.get("canvas_width", 500), canvas_meta.get("canvas_height", 500)
+    images, meta = [], []
+    for image in frames:
+        bbox = image.getbbox()
+        if bbox is None:
+            images.append(render.Image.new("RGBA", (1, 1)))
+            meta.append(dict(x=0, y=0, canvas_width=cw, canvas_height=ch))
+        else:
+            images.append(image.crop(bbox))
+            meta.append(dict(x=box[0] + bbox[0], y=box[1] + bbox[1], canvas_width=cw, canvas_height=ch))
+    entries = {carrier["path"]: write_v2(images, meta)}
+    blanks = {}
+    for l in worn:
+        if l["path"] in entries:
+            continue
+        count = len(render.load_img(l["source"], l["path"]).frames)
+        if count not in blanks:
+            blanks[count] = write_v2([render.Image.new("RGBA", (1, 1))] * count,
+                                     [dict(x=0, y=0, canvas_width=cw, canvas_height=ch)] + [{"link": 0} for _ in range(count - 1)])
+        entries[l["path"]] = blanks[count]
+    stamp = time.strftime("%Y%m%d_%H%M%S")
+    folder = EXPORTS / f"{stamp}_{_slug(prof + '_' + label)}"
+    folder.mkdir(parents=True, exist_ok=True)
+    npk_name = f"A_Outfit_{_slug(prof)}_{stamp}.NPK"
+    (folder / npk_name).write_bytes(_write_npk(sorted(entries.items())))
+    # Check: what the game would draw for the worn outfit with this NPK on top, against the target. The weapon is left out of both.
+    worn_only = {k: v for k, v in current.items() if k != "weapon"}
+    seen = compose(prof, worn_only, [folder / npk_name])
+    check = _frames(seen, box, n)
+    import numpy as np
+    worst, total = 0.0, 0.0
+    for a, b in zip(frames, check):
+        pa, pb = np.asarray(a).astype(int), np.asarray(b).astype(int)
+        visible = pa[..., 3] > 8
+        differing = (np.abs(pa[..., 3] - pb[..., 3]) > 8) | (visible & (np.abs(pa[..., :3] - pb[..., :3]).max(2) > 8))
+        share = float(differing.sum()) / max(1, int(visible.sum()))
+        worst, total = max(worst, share), total + share
+    report = dict(role=prof, name=label, npk=npk_name, created=time.strftime("%Y-%m-%d %H:%M:%S"), frames=n, current=current, target=target, overlay=overlay,
+                  carrier=dict(path=carrier["path"], tag=carrier["tag"], z=carrier["z"], item=carrier["name"]),
+                  blanked=sorted(p for p in entries if p != carrier["path"]), size=(folder / npk_name).stat().st_size,
+                  check=dict(worst_frame_share=round(worst, 4), mean_share=round(total / max(1, n), 4)),
+                  weapon_front=front, installed_note="放进 ImagePacks2 后生效；A_Outfit_ 开头按文件名排在 A_Claude_ 等项目补丁之后，同一路径以它为准。")
+    (folder / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=1), "utf-8")
+    sheet = render.atlas(frames, render.layout(box[2] - box[0], box[3] - box[1], n))
+    (folder / "preview.webp").write_bytes(sheet)
+    report["folder"] = str(folder.relative_to(ROOT)).replace("\\", "/")
+    return report
+
+
+def exports():
+    out = []
+    if EXPORTS.exists():
+        for f in sorted(EXPORTS.glob("*/report.json"), reverse=True):
+            r = json.loads(f.read_text("utf-8"))
+            r["folder"] = str(f.parent.relative_to(ROOT)).replace("\\", "/")
+            out.append(r)
+    return out
+
+
+def set_current(payload):
+    """Remember what is actually worn in game for a class (the export's carrier), in design/wardrobe.json."""
+    prof, outfit = payload.get("role"), payload.get("outfit", {})
+    role(prof)
+    if not isinstance(outfit, dict) or len(outfit) > 12 or any(k not in AVATAR_SLOTS + ("weapon",) or not isinstance(v, str) or len(v) > 40 for k, v in outfit.items()):
+        raise ValueError("bad outfit")
+    with lock:
+        data = wardrobe()
+        data.setdefault("current", {})[prof] = dict(outfit=outfit, saved=time.strftime("%Y-%m-%d %H:%M"))
+        tmp = WARDROBE.with_suffix(".tmp")
+        tmp.write_text(json.dumps(data, ensure_ascii=False, indent=1), "utf-8")
+        tmp.replace(WARDROBE)
+    return data["current"][prof]
+
+
+def export_file(folder, kind):
+    """A file of one export, only from output/outfits/<folder>/."""
+    base = (EXPORTS / folder).resolve()
+    if EXPORTS.resolve() not in base.parents or not (base / "report.json").exists():
+        raise KeyError(folder)
+    report = json.loads((base / "report.json").read_text("utf-8"))
+    path = base / (report["npk"] if kind == "npk" else "preview.webp")
+    if not path.exists():
+        raise KeyError(kind)
+    return path
+
