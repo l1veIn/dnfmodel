@@ -48,3 +48,7 @@ __pycache__/
 # Workbench worker logs (the issue log itself, issues.jsonl, is versioned)
 design/*/workbench/worker.log
 kb/cache/
+
+# Browser and Baidu downloads in progress, and archives dropped in the project root
+*.downloading
+*.baiduyun.*

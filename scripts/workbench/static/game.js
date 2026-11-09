@@ -63,6 +63,7 @@ async function openSkill(folder) {
   renderSkillList();
   $("skillList").querySelector('[aria-current="true"]')?.scrollIntoView({block: "nearest"});
   $("gameMain").replaceChildren(el("p", {className: "muted", textContent: "读取中…"}));
+  if (folder === "@buffvideo") { G.skill = null; return renderVideos(); }
   G.skill = await api(`/api/game/skill?${new URLSearchParams({cls: G.cls, folder})}`);
   G.k = G.skill.items[0]?.start || 0;
   renderSkill();
@@ -185,3 +186,21 @@ document.addEventListener("keydown", e => {
   if (e.key === "ArrowLeft") { gameSetPlaying(false); gameGo(G.k - 1); }
   if (e.key === "ArrowRight") { gameSetPlaying(false); gameGo(G.k + 1); }
 });
+
+
+// Buff and rage videos live in the game's Video folder, not ImagePacks2. They are Neople-encrypted Bink 2, so they cannot be
+// previewed; the page lists them and says whether each file is still the official one (sha256 against a recorded baseline).
+async function renderVideos() {
+  const v = await api(`/api/game/videos?${new URLSearchParams({cls: G.cls})}`);
+  const STATE = {official: ["ok", "官方原版"], replaced: ["warn", "已被替换"], missing: ["bad", "文件不见了"]};
+  const rows = v.rows.map(r => el("tr", {},
+    el("td", {textContent: r.kind}),
+    el("td", {}, el("b", {textContent: r.name || "—"})),
+    el("td", {className: "small", textContent: r.file}),
+    el("td", {textContent: `${Math.round(r.size / 1024)} KB`}),
+    el("td", {}, el("span", {className: `badge ${STATE[r.status][0]}`, textContent: STATE[r.status][1]}))));
+  $("gameMain").replaceChildren(
+    el("div", {className: "row"}, el("h2", {textContent: "加 buff 和觉醒视频"}), el("span", {className: "muted", textContent: v.root})),
+    el("p", {className: "small muted", textContent: "放 buff 时的人物立绘是视频，不在 ImagePacks2 里：Video\Character\Cutscene_buf（按转职），Cutscene_buf_add（时装专属），Cutscene_rage（觉醒）。文件是 Neople 加密的 Bink 2，暂时无法预览；替换方法是用同名文件覆盖，游戏更新后可能被复原。状态按 2026-11-09 记录的官方文件哈希判断。"}),
+    el("div", {className: "tablewrap"}, el("table", {}, el("thead", {}, el("tr", {}, ...["类型", "转职", "文件", "大小", "状态"].map(h => el("th", {textContent: h})))), el("tbody", {}, ...rows))));
+}

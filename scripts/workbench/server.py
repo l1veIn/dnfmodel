@@ -259,6 +259,8 @@ class Handler(BaseHTTPRequestHandler):
                     return self._json(game.skills(q["cls"]))
                 if parts[2] == "skill":
                     return self._json(game.skill(q["cls"], q["folder"]))
+                if parts[2] == "videos":
+                    return self._json(game.videos(q.get("cls")))
                 if parts[2] == "frame":
                     return self._send(game.frame(q["path"], q["src"], int(q["k"])), "image/webp", cache="max-age=86400")
                 if parts[2] == "atlas":

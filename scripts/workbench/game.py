@@ -23,6 +23,7 @@ ROOT_FOLDER = "(根目录)"
 PORTRAITS = ROOT / "kb" / "curated" / "portraits.json"
 # Pseudo folders listed first for every class: illustrations that live outside the class folder (categories.py).
 SPECIAL = {"@buffart": ("buffart", "觉醒特写"), "@portrait": ("portrait", "人物立绘")}
+VIDEO_FOLDER = "@buffvideo"
 lock = threading.Lock()
 _cache = {}
 
@@ -152,6 +153,9 @@ def skills(cls):
         paths = special_paths(cls, kind)
         if paths:
             folders[special] = dict(folder=special, imgs=len(paths), frames=0, paths=paths, label=label)
+    vids = videos(cls)["rows"]
+    if vids:
+        folders[VIDEO_FOLDER] = dict(folder=VIDEO_FOLDER, imgs=len(vids), frames=0, paths=[], label="加 buff 和觉醒视频")
     changed = mods()
     labels = names().get("classes", {}).get(cls, {})
     index = index_names(cls)
@@ -231,4 +235,45 @@ def frame(path, source, k):
         raise KeyError(source)
     key = f"frame|{render.token(npk)}|{path}|{tuple(box)}|{k}"
     return render.cached(key, lambda: render.webp(render.frame(npk, path, k, tuple(box))))
+
+
+# ---------------------------------------------------------------- buff and rage videos (Video/Character, outside ImagePacks2)
+
+VIDEOS = ROOT / "kb" / "curated" / "buff_videos.json"
+VIDEO_ROOT = render.GAME.parent / "Video" / "Character"
+# The two-digit prefix of buff and rage videos is the class and gender, as in the COLG list (03 is the male fighter's "figher").
+VIDEO_PROFESSION = {"01": "swordman", "02": "swordman_at", "03": "fighter_at", "04": "fighter", "05": "gunner", "06": "gunner_at", "07": "mage_at",
+                    "08": "mage", "09": "priest", "10": "priest_at", "11": "thief", "12": "knight", "14": "demoniclancer", "15": "gunblader", "16": "archer"}
+
+
+def _video_hash(path):
+    import hashlib
+    st = path.stat()
+    key = ("vhash", str(path), st.st_size, st.st_mtime)
+    if key not in _cache:
+        _cache[key] = hashlib.sha256(path.read_bytes()).hexdigest()
+    return _cache[key]
+
+
+def videos(cls=None):
+    """Buff, costume-buff and rage videos, with their status against the official baseline. Each is Neople-encrypted Bink 2,
+    so there is no preview; replacing one means overwriting the file in the game's Video folder (and again after updates)."""
+    data = json.loads(VIDEOS.read_text("utf-8")) if VIDEOS.exists() else {"files": []}
+    mine = set(professions(cls)) if cls else None
+    rows = []
+    for f in data["files"]:
+        prefix = f["file"][:2] if f["folder"] == "Cutscene_buf" else f["file"].split("_rage")[0][:2] if f["folder"] == "Cutscene_rage" else None
+        prof = VIDEO_PROFESSION.get(prefix or "")
+        if mine is not None and f["folder"] != "Cutscene_buf_add" and prof not in mine:
+            continue
+        if mine is not None and f["folder"] == "Cutscene_buf_add":
+            continue  # costume buff videos are not tied to one class folder; listed in the "all" view
+        path = VIDEO_ROOT / f["folder"] / f["file"]
+        if not path.exists():
+            status = "missing"
+        else:
+            status = "official" if path.stat().st_size == f["size"] and _video_hash(path) == f["sha256"] else "replaced"
+        kind = {"Cutscene_buf": "加 buff", "Cutscene_buf_add": "时装专属加 buff", "Cutscene_rage": "觉醒（rage）"}[f["folder"]]
+        rows.append(dict(folder=f["folder"], file=f["file"], name=f["name"], kind=kind, profession=prof, size=f["size"], baseline=data.get("baseline_date"), status=status))
+    return dict(root=str(VIDEO_ROOT), rows=rows)
 

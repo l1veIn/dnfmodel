@@ -242,3 +242,14 @@ v06 之后的状态：
 - 剧情对话里显示的是哪一种还没在游戏里核实；转职立绘最可能。各副本的 NPC 对话头像在 `sprite/contents/<年份>/<副本>/ui/dialogue`。
 - 找任何文件先查 `kb/sources/colg/imagepacks2_index_2026-09-21.txt`（表 `npk_note`），它给每个 NPK 写了中文用途。
 
+## 加 buff 立绘和觉醒视频（不在 ImagePacks2）
+
+2026-11-09 用户从 COLG 贴来的说明：放 buff 时弹出的人物立绘是视频，在游戏目录 `Video\Character\` 下：
+
+- `Cutscene_buf\`：每个转职一个，名字如 `06_gunner_F_buf_meca.bk2`（女机械），两位数前缀是职业和性别（01 男鬼剑、02 女鬼剑、05 男枪、06 女枪、08 女法……）。全部 72 个的中文名在 `kb/curated/buff_videos.json`。
+- `Cutscene_buf_add\`：时装专属的 buff 视频（36 个，如 `MuAva_buf_mova_Fgunner.bk2`）。
+- `Cutscene_rage\`：觉醒（rage）视频，同样的编号。
+- 文件头是 `Neople Video Stream`，后面是每个文件各不相同的加密数据，不是普通的 Bink 2（`KB2`），ffmpeg 读不了，也就无法预览。社区的替换方法是用同名文件覆盖，游戏更新后可能被复原。
+- 我们的规则是官方文件只读：覆盖 Video 目录里的文件前必须先问用户，并把原文件备份到项目里。`kb/curated/buff_videos.json` 记录了 2026-11-09 官方文件的 sha256，工作台据此判断是原版、已被替换还是被复原。
+- 能不能自己做替换视频，取决于游戏是否也接受未加密的 Bink 2。需要拿一份社区做好的替换文件看文件头再判断。
+

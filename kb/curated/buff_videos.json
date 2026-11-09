@@ -1,0 +1,1817 @@
+{
+ "note": "Buff and awakening-rage videos in the game's Video/Character folder (not ImagePacks2). Names from a COLG post the user pasted on 2026-11-09. Each file is 'Neople Video Stream' + per-file encrypted Bink 2; it cannot be previewed until the format is known. sha256 is the baseline of the official files as installed on 2026-11-09, to tell replaced or restored files.",
+ "root": "Video/Character",
+ "baseline_date": "2026-11-09",
+ "files": [
+  {
+   "folder": "Cutscene_buf",
+   "file": "01_ghost_M_buf_asura.bk2",
+   "name": "阿修罗",
+   "profession": "swordman",
+   "size": 713323,
+   "sha256": "f02bc7113d1e8b42687f832722ab9e1c1163609693882dcf7bfc0a6ca6f0ad86",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "01_ghost_M_buf_bsk.bk2",
+   "name": "狂战士",
+   "profession": "swordman",
+   "size": 638251,
+   "sha256": "9424906751fdb8aae8d50f45004c40953090c8b16a4ce4a1f8a257cff33d4ac8",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "01_ghost_M_buf_ghost.bk2",
+   "name": "剑影",
+   "profession": "swordman",
+   "size": 669519,
+   "sha256": "2b4a3f17e536e0b4736c64a7e304f985d0cd5fdc1d3c624b46933f77ed8d1d0d",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "01_ghost_M_buf_soul.bk2",
+   "name": "鬼泣",
+   "profession": "swordman",
+   "size": 713603,
+   "sha256": "e5e7136e21e413526f915bf1a78164febe73d48c581cf5de4af5337da6eac947",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "01_ghost_M_buf_wep.bk2",
+   "name": "剑魂",
+   "profession": "swordman",
+   "size": 830423,
+   "sha256": "acb535523d6d1d54507414fc6a9a21f6d98f7d443be358180d1f363a001faa98",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "02_ghost_F_buf_blade.bk2",
+   "name": "刃影",
+   "profession": "swordman_at",
+   "size": 953591,
+   "sha256": "fedf9f70577550def9e2ecc179be8d29c72874de75867cf8505394f97b86a6b6",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "02_ghost_F_buf_darktemp.bk2",
+   "name": "暗帝",
+   "profession": "swordman_at",
+   "size": 679083,
+   "sha256": "09d8aec5b97b7e751c0fd15f06d4dd4d8c650fa9d36b0bde5c9520c2a53db620",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "02_ghost_F_buf_demon.bk2",
+   "name": "剑魔",
+   "profession": "swordman_at",
+   "size": 700683,
+   "sha256": "1785fcac6c4fb3ea4b25e58ddfad4b270494721cee82bee784312732d2fa4f01",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "02_ghost_F_buf_sword.bk2",
+   "name": "剑宗",
+   "profession": "swordman_at",
+   "size": 702415,
+   "sha256": "92571bf33f884a75ff4f8e52929905d00a3a072fa05dbb4c443fdd97abb23a00",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "02_ghost_F_buf_vega.bk2",
+   "name": "剑帝",
+   "profession": "swordman_at",
+   "size": 702691,
+   "sha256": "789dd8c972cff68e82aa7f8c9113d858d3e460527ea46a46ccf1f8780d0e1e6f",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "03_figher_M_buf_grap.bk2",
+   "name": "柔道家(男)",
+   "profession": "fighter_at",
+   "size": 595555,
+   "sha256": "5f7f07fe8af52ebf7693c3779ed7561fe68413090c498a30cccb0d67153b98a0",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "03_figher_M_buf_nen.bk2",
+   "name": "气功师(男)",
+   "profession": "fighter_at",
+   "size": 710423,
+   "sha256": "0ba34ccf6814a7b1156491f9695660f5c696d32402cec550eb971a29103ae631",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "03_figher_M_buf_Street.bk2",
+   "name": "街霸(男)",
+   "profession": "fighter_at",
+   "size": 591095,
+   "sha256": "f8ce632793e91802230f2324680b6e18e98d56dd548fa13c7f8d1acc98809d94",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "03_figher_M_buf_strik.bk2",
+   "name": "散打(男)",
+   "profession": "fighter_at",
+   "size": 705959,
+   "sha256": "d9a84fa87bb8d2202f332e9db1e0affa280ba287112f4544d4410601a2066c60",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "04_fighter_F_buf_grap.bk2",
+   "name": "柔道家(女)",
+   "profession": "fighter",
+   "size": 668287,
+   "sha256": "fda5bd35991990a8048e39d7d3626c190313f46cff034a0534b6ab94211c76f1",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "04_fighter_F_buf_nen.bk2",
+   "name": "气功师(女)",
+   "profession": "fighter",
+   "size": 660959,
+   "sha256": "c505827be5416bb58b704eb0f486bde429361bb650fda5b5dc1b53a2fdfdab07",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "04_fighter_F_buf_street.bk2",
+   "name": "街霸(女)",
+   "profession": "fighter",
+   "size": 656279,
+   "sha256": "ded35513a438b8e8c68ec2e66d6ce8127d0c1f47bfc5a51fceb9f395bd81d44b",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "04_fighter_F_buf_strik.bk2",
+   "name": "散打(女)",
+   "profession": "fighter",
+   "size": 658139,
+   "sha256": "b33a59a97f7ac4defa91fdafb7b53f82acb966e65ab736279c26d1e372e7ee89",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "05_gunner_M_buf_assult.bk2",
+   "name": "合金战士",
+   "profession": "gunner",
+   "size": 731735,
+   "sha256": "60675abbb8ff718ac20b04937d0d7edad4647a9ac24db33799275c7e08ac9ad9",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "05_gunner_M_buf_luncher.bk2",
+   "name": "枪炮师(男)",
+   "profession": "gunner",
+   "size": 598727,
+   "sha256": "6b4b75a0664c558cf65a6a05f70ce556153b422208b45e336fb846bcda69813c",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "05_gunner_M_buf_meca.bk2",
+   "name": "机械师(男)",
+   "profession": "gunner",
+   "size": 776771,
+   "sha256": "01ff94968eb2a43323981a8d32dd87ed46cc44b96dd8346b2d1ce7f8ad7ddb6c",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "05_gunner_M_buf_ranger.bk2",
+   "name": "漫游枪手(男)",
+   "profession": "gunner",
+   "size": 710043,
+   "sha256": "517f1829f8392a2c8bb5ec7edcf7ae911d924142f20f6601ce314d496256c46a",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "05_gunner_M_buf_spit.bk2",
+   "name": "弹药专家(男)",
+   "profession": "gunner",
+   "size": 710287,
+   "sha256": "7cde06bb4663be5049c0b3275760a91377873362dfc3650cbf5009f75d3bf12d",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "06_gunner_F_buf_launcher.bk2",
+   "name": "枪炮师(女)",
+   "profession": "gunner_at",
+   "size": 656595,
+   "sha256": "caf382e9b3b27562b00a38a27bbd2ee2a5a681ef27d915f67f6a8058c4918226",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "06_gunner_F_buf_meca.bk2",
+   "name": "机械师(女)",
+   "profession": "gunner_at",
+   "size": 699071,
+   "sha256": "1de013763b9d472e40d38370f3477550776932e269feba998c777d91d2c60292",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "06_gunner_F_buf_paramedic.bk2",
+   "name": "协战师",
+   "profession": "gunner_at",
+   "size": 661203,
+   "sha256": "c08b586048c31449907e65bdc1508344194efa9841701a6cc2b0fd27b92e98c6",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "06_gunner_F_buf_ranger.bk2",
+   "name": "漫游枪手(女)",
+   "profession": "gunner_at",
+   "size": 638975,
+   "sha256": "2793b7f5da6955b05f72ab0f4b30cb5fb17ab256bb311bcd3c692c31ee098943",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "06_gunner_F_buf_spit.bk2",
+   "name": "弹药专家(女)",
+   "profession": "gunner_at",
+   "size": 741403,
+   "sha256": "3a5c6178e735ab3e3099b493c36e16948bd3906b54088cb51cd8bdfb833c7657",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "07_mage_M_buf_bloodm.bk2",
+   "name": "血法师",
+   "profession": "mage_at",
+   "size": 698239,
+   "sha256": "d3ed4edf66cc3f8b6b44e24851f3df70a8a2041acba9c9e74f452b576f66d896",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "07_mage_M_buf_dimension.bk2",
+   "name": "次元行者",
+   "profession": "mage_at",
+   "size": 646647,
+   "sha256": "d74982c7b14f0b084f1f20f33d48879a9106ed3c7766eeb572e00be492f4e097",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "07_mage_M_buf_elbomber.bk2",
+   "name": "元素爆破师",
+   "profession": "mage_at",
+   "size": 713079,
+   "sha256": "025a7c71b5afb86929d4791a6dfd7fd8cceb9d879665308bed163ba174db38ca",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "07_mage_M_buf_glancial.bk2",
+   "name": "冰结师",
+   "profession": "mage_at",
+   "size": 649651,
+   "sha256": "903a439b85786bebf1636abcf900e82f74743e37c14a58afccb24ebca97c1232",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "07_mage_M_buf_swiftma.bk2",
+   "name": "逐风者",
+   "profession": "mage_at",
+   "size": 618891,
+   "sha256": "4016dca4d22a023854fddab5d27b1392ef8f540b9191803336f15aed1784ceff",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "08_mage_F_buf_battlemage.bk2",
+   "name": "战斗法师",
+   "profession": "mage",
+   "size": 677935,
+   "sha256": "97e2b152b7db61f87149953644cb731189f9aae5197c8ce7c1a37ef55fe8001c",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "08_mage_F_buf_element.bk2",
+   "name": "元素师",
+   "profession": "mage",
+   "size": 663059,
+   "sha256": "3ed833900003d264d419dc8abf52a859f4ebfe6cb098eb7894fc165833ff938f",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "08_mage_F_buf_enchant.bk2",
+   "name": "小魔女",
+   "profession": "mage",
+   "size": 617943,
+   "sha256": "8d2a14fb29b3b97ece2e347d0e96fcee408bcf421016d4253ef926fddb9944fe",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "08_mage_F_buf_summoner.bk2",
+   "name": "召唤师",
+   "profession": "mage",
+   "size": 712547,
+   "sha256": "2bf8457660105a659898bdcdd8cc90dfdf652cae6de3e0ce6b6703b3edadaeab",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "08_mage_F_buf_witch.bk2",
+   "name": "魔道学者",
+   "profession": "mage",
+   "size": 615515,
+   "sha256": "8580bae3ee131dfd5f95e89a896288a8cded48dd15edc5c207c60d7110bd4073",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "09_prist_M_buf_avenger.bk2",
+   "name": "复仇者",
+   "profession": "priest",
+   "size": 714227,
+   "sha256": "bf445773b5c2346ec978220867dedbff9395bfdb317b86b66522487617d74cf2",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "09_prist_M_buf_battlecru.bk2",
+   "name": "圣骑士(审判)",
+   "profession": "priest",
+   "size": 657775,
+   "sha256": "533f45a7331cd6dce82d02a7f405c674689eda44b3fa515d51c6fe6e010d4953",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "09_prist_M_buf_buffcru.bk2",
+   "name": "圣骑士(奶爸)",
+   "profession": "priest",
+   "size": 689831,
+   "sha256": "bf35ab6fd87a9779bb22c648e298ef7aa763080564c81c45e507bc7ebe12ab9b",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "09_prist_M_buf_exorcist.bk2",
+   "name": "驱魔师",
+   "profession": "priest",
+   "size": 710175,
+   "sha256": "f912ceec8389c797e80efc3549b6fcfc859e7714fb2c63cf664192029e3366df",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "09_prist_M_buf_infight.bk2",
+   "name": "蓝拳圣使(男)",
+   "profession": "priest",
+   "size": 709719,
+   "sha256": "f22c5217d35163321e71b80d2ec90d582a536f6500e22be8da8d30ca909db8f7",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "10_priest_F_buf_crusager.bk2",
+   "name": "圣骑士(女)",
+   "profession": "priest_at",
+   "size": 689299,
+   "sha256": "76daef0aabe2e92d3a9afa6b3abd5db1cdefb06ad819f317bc7e1b7c1d615ac1",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "10_priest_F_buf_infigh.bk2",
+   "name": "蓝拳圣使(女)",
+   "profession": "priest_at",
+   "size": 660711,
+   "sha256": "8c26e34f3366f8dd57240f10fd5a0ab136cbb8dba8ce9d87651040d90b020644",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "10_priest_F_buf_inquis.bk2",
+   "name": "异端审判者",
+   "profession": "priest_at",
+   "size": 710027,
+   "sha256": "d0b5a4b834f63a90a4529dd629b49663ee6cc87b81fd88e6e0cce7f7fb948909",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "10_priest_F_buf_mistress.bk2",
+   "name": "诱魔者",
+   "profession": "priest_at",
+   "size": 647607,
+   "sha256": "6ae2de116248cdff3354d36d5c5f832b15aa35db884ac863fc858ca3fbcc2b68",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "10_priest_F_buf_sorcer.bk2",
+   "name": "巫女",
+   "profession": "priest_at",
+   "size": 658671,
+   "sha256": "c98c46451024bfaf71b9b728de2344bf3f4d7532d2f7a0d51bfb8b2a3390d751",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "11_thief_buf_kuno.bk2",
+   "name": "忍者",
+   "profession": "thief",
+   "size": 662051,
+   "sha256": "35b5fbe28c2c85a5af0c6912ec4c47ce2ab6169fc71fe3283cff6d0c42f9f227",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "11_thief_buf_necro.bk2",
+   "name": "暗夜使者",
+   "profession": "thief",
+   "size": 712259,
+   "sha256": "dcc86e38334502a349510e4a258084558f416befdc9bb9a5624aba8ae385df15",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "11_thief_buf_rogue.bk2",
+   "name": "刺客",
+   "profession": "thief",
+   "size": 628599,
+   "sha256": "398fcbb14f5f3e2d5da31c854498f9826fcfa278bf366fcda5bfeeb2079dbe0a",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "11_thief_buf_shadow.bk2",
+   "name": "影舞者",
+   "profession": "thief",
+   "size": 713307,
+   "sha256": "b53907bb5ab18baeb1b6320d9e1d135efc3153965752dfe9b6d13cab2e6d734b",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "12_knight_buf_chaos.bk2",
+   "name": "混沌魔灵",
+   "profession": "knight",
+   "size": 667979,
+   "sha256": "0843738a85f4375a66ef991e74d37811f3fb0cef113f0ce0c0a81e3dc4cfa40c",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "12_knight_buf_dragonkn.bk2",
+   "name": "龙骑士",
+   "profession": "knight",
+   "size": 659531,
+   "sha256": "b13a2300a93641b7d2703edf130ae61acc70908fbaa437bbe9519c06f4817662",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "12_knight_buf_eleven.bk2",
+   "name": "精灵骑士",
+   "profession": "knight",
+   "size": 752123,
+   "sha256": "35189ea58400d762634a14b2529d30e46f9259ee91d0622fc6cb49d18a2be8c7",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "12_knight_buf_paladin.bk2",
+   "name": "帕拉丁",
+   "profession": "knight",
+   "size": 647327,
+   "sha256": "698092444c3af8f6a07bbcecb78f237d1444a035941405f97f4205325d0c4dea",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "13_ECT_Creater_buf.bk2",
+   "name": "缔造者",
+   "profession": null,
+   "size": 677683,
+   "sha256": "3c54ab1bedcf79480c380f67a3ce829df58e7f631cea89658cd628b9c28c6f9a",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "13_ECT_darkknight_buf.bk2",
+   "name": "黑暗武士",
+   "profession": null,
+   "size": 689171,
+   "sha256": "ec7042e47187f365272673650d7cb7a8df373993fd71c39481822b6da4347724",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "14_demolancer_buf_darklancer.bk2",
+   "name": "暗枪士",
+   "profession": "demoniclancer",
+   "size": 681567,
+   "sha256": "75c3380c95eab08c8d73654a4f4a1bc704ca46f6c9782a1a4e0329bf510d5d03",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "14_demolancer_buf_dralancer.bk2",
+   "name": "狩猎者",
+   "profession": "demoniclancer",
+   "size": 657619,
+   "sha256": "91e603c14615f3dd95b0f5f38ac5a9fc0ee1719a8f378195b29fb9346e3eebe8",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "14_demolancer_buf_duelist.bk2",
+   "name": "决战者",
+   "profession": "demoniclancer",
+   "size": 650259,
+   "sha256": "c51bcc644d453980c4afff0cb5508f6529a8f31f330324115f3551b17d6319fa",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "14_demolancer_buf_vanguard.bk2",
+   "name": "征战者",
+   "profession": "demoniclancer",
+   "size": 647735,
+   "sha256": "6be362ba30f07d256ee2cd448b520c9b0829592fe0ad40a23df851f96eaf973c",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "15_GunBla_buf_agent.bk2",
+   "name": "特工",
+   "profession": "gunblader",
+   "size": 765611,
+   "sha256": "4c22f19ca7e4e7920d9f0366a252f9b39d688f46d972a28e6e54f571494b275b",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "15_GunBla_buf_hitman.bk2",
+   "name": "暗刃",
+   "profession": "gunblader",
+   "size": 637223,
+   "sha256": "a57385d5e4710892e9e218a401448437e87fd41919c2edb955666e0e2cc90e06",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "15_GunBla_buf_specilist.bk2",
+   "name": "源能专家",
+   "profession": "gunblader",
+   "size": 731063,
+   "sha256": "e0a5f42ce9a4cdc2de4ba705933886e50c0d0830c4ed66159ef351251ce4f183",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "15_GunBla_buf_trouble.bk2",
+   "name": "战线佣兵",
+   "profession": "gunblader",
+   "size": 834499,
+   "sha256": "f8f199ba20059cb34a5e192e80f27126444125bd3cf4f18169a06e740d44df93",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "16_archer_buf_chimera.bk2",
+   "name": "奇美拉",
+   "profession": "archer",
+   "size": 657587,
+   "sha256": "cffc7526380951ea1793815375b7484419839826d71fcd0f4beaf7f172d7ea3f",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "16_archer_buf_hunter.bk2",
+   "name": "猎人",
+   "profession": "archer",
+   "size": 712195,
+   "sha256": "cb104c0ec02956dbec7cb84e6048914e3939a2eb23e55a9d0a262543913106dc",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "16_archer_buf_muse.bk2",
+   "name": "缪斯",
+   "profession": "archer",
+   "size": 649243,
+   "sha256": "24247fbdb31fb6c944accfa5b137048f4b2439ee8c438cc734413e694ae84d25",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "16_archer_buf_traveler.bk2",
+   "name": "旅人",
+   "profession": "archer",
+   "size": 647375,
+   "sha256": "33e4d511ceeede3c612c2412444c058efd3656ec271c852d5400d433a1023f48",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "16_archer_buf_vigil.bk2",
+   "name": "妖护使",
+   "profession": "archer",
+   "size": 617671,
+   "sha256": "d2348d693a5f74a20a8b96aaffe40f14d0012091d56ffa4bc5723c8f2554ba8b",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf",
+   "file": "17_imperial_F_buf_break.bk2",
+   "name": "破浪者",
+   "profession": null,
+   "size": 661107,
+   "sha256": "a9f0db24ec3a801d830c66200d9eff2b037e0a1a365d053792aa93557924478d",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "Arcana_buf_Ghost_M.bk2",
+   "name": "",
+   "profession": null,
+   "size": 966831,
+   "sha256": "9a26d10395c1db177f00db73393fa5ed6476e651fae37acd4e4b0137bba9f8a1",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "Arcana_buf_Ghost_W.bk2",
+   "name": "",
+   "profession": null,
+   "size": 957695,
+   "sha256": "a0ced969a490edcd8fbd46a8311e3bae46892daf81c80a734fb8e48294db058f",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "Arcana_buf_gunblader.bk2",
+   "name": "",
+   "profession": null,
+   "size": 957075,
+   "sha256": "8b9f688f78c13e37153443abbd1774304d91b2f45465d53a5ec8591e8c357f61",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "Arcana_buf_knight.bk2",
+   "name": "",
+   "profession": null,
+   "size": 948115,
+   "sha256": "92f1355a0ab00ecffa7461cbf3aa743b7752df9201b24e2c1e9b77de764725bf",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "Astronaut_buf_mage_F.bk2",
+   "name": "",
+   "profession": null,
+   "size": 923383,
+   "sha256": "6265871f6f51cee2453d8226fa05038779cf05db370d480bbf9430e1c1f7808a",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "Astronaut_buf_mage_M.bk2",
+   "name": "",
+   "profession": null,
+   "size": 959851,
+   "sha256": "cf2c8a91a1bf177016f03c3c0e334c54b2b70f2465aa7980ae801bf5a77c17cf",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "CDNF_B_F_cut.bk2",
+   "name": "",
+   "profession": null,
+   "size": 951315,
+   "sha256": "2882cb0f3716df67b14facf82e78e214e0089953596bd3e929b8b28d33f7facc",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "CDNF_B_m_cut.bk2",
+   "name": "",
+   "profession": null,
+   "size": 949719,
+   "sha256": "fd0e04a4dd35c754303c2112e7b9bf25f77e5de8778b1fd951aabd3604c701f5",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "ForestSymphony_Archer.bk2",
+   "name": "",
+   "profession": null,
+   "size": 661663,
+   "sha256": "1de85c1a1f6999efbfa97378c3c3de8c22d5d5f9c9dcedbe0561727daa8b15bb",
+   "mtime": "2026-09-10 22:05",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "ForestSymphony_Demonic_Lancer.bk2",
+   "name": "",
+   "profession": null,
+   "size": 659087,
+   "sha256": "71f64f9299148d17b539fe417383b0f6b86e4b0161ad707f1c5d6745742e2d2d",
+   "mtime": "2026-09-10 22:05",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "ForestSymphony_Imperial_Knight.bk2",
+   "name": "",
+   "profession": null,
+   "size": 661103,
+   "sha256": "7f840bce74c123ebb99d141d4b13a043e3f32b150051eb7f8b30649e5e765057",
+   "mtime": "2026-09-10 22:05",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "FrostKingdom_buf_ghost_M.bk2",
+   "name": "",
+   "profession": null,
+   "size": 647407,
+   "sha256": "6a7b5ee66b3c1e23916171cf5005f48f526fd147da1eca5fc6efda2f3f1934a2",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "FrostKingdom_buf_ghost_W.bk2",
+   "name": "",
+   "profession": null,
+   "size": 658411,
+   "sha256": "f0575bb00329521df1abf6921d79fd61b02510df6639b421e68810948df783ad",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "Inuyasha_kikyo.bk2",
+   "name": "",
+   "profession": null,
+   "size": 955615,
+   "sha256": "f8d178e230f760d72e973cff99d1d134055b6f57530a63a00921f6c6e09025bd",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "Inuyasha_seeshomaru.bk2",
+   "name": "",
+   "profession": null,
+   "size": 952995,
+   "sha256": "a3246bf94ef76d1401b52ba1e9b52456b4e7bfaf12e78bb3e80e92bf41bd16fd",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "MuAva_buf_mova_fghost.bk2",
+   "name": "",
+   "profession": null,
+   "size": 906735,
+   "sha256": "4f5d1967fc5ead89a1db7977be2d70402aa056cbe96e96320ec16501da5aca58",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "MuAva_buf_mova_Fgunner.bk2",
+   "name": "",
+   "profession": null,
+   "size": 911915,
+   "sha256": "f7d1aa3aa5750444ebebdce5e5d2cf5caf054da87d0b00d5288bc563c6413727",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "MuAva_buf_mova_fmage.bk2",
+   "name": "",
+   "profession": null,
+   "size": 911747,
+   "sha256": "445d2811c2aaa3dbf09e51d39e99363ec75cca1be1040a3c534e054ecb70a5ed",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "MuAva_buf_mova_Fprist.bk2",
+   "name": "",
+   "profession": null,
+   "size": 921887,
+   "sha256": "c9845acd9066a364aa517a463ea6c247418e2dda3fc0dfe2e80ab18977612e31",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "MuAva_buf_mova_mghost.bk2",
+   "name": "",
+   "profession": null,
+   "size": 905267,
+   "sha256": "3b7ec12eb878fec091eb01825fb053c35a6394c2224ed31f594e10abd3190a19",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "Oriental_fighter_F.bk2",
+   "name": "",
+   "profession": null,
+   "size": 953531,
+   "sha256": "57f12ab89c787397b6fc5e851c231987e81e901baeedd8267e968cbdb3e809e5",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "Oriental_ghost_M.bk2",
+   "name": "",
+   "profession": null,
+   "size": 942663,
+   "sha256": "9acbe695ef6b747b4a542cc70902fd0981d206cec19d36563ee45bd8c655a15c",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "PhantomCity_gunner_F_A.bk2",
+   "name": "",
+   "profession": null,
+   "size": 958483,
+   "sha256": "990624facf280d14f8d3d9d981440b54d6080b2a759e40f88365152ef2c8eadc",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "PhantomCity_gunner_F_B.bk2",
+   "name": "",
+   "profession": null,
+   "size": 963095,
+   "sha256": "c93bd4e8618381f3e153a03ac0aad2e232f6179fcdd58cca1270c48c284765ae",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "PhantomCity_gunner_M_A.bk2",
+   "name": "",
+   "profession": null,
+   "size": 962135,
+   "sha256": "68fc2f9820c53730a3979f1ed9a133c69fe7d1163bd22d9366e4a343d42b2483",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "PhantomCity_gunner_M_B.bk2",
+   "name": "",
+   "profession": null,
+   "size": 960187,
+   "sha256": "3701f528530345acc5eec3fbd1d73fa86092e0c7c1898a926006adfc5359355d",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "seon_buf_archer.bk2",
+   "name": "",
+   "profession": null,
+   "size": 647523,
+   "sha256": "a958406fb8fcb6d2744c255b1b918326e079d0ccdf9218401a18a63e9e3b1715",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "seon_buf_ghostF.bk2",
+   "name": "",
+   "profession": null,
+   "size": 648351,
+   "sha256": "94eabea41ad88ba7c9e2f0d85f874454d0733e08150bdf568aa6e46b4be7dda0",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "seon_buf_ghostM.bk2",
+   "name": "",
+   "profession": null,
+   "size": 639351,
+   "sha256": "93c03d08a2a126e068a34c7cced570d65131bdb31ee999e1e6322937b2b19012",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "seon_buf_lancer.bk2",
+   "name": "",
+   "profession": null,
+   "size": 647743,
+   "sha256": "9e6f75a64729a4fe1d2902ac933f5f7600a86d27e50d7f15a83a3b263f2974dc",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "snk_buf_iori.bk2",
+   "name": "",
+   "profession": null,
+   "size": 646307,
+   "sha256": "20620449bab273f954e334aef9a3f2385159fd0ef88efd89cc2b25885e6e06ac",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "snk_buf_mai.bk2",
+   "name": "",
+   "profession": null,
+   "size": 650495,
+   "sha256": "5938ccb5f5a5c127d7e732acafd554897b58d346f4d86bd223d3d0848b75562a",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "Snowmage_CDNF_buf.bk2",
+   "name": "",
+   "profession": null,
+   "size": 910115,
+   "sha256": "59fd38f1ab61cb2dfd530c2640a76405fe8219841dcfd36994bd693e5f5c513d",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "star_buf_mageF.bk2",
+   "name": "",
+   "profession": null,
+   "size": 650563,
+   "sha256": "e321df18aa36ad9474327679daf07f8cc2e08a1cfb2be1bc3ab3dc619825b016",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "star_buf_mageM.bk2",
+   "name": "",
+   "profession": null,
+   "size": 649611,
+   "sha256": "bd85750b50878996b022f7c0b6ef11d7fb7f65badfd44388380d6394a0031f68",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_buf_add",
+   "file": "star_buf_theif.bk2",
+   "name": "",
+   "profession": null,
+   "size": 650135,
+   "sha256": "472d131c08509c102b168682aa03dda8cc46ac7e32fca70461d5a361ddd72039",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "00rage_BG_blue.bk2",
+   "name": "",
+   "profession": null,
+   "size": 773615,
+   "sha256": "46fbeb24d957ed48dc42dea9a8e5963e29db6cc5b25368fd2def75a6d7faeca4",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "00rage_BG_red.bk2",
+   "name": "",
+   "profession": null,
+   "size": 772927,
+   "sha256": "f4ef11fca55dc3ec242f5980aa55b7f92e5eb0ab465d208b04470a3e71fbb19d",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "01_rage_ghost_M_asura.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769083,
+   "sha256": "8679475394378dd2279a125b32f683bd8788e4ee194bb5e9a9aa1d61e7f9208b",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "01_rage_ghost_M_bsk.bk2",
+   "name": "",
+   "profession": null,
+   "size": 770139,
+   "sha256": "7eda0bac958ce2341fddfd6ddef98fb10cc063d3dd94fe87fd3bfa6352104c0b",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "01_rage_ghost_M_ghobla.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769219,
+   "sha256": "d9ccea1b3d2f650bc2251b9abffaa5ed38d86f024ed4509379f4a32451b66019",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "01_rage_ghost_M_soul.bk2",
+   "name": "",
+   "profession": null,
+   "size": 767555,
+   "sha256": "4baae431523d64e3bdfedb3542adf3777a232190c6617df307e7a6706a9875be",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "01_rage_ghost_M_wep.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769339,
+   "sha256": "020a5582044711ccf7226a7e2b272151aa22840760eec30b583255451092596e",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "02_rage_ghost_F_blade.bk2",
+   "name": "",
+   "profession": null,
+   "size": 765507,
+   "sha256": "c4ad8ef6433fa2b827e17b94e589b00c1baa98a197475e52cdb4d06136227beb",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "02_rage_ghost_F_darktem.bk2",
+   "name": "",
+   "profession": null,
+   "size": 765831,
+   "sha256": "06f2926ace6bf835bbb205d7d93889b44caefd199bfcacdf4ccc8b631e5896f5",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "02_rage_ghost_F_demons.bk2",
+   "name": "",
+   "profession": null,
+   "size": 767811,
+   "sha256": "246cf31eec4bd5b278172a8c08e5b8089fa135bc17015bd41f8d16a295c16e55",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "02_rage_ghost_F_swordma.bk2",
+   "name": "",
+   "profession": null,
+   "size": 765143,
+   "sha256": "b7b676a5ed0e3c66ec859e6e2a3c9083376542d5895c2f9d79b57e70359d4a36",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "02_rage_ghost_F_vegavon.bk2",
+   "name": "",
+   "profession": null,
+   "size": 768563,
+   "sha256": "3d142220a43727b361bed3805d194efb0b0339e600e66588dd3c51d1ca2e312e",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "03_rage_fighter_M_grap.bk2",
+   "name": "",
+   "profession": null,
+   "size": 768799,
+   "sha256": "a180eabd8adbb6b6ce3eb08a3b84a0828528093524f69a29acb40c25b6bda7df",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "03_rage_fighter_M_nen.bk2",
+   "name": "",
+   "profession": null,
+   "size": 770955,
+   "sha256": "5010de48c7a5472009c235fe93ea5a3c8264999f6e741bd4010033e4e8ffa38f",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "03_rage_fighter_M_street.bk2",
+   "name": "",
+   "profession": null,
+   "size": 770979,
+   "sha256": "df11428bc4898e41f929796ec1fa6f1c6bf5d4cc8c6eecc9cba1d78ab69e3302",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "03_rage_fighter_M_strike.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769387,
+   "sha256": "c1253a59d673ec9e7980f6eb4cd7f01f483f86638eed18a8973f8942ddbec29e",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "04_rage_fighter_F_grap.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769387,
+   "sha256": "2ecaa6dee70a046f908cfd81801a46356f66af352d6fa2f88a03ae89cc344508",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "04_rage_fighter_F_nen.bk2",
+   "name": "",
+   "profession": null,
+   "size": 767699,
+   "sha256": "3f6f0c0720bacdcd4a7a9a18efb26fdf8c7f3bc5e894af3602bda1520f37f082",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "04_rage_fighter_F_street.bk2",
+   "name": "",
+   "profession": null,
+   "size": 768887,
+   "sha256": "c67fee8a69c33f7cfeb03b7e497f6714a0b46036960f83d7b4d8d7c175c509e1",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "04_rage_fighter_F_strike.bk2",
+   "name": "",
+   "profession": null,
+   "size": 768607,
+   "sha256": "dfe304b7404d485c5844aaac73f2524495ad3dd2eeae114a296964067fb58309",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "05_rage_gunner_M_asult.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769579,
+   "sha256": "8ca9e88d4d58989154d1b7b6e3997fafe5902a9dfa4e584c007cb8bf3c7e1ba1",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "05_rage_gunner_M_launcher.bk2",
+   "name": "",
+   "profession": null,
+   "size": 767695,
+   "sha256": "7823beffb2b59a42fc4f47988bf1b49f1a2cd941339e55813e3db9978c5e5f8b",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "05_rage_gunner_M_meca.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769095,
+   "sha256": "71ff707d58507fe3f61d539bee8bd1287c998e68229e5752a8780f6d3c33c01c",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "05_rage_gunner_M_ranger.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769343,
+   "sha256": "7d21614f244c1e7c1f6fba925b1899c0af8fc849f16b69c7574fe27e5901d9aa",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "05_rage_gunner_M_spit.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769659,
+   "sha256": "45494b66a9dc9254c2ad4e96943761a3e1e12571c553b6ac741110869840dd28",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "06_rage_gunner_F_launcher.bk2",
+   "name": "",
+   "profession": null,
+   "size": 766847,
+   "sha256": "d6492c7d4345164d6934badae46a2676bc7e7584de891d6da5bc4976a1163a77",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "06_rage_gunner_F_meca.bk2",
+   "name": "",
+   "profession": null,
+   "size": 764531,
+   "sha256": "99680904995b569ee1c99871056fc73e5c9d4c1aa580a99c9e39de1d488504a5",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "06_rage_gunner_F_paramedic.bk2",
+   "name": "",
+   "profession": null,
+   "size": 768859,
+   "sha256": "a64554a9afb8e1061c4c9eab46cf4b6f3451ac68346f8361a0b24f7854b87f12",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "06_rage_gunner_F_ranger.bk2",
+   "name": "",
+   "profession": null,
+   "size": 766675,
+   "sha256": "1ced641e4d60993a989db3d5f840b4897be8b0e8afaa7160d14028b0ec2e89b4",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "06_rage_gunner_F_spit.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769263,
+   "sha256": "26a284a2ea77ffa605db105270ed53cbbd75dfd7cfb8c69c0d6bacfc1ed0e59e",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "07_rage_mage_M_blood.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769451,
+   "sha256": "5598f322611aface7af02b6a4565b985c5fab029108d4982c7aa12fa41f6f4a7",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "07_rage_mage_M_dimen.bk2",
+   "name": "",
+   "profession": null,
+   "size": 765587,
+   "sha256": "107abeb97b78e96303b588dafb308bc661f7482ef94f32db60fc78179a7da62f",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "07_rage_mage_M_eleba.bk2",
+   "name": "",
+   "profession": null,
+   "size": 767879,
+   "sha256": "70b866d1d9c98157b36f341dae83c46dfa2a0fd4c09eb0568812d3a2bfe5e915",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "07_rage_mage_M_glanc.bk2",
+   "name": "",
+   "profession": null,
+   "size": 766707,
+   "sha256": "5eb207233c2c7074607a91f10c4a2389cb6261728f70a5b7a4921bc78a34c625",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "07_rage_mage_M_swift.bk2",
+   "name": "",
+   "profession": null,
+   "size": 766191,
+   "sha256": "c04ba5f64d5fd8a8ca48c94d5be8f5d460aa28c7038ed4e4370f2c0a06a5bae1",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "08_rage_mage_F_battlem.bk2",
+   "name": "",
+   "profession": null,
+   "size": 771819,
+   "sha256": "c1ab12f36cd5d3672e2ee7c6b0759e2be549793a5ae65bf3068b5bad1a95ec4f",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "08_rage_mage_F_elema.bk2",
+   "name": "",
+   "profession": null,
+   "size": 764891,
+   "sha256": "8986f5af1b6b0c4555db922ff762fc9bca90f38ba570b415b62824c07060c6b8",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "08_rage_mage_F_enchan.bk2",
+   "name": "",
+   "profession": null,
+   "size": 763887,
+   "sha256": "06ffb951ef74b79cb0ba372440ff843a3ae730a82f3ac5cd37e63663643a5581",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "08_rage_mage_F_summon.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769315,
+   "sha256": "b30532935b6695e7b79e9ba724b1a6ca8eb86f897bb2d2dc13dcf98dbb8bfd9b",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "08_rage_mage_F_witch.bk2",
+   "name": "",
+   "profession": null,
+   "size": 766207,
+   "sha256": "069386357590f39c219adcfd003c4584617685c3a7c06d142e6740d77de33659",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "09_rage_priest_M_aven.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769631,
+   "sha256": "16009e3aa8e146796bed8ff99a584b4e1da84d968f221dcf65a17f37b5094959",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "09_rage_priest_M_cru.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769587,
+   "sha256": "4d29f0c92c010ca903c3cf32732d8ad9cefcd4aa94fa04491209fb0233899410",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "09_rage_priest_M_exocri.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769655,
+   "sha256": "39f72eb7477ac29104094651c7bafdaa63a59a954d9c251b75dc748994fede7a",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "09_rage_priest_M_infigh.bk2",
+   "name": "",
+   "profession": null,
+   "size": 773071,
+   "sha256": "87b8a2ab92edbe107db0764e57f55c4cd99d7c7b9a96dc0182ec4622e628a243",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "10_rage_priest_F_cru.bk2",
+   "name": "",
+   "profession": null,
+   "size": 762679,
+   "sha256": "fc6aa7fca4a988f4128cead664562a683082120e3d130d6b4585150cd94cd7c4",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "10_rage_priest_F_infigh.bk2",
+   "name": "",
+   "profession": null,
+   "size": 776243,
+   "sha256": "acaeb30611f209959e88b3bae25b8e40323b8fd82f1d95406b7dde57dd8ce92b",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "10_rage_priest_F_inquis.bk2",
+   "name": "",
+   "profession": null,
+   "size": 762787,
+   "sha256": "48d3d766eaa363e5fa2fd5f7674970fee615a49d812299af86dcf02fe8c9da55",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "10_rage_priest_F_mist.bk2",
+   "name": "",
+   "profession": null,
+   "size": 765415,
+   "sha256": "04023e0aa8a9d6fe5802712607fc0aaafaac50ce3102477580c4c7fac976170c",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "10_rage_priest_F_sorcer.bk2",
+   "name": "",
+   "profession": null,
+   "size": 770347,
+   "sha256": "49ea2e33bcf3386fb24c1396b4a54647e531cc990ad7ffc19e5bddbb3ab4dbef",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "11_rage_thief_kuno.bk2",
+   "name": "",
+   "profession": null,
+   "size": 770583,
+   "sha256": "0d71e4350265ecaaedae94602b62deb471b653fb94c4b637e2d2415c4d6b8498",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "11_rage_thief_necro.bk2",
+   "name": "",
+   "profession": null,
+   "size": 768083,
+   "sha256": "42cde2eb6389531d6fb63d3178471c5d343ab1c9c8aae7799ffec48cd2725ca8",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "11_rage_thief_rogue.bk2",
+   "name": "",
+   "profession": null,
+   "size": 768611,
+   "sha256": "725ed7a648e6281f82a251216bbfedee87f99fb5cd6b6523769eda4a89e320ae",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "11_rage_thief_shadow.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769203,
+   "sha256": "f52de176e08b149ed4d56f950986d3b0878926b042fc87395bee3c75c3cae04a",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "12_rage_knight_chaos.bk2",
+   "name": "",
+   "profession": null,
+   "size": 763503,
+   "sha256": "751b7d054edccfc7c65dfe77f69a919d53ea69c06f150eef8559f345caac727f",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "12_rage_knight_dragonknight.bk2",
+   "name": "",
+   "profession": null,
+   "size": 770471,
+   "sha256": "6f2a4f7a469c4270d012f960eb486976bc382b82e23ac213551074e978a520ed",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "12_rage_knight_eleven.bk2",
+   "name": "",
+   "profession": null,
+   "size": 763999,
+   "sha256": "0cc0795e089d207e346ccde9e806e04df11484e3117e41968d2847e061b4db59",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "12_rage_knight_paladin.bk2",
+   "name": "",
+   "profession": null,
+   "size": 764087,
+   "sha256": "ec06c6b8d66f464d298ab2c069579cde98b481e77ff191b5be0f14a4ac426c26",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "13_rage_ECT_creater.bk2",
+   "name": "",
+   "profession": null,
+   "size": 765879,
+   "sha256": "e4e115b77ebac55b04c176cfde1b46a3a084595417c60b080ffd9ac9058bfe0c",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "13_rage_ECT_darkknighter.bk2",
+   "name": "",
+   "profession": null,
+   "size": 770443,
+   "sha256": "ba51a615bfd4f57d4172e50d2d37f9823179a996551dab57fe70314f11a81cd4",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "14_rage_demolancer_darklancer.bk2",
+   "name": "",
+   "profession": null,
+   "size": 766751,
+   "sha256": "43cdbc4726da1f0b6a66dbe04fc5256eff35860ca41a2fbe5467227b44f3f115",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "14_rage_demolancer_dralancer.bk2",
+   "name": "",
+   "profession": null,
+   "size": 766879,
+   "sha256": "19ab119a09d4a53046829ac8e918d9764b22202a5b3bb8d8ef3934a260de28cd",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "14_rage_demolancer_duelist.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769331,
+   "sha256": "a322566448797407f08332362806c45992b643c35e5027177ee802beddb61d83",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "14_rage_demolancer_vanguard.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769979,
+   "sha256": "d3fa8d4abb28d84a8024ab6c0be270d66cbe9530345ef1373788e83ae00b1026",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "15_rage_gunbla_agent.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769151,
+   "sha256": "49613425e873caea77f55e29dc34e2263695690e78ed257e6cb6f47f9bdd419c",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "15_rage_gunbla_hitman.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769887,
+   "sha256": "6ad80422bf5416d90a59436cc6c5c41cc272b6de12a2b7025765b8814e5c8bd3",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "15_rage_gunbla_special.bk2",
+   "name": "",
+   "profession": null,
+   "size": 772183,
+   "sha256": "795fa8a21f8ee6e02e8c3961458ed37b5644a58d6af164f038d36fd299bad106",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "15_rage_gunbla_trouble.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769391,
+   "sha256": "87b1a55b1d01500d1cbec0bfb44255cf2f9629be944de127bfa175937ea5c871",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "16_rage_archer_chimera.bk2",
+   "name": "",
+   "profession": null,
+   "size": 767967,
+   "sha256": "fa6e58108416f529b722b94b066e7dadda06a874bc683510fd0d1d9d86131ef3",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "16_rage_archer_hunter.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769547,
+   "sha256": "8688473f5453134b3ac5e45cbc839f32b1f96663db22bc1c3a01a0c47319ee08",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "16_rage_archer_muse.bk2",
+   "name": "",
+   "profession": null,
+   "size": 767687,
+   "sha256": "e13809b0a2bc009dad239b813ad63b9fd8fcf003e134fde6743d65039ec6cd63",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "16_rage_archer_travel.bk2",
+   "name": "",
+   "profession": null,
+   "size": 769315,
+   "sha256": "0498df6f1c181a8879668850277f05f9f2ff06662d896f08ba759a94670814c5",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "16_rage_archer_vigil.bk2",
+   "name": "",
+   "profession": null,
+   "size": 772099,
+   "sha256": "a816e9fd8e8c84ec7f7c375855057904ece17d0c9d0c86def52b304376998015",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  },
+  {
+   "folder": "Cutscene_rage",
+   "file": "17_rage_imperial_F_break.bk2",
+   "name": "",
+   "profession": null,
+   "size": 767359,
+   "sha256": "09ce8c7548703bb9a1481d2ddf0dd231aa25c700e82df786ecd112874c086464",
+   "mtime": "2026-06-28 13:08",
+   "neople_header": true
+  }
+ ]
+}
