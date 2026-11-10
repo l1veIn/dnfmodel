@@ -10,6 +10,8 @@ import time
 from pathlib import Path
 
 import categories
+import addons
+import buff
 import issues
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -193,15 +195,19 @@ def npk_paths(path):
 
 
 def coverage(p, version=None):
-    """What one built NPK replaces, by category, next to what the game has for this class. Default: the newest version."""
+    """Current character build plus its explicitly registered shared resources."""
     import sys
     sys.path.insert(0, str(ROOT / "scripts"))
     built = versions(p)
     v = next((x for x in built if x["name"] == version), built[0] if built else None)
     if v is None:
         return None
+    shared = addons.for_project(p) if version is None else []
+    present = set(npk_paths(ROOT / v["path"]))
+    for addon in shared:
+        present.update(addon["paths"])
     counts = {}
-    for path in npk_paths(ROOT / v["path"]):
+    for path in present:
         key = categories.classify(path)
         counts[key] = counts.get(key, 0) + 1
     cls, eq = class_folder(p)
@@ -211,7 +217,8 @@ def coverage(p, version=None):
         if key == "other" and not counts.get(key):
             continue
         rows.append(dict(key=key, label=label, changed=counts.get(key, 0), total=totals.get(key)))
-    return dict(version=v["label"], name=v["name"], cls=cls, eq=eq, rows=rows)
+    return dict(version=v["label"] + (" + 共享界面" if shared else ""), name=v["name"], cls=cls, eq=eq, rows=rows,
+                addons=[dict(id=a["id"], label=a["label"], paths=len(a["paths"])) for a in shared])
 
 
 def cover(p):
@@ -243,7 +250,8 @@ def summary(p):
     return dict(id=p["id"], name=p["name"], cls=p["class"], character=p["character"], summary=p.get("summary", ""), archived=p.get("archived", False),
                 versions=len(built), newest=newest and dict(label=newest["label"], name=newest["name"], built=newest["built"], size=newest["size"]),
                 installed=[dict(label=v["label"], state=v["installed"]) for v in installed], stage=active["name"] if active else ("完成" if st else None),
-                stages=st, issues=review_counts(p), usd=round(spent, 2), cover=bool(cover(p)), current=p.get("current"), coverage=coverage(p))
+                stages=st, issues=review_counts(p), usd=round(spent, 2), cover=bool(cover(p)), current=p.get("current"), coverage=coverage(p), buff_count=buff.count(p),
+                addons=addons.for_project(p))
 
 
 def detail(p):
@@ -256,4 +264,4 @@ def detail(p):
         designs.append(dict(id=d, title=data.get("title"), version=data["version"], out=data.get("out"), npk_stem=data["npk_stem"], cost=cost(d),
                             license=data.get("license_note", ""), issues=review_counts(dict(designs=[d]))))
     return dict(summary(p), versions=built, designs=designs, costs=p.get("costs", []), game=game_patches(),
-                gates=gates(p["current"]) if p.get("current") else [])
+                gates=gates(p["current"]) if p.get("current") else [], buff_assets=buff.assets(p))

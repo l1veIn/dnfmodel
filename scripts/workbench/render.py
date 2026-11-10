@@ -9,6 +9,7 @@ import hashlib
 import io
 import math
 import sqlite3
+import tempfile
 import threading
 from functools import lru_cache
 from pathlib import Path
@@ -107,7 +108,8 @@ def frame(npk, img_path, k, box, palette=0):
             pic = None
     if pic is not None:
         pic = pic.convert("RGBA")
-        canvas.paste(pic, (f.get("x", 0) - x0, f.get("y", 0) - y0), pic)  # paste, unlike alpha_composite, accepts offsets outside the box
+        # Masked paste multiplies alpha twice (128 becomes 64), breaking exported translucent edits.
+        canvas.alpha_composite(pic, (f.get("x", 0) - x0, f.get("y", 0) - y0))
     return canvas
 
 
@@ -142,13 +144,19 @@ def token(*paths):
 def cached(key, build):
     """Bytes for key from kb/cache, building and storing them on a miss."""
     CACHE.mkdir(parents=True, exist_ok=True)
-    path = CACHE / f"{hashlib.sha1(key.encode('utf-8')).hexdigest()}.webp"
+    # Shared cache schema: older images were made with masked paste and squared alpha.
+    path = CACHE / f"{hashlib.sha1(('alpha-v2|' + key).encode('utf-8')).hexdigest()}.webp"
     if path.exists():
         return path.read_bytes()
     data = build()
-    tmp = path.with_suffix(".tmp")
-    tmp.write_bytes(data)
-    tmp.replace(path)
+    # Requests for the same atlas may finish together; each needs its own staging file.
+    with tempfile.NamedTemporaryFile(dir=CACHE, prefix=path.stem + "_", suffix=".tmp", delete=False) as stream:
+        stream.write(data)
+        tmp = Path(stream.name)
+    try:
+        tmp.replace(path)
+    finally:
+        tmp.unlink(missing_ok=True)
     return data
 
 

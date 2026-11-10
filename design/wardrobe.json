@@ -1,3 +1,66 @@
 {
- "outfits": []
+ "outfits": [
+  {
+   "id": "o1794316237191",
+   "name": "工具示例 · Claude 调色与组合 v02",
+   "role": "gunner_at",
+   "outfit": {
+    "hair": "105561604",
+    "cap": "105551720",
+    "coat": "105501659",
+    "pants": "105511608",
+    "shoes": "105541606"
+   },
+   "overlay": "claude",
+   "note": "",
+   "customization": {
+    "dyes": {
+     "skin": {
+      "hue": 0,
+      "saturation": 1,
+      "lightness": 0,
+      "colors": [
+       {
+        "from": "#745c4f",
+        "to": "#c39bff",
+        "tolerance": 12
+       }
+      ]
+     }
+    },
+    "pixels": [
+     {
+      "frame": 1,
+      "x": 245,
+      "y": 262,
+      "color": "#ffffffff"
+     }
+    ]
+   },
+   "scene": {
+    "effects": [
+     {
+      "path": "sprite/character/gunner/effect/sparrowfactory/firesolar01.img",
+      "source": "claude",
+      "start": 8,
+      "fps": 15,
+      "x": 125,
+      "y": 75,
+      "scale": 1,
+      "opacity": 0.65,
+      "front": false,
+      "loop": false,
+      "enabled": true,
+      "blend": "add"
+     }
+    ],
+    "playback": {
+     "start": 0,
+     "end": 3,
+     "fps": 12
+    }
+   },
+   "saved": "2026-11-10 21:10"
+  }
+ ]
 }

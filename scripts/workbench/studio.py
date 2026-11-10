@@ -16,6 +16,7 @@ from pathlib import Path
 
 import progress
 import render
+import customize
 
 ROOT = Path(__file__).resolve().parents[2]
 KB = ROOT / "kb" / "kb.sqlite"
@@ -85,6 +86,71 @@ def role(prof):
     if r is None:
         raise KeyError(prof)
     return r
+
+
+def class_folder(prof):
+    con = db()
+    row = con.execute("select cls from profession where name=?", (prof,)).fetchone()
+    con.close()
+    return row[0] if row else role(prof)["family"].split("_", 1)[0]
+
+
+def valid_outfit(prof, outfit):
+    role(prof)
+    if not isinstance(outfit, dict) or len(outfit) > 12 or any(k not in AVATAR_SLOTS + ("weapon",) or not isinstance(v, str) or len(v) > 40 for k, v in outfit.items()):
+        raise ValueError("bad outfit")
+    return outfit
+
+
+def valid_overlay(value):
+    if not isinstance(value, str) or (value and value != "installed" and value not in {p["id"] for p in progress.registry()}):
+        raise ValueError("bad overlay")
+    return value
+
+
+def scene(prof, value=None):
+    """Manual effect arrangement only; no claim that these are the game's timings."""
+    import game
+    if value is None:
+        return {"effects": []}
+    if not isinstance(value, dict) or set(value) - {"effects", "playback"}:
+        raise ValueError("bad scene")
+    effects = value.get("effects", [])
+    if not isinstance(effects, list) or len(effects) > 8:
+        raise ValueError("too many effects")
+    out = []
+    prefix = f"sprite/character/{class_folder(prof)}/effect/"
+    for e in effects:
+        fields = {"path", "source", "start", "fps", "x", "y", "scale", "opacity", "front", "loop", "enabled", "blend"}
+        if not isinstance(e, dict) or set(e) - fields:
+            raise ValueError("bad effect")
+        path, source = e.get("path", ""), e.get("source", "official")
+        if not isinstance(path, str) or not path.startswith(prefix) or ".." in path or not render.official_npk(path):
+            raise ValueError("unknown effect")
+        if source != "official" and not any(m["project"] == source for m in game.mods().get(path, [])):
+            raise ValueError("unknown effect source")
+        if any(not isinstance(e.get(key, default), bool) for key, default in [("front", True), ("loop", False), ("enabled", True)]):
+            raise ValueError("bad effect layer")
+        if not isinstance(e.get("blend", "normal"), str) or e.get("blend", "normal") not in {"normal", "add"}:
+            raise ValueError("bad effect blend")
+        out.append(dict(path=path, source=source, start=customize.number(e.get("start", 0), 0, 9999, "start", True),
+                        fps=customize.number(e.get("fps", 15), 1, 60, "fps"), x=customize.number(e.get("x", 0), -4096, 4096, "x"),
+                        y=customize.number(e.get("y", 0), -4096, 4096, "y"), scale=customize.number(e.get("scale", 1), .05, 8, "scale"),
+                        opacity=customize.number(e.get("opacity", 1), 0, 1, "opacity"), front=e.get("front", True), loop=e.get("loop", False)))
+        if "enabled" in e:
+            out[-1]["enabled"] = e["enabled"]
+        if "blend" in e:
+            out[-1]["blend"] = e["blend"]
+    result = {"effects": out}
+    if "playback" in value:
+        playback = value["playback"]
+        if not isinstance(playback, dict) or set(playback) != {"start", "end", "fps"}:
+            raise ValueError("bad scene playback")
+        frames = role(prof)["frames"] or 1
+        start = customize.number(playback["start"], 0, frames - 1, "playback start", True)
+        end = customize.number(playback["end"], start, frames - 1, "playback end", True)
+        result["playback"] = dict(start=start, end=end, fps=customize.number(playback["fps"], 1, 60, "playback fps"))
+    return result
 
 
 def _code(path):
@@ -246,31 +312,63 @@ def _box(layers, frames):
     return (min(b[0] for b in boxes) - pad, min(b[1] for b in boxes) - pad, max(b[2] for b in boxes) + pad, max(b[3] for b in boxes) + pad)
 
 
-def compose(prof, outfit, overlay=""):
+def compose(prof, outfit, overlay="", customization=None):
     """Plan plus box and atlas grid; the atlas itself is built (and cached on disk) by atlas()."""
+    valid_outfit(prof, outfit)
     p = plan(prof, outfit, overlay)
-    box = _box(p["layers"], p["frames"])
+    recipe = customize.recipe(customization, p["frames"])
+    box = customize.expanded_box(_box(p["layers"], p["frames"]), recipe["pixels"], p["frames"])
     grid = render.layout(box[2] - box[0], box[3] - box[1], p["frames"])
-    key = "|".join(f"{l['path']}:{l['palette']}:{render.token(l['source'])}" for l in p["layers"])
+    key = "customize-v1|" + "|".join(f"{l['path']}:{l['palette']}:{render.token(l['source'])}" for l in p["layers"]) + "|" + customize.key(recipe)
     p.update(box=box, atlas=grid, key=hashlib.sha1(key.encode('utf-8')).hexdigest()[:16], name_key=key,
-             broken={l["path"]: render.BROKEN[l["path"]] for l in p["layers"] if l["path"] in render.BROKEN})
+             customization=recipe, broken={l["path"]: render.BROKEN[l["path"]] for l in p["layers"] if l["path"] in render.BROKEN})
     return p
 
 
-def atlas(prof, outfit, overlay=""):
-    p = compose(prof, outfit, overlay)
+def atlas(prof, outfit, overlay="", customization=None):
+    p = compose(prof, outfit, overlay, customization)
     box, n = tuple(p["box"]), p["frames"]
 
     def build():
-        frames = []
-        for k in range(n):
-            canvas = render.Image.new("RGBA", (box[2] - box[0], box[3] - box[1]))
-            for l in p["layers"]:
-                if l["source"]:
-                    canvas.alpha_composite(render.frame(l["source"], l["path"], k, box, l["palette"]))
-            frames.append(canvas)
-        return render.atlas(frames, p["atlas"])
+        return render.atlas(_frames(p, box, n), p["atlas"])
     return render.cached(f"outfit|{p['name_key']}|{box}|{n}", build)
+
+
+def frame(prof, outfit, overlay, customization, k):
+    p = compose(prof, outfit, overlay, customization)
+    k = customize.number(k, 0, p["frames"] - 1, "frame", True)
+    return render.webp(_one_frame(p, tuple(p["box"]), k))
+
+
+def sample(payload):
+    """Sample original layer RGB, before dyes, compositing, and world-pixel edits.
+
+    A replacement rule matches a layer's source RGB. Sampling the visible outfit
+    instead would return a transformed or alpha-blended colour that cannot match.
+    Each slot reports its highest visible layer at this point, in draw order.
+    """
+    fields = {"role", "outfit", "overlay", "customization", "slot", "frame", "x", "y"}
+    if not isinstance(payload, dict) or set(payload) - fields:
+        raise ValueError("bad sample")
+    slot = payload.get("slot")
+    if not isinstance(slot, str) or slot not in customize.SLOTS:
+        raise ValueError("bad sample slot")
+    overlay = valid_overlay(payload.get("overlay", ""))
+    p = compose(payload.get("role"), payload.get("outfit", {}), overlay, payload.get("customization"))
+    k = customize.number(payload.get("frame"), 0, p["frames"] - 1, "frame", True)
+    x = customize.number(payload.get("x"), -4096, 4096, "x", True)
+    y = customize.number(payload.get("y"), -4096, 4096, "y", True)
+    available = {}
+    for layer in reversed(p["layers"]):
+        layer_slot = layer["slot"]
+        if not layer["source"] or layer_slot in available:
+            continue
+        rgba = render.frame(layer["source"], layer["path"], k, (x, y, x + 1, y + 1), layer["palette"]).getpixel((0, 0))
+        if rgba[3]:
+            available[layer_slot] = dict(slot=layer_slot, color="#%02x%02x%02x" % rgba[:3], alpha=rgba[3], path=layer["path"])
+    selected = available.get(slot, dict(color=None, alpha=0, path=None))
+    return dict(matched=slot in available, slot=slot, frame=k, x=x, y=y,
+                color=selected["color"], alpha=selected["alpha"], path=selected["path"], available_slots=list(available.values()))
 
 
 # ---------------------------------------------------------------- wardrobe
@@ -281,18 +379,22 @@ def wardrobe():
 
 
 def save_outfit(payload):
+    if not isinstance(payload.get("name", ""), str):
+        raise ValueError("bad name")
     name, prof, outfit = payload.get("name", "").strip(), payload.get("role"), payload.get("outfit", {})
     if not name or len(name) > 60 or not isinstance(outfit, dict) or len(outfit) > 12:
         raise ValueError("bad outfit")
-    role(prof)
-    if any(k not in AVATAR_SLOTS + ("weapon",) or not isinstance(v, str) or len(v) > 40 for k, v in outfit.items()):
-        raise ValueError("bad slot")
+    valid_outfit(prof, outfit)
+    overlay = valid_overlay(payload.get("overlay", "") or "")
+    recipe = customize.recipe(payload.get("customization"), role(prof)["frames"])
+    arrangement = scene(prof, payload.get("scene"))
     note = payload.get("note", "")
     if not isinstance(note, str) or len(note) > 500:
         raise ValueError("bad note")
     with lock:
         data = wardrobe()
-        entry = dict(id=f"o{int(time.time() * 1000)}", name=name, role=prof, outfit=outfit, overlay=payload.get("overlay", "") or "", note=note,
+        entry = dict(id=f"o{int(time.time() * 1000)}", name=name, role=prof, outfit=outfit, overlay=overlay, note=note,
+                     customization=recipe, scene=arrangement,
                      saved=time.strftime("%Y-%m-%d %H:%M"))
         data["outfits"] = [o for o in data["outfits"] if not (o["name"] == name and o["role"] == prof)] + [entry]
         tmp = WARDROBE.with_suffix(".tmp")
@@ -318,15 +420,17 @@ EXPORTS = ROOT / "output" / "outfits"
 WEAPON_FRONT = 1500  # weapon layers above this depth are drawn in front of the body (revolver c 2790, katana a 2050)
 
 
+def _one_frame(plan_, box, k):
+    recipe = plan_.get("customization") or customize.recipe()
+    canvas = render.Image.new("RGBA", (box[2] - box[0], box[3] - box[1]))
+    for l in plan_["layers"]:
+        if l["source"]:
+            canvas.alpha_composite(customize.layer_frame(l, k, box, recipe["dyes"]))
+    return customize.pixels(canvas, k, box, recipe["pixels"])
+
+
 def _frames(plan_, box, n):
-    out = []
-    for k in range(n):
-        canvas = render.Image.new("RGBA", (box[2] - box[0], box[3] - box[1]))
-        for l in plan_["layers"]:
-            if l["source"]:
-                canvas.alpha_composite(render.frame(l["source"], l["path"], k, box, l["palette"]))
-        out.append(canvas)
-    return out
+    return [_one_frame(plan_, box, k) for k in range(n)]
 
 
 def _slug(text):
@@ -367,6 +471,12 @@ def export_outfit(payload):
     overlay, label = payload.get("overlay", "") or "", (payload.get("name") or "outfit").strip()[:40]
     if not isinstance(current, dict) or not isinstance(target, dict) or not current:
         raise ValueError("current and target outfits are required")
+    valid_outfit(prof, current)
+    valid_outfit(prof, target)
+    valid_overlay(overlay)
+    recipe = customize.recipe(payload.get("customization"), role(prof)["frames"])
+    if "weapon" in recipe["dyes"]:
+        raise ValueError("weapon dye is preview-only; remove it before exporting a clothing patch")
     r = role(prof)
     n = r["frames"]
     cur = plan(prof, current)
@@ -376,7 +486,7 @@ def export_outfit(payload):
     front = [l["z"] for l in cur["layers"] if l["slot"] == "weapon" and l["z"] > WEAPON_FRONT]
     below = [l for l in worn if not front or l["z"] < min(front)]
     carrier = max(below or worn, key=lambda l: l["z"])
-    look = compose(prof, {k: v for k, v in target.items() if k != "weapon"}, overlay)
+    look = compose(prof, {k: v for k, v in target.items() if k != "weapon"}, overlay, recipe)
     box = tuple(look["box"])
     frames = _frames(look, box, n)
     canvas_meta = render.load_img(carrier["source"], carrier["path"]).resolve(0)
@@ -401,7 +511,7 @@ def export_outfit(payload):
                                      [dict(x=0, y=0, canvas_width=cw, canvas_height=ch)] + [{"link": 0} for _ in range(count - 1)])
         entries[l["path"]] = blanks[count]
     stamp = time.strftime("%Y%m%d_%H%M%S")
-    folder = EXPORTS / f"{stamp}_{_slug(prof + '_' + label)}"
+    folder = EXPORTS / f"{stamp}_{time.time_ns() % 1_000_000:06}_{_slug(prof + '_' + label)}"
     folder.mkdir(parents=True, exist_ok=True)
     npk_name = f"A_Outfit_{_slug(prof)}_{stamp}.NPK"
     (folder / npk_name).write_bytes(_write_npk(sorted(entries.items())))
@@ -410,19 +520,27 @@ def export_outfit(payload):
     seen = compose(prof, worn_only, [folder / npk_name])
     check = _frames(seen, box, n)
     import numpy as np
-    worst, total = 0.0, 0.0
+    worst, total, max_delta, different_pixels = 0.0, 0.0, 0, 0
     for a, b in zip(frames, check):
         pa, pb = np.asarray(a).astype(int), np.asarray(b).astype(int)
-        visible = pa[..., 3] > 8
-        differing = (np.abs(pa[..., 3] - pb[..., 3]) > 8) | (visible & (np.abs(pa[..., :3] - pb[..., :3]).max(2) > 8))
+        visible = (pa[..., 3] > 0) | (pb[..., 3] > 0)
+        delta = np.abs(pa - pb)
+        delta[..., :3][~visible] = 0
+        max_delta = max(max_delta, int(delta.max()))
+        differing = delta.max(2) > 0
+        different_pixels += int(differing.sum())
         share = float(differing.sum()) / max(1, int(visible.sum()))
         worst, total = max(worst, share), total + share
     report = dict(role=prof, name=label, npk=npk_name, created=time.strftime("%Y-%m-%d %H:%M:%S"), frames=n, current=current, target=target, overlay=overlay,
+                  customization=recipe, scene_note="技能组合仅供预览，不写入时装补丁。",
                   carrier=dict(path=carrier["path"], tag=carrier["tag"], z=carrier["z"], item=carrier["name"]),
                   blanked=sorted(p for p in entries if p != carrier["path"]), size=(folder / npk_name).stat().st_size,
-                  check=dict(worst_frame_share=round(worst, 4), mean_share=round(total / max(1, n), 4)),
+                  check=dict(worst_frame_share=round(worst, 4), mean_share=round(total / max(1, n), 4),
+                             max_rgba_delta=max_delta, differing_pixels=different_pixels, passed=different_pixels == 0),
                   weapon_front=front, installed_note="放进 ImagePacks2 后生效；A_Outfit_ 开头按文件名排在 A_Claude_ 等项目补丁之后，同一路径以它为准。")
     (folder / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=1), "utf-8")
+    if different_pixels:
+        raise ValueError("export pixel verification failed; see the export report")
     sheet = render.atlas(frames, render.layout(box[2] - box[0], box[3] - box[1], n))
     (folder / "preview.webp").write_bytes(sheet)
     report["folder"] = str(folder.relative_to(ROOT)).replace("\\", "/")

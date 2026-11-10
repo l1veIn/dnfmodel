@@ -42,9 +42,10 @@ function issueBadges(i) {
 
 // ---------------------------------------------------------------- overview
 
-async function overview() {
+async function overview(generation = dashboardRoute) {
   $("crumb").textContent = "";
   const data = await api("/api/dashboard");
+  if (generation !== dashboardRoute) return;
   $("gameLine").textContent = data.game.length ? `游戏目录里的补丁：${data.game.join("、")}` : "游戏目录里没有补丁";
   const card = p => {
     const done = p.stages.filter(s => s.status === "done").length;
@@ -53,7 +54,7 @@ async function overview() {
       el("div", {},
         el("h3", {textContent: p.name}),
         el("div", {className: "meta", textContent: `${p.cls} · ${p.character}` + (p.newest ? ` · 最新 ${p.newest.label}（${p.newest.built.slice(5)}）` : "")}),
-        el("div", {className: "badges"}, ...installBadges(p), ...issueBadges(p.issues), p.usd ? el("span", {className: "badge", textContent: `花费约 ${usd(p.usd)}`}) : null),
+        el("div", {className: "badges"}, ...installBadges(p), ...issueBadges(p.issues), p.buff_count ? el("span", {className: "badge info", textContent: `${p.buff_count} 个 buff 立绘`}) : null, p.usd ? el("span", {className: "badge", textContent: `花费约 ${usd(p.usd)}`}) : null),
         p.stages.length ? el("div", {className: "steps", title: p.stages.map(s => `${s.name}：${s.detail}`).join("\n")}, ...p.stages.map(s => el("i", {className: s.status}))) : null,
         el("div", {className: "next muted", textContent: p.archived ? "已归档" : p.stage === "完成" ? "全部完成" : p.stage ? `下一步：${p.stage}（${done}/${p.stages.length}）` : ""})));
     return a;
@@ -76,13 +77,13 @@ function coverageCell(row, pid, design) {
   const td = el("td", {className: "cov"});
   if (!row.changed) {
     td.append(el("span", {className: "badge", textContent: "未改"}));
-    td.title = `游戏里是官方的${row.total ? `（官方 ${row.total} 个 IMG）` : ""}`;
+    td.title = `当前本地候选未包含${row.total ? `（官方 ${row.total} 个 IMG）` : ""}`;
     return td;
   }
   const full = row.total && row.changed >= row.total * 0.95;
   const text = row.total ? (full ? `全部 ${row.changed}` : `${row.changed} / ${row.total}`) : `${row.changed}`;
   const badge = el(design ? "a" : "span", {className: `badge ${full ? "ok" : "info"}`, textContent: `已改 ${text}`});
-  if (design) badge.href = `/review#${new URLSearchParams({p: design, a: row.key === "avatar" ? "character" : row.key})}`;
+  if (design) badge.href = row.key === "portrait" ? portraitLink(pid) : `/review#${new URLSearchParams({p: design, a: row.key === "avatar" ? "character" : row.key})}`;
   td.append(badge);
   td.title = `${row.label}：新版有 ${row.changed} 个 IMG${row.total ? `，官方 ${row.total} 个` : ""}${SHARED[row.key] ? `（官方数量：${SHARED[row.key]}）` : ""}`;
   return td;
@@ -105,20 +106,35 @@ function coverageSection(p) {
   if (!c) return [];
   const box = row => {
     const changed = row.changed > 0;
-    const link = changed && p.current ? el("a", {className: "button", href: `/review#${new URLSearchParams({p: p.current, a: row.key === "avatar" ? "character" : row.key})}`, textContent: "看对照"}) : null;
+    const link = changed && p.current ? el("a", {className: "button", href: row.key === "portrait" ? portraitLink(p.id) : `/review#${new URLSearchParams({p: p.current, a: row.key === "avatar" ? "character" : row.key})}`, textContent: "看对照"}) : null;
     return el("div", {className: `box cov ${changed ? "changed" : "same"}`},
       el("h3", {textContent: row.label}),
-      el("p", {className: changed ? "" : "muted", textContent: changed ? `已改 ${row.changed} 个 IMG` + (row.total ? `（官方 ${row.total} 个）` : "") : "未改，游戏里显示官方的"}),
+      el("p", {className: changed ? "" : "muted", textContent: changed ? `已改 ${row.changed} 个 IMG` + (row.total ? `（官方 ${row.total} 个）` : "") : "当前本地候选未包含"}),
       changed && SHARED[row.key] && row.total ? el("p", {className: "small muted", textContent: `官方数量是${SHARED[row.key]}`}) : null,
       link ? el("div", {className: "actions"}, link) : null);
   };
   return [el("h2", {textContent: `改了什么（${c.version} 和游戏官方对比）`}), el("div", {className: "grid4"}, ...c.rows.map(box))];
 }
 
+const PORTRAIT_CLASS = {claude: "gunner", dragon: "swordman", whale: "mage"};
+function portraitLink(pid) { return `#/game/${enc(PORTRAIT_CLASS[pid] || pid)}/${enc("@portrait")}`; }
+
+function addonProjectSection(p) {
+  if (!(p.addons || []).length) return [];
+  return [el("h2", {textContent: "共享界面附加包"}), ...p.addons.map(a => el("div", {className: "box"},
+    el("h3", {textContent: a.label}),
+    el("p", {textContent: `${a.status} · 本项目 ${a.paths.length} 个界面 IMG`}),
+    el("p", {className: "small muted", textContent: "与人物 NPK 一起使用；三个角色的共用图集已合并，不覆盖已通过的人物动作。"}),
+    el("div", {className: "actions"},
+      el("a", {className: "button", href: `/api/projects/${enc(p.id)}/addon-download?${new URLSearchParams({id: a.id})}`, textContent: `导出附加 NPK（${mb(a.size)}）`}),
+      el("a", {className: "button", href: portraitLink(p.id), textContent: "查看人物立绘"}))))];
+}
+
 // ---------------------------------------------------------------- project page
 
-async function projectPage(pid) {
+async function projectPage(pid, generation = dashboardRoute) {
   const p = await api(`/api/projects/${enc(pid)}`);
+  if (generation !== dashboardRoute) return;
   $("crumb").textContent = `/ ${p.name}`;
   document.title = `${p.name} · 补丁工作台`;
   const newest = p.versions[0];
@@ -141,6 +157,8 @@ async function projectPage(pid) {
   const sameName = p.game.filter(n => !p.versions.some(v => v.name === n) && p.versions.some(v => n.split("_v")[0] === v.name.split("_v")[0]));
   if (sameName.length) page.push(el("div", {className: "warnline", textContent: `游戏目录里有这个项目的补丁，但本地 output 里找不到同名文件：${sameName.join("、")}`}));
 
+  page.push(...buffProjectSection(p));
+  page.push(...addonProjectSection(p));
   page.push(...coverageSection(p));
   if (p.stages.length) {
     page.push(el("h2", {textContent: "进度"}), el("ol", {className: "stepper"}, ...p.stages.map(s => el("li", {className: s.status},
@@ -288,8 +306,13 @@ async function showDoc(pid, name) {
 
 // ---------------------------------------------------------------- routing
 
+let dashboardRoute = 0;
+
 async function route() {
+  const generation = ++dashboardRoute;
+  buffDisposeAll();
   const m = location.hash.match(/^#\/p\/([^/]+)/), g = location.hash.match(/^#\/game(?:\/([^/]+))?(?:\/(.+))?/);
+  const buff = location.hash.match(/^#\/p\/([^/]+)\/buff\/([^/?]+)\/?$/);
   const st = /^#\/studio/.test(location.hash);
   $("navProjects").classList.toggle("on", !g && !st);
   $("navGame").classList.toggle("on", !!g);
@@ -299,9 +322,11 @@ async function route() {
     if (g) return await gamePage(g[1] && decodeURIComponent(g[1]), g[2] && decodeURIComponent(g[2]));
     $("page").className = "page";
     G.skill = null; clearTimeout(G.timer);
-    if (m) await projectPage(decodeURIComponent(m[1]));
-    else { document.title = "补丁工作台"; await overview(); }
+    if (buff) await buffPage(decodeURIComponent(buff[1]), decodeURIComponent(buff[2]), generation);
+    else if (m) await projectPage(decodeURIComponent(m[1]), generation);
+    else { document.title = "补丁工作台"; await overview(generation); }
   } catch (error) {
+    if (generation !== dashboardRoute) return;
     $("page").replaceChildren(el("h1", {textContent: "读取失败"}), el("p", {className: "muted", textContent: error.message}), el("a", {href: "#/", textContent: "回到项目列表"}));
   }
 }

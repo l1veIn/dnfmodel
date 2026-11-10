@@ -24,8 +24,10 @@ from pathlib import Path
 from urllib.parse import parse_qs, quote, unquote, urlencode, urlparse
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import game  # noqa: E402
+import buff  # noqa: E402
 import issues  # noqa: E402
 import progress  # noqa: E402
 import studio  # noqa: E402
@@ -131,6 +133,7 @@ def post_event(ident, payload):
 def dashboard():
     projects = [progress.summary(p) for p in progress.registry()]
     known = {v["name"] for p in progress.registry() for v in progress.versions(p)}
+    known.update(a["name"] for p in projects for a in p.get("addons", []))
     stems = [s.lower() for p in progress.registry() for s in p["npk"]]
     others = [n for n in progress.game_patches() if n not in known and not any(n.lower().startswith(s) for s in stems)]
     return dict(projects=projects, game=progress.game_patches(), others=others)
@@ -244,10 +247,24 @@ class Handler(BaseHTTPRequestHandler):
                 pid = parts[2]
                 if len(parts) == 3:
                     return self._json(progress.detail(progress.project(pid)))
+                if parts[3] == "buff":
+                    project = progress.project(pid)
+                    if len(parts) == 4:
+                        return self._json(dict(project=pid, assets=buff.assets(project)))
+                    if len(parts) == 5:
+                        return self._json(buff.detail(project, parts[4]))
+                    if len(parts) == 6 and parts[5] == "file":
+                        kind = q.get("kind", "animation")
+                        frame = int(q["k"]) if kind in ("frame", "encoded_frame") else None
+                        return self._file(buff.file(project, parts[4], kind, frame), download=kind in ("mov", "bink"))
+                    raise KeyError("buff route")
                 if parts[3] == "cover.png":
                     return self._send(cover_png(pid), "image/png", cache="max-age=60")
                 if parts[3] == "download":
                     return self._file(version_file(pid, q["name"], q.get("kind", "npk")), download=True)
+                if len(parts) == 4 and parts[3] == "addon-download":
+                    import addons
+                    return self._file(addons.file_for_project(progress.project(pid), q.get("id")), download=True)
                 if parts[3] == "doc":
                     name = q["name"]
                     if "/" in name or "\\" in name or not name.endswith(".md") or not (ROOT / "docs" / name).is_file():
@@ -259,7 +276,7 @@ class Handler(BaseHTTPRequestHandler):
                     return self._json(studio.roles())
                 if what == "role":
                     r = q["role"]
-                    return self._json(dict(role=studio.role(r), default=studio.default_outfit(r), overlays=studio.overlays(r), actions=studio.actions(r)))
+                    return self._json(dict(role=studio.role(r), cls=studio.class_folder(r), default=studio.default_outfit(r), overlays=studio.overlays(r), actions=studio.actions(r)))
                 if what == "items":
                     return self._json(studio.items(q["role"], q["slot"], q.get("q", ""), int(q.get("offset", 0))))
                 if what == "sets":
@@ -273,9 +290,11 @@ class Handler(BaseHTTPRequestHandler):
                     return self._file(path, download=q.get("kind", "npk") == "npk")
                 if what == "atlas":
                     outfit = json.loads(q["outfit"])
-                    if not isinstance(outfit, dict) or len(outfit) > 12:
-                        raise KeyError("outfit")
-                    return self._send(studio.atlas(q["role"], outfit, q.get("overlay", "")), "image/webp", cache="max-age=86400")
+                    overlay = studio.valid_overlay(q.get("overlay", ""))
+                    return self._send(studio.atlas(q["role"], outfit, overlay, json.loads(q.get("customization", "null"))), "image/webp", cache="max-age=86400")
+                if what == "frame":
+                    overlay = studio.valid_overlay(q.get("overlay", ""))
+                    return self._send(studio.frame(q["role"], json.loads(q["outfit"]), overlay, json.loads(q.get("customization", "null")), int(q["k"])), "image/webp")
             if parts[:2] == ["api", "game"] and len(parts) == 3:
                 if parts[2] == "classes":
                     return self._json(game.classes())
@@ -312,6 +331,8 @@ class Handler(BaseHTTPRequestHandler):
                     return self._send(body)
         except KeyError as error:
             return self._json(dict(error=f"unknown {error}"), 404)
+        except (ValueError, TypeError) as error:
+            return self._json(dict(error=str(error)), 400)
         except (RuntimeError, urllib.error.URLError) as error:
             return self._json(dict(error=str(error)), 502)
         except (ConnectionError, BrokenPipeError):
@@ -321,8 +342,11 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self):
         url = urlparse(self.path)
         parts = [unquote(p) for p in url.path.split("/") if p]
-        length = int(self.headers.get("Content-Length") or 0)
-        if length > LIMIT:
+        try:
+            length = int(self.headers.get("Content-Length") or 0)
+        except ValueError:
+            return self._json(dict(error="bad content length"), 400)
+        if length < 0 or length > LIMIT:
             return self._json(dict(error="too large"), 413)
         # A page on another site cannot post here: browsers send Origin on cross-site POSTs.
         origin = self.headers.get("Origin")
@@ -330,16 +354,25 @@ class Handler(BaseHTTPRequestHandler):
             return self._json(dict(error="cross-site request refused"), 403)
         try:
             payload = json.loads(self.rfile.read(length) or b"{}")
+            if not isinstance(payload, dict):
+                raise ValueError("expected an object")
             if len(parts) == 4 and parts[:2] == ["api", "p"] and parts[3] == "event":
                 event = post_event(parts[2], payload)
                 return self._json(dict(event=event, state=design_state(parts[2])))
             if parts == ["api", "studio", "compose"]:
                 outfit = payload.get("outfit", {})
-                if not isinstance(outfit, dict) or len(outfit) > 12:
-                    raise ValueError("bad outfit")
-                plan = studio.compose(payload["role"], outfit, payload.get("overlay", ""))
+                overlay = studio.valid_overlay(payload.get("overlay", ""))
+                plan = studio.compose(payload["role"], outfit, overlay, payload.get("customization"))
                 plan.pop("name_key", None)
                 return self._json(plan)
+            if parts == ["api", "studio", "atlas"]:
+                overlay = studio.valid_overlay(payload.get("overlay", ""))
+                return self._send(studio.atlas(payload["role"], payload.get("outfit", {}), overlay, payload.get("customization")), "image/webp")
+            if parts == ["api", "studio", "frame"]:
+                overlay = studio.valid_overlay(payload.get("overlay", ""))
+                return self._send(studio.frame(payload["role"], payload.get("outfit", {}), overlay, payload.get("customization"), payload.get("k")), "image/webp")
+            if parts == ["api", "studio", "sample"]:
+                return self._json(studio.sample(payload))
             if parts == ["api", "studio", "current"]:
                 return self._json(studio.set_current(payload))
             if parts == ["api", "studio", "export"]:

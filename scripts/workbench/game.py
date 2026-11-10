@@ -13,6 +13,7 @@ import time
 from pathlib import Path
 
 import categories
+import addons
 import progress
 import render
 
@@ -82,11 +83,12 @@ def frame_labels(path):
 def mods():
     """{img path: [(project id, project name, version label, npk path)]} over every project's newest build. Kept for 20 seconds:
     every atlas request needs it, and listing the builds walks output/."""
+    token = addons.cache_token()
     hit = _cache.get("mods")
-    if hit and time.monotonic() - hit[0] < 20:
-        return hit[1]
+    if hit and len(hit) == 3 and hit[1] == token and time.monotonic() - hit[0] < 20:
+        return hit[2]
     out = _mods()
-    _cache["mods"] = (time.monotonic(), out)
+    _cache["mods"] = (time.monotonic(), token, out)
     return out
 
 
@@ -94,12 +96,21 @@ def _mods():
     out = {}
     for p in progress.registry():
         built = progress.versions(p)
-        if not built:
-            continue
-        v = built[0]
-        npk = ROOT / v["path"]
-        for path in progress.npk_paths(npk):
-            out.setdefault(path, []).append(dict(project=p["id"], name=p["name"], version=v["label"], npk=str(npk), archived=p.get("archived", False)))
+        if built:
+            v = built[0]
+            npk = ROOT / v["path"]
+            for path in progress.npk_paths(npk):
+                out.setdefault(path, []).append(dict(project=p["id"], name=p["name"], version=v["label"], npk=str(npk), archived=p.get("archived", False)))
+        for addon in addons.for_project(p):
+            for path in addon["paths"]:
+                # A selector's project ID resolves to the active registered
+                # source, even if a later character build also contains it.
+                out[path] = [m for m in out.get(path, []) if m["project"] != p["id"]]
+                out[path].append(dict(project=p["id"], name=p["name"] + " · " + addon["label"],
+                                      version=addon["label"], npk=addon["npk"], addon=addon["id"],
+                                      profession=p.get("profession"), character=p.get("character",p["name"]),
+                                      target_frames=addon["targets"][path],frame_labels=addon["labels"].get(path,{}),
+                                      archived=p.get("archived", False)))
     return out
 
 
@@ -160,10 +171,13 @@ def skills(cls):
     labels = names().get("classes", {}).get(cls, {})
     index = index_names(cls)
     out = []
+    mine = set(professions(cls))
     for folder, f in sorted(folders.items(), key=lambda kv: (not kv[0].startswith("@"), kv[0])):
         touched = {}
         for path in f["paths"]:
             for m in changed.get(path, []):
+                if m.get("addon") and m.get("profession") not in mine:
+                    continue
                 touched.setdefault(m["project"], dict(m, imgs=0))["imgs"] += 1
         meta = labels.get(folder, {})
         if meta.get("source") != "用户在工作台填写" and folder in index:
@@ -190,13 +204,18 @@ def skill(cls, folder):
     items = []
     for path in sorted(paths):
         official = render.official_npk(path)
-        versions = changed.get(path, [])
+        versions = [m for m in changed.get(path, []) if not m.get("addon") or m.get("profession") in mine]
         whole, scaled, still = display(path)
         box, count, _ = render.unit_box([official] + [m["npk"] for m in versions], path, whole)
         labels = frame_labels(path)
-        start = min((k for k, v in labels.items() if v.get("profession") in mine), default=0)
+        mapped = {k:m for m in versions if m.get("addon") for k in m["target_frames"]}
+        start = min(mapped, default=min((k for k, v in labels.items() if v.get("profession") in mine), default=0))
+        displayed_labels = {k:v["label"] + ("" if v.get("checked") else "（推断）") for k,v in labels.items()}
+        for k,m in mapped.items():
+            label=m.get("frame_labels",{}).get(str(k),{})
+            displayed_labels[k] = label.get("label",m["character"]) + "（本地映射）"
         items.append(dict(path=path, label=path.rsplit("/", 1)[1][:-4], frames=count, box=box, screen=whole, still=still, start=start,
-                          labels={k: v["label"] + ("" if v.get("checked") else "（推断）") for k, v in labels.items()},
+                          labels=displayed_labels,
                           atlas=render.layout(box[2] - box[0], box[3] - box[1], count, scaled),
                           mods=[dict(project=m["project"], name=m["name"], version=m["version"], stamp=int(Path(m["npk"]).stat().st_mtime)) for m in versions]))
     return dict(cls=cls, folder=folder, items=items)

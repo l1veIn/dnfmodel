@@ -1,6 +1,68 @@
 # DNF 补丁工作台：设计文档
 
-2026-11-08。状态：第一阶段（审核台）已实现；第二阶段已实现项目总览和项目页，账本只读汇总了部分来源；第三阶段未开始。
+2026-11-10试衣间第二轮已接入：原始部位取样与空部位来源提示、单帧像素重做/取消/指针冻结/网格坐标、独立技能组合时间轴与显隐排序、人物动作/fps持久化、可选发光加色。旧配方兼容，技能仍只预览，挡刀不在本轮。真实页面及保存重载、10项后端和两例143帧导出、前端交互回归及独立验收已通过；现有31份游戏/生产关键文件精确保持。说明、限制和证据见 [studio_polish_v02.md](studio_polish_v02.md)。
+
+2026-11-10。审核台、项目总览、项目页、试衣间及首版调色/像素编辑/手动技能组合已实现；账本只读汇总部分来源。Claude buff v07 已实机定版，v09 新增四张一觉立绘（9路径）已接“觉醒特写”。三项目31觉醒特写+41切入路径齐全，buff另算；[界面人物立绘v01](interface_portraits_v01.md) 已制成共享附加包并接入工作台，三项目各10/10。用户明确授权三套最新补丁实装，20:25安装完成，当前已安装待用户实机；安装程序未启动游戏，新UI仍待用户审美及实机审核。龙娘v06五组新画、鲸鱼v05原创四帧待机既有用户通过不扩展到新界面立绘或新包实机。挡刀暂缓。
+
+本次安装Claude v09、龙娘v06、鲸鱼v05及共享UI v01，龙娘buff v05、鲸鱼buff v02各5视频覆盖，Claude buff v07五文件一致免写。19目标匹配、14写入、5免写、3旧NPK备份移出；13原文件备份、变更前recovery和回退脚本均在 [安装session](../output/game_installation_2026-11-10/20261110_202133_459949/installation.json) 同目录，可用 [restore_previous.cmd](../output/game_installation_2026-11-10/20261110_202133_459949/restore_previous.cmd) 回退。没有重建原包、重编码或新增付费。冻结生产manifest及旧截图的“本地候选/未安装”是制作阶段历史，安装状态由独立receipt与可变交付记录反映，不回写冻结false。
+
+[独立安装验收](../output/game_installation_2026-11-10/20261110_202133_459949/installation_validation.json) 核对19目标、13备份、旧3NPK移出及无临时残留，其余16748份NPK/BK2名称/size/mtime不变；[实际工作台API](../output/game_installation_2026-11-10/20261110_202133_459949/workbench_installation_review.json) 确认三人物v09/v06/v05及共享包installed/same、3buff各5/5且warnings为空。文件安装成功与游戏实机效果分开，后者仍待用户测试。
+
+鲸鱼[原创待机v05](fatfish_whale_maid_v05.md)按用户新方向设计为合手轻呼吸、微偏头和短尾/呆毛呼应，已在原生审核台播放，原其他170帧、Dragon及一觉/切入/buff不变。只切Whalepatch version/out，刷新新worker并实际检查后追加#2 fixed；工作台留5fps，不代表实机时序。
+
+## 2026-11-10：共享界面附加包接入
+
+界面立绘不回写三个人物包。单一 `A_AI_InterfacePortraits_v01.NPK` 含22 IMG/2076帧槽，实际改1673非空目标（3创建、92共享、1578头像），403共享非目标原index及压缩payload逐字节保持，包括57个官方空帧。原人物NPK、配置version/out与审核历史均不变。此前各0/10是制作前对原人物包的真实审计，详见 [范围记录](portrait_scope_2026-11-10.md)；当前各10/10来自实际登记共享附加包。
+
+`design/workbench_addons.json` 显式登记，`scripts/workbench/addons.py` 校验输出目录、包SHA、实际IMG/payload和项目目标白名单，拒绝路径遍历、坏SHA、错分项目及缺资源清单。`progress.py` 的coverage按人物包与已验证附加包内该项目路径取union；不凭清单声明虚计，不把其他职业帧算作该项目改版。附加包独立列出，制作阶段显示“共享界面附加包·本地候选/未安装”，当前安装另由游戏目录实际文件检测；它不进入人物versions，不影响Claude v09/Dragon v06/Whale v05 latest。首页known包名包括已登记附加包，安装后不应误列未知补丁。
+
+`game.py` 在原生portrait查看器中使用实际附加包来源，共享IMG只显示当前职业相关的一列。目标标签及默认帧来自冻结、双审的mapping/manifest，女枪25/PK80、女鬼剑47/PK150、女法15/PK48，体验转职29官方空帧保持；其他职业继续看原版。`/api/projects/<pid>/addon-download?id=ai_interface_portraits_v01` 只接受已登记且分配给当前项目的ID，不接收任意文件路径。
+
+三张创建主图使用3次内置imagegen，65535调用0。头像每人复用4个已绘关键帧，共12张121×90唯一PNG，长neutral hold及1–2次完整短blink展开15 IMG/1578槽；头像新增生图/视频0，不改游戏ANI。预览循环和实际游戏时序分别审核。
+
+[独立技术验收](../output/validation/interface_portraits_v01/technical_review.json) 已实际解包核对全包及旧资源保护，另有7个隔离无效清单用例被拒绝；[真实登记HTTP验收](../output/validation/interface_portraits_v01/live_registration_review.json) 确认3×10/10、人物版本隔离、30组默认目标/来源选择和3张创建图。真实UI核对三职业创建、共享资源与头像播放，三者显示帧63闭眼可见，控制台警告/错误为空；[workbench_review.json](../output/interface_portraits_v01/workbench_review.json) 绑定12张截图及SHA，包括 [覆盖总览](../output/interface_portraits_v01/workbench_portrait_coverage.png) 与 [附加包卡片](../output/interface_portraits_v01/workbench_interface_addon.png)。以上是安装前的本地候选验证；当前已授权安装完成，用户审美和实机循环时序仍待后续确认。
+
+## 2026-11-10：退回动作真实重画
+
+[本轮记录](action_redraw_2026-11-10.md)：龙娘待机/抬手/叉腰/挥臂/背刀26帧、鲸鱼站立4帧使用内置生图重画，并在原生审核台与官方全图层动作并排查看。两套同ident只切version/out，先精确重绑worker并refresh，再在实际检查后追加5/1条fixed；已通过动作与问题历史完整保留，未代通过。独立24组技术检查通过，420帧真实解包精确，390非目标native及所有一觉/切入/buff保留。工作台还修正新native重画行被旧reuse/旧手部移动标签覆盖的问题；旧230真实复用不变。
+
+## 2026-11-10：三项目立绘补全接入（制作历史）
+
+一觉 IMG 通过最新 NPK 自动归到“觉醒特写”（内部 `buffart`），不等同于独立 Bink buff 视频。活动版和 tn/18 别名均按各自官方画布适配。buff 登记继续使用各设计 `workbench/buff.json`，项目页和原生逐帧播放器复用，无须独立 HTML。新输出可改变局部 bbox，官方 canvas、帧数、链接和空帧保持；stage/package 验证分别记录。已发布候选拒绝覆盖，未齐视频用独立 `_preview` 版本，正式版本名保留给全量包。
+
+构建新包后，若旧 worker 没重新绑定，要精确重启该设计对应 `worker.py` 进程；refresh 只清缓存。Claude v09 已实际浏览器显示 9 个单元，游戏保持原安装基线。当前状态、付费回执与剩余任务见 [交接文档](handoff_2026-11-10.md#立绘补全--2026-11-10-新一轮)。
+
+用户充值并明确恢复后，剩余8段视频已生成、实付$15.08，20条缺失路径/631帧位已增量补齐。当前龙娘完整v04有12一觉/15切入，鲸鱼完整v02有10一觉（含47帧连续立绘）/12切入；两包各9/9验证通过，725保护文件不变。原preview与鲸鱼已修近景逐payload保留，不能重跑旧全量builder覆盖。两套buff保持屏幕斩光v05、水镜巨鲸v02，使用原生PNG/Bink播放器，一次播放停在第19帧；角色/眨眼/微动均未重做。新包未安装、未实机，源视频的个别造型波动见各正式候选说明。
+
+随后人物动作审核的9条问题已另修为当前角色候选龙娘v05、鲸鱼v03，完整继承以上一觉/切入/buff。29/8张目标native局部修复，383非目标帧保留字节与mtime；25项独立检查通过，工作台已播放9动作并标已修待复核。人物读取同ident的patch.out/native而非最新NPK，故发布时只改version/out、精确重绑worker并refresh state，再追加fixed事件使frames_version绑定新候选。原8条已复核与1条撤回不重开，未代用户通过；详情[动作修复](action_repairs_2026-11-10.md)。
+
+## 2026-11-09：buff v07 定版与后续方向
+
+用户在聊天明确反馈“实机效果可以，这版先定下来”。当前 buff v07 中央展开、同步光轨、Claude 放射花徽与 `A\` 光纹，保留 v05 的眨眼和衣发微动，已安装女枪手五转职视频并获用户实机认可。确认记录 `output/claude_buff_v07/user_acceptance.json` 绑定成片与 manifest SHA；旧编码检查和安装前浏览器截图仍作为当时技术证据保留。人物 NPK v07 与 buff Video 是两个独立资产，不共用实机验收范围。定版基线不重画、不重编码，后续改美术另开版本。
+
+调色、单帧像素编辑和最多八层手动技能组合均已有首版实现与衣橱持久化，下一轮按此顺序打磨操作和导出一致性，不从零重做。`scripts/workbench/customize.py` 是配方与颜色/像素应用核心；限制及具体落点以 [交接文档](handoff_2026-11-09.md#建议的下一步) 为准。武器调色与技能组合仍只预览，PVF/ANI 真实时序仍未解析；挡刀和 `armed()` 调整继续暂缓。
+
+## 2026-11-09：试衣间编辑与组合预览
+
+- 试衣间新增按部位调色、指定颜色替换与逐帧像素画笔/透明橡皮/取色/撤销。配方为 `customization: {dyes: {slot: {hue, saturation, lightness, colors}}, pixels: [{frame, x, y, color}]}`，像素坐标以未缩放的合成世界坐标为准。调色后再应用像素修改，原始素材不改写；衣橱保存配方，按当前穿戴导出会实际应用。
+- V4/V6 在复制的调色板上处理；无索引颜色的素材直接调整 RGB。共享渲染改正半透明 alpha 重复相乘，缓存版本为 alpha-v2；同图集并发生成使用独立临时文件。人物图集改用 POST，避免像素配方撑长 URL；图集缩小时，暂停编辑会取原尺寸单帧。
+- 技能组合为 `scene: {effects: [{path, source, start, fps, x, y, scale, opacity, front, loop}]}`，最多 8 个技能 IMG，原版和项目改版均可。`start` 表示相对于当前动作起点延后多少人物帧；技能再以独立 fps 采样。组合随衣橱保存，暂不导出为技能补丁。武器调色仅预览，时装导出要求重置武器调色。
+- 像素最多 2000 个修改点；服务端验证坐标、颜色、帧位、调色参数、技能来源与职业，并限制画布面积。前端按请求快照拒绝过期结果，切页清理播放和延迟任务。技能数值输入时立即更新场景，避免未失焦就保存而丢失位移。
+- `validation/test_studio_customization.py --real`：6 项合成资源测试通过；真实 Claude 女枪手 143 帧，染色和半透明点画导出后严格 RGBA 回读差异为 0。`node validation/test_studio_frontend.cjs` 覆盖坐标、技能时序、组合边界、输入即时保存与异步失效。浏览器验证了调色、画笔/撤销、官方/改版技能选择和衣橱保存/穿上；未实机验证。
+
+当前 PVF 仍未解析，组合画面只供手动对齐审核；不会据此宣称真实游戏时序、混合方式或实机表现。
+
+## 2026-11-09：buff 资产与原生播放器
+
+buff 不依赖某个 NPK 版本，通过 `design/<配置>/workbench/buff.json` 登记 manifest 和编码报告。项目详情返回 `buff_assets`，首页显示数量；项目页内直接播放，详情路由 `/#/p/<项目>/buff/<资产>`。大小姐的登记资产为 `portrait`。
+
+`scripts/workbench/buff.py` 提供登记资产、逐帧 PNG、透明动画、原表、MOV、Bink 和报告接口，拒绝任意路径与越界帧。状态分为素材未就绪、草稿已准备、已编码待实机；核对实际源 PNG 与 Bink 哈希，源帧或成片改动后旧报告失效。安装与实机状态独立，不因本地编码通过而显示实机通过。
+
+`static/buff.js` 用工作台原生画布播放，支持暂停、逐帧、进度、深浅/网格背景、源 PNG/编码回读切换，默认播放一次并保留末帧，循环需要显式勾选；切页清理定时器并拒绝过期加载。原始动作表在页面内展开。旧独立 HTML 保留作历史产物，入口以工作台项目页为准。
+
+以下保留 v04/v05 阶段历史：随后按用户的视觉修正加入 v04 近景：buff 注重角色魅力和出场感，不强求全身。当时 v05 沿用用户认可的 v04 主视觉，固定相机，以内置生图的半闭/闭眼局部素材拼合眨眼，并对发梢/袖缘/披肩共 9 个区域作微位移，无全图推拉。工具编号 k7 半闭、k8 闭眼、k9 半闭，各 1 帧。入口为 `scripts/build_buff_alive.py`、`design/claude_gunner/buff_v05.json`，最终产物 `output/claude_buff_v05/preview/` 已冻结，边缘固定过渡加宽到 8px，初候选保留为 `preview_candidate_01`。该阶段 `portrait` 主入口切至 v05（现为已定版 v07），v04 对照为 `portrait_v04`，旧全身版为 `portrait_v03`。页面提供“动画帧表”和“主视觉原图”；当前 19 帧预设不是通用格式约束。
+
+`validation/test_buff_alive.py` 7 项通过：101555 个固定像素 RGBA 差 0，最大局部位移 2.714 输出像素、Jacobian 最小值 0.540，MOV 19 帧 RGBA 差 0。既有 `validation/test_buff_workbench.py` 8 项后端回归及 `validation/test_buff_frontend.cjs` 通过。独立检查最终 PNG/编码眼态的深浅背景显示；浏览器验证 PNG/Bink 均一次播放停在第 19 帧、源切换、关键帧及 v04/v03 对照卡，控制台 error/warn 为空。截图为 `output/validation/buff_workbench_v05.png`、`buff_workbench_v05_blink.png`，局部证据在 `output/validation/buff_v05_visual_qa/`。以上仅为本地检查，未安装，用户审美、循环和实机均未验收。
 
 ## 实现状态（第二阶段，部分）
 
@@ -11,10 +73,10 @@
   - 列出各配置的资产和问题数、形象授权说明、花费明细（人物 journal 加上手写的其他花费）和实机记录。
 - 审核台改到 `/review`，左上角能回到所属项目。
 - 实机结果存在当前配置的 `workbench/gates.jsonl`，是页面除问题单之外唯一会写的东西。
-- 替换范围：首页有一张“项目 × 分类”表，项目页有“改了什么”，都按 `categories.py` 的统一分类，拿最新 NPK 和资源库里的官方数量对比。审核台对所有项目也按同样的分类列出标签页，`assets.json` 只提供分组名。打包时生成的旧对照页保留为“当时的对照页”。
+- 替换范围：首页有一张“项目 × 分类”表，项目页有“改了什么”，按 `categories.py` 的统一分类，用最新人物NPK及实际登记附加包的项目路径union和官方数量对比；没有附加包登记时兼容原人物包行为。审核台对所有项目也按同样的分类列出标签页，`assets.json` 只提供分组名。打包时生成的旧对照页保留为“当时的对照页”。
 - 图片加载：每个单元的帧合成一张图集（WebP 无损），原版和新版各请求一次，不再一帧一个请求；图集按源文件的大小和时间缓存在 `kb/cache/`。全屏切入图的图集缩到 640 宽，暂停时再取原尺寸单帧。服务启动时预热各项目当前配置的渲染进程，进程空闲一小时才退出。审核台只有点“刷新”才重新扫描帧。
 - DNF 资源（`/#/game`，`scripts/workbench/game.py`）：按职业目录浏览游戏全部技能特效目录（`sprite/character/<职业>/effect/<目录>`），每个 IMG 原版和各项目最新版并排播放，没改过的显示“暂无改版”。游戏数据里没有中文技能名，名称存在 `kb/curated/skill_names.json`，页面上可以直接填写和标记“已核实”；初始名称来自女枪手道具表和推断（如 `sparrowfactory` = 拦截机工厂），都标为未核实。
-- 立绘：分类里加了“技能立绘（加 buff）”和“人物立绘”（`categories.py` 按文件名前缀归到职业）。资源页每个职业目录最前面列出这两项；多帧的立绘逐帧单独加载，不拼图集。共用的转职立绘帧号对照在 `kb/curated/portraits.json`。
+- 立绘：分类里加了“技能立绘（加 buff）”和“人物立绘”（`categories.py` 按文件名前缀归到职业）。资源页每个职业目录最前面列出这两项；多帧的立绘逐帧单独加载，不拼图集。旧共用表标签在 `kb/curated/portraits.json`；本轮附加包优先采用已双审的mapping/manifest目标标签，并在当前职业目标处开始显示，保留官方空帧。
 - 试衣间（`/#/studio`，`scripts/workbench/studio.py` + `static/studio.js`，2026-11-09）：
   - 数据来自资源库里 Avatar Studio 的时装目录（`as_item`、`as_layer`、`as_set`）。
   - 选职业后，可以按部位换单件（按名字、物品 ID 或代码搜索），或一键穿整套；武器按种类选。

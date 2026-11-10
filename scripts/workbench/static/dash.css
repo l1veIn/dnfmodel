@@ -142,3 +142,97 @@ ul.plain, ol.plain { list-style: none; margin: 0; padding: 0; display: flex; fle
 #stExportName { flex: 1; min-width: 0; background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 3px 7px; }
 #stExports li { border-bottom: 1px solid var(--line); padding: 5px 0; }
 #stExports a.button { display: inline-block; text-decoration: none; color: var(--text); background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 1px 8px; }
+
+/* Editing controls remain next to the preview, with a scrollable stage at an explicit pixel zoom. */
+.studio { grid-template-columns: 285px minmax(0, 1fr) 310px; }
+.stMain { align-self: start; }
+.stMain .controls { gap: 6px 8px; }
+.stNumber { width: 62px; }
+.studio input[type="number"], .studio input[type="text"] { background: var(--panel-2); border: 1px solid var(--line); border-radius: 5px; padding: 3px 6px; }
+.studio input[type="color"] { width: 35px; height: 29px; padding: 2px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel-2); cursor: pointer; }
+.studio button:disabled { opacity: .45; cursor: default; }
+#stStage { display: grid; place-items: center; overflow: auto; max-height: 72vh; padding: 5px; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; }
+#stCanvas { max-width: none; flex: none; }
+#stCanvas.editing { cursor: crosshair; touch-action: none; }
+.stStatus { min-height: 20px; color: var(--muted); }
+.studio .bad { color: var(--open); }
+.stPixelTools { padding: 7px 9px; }
+.stPixelTools .small { margin-top: 4px; }
+.stDye { display: flex; flex-direction: column; gap: 7px; }
+.stDye .field { justify-content: space-between; }
+.stDye .stRange { display: grid; grid-template-columns: minmax(70px, 1fr) 42px; align-items: center; gap: 4px; width: 78%; }
+.stDye input[type="range"] { min-width: 0; width: 100%; }
+.stDye output { text-align: right; font-size: 12px; color: var(--text); }
+.stDye details { border-top: 1px solid var(--line); padding-top: 6px; }
+.stDye summary, .stRight summary { cursor: pointer; font-weight: 600; }
+.stColorRow { margin: 8px 0 5px; }
+.stColorRow .field { flex: 1; justify-content: flex-start; }
+.stSwatch { width: 16px; height: 16px; display: inline-block; border: 1px solid #808590; border-radius: 3px; }
+#stColorRules { margin-top: 7px; }
+#stColorRules button { font-size: 12px; padding: 1px 6px; margin-left: auto; }
+.stItemButton { text-align: left; background: transparent; border: 0; padding: 0; width: 100%; }
+.stItemButton:hover { color: var(--accent); }
+.stScene h3 { margin-bottom: 4px; }
+.stScene > .row { margin-top: 8px; }
+#stEffectQuery { flex: 1; min-width: 100px; }
+#stEffectFolder { flex: 2; min-width: 100px; max-width: 100%; }
+#stEffectImg { flex: 2; min-width: 110px; max-width: 100%; }
+#stEffectSource { flex: 1; min-width: 100px; max-width: 100%; }
+#stEffects { margin-top: 8px; }
+#stEffects > li { padding: 4px; border: 1px solid transparent; border-radius: 5px; }
+#stEffects > li.on { border-color: var(--accent); background: var(--panel-2); }
+.stEffectName { flex: 1; min-width: 80px; max-width: 100%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; text-align: left; }
+.stEffectFields { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin-top: 10px; border-top: 1px solid var(--line); padding-top: 8px; }
+.stEffectFields .field { justify-content: space-between; }
+.stEffectFields input[type="number"] { width: 70px; }
+.stEffectFields select { min-width: 0; max-width: 160px; }
+@media (max-width: 1200px) { .studio { grid-template-columns: 260px minmax(0, 1fr); } .stRight { grid-column: 1 / -1; position: static; height: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); align-items: start; } }
+@media (max-width: 760px) { .studio { grid-template-columns: 1fr; } .stLeft { position: static; height: auto; max-height: 65vh; } .stRight { display: flex; } .stMain { padding: 10px; } }
+
+/* Large pixel canvases start at the scroll origin; small ones remain centred. */
+#stStage { display: block; }
+#stCanvas { display: block; margin-inline: auto; }
+.stTimeline { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; padding: 8px 0; }
+.stTimeline input[type="range"] { flex: 1 1 120px; width: 120px; min-width: 80px; }
+.stTimeline output { font-variant-numeric: tabular-nums; font-size: 12px; color: var(--muted); white-space: nowrap; }
+.stSampleInfo { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; margin: 6px 0; padding: 7px; background: var(--panel-2); border-radius: 5px; overflow-wrap: anywhere; }
+.stSampleInfo:empty { display: none; }
+.stSampleInfo button { font-size: 12px; padding: 2px 7px; }
+#stPixelCoords { font-variant-numeric: tabular-nums; font-family: ui-monospace, monospace; color: var(--muted); }
+#stEffectState { font-size: 12px; line-height: 1.6; font-variant-numeric: tabular-nums; color: var(--muted); }
+@media (max-width: 760px) {
+  .stTimeline input[type="range"] { flex-basis: 100%; order: 1; }
+  .stTimeline output { margin-left: auto; }
+}
+
+.buffCards { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 14px; }
+.buffAsset { max-width: 640px; }
+.buffAsset .buffPlayer { margin-top: 10px; }
+.buffAsset h3 { margin: 0; }
+.buffPlayer { min-width: 0; display: flex; flex-direction: column; gap: 9px; }
+.buffStage { display: grid; place-items: center; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; padding: 8px; min-height: 180px; }
+.buffStage canvas { max-width: 100%; width: auto; max-height: 68vh; height: auto; border-radius: 0; image-rendering: auto; object-fit: contain; }
+.buffPlayer.compact .buffStage canvas { max-height: 360px; }
+.buffPlayer .controls { justify-content: center; }
+.buffPlayer select { max-width: 100%; font-size: 12px; }
+.buffPlayerStatus { min-height: 20px; }
+.buffPlayer .bad { color: var(--open); }
+.buffProgress { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.buffProgress input { flex: 1; min-width: 100px; }
+.buffProgress output { white-space: nowrap; color: var(--muted); }
+.buffDownloads { align-items: center; }
+.buffSheet { margin-top: 12px; }
+.buffSheet summary, .buffAssetInfo summary { cursor: pointer; color: var(--accent); }
+.buffSheet img { display: block; max-width: 100%; height: auto; margin-top: 10px; background: repeating-conic-gradient(#34383f 0% 25%, #4c5159 0% 50%) 0 0 / 24px 24px; }
+.buffSheet img.compact { max-height: 600px; object-fit: contain; }
+.buffDetail h1 { margin-top: 14px; margin-bottom: 14px; }
+.buffDetailGrid { display: grid; grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr); gap: 18px; align-items: start; margin-bottom: 16px; }
+.buffAssetInfo h2 { margin: 0 0 8px; }
+.buffAssetInfo p { margin-top: 12px; }
+.buffWarnings { padding-left: 20px; font-size: 13px; color: var(--fixed); }
+.buffWarnings li { margin-top: 5px; }
+.buffTargets { margin-top: 6px !important; word-break: break-all; }
+.buffUnavailable { min-height: 350px; }
+.stDeleteConfirm { border: 1px solid var(--open); border-radius: 6px; padding: 7px; margin-top: 6px; }
+.stDeleteConfirm p { margin: 0 0 6px; }
+@media (max-width: 740px) { .buffDetailGrid { grid-template-columns: 1fr; } .buffCards { grid-template-columns: 1fr; } }
