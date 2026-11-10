@@ -26,6 +26,9 @@ kb/sources/
 *.apng
 *.mp4
 *.webm
+*.bk2
+*.bik
+*.mov
 *.npk
 *.NPK
 *.img
@@ -53,3 +56,6 @@ kb/cache/
 *.downloading
 *.baiduyun.*
 kb/*.log
+
+# Downloaded community reference patch, kept locally with its previews and notes
+/\[抖动款\]雷电将军＆无期迷途buff补丁 Colg特典（已修复）/
