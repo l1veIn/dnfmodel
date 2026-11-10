@@ -89,7 +89,9 @@
    "name": "走路",
    "start": 68,
    "end": 75,
-   "sheet": "walk"
+   "sheet": "walk",
+   "anchor": "head",
+   "anchor_px": 24
   },
   {
    "name": "跑步",

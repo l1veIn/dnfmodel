@@ -1,0 +1,21 @@
+{
+  "project": "fatfish_whale_maid",
+  "issues": [
+    1,
+    2
+  ],
+  "target_slots": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "candidate_native": "output/whale_action_repair_v03/candidate/native_frames",
+  "candidate_clips": "output/whale_action_repair_v03/candidate/clips",
+  "report": "output/whale_action_repair_v03/repair_report.json",
+  "source_inputs_untouched": true
+}

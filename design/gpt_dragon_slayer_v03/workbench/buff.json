@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "id": "portrait",
+      "name": "龙娘 buff · 刀锋掠屏 / 短暂斩痕",
+      "version": "v05",
+      "purpose": "保留已确认龙头与人物；刀光一击划过并留下短暂斩痕，随后原位变细淡去；工作台候选，未安装",
+      "manifest": "output/dragon_buff_v05/preview/manifest.json",
+      "encoding_report": "output/dragon_buff_v05/preview/encoding_report.json"
+    },
+    {
+      "id": "portrait_v04",
+      "name": "龙娘 buff · 龙框前景头 / 月牙划镜",
+      "version": "v04",
+      "purpose": "v04已认可的龙头/人物/龙框保留作参考；该版刀光有投掷读感，v05仅改刀光，未安装",
+      "manifest": "output/dragon_buff_v04/preview/manifest.json",
+      "encoding_report": "output/dragon_buff_v04/preview/encoding_report.json"
+    },
+    {
+      "id": "portrait_v03",
+      "name": "龙娘 buff · 近景龙影 / 连续月刃",
+      "version": "v03",
+      "purpose": "v03为先前误解方向的历史对照，采用了新龙与原地成形月牙，并非用户要求；未安装",
+      "manifest": "output/dragon_buff_v03/preview/manifest.json",
+      "encoding_report": "output/dragon_buff_v03/preview/encoding_report.json"
+    },
+    {
+      "id": "portrait_v02",
+      "name": "龙娘 buff · 白龙降临 / 银月断空",
+      "version": "v02",
+      "purpose": "v02原龙型边框与月牙飞镜参考；v04在此基础上修正头部层级并补足划镜帧，未安装",
+      "manifest": "output/dragon_buff_v02/preview/manifest.json",
+      "encoding_report": "output/dragon_buff_v02/preview/encoding_report.json"
+    },
+    {
+      "id": "portrait_v01",
+      "name": "龙娘 buff · 银翼斜斩",
+      "version": "v01",
+      "purpose": "v01旧版弱特效对照，未安装",
+      "manifest": "output/dragon_buff_v01/preview/manifest.json",
+      "encoding_report": "output/dragon_buff_v01/preview/encoding_report.json"
+    }
+  ]
+}

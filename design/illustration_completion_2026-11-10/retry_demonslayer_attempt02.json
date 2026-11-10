@@ -1,0 +1,29 @@
+{
+  "clips": [
+    {
+      "id": "dragon_demonslayer_neo",
+      "character": "dragon",
+      "first_frame": "output/dragon_illustrations_v04/video_seeds/demonslayer/first_frame.png",
+      "prompt": "One continuous heroic anime-game awakening shot starting exactly from the supplied white dragon woman image. Preserve her adult face, long curved white horns, pale-violet eyes, pointed ears, black/white temple knot, white high-collar gown, large upper-arm drapes, bare hands, very long white hair, enormous white dragon wings and thick scaled white tail. White/lilac/deep-violet design and warm peach skin remain stable. 0.0–0.7s: slow low-angle push toward her daring confident gaze, her single silver sword held in a clearly gripped hand and the other hand lightly controlling its sparse silver-violet chain. 0.7–2.9s: she makes ONE forceful broad diagonal sword sweep while the chain follows in a clean delayed curve, her near wing expands and long hair/drapes flare; a small controlled camera orbit follows the torso turn. 2.9–4.0s: the silver-lilac motion arc dissipates and she settles into a powerful three-quarter finish with the sword lowered and eyes clear. Keep the chain sparse, no chaotic web or extra weapons. All empty background stays exactly flat magenta RGB255,0,255 throughout, without floor, scene, gradient, vignette, haze, cast shadows, text, borders or fade to black. Small silver/lilac action light may occur near the actual motion only. One character, no duplicates, extra limbs, costume drift or extra weapons. Keep face/head inside the frame, wing tips may crop naturally. The hands must stay on handles/scabbard, never on a bare blade. Single shot, no hard cuts.",
+      "seconds": 4,
+      "resolution": "1080p",
+      "model": "grok-imagine-video-1.5-preview",
+      "output": "output/dragon_illustrations_v04/video/demonslayer_neo/attempt_02",
+      "canvas": [
+        1067,
+        600
+      ],
+      "sample_frames": 97,
+      "transport": "curl"
+    }
+  ],
+  "source_queue": "design/illustration_completion_2026-11-10/remaining_videos.json",
+  "retry_authorization": {
+    "recorded_at": "2026-11-10T12:06:02.452753+08:00",
+    "user_reply": "允许重试这一段",
+    "previous_task_id": "vid_546bfe1bbbab6646c2d4f9be3fcb11cc",
+    "previous_error": "upstream_error/internal_error",
+    "previous_cost_usd": 0,
+    "scope": "One additional explicit attempt for this clip only, estimated2.08USD; preserve previous journal."
+  }
+}

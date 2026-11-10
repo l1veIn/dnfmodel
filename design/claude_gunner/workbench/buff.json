@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "id": "portrait",
+      "name": "大小姐 buff · 中央展开金焰竖带",
+      "version": "v07",
+      "purpose": "中央展开与同步光轨、Claude花徽及A\\光纹，保留眨眼和衣发微动；已安装，用户实机认可并定版",
+      "manifest": "output/claude_buff_v07/preview/manifest.json",
+      "encoding_report": "output/claude_buff_v07/preview/encoding_report.json"
+    },
+    {
+      "id": "portrait_v06",
+      "name": "上滑对照 · 金焰竖带演出",
+      "version": "v06",
+      "purpose": "上版固定光轨与人物上滑，供和v07中央展开对照；未安装",
+      "manifest": "output/claude_buff_v06/preview/manifest.json",
+      "encoding_report": "output/claude_buff_v06/preview/encoding_report.json"
+    },
+    {
+      "id": "portrait_v05",
+      "name": "旧版对照 · 眨眼与衣发微动",
+      "version": "v05",
+      "purpose": "此前安装的v05，现已由v07替换；保留作构图和微动对照",
+      "manifest": "output/claude_buff_v05/preview/manifest.json",
+      "encoding_report": "output/claude_buff_v05/preview/encoding_report.json"
+    },
+    {
+      "id": "portrait_v04",
+      "name": "构图对照 · 华丽近景",
+      "version": "v04",
+      "purpose": "已认可的近景构图，保留原镜头推拉与光效作对照",
+      "manifest": "output/claude_buff_v04/preview/manifest.json",
+      "encoding_report": "output/claude_buff_v04/preview/encoding_report.json"
+    },
+    {
+      "id": "portrait_v03",
+      "name": "旧试作 · 全身站姿",
+      "version": "v03",
+      "purpose": "旧全身试作对照；新版中央展开演出见v07",
+      "manifest": "output/claude_buff_v03/preview/manifest.json",
+      "encoding_report": "output/claude_buff_v03/preview/encoding_report.json"
+    }
+  ]
+}

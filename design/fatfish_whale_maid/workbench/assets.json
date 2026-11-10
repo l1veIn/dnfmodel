@@ -1,0 +1,36 @@
+{
+  "note": "仅工作台中文分组标签。v02_preview03含9张一觉、战斗法师连续切入图2条与特殊层3条；斜窗与菱形为近景，其他四职业连续视频及hecate仍待完成。",
+  "assets": [
+    {
+      "id": "awakening_v02_preview",
+      "kind": "img",
+      "label": "一觉立绘 · 鲸鱼娘五职业",
+      "groups": [
+        {"id": "awakening_battle", "label": "一觉立绘 · 战斗法师（水刃）", "match": ["mage_battle", "mage_battle_event"]},
+        {"id": "awakening_element", "label": "一觉立绘 · 元素师（水环）", "match": ["mage_elma", "mage_elma_event"]},
+        {"id": "awakening_summon", "label": "一觉立绘 · 召唤师（巨鲸）", "match": ["mage_summon", "mage_summon_event"]},
+        {"id": "awakening_witch", "label": "一觉立绘 · 魔道学者（水镜）", "match": ["mage_mado", "mage_mado_event"]},
+        {"id": "awakening_enchantress", "label": "一觉立绘 · 小魔女（潮汐）", "match": ["mage_enchantress"]}
+      ]
+    },
+    {
+      "id": "battle_cutin_v02_preview",
+      "kind": "img",
+      "label": "连续切入图 · 战斗法师",
+      "groups": [
+        {"id": "battle_cutin_neo", "label": "三觉切入 · 战斗法师（23帧）", "match": ["mage_battlemage_neo"]},
+        {"id": "battle_cutin_old", "label": "二觉切入 · 伊斯塔战灵（35帧）", "match": ["mage_ashtarte"]}
+      ]
+    },
+    {
+      "id": "battle_specials_v02_preview02",
+      "kind": "img",
+      "label": "连续特殊层 · 战斗法师",
+      "groups": [
+        {"id": "battle_avatarfinish", "label": "终结切入 · 水镜斜窗（31帧）", "match": ["avatarfinishcutscene"]},
+        {"id": "battle_exticion", "label": "变身切入 · 水刃收掌（28帧）", "match": ["exticioncutscene"]},
+        {"id": "battle_precencia", "label": "变身切入 · 菱形水镜（27帧）", "match": ["precenciatransform"]}
+      ]
+    }
+  ]
+}

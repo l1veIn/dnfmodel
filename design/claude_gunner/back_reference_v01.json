@@ -1,0 +1,74 @@
+{
+  "status": "superseded_by_user_provided_turnaround",
+  "purpose": "Establish rear costume/loose-hair reference before revisiting user54–56. Not a creator-approved original rear design.",
+  "mode": "built-in image_gen",
+  "paid_65535_used": false,
+  "audit": {
+    "old_back_reference": "output/validation/claude_pose_correction_2026-11-09/lunge_back/references/back_costume_reference.png",
+    "actual_origin": "output/Claude_Gunner_v02/parts/raw/poses_turn_v1_0.png; first column, second row, 512x576 crop",
+    "problem": "Old generated turn-action cell was treated as independent costume-back evidence. Front master plus this ambiguous cell cannot establish a rear outfit. Subsequent lunge revisions inherited generated assumptions.",
+    "rejected_issue": 8,
+    "known_identity": "Current front master and original front artwork; no independent creator-confirmed rear found in project."
+  },
+  "inputs": [
+    {
+      "image": "output/Claude_Gunner_v02/parts/raw/claude_a_0.png",
+      "role": "Approved game master: strict style/proportions/simplified costume authority."
+    },
+    {
+      "image": "C:/Users/A/Desktop/fatfish_game/refs/ai_girl/claude.jpg",
+      "role": "Original front identity illustration, loose long hair and dress-layer identity."
+    },
+    {
+      "image": "output/claude_back_reference_v01/research/genderswap_turnaround.png",
+      "role": "Third-party AI-derived turnaround, secondary structural guidance only."
+    }
+  ],
+  "online_sources": "output/claude_back_reference_v01/research/sources.json",
+  "versions": [
+    {
+      "version": "v01",
+      "workspace_image": "output/claude_back_reference_v01/back_views_v01.png",
+      "sha256": "ce7cb6db79857c5158d37c0ef961e84869c8945dbd7493cba5a836f48b779132",
+      "prompt": "design/claude_gunner/back_reference_v01_prompt.txt",
+      "prompt_sha256": "658210d78c08677883838867121066ffc0daaa32724e19d95ca15b07c7d170d3",
+      "builtin_original": "C:/Users/A/.codex/generated_images/01a1be99-e207-7373-87cb-2fccce695910/exec-44856d9c-68e7-4ebd-b094-77ae679d13c0.png",
+      "selected": false
+    },
+    {
+      "version": "v02",
+      "workspace_image": "output/claude_back_reference_v01/back_views_v02.png",
+      "sha256": "5fdbf5fc39f8ab20d0872cbac8be8b02110f3b416089b5336936eb6bb2a76258",
+      "prompt": "design/claude_gunner/back_reference_v02_ornament_prompt.txt",
+      "prompt_sha256": "8d28ea6941743d3db7402a4ba78d1373c8df789fd41f0674b5f49e8b944ff7f9",
+      "builtin_original": "C:/Users/A/.codex/generated_images/01a1be99-e207-7373-87cb-2fccce695910/exec-17dd25f3-422d-4eef-91a7-c523b3808fd2.png",
+      "selected": true
+    }
+  ],
+  "selected_reference": "output/claude_back_reference_v01/back_views_v02.png",
+  "comparison_board": "output/claude_back_reference_v01/front_back_reference_board.png",
+  "design_read": {
+    "hair": "Loose broad orange hair curtain reaches below waist and hides central back; no ponytail.",
+    "cape": "Cream cape wraps the shoulders, largely occluded at center by loose hair.",
+    "skirt": "Cream outer panels wrap around the rear; black under/side panels, gold hems and ruffled underlayer continue from the master. Orange front drape stays in front.",
+    "ornaments": "Follow approved game master anatomical right for temple ornament. Front/side hip flowers remain at their established anchors and are occluded from true back; no new center back bow or flower.",
+    "boots": "Rear heels shown in true rear view; front lacing not copied onto heel backs."
+  },
+  "uncertainties": [
+    "Rear fitted-waist closures and seams remain hidden by hair. Do not invent or claim a verified corset-lacing arrangement.",
+    "Rear garment pattern is a proposed completion from the approved front; it is not confirmed original-author design."
+  ],
+  "validation": {
+    "all_native_frames_unchanged": 143,
+    "scope_report": "output/claude_back_reference_v01/native_unchanged.json",
+    "front_board_panel": "Unaltered crop from approved front master; no creative repaint.",
+    "v01_rejected_detail": "Straight-back head ornament was on opposite anatomical side; corrected only that ornament group in v02."
+  },
+  "workflow": {
+    "native_frames_modified": false,
+    "old_lunge_status": "user_rejected; issue8 reopened",
+    "next": "Use a confirmed rear reference for a new pose redraw; do not use an old generated action cell as independent back design."
+  },
+  "installed": false,
+  "superseded_by": "design/claude_gunner/user_back_reference_adoption.json"
+}

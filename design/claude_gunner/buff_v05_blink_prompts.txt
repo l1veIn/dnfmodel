@@ -1,0 +1,18 @@
+Tool: built-in image_gen.imagegen
+Reference: output/claude_buff_v04/source_generated.png
+transparent_background: true
+Purpose: two local eye states, composited only within the eye masks over the approved v04 original. Generated backgrounds and pixels outside the eye masks are not used.
+
+Shared prompt (verbatim):
+Edit the attached approved anime portrait for a tiny natural blink animation. Preserve the SAME image dimensions (1024x1536), camera, exact head position, face shape, gaze direction, eyebrows, nose, mouth, confident expression, hair, flower ornament, hand, costume, shading, all outlines and all transparency. Change ONLY the two eyes and immediate eyelid pixels. Do not move or resize the eyes; keep their inner/outer corners fixed. Do not add text, panels, outlines around a patch, a new background, or any new composition. Both eyes must close together, not wink. The character is a poised adult elegant lady; the blink should look relaxed and quick, without changing her emotion. Maintain the original head tilt and exact line/colour style. Leave all pixels outside the eyes as close to the original as possible. The screen-left eye is near (509,247), bounded approximately x460-565,y219-278; the screen-right eye is near (625,298), bounded approximately x581-685,y271-331. Preserve existing transparency, including soft glow.
+
+Closed-state suffix (verbatim, appended to shared prompt):
+ Produce the FULLY CLOSED eye state. Both upper eyelids rest naturally against the lower eyelids, with a single clean gently slanted dark eyelash line following the original eye angle. No visible iris or eye white. Do not draw happy smiling crescent eyes or squeeze the cheeks. Eyebrows and mouth stay exactly unchanged.
+
+Half-closed-state suffix (verbatim, appended to shared prompt):
+ Produce the HALF-CLOSED in-between eye state: upper eyelids lowered roughly 55-60 percent, leaving a narrow natural opening with some amber iris still visible in both eyes. Keep the original lower lids and fixed eye corners. One clean upper eyelash line, no double eyes or translucent ghost lines. This is mid-blink, not a new facial expression. Eyebrows and mouth stay exactly unchanged.
+
+Closed-state original tool file: exec-aa20b2bf-1302-4c64-87eb-a40a63d5bdba.png
+Workspace copy: output/claude_buff_v05/blink_closed_generated.png
+Half-closed-state original tool file: exec-278512ed-084c-4890-b057-36b12443a450.png
+Workspace copy: output/claude_buff_v05/blink_half_generated.png

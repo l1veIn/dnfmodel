@@ -1,0 +1,24 @@
+{
+  "title": "鲸鱼娘 · buff v01 · 深海水镜与巨鲸浪幕",
+  "profession": "mage",
+  "reference": "output/fatfish_whale_maid_v01/parts/raw/master_e_0.png",
+  "output": "output/whale_buff_v01/preview",
+  "frames": 19,
+  "width": 470,
+  "height": 668,
+  "fps": 15,
+  "generation": {
+    "character": "Built-in imagegen portrait follows current connected sleeves, fin ears and short thick uplifted tail; fixed camera and face with generated closed-eye blink blended only through two feathered eye regions",
+    "effects": "Separate generated giant water-whale layer and refractive ocean pane; asymmetric ripples and droplets; diagonal mirror wipe rather than Claude center rails",
+    "local_motion": "Root-pinned peripheral hair up to1.8px and skirt up to0.8px; actor position and scale fixed across all19frames"
+  },
+  "targets": [
+    "Cutscene_buf/08_mage_F_buf_battlemage.bk2",
+    "Cutscene_buf/08_mage_F_buf_element.bk2",
+    "Cutscene_buf/08_mage_F_buf_enchant.bk2",
+    "Cutscene_buf/08_mage_F_buf_summoner.bk2",
+    "Cutscene_buf/08_mage_F_buf_witch.bk2"
+  ],
+  "license_note": "民间二创形象，原作者和授权未核实，仅自用。",
+  "note": "仅工作台候选，未安装，未实机。"
+}

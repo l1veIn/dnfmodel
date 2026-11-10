@@ -1,0 +1,328 @@
+{
+  "title": "鲸鱼娘 · 一觉与战法连续切入图 v02 预览02",
+  "base_npk": "output/fatfish_whale_maid_v02_preview/A_FatfishWhaleMaid_FMage_v02_preview.NPK",
+  "output": "output/fatfish_whale_maid_v02_preview02",
+  "npk_name": "A_FatfishWhaleMaid_FMage_v02_preview02.NPK",
+  "scope": "output/validation/awakening_completion_2026-11-10/scope.json",
+  "clips": [
+    {
+      "id": "whale_battle",
+      "character": "whale",
+      "first_frame": "output/whale_illustrations_v02/seeds/battle_first.png",
+      "prompt": "Continue the supplied first frame as ONE continuous 3-second cinematic action shot of the same adult whale maid heroine. Keep the exact face, blue hair gradient, maid costume, fully covered connected puff sleeves, whale-fin ears, white apron, gold trim and short thick uplifted whale tail. No horns, wings, long tail, extra characters or wardrobe changes. Camera trucks slightly to the right and pushes in about8%, following her decisive outstretched palm. Her long hair, cuff frills and skirt react naturally as she sweeps an ocean-blue crescent of water across the lower foreground, finishing off the right edge. The water has an icy-white core and deep-blue edges. Her tail gives one small muscular flick, remains SHORT and THICK, and does not stretch. Her face stays clear, focused and confidently cool. By2.4s the gesture lands, then a short hair/cloth follow-through and a confident smirk. Real articulated motion, not merely moving/scaling a still. No jump cuts. Keep the background perfectly uniform RGB255,0,255 magenta, without floor, shadows, texture or atmospheric haze, for clean chroma key. Do not add magenta into the heroine or water.\n",
+      "seconds": 3,
+      "resolution": "1080p",
+      "model": "grok-imagine-video-1.5-preview",
+      "output": "output/whale_illustrations_v02/video/battle",
+      "canvas": [
+        1067,
+        600
+      ],
+      "sample_frames": 23
+    },
+    {
+      "id": "whale_element",
+      "character": "whale",
+      "first_frame": "output/whale_illustrations_v02/seeds/element_first.png",
+      "prompt": "Continue the supplied first frame as ONE continuous cinematic action shot of the SAME ADULT whale maid. Preserve face, navy-to-pale-blue long hair, headband, whale-fin ears, connected fully covered puff sleeves, apron/whale emblem, gold trim, short thick uplifted tail with broad rounded flukes. No horns/wings/long tail/extra people/costume changes. Real articulated movement with natural hair/cuff/skirt follow-through; no flat-image-only zoom, no jump cuts. Background must remain perfectly flat RGB255,0,255 magenta with no floor/shadows/haze, for chroma key. Camera makes a smooth shallow rightward orbit and slight push toward her face while the water orb rotates above her palm; its three water rings accelerate in separate planes, then she turns her wrist and sends the outer ring in a sweeping arc toward the lower left. Keep eyes clear and expression poised, a single natural blink before the final focused look. Tail gives a small anchored flick, never stretches.",
+      "seconds": 4,
+      "resolution": "1080p",
+      "model": "grok-imagine-video-1.5-preview",
+      "output": "output/whale_illustrations_v02/video/element",
+      "canvas": [
+        1067,
+        600
+      ],
+      "sample_frames": 28
+    },
+    {
+      "id": "whale_summon",
+      "character": "whale",
+      "first_frame": "output/whale_illustrations_v02/seeds/summon_first.png",
+      "prompt": "Continue the supplied first frame as ONE continuous cinematic action shot of the SAME ADULT whale maid. Preserve face, navy-to-pale-blue long hair, headband, whale-fin ears, connected fully covered puff sleeves, apron/whale emblem, gold trim, short thick uplifted tail with broad rounded flukes. No horns/wings/long tail/extra people/costume changes. Real articulated movement with natural hair/cuff/skirt follow-through; no flat-image-only zoom, no jump cuts. Background must remain perfectly flat RGB255,0,255 magenta with no floor/shadows/haze, for chroma key. Camera rises slightly from a low angle and gently follows her raised hand. The summoned translucent water whale surges upward/right in an elegant breaching curve, water streaming from its flukes, then dissolves into droplets off the upper right. It is magical water, not her anatomical tail. She remains dominant and calm, hair and sleeve ruffles react to the wave; the actual tail stays short/thick with only a small flick.",
+      "seconds": 3,
+      "resolution": "1080p",
+      "model": "grok-imagine-video-1.5-preview",
+      "output": "output/whale_illustrations_v02/video/summon",
+      "canvas": [
+        1067,
+        600
+      ],
+      "sample_frames": 17
+    },
+    {
+      "id": "whale_witch",
+      "character": "whale",
+      "first_frame": "output/whale_illustrations_v02/seeds/witch_first.png",
+      "prompt": "Continue the supplied first frame as ONE continuous cinematic action shot of the SAME ADULT whale maid. Preserve face, navy-to-pale-blue long hair, headband, whale-fin ears, connected fully covered puff sleeves, apron/whale emblem, gold trim, short thick uplifted tail with broad rounded flukes. No horns/wings/long tail/extra people/costume changes. Real articulated movement with natural hair/cuff/skirt follow-through; no flat-image-only zoom, no jump cuts. Background must remain perfectly flat RGB255,0,255 magenta with no floor/shadows/haze, for chroma key. Camera trucks left while she completes a swift stylish torso turn toward the viewer. The hovering water disc spins above her palm then stretches into a crescent that sweeps behind her and off lower left. Hair fans in a wide coherent wave, skirt/cuffs follow the turn, and she lands on a confident cool smirk. Preserve elbows, fingers and exact costume; her anatomical tail flicks briefly without growing.",
+      "seconds": 4,
+      "resolution": "1080p",
+      "model": "grok-imagine-video-1.5-preview",
+      "output": "output/whale_illustrations_v02/video/witch",
+      "canvas": [
+        1067,
+        600
+      ],
+      "sample_frames": 26
+    },
+    {
+      "id": "whale_enchantress",
+      "character": "whale",
+      "first_frame": "output/whale_illustrations_v02/seeds/enchantress_first.png",
+      "prompt": "Continue the supplied first frame as ONE continuous cinematic action shot of the SAME ADULT whale maid. Preserve face, navy-to-pale-blue long hair, headband, whale-fin ears, connected fully covered puff sleeves, apron/whale emblem, gold trim, short thick uplifted tail with broad rounded flukes. No horns/wings/long tail/extra people/costume changes. Real articulated movement with natural hair/cuff/skirt follow-through; no flat-image-only zoom, no jump cuts. Background must remain perfectly flat RGB255,0,255 magenta with no floor/shadows/haze, for chroma key. Camera slowly pushes toward her intense eyes as her near hand tilts the small water-mirror disc toward the lens. The disc expands into a graceful blue-white ring crossing the lower foreground, then thins into droplets without covering the face. She lifts her chin slightly with a knowing confident smile, gives one small natural blink, and settles. Hair tips and cuffs move naturally; no new symbols or props.",
+      "seconds": 3,
+      "resolution": "1080p",
+      "model": "grok-imagine-video-1.5-preview",
+      "output": "output/whale_illustrations_v02/video/enchantress",
+      "canvas": [
+        1067,
+        600
+      ],
+      "sample_frames": 24
+    }
+  ],
+  "overlays": [
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_mage_effect_cutin.NPK",
+      "path": "sprite/character/mage/effect/cutin/avatarfinishcutscene.img",
+      "frames_dir": "output/whale_illustrations_v02/animated_specials_v01/avatarfinishcutscene",
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "fit_to_canvas": false,
+      "preserve_empty_frames": true,
+      "role": "battle",
+      "category": "cutin_other"
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_mage_effect_cutin.NPK",
+      "path": "sprite/character/mage/effect/cutin/exticioncutscene.img",
+      "frames_dir": "output/whale_illustrations_v02/animated_specials_v01/exticioncutscene",
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "fit_to_canvas": false,
+      "preserve_empty_frames": true,
+      "role": "battle",
+      "category": "cutin_other"
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_mage_effect_cutin.NPK",
+      "path": "sprite/character/mage/effect/cutin/precenciatransform.img",
+      "frames_dir": "output/whale_illustrations_v02/animated_specials_v01/precenciatransform",
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "fit_to_canvas": false,
+      "preserve_empty_frames": true,
+      "role": "battle",
+      "category": "cutin_other"
+    }
+  ],
+  "license_note": "民间二创鲸鱼娘女仆形象，仅自用；来源见当前patch.json与参考审计。",
+  "installed": false,
+  "protect_paths": [
+    "output/fatfish_whale_maid_v01/native_frames",
+    "output/fatfish_whale_maid_v01/A_FatfishWhaleMaid_FMage_v01.NPK",
+    "output/fatfish_whale_maid_v02_preview",
+    "output/whale_illustrations_v02/static",
+    "output/whale_illustrations_v02/animated"
+  ],
+  "animation_sources": {
+    "battle": "output/validation/illustration_visual_qa/whale_battle_key_v2/frames"
+  },
+  "animation_mapping": [
+    {
+      "path": "sprite/interface/skillcutscene/mage_hecate.img",
+      "frames": 47,
+      "role": "enchantress",
+      "clip_id": "whale_enchantress",
+      "adaptation": "Continuous enchantress water-mirror movie replaces entire original stage-and-puppet character layer",
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "preserve_original_links_and_empty": true,
+      "official_character_RGB_retained": false,
+      "status": "pending_profession_video_or_special_layer_QA"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/avatarfinishcutscene.img",
+      "frames": 31,
+      "role": "battle",
+      "clip_id": "whale_battle",
+      "adaptation": "Continuous battle movie through an animated diagonal window; no static keyart or official RGB",
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_mage_effect_cutin.NPK",
+      "preserve_original_links_and_empty": true,
+      "official_character_RGB_retained": false,
+      "status": "pending_profession_video_or_special_layer_QA"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/exticioncutscene.img",
+      "frames": 28,
+      "role": "battle",
+      "clip_id": "whale_battle",
+      "adaptation": "Continuous battle palm-and-water attack, fixed5% canvas margin; no dedicated original golden-character mask",
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_mage_effect_cutin.NPK",
+      "preserve_original_links_and_empty": true,
+      "official_character_RGB_retained": false,
+      "status": "pending_profession_video_or_special_layer_QA"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/mage_ashtarte.img",
+      "frames": 35,
+      "role": "battle",
+      "clip_id": "whale_battle",
+      "adaptation": "Continuous profession-matched movie sampled to original count with constant5% canvas margin",
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_mage_effect_cutin.NPK",
+      "preserve_original_links_and_empty": true,
+      "official_character_RGB_retained": false,
+      "status": "included_in_published_preview"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/mage_battlemage_neo.img",
+      "frames": 23,
+      "role": "battle",
+      "clip_id": "whale_battle",
+      "adaptation": "Continuous profession-matched movie sampled to original count with constant5% canvas margin",
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_mage_effect_cutin.NPK",
+      "preserve_original_links_and_empty": true,
+      "official_character_RGB_retained": false,
+      "status": "included_in_published_preview"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/mage_eclipse.img",
+      "frames": 41,
+      "role": "summon",
+      "clip_id": "whale_summon",
+      "adaptation": "Continuous profession-matched movie sampled to original count with constant5% canvas margin",
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_mage_effect_cutin.NPK",
+      "preserve_original_links_and_empty": true,
+      "official_character_RGB_retained": false,
+      "status": "pending_profession_video_or_special_layer_QA"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/mage_elementalmaster_neo.img",
+      "frames": 28,
+      "role": "element",
+      "clip_id": "whale_element",
+      "adaptation": "Continuous profession-matched movie sampled to original count with constant5% canvas margin",
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_mage_effect_cutin.NPK",
+      "preserve_original_links_and_empty": true,
+      "official_character_RGB_retained": false,
+      "status": "pending_profession_video_or_special_layer_QA"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/mage_enchantress_neo.img",
+      "frames": 24,
+      "role": "enchantress",
+      "clip_id": "whale_enchantress",
+      "adaptation": "Continuous profession-matched movie sampled to original count with constant5% canvas margin",
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_mage_effect_cutin.NPK",
+      "preserve_original_links_and_empty": true,
+      "official_character_RGB_retained": false,
+      "status": "pending_profession_video_or_special_layer_QA"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/mage_geniewi.img",
+      "frames": 30,
+      "role": "witch",
+      "clip_id": "whale_witch",
+      "adaptation": "Continuous profession-matched movie sampled to original count with constant5% canvas margin",
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_mage_effect_cutin.NPK",
+      "preserve_original_links_and_empty": true,
+      "official_character_RGB_retained": false,
+      "status": "pending_profession_video_or_special_layer_QA"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/mage_overmind.img",
+      "frames": 30,
+      "role": "element",
+      "clip_id": "whale_element",
+      "adaptation": "Continuous profession-matched movie sampled to original count with constant5% canvas margin",
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_mage_effect_cutin.NPK",
+      "preserve_original_links_and_empty": true,
+      "official_character_RGB_retained": false,
+      "status": "pending_profession_video_or_special_layer_QA"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/mage_summoner_neo.img",
+      "frames": 17,
+      "role": "summon",
+      "clip_id": "whale_summon",
+      "adaptation": "Continuous profession-matched movie sampled to original count with constant5% canvas margin",
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_mage_effect_cutin.NPK",
+      "preserve_original_links_and_empty": true,
+      "official_character_RGB_retained": false,
+      "status": "pending_profession_video_or_special_layer_QA"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/mage_witch_neo.img",
+      "frames": 26,
+      "role": "witch",
+      "clip_id": "whale_witch",
+      "adaptation": "Continuous profession-matched movie sampled to original count with constant5% canvas margin",
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_mage_effect_cutin.NPK",
+      "preserve_original_links_and_empty": true,
+      "official_character_RGB_retained": false,
+      "status": "pending_profession_video_or_special_layer_QA"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/precenciatransform.img",
+      "frames": 27,
+      "role": "battle",
+      "clip_id": "whale_battle",
+      "adaptation": "Continuous battle movie through a fresh diamond reveal; no official RGB",
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_mage_effect_cutin.NPK",
+      "preserve_original_links_and_empty": true,
+      "official_character_RGB_retained": false,
+      "status": "pending_profession_video_or_special_layer_QA"
+    }
+  ],
+  "production_handoff": "output/whale_illustrations_v02/production_handoff.json",
+  "base_sha256": "43a5160836b0a16b655805053563d1db49810f0b1839aa3662c367b087706fd2",
+  "pending_overlays": [
+    {
+      "path": "sprite/interface/skillcutscene/mage_hecate.img",
+      "frames": 47,
+      "category": "awakening_animated_cutin",
+      "reason": "Dedicated profession video or special-layer adaptation pending; not included in preview"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/mage_eclipse.img",
+      "frames": 41,
+      "category": "cutin_other",
+      "reason": "Dedicated profession video or special-layer adaptation pending; not included in preview"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/mage_elementalmaster_neo.img",
+      "frames": 28,
+      "category": "cutin_neo",
+      "reason": "Dedicated profession video or special-layer adaptation pending; not included in preview"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/mage_enchantress_neo.img",
+      "frames": 24,
+      "category": "cutin_neo",
+      "reason": "Dedicated profession video or special-layer adaptation pending; not included in preview"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/mage_geniewi.img",
+      "frames": 30,
+      "category": "cutin_other",
+      "reason": "Dedicated profession video or special-layer adaptation pending; not included in preview"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/mage_overmind.img",
+      "frames": 30,
+      "category": "cutin_other",
+      "reason": "Dedicated profession video or special-layer adaptation pending; not included in preview"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/mage_summoner_neo.img",
+      "frames": 17,
+      "category": "cutin_neo",
+      "reason": "Dedicated profession video or special-layer adaptation pending; not included in preview"
+    },
+    {
+      "path": "sprite/character/mage/effect/cutin/mage_witch_neo.img",
+      "frames": 26,
+      "category": "cutin_neo",
+      "reason": "Dedicated profession video or special-layer adaptation pending; not included in preview"
+    }
+  ]
+}

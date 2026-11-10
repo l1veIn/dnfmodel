@@ -1,0 +1,266 @@
+{
+  "title": "GPT 龙娘 v04_preview · 一觉与拔刀切入预览（其余四源片待补）",
+  "base_npk": "output/gpt_dragon_slayer_v03/A_GPTDragon_FSlayer_v03.NPK",
+  "base_sha256": "0a08de8e7b0da2d5e5c29f12f1c185105b88f021ba22af66ee763d2df2ad195e",
+  "output": "output/gpt_dragon_slayer_v04_preview",
+  "npk_name": "A_GPTDragon_FSlayer_v04_preview.NPK",
+  "protect_paths": [
+    "output/gpt_dragon_slayer_v03/native_frames"
+  ],
+  "overlays": [
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/(18)ghostf_darktempler.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/(18)ghostf_darktempler/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/(tn)ghostf_demonslayer.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/(tn)ghostf_demonslayer/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_blade.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_blade/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_blade_tn.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_blade_tn/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_darktempler.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_darktempler/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_darktempler_event.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_darktempler_event/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_demonslayer.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_demonslayer/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_demonslayer_event.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_demonslayer_event/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_vegabond.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_vegabond/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_vegabond_event.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_vegabond_event/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_weapon.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_weapon/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_weapon_event.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_weapon_event/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_swordman_effect_cutin.NPK",
+      "path": "sprite/character/swordman/effect/cutin/(18)atsword_majesty.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0000.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0001.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0002.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0003.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0004.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0005.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0006.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0007.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0008.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0009.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0010.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0011.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0012.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0013.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0014.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0015.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0016.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0017.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0018.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0019.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0020.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0021.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0022.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0023.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0024.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0025.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0026.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0027.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0028.png",
+        "output/dragon_illustrations_v04/cutin/(18)atsword_majesty/frame_0029.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_swordman_effect_cutin.NPK",
+      "path": "sprite/character/swordman/effect/cutin/atsword_majesty.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0000.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0001.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0002.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0003.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0004.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0005.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0006.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0007.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0008.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0009.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0010.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0011.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0012.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0013.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0014.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0015.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0016.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0017.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0018.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0019.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0020.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0021.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0022.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0023.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0024.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0025.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0026.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0027.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0028.png",
+        "output/dragon_illustrations_v04/cutin/atsword_majesty/frame_0029.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_character_swordman_effect_cutin.NPK",
+      "path": "sprite/character/swordman/effect/cutin/atsword_swordmaster_neo.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0000.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0001.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0002.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0003.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0004.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0005.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0006.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0007.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0008.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0009.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0010.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0011.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0012.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0013.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0014.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0015.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0016.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0017.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0018.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0019.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0020.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0021.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0022.png",
+        "output/dragon_illustrations_v04/cutin/atsword_swordmaster_neo/frame_0023.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    }
+  ],
+  "note": "Root-authorized review candidate only. Five new one-awakening families cover all12 static paths; one real3s Grok video covers swordmaster neo+majesty variants. Remaining12 cutin paths retain source assets and are explicitly pending. No final v04 release, no installation.",
+  "pending_paths": [
+    "sprite/character/swordman/effect/cutin/(18)atsword_blade_neo.img",
+    "sprite/character/swordman/effect/cutin/(18)atsword_demonslayer_neo.img",
+    "sprite/character/swordman/effect/cutin/(18)atsword_punishment.img",
+    "sprite/character/swordman/effect/cutin/(18)atsword_vendetta.img",
+    "sprite/character/swordman/effect/cutin/atsword_blade_neo.img",
+    "sprite/character/swordman/effect/cutin/atsword_darktemplar_neo.img",
+    "sprite/character/swordman/effect/cutin/atsword_deicide.img",
+    "sprite/character/swordman/effect/cutin/atsword_demonslayer_neo.img",
+    "sprite/character/swordman/effect/cutin/atsword_punishment.img",
+    "sprite/character/swordman/effect/cutin/atsword_swordempress.img",
+    "sprite/character/swordman/effect/cutin/atsword_vendetta.img",
+    "sprite/character/swordman/effect/cutin/neo_vagabond_cut_s.img"
+  ],
+  "completion_status": "partial_workbench_preview",
+  "coverage": {
+    "awakening_paths": 12,
+    "cutin_paths": 3,
+    "cutin_families": 2,
+    "pending_cutin_paths": 12,
+    "pending_source_videos": 4
+  }
+}

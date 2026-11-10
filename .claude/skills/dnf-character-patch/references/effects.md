@@ -19,7 +19,7 @@
 
 ## 先摸清资源
 
-- `Script.pvf` 是加密的，读不到 ANI 和技能表。时序、位置、混合方式、判定都改不了，**只能换像素**。枪口光效等的位置也写在里面，所以新画的轮廓要和原版大致重合。
+- 当前客户端的 `Script.pvf` 尚未解析，未取得 ANI 和技能表。2026-11-09 实测 DNF-Porting 的旧版明文 GUID 头/异或旋转算法不兼容当前文件，报告在 `docs/ani_research/dnf_porting_compatibility_2026-11-09.json`；这不等于证明所有方案都无法读取。目前只能替换像素，不能据此修改或宣称已知时序、位置、混合方式及判定。工作台已支持手动对齐组合预览，不能当实机效果的证据。
 - 技能特效在 `sprite_character_<职业>_effect*.NPK`，切入图在 `sprite_character_<职业>_effect_cutin.NPK`（已确认十个职业都有）。女枪手的召唤物还在 `sprite_monster_gunner*.NPK`，其他职业这种包很少，要按内部路径搜。
 - 职业和技能的对应只能靠推断，来源从可靠到弱：文件名（`awakebody_atlauncher_0000`）、公开技能表、看图。文档里把未确认的写成“推断”。
 - 男女是否共用：`at` 开头的包和文件（`atflamethrowergunb`）基本是女版专用。没有 `at` 版本的（`extruder`、`fm-31`、`g0`～`g3`）很可能共用，改了男版也会变，要告诉用户。
@@ -244,6 +244,16 @@ v06 之后的状态：
 
 ## 加 buff 立绘和觉醒视频（不在 ImagePacks2）
 
+### 视觉方向（2026-11-09 用户修正）
+
+buff 立绘以展示魅力和“耍帅”为先。先看下载作者包的透明 PNG 与实际 GIF/Bink，决定画面焦点、神态、手势和出场节奏；不能直接套用游戏人物动作表的全身展示规范。半身、脸部近景、肩/发/衣摆的有意裁切均可，脸和上半身应有足够画面占比。不要为保证脚底和全身完整而把主视觉缩成画布中间的小人物。
+
+用户已认可 v04 的大半身构图；当前 v05 沿用同一主视觉，固定相机，以内置生图的半闭/闭眼局部素材拼合眨眼，并对发梢、袖缘、披肩共 9 个区域作微位移。工具编号从 0 开始：k7 半闭、k8 闭眼、k9 半闭，各 1 帧。头脸、花饰、手、领结和腰封的保护区域保持固定，无全图推拉或整体缩放。v04 镜头版保留对照，19 帧不意味着必须重画 19 个姿势。v05 已完成本地源帧、编码及浏览器检查，尚未取得用户审美确认、未安装、未验证循环或实机。19 帧、470×668、15fps 只是试作预设，不能当成所有 buff 的游戏格式硬限制。
+
+根目录作者包的真成品名为隐藏点文件 `.bk2`，必须用 `rg --files --no-ignore --hidden` 找，不能只遍历普通扩展名。10 个成品实测均为 BIKi/19帧/15fps/透明/无声；GIF 是游戏内录屏，帧率 25/50，不能冒充成品帧率。作者说明仅称做了眨眼与局部微动；其教程描述的安装方式不等同于我们已验证当前客户端。
+
+v04 的生成原图在 `output/claude_buff_v04/source_generated.png`，提示词在 `design/claude_gunner/buff_v04_prompt.txt`，历史镜头版命令为 `$PY scripts/build_buff_hero.py design/claude_gunner/buff_v04.json <主视觉.png>`。v05 构建入口 `scripts/build_buff_alive.py`，配置 `design/claude_gunner/buff_v05.json`，正式产物 `output/claude_buff_v05/preview/` 已冻结；眨眼素材提示词在 `design/claude_gunner/buff_v05_blink_prompts.txt`。最新 preview 将画布边缘固定过渡从 3px 加宽到 8px，初候选归档为 `preview_candidate_01`。工作台 `portrait` 已指向 v05，v04 对照为 `portrait_v04`，旧全身 v03 为 `portrait_v03`。`validation/test_buff_alive.py` 7 项通过，101555 个固定像素 RGBA 差 0，最大局部位移 2.714 输出像素、Jacobian 最小值 0.540；MOV 19 帧 RGBA 差 0。独立局部检查证据在 `output/validation/buff_v05_visual_qa/`，不能将这些技术检查等同于用户审美或实机验收。
+
 2026-11-09 用户从 COLG 贴来的说明：放 buff 时弹出的人物立绘是视频，在游戏目录 `Video\Character\` 下：
 
 - `Cutscene_buf\`：每个转职一个，名字如 `06_gunner_F_buf_meca.bk2`（女机械），两位数前缀是职业和性别（01 男鬼剑、02 女鬼剑、05 男枪、06 女枪、08 女法……）。全部 72 个的中文名在 `kb/curated/buff_videos.json`。
@@ -251,8 +261,35 @@ v06 之后的状态：
 - `Cutscene_rage\`：觉醒（rage）视频，同样的编号。
 - 文件头是 `Neople Video Stream`，后面是每个文件各不相同的加密数据，不是普通的 Bink 2（`KB2`），ffmpeg 读不了，也就无法预览。社区的替换方法是用同名文件覆盖，游戏更新后可能被复原。
 - 我们的规则是官方文件只读：覆盖 Video 目录里的文件前必须先问用户，并把原文件备份到项目里。`kb/curated/buff_videos.json` 记录了 2026-11-09 官方文件的 sha256，工作台据此判断是原版、已被替换还是被复原。
-- 2026-11-09 验证过社区补丁（小鸟游的雷电将军和无期迷途 buff 补丁，解压在 `tools/downloads/buff_patch_raiden/`，只读不装）：成品是**普通 Bink 1（文件头 `BIKi`），带透明通道 yuva420p，470×668（个别 800×668），15 帧/秒，19 帧约 1.3 秒，无声**。作者的做法是把文件改名、覆盖游戏里的同名视频。所以游戏也播放未加密的 Bink 1，自制不需要 Neople 的加密。
+- 2026-11-09 实际解码过社区补丁（小鸟游的雷电将军和无期迷途 buff 补丁，解压在 `tools/downloads/buff_patch_raiden/`，只读不装）：成品是**普通 Bink 1（文件头 `BIKi`），带透明通道 yuva420p，470×668（个别 800×668），15 帧/秒，19 帧约 1.3 秒，无声**。作者教程的做法是把文件改名、覆盖游戏里的同名视频，因此自制先沿用普通 Bink 1；我们的当前客户端实机兼容性尚未验收，不能把文件可解码当作游戏可播放已证实。
 - 作者的改名对照表是旧命名（`11Fgunner_buf_meca`，目录 `Video\CharacterCutScene`）。现在的客户端是 `Video\Character\Cutscene_buf\06_gunner_F_buf_meca.bk2`，替换要用新名字。
 - ffmpeg 能解码 Bink 1，工作台视频表对普通 Bink 文件提供预览（转成带透明的动图）。ffmpeg 不能编码 Bink，自制要用 RAD 的免费编码器 RAD Video Tools，需要用户同意后另外下载。
 - 自制步骤：画或生成约 19 帧 470×668 带透明的立绘动画 → 用 RAD Video Tools 编成 Bink 1（保留 alpha）→ 先备份原文件到项目，再改名覆盖。游戏每次更新（包括周四例行更新）都会还原这个目录，要重新覆盖。
+
+### 19 帧单张动作表试作（2026-11-09）
+
+用户建议将 19 帧放在同一张图内生成，先做大小姐样例。配置 `design/claude_gunner/buff_v03.json`，命令：
+
+```
+$PY scripts/buff_portrait.py design/claude_gunner/buff_v03.json <原始动作表.png>
+```
+
+输出 `output/claude_buff_v03/preview/`（已存在 manifest 时拒绝覆盖，另起版本），含原始动作表、19 张透明 PNG、动态 WebP、无损透明 MOV 和 manifest。buff 资产登记到 `design/<配置>/workbench/buff.json` 后，项目页内直接播放；这一历史版的逐帧详情为 `/#/p/claude/buff/portrait_v03`，旧独立 HTML 只作历史产物。准备脚本只处理本地素材，不生成图片、不下载工具、不编码 Bink、不安装。
+
+生成器未完全遵守格距，直接等分会在每次换行时横跳约 21px；必须统一缩放，并以固定脚底锚点做平移修正，不能逐帧独立缩放角色。v03 换行横跳最大 0.117px，MOV 解码回读 RGBA 差 0。透明 PNG 转 PyAV 时显式使用 `VideoFrame.from_ndarray(..., format='rgba')`，`from_image` 可能丢 alpha。WebP 可见 RGB 与 alpha 无损，透明像素下的隐藏 RGB 不保证保留。
+
+定位通过不代表动作连续性通过；手脸、花饰和裙摆仍需动态审核。buff 是一次性播放，预览循环末帧回首帧的跳变也应单独看待。样例现已编码为 Bink 1，尚未安装或实机验证。
+
+### RAD 编码（本会话已获用户许可）
+
+2026-11-09 用户同意下载并运行官方 RAD Video Tools 编码样片，工具已位于 `tools/downloads/rad_video_tools_2026-10-28/bin/radvideo64.exe`，无需重复询问下载或本地编码许可。官网下载归档 SHA1 为 `93d2ec216865979065bfb01916007c3dc01cb905`，程序 Epic Games 签名有效。
+
+```
+$PY scripts/encode_buff.py design/claude_gunner/buff_v05.json
+$PY scripts/encode_buff.py design/claude_gunner/buff_v05.json --verify-only
+```
+
+编码使用显式 PNG 清单、`/Bink1 /Alpha /ForceFrameRate15 /NoSound /DataRate1000000 /CPUs4 /AutoClose`。**`/DataRateByQuality` 只支持 Bink 2**，Bink 1 用它会停在错误框，隐藏运行表现为超时。脚本拒绝覆盖现有成片，复核用 `--verify-only`；报告记录程序与源文件哈希、实际命令、解码的尺寸/帧数/帧率/alpha/音频，以及有损误差。成片解码 PNG 和 WebP 接入工作台“Bink 编码回读”。
+
+当前 v05 成片为 `portrait.bik`：BIKi，470×668，19 帧、15fps，带 alpha、无声，1267928 字节；可见 RGB MAE 3.2614/255、alpha MAE 0.10874/255。Bink 有损，不应要求 RGBA 差 0。历史 v03 同规格、1266620 字节，RGB MAE 约 3.09/255、alpha MAE 约 0.049/255；v04 为 1266024 字节，RGB MAE 约 4.68/255、alpha MAE 约 0.303/255。均未安装或实机验收。覆盖官方 Video 文件仍需先备份并单独取得用户确认。
 

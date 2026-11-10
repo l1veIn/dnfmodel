@@ -1,0 +1,111 @@
+{
+  "inspected_at_utc": "2026-11-09T04:47:11+00:00",
+  "source_review": {
+    "repository": "https://github.com/flwmxd/DNF-Porting",
+    "commit": "bb4771e29c6fbb9f0ee6395f45ed269d4ce79ae3",
+    "commit_date_utc": "2022-03-10T22:26:02Z",
+    "main_commit_verified_on_client_date": "2026-11-09",
+    "note": "Pinned source review; this script does not query the network.",
+    "files": [
+      {
+        "path": "src/PvfReader.h",
+        "git_blob_sha1": "74f477e1bc435b6dfd0d59cecb25cb0837f858a4",
+        "url": "https://github.com/flwmxd/DNF-Porting/blob/bb4771e29c6fbb9f0ee6395f45ed269d4ce79ae3/src/PvfReader.h"
+      },
+      {
+        "path": "src/PvfReader.cpp",
+        "git_blob_sha1": "5694ee371b1fb08a673526224047d00966e05c9c",
+        "url": "https://github.com/flwmxd/DNF-Porting/blob/bb4771e29c6fbb9f0ee6395f45ed269d4ce79ae3/src/PvfReader.cpp"
+      },
+      {
+        "path": "src/PvfNode.cpp",
+        "git_blob_sha1": "4850ec54c4cb334268b28c76ee57798468ccd24d",
+        "url": "https://github.com/flwmxd/DNF-Porting/blob/bb4771e29c6fbb9f0ee6395f45ed269d4ce79ae3/src/PvfNode.cpp"
+      },
+      {
+        "path": "src/PvfAnimation.cpp",
+        "git_blob_sha1": "3a0b06edbd695ff975b3c727217e9b071c530aa2",
+        "url": "https://github.com/flwmxd/DNF-Porting/blob/bb4771e29c6fbb9f0ee6395f45ed269d4ce79ae3/src/PvfAnimation.cpp"
+      },
+      {
+        "path": "src/PvfAnimation.h",
+        "git_blob_sha1": "92e1cb5548cbc47f4273a53bbaeb1aeb740e0237",
+        "url": "https://github.com/flwmxd/DNF-Porting/blob/bb4771e29c6fbb9f0ee6395f45ed269d4ce79ae3/src/PvfAnimation.h"
+      }
+    ]
+  },
+  "file": {
+    "path": "C:\\WeGameApps\\地下城与勇士：创新世纪\\Script.pvf",
+    "bytes": 850311651,
+    "modified_at_utc": "2026-10-28T22:54:24.680900+00:00",
+    "header_hex": "45147b5c3d0007bd08fdb9f4eb4cad7701e8335f83e5b0a85a5166961ad31a69319b1af8c5a38695aff77c10ebefa7d68ccc2a2c337318e1",
+    "header_sha256": "48b5efe5e4513e7ba751bb1d84fd7eb073beb60afe356216c2716aacf01930ac"
+  },
+  "algorithm": {
+    "header_bytes": 56,
+    "layout": "int32 GUID-length; 36 GUID bytes; int32 version; int32 directory-length; uint32 directory-CRC; int32 entry-count (little endian)",
+    "expected_guid_length": 36,
+    "directory_and_payload_transform": "ROR32(cipher_word XOR 0x81A79011 XOR checksum, 6)",
+    "outer_container_or_header_decryption_in_source": false
+  },
+  "limits": {
+    "directory_bytes": 33554432,
+    "entries": 1000000,
+    "path_bytes": 4096
+  },
+  "safety": {
+    "input_open_mode": "rb",
+    "input_bytes_read": 56,
+    "payload_bytes_read": 0,
+    "third_party_code_executed": false,
+    "process_access": false,
+    "input_changed_during_probe": false
+  },
+  "directory_test": {
+    "attempted": false,
+    "reason": "Invalid header; no allocation or directory decryption attempted."
+  },
+  "ani_payloads_extracted": 0,
+  "header_interpreted_as_dnf_porting": {
+    "guid_length_signed": 1551569989,
+    "guid_length_unsigned": 1551569989,
+    "guid_hex": "3d0007bd08fdb9f4eb4cad7701e8335f83e5b0a85a5166961ad31a69319b1af8c5a38695",
+    "guid_ascii_uuid_shape": false,
+    "version": 276625327,
+    "directory_length": -693637141,
+    "directory_checksum_hex": "0x2c2acc8c",
+    "entry_count": -518491341,
+    "implied_payload_base": -693637085
+  },
+  "layout_checks": {
+    "guid_length_is_36": false,
+    "directory_length_positive": false,
+    "directory_length_word_aligned": false,
+    "directory_inside_file": false,
+    "entry_count_positive": false,
+    "minimum_record_bytes_fit_directory": false
+  },
+  "status": "unsupported_by_dnf_porting_layout",
+  "compatible": false,
+  "failed_layout_checks": [
+    "guid_length_is_36",
+    "directory_length_positive",
+    "directory_length_word_aligned",
+    "directory_inside_file",
+    "entry_count_positive",
+    "minimum_record_bytes_fit_directory"
+  ],
+  "interpretation": {
+    "measured": "The checks above apply only to this file and the pinned reader layout.",
+    "inference": "A rejected header means this reader cannot directly locate/decrypt the directory. It does not identify the actual container/encryption scheme or prove that all PVF extraction is impossible.",
+    "ani_limit": "Without a valid directory no ANI names, timings, or image mappings are established."
+  },
+  "comparison_with_previous_probe": {
+    "report": "docs\\ani_research\\current_client_pvf_probe.json",
+    "inspected_at": "2026-10-23T07:03:03+08:00",
+    "previous_bytes": 850309289,
+    "same_size": false,
+    "same_first_56_bytes": false,
+    "note": "No full-file hash is calculated; a previous SHA256 is not reused for the current file."
+  }
+}

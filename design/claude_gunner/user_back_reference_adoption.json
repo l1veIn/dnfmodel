@@ -1,0 +1,110 @@
+{
+  "status": "user_approved_packaged_installed_v07_awaiting_ingame_test",
+  "source": "User supplied turnaround in this chat, used as rear costume authority; not represented as original-author official art.",
+  "source_record": "output/claude_user_back_reference_2026-11-09/reference.json",
+  "reference_sheet": "output/claude_user_back_reference_2026-11-09/user_supplied_turnaround.jpg",
+  "reference_sha256": "80f3e096e543cbacdf8cf876bdd94e65d0c267b47f887f597289ef80ccdc8333",
+  "required_rear_features": [
+    "half-up central black back-of-head bow",
+    "broad loose long orange hair",
+    "back-waist black bow",
+    "two gold-edged pointed black waist tails",
+    "black lower skirt band with central gold sun/flower emblem"
+  ],
+  "frame_scope": {
+    "tool": [
+      53,
+      54,
+      55
+    ],
+    "user": [
+      54,
+      55,
+      56
+    ],
+    "all_other_native_frames_to_preserve": 140
+  },
+  "generation": {
+    "mode": "built-in image_gen",
+    "paid_65535_used": false,
+    "versions": [
+      {
+        "version": "v01",
+        "raw": "output/claude_user_back_reference_2026-11-09/pose_v01.png",
+        "sha256": "a4f7594428533901352f41ddd0d170d168d48895d446983afa0230ea1751e039",
+        "prompt": "design/claude_gunner/user_back_pose_v01_prompt.txt",
+        "prompt_sha256": "d1f6c242ecad27a15dbc7e7f871ac21760581557e344f8dc257570acfef72b18",
+        "builtin_original": "C:/Users/A/.codex/generated_images/01a1be99-e207-7373-87cb-2fccce695910/exec-f1a04694-3809-4cb5-a447-b2086f285989.png",
+        "selected": false
+      },
+      {
+        "version": "v02",
+        "raw": "output/claude_user_back_reference_2026-11-09/pose_v02.png",
+        "sha256": "885a46644618c53dbffccb73f9cd8adb4962d68187161eb406e57f83f305b8ad",
+        "prompt": "design/claude_gunner/user_back_pose_v02_prompt.txt",
+        "prompt_sha256": "4450855f4bfb2fb6b68099177602f0e1230b23839dcd1ec36a59bc80c8cb57c6",
+        "builtin_original": "C:/Users/A/.codex/generated_images/01a1be99-e207-7373-87cb-2fccce695910/exec-8facbfd3-5484-43ef-befc-2fd5340a2d4d.png",
+        "selected": false
+      },
+      {
+        "version": "v03",
+        "raw": "output/claude_user_back_reference_2026-11-09/pose_v03.png",
+        "sha256": "0e2993a032cfda6789a715229027e1588d5edbd8e811fe411afdde2c9630d6d1",
+        "prompt": "design/claude_gunner/user_back_pose_v03_prompt.txt",
+        "prompt_sha256": "2cce43c27bfae8daa157ddf1ebc9bf8a82e93cfad5779b9d7f85541fd8776a0f",
+        "builtin_original": "C:/Users/A/.codex/generated_images/01a1be99-e207-7373-87cb-2fccce695910/exec-79581190-c9f9-4b77-ba59-81d6f5582787.png",
+        "selected": true
+      }
+    ],
+    "old_v6_role": "Pose layout edit target only; rear costume/hair replaced from user reference; old art never composited back into new pose.",
+    "selection_reason": "v01 rear identity correct but endpoints too far from source; v02 restores hem insignia and corrects head/endpoints; v03 further corrects upper fist and far boot before limited source fitting."
+  },
+  "script": "scripts/fix_claude_user_back.py",
+  "config": "design/claude_gunner/user_back_repair.json",
+  "scope_snapshot": "output/validation/claude_user_back_reference_2026-11-09/scope_before.json",
+  "notes": [
+    "Front master controls simplified game line style and palette, new user rear sheet controls back garment structure.",
+    "Fist/foot placement corrected in the drawing before any limited calibration.",
+    "Earlier inferred rear references are superseded by this user-provided sheet."
+  ],
+  "packaged": false,
+  "installed": true,
+  "ingame_verified": false,
+  "selected_raw": "output/claude_user_back_reference_2026-11-09/pose_v03.png",
+  "validation": {
+    "applied": "output/validation/claude_user_back_reference_2026-11-09/validation_applied.json",
+    "independent": "output/validation/claude_user_back_reference_2026-11-09/independent_applied.json",
+    "root_scope_raster": "output/validation/claude_user_back_reference_2026-11-09/root_scope_raster_audit.json",
+    "regression_tests_passed": 28,
+    "regression_log": "output/validation/claude_user_back_reference_2026-11-09/regression_tests.txt",
+    "upper_graft_proof": "output/validation/claude_user_back_reference_2026-11-09/grip_graft_layers_final.png"
+  },
+  "workbench_review": {
+    "units_checked": [
+      "弓步突刺"
+    ],
+    "user_frames_seen": [
+      54,
+      56
+    ],
+    "source_seen": "user_back_reference:53 / :55",
+    "issue_counts": {
+      "open": 0,
+      "fixed": 0,
+      "verified": 8
+    },
+    "console_errors_and_warnings": [],
+    "screenshots": [
+      "output/validation/claude_user_back_reference_2026-11-09/workbench_back_user_reference.png"
+    ],
+    "scope": "Actual refreshed workbench source and playback checked; paused at user54 for review. User aesthetic and in-game checks remain pending."
+  },
+  "new_script_sha256": "042a46b4974279e946a6526c12f80f59365ee415158e445fb6b8d32224c2a203",
+  "upper_hand_fix": "Original high near-weapon source skin mask included face-side pixels. The new calibrated generated upper fist is retained unchanged by graft. Only lower hand uses original pixels. The old C-shaped skin fragment is absent; remaining gun-edge pixel belongs to generated fist occluded by weapon.",
+  "installed_release": {
+    "version": 7,
+    "package": "output\\claude_gunner_v07\\A_Claude_FGunner_v07.NPK",
+    "installation_record": "output\\claude_gunner_v07\\installation.json",
+    "sha256": "d56c0a3cbe2beba5a82f29854db174286f0f4ad28662819c6d937f0cc9ae9483"
+  }
+}

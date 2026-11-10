@@ -1,57 +1,97 @@
 {
- "note": "Patch projects as the workbench lists them. A project is one character replacing one class; its versions may span several design folders. Versions, stages and install state are read from the files, not stored here.",
- "projects": [
-  {
-   "id": "dragon",
-   "name": "女鬼剑改 GPT 龙娘",
-   "class": "女鬼剑",
-   "character": "GPT 龙娘",
-   "profession": "swordman_at",
-   "designs": ["gpt_dragon_slayer", "gpt_dragon_slayer_v02", "gpt_dragon_slayer_v03"],
-   "current": "gpt_dragon_slayer_v03",
-   "npk": ["A_GPTDragon_FSlayer"],
-   "summary": "246 帧整体绘制，太刀贴合。v03 按新经验全部重画。",
-   "costs": []
-  },
-  {
-   "id": "claude",
-   "name": "女枪手改 Claude 大小姐",
-   "class": "女枪手",
-   "character": "Claude 大小姐",
-   "profession": "gunner_at",
-   "designs": ["claude_gunner"],
-   "current": "claude_gunner",
-   "npk": ["A_Claude_FGunner"],
-   "summary": "人物 v02（“模范”）；v03 起加武器和机器人，v05 切入图和大招人物帧，v06 三觉切入图改用视频。",
-   "costs": [
-    {"label": "武器和机器人（v03）", "usd": 20.6},
-    {"label": "三觉切入图视频（v06）", "usd": 11.96}
-   ]
-  },
-  {
-   "id": "whale",
-   "name": "女法师改鲸鱼娘女仆",
-   "class": "女法师",
-   "character": "大肥鱼鲸鱼娘女仆",
-   "profession": "mage",
-   "designs": ["fatfish_whale_maid"],
-   "current": "fatfish_whale_maid",
-   "npk": ["A_FatfishWhaleMaid_FMage"],
-   "summary": "174 帧整体绘制，短杖贴合。和旧版大肥鱼覆盖同样的路径，不能同装。",
-   "costs": []
-  },
-  {
-   "id": "fatfish",
-   "name": "女法师改大肥鱼（早期试验）",
-   "class": "女法师",
-   "character": "大肥鱼",
-   "profession": "mage",
-   "designs": [],
-   "current": null,
-   "npk": ["A_Fatfish_FMage"],
-   "archived": true,
-   "summary": "2026-10 到 11-06 的路线探索：分层纸娃娃、本地视频、Grok 视频、九宫格，最后收敛成整体绘制。已被鲸鱼娘女仆取代。",
-   "costs": []
-  }
- ]
+  "note": "Patch projects as the workbench lists them. A project is one character replacing one class; its versions may span several design folders. Versions, stages and install state are read from the files, not stored here.",
+  "projects": [
+    {
+      "id": "dragon",
+      "name": "女鬼剑改 GPT 龙娘",
+      "class": "女鬼剑",
+      "character": "GPT 龙娘",
+      "profession": "swordman_at",
+      "designs": [
+        "gpt_dragon_slayer",
+        "gpt_dragon_slayer_v02",
+        "gpt_dragon_slayer_v03"
+      ],
+      "current": "gpt_dragon_slayer_v03",
+      "npk": [
+        "A_GPTDragon_FSlayer"
+      ],
+      "summary": "用户已审核通过并安装人物v07：五职业二觉改为5套独立构图演出，三觉原视频、246人物帧和一觉保持；共享界面v01及buff v05保持。旧人物v06已备份移出，待用户实机测试。",
+      "costs": [
+        {
+          "label": "立绘补全 · Grok 龙娘挥剑样片（回执实付）",
+          "usd": 1.56
+        },
+        {
+          "label": "立绘补全 · Grok 剩余4段视频（充值后续做，回执实付）",
+          "usd": 7.8
+        }
+      ]
+    },
+    {
+      "id": "claude",
+      "name": "女枪手改 Claude 大小姐",
+      "class": "女枪手",
+      "character": "Claude 大小姐",
+      "profession": "gunner_at",
+      "designs": [
+        "claude_gunner"
+      ],
+      "current": "claude_gunner",
+      "npk": [
+        "A_Claude_FGunner"
+      ],
+      "summary": "已安装人物v09、共享界面v01和已定版buff v07；包含机械技能补全、一觉9路径及界面10/10，头像4关键帧复用循环。待用户测试新版实机；挡刀暂缓。",
+      "costs": [
+        {
+          "label": "武器和机器人（v03）",
+          "usd": 20.6
+        },
+        {
+          "label": "三觉切入图视频（v06）",
+          "usd": 11.96
+        }
+      ]
+    },
+    {
+      "id": "whale",
+      "name": "女法师改鲸鱼娘女仆",
+      "class": "女法师",
+      "character": "大肥鱼鲸鱼娘女仆",
+      "profession": "mage",
+      "designs": [
+        "fatfish_whale_maid"
+      ],
+      "current": "fatfish_whale_maid",
+      "npk": [
+        "A_FatfishWhaleMaid_FMage"
+      ],
+      "summary": "用户已审核通过并安装人物v06：已补默认走路第4/7帧后摆胳膊，原创四帧待机及其余172帧保持；共享界面v01及buff v02保持。旧人物v05已备份移出，待用户实机测试。",
+      "costs": [
+        {
+          "label": "立绘补全 · Grok 鲸鱼战斗样片（回执实付）",
+          "usd": 1.56
+        },
+        {
+          "label": "立绘补全 · Grok 剩余4段视频（充值后续做，回执实付）",
+          "usd": 7.28
+        }
+      ]
+    },
+    {
+      "id": "fatfish",
+      "name": "女法师改大肥鱼（早期试验）",
+      "class": "女法师",
+      "character": "大肥鱼",
+      "profession": "mage",
+      "designs": [],
+      "current": null,
+      "npk": [
+        "A_Fatfish_FMage"
+      ],
+      "archived": true,
+      "summary": "2026-10 到 11-06 的路线探索：分层纸娃娃、本地视频、Grok 视频、九宫格，最后收敛成整体绘制。已被鲸鱼娘女仆取代。",
+      "costs": []
+    }
+  ]
 }

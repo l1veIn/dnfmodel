@@ -1,11 +1,11 @@
 {
  "title": "女鬼剑 · GPT 龙娘",
- "version": 3,
+ "version": 7,
  "class": "swordman",
  "equipment": "atequipment",
  "frames": 246,
  "materials": "gpt_dragon_slayer_source_v03",
- "out": "gpt_dragon_slayer_v03",
+ "out": "gpt_dragon_slayer_v07",
  "master": "master_b_0.png",
  "npk_stem": "A_GPTDragon_FSlayer",
  "body": "skin/sg_body0000",

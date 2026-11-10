@@ -18,3 +18,65 @@
 {"t": "2026-11-08 20:59:28", "op": "fixed", "by": "claude", "issue": 7, "note": "修复表 repair_e 留足四周空白重画，再按 frame_scales.json 缩回", "frames_version": 1794125829}
 {"t": "2026-11-08 20:59:28", "op": "fixed", "by": "claude", "issue": 8, "note": "脸部不动已修；刀在身前时的握刀手按原版被遮挡处理", "frames_version": 1794125832}
 {"t": "2026-11-08 20:59:28", "op": "fixed", "by": "claude", "issue": 9, "note": "repair_e 重画 244–246；244 和 245 原版几乎一样，两帧用同一格", "frames_version": 1794125832}
+{"t": "2026-11-10 12:31:44", "op": "verify", "by": "user", "issue": 1}
+{"t": "2026-11-10 12:33:11", "op": "open", "by": "user", "note": "待机动作的四帧实际上是一种人物“正在呼吸”的感觉，想象人物呼吸胸口起伏带动上半身微动。现在龙娘的待机版本缺乏这种呼吸感，只是单纯的让上半身微动", "asset": "character", "unit": "待机", "frames_version": 1794125760, "frames": [], "marks": [], "issue": 10}
+{"t": "2026-11-10 12:33:27", "op": "verify", "by": "user", "issue": 2}
+{"t": "2026-11-10 12:34:28", "op": "open", "by": "user", "note": "这个动作的6789帧原版人物头部有个微小的低头动作，新版缺失了这部分", "asset": "character", "unit": "待机抬手", "frames_version": 1794125832, "frames": [], "marks": [], "issue": 11}
+{"t": "2026-11-10 12:35:41", "op": "open", "by": "user", "note": "同样是”呼吸感“的问题，这种站定姿势大部分部位都是不动的，靠胸口带动上半身微动体现呼吸感", "asset": "character", "unit": "叉腰站", "frames_version": 1794125764, "frames": [], "marks": [], "issue": 12}
+{"t": "2026-11-10 12:35:47", "op": "withdraw", "by": "user", "issue": 3}
+{"t": "2026-11-10 12:36:18", "op": "verify", "by": "user", "issue": 4}
+{"t": "2026-11-10 12:37:43", "op": "open", "by": "user", "note": "这个动作有点太抖了，可以看到原版的动作整个9帧下半身几乎没动，尤其是脚部在这9帧几乎是静止的。新版的9帧连起来后整个身躯扭动的太厉害了", "asset": "character", "unit": "挥臂平举", "frames_version": 1794125799, "frames": [], "marks": [], "issue": 13}
+{"t": "2026-11-10 12:38:22", "op": "verify", "by": "user", "issue": 5}
+{"t": "2026-11-10 12:38:26", "op": "verify", "by": "user", "issue": 6}
+{"t": "2026-11-10 12:39:17", "op": "verify", "by": "user", "issue": 7}
+{"t": "2026-11-10 12:40:41", "op": "open", "by": "user", "note": "231帧有点问题，跟230帧都不太像了，231跟230帧是几乎相同的，实在不行就用230帧代替231吧", "asset": "character", "unit": "回身高踢", "frames_version": 1794125829, "frames": [], "marks": [], "issue": 14}
+{"t": "2026-11-10 12:40:46", "op": "open", "by": "user", "note": "同样是”呼吸感“的问题，这种站定姿势大部分部位都是不动的，靠胸口带动上半身微动体现呼吸感", "asset": "character", "unit": "背刀站", "frames_version": 1794125832, "frames": [], "marks": [], "issue": 15}
+{"t": "2026-11-10 12:40:50", "op": "verify", "by": "user", "issue": 8}
+{"t": "2026-11-10 12:41:12", "op": "verify", "by": "user", "issue": 9}
+{"t": "2026-11-10 12:42:24", "op": "open", "by": "user", "note": "244、245握刀的手好像短了一截导致没握到。246是举起的手臂缺了拳头短了一截。", "asset": "character", "unit": "终结", "frames_version": 1794125832, "frames": [], "marks": [], "issue": 16}
+{"t": "2026-11-10 13:05:07", "op": "fixed", "by": "claude", "issue": 10, "note": "v05修复工具0–3（用户1–4）：胸廓局部膨胀与轻起伏形成呼吸，脸/脚/下盘保持原位，非整体上半身平移。", "frames_version": 1794125760}
+{"t": "2026-11-10 13:05:08", "op": "fixed", "by": "claude", "issue": 11, "note": "v05修复工具5–8（用户6–9）：恢复抬手过程的轻微低头，仅头部局部转动，工具4不变。", "frames_version": 1794125832}
+{"t": "2026-11-10 13:05:08", "op": "fixed", "by": "claude", "issue": 12, "note": "v05修复工具9–12（用户10–13）：叉腰站由胸口带动局部呼吸，脸/下盘/双脚固定。", "frames_version": 1794125764}
+{"t": "2026-11-10 13:05:08", "op": "fixed", "by": "claude", "issue": 13, "note": "v05修复工具123–131（用户124–132）：固定膝下与双脚，软衔接保留九帧手臂/垂袖原动作，消除下盘扭动和脚滑。", "frames_version": 1794125799}
+{"t": "2026-11-10 13:05:08", "op": "fixed", "by": "claude", "issue": 14, "note": "v05按明确允许复用：工具230（用户231）采用工具229（用户230）的同一姿态，邻接不再换形。", "frames_version": 1794125829}
+{"t": "2026-11-10 13:05:08", "op": "fixed", "by": "claude", "issue": 15, "note": "v05修复工具232–235（用户233–236）：背刀站改为胸廓局部呼吸，脸/脚稳定，原不贴刀柄处理保留。", "frames_version": 1794125832}
+{"t": "2026-11-10 13:05:08", "op": "fixed", "by": "claude", "issue": 16, "note": "v05修复工具243/244（用户244/245）前臂与拳头贴到真实刀柄缺口；工具245（用户246）重新裁切原图恢复完整举拳，未挪整人。", "frames_version": 1794125832}
+{"t": "2026-11-10 13:07:26", "op": "fixed", "by": "claude", "issue": 10, "note": "v05修复工具0–3（用户1–4）：胸廓局部膨胀与轻起伏形成呼吸，脸/脚/下盘保持原位，非整体上半身平移。", "frames_version": 1794286902}
+{"t": "2026-11-10 13:07:26", "op": "fixed", "by": "claude", "issue": 11, "note": "v05修复工具5–8（用户6–9）：恢复抬手过程的轻微低头，仅头部局部转动，工具4不变。", "frames_version": 1794286903}
+{"t": "2026-11-10 13:07:26", "op": "fixed", "by": "claude", "issue": 12, "note": "v05修复工具9–12（用户10–13）：叉腰站由胸口带动局部呼吸，脸/下盘/双脚固定。", "frames_version": 1794286903}
+{"t": "2026-11-10 13:07:26", "op": "fixed", "by": "claude", "issue": 13, "note": "v05修复工具123–131（用户124–132）：固定膝下与双脚，软衔接保留九帧手臂/垂袖原动作，消除下盘扭动和脚滑。", "frames_version": 1794286903}
+{"t": "2026-11-10 13:07:26", "op": "fixed", "by": "claude", "issue": 14, "note": "v05按明确允许复用：工具230（用户231）采用工具229（用户230）的同一姿态，邻接不再换形。", "frames_version": 1794286903}
+{"t": "2026-11-10 13:07:27", "op": "fixed", "by": "claude", "issue": 15, "note": "v05修复工具232–235（用户233–236）：背刀站改为胸廓局部呼吸，脸/脚稳定，原不贴刀柄处理保留。", "frames_version": 1794286904}
+{"t": "2026-11-10 13:07:27", "op": "fixed", "by": "claude", "issue": 16, "note": "v05修复工具243/244（用户244/245）前臂与拳头贴到真实刀柄缺口；工具245（用户246）重新裁切原图恢复完整举拳，未挪整人。", "frames_version": 1794286904}
+{"t": "2026-11-10 13:12:28", "op": "verify", "by": "user", "issue": 16}
+{"t": "2026-11-10 13:12:39", "op": "verify", "by": "user", "issue": 14}
+{"t": "2026-11-10 13:16:13", "op": "reopen", "by": "user", "note": "人物都错位了，这几帧修坏了，重做吧要不", "issue": 13}
+{"t": "2026-11-10 13:17:10", "op": "reopen", "by": "user", "note": "这个呼吸感你完全理解错了，参考一下原版的4帧吧，分析一下身体的哪些部位在动。", "issue": 10}
+{"t": "2026-11-10 13:17:21", "op": "reopen", "by": "user", "note": "这个呼吸感你完全理解错了，参考一下原版的4帧吧，分析一下身体的哪些部位在动。", "issue": 12}
+{"t": "2026-11-10 13:17:25", "op": "reopen", "by": "user", "note": "这个呼吸感你完全理解错了，参考一下原版的4帧吧，分析一下身体的哪些部位在动。", "issue": 15}
+{"t": "2026-11-10 13:18:04", "op": "reopen", "by": "user", "note": "这个也做坏了，需要重画", "issue": 11}
+{"t": "2026-11-10 14:10:09", "op": "fixed", "by": "claude", "issue": 10, "note": "v06已对照官方全图层重画工具0–3：肩胸衣饰、肘腕共同起伏，固定脸、腰带中心和腿脚；持柄末端已按原武器局部对位，未移整人。新胸前峰值约1px，原版约2px，请按新版四帧复核呼吸感。", "frames_version": 1794290654}
+{"t": "2026-11-10 14:10:09", "op": "fixed", "by": "claude", "issue": 11, "note": "v06已真正重画工具4–8：首帧与新待机一致，头角外廓及腿脚固定，以脸内细节体现轻微下视；工具5张掌、6半收指、7/8闭拳，已纠正晚一帧的相位。工作台逐帧已检查，请复核。", "frames_version": 1794290713}
+{"t": "2026-11-10 14:10:10", "op": "fixed", "by": "claude", "issue": 12, "note": "v06已按原版全图层重画工具9–12：宽站姿、肩胸衣饰与弯臂肘腕联动，脸、腰腿与鞋支点保持；新画与原武器叠合检查已完成。已通过内容保留，请在叉腰站复核新四帧。", "frames_version": 1794289285}
+{"t": "2026-11-10 14:10:10", "op": "fixed", "by": "claude", "issue": 13, "note": "v06已重画工具123–131九帧，保持同一world和身高基准；按原版由画面右肩跨胸抬手，另一手留左腰，横扫后伸掌。已修124与125–131的持柄位置，双脚几乎固定，完整九帧已接工作台播放，请复核。", "frames_version": 1794290714}
+{"t": "2026-11-10 14:10:10", "op": "fixed", "by": "claude", "issue": 15, "note": "v06已对照官方全图层重画工具232–235：肩胸前缘、前臂与手协同起伏，脸、腰带中心、腿脚保持。原#8无需贴柄的认可保留，未处理挡刀。已接入工作台新四帧，请复核呼吸感。", "frames_version": 1794289378}
+{"t": "2026-11-10 18:37:10", "op": "verify", "by": "user", "issue": 13}
+{"t": "2026-11-10 18:37:13", "op": "verify", "by": "user", "issue": 10}
+{"t": "2026-11-10 18:37:16", "op": "verify", "by": "user", "issue": 11}
+{"t": "2026-11-10 18:37:27", "op": "verify", "by": "user", "issue": 15}
+{"t": "2026-11-10 18:38:40", "op": "verify", "by": "user", "issue": 12}
+{"t": "2026-11-10 21:30:09", "op": "open", "by": "user", "recorded_by": "claude", "source": "user_chat_transcription", "request_id": "walk_arms_and_second_cutin_2026_11_10", "issue": 17, "asset": "cutin", "unit": "sprite/character/swordman/effect/cutin/atsword_majesty.img", "frames": [], "marks": [], "frames_version": 1794290813, "note": "用户实机反馈（由助手据聊天转录）：二觉与三觉切入重复。当前atsword_majesty复用了对应三觉源（atsword_swordmaster_neo，具体别名见本轮audit）。二觉需独立构图与演出，保留三觉及同觉醒合法别名关系。"}
+{"t": "2026-11-10 21:30:09", "op": "open", "by": "user", "recorded_by": "claude", "source": "user_chat_transcription", "request_id": "walk_arms_and_second_cutin_2026_11_10", "issue": 18, "asset": "cutin", "unit": "sprite/character/swordman/effect/cutin/atsword_punishment.img", "frames": [], "marks": [], "frames_version": 1794290813, "note": "用户实机反馈（由助手据聊天转录）：二觉与三觉切入重复。当前atsword_punishment复用了对应三觉源（atsword_darktemplar_neo，具体别名见本轮audit）。二觉需独立构图与演出，保留三觉及同觉醒合法别名关系。"}
+{"t": "2026-11-10 21:30:09", "op": "open", "by": "user", "recorded_by": "claude", "source": "user_chat_transcription", "request_id": "walk_arms_and_second_cutin_2026_11_10", "issue": 19, "asset": "cutin", "unit": "sprite/character/swordman/effect/cutin/atsword_deicide.img", "frames": [], "marks": [], "frames_version": 1794290813, "note": "用户实机反馈（由助手据聊天转录）：二觉与三觉切入重复。当前atsword_deicide复用了对应三觉源（atsword_demonslayer_neo，具体别名见本轮audit）。二觉需独立构图与演出，保留三觉及同觉醒合法别名关系。"}
+{"t": "2026-11-10 21:30:09", "op": "open", "by": "user", "recorded_by": "claude", "source": "user_chat_transcription", "request_id": "walk_arms_and_second_cutin_2026_11_10", "issue": 20, "asset": "cutin", "unit": "sprite/character/swordman/effect/cutin/atsword_vendetta.img", "frames": [], "marks": [], "frames_version": 1794290813, "note": "用户实机反馈（由助手据聊天转录）：二觉与三觉切入重复。当前atsword_vendetta复用了对应三觉源（atsword_blade_neo，具体别名见本轮audit）。二觉需独立构图与演出，保留三觉及同觉醒合法别名关系。"}
+{"t": "2026-11-10 21:30:09", "op": "open", "by": "user", "recorded_by": "claude", "source": "user_chat_transcription", "request_id": "walk_arms_and_second_cutin_2026_11_10", "issue": 21, "asset": "cutin", "unit": "sprite/character/swordman/effect/cutin/atsword_swordempress.img", "frames": [], "marks": [], "frames_version": 1794290813, "note": "用户实机反馈（由助手据聊天转录）：二觉与三觉切入重复。当前atsword_swordempress复用了对应三觉源（neo_vagabond_cut_s，具体别名见本轮audit）。二觉需独立构图与演出，保留三觉及同觉醒合法别名关系。"}
+{"t": "2026-11-10 21:49:48", "op": "fixed", "by": "claude", "issue": 17, "note": "v07已将该职业二觉改为独立新构图关键立绘与连续遮罩/光轨演出；三觉保留原视频，不再复用。8条二觉共316槽增量替换，实际IMG回读精确，246人物帧及其余payload保持。根助手已在真实工作台播放五套二觉并对照三觉；游戏时序仍待实机，未安装或代用户复核。", "frames_version": 1794318490}
+{"t": "2026-11-10 21:49:48", "op": "fixed", "by": "claude", "issue": 18, "note": "v07已将该职业二觉改为独立新构图关键立绘与连续遮罩/光轨演出；三觉保留原视频，不再复用。8条二觉共316槽增量替换，实际IMG回读精确，246人物帧及其余payload保持。根助手已在真实工作台播放五套二觉并对照三觉；游戏时序仍待实机，未安装或代用户复核。", "frames_version": 1794318490}
+{"t": "2026-11-10 21:49:48", "op": "fixed", "by": "claude", "issue": 19, "note": "v07已将该职业二觉改为独立新构图关键立绘与连续遮罩/光轨演出；三觉保留原视频，不再复用。8条二觉共316槽增量替换，实际IMG回读精确，246人物帧及其余payload保持。根助手已在真实工作台播放五套二觉并对照三觉；游戏时序仍待实机，未安装或代用户复核。", "frames_version": 1794318490}
+{"t": "2026-11-10 21:49:48", "op": "fixed", "by": "claude", "issue": 20, "note": "v07已将该职业二觉改为独立新构图关键立绘与连续遮罩/光轨演出；三觉保留原视频，不再复用。8条二觉共316槽增量替换，实际IMG回读精确，246人物帧及其余payload保持。根助手已在真实工作台播放五套二觉并对照三觉；游戏时序仍待实机，未安装或代用户复核。", "frames_version": 1794318490}
+{"t": "2026-11-10 21:49:48", "op": "fixed", "by": "claude", "issue": 21, "note": "v07已将该职业二觉改为独立新构图关键立绘与连续遮罩/光轨演出；三觉保留原视频，不再复用。8条二觉共316槽增量替换，实际IMG回读精确，246人物帧及其余payload保持。根助手已在真实工作台播放五套二觉并对照三觉；游戏时序仍待实机，未安装或代用户复核。", "frames_version": 1794318490}
+{"t": "2026-11-10 22:00:36", "op": "verify", "by": "user", "recorded_by": "claude", "source": "user_chat_transcription", "request_id": "walk_cutin_approval_install_2026_11_10", "issue": 17, "frames_version": 1794318490, "note": "用户本轮聊天明确表示“审核通过，打包放进游戏吧。”；据原句转录本次候选审核认可与安装授权，非助手自行作美术通过判断；未声称游戏实机通过。"}
+{"t": "2026-11-10 22:00:36", "op": "verify", "by": "user", "recorded_by": "claude", "source": "user_chat_transcription", "request_id": "walk_cutin_approval_install_2026_11_10", "issue": 18, "frames_version": 1794318490, "note": "用户本轮聊天明确表示“审核通过，打包放进游戏吧。”；据原句转录本次候选审核认可与安装授权，非助手自行作美术通过判断；未声称游戏实机通过。"}
+{"t": "2026-11-10 22:00:36", "op": "verify", "by": "user", "recorded_by": "claude", "source": "user_chat_transcription", "request_id": "walk_cutin_approval_install_2026_11_10", "issue": 19, "frames_version": 1794318490, "note": "用户本轮聊天明确表示“审核通过，打包放进游戏吧。”；据原句转录本次候选审核认可与安装授权，非助手自行作美术通过判断；未声称游戏实机通过。"}
+{"t": "2026-11-10 22:00:36", "op": "verify", "by": "user", "recorded_by": "claude", "source": "user_chat_transcription", "request_id": "walk_cutin_approval_install_2026_11_10", "issue": 20, "frames_version": 1794318490, "note": "用户本轮聊天明确表示“审核通过，打包放进游戏吧。”；据原句转录本次候选审核认可与安装授权，非助手自行作美术通过判断；未声称游戏实机通过。"}
+{"t": "2026-11-10 22:00:36", "op": "verify", "by": "user", "recorded_by": "claude", "source": "user_chat_transcription", "request_id": "walk_cutin_approval_install_2026_11_10", "issue": 21, "frames_version": 1794318490, "note": "用户本轮聊天明确表示“审核通过，打包放进游戏吧。”；据原句转录本次候选审核认可与安装授权，非助手自行作美术通过判断；未声称游戏实机通过。"}

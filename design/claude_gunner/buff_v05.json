@@ -1,0 +1,64 @@
+{
+  "title": "Claude 大小姐 · buff v05 · 眨眼与自然微动",
+  "profession": "gunner_at",
+  "reference": "output/Claude_Gunner_v02/parts/raw/claude_a_0.png",
+  "output": "output/claude_buff_v05/preview",
+  "source": "output/claude_buff_v04/source_generated.png",
+  "frames": 19,
+  "width": 470,
+  "height": 668,
+  "fps": 15,
+  "framing": {"fit": "cover", "zoom": 1.0, "focus": [0.5, 0.5], "target": [0.5, 0.5]},
+  "generation": {
+    "source_raw": "output/claude_buff_v04/source_generated.png",
+    "blink_prompt_record": "design/claude_gunner/buff_v05_blink_prompts.txt",
+    "blink_compositing": "Only RGB inside the two feathered eye ROIs is used from generated eye edits. All other generated pixels and their alpha are discarded. The approved source alpha is retained."
+  },
+  "max_displacement_px": 3.0,
+  "protected_falloff_px": 8,
+  "canvas_pin_px": 8,
+  "protected": [
+    {"name": "crown_and_roots", "polygon": [[320,0],[748,0],[749,212],[706,257],[672,260],[630,187],[430,190],[349,280],[309,239]]},
+    {"name": "face_and_ear", "polygon": [[356,198],[450,190],[538,190],[622,242],[684,276],[685,354],[636,416],[562,456],[473,426],[402,382],[349,313]]},
+    {"name": "head_flower_and_ribbons", "polygon": [[220,12],[413,12],[439,187],[348,236],[331,351],[283,467],[156,490],[122,441],[179,363],[52,345],[142,281],[138,196]]},
+    {"name": "left_earring", "polygon": [[371,307],[417,307],[426,428],[379,435]]},
+    {"name": "right_earring", "polygon": [[600,390],[641,385],[651,488],[608,494]]},
+    {"name": "collar_brooch_and_cravat", "polygon": [[385,422],[546,422],[587,475],[624,510],[660,552],[656,620],[808,701],[802,789],[695,841],[602,827],[537,805],[515,637],[409,565]]},
+    {"name": "raised_hand_and_wrist", "polygon": [[589,505],[704,497],[781,524],[850,566],[895,619],[930,757],[880,785],[850,747],[815,649],[720,606],[637,634],[592,600]]},
+    {"name": "cape_emblem", "polygon": [[218,537],[386,532],[449,619],[415,730],[272,742],[197,675]]},
+    {"name": "waistband", "polygon": [[406,947],[537,922],[699,933],[747,1019],[772,1161],[587,1231],[410,1118]]},
+    {"name": "left_hip_hand", "polygon": [[220,1300],[307,1264],[357,1307],[334,1381],[266,1414],[221,1378]]}
+  ],
+  "local_motion": [
+    {"name": "hair_left_long", "material": "exposed orange hair left of cape", "polygon": [[0,382],[126,388],[209,445],[266,497],[216,548],[137,608],[55,695],[0,745]], "feather_source": 22, "root_ramp": {"axis": "y", "start": 350, "end": 650}, "amplitude_px": [2.7,0.42], "phase": 0.0, "length_lag": 0.7},
+    {"name": "hair_right_face_tip", "material": "free tips outside face", "polygon": [[716,282],[765,291],[793,344],[783,405],[753,439],[714,452],[689,426],[714,386]], "feather_source": 17, "root_ramp": {"axis": "y", "start": 279, "end": 420}, "amplitude_px": [1.8,0.35], "phase": 1.05, "length_lag": 0.55},
+    {"name": "hair_right_long", "material": "outer hair behind raised hand", "polygon": [[719,428],[833,459],[943,510],[985,580],[981,637],[955,675],[893,665],[851,568],[762,504]], "feather_source": 22, "root_ramp": {"axis": "y", "start": 420, "end": 595}, "amplitude_px": [-2.6,0.5], "phase": 0.95, "length_lag": 0.75},
+    {"name": "hair_right_lower", "material": "exposed hair outside sleeve and skirt", "polygon": [[981,1055],[1024,1088],[1024,1452],[979,1393],[920,1276],[842,1226],[746,1180],[776,1158],[924,1202],[1003,1187]], "feather_source": 25, "root_ramp": {"axis": "y", "start": 1060, "end": 1280}, "amplitude_px": [2.4,0.45], "phase": 1.45, "length_lag": 0.45},
+    {"name": "hair_left_lower", "material": "exposed hair outside lower left cuff", "polygon": [[0,1210],[75,1251],[112,1326],[166,1404],[95,1492],[0,1493]], "feather_source": 20, "root_ramp": {"axis": "y", "start": 1200, "end": 1400}, "amplitude_px": [-2.1,0.3], "phase": 0.35, "length_lag": 0.8},
+    {"name": "cape_hem", "material": "narrow free lower edge only", "polygon": [[3,801],[70,762],[164,761],[290,787],[382,778],[533,749],[538,779],[399,808],[288,827],[164,791],[70,792],[0,844]], "feather_source": 12, "root_ramp": {"axis": "x", "start": 535, "end": 160}, "amplitude_px": [0.32,0.9], "phase": 1.7, "length_lag": 0.4},
+    {"name": "right_cuff_free_frill", "material": "outer cuff tips, pinned at wrist", "polygon": [[897,657],[936,654],[958,675],[944,706],[988,705],[1024,744],[1024,781],[970,813],[923,834],[901,812],[939,776],[914,731]], "feather_source": 12, "root_ramp": {"axis": "x", "start": 899, "end": 971}, "amplitude_px": [0.85,0.38], "phase": 2.0, "length_lag": 0.2},
+    {"name": "left_cuff_free_frill", "material": "dangling left cuff tips", "polygon": [[129,1245],[203,1244],[214,1308],[214,1348],[234,1364],[209,1405],[175,1387],[157,1357],[127,1337]], "feather_source": 13, "root_ramp": {"axis": "y", "start": 1242, "end": 1350}, "amplitude_px": [-0.65,0.55], "phase": 1.65, "length_lag": 0.3},
+    {"name": "skirt_outer_trim", "material": "free far-right lower cloth trim", "polygon": [[801,1240],[860,1310],[898,1363],[972,1454],[1024,1492],[1024,1536],[970,1536],[902,1440],[846,1360],[787,1279]], "feather_source": 20, "root_ramp": {"axis": "y", "start": 1245, "end": 1450}, "amplitude_px": [0.75,0.25], "phase": 1.9, "length_lag": 0.3}
+  ],
+  "blink": {
+    "sequence": ["open","open","open","open","open","open","open","half","closed","half","open","open","open","open","open","open","open","open","open"],
+    "eyes": [
+      {"name": "viewer_left", "polygon": [[453,216],[486,217],[523,228],[549,247],[559,262],[552,278],[528,276],[501,268],[477,259],[461,245]], "feather_source": 2.2},
+      {"name": "viewer_right", "polygon": [[589,279],[611,268],[641,271],[665,286],[681,303],[670,323],[646,329],[620,315],[602,303],[590,291]], "feather_source": 2.2}
+    ],
+    "states": {
+      "half": {"path": "output/claude_buff_v05/blink_half_generated.png", "alignment": {"offset": [0,0]}, "per_eye_alignment": {}},
+      "closed": {"path": "output/claude_buff_v05/blink_closed_generated.png", "alignment": {"offset": [0,0]}, "per_eye_alignment": {}}
+    },
+    "alignment_note": "Per-eye offsets sample edited image at source coordinate + offset; inverse_affine may override with six sampling coefficients. RGB eye patches are composed into original before one fixed camera resize; original alpha is retained."
+  },
+  "targets": [
+    "Cutscene_buf/06_gunner_F_buf_launcher.bk2",
+    "Cutscene_buf/06_gunner_F_buf_meca.bk2",
+    "Cutscene_buf/06_gunner_F_buf_paramedic.bk2",
+    "Cutscene_buf/06_gunner_F_buf_ranger.bk2",
+    "Cutscene_buf/06_gunner_F_buf_spit.bk2"
+  ],
+  "license_note": "民间二创形象，原作者和授权未核实，仅自用。",
+  "note": "沿用已认可的v04近景构图。静止相机；半闭1帧、闭眼1帧、半闭1帧；发梢、袖口自由边、披肩下缘和裙边小幅微动。头脸轮廓、花饰、手、领结、腰封固定。首次/末次局部相位一致，不等同于实机无缝循环验收；未安装、未实机。"
+}

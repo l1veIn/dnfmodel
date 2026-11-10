@@ -2,6 +2,118 @@
  "note": "Optional group labels for the review board. Assets themselves are the categories of scripts/workbench/categories.py, read from the project's newest NPK; only 'groups' (label + match on path tail or IMG stem) is used. Generated from design/gunner_props/families.json.",
  "assets": [
   {
+   "id": "awakening_v09",
+   "kind": "img",
+   "label": "一觉立绘 v09",
+   "groups": [
+    {"id": "awakening_launcher", "label": "一觉立绘 · 重炮", "match": ["atgunner_launcher", "atgunner_launcher_event"]},
+    {"id": "awakening_mecha", "label": "一觉立绘 · 机械操控", "match": ["atgunner_mecha", "atgunner_mecha_event"]},
+    {"id": "awakening_ranger", "label": "一觉立绘 · 双枪", "match": ["atgunner_ranger", "atgunner_ranger_event", "(tn)atgunner_ranger"]},
+    {"id": "awakening_spit", "label": "一觉立绘 · 弹药长枪", "match": ["atgunner_spit", "atgunner_spit_event"]}
+   ]
+  },
+  {
+   "id": "mechanic_v08",
+   "kind": "img",
+   "label": "机械技能补全 v08",
+   "groups": [
+    {
+     "id": "factory_core_v08",
+     "label": "拦截机工厂 · 机场本体与召唤",
+     "match": [
+      "sparrowfactory/factory_appear",
+      "sparrowfactory/factory_body",
+      "sparrowfactory/factory_dodge",
+      "sparrowfactory/factory_piece",
+      "sparrowfactory/factory_summon",
+      "sparrowfactory/factory_summon_fire"
+     ]
+    },
+    {
+     "id": "factory_drone_v08",
+     "label": "拦截机工厂 · 飞行器与攻击",
+     "match": [
+      "sparrowfactory/newsparrow_body",
+      "sparrowfactory/newsparrow_dodge",
+      "sparrowfactory/sparrow_attack",
+      "sparrowfactory/sparrow_body",
+      "sparrowfactory/sparrow_bullet",
+      "sparrowfactory/sparrow_explosion"
+     ]
+    },
+    {
+     "id": "factory_vp_v08",
+     "label": "拦截机工厂 · 编队与能量特效",
+     "match": [
+      "sparrowfactory/firesolar01",
+      "sparrowfactory/firesolar02",
+      "sparrowfactory/lightsolar01",
+      "sparrowfactory/lightsolar02",
+      "sparrowfactory/solarglow",
+      "sparrowfactory/solarsparrow",
+      "sparrowfactory/sparrowfactoryvpfire01",
+      "sparrowfactory/sparrowfactoryvpfire02",
+      "sparrowfactory/sparrowfactoryvpfire03",
+      "sparrowfactory/sparrowfactoryvpfloor",
+      "sparrowfactory/sparrowfactoryvpformationd",
+      "sparrowfactory/sparrowfactoryvpformationd2",
+      "sparrowfactory/sparrowfactoryvpformationn",
+      "sparrowfactory/sparrowfactoryvpformationn2",
+      "sparrowfactory/sparrowfactoryvpglow",
+      "sparrowfactory/sparrowfactoryvpshield",
+      "sparrowfactory/sparrowfactoryvpwall01",
+      "sparrowfactory/sparrowfactoryvpwall02",
+      "sparrowfactory/sparrowfactoryvpwall03",
+      "sparrowfactory/sparrowfactoryvpwallelectrica",
+      "sparrowfactory/sparrowfactoryvpwallelectricb"
+     ]
+    },
+    {
+     "id": "rx60_v08",
+     "label": "RX-60 · 警戒机器人",
+     "match": [
+      "rx-60/body",
+      "rx-60/circle",
+      "rx-60/dust",
+      "rx-60/groundeffect",
+      "rx-60/rx60jump",
+      "rx-60/siren"
+     ]
+    },
+    {
+     "id": "rx78_v08",
+     "label": "RX-78 · 小机器人与衍生帧",
+     "match": [
+      "rx78/rx78",
+      "rx78/rx78boom",
+      "rx78/rx78drop",
+      "rx78/rx78dropeffect",
+      "rx78/rx78dropred",
+      "rx78/rx78jump",
+      "rx78/rx78piece",
+      "rx78/rx78piece01",
+      "rx78/rx78piece02",
+      "rx78/rx78piece03",
+      "rx78/rx78piece04",
+      "rx78/rx78piece05",
+      "rx78/rx78walk",
+      "rx78/silverburster",
+      "rx78/silverbursterjump",
+      "rx78/silverburster_drop",
+      "rx78/silverburster_particle"
+     ]
+    },
+    {
+     "id": "fightingspirit_v08",
+     "label": "斗志机器人 · 本体与声波",
+     "match": [
+      "fightingspirit/effect",
+      "fightingspirit/robot"
+     ]
+    }
+   ]
+  },
+  {
    "id": "cutin",
    "kind": "img",
    "label": "切入图",

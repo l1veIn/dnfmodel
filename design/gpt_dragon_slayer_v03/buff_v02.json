@@ -1,0 +1,432 @@
+{
+  "title": "GPT 龙娘 · 白龙降临 / 银月断空 buff v02",
+  "profession": "swordman_at",
+  "output": "output/dragon_buff_v02/preview",
+  "character_config": "design/gpt_dragon_slayer_v03/buff_v01.json",
+  "source": "output/dragon_buff_v01/art/raw_generated.png",
+  "reference": "design/gpt_dragon_slayer_v03/three_view.webp",
+  "frames": 19,
+  "width": 470,
+  "height": 668,
+  "fps": 15,
+  "blink_sequence": [
+    "open",
+    "open",
+    "open",
+    "open",
+    "open",
+    "open",
+    "open",
+    "open",
+    "open",
+    "open",
+    "open",
+    "open",
+    "half",
+    "closed",
+    "half",
+    "open",
+    "open",
+    "open",
+    "open"
+  ],
+  "beats": [
+    {
+      "frames": [
+        0,
+        3
+      ],
+      "name": "冷紫蓄势"
+    },
+    {
+      "frames": [
+        4,
+        7
+      ],
+      "name": "白龙压场 / 人物显露"
+    },
+    {
+      "frames": [
+        8,
+        11
+      ],
+      "name": "单次银月斩爆"
+    },
+    {
+      "frames": [
+        12,
+        18
+      ],
+      "name": "余烬流散 / 冷傲定场"
+    }
+  ],
+  "figure_opacity": [
+    0.17,
+    0.21,
+    0.28,
+    0.39,
+    0.56,
+    0.73,
+    0.9,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "portrait_fixed_offset": [
+    36,
+    0
+  ],
+  "face_protection": {
+    "center": [
+      257,
+      167
+    ],
+    "radii": [
+      72,
+      67
+    ],
+    "soft_edge": 22
+  },
+  "dragon": {
+    "source": "output/dragon_buff_v02/art/dragon_aura_raw.png",
+    "center": [
+      183,
+      344
+    ],
+    "target_width": 470,
+    "opacity": [
+      0.02,
+      0.06,
+      0.13,
+      0.25,
+      0.46,
+      0.72,
+      0.94,
+      1,
+      1,
+      0.98,
+      0.94,
+      0.88,
+      0.82,
+      0.78,
+      0.74,
+      0.7,
+      0.67,
+      0.64,
+      0.62
+    ],
+    "scale": [
+      0.75,
+      0.77,
+      0.79,
+      0.82,
+      0.87,
+      0.94,
+      1.02,
+      1.065,
+      1.08,
+      1.065,
+      1.05,
+      1.045,
+      1.04,
+      1.035,
+      1.03,
+      1.025,
+      1.02,
+      1.018,
+      1.015
+    ],
+    "rotation": [
+      -6,
+      -5.8,
+      -5.5,
+      -5,
+      -4,
+      -2.5,
+      -1,
+      0,
+      1,
+      0.7,
+      0.4,
+      0.2,
+      0,
+      -0.1,
+      -0.2,
+      -0.3,
+      -0.4,
+      -0.5,
+      -0.6
+    ],
+    "reveal": [
+      0.1,
+      0.18,
+      0.25,
+      0.36,
+      0.5,
+      0.68,
+      0.85,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "slash": {
+    "source": "output/dragon_buff_v02/art/slash_raw.png",
+    "center": [
+      237,
+      387
+    ],
+    "target_width": 550,
+    "center_path": [
+      [
+        -190,
+        500
+      ],
+      [
+        -190,
+        500
+      ],
+      [
+        -190,
+        500
+      ],
+      [
+        -190,
+        500
+      ],
+      [
+        -190,
+        500
+      ],
+      [
+        -190,
+        500
+      ],
+      [
+        -190,
+        500
+      ],
+      [
+        -80,
+        350
+      ],
+      [
+        80,
+        240
+      ],
+      [
+        390,
+        10
+      ],
+      [
+        800,
+        -180
+      ],
+      [
+        800,
+        -180
+      ],
+      [
+        800,
+        -180
+      ],
+      [
+        800,
+        -180
+      ],
+      [
+        800,
+        -180
+      ],
+      [
+        800,
+        -180
+      ],
+      [
+        800,
+        -180
+      ],
+      [
+        800,
+        -180
+      ],
+      [
+        800,
+        -180
+      ]
+    ],
+    "opacity": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.64,
+      0.94,
+      1,
+      0.84,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.97,
+      1.05,
+      1.1,
+      1.1,
+      1.1,
+      1.1,
+      1.1,
+      1.1,
+      1.1,
+      1.1,
+      1.1,
+      1.1
+    ],
+    "rotation": [
+      40,
+      40,
+      40,
+      40,
+      40,
+      40,
+      40,
+      44,
+      48,
+      52,
+      52,
+      52,
+      52,
+      52,
+      52,
+      52,
+      52,
+      52,
+      52
+    ],
+    "reveal": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.42,
+      0.78,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "slash_core_width": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "charge_strength": [
+    0.24,
+    0.39,
+    0.58,
+    0.81,
+    1,
+    0.76,
+    0.47,
+    0.18,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "burst_strength": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0.1,
+    0.3,
+    0.7,
+    1,
+    0.92,
+    0.66,
+    0.41,
+    0.2,
+    0.08,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "targets": [
+    "Cutscene_buf/02_ghost_F_buf_blade.bk2",
+    "Cutscene_buf/02_ghost_F_buf_darktemp.bk2",
+    "Cutscene_buf/02_ghost_F_buf_demon.bk2",
+    "Cutscene_buf/02_ghost_F_buf_sword.bk2",
+    "Cutscene_buf/02_ghost_F_buf_vega.bk2"
+  ],
+  "note": "Root supplies original independent RGBA dragon/slash layers. First prepare unencoded native and actual335px-width samples. Freeze only the reviewed draft, then existing authorized RAD encode. No paid calls or game/NPK writes. All v01 artifacts stay byte-identical."
+}

@@ -1,0 +1,29 @@
+{
+  "scope": "Work-in-progress character review; user frame numbers are tool slots plus one.",
+  "clap": {
+    "frames": [10, 11, 12, 13],
+    "reference": 10,
+    "planted_foot": "character right / screen left",
+    "lower_body_root_y": 260,
+    "fully_planted_y": 321,
+    "fixed_native_foot_box": [199, 319, 216, 338],
+    "corrections_px": {"10": 0, "11": 8, "12": 9, "13": 10},
+    "other_foot_center_x": {"10": 260, "11": 252, "12": 251, "13": 250},
+    "note": "Upper body retains the original inward clap motion. Only the planted side below the waist is corrected; the other boot keeps its inward step. The final boot pixels come from the approved first clap frame."
+  },
+  "stand": {
+    "frames": [14, 15, 16, 17, 18, 19, 20],
+    "reference": 14,
+    "translation_px": {"14": [0, 0], "15": [0, 0], "16": [0, 0], "17": [0, 0], "18": [-1, 0], "19": [-1, 0], "20": [0, 0]},
+    "fixed_native_foot_boxes": [[205, 324, 221, 338], [256, 324, 272, 338]],
+    "note": "The original shoe layers are identical in all seven frames. Keep both boots fixed while retaining the distinct upper-body, hand and cloth poses."
+  },
+  "walk": {
+    "frames": [68, 69, 70, 71, 72, 73, 74, 75],
+    "reference": 68,
+    "translation_px": {"68": [0, 0], "69": [-1, 0], "70": [0, 1], "71": [1, 3], "72": [0, 4], "73": [-2, 3], "74": [0, 5], "75": [0, 2]},
+    "source_head_band": "First 16 occupied rows of the official skin layer, excluding arms and feet",
+    "drawn_head_band": "First 24 occupied rows of the replacement, checked against the face contact sheet",
+    "note": "Integer whole-pose placement follows the official head motion. The eight arm/leg poses and all their pixels remain intact."
+  }
+}

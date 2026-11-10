@@ -1,0 +1,136 @@
+{
+  "note": "龙娘v07候选中文分组：五职业一觉12路径保持；二觉5套独立关键立绘演出覆盖8路径，三觉保留现有5段视频共7路径。仅按精确IMG stem区分职业及觉醒阶段；同阶段(18)别名归同组。资源分组不代表用户审美或实机通过。",
+  "assets": [
+    {
+      "id": "awakening_v04",
+      "kind": "img",
+      "label": "龙娘一觉 · 五职业立绘",
+      "groups": [
+        {
+          "id": "awakening_weapon",
+          "label": "一觉立绘 · 剑宗 · 双手执刀",
+          "match": [
+            "ghostf_weapon",
+            "ghostf_weapon_event"
+          ]
+        },
+        {
+          "id": "awakening_darktempler",
+          "label": "一觉立绘 · 暗帝 · 掌印施法",
+          "match": [
+            "ghostf_darktempler",
+            "(18)ghostf_darktempler",
+            "ghostf_darktempler_event"
+          ]
+        },
+        {
+          "id": "awakening_demonslayer",
+          "label": "一觉立绘 · 剑魔 · 链刃横斩",
+          "match": [
+            "ghostf_demonslayer",
+            "(tn)ghostf_demonslayer",
+            "ghostf_demonslayer_event"
+          ]
+        },
+        {
+          "id": "awakening_vagabond",
+          "label": "一觉立绘 · 剑帝 · 双剑凌空",
+          "match": [
+            "ghostf_vegabond",
+            "ghostf_vegabond_event"
+          ]
+        },
+        {
+          "id": "awakening_blade",
+          "label": "一觉立绘 · 刃影 · 回眸拔刀",
+          "match": [
+            "ghostf_blade",
+            "ghostf_blade_tn"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cutin_v07",
+      "kind": "img",
+      "label": "龙娘切入 · 五职业二觉与三觉",
+      "groups": [
+        {
+          "id": "cutin_weapon_2nd",
+          "label": "二觉切入 · 剑宗 · 刃横冷瞳",
+          "match": [
+            "atsword_majesty",
+            "(18)atsword_majesty"
+          ]
+        },
+        {
+          "id": "cutin_weapon_3rd",
+          "label": "三觉切入 · 剑宗 · 银翼拔刀",
+          "match": [
+            "atsword_swordmaster_neo"
+          ]
+        },
+        {
+          "id": "cutin_darktempler_2nd",
+          "label": "二觉切入 · 暗帝 · 影缚回望",
+          "match": [
+            "atsword_punishment",
+            "(18)atsword_punishment"
+          ]
+        },
+        {
+          "id": "cutin_darktempler_3rd",
+          "label": "三觉切入 · 暗帝 · 掌印开翼",
+          "match": [
+            "atsword_darktemplar_neo"
+          ]
+        },
+        {
+          "id": "cutin_demonslayer_2nd",
+          "label": "二觉切入 · 剑魔 · 链弧临界",
+          "match": [
+            "atsword_deicide"
+          ]
+        },
+        {
+          "id": "cutin_demonslayer_3rd",
+          "label": "三觉切入 · 剑魔 · 链刃横斩",
+          "match": [
+            "atsword_demonslayer_neo",
+            "(18)atsword_demonslayer_neo"
+          ]
+        },
+        {
+          "id": "cutin_blade_2nd",
+          "label": "二觉切入 · 刃影 · 鞘锋蓄势",
+          "match": [
+            "atsword_vendetta",
+            "(18)atsword_vendetta"
+          ]
+        },
+        {
+          "id": "cutin_blade_3rd",
+          "label": "三觉切入 · 刃影 · 回眸拔刀",
+          "match": [
+            "atsword_blade_neo",
+            "(18)atsword_blade_neo"
+          ]
+        },
+        {
+          "id": "cutin_vagabond_2nd",
+          "label": "二觉切入 · 剑帝 · 双锋静定",
+          "match": [
+            "atsword_swordempress"
+          ]
+        },
+        {
+          "id": "cutin_vagabond_3rd",
+          "label": "三觉切入 · 剑帝 · 双剑凌空",
+          "match": [
+            "neo_vagabond_cut_s"
+          ]
+        }
+      ]
+    }
+  ]
+}

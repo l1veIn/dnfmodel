@@ -1,0 +1,80 @@
+{
+  "title": "Whale maid standing redraw v04",
+  "slots": [
+    10,
+    11,
+    12,
+    13
+  ],
+  "current_native_base": "output/fatfish_whale_maid_v03/native_frames",
+  "preserve_verified_battle_ahoge": [
+    14,
+    15,
+    16,
+    17
+  ],
+  "official_motion_analysis": "output/whale_stand_redraw_v04/reference/motion_analysis.json",
+  "generation": {
+    "tool": "built-in image_gen",
+    "prompt": "Use case: precise-object-edit / identity-preserve. Asset: a four-frame, hand-drawn anime-game idle sprite sheet for one adult whale maid heroine. Make a genuinely redrawn articulated animation from the supplied references, not a filter or stretch of a still.\n\nINPUT ROLES: Image 1 is the exact character and 2x2 layout seed. Image 2 is ONLY the official pose/motion reference for four consecutive frames, with fixed toe positions marked by cyan circles. Do not copy the red-haired character, her black dress or boots. Image 3 is the primary identity/costume master. Preserve her adult face and small head, long deep-navy hair fading pale blue, looped ahoge, big white maid headband and blue bow, whale-fin ears, navy puff sleeves fully connected to and covering the shoulders, white frilled cuffs and bare hands, white ruffled bodice and apron with small navy whale emblem, gold buttons/trim, navy bell skirt, white tights, and glossy navy Mary Jane shoes with gold buckles and chunky heels. Preserve the large white back bow and short THICK lifted whale tail with broad rounded flukes. No exposed shoulders, long thin tail or smaller skirt.\n\nOUTPUT: exactly FOUR complete full-body sprites in a neat 2x2 grid, read top-left, top-right, bottom-left, bottom-right. Same camera, three-quarter side view facing right, same body size, same face/expression and costume details in all four cells. Each sprite has generous transparent margins above hair and around tail and shoes; no crop. Aim for a square 2048x2048 sheet. Each cell is the same fixed stage; matching forefoot/toe contact coordinates in every cell. No words, numbers, colored anchors, dividers, ground lines or shadows. True transparent background.\n\nACTION: relaxed playful standing with BOTH arms hanging naturally at the sides, wrists loose and both hands visible. Feet close together, one foot slightly ahead as in official pose Image2, not a combat-wide stance and not hands stacked on the apron. This is a tiny ankle/knee-driven rock, not a jump and not chest inflation.\nFrame1: neutral tall relaxed stance, soles/forefeet planted, knees soft, arms down.\nFrame2: near heel rolls upward a LITTLE around the SAME planted toe, knees flex softly so pelvis, shoulders and face settle slightly DOWN. The face drifts a tiny amount back/left, while the sleeve cuff drifts a tiny amount forward/right and down. The far forefoot remains planted. The heel lift does NOT raise the entire body; redraw the ankle bend and knee compression anatomically.\nFrame3: return to the neutral stance very close to Frame1, with only natural loose hair/skirt follow-through.\nFrame4: the opposite rocking phase: near heel settles, far heel/ankle gently flexes, face drifts a tiny amount forward/right, near cuff a tiny amount back/left and up. Forefoot tips remain at their original contact points. Keep the articulation very restrained, about one game pixel of displacement when the heroine is reduced to roughly100px tall (about8px at this drawing size), so the animation is coherent and not exaggerated.\n\nDraw clean cel shading and clean dark-navy outlines with flat readable color planes, matching the master. Cloth folds, ankle angles and knees are freshly drawn for each phase. Do not reposition each figure using a different crop or scale. No flat-image zoom/rotation, wavy whole-body warp, duplicate limbs, disconnected hands, missing fingers, floating shoes or smeared hems. Both shoes remain complete and recognisable through all phases.",
+    "references": [
+      {
+        "path": "output/whale_stand_redraw_v04/reference/redraw_identity_layout_2x2.png",
+        "sha256": "3816b1375f0e8197410eded92490d25456c287e3645ecefad219ffba171298ad"
+      },
+      {
+        "path": "output/whale_stand_redraw_v04/reference/official_poses_2x2.png",
+        "sha256": "1e4a4f0878a13a3a75e170898d7bbe999f4e07d1f398c60f7747bd495ad0ace0"
+      },
+      {
+        "path": "output/fatfish_whale_maid_v03/parts/raw/master_e_0.png",
+        "sha256": "6352ba09cadbe49e912afbc973c3099cfdc4d945f5f8d67832c8b8244d654ac7"
+      }
+    ],
+    "transparent_background": true,
+    "prompt_is_initial_request_brief_not_exact_submission": true,
+    "exact_prompt_files": [
+      "output/whale_stand_redraw_v04/generation_prompt_v01.txt",
+      "output/whale_stand_redraw_v04/generation_prompt_v02.txt",
+      "output/whale_stand_redraw_v04/generation_prompt_v03.txt"
+    ]
+  },
+  "status": "root_selected_candidate02",
+  "new_65535_calls": 0,
+  "installed": false,
+  "user_aesthetic_approved": false,
+  "selected_sheet": "output/whale_stand_redraw_v04/art/standing_sheet_v03.png",
+  "selected_sheet_sha256": "cdbf18e8fde5c2e7c9f1f3494cd187373e130edfcfe819e41b71f8e975436a3e",
+  "candidate_manifest": "output/whale_stand_redraw_v04/candidate02/manifest.json",
+  "generation_record": "output/whale_stand_redraw_v04/generation_record.json",
+  "native_postprocess": {
+    "only_two_forefoot_caps_locked": true,
+    "rois": {
+      "near_forefoot": [
+        245,
+        383,
+        253,
+        387
+      ],
+      "far_forefoot": [
+        253,
+        377,
+        260,
+        381
+      ]
+    },
+    "max_cap_rgba_delta": [
+      0,
+      0
+    ],
+    "changed_pixels_outside_caps_vs_new_drawing": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "source_neutral_slot": 10,
+    "old_v03_body_used": false,
+    "heel_calf_torso_free": true
+  }
+}

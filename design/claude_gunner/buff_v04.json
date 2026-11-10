@@ -1,0 +1,31 @@
+{
+  "title": "Claude 大小姐 · buff v04 · 华丽近景",
+  "profession": "gunner_at",
+  "reference": "output/Claude_Gunner_v02/parts/raw/claude_a_0.png",
+  "output": "output/claude_buff_v04/preview",
+  "source": "output/claude_buff_v04/source_generated.png",
+  "frames": 19,
+  "width": 470,
+  "height": 668,
+  "fps": 15,
+  "framing": {
+    "fit": "cover",
+    "zoom": 1.0,
+    "focus": [0.5, 0.5],
+    "target": [0.5, 0.5]
+  },
+  "generation": {
+    "method": "single AI hero illustration with deterministic camera and light effects",
+    "source_raw": "output/claude_buff_v04/source_generated.png",
+    "original_tool_file": "exec-6b36ed64-713c-4b30-a7dd-742dfddd21bb.png"
+  },
+  "targets": [
+    "Cutscene_buf/06_gunner_F_buf_launcher.bk2",
+    "Cutscene_buf/06_gunner_F_buf_meca.bk2",
+    "Cutscene_buf/06_gunner_F_buf_paramedic.bk2",
+    "Cutscene_buf/06_gunner_F_buf_ranger.bk2",
+    "Cutscene_buf/06_gunner_F_buf_spit.bk2"
+  ],
+  "license_note": "民间二创形象，原作者和授权未核实，仅自用。",
+  "note": "半身近景主视觉；允许肩部及下摆有意裁切。固定人物立绘配合轻微镜头与橙色光效，不声称人物动作、眨眼或无缝循环。未安装、未实机。"
+}

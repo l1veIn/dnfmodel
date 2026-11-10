@@ -1,0 +1,48 @@
+{
+  "candidate": "candidate03",
+  "common_world_crop": [
+    165,
+    240,
+    160,
+    160
+  ],
+  "registration": {
+    "nod_batch": [
+      0.3039986666666667,
+      167.38878885904947,
+      241.45308939615884
+    ],
+    "gesture_sheet_batch": [
+      0.30025445292620867,
+      185.3,
+      266.19847328244276
+    ],
+    "gesture_key_batch": [
+      0.09874476987447699,
+      185.3,
+      266.4200836820084
+    ],
+    "gesture_middle_batch": [
+      0.170767004341534,
+      185.3,
+      266.29232995658464
+    ],
+    "gesture_grip_batch": [
+      0.17936193943023682,
+      165.343994140625,
+      240.3059285481771
+    ]
+  },
+  "registration_policy": "Each returned generation batch gets one fixed scale+translation from its common design coordinates. No per-frame bbox registration, tracking, local shift, or lower-half splice. All output frames use one world crop, size and clip selection mapping.",
+  "nod_policy": "First frame is approved new idle canonical exactly. Subsequent frames preserve that newly drawn static body, hair/horns/feet; use genuine new generated connected active shoulder-arm-palm-finger edits and interior downward gaze, without rigid head rotation.",
+  "gesture_policy": "Full newly painted figures, preserve correct first-sheet cells 0,1,6,7,8; replace middle four with approved key126 plus actually painted 125,127,128. No prior lower-body copy.",
+  "grip_refinement": true,
+  "canonical_directory": "output/dragon_breath_redraw_v06/candidate03_grip/idle",
+  "nod_phase_source_cells": {
+    "4": "approved new idle canonical",
+    "5": 2,
+    "6": 3,
+    "7": 4,
+    "8": 4
+  }
+}

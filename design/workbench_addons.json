@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "addons": [
+    {
+      "id": "ai_interface_portraits_v01",
+      "manifest": "output/interface_portraits_v01/package_v01/manifest.json",
+      "enabled": true
+    }
+  ]
+}

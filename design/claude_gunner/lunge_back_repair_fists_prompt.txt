@@ -1,0 +1,5 @@
+Tool: built-in image_gen.imagegen
+Edit target: references/v4_normalized.png
+transparent_background: true
+
+Edit the attached rear-view lady sprite. The open splayed hands are WRONG. Change BOTH open palms into small CLOSED FISTS gripping invisible gun handles; REMOVE the spread fingers completely. Keep the back view, head, hair, cape, corset, skirt, boots, canvas, scale and every area outside the two wrists/forearms unchanged. On this 576x576 reference canvas the UPPER fist center must be near (346,204), around the lower side of the head, and the LOWER fist center near (226,284), just below the back cape level. Connect each fist naturally to its sleeve; move only the small wrist/forearm region as required, no body-wide stretch. The high fist points diagonally up-right and the low fist diagonally down-left, ready to hold the game's guns. Do not draw guns or props. No open palms, no spread fingers, no extra hand, no hand on hip. Her actual BACK still faces the viewer; no face, chest brooch or front buttons. Same clean cel illustration, actual transparent background, no text or guides. Output the complete figure with unchanged head and feet.

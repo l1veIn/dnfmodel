@@ -1,0 +1,76 @@
+{
+  "task": "Replace user54-56 with the user's authoritative rear character design",
+  "scope": [
+    53,
+    54,
+    55
+  ],
+  "user_reference": "output/validation/claude_user_back_reference_2026-11-09/user_three_views.jpg",
+  "raw": "output/claude_user_back_reference_2026-11-09/pose_v03.png",
+  "generation": {
+    "mode": "built-in image_gen",
+    "exact_prompt": "design/claude_gunner/user_back_pose_v03_prompt.txt",
+    "generated_original": "exec-79581190-c9f9-4b77-ba59-81d6f5582787.png",
+    "status": "v3 staging",
+    "adoption_provenance": "design/claude_gunner/user_back_reference_adoption.json"
+  },
+  "normalization": "Aspect-preserving contain in a transparent 576x576 canvas",
+  "landmarks": {
+    "space": "normalized576",
+    "head_top_y": 88.19138755980862,
+    "soles": [
+      [
+        89.00027083145255,
+        541.0909090909091
+      ],
+      [
+        386.88933477388485,
+        530.5263157894736
+      ]
+    ],
+    "grips": [
+      [
+        358.0342946630578,
+        142.50437623993466
+      ],
+      [
+        204.37549223017317,
+        244.63923444976078
+      ]
+    ],
+    "arm_protected_boxes": [
+      [
+        0,
+        0,
+        576,
+        110
+      ]
+    ],
+    "arm_protect_below_y": 275
+  },
+  "limits": {
+    "max_boot_move_native": 4.0,
+    "max_hand_move_native": 4.5,
+    "min_jacobian": 0.45
+  },
+  "required_identity": [
+    "central black half-up bow at back of head",
+    "broad loose long orange hair",
+    "black rear-waist bow",
+    "two long pointed black/gold rear-waist tails",
+    "gold sun-flower emblem centered on the black rear skirt hem"
+  ],
+  "stage_only_until_root_visual_review": true,
+  "packaged": false,
+  "installed": false,
+  "graft_policy": {
+    "upper": "Retain calibrated generated fist; original near-weapon skin mask includes old face profile. Never copy upper source mask.",
+    "lower": "Source lower hand only at original weapon handle."
+  },
+  "verification": {
+    "staged_contact": "output/validation/claude_user_back_reference_2026-11-09/staged_armed_contact.png",
+    "layered_grip_evidence": "output/validation/claude_user_back_reference_2026-11-09/grip_graft_layers_final.png",
+    "independent_script": "scripts/validate_claude_user_back.py",
+    "scope_snapshot": "output/validation/claude_user_back_reference_2026-11-09/scope_before.json"
+  }
+}

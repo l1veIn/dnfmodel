@@ -1,0 +1,17 @@
+{
+  "title": "Claude crossed chest arm-chain correction, tools 64-67",
+  "key_art": "output/validation/claude_pose_correction_2026-11-09/hold_cross/generated/crossed_key_v4.png",
+  "smear_art": "output/validation/claude_pose_correction_2026-11-09/hold_cross/generated/crossed_smear_v2.png",
+  "canvas": [1199, 1312],
+  "palette": "output/validation/claude_idle_feet_fix/palette_original.png",
+  "palm_rois": {
+    "settled": [[385,170,450,240],[680,450,750,515]],
+    "smear": [[340,170,412,240],[620,490,685,550]]
+  },
+  "max_hand_calibration_px": 5,
+  "face_protection": [480,0,860,255],
+  "fixed_lower_body_from_y": 700,
+  "source_reference": "output/validation/claude_pose_correction_2026-11-09/reference_hold/hold_pose_arm_paths_065.png",
+  "pose_semantics": "Upper arm starts at screen-right shoulder and crosses the upper chest to the screen-left upper fist. Other arm descends from the far shoulder, bends at the left ribs, then forearm crosses lower chest toward the lower right fist. Head faces screen-right. Shoulder-to-elbow connections, not fist positions alone, require visual review.",
+  "installed": false
+}

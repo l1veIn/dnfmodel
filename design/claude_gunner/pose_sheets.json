@@ -24,23 +24,19 @@
    "clip_000_003": [
     {
      "slot": 0,
-     "cell": 0,
-     "phase": 0
+     "cell": 0
     },
     {
      "slot": 1,
-     "cell": 0,
-     "phase": 0.5
+     "cell": 0
     },
     {
      "slot": 2,
-     "cell": 0,
-     "phase": 1
+     "cell": 0
     },
     {
      "slot": 3,
-     "cell": 0,
-     "phase": 1.5
+     "cell": 0
     }
    ],
    "clip_004_009": [
@@ -69,6 +65,24 @@
      "cell": 7
     }
    ]
+  },
+  "micro": {
+   "0": {
+    "lift": [[0,0],[0.24,0],[0.32,-0.20],[0.46,-0.16],[0.62,-0.06],[0.78,0],[1,0]],
+    "moves": [{"poly":[[172,148],[215,145],[213,300],[182,357],[163,330]],"dx":-0.18,"dy":0,"feather":18}]
+   },
+   "1": {
+    "shear": [[0,0],[0.24,0],[0.36,0.18],[0.50,0.42],[0.64,0.72],[0.72,0.65],[0.80,0.22],[0.85,0],[1,0]],
+    "moves": [{"poly":[[172,148],[215,145],[213,300],[182,357],[163,330]],"dx":0.50,"dy":0,"feather":18}]
+   },
+   "2": {
+    "lift": [[0,0],[0.24,0],[0.32,0.20],[0.46,0.16],[0.62,0.06],[0.78,0],[1,0]],
+    "moves": [{"poly":[[172,148],[215,145],[213,300],[182,357],[163,330]],"dx":0.18,"dy":0,"feather":18}]
+   },
+   "3": {
+    "shear": [[0,0],[0.24,0],[0.36,-0.18],[0.50,-0.42],[0.64,-0.72],[0.72,-0.65],[0.80,-0.22],[0.85,0],[1,0]],
+    "moves": [{"poly":[[172,148],[215,145],[213,300],[182,357],[163,330]],"dx":-0.50,"dy":0,"feather":18}]
+   }
   },
   "motion": "In order: cells 1 and 2 she stands relaxed with both hands lightly together low in front of her skirt, visibly clasped. Cells 3 and 4 she sweeps her far arm back and down so its wide sleeve hangs out behind her. Cells 5 to 8 she brings both hands together in front of her hip, one hand gripping and the other working at it, as if loading a small object; the two hands stay in front of the gown, low at hip height."
  },

@@ -1,0 +1,142 @@
+{
+  "task": "Rear-facing lunge correction for user54/55/56 only",
+  "timestamp": "2026-11-09T18:18:16.832607+08:00",
+  "status": "rejected_superseded_by_user_back_repair",
+  "scope": {
+    "tool_slots": [
+      53,
+      54,
+      55
+    ],
+    "user_frames": [
+      54,
+      55,
+      56
+    ],
+    "clip": "clip_052_059"
+  },
+  "orientation": {
+    "official_evidence": "Original skin exposes shoulder/back/hip lines; full coat layer is rear-facing. Upper grip near head points upper-right; lower grip behind waist points lower-left. Original head is near x258, feet center near x243, torso leans toward image-right.",
+    "new_costume": "Broad cream capelet across the back shoulders, hair laid over it; no chest-like cape flower; rear corset and angled rear-skirt folds turn together, far hip decoration partly occluded. Clothing back, not exposed skin.",
+    "reference_contact": "output/validation/claude_pose_correction_2026-11-09/lunge_back/references/original_layers_and_current.png"
+  },
+  "generation": {
+    "mode": "built-in image_gen",
+    "paid_65535_used": false,
+    "selected_version": "v6 with protected v5 head/hair/grip/boot regions",
+    "versions": [
+      {
+        "version": "v1",
+        "tool": "built-in image_gen.imagegen",
+        "transparent_background": true,
+        "generated_original": "C:/Users/A/.codex/generated_images/01a1bfb1-b497-73c3-b01a-c2e1a5903159/exec-866b3275-2702-4a77-b14e-62a027b65bc7.png",
+        "workspace_raw": "output/Claude_Gunner_v02/parts/raw/lunge_back_repair_v1_0.png",
+        "workspace_sha256": "22527e50a165f5a8142abacc81c8fe0af0cdbca66b1130dc879bf54ae5d0faaa",
+        "exact_prompt": "design/claude_gunner/lunge_back_repair_prompt.txt",
+        "prompt_sha256": "01796c55ff38f4cbc517b0644b6735b13499bc0735eced866c1a8f95bf879262",
+        "decision": "Rejected: free generation spread arms too widely."
+      },
+      {
+        "version": "v2",
+        "tool": "built-in image_gen.imagegen",
+        "transparent_background": true,
+        "generated_original": "C:/Users/A/.codex/generated_images/01a1bfb1-b497-73c3-b01a-c2e1a5903159/exec-aba0d264-5a84-4da9-b226-4d02045b1796.png",
+        "workspace_raw": "output/Claude_Gunner_v02/parts/raw/lunge_back_repair_v2_0.png",
+        "workspace_sha256": "d8d25e2f8f8ddcabf1d2aa54d1c67f6fccc74df9565522332f4f6998c82431d4",
+        "exact_prompt": "design/claude_gunner/lunge_back_repair_arm_prompt.txt",
+        "prompt_sha256": "23b88907220284f1662f20f85ef06f0f3199832a1631228eaba9bc37bde2b457",
+        "decision": "Rejected: lower hand curved toward hip; pose still loose."
+      },
+      {
+        "version": "v3",
+        "tool": "built-in image_gen.imagegen",
+        "transparent_background": true,
+        "generated_original": "C:/Users/A/.codex/generated_images/01a1bfb1-b497-73c3-b01a-c2e1a5903159/exec-acfc669c-087c-480a-8e08-a409ce1566ae.png",
+        "workspace_raw": "output/Claude_Gunner_v02/parts/raw/lunge_back_repair_v3_0.png",
+        "workspace_sha256": "77c2f4f5e6485591ca53c59034448b68f8c77ebea245b0e19b6c0f524e0a60ad",
+        "exact_prompt": "design/claude_gunner/lunge_back_repair_arm2_prompt.txt",
+        "prompt_sha256": "15dcf9d2658e79eb8c6dacf80ab81f7993ae260f10de130b834cb2c668aee20a",
+        "decision": "Rear costume retained as reference only; limb layout not accepted."
+      },
+      {
+        "version": "v4",
+        "tool": "built-in image_gen.imagegen",
+        "transparent_background": true,
+        "generated_original": "C:/Users/A/.codex/generated_images/01a1bfb1-b497-73c3-b01a-c2e1a5903159/exec-6adb0407-e799-48e8-9f63-49653243d445.png",
+        "workspace_raw": "output/Claude_Gunner_v02/parts/raw/lunge_back_repair_v4_0.png",
+        "workspace_sha256": "1731ef3628223ce61623903bc20e30d63af2375ccdc1e8acc2ee794ba42cfc1a",
+        "exact_prompt": "design/claude_gunner/lunge_back_repair_pose_locked_prompt.txt",
+        "prompt_sha256": "3b15768ea87defb732a7177ac044a5113d6f2da599fa850a72a4833d03e0e401",
+        "decision": "Pose-locked edit of original HD53, selected as back-costume/layout base; hands needed closing."
+      },
+      {
+        "version": "v5",
+        "tool": "built-in image_gen.imagegen",
+        "transparent_background": true,
+        "generated_original": "C:/Users/A/.codex/generated_images/01a1bfb1-b497-73c3-b01a-c2e1a5903159/exec-90455441-7277-4ade-a67b-b55a0e38f9f8.png",
+        "workspace_raw": "output/Claude_Gunner_v02/parts/raw/lunge_back_repair_v5_0.png",
+        "workspace_sha256": "954e2ed446075624f5623a5071eee3dfa106a616dd669ea513bc4b1f98374222",
+        "exact_prompt": "design/claude_gunner/lunge_back_repair_fists_prompt.txt",
+        "prompt_sha256": "49241a3df4f6a7fad99bfdf233b6bf9a815a87144d6bd59adcebf33cdecd3da3",
+        "decision": "Selected final raw: both palms changed to fists; per-frame local calibration follows."
+      },
+      {
+        "version": "v6",
+        "tool": "built-in image_gen.imagegen",
+        "transparent_background": true,
+        "generated_original": "C:/Users/A/.codex/generated_images/01a1bfb1-b497-73c3-b01a-c2e1a5903159/exec-df7fff03-d6ce-4c4a-8f7c-37e19da75d98.png",
+        "workspace_raw": "output/Claude_Gunner_v02/parts/raw/lunge_back_repair_v6_0.png",
+        "workspace_sha256": "7b97b19c34f18c08067bb3b13775ef6fa36e12c6cd5eb46e665173a44058e05c",
+        "exact_prompt": "design/claude_gunner/lunge_back_repair_back_cape_prompt.txt",
+        "prompt_sha256": "335bfe5f0bb2a7a35aac6b047fe60d67b831641c697d688b135e03d760c22a13",
+        "decision": "Selected rear shoulder cape + turned asymmetrical back-skirt edit. Final composed raw locks v5 head, hair, fist regions and boots; only generated garments adopted."
+      }
+    ],
+    "final_composed_raw": "output/Claude_Gunner_v02/parts/raw/lunge_back_repair_v6_patch_0.png",
+    "final_composed_raw_sha256": "28928df3cc38feb490476f0aeab5155005e4e968875429d55b14c8f73d2376e1"
+  },
+  "source_inputs": {
+    "identity": "output/Claude_Gunner_v02/parts/raw/claude_a_0.png",
+    "pose": "output/validation/claude_pose_correction_2026-11-09/lunge_back/references/pose_0053.png",
+    "original_hd_before": "output/validation/claude_pose_correction_2026-11-09/lunge_back/before/hd/0053.png",
+    "back_costume": "output/validation/claude_pose_correction_2026-11-09/lunge_back/references/back_costume_reference.png",
+    "palette": "output/validation/claude_idle_feet_fix/palette_original.png",
+    "palette_sha256": "c4ca9a6b137d93e185649e26c241d75b878ee4119c2f1fea9bcb6ee9b71ba133"
+  },
+  "processing": {
+    "script": "scripts/fix_claude_lunge_back.py",
+    "script_sha256": "75d5beb8f66e734ab1bafbb105a3ce51a1723531409bfa00b7144bcfb361d9ba",
+    "command": "python scripts/fix_claude_lunge_back.py --apply",
+    "approach": "Same rear-view mother drawing for stable head/body across three near-identical source frames. Normalize576; native size165; fit separate soles and source head envelope; bounded per-frame forearm/fist calibration with positive forward and actual inverse Jacobians, followed by real source hand pixels at weapon contacts. Main head core and whole lower gown/boots are protected from arm fitting. No global final command.",
+    "selection_hands_gap_definition": "As in existing kit.hands fit reports, gap/found record pre-fit palm measurement, not final rendered residual; final contact coverage is in repair_report.json.",
+    "backups": "output/validation/claude_pose_correction_2026-11-09/lunge_back/before",
+    "garment_composite": "prepare_cape_patch() deterministically adopts v6 garment area with protected original v5 head, main long hair, fist and boot regions. Protected raw RGBA difference0; mask saved as references/v6_clothing_protected_mask.png. Local source fitting then matches original head/sole and grip geometry."
+  },
+  "validation": {
+    "script": "scripts/validate_lunge_back_repair.py",
+    "script_sha256": "cdd79f63bd776bd287be1d7e0424b4cd67eebedb529e5761a1e99d7e79019ec7",
+    "command": "python scripts/validate_lunge_back_repair.py --applied",
+    "report": "output/validation/claude_pose_correction_2026-11-09/lunge_back/validation_applied.json",
+    "repair_report": "output/validation/claude_pose_correction_2026-11-09/lunge_back/repair_report.json",
+    "comparison": "output/validation/claude_pose_correction_2026-11-09/lunge_back/repaired_contact.png",
+    "scope_baseline": "output/validation/claude_pose_correction_2026-11-09/lunge_back/scope_before_apply.json",
+    "result": "All three source/new head tops221 and bottoms330, height109; native bbox [203,221,282,330] versus source [203,221,283,330], one pixel narrower at far rear cloth. Shoe sole bottoms330/327; one alpha component and zero isolated pixels; 25/25 alpha at every target5x5. Other five clip frames (15 images) SHA256 unchanged; other five selection rows unchanged. Final native armed contact and local clothing edit visually reviewed by root.",
+    "local_clothing_before_after": "output/validation/claude_pose_correction_2026-11-09/lunge_back/cape_local_before_after.png"
+  },
+  "preserved": {
+    "same_clip_tool_slots": [
+      52,
+      56,
+      57,
+      58,
+      59
+    ],
+    "notes": "All accepted prior local-fit frames56-58 untouched; other motions, pose sheets, global final pass, NPK packaging and installation untouched."
+  },
+  "packaged": false,
+  "installed": false,
+  "superseding_reference_candidate": "design/claude_gunner/back_reference_v01.json",
+  "reference_audit_note": "The field back_costume was a crop of an older generated turn sheet, not independent rear design evidence. Numeric/applied checks describe raster placement only and do not validate rear identity/costume.",
+  "superseded_by": "design/claude_gunner/user_back_repair.json",
+  "superseded_command": "python scripts/fix_claude_user_back.py (stage/review) then --apply"
+}

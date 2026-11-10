@@ -1,0 +1,34 @@
+{
+  "title": "GPT 龙娘 · 银翼斜斩 buff",
+  "profession": "swordman_at",
+  "source": "output/dragon_buff_v01/art/raw_generated.png",
+  "reference": "design/gpt_dragon_slayer_v03/three_view.webp",
+  "output": "output/dragon_buff_v01/preview",
+  "frames": 19,
+  "width": 470,
+  "height": 668,
+  "fps": 15,
+  "framing": {"fit":"cover","zoom":1.0893617021276596,"focus":[0.5,0.5],"target":[0.5,0.5898203592814372]},
+  "protected_falloff_px": 12,
+  "canvas_pin_px": 4,
+  "eyes": {
+    "half":"output/dragon_buff_v01/art/eyes_half_raw.png",
+    "closed":"output/dragon_buff_v01/art/eyes_closed_raw.png",
+    "polygons":[[[364,271],[405,276],[447,286],[455,311],[423,318],[390,311],[367,300]],[[474,304],[507,307],[532,316],[535,340],[511,346],[484,336],[475,325]]]
+  },
+  "blink_sequence":["open","open","open","open","open","open","open","open","open","half","closed","half","open","open","open","open","open","open","open"],
+  "protected":[
+    {"name":"face_and_horns","polygon":[[180,0],[570,0],[592,390],[487,435],[266,405],[228,231]]},
+    {"name":"torso","polygon":[[294,412],[620,403],[689,847],[612,1093],[323,1063],[277,693]]},
+    {"name":"collar_hand","polygon":[[447,397],[655,403],[747,579],[700,781],[643,798],[594,508],[444,452]]},
+    {"name":"lower_hand","polygon":[[156,1007],[286,1088],[233,1310],[116,1459],[71,1430],[142,1234]]}
+  ],
+  "local_motion":[
+    {"name":"left_hair","polygon":[[0,251],[278,285],[294,438],[236,698],[136,823],[0,785]],"feather_source":24,"root_ramp":{"axis":"y","start":290,"end":570},"amplitude_px":[1.7,-0.5],"phase":0.1,"length_lag":1.5},
+    {"name":"right_hair_wing","polygon":[[566,211],[1017,230],[1024,1191],[831,1192],[706,890],[687,588],[579,438]],"feather_source":28,"root_ramp":{"axis":"x","start":568,"end":930},"amplitude_px":[-1.9,0.9],"phase":0.7,"length_lag":1.3},
+    {"name":"left_ruffles","polygon":[[0,668],[312,636],[389,1161],[265,1487],[0,1536]],"feather_source":23,"root_ramp":{"axis":"y","start":650,"end":1100},"amplitude_px":[-1.3,1.3],"phase":0.4,"length_lag":1.0},
+    {"name":"right_ruffles_tail","polygon":[[697,723],[1024,829],[1024,1536],[615,1536],[660,1126]],"feather_source":26,"root_ramp":{"axis":"y","start":735,"end":1270},"amplitude_px":[1.4,0.8],"phase":1.1,"length_lag":1.7}
+  ],
+  "targets":["Cutscene_buf/02_ghost_F_buf_blade.bk2","Cutscene_buf/02_ghost_F_buf_darktemp.bk2","Cutscene_buf/02_ghost_F_buf_demon.bk2","Cutscene_buf/02_ghost_F_buf_sword.bk2","Cutscene_buf/02_ghost_F_buf_vega.bk2"],
+  "note":"新透明近景原画，银紫斜刃扫入与翼形弧纹；固定机位、局部眨眼和衣发微动。未安装、未实机。"
+}

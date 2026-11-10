@@ -1,0 +1,134 @@
+{
+  "title": "GPT 龙娘 v04 · 五职业一觉、全部切入与银翼 buff",
+  "base_npk": "output/gpt_dragon_slayer_v03/A_GPTDragon_FSlayer_v03.NPK",
+  "base_sha256": "0a08de8e7b0da2d5e5c29f12f1c185105b88f021ba22af66ee763d2df2ad195e",
+  "output": "output/gpt_dragon_slayer_v04",
+  "npk_name": "A_GPTDragon_FSlayer_v04.NPK",
+  "protect_paths": [
+    "output/gpt_dragon_slayer_v03/native_frames"
+  ],
+  "overlays": [
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/(18)ghostf_darktempler.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/(18)ghostf_darktempler/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/(tn)ghostf_demonslayer.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/(tn)ghostf_demonslayer/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_blade.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_blade/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_blade_tn.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_blade_tn/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_darktempler.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_darktempler/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_darktempler_event.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_darktempler_event/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_demonslayer.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_demonslayer/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_demonslayer_event.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_demonslayer_event/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_vegabond.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_vegabond/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_vegabond_event.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_vegabond_event/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_weapon.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_weapon/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/ghostf_weapon_event.img",
+      "frame_paths": [
+        "output/dragon_illustrations_v04/static/ghostf_weapon_event/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true,
+      "preserve_empty_frames": true
+    }
+  ],
+  "note": "Stage only until root visual QA. No installation, no paid API calls. Original sprite entries retained.",
+  "incomplete_cutins": true
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Claude 大小姐 · buff 立绘试作 v02",
+  "profession": "gunner_at",
+  "reference": "output/Claude_Gunner_v02/parts/raw/claude_a_0.png",
+  "output": "output/claude_buff_v02",
+  "columns": 4,
+  "rows": 5,
+  "frames": 19,
+  "width": 470,
+  "height": 668,
+  "fps": 15,
+  "targets": [
+    "Cutscene_buf/06_gunner_F_buf_launcher.bk2",
+    "Cutscene_buf/06_gunner_F_buf_meca.bk2",
+    "Cutscene_buf/06_gunner_F_buf_paramedic.bk2",
+    "Cutscene_buf/06_gunner_F_buf_ranger.bk2",
+    "Cutscene_buf/06_gunner_F_buf_spit.bk2"
+  ],
+  "license_note": "民间二创形象，原作者和授权未核实，仅自用。",
+  "note": "19 帧在同一张动作表内生成，透明 PNG 序列为编码源。尚未编码 Bink、未安装、未实机。"
+}

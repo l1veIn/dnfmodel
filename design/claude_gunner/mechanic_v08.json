@@ -1,0 +1,637 @@
+{
+  "title": "Claude 大小姐 v08 · 机械技能补全候选",
+  "base_npk": "output/claude_gunner_v07/A_Claude_FGunner_v07.NPK",
+  "output": "output/claude_gunner_v08",
+  "redraw": [
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/factory_body.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/factory_body/frame_0000.png"
+      },
+      "label": "factory_body"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_rx78.NPK",
+      "path": "sprite/monster/gunner/rx78/rx78.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0005.png",
+        "6": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0006.png",
+        "7": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0007.png",
+        "8": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0008.png",
+        "9": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0009.png",
+        "10": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0010.png",
+        "11": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0011.png",
+        "12": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0012.png",
+        "13": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0013.png",
+        "14": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0014.png",
+        "15": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0015.png",
+        "16": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0016.png",
+        "17": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0017.png",
+        "18": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78/frame_0018.png"
+      },
+      "label": "rx78"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_rx78.NPK",
+      "path": "sprite/monster/gunner/rx78/rx78drop.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78drop/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78drop/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78drop/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78drop/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78drop/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78drop/frame_0005.png",
+        "6": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78drop/frame_0006.png"
+      },
+      "label": "rx78drop"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_rx78.NPK",
+      "path": "sprite/monster/gunner/rx78/rx78dropred.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78dropred/frame_0000.png"
+      },
+      "label": "rx78dropred"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_rx78.NPK",
+      "path": "sprite/monster/gunner/rx78/rx78jump.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78jump/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78jump/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78jump/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78jump/frame_0003.png"
+      },
+      "label": "rx78jump"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_rx78.NPK",
+      "path": "sprite/monster/gunner/rx78/rx78walk.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78walk/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78walk/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78walk/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78walk/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78walk/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78walk/frame_0005.png"
+      },
+      "label": "rx78walk"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_fightingspirit.NPK",
+      "path": "sprite/monster/gunner/fightingspirit/robot.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/monster/gunner/fightingspirit/robot/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/monster/gunner/fightingspirit/robot/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/monster/gunner/fightingspirit/robot/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/monster/gunner/fightingspirit/robot/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/monster/gunner/fightingspirit/robot/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/monster/gunner/fightingspirit/robot/frame_0005.png"
+      },
+      "label": "robot"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_rx-60.NPK",
+      "path": "sprite/character/gunner/effect/rx-60/body.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/rx-60/body/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/rx-60/body/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/rx-60/body/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/rx-60/body/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/rx-60/body/frame_0004.png"
+      },
+      "label": "body"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_rx-60.NPK",
+      "path": "sprite/character/gunner/effect/rx-60/rx60jump.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/rx-60/rx60jump/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/rx-60/rx60jump/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/rx-60/rx60jump/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/rx-60/rx60jump/frame_0003.png"
+      },
+      "label": "rx60jump"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_rx78.NPK",
+      "path": "sprite/monster/gunner/rx78/silverburster.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0005.png",
+        "6": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0006.png",
+        "7": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0007.png",
+        "8": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0008.png",
+        "9": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0009.png",
+        "10": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0010.png",
+        "11": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0011.png",
+        "12": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0012.png",
+        "13": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0013.png",
+        "14": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0014.png",
+        "15": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0015.png",
+        "16": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0016.png",
+        "17": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0017.png",
+        "18": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster/frame_0018.png"
+      },
+      "label": "silverburster"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_rx78.NPK",
+      "path": "sprite/monster/gunner/rx78/silverbursterjump.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverbursterjump/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverbursterjump/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverbursterjump/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverbursterjump/frame_0003.png"
+      },
+      "label": "silverbursterjump"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_rx78.NPK",
+      "path": "sprite/monster/gunner/rx78/silverburster_drop.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster_drop/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster_drop/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster_drop/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster_drop/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster_drop/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster_drop/frame_0005.png",
+        "6": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster_drop/frame_0006.png"
+      },
+      "label": "silverburster_drop"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_rx78.NPK",
+      "path": "sprite/monster/gunner/rx78/rx78boom.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78boom/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78boom/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78boom/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78boom/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78boom/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78boom/frame_0005.png"
+      },
+      "label": "rx78boom"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrow_body.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrow_body/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrow_body/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrow_body/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrow_body/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrow_body/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrow_body/frame_0005.png",
+        "6": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrow_body/frame_0006.png",
+        "7": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrow_body/frame_0007.png"
+      },
+      "label": "sparrow_body"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/newsparrow_body.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/newsparrow_body/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/newsparrow_body/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/newsparrow_body/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/newsparrow_body/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/newsparrow_body/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/newsparrow_body/frame_0005.png",
+        "6": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/newsparrow_body/frame_0006.png",
+        "7": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/newsparrow_body/frame_0007.png"
+      },
+      "label": "newsparrow_body"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/factory_piece.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/factory_piece/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/factory_piece/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/factory_piece/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/factory_piece/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/factory_piece/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/factory_piece/frame_0005.png",
+        "6": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/factory_piece/frame_0006.png"
+      },
+      "label": "factory_piece"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn2.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn2/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn2/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn2/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn2/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn2/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn2/frame_0005.png",
+        "6": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn2/frame_0006.png",
+        "7": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn2/frame_0007.png",
+        "8": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn2/frame_0008.png",
+        "9": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn2/frame_0009.png"
+      },
+      "label": "sparrowfactoryvpformationn2"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/solarsparrow.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0005.png",
+        "6": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0006.png",
+        "7": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0007.png",
+        "8": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0008.png",
+        "9": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0009.png",
+        "10": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0010.png",
+        "11": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0011.png",
+        "12": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0012.png",
+        "13": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0013.png",
+        "14": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0014.png",
+        "15": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0015.png",
+        "16": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0016.png",
+        "17": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0017.png",
+        "18": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0018.png",
+        "19": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0019.png",
+        "20": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0020.png",
+        "21": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0021.png",
+        "22": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0022.png",
+        "23": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0023.png",
+        "24": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0024.png",
+        "25": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0025.png",
+        "26": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0026.png",
+        "27": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0027.png",
+        "28": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0028.png",
+        "29": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0029.png",
+        "30": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0030.png",
+        "31": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/solarsparrow/frame_0031.png"
+      },
+      "label": "solarsparrow"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn/frame_0005.png",
+        "6": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn/frame_0006.png",
+        "7": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn/frame_0007.png",
+        "8": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn/frame_0008.png",
+        "9": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn/frame_0009.png",
+        "10": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn/frame_0010.png",
+        "11": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn/frame_0011.png",
+        "12": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn/frame_0012.png",
+        "13": "output/claude_mechanic_v08/frames/sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationn/frame_0013.png"
+      },
+      "label": "sparrowfactoryvpformationn"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_rx78.NPK",
+      "path": "sprite/monster/gunner/rx78/rx78piece.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece/frame_0005.png"
+      },
+      "label": "rx78piece"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_rx78.NPK",
+      "path": "sprite/monster/gunner/rx78/rx78piece01.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece01/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece01/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece01/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece01/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece01/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece01/frame_0005.png",
+        "6": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece01/frame_0006.png",
+        "7": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece01/frame_0007.png",
+        "8": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece01/frame_0008.png",
+        "9": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece01/frame_0009.png",
+        "10": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece01/frame_0010.png",
+        "11": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece01/frame_0011.png",
+        "12": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece01/frame_0012.png",
+        "13": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece01/frame_0013.png",
+        "14": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece01/frame_0014.png"
+      },
+      "label": "rx78piece01"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_rx78.NPK",
+      "path": "sprite/monster/gunner/rx78/rx78piece02.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece02/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece02/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece02/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece02/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece02/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece02/frame_0005.png",
+        "6": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece02/frame_0006.png",
+        "7": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece02/frame_0007.png",
+        "8": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece02/frame_0008.png",
+        "9": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece02/frame_0009.png",
+        "10": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece02/frame_0010.png",
+        "11": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece02/frame_0011.png",
+        "12": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece02/frame_0012.png",
+        "13": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece02/frame_0013.png",
+        "14": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece02/frame_0014.png"
+      },
+      "label": "rx78piece02"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_rx78.NPK",
+      "path": "sprite/monster/gunner/rx78/rx78piece03.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece03/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece03/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece03/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece03/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece03/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece03/frame_0005.png",
+        "6": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece03/frame_0006.png",
+        "7": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece03/frame_0007.png",
+        "8": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece03/frame_0008.png",
+        "9": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece03/frame_0009.png",
+        "10": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece03/frame_0010.png",
+        "11": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece03/frame_0011.png",
+        "12": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece03/frame_0012.png",
+        "13": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece03/frame_0013.png",
+        "14": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece03/frame_0014.png"
+      },
+      "label": "rx78piece03"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_rx78.NPK",
+      "path": "sprite/monster/gunner/rx78/rx78piece04.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece04/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece04/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece04/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece04/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece04/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece04/frame_0005.png",
+        "6": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece04/frame_0006.png",
+        "7": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece04/frame_0007.png",
+        "8": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece04/frame_0008.png",
+        "9": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece04/frame_0009.png",
+        "10": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece04/frame_0010.png",
+        "11": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece04/frame_0011.png",
+        "12": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece04/frame_0012.png",
+        "13": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece04/frame_0013.png",
+        "14": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece04/frame_0014.png"
+      },
+      "label": "rx78piece04"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_rx78.NPK",
+      "path": "sprite/monster/gunner/rx78/rx78piece05.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece05/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece05/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece05/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece05/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece05/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece05/frame_0005.png",
+        "6": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece05/frame_0006.png",
+        "7": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece05/frame_0007.png",
+        "8": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece05/frame_0008.png",
+        "9": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece05/frame_0009.png",
+        "10": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece05/frame_0010.png",
+        "11": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece05/frame_0011.png",
+        "12": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece05/frame_0012.png",
+        "13": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece05/frame_0013.png",
+        "14": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/rx78piece05/frame_0014.png"
+      },
+      "label": "rx78piece05"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_rx78.NPK",
+      "path": "sprite/monster/gunner/rx78/silverburster_particle.img",
+      "frames": {
+        "0": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster_particle/frame_0000.png",
+        "1": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster_particle/frame_0001.png",
+        "2": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster_particle/frame_0002.png",
+        "3": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster_particle/frame_0003.png",
+        "4": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster_particle/frame_0004.png",
+        "5": "output/claude_mechanic_v08/frames/sprite/monster/gunner/rx78/silverburster_particle/frame_0005.png"
+      },
+      "label": "silverburster_particle"
+    }
+  ],
+  "glow": [
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/factory_appear.img",
+      "mode": "energy",
+      "label": "factory_appear"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/factory_dodge.img",
+      "mode": "energy",
+      "label": "factory_dodge"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/factory_summon.img",
+      "mode": "energy",
+      "label": "factory_summon"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/factory_summon_fire.img",
+      "mode": "energy",
+      "label": "factory_summon_fire"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/firesolar01.img",
+      "mode": "energy",
+      "label": "firesolar01"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/firesolar02.img",
+      "mode": "energy",
+      "label": "firesolar02"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/lightsolar01.img",
+      "mode": "energy",
+      "label": "lightsolar01"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/lightsolar02.img",
+      "mode": "energy",
+      "label": "lightsolar02"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/newsparrow_dodge.img",
+      "mode": "energy",
+      "label": "newsparrow_dodge"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/solarglow.img",
+      "mode": "energy",
+      "label": "solarglow"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpfire01.img",
+      "mode": "energy",
+      "label": "sparrowfactoryvpfire01"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpfire02.img",
+      "mode": "energy",
+      "label": "sparrowfactoryvpfire02"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpfire03.img",
+      "mode": "energy",
+      "label": "sparrowfactoryvpfire03"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpfloor.img",
+      "mode": "energy",
+      "label": "sparrowfactoryvpfloor"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationd.img",
+      "mode": "energy",
+      "label": "sparrowfactoryvpformationd"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpformationd2.img",
+      "mode": "energy",
+      "label": "sparrowfactoryvpformationd2"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpglow.img",
+      "mode": "energy",
+      "label": "sparrowfactoryvpglow"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpshield.img",
+      "mode": "energy",
+      "label": "sparrowfactoryvpshield"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpwall01.img",
+      "mode": "energy",
+      "label": "sparrowfactoryvpwall01"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpwall02.img",
+      "mode": "energy",
+      "label": "sparrowfactoryvpwall02"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpwall03.img",
+      "mode": "energy",
+      "label": "sparrowfactoryvpwall03"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpwallelectrica.img",
+      "mode": "energy",
+      "label": "sparrowfactoryvpwallelectrica"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrowfactoryvpwallelectricb.img",
+      "mode": "energy",
+      "label": "sparrowfactoryvpwallelectricb"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrow_attack.img",
+      "mode": "energy",
+      "label": "sparrow_attack"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrow_bullet.img",
+      "mode": "energy",
+      "label": "sparrow_bullet"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_sparrowfactory.NPK",
+      "path": "sprite/character/gunner/effect/sparrowfactory/sparrow_explosion.img",
+      "mode": "energy",
+      "label": "sparrow_explosion"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_rx-60.NPK",
+      "path": "sprite/character/gunner/effect/rx-60/circle.img",
+      "mode": "energy",
+      "label": "circle"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_rx-60.NPK",
+      "path": "sprite/character/gunner/effect/rx-60/groundeffect.img",
+      "mode": "energy",
+      "label": "groundeffect"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_character_gunner_effect_rx-60.NPK",
+      "path": "sprite/character/gunner/effect/rx-60/siren.img",
+      "mode": "energy",
+      "label": "siren"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_rx78.NPK",
+      "path": "sprite/monster/gunner/rx78/rx78dropeffect.img",
+      "mode": "energy",
+      "label": "rx78dropeffect"
+    },
+    {
+      "source_npk": "C:/WeGameApps/地下城与勇士：创新世纪/ImagePacks2/sprite_monster_gunner_fightingspirit.NPK",
+      "path": "sprite/monster/gunner/fightingspirit/effect.img",
+      "mode": "energy",
+      "label": "effect"
+    }
+  ],
+  "art_manifest": "output/claude_mechanic_v08/frames/art_manifest.json",
+  "generation_record": "output/claude_mechanic_v08/generation_record.json",
+  "installed": false,
+  "license_note": "民间二创角色与游戏资源，仅自用；A\\为用户要求的装饰字标，不代表官方合作。",
+  "shared_scope_note": "No at-specific alternatives found for these named packs; same paths may also affect male mechanic summons. Timing/blending still not known without ANI/PVF."
+}

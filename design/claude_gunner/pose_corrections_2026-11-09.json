@@ -1,0 +1,158 @@
+{
+  "status": "user_approved_packaged_installed_v07_awaiting_ingame_test",
+  "frame_indexing": "user one-based / tool zero-based",
+  "authorized_tool_frames": [
+    53,
+    54,
+    55,
+    64,
+    65,
+    66,
+    67
+  ],
+  "installed": true,
+  "ingame_verified": false,
+  "repairs": [
+    {
+      "issue": 8,
+      "unit": "弓步突刺",
+      "user_frames": [
+        54,
+        55,
+        56
+      ],
+      "tool_frames": [
+        53,
+        54,
+        55
+      ],
+      "script": "scripts/fix_claude_user_back.py --apply",
+      "config": "design/claude_gunner/user_back_repair.json",
+      "report": "output/validation/claude_user_back_reference_2026-11-09/stage_report.json",
+      "report_sha256": "3e0f501d8718e712efbe16ab5c5749c54ffd3f3094c12abfd0c39c0037971ebf",
+      "status": "fixed_awaiting_user_review",
+      "prepare": "scripts/fix_claude_user_back.py"
+    },
+    {
+      "issue": 6,
+      "unit": "持枪交叉",
+      "user_frames": [
+        65,
+        66,
+        67,
+        68
+      ],
+      "tool_frames": [
+        64,
+        65,
+        66,
+        67
+      ],
+      "script": "scripts/fix_claude_crossed_arms.py --apply",
+      "config": "design/claude_gunner/hold_cross_repair.json",
+      "report": "output/validation/claude_pose_correction_2026-11-09/hold_cross/repair_report.json",
+      "report_sha256": "22fb5b7e4640087d8f22a717e31f09f2911648a34d302e543ef3ca2d77bf328d"
+    }
+  ],
+  "image_generation": {
+    "mode": "built-in image_gen",
+    "paid_65535_used": false,
+    "crossed_versions": [
+      {
+        "version": "key_v1",
+        "selected": false,
+        "workspace_path": "output/validation/claude_pose_correction_2026-11-09/hold_cross/generated/crossed_key_v1.png",
+        "sha256": "101a9d107d9b5be4460a6c2a08cc6f7cd863d5da5a3dee817c0deb4a434e31ef",
+        "exact_prompt": "design/claude_gunner/hold_cross_key_prompt.txt",
+        "prompt_sha256": "b0cdf50db2000540216efde60d127f5a18546460b7498f8d280f2c227df225aa",
+        "builtin_original": "C:/Users/A/.codex/generated_images/01a1be99-e207-7373-87cb-2fccce695910/exec-7467cd03-12f0-4821-beb2-c75cd3456cc8.png"
+      },
+      {
+        "version": "key_v2",
+        "selected": false,
+        "workspace_path": "output/validation/claude_pose_correction_2026-11-09/hold_cross/generated/crossed_key_v2.png",
+        "sha256": "1d6d90dc5e165d5ab6fc78e5f2e28f583a76d41ce7b0773dd074aa0df3a6b8ec",
+        "exact_prompt": "design/claude_gunner/hold_cross_compact_prompt.txt",
+        "prompt_sha256": "319c29d63f8138a31b7fce867f6e31db09a83cbdd861e1b15ff79cafb290be12",
+        "builtin_original": "C:/Users/A/.codex/generated_images/01a1be99-e207-7373-87cb-2fccce695910/exec-4a773883-5d6d-459d-acad-8c54b1563dcf.png"
+      },
+      {
+        "version": "key_v3",
+        "selected": false,
+        "workspace_path": "output/validation/claude_pose_correction_2026-11-09/hold_cross/generated/crossed_key_v3.png",
+        "sha256": "c8f3b676e09179c746873afc142a8fa6c583648d164cda56f75badabb07435c4",
+        "exact_prompt": "design/claude_gunner/hold_cross_upper_prompt.txt",
+        "prompt_sha256": "4117444d050919532c38026006e44dc6fb0e79cbef656432753a12a894767dbe",
+        "builtin_original": "C:/Users/A/.codex/generated_images/01a1be99-e207-7373-87cb-2fccce695910/exec-7143cb3e-a78c-49b2-8a1a-9836933cb43d.png"
+      },
+      {
+        "version": "key_v4",
+        "selected": true,
+        "workspace_path": "output/validation/claude_pose_correction_2026-11-09/hold_cross/generated/crossed_key_v4.png",
+        "sha256": "89355f7ee972453329ea51ee76eb20df7640d3c91e27a46c55cc317e41d22d32",
+        "exact_prompt": "design/claude_gunner/hold_cross_stance_prompt.txt",
+        "prompt_sha256": "bffeb7f7ada8422aeb5f1776b425ad366f3a11d95bf20e85796ed01e21dc7119",
+        "builtin_original": "C:/Users/A/.codex/generated_images/01a1be99-e207-7373-87cb-2fccce695910/exec-f0440931-25f7-4936-a4a5-dfde5855bfa3.png"
+      },
+      {
+        "version": "smear_v1",
+        "selected": false,
+        "workspace_path": "output/validation/claude_pose_correction_2026-11-09/hold_cross/generated/crossed_smear_v1.png",
+        "sha256": "d7c57d7058eaee838bd9e1ca05ede3a9a4d20622fab340a237bb30476c74261a",
+        "exact_prompt": "design/claude_gunner/hold_cross_smear_prompt.txt",
+        "prompt_sha256": "5e404b8f7e1c1b326424d0ad24cfc4a39aceb1bc434d17f691509a0114c63849",
+        "builtin_original": "C:/Users/A/.codex/generated_images/01a1be99-e207-7373-87cb-2fccce695910/exec-f9b01910-a2b8-4ad5-844b-f99bb4f59e81.png"
+      },
+      {
+        "version": "smear_v2",
+        "selected": true,
+        "workspace_path": "output/validation/claude_pose_correction_2026-11-09/hold_cross/generated/crossed_smear_v2.png",
+        "sha256": "d8d44a0f8e67819216f39d47f13a177b6f4588740f7b5b7c18eb0921c7278240",
+        "exact_prompt": "design/claude_gunner/hold_cross_smear_upper_prompt.txt",
+        "prompt_sha256": "86b63a77cc1053e586dd15487f0ff68f452b1b0aca16830cb03cf595bb846f2e",
+        "builtin_original": "C:/Users/A/.codex/generated_images/01a1be99-e207-7373-87cb-2fccce695910/exec-1ab771b0-d634-48ad-8ff5-7d55aba8846d.png"
+      }
+    ],
+    "lunge_back_provenance": "design/claude_gunner/lunge_back_repair.json"
+  },
+  "semantic_review": {
+    "crossed": "Complete upper chest crossing shoulder/elbow/wrist path; lower forearm crosses abdomen. Official gun grip overlay inspected separately. First frame has deliberate horizontal speed smear.",
+    "lunge": "Superseded earlier inferred rear design with user-supplied turnaround: half-up head bow, loose long hair, rear waist bow and pointed black/gold tails plus lower-hem flower emblem. High original source-hand graft disabled to exclude old face-side skin.",
+    "limits": "Visual checks support pose topology and orientation; user aesthetic review and in-game playback remain pending.",
+    "lunge_user_feedback": "User rejected rear frames again. Prior direction/height/grip checks did not establish faithful costume/hair design; rear-source audit supersedes previous visual acceptance."
+  },
+  "regression_tests": {
+    "command": "python -m unittest validation.test_claude_idle_feet validation.test_claude_reload_arm validation.test_claude_alignment validation.test_claude_lunge_hand validation.test_claude_crossed_arms -q",
+    "passed": 28
+  },
+  "scope_audit": "output/validation/claude_user_back_reference_2026-11-09/root_scope_raster_audit.json",
+  "other_native_frames_unchanged": 136,
+  "workbench_review": {
+    "units_checked": [
+      "弓步突刺"
+    ],
+    "user_frames_seen": [
+      54,
+      56
+    ],
+    "source_seen": "user_back_reference:53 / :55",
+    "issue_counts": {
+      "open": 0,
+      "fixed": 0,
+      "verified": 8
+    },
+    "console_errors_and_warnings": [],
+    "screenshots": [
+      "output/validation/claude_user_back_reference_2026-11-09/workbench_back_user_reference.png"
+    ],
+    "scope": "Actual refreshed workbench source and playback checked; paused at user54 for review. User aesthetic and in-game checks remain pending."
+  },
+  "rear_reference_audit": "design/claude_gunner/back_reference_v01.json",
+  "latest_correction_record": "design/claude_gunner/user_back_reference_adoption.json",
+  "installed_release": {
+    "version": 7,
+    "package": "output\\claude_gunner_v07\\A_Claude_FGunner_v07.NPK",
+    "installation_record": "output\\claude_gunner_v07\\installation.json",
+    "sha256": "d56c0a3cbe2beba5a82f29854db174286f0f4ad28662819c6d937f0cc9ae9483"
+  }
+}

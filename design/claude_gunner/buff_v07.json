@@ -1,0 +1,53 @@
+{
+  "title": "Claude 大小姐 · buff v07 · 中央展开金焰竖带",
+  "profession": "gunner_at",
+  "reference": "output/Claude_Gunner_v02/parts/raw/claude_a_0.png",
+  "source_manifest": "output/claude_buff_v05/preview/manifest.json",
+  "fx_source": "output/claude_buff_v06/fx_generated.png",
+  "output": "output/claude_buff_v07/preview",
+  "frames": 19,
+  "width": 470,
+  "height": 668,
+  "fps": 15,
+  "band": {"center_x": 235, "edges": [70,400], "feather_px": 3, "effect_margin": 24, "backing_alpha": 88, "source_bottom_fade_px": 80},
+  "motion": {
+    "scale": 1,
+    "x_offset": 0,
+    "y_offsets": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "reveal_half_widths": [2,28,72,121,153,165,165,165,165,165,165,165,165,165,165,165,165,165,165]
+  },
+  "blink_sequence": ["open","open","open","open","open","open","open","half","closed","half","open","open","open","open","open","open","open","open","open"],
+  "effects": {
+    "rail_scroll_px": 2,
+    "motifs": {
+      "claude": "output/claude_buff_v07/assets/claude_starburst.png",
+      "a_slash": "output/claude_buff_v07/assets/anthropic_a_slash.png"
+    },
+    "starburst_center": [235,415],
+    "starburst_sizes": [0,24,64,112,154,166,158,0,0,0,0,0,0,0,0,0,0,0,0],
+    "starburst_alpha": [0,45,85,115,125,90,45,0,0,0,0,0,0,0,0,0,0,0,0],
+    "a_slash_center": [235,605],
+    "a_slash_width": 76,
+    "a_slash_alpha": [0,0,0,0,55,115,160,180,180,180,180,180,180,180,180,180,180,180,180],
+    "particle_alpha_start": 130,
+    "particle_alpha_decay": 13,
+    "edge_star_sizes": [18,22,18],
+    "edge_star_alpha": 145,
+    "edge_star_alpha_variation": 20,
+    "protected_foreground_boxes": [[151,55,337,213],[264,204,432,376]]
+  },
+  "generation": {
+    "character": "Frozen v05 PNG sequence retains original edited blink and root-pinned hair/cloth micro-motion; x=0,y=0,scale=1 throughout",
+    "effects": "Reuse frozen v06 transparent gold/orange rail texture; exact code-native Claude starburst and A\\ motifs are separate supplied PNG assets",
+    "compositing": "Symmetric horizontal reveal from x235; full-height rails follow the same opening edges; no portrait translation, scaling or newly resampled facial pixels"
+  },
+  "targets": [
+    "Cutscene_buf/06_gunner_F_buf_launcher.bk2",
+    "Cutscene_buf/06_gunner_F_buf_meca.bk2",
+    "Cutscene_buf/06_gunner_F_buf_paramedic.bk2",
+    "Cutscene_buf/06_gunner_F_buf_ranger.bk2",
+    "Cutscene_buf/06_gunner_F_buf_spit.bk2"
+  ],
+  "license_note": "民间二创形象，原作者和授权未核实，仅自用。",
+  "note": "人物与光轨从中央向两侧展开，保留眨眼及衣发微动，加入Claude放射花徽与A\\几何光纹；仅工作台候选，未安装或实机。"
+}

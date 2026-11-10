@@ -1,0 +1,39 @@
+{
+  "title": "Claude 大小姐 · buff v06 · 金焰竖带演出",
+  "profession": "gunner_at",
+  "reference": "output/Claude_Gunner_v02/parts/raw/claude_a_0.png",
+  "source_manifest": "output/claude_buff_v05/preview/manifest.json",
+  "fx_source": "output/claude_buff_v06/fx_generated.png",
+  "output": "output/claude_buff_v06/preview",
+  "frames": 19,
+  "width": 470,
+  "height": 668,
+  "fps": 15,
+  "band": {"edges": [70,400], "feather_px": 3, "effect_margin": 24, "backing_alpha": 88, "source_bottom_fade_px": 80},
+  "motion": {
+    "scale": 1,
+    "x_offset": 0,
+    "y_offsets": [389,251,149,81,39,19,11,5,0,-4,-7,-10,-12,-16,-20,-26,-34,-47,-68],
+    "reference_measurement": "output/validation/buff_v06_reference_study/portrait_upward_track.json"
+  },
+  "blink_sequence": ["open","open","open","open","open","open","open","half","closed","half","open","open","open","open","open","open","open","open","open"],
+  "effects": {
+    "rail_scroll_px": 2,
+    "sweep_strength": [0,0,75,115,100,45,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    "sweep_center_y": [0,0,550,440,335,260,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  },
+  "generation": {
+    "character": "Frozen v05 PNG sequence retains independently edited eyes and root-pinned hair/cloth micro-motion",
+    "effects": "Built-in image_gen transparent gold/orange vertical rails; generation record output/claude_buff_v06/fx_generation.json",
+    "compositing": "Integer vertical character motion inside a fixed narrow band; independent translucent backdrop and rail texture flow; no new character/face resampling"
+  },
+  "targets": [
+    "Cutscene_buf/06_gunner_F_buf_launcher.bk2",
+    "Cutscene_buf/06_gunner_F_buf_meca.bk2",
+    "Cutscene_buf/06_gunner_F_buf_paramedic.bk2",
+    "Cutscene_buf/06_gunner_F_buf_ranger.bk2",
+    "Cutscene_buf/06_gunner_F_buf_spit.bk2"
+  ],
+  "license_note": "民间二创形象，原作者和授权未核实，仅自用。",
+  "note": "按本地作者补丁的固定竖轨/人物上滑分层方式重做演出，保留v05眨眼与衣发微动；仅工作台候选，未安装或实机。"
+}

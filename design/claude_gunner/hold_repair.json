@@ -1,0 +1,18 @@
+{
+  "title": "Claude crossing-gun pose repair, tools 64-67",
+  "status": "rejected_superseded",
+  "superseded_by": "design/claude_gunner/hold_cross_repair.json",
+  "replacement_command": "scripts/fix_claude_crossed_arms.py --apply",
+  "rejection_reason": "User review found the shoulder-to-elbow arm connections incorrect: both arms must cross in front of the chest, with the left-hand gun pointing toward the character's upper right and the right-hand gun toward the character's lower left. Matching grip positions and height alone did not reproduce the pose.",
+  "source_raw": "output/Claude_Gunner_v02/parts/raw/poses_hold_repair_v4_0.png",
+  "palette": "output/validation/claude_idle_feet_fix/palette_original.png",
+  "frames": [64,65,66,67],
+  "palm_rois": {
+    "smear": [[220,150,260,195],[310,245,355,277]],
+    "settled": [[220,135,265,175],[315,235,365,270]]
+  },
+  "reference": "output/validation/claude_motion_review_2026-11-09/hold/hold_pose_guide.png",
+  "prompts": ["design/claude_gunner/hold_repair_prompt.txt","design/claude_gunner/hold_repair_arm_prompt.txt","design/claude_gunner/hold_repair_stance_prompt.txt","design/claude_gunner/hold_repair_final_arm_prompt.txt"],
+  "original_builtin_files": ["exec-1635daa0-d61a-4cad-a71d-aa3210f0ee6a.png","exec-7f12835e-4016-4ddb-b445-835296c3a41d.png","exec-149d3dc1-acb9-4271-aab3-91a36f3b706e.png","exec-6af7bda3-27d3-40fb-b0e9-6b3457a7b042.png"],
+  "notes": "First frame is purposeful fast-turn smear. Settled frames share one base drawing and follow the original's small hand variations. Head/sole height and actual game grip targets determine placement; no large automatic arm stretch. Only this clip is replaced. Not built into NPK or installed."
+}

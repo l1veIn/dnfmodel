@@ -1,0 +1,23 @@
+{
+  "clips": [
+    {
+      "id": "dragon_weapon_neo",
+      "character": "dragon",
+      "first_frame": "output/dragon_illustrations_v04/video_seeds/weapon_v2/first_frame.png",
+      "prompt": "One continuous 3-second heroic anime game awakening shot, starting exactly from the supplied white dragon swordswoman frame. Preserve her adult face, long curved white horns, pale-violet eyes, white gown and large arm drapes, long white hair, enormous white dragon wings and thick scaled white tail throughout. 0.0–0.6s: a restrained camera push toward her confident eye-line while her hair and drapes breathe naturally, her blade held low. 0.6–1.9s: she turns her shoulders and completes ONE fast decisive upward diagonal katana strike; the nearer wing flares open behind the movement, hair and ruffled drapes trail with natural delay. The camera makes only a small controlled side orbit, no spin or shake. 1.9–3.0s: the camera eases back slightly as she settles into a powerful three-quarter finish with a cool knowing gaze; a thin pale-silver/lilac slash arc dissipates and the wing relaxes. Keep her body anatomy and both hands coherent; no duplicate swords, no cloned body or extra limbs, no costume changes. Do not substitute a standing full-body model. All empty background must stay perfectly flat uniform magenta RGB255,0,255, without a scene, floor, fog, gradient, vignette, cast shadow, text or borders. Keep important head/face inside frame; framing of the wing tips may crop naturally. No fade to black, no cuts, no transition to another person.",
+      "seconds": 3,
+      "resolution": "1080p",
+      "model": "grok-imagine-video-1.5-preview",
+      "output": "output/dragon_illustrations_v04/video/weapon_neo",
+      "canvas": [
+        1067,
+        600
+      ],
+      "sample_frames": 73,
+      "transport": "curl"
+    }
+  ],
+  "confirmed_rate_usd_per_second": 0.52,
+  "estimated_cost_usd": 1.56,
+  "funding_note": "One dragon sample within current3.203705 USD balance. Other videos wait for funds."
+}

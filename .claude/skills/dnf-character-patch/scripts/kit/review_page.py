@@ -50,16 +50,26 @@ def _reviews():
 def _frame_notes():
     """Height against the sprite, hand fit and source cell for each frame, so a verdict can name the cause."""
     notes = {}
+    drawn_native = set()
     for clip in P.clips():
         path = P.out / "clips" / clip["id"] / "selection.json"
         if not path.exists():
             continue
-        for row in json.loads(path.read_text("utf-8"))["frames"]:
-            hands = row.get("hands") or []
+        selected = json.loads(path.read_text("utf-8"))
+        authoritative = selected.get("action_repair_source", {}).get("native_is_authoritative", False)
+        for row in selected["frames"]:
+            redrawn = authoritative and any(key.startswith("action_redraw_v") for key in row)
+            if redrawn:
+                drawn_native.add(row["slot"])
+            # These native frames are already drawn and registered. Older hand
+            # adjustments (or measured contact distances) are not new moves.
+            hands = [] if redrawn else row.get("hands") or []
             notes[row["slot"]] = dict(source=str(row.get("video_frame", "")), hand=hands[0].get("state") if hands else None, gap=hands[0].get("gap") if hands else None)
     reuse = P.run / "reuse.json"
     if reuse.exists():
         for target, origin in json.loads(reuse.read_text("utf-8")).items():
+            if int(target) in drawn_native:
+                continue
             notes[int(target)] = dict(source=f"复用第 {origin + 1} 帧", **{k: notes.get(origin, {}).get(k) for k in ("hand", "gap")})
     return notes
 

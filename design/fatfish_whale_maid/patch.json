@@ -1,11 +1,11 @@
 {
  "title": "女法师 · 大肥鱼（鲸鱼娘女仆）",
- "version": 1,
+ "version": 6,
  "class": "mage",
  "equipment": "equipment",
  "frames": 174,
  "materials": "fatfish_whale_maid_source",
- "out": "fatfish_whale_maid_v01",
+ "out": "fatfish_whale_maid_v06",
  "master": "master_e_0.png",
  "npk_stem": "A_FatfishWhaleMaid_FMage",
  "body": "skin/mg_body0000",

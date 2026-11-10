@@ -1,0 +1,235 @@
+{
+  "status": "user_approved_packaged_installed_v07_awaiting_ingame_test",
+  "frame_indexing": "Tool frames are zero-based; game/user frames are one-based.",
+  "issues": [
+    {
+      "unit": "上弹",
+      "issue": 2,
+      "frames": [
+        4,
+        5
+      ],
+      "status": "user_verified"
+    },
+    {
+      "unit": "拍手",
+      "issue": 3,
+      "frames": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "status": "user_verified"
+    },
+    {
+      "unit": "站姿收手",
+      "issue": 4,
+      "frames": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "status": "user_verified"
+    },
+    {
+      "unit": "弓步突刺",
+      "issue": 5,
+      "frames": [
+        56,
+        57,
+        58
+      ],
+      "status": "user_verified"
+    },
+    {
+      "unit": "持枪交叉",
+      "issue": 6,
+      "frames": [
+        64,
+        65,
+        66,
+        67
+      ],
+      "status": "user_verified"
+    },
+    {
+      "unit": "走路",
+      "issue": 7,
+      "frames": [
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75
+      ],
+      "status": "user_verified"
+    },
+    {
+      "unit": "弓步突刺",
+      "issue": 8,
+      "frames": [
+        53,
+        54,
+        55
+      ],
+      "status": "user_verified"
+    }
+  ],
+  "scope_audit": "output/validation/claude_user_back_reference_2026-11-09/root_scope_raster_audit.json",
+  "repairs": [
+    {
+      "actions": [
+        "上弹"
+      ],
+      "script": "scripts/fix_claude_reload_arm.py --apply",
+      "report": "output/validation/claude_motion_review_2026-11-09/reload/repair_report.json"
+    },
+    {
+      "actions": [
+        "拍手",
+        "站姿收手",
+        "走路"
+      ],
+      "script": "scripts/fix_claude_alignment.py --apply",
+      "config": "design/claude_gunner/motion_alignment.json",
+      "report": "output/validation/claude_motion_review_2026-11-09/alignment/repair_report.json"
+    },
+    {
+      "actions": [
+        "弓步突刺"
+      ],
+      "script": "scripts/fix_claude_lunge_hand.py --apply",
+      "report": "output/validation/claude_motion_review_2026-11-09/lunge/repair_report.json"
+    },
+    {
+      "actions": [
+        "持枪交叉"
+      ],
+      "script": "scripts/fix_claude_crossed_arms.py --apply",
+      "config": "design/claude_gunner/hold_cross_repair.json",
+      "report": "output/validation/claude_pose_correction_2026-11-09/hold_cross/repair_report.json"
+    },
+    {
+      "actions": [
+        "弓步突刺（用户54–56背向）"
+      ],
+      "script": "scripts/fix_claude_user_back.py --apply",
+      "config": "design/claude_gunner/user_back_repair.json",
+      "report": "output/validation/claude_user_back_reference_2026-11-09/stage_report.json",
+      "superseded_script": "scripts/fix_claude_lunge_back.py --apply",
+      "prepare": "scripts/fix_claude_user_back.py"
+    }
+  ],
+  "image_generation": {
+    "mode": "built-in image_gen",
+    "reload_selected_images": [
+      "output/validation/claude_motion_review_2026-11-09/reload/generated/frame_0004_edit.png",
+      "output/validation/claude_motion_review_2026-11-09/reload/generated/frame_0005_edit.png"
+    ],
+    "reload_prompts": "design/claude_gunner/reload_repair_prompts.txt",
+    "hold_prompts": [
+      "design/claude_gunner/hold_cross_key_prompt.txt",
+      "design/claude_gunner/hold_cross_compact_prompt.txt",
+      "design/claude_gunner/hold_cross_upper_prompt.txt",
+      "design/claude_gunner/hold_cross_stance_prompt.txt",
+      "design/claude_gunner/hold_cross_smear_prompt.txt",
+      "design/claude_gunner/hold_cross_smear_upper_prompt.txt"
+    ],
+    "hold_previous_rejected": {
+      "hold_selected_image": "output/Claude_Gunner_v02/parts/raw/poses_hold_repair_v4_0.png",
+      "hold_prompts": [
+        "design/claude_gunner/hold_repair_arm_prompt.txt",
+        "design/claude_gunner/hold_repair_final_arm_prompt.txt",
+        "design/claude_gunner/hold_repair_prompt.txt",
+        "design/claude_gunner/hold_repair_stance_prompt.txt"
+      ]
+    },
+    "hold_selected_images": [
+      "output/validation/claude_pose_correction_2026-11-09/hold_cross/generated/crossed_key_v4.png",
+      "output/validation/claude_pose_correction_2026-11-09/hold_cross/generated/crossed_smear_v2.png"
+    ],
+    "lunge_back_provenance": "design/claude_gunner/user_back_reference_adoption.json",
+    "lunge_back_previous_provenance": "design/claude_gunner/lunge_back_repair.json"
+  },
+  "regeneration_note": "Use the current repair recipes after a general final pass. User back: stage with fix_claude_user_back.py, inspect the staged contact, then --apply copies the signed stage. It protects all other140 native frames and rejects changed inputs; do not bypass its scope guard. Old fix_claude_hold.py and fix_claude_lunge_back.py --apply are disabled to prevent restoring rejected designs. Build reads the existing native frames.",
+  "installed": true,
+  "ingame_verified": false,
+  "validation": {
+    "regression_tests": 28,
+    "regression_log": "output/validation/claude_pose_correction_2026-11-09/regression_tests.txt",
+    "scope_audit_passed": true,
+    "other_136_native_frames_unchanged": true,
+    "lunge_back_checks": "output/validation/claude_pose_correction_2026-11-09/lunge_back/validation_applied.json",
+    "crossed_arm_checks": "validation/test_claude_crossed_arms.py",
+    "semantic_review": {
+      "crossed": "Complete upper chest crossing shoulder/elbow/wrist path; lower forearm crosses abdomen. Official gun grip overlay inspected separately. First frame has deliberate horizontal speed smear.",
+      "lunge": "Broad back shoulder cape, back corset and diagonal asymmetric rear gown folds form a consistent rear three-quarter view. Far-side hip ornament recedes behind the body. Independently reviewed after the targeted clothing revision; original head, fists and boots protected.",
+      "limits": "Visual checks support pose topology and orientation; user aesthetic review and in-game playback remain pending."
+    }
+  },
+  "workbench_review": {
+    "units_checked": [
+      "弓步突刺"
+    ],
+    "user_frames_seen": [
+      54,
+      56
+    ],
+    "source_seen": "user_back_reference:53 / :55",
+    "issue_counts": {
+      "open": 0,
+      "fixed": 0,
+      "verified": 8
+    },
+    "console_errors_and_warnings": [],
+    "screenshots": [
+      "output/validation/claude_user_back_reference_2026-11-09/workbench_back_user_reference.png"
+    ],
+    "scope": "Actual refreshed workbench source and playback checked; paused at user54 for review. User aesthetic and in-game checks remain pending."
+  },
+  "latest_correction_record": "design/claude_gunner/user_back_reference_adoption.json",
+  "previous_batch_scope_audit": "output/validation/claude_motion_review_2026-11-09/batch_scope_audit.json",
+  "previous_batch_validation": {
+    "regression_tests": 22,
+    "hold_final_checks": "output/validation/claude_motion_review_2026-11-09/hold/final_validation.json",
+    "hold_independent_qa": "output/validation/claude_motion_review_2026-11-09/hold/qa/independent_native_metrics.json",
+    "scope_audit_passed": true,
+    "accepted_idle_unchanged": true
+  },
+  "previous_batch_workbench_review": {
+    "units_checked": [
+      "上弹",
+      "拍手",
+      "站姿收手",
+      "弓步突刺",
+      "持枪交叉",
+      "走路"
+    ],
+    "status": {
+      "open": 0,
+      "fixed_awaiting_review": 6,
+      "verified": 1
+    },
+    "console_errors_and_warnings": [],
+    "screenshots": [
+      "output/validation/claude_motion_review_2026-11-09/workbench_hold_fixed.png",
+      "output/validation/claude_motion_review_2026-11-09/workbench_hold_smear.png"
+    ],
+    "scope": "Workbench playback and keyframes only; in-game timing and user aesthetic review remain pending."
+  },
+  "rear_reference_audit": "design/claude_gunner/back_reference_v01.json",
+  "installed_release": {
+    "version": 7,
+    "package": "output\\claude_gunner_v07\\A_Claude_FGunner_v07.NPK",
+    "installation_record": "output\\claude_gunner_v07\\installation.json",
+    "sha256": "d56c0a3cbe2beba5a82f29854db174286f0f4ad28662819c6d937f0cc9ae9483"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "assets": [
+    {
+      "id": "portrait",
+      "name": "鲸鱼娘 buff · 深海水镜与巨鲸浪幕",
+      "version": "v02",
+      "purpose": "斜向水镜擦入、巨鲸浪幕、真实半闭/闭眼与局部衣发微动；候选未安装",
+      "manifest": "output/whale_buff_v02/preview/manifest.json",
+      "encoding_report": "output/whale_buff_v02/preview/encoding_report.json"
+    },
+    {
+      "id": "portrait_v01",
+      "name": "鲸鱼娘 buff · 深海水镜与巨鲸浪幕",
+      "version": "v01",
+      "purpose": "首版对照；半闭眼叠化有重影，当前修正候选见v02，未安装",
+      "manifest": "output/whale_buff_v01/preview/manifest.json",
+      "encoding_report": "output/whale_buff_v01/preview/encoding_report.json"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title":"GPT 龙娘 · 刀锋掠屏 / 固定斩痕 buff v05",
+  "output":"output/dragon_buff_v05/preview",
+  "locked_v04":"output/dragon_buff_v04/preview",
+  "frames":19,"width":470,"height":668,"fps":15,
+  "material_reference":"output/dragon_buff_v02/art/slash_raw.png",
+  "path":[[-80,630],[140,650],[410,380],[550,150]],
+  "supersampling":2,
+  "variants":{
+    "swift":{
+      "label":"A · 快斩 / 短痕",
+      "tip_progress":[-1,-1,-1,-1,-1,-1,-0.08,0.08,0.31,0.62,0.92,1.06,1.13,1.2,1.3,1.4,1.5,1.6,1.7],
+      "core_life_frames":3.0,"mist_life_frames":4.7,
+      "core_half_width":3.6,"violet_half_width":12,"glow_half_width":19
+    },
+    "linger":{
+      "label":"B · 稍缓 / 长痕",
+      "tip_progress":[-1,-1,-1,-1,-1,-1,-0.06,0.02,0.18,0.43,0.73,0.98,1.1,1.19,1.28,1.37,1.46,1.55,1.64],
+      "core_life_frames":4.0,"mist_life_frames":5.2,
+      "core_half_width":9.0,"violet_half_width":18,"glow_half_width":24
+    }
+  },
+  "note":"Only the blade changes. Source v04 no_foreground_fx PNGs are byte-copied and locked; fixed sparks are preserved separately. P(s) stays in screen coordinates; each location is lit at pass_time(s), then narrows/fades by its age. No whole-sprite C translation/rotation, new art or actor reconstruction."
+}

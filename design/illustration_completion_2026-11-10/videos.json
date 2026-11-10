@@ -1,0 +1,26 @@
+{
+  "clips": [
+    {
+      "id": "whale_battle",
+      "character": "whale",
+      "first_frame": "output/whale_illustrations_v02/seeds/battle_first.png",
+      "prompt": "Continue the supplied first frame as ONE continuous 3-second cinematic action shot of the same adult whale maid heroine. Keep the exact face, blue hair gradient, maid costume, fully covered connected puff sleeves, whale-fin ears, white apron, gold trim and short thick uplifted whale tail. No horns, wings, long tail, extra characters or wardrobe changes. Camera trucks slightly to the right and pushes in about8%, following her decisive outstretched palm. Her long hair, cuff frills and skirt react naturally as she sweeps an ocean-blue crescent of water across the lower foreground, finishing off the right edge. The water has an icy-white core and deep-blue edges. Her tail gives one small muscular flick, remains SHORT and THICK, and does not stretch. Her face stays clear, focused and confidently cool. By2.4s the gesture lands, then a short hair/cloth follow-through and a confident smirk. Real articulated motion, not merely moving/scaling a still. No jump cuts. Keep the background perfectly uniform RGB255,0,255 magenta, without floor, shadows, texture or atmospheric haze, for clean chroma key. Do not add magenta into the heroine or water.\n",
+      "seconds": 3,
+      "resolution": "1080p",
+      "model": "grok-imagine-video-1.5-preview",
+      "output": "output/illustration_completion_2026-11-10/videos/whale_battle/attempt_02",
+      "canvas": [
+        1067,
+        600
+      ],
+      "sample_frames": 73,
+      "recovery_note": "Manual new transport attempt only after full11-task audit found no matching task, newest task2026-11-08, balance unchanged4.763705. Prior SSL handshake failure occurred before accepted task. Preserve original uncertain journal."
+    }
+  ],
+  "historical_rate_usd_per_second": 0.52,
+  "planned_total_video_estimate_usd": [
+    18,
+    25
+  ],
+  "funding_status": "Starting available balance4.763705; user top-up question pending. Only this3-second sample authorized for current funds before batch."
+}

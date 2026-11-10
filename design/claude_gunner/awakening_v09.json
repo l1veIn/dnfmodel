@@ -1,0 +1,95 @@
+{
+  "title": "Claude 大小姐 v09 · 一觉立绘补全候选",
+  "base_npk": "output/claude_gunner_v08/A_Claude_FGunner_v08.NPK",
+  "output": "output/claude_gunner_v09",
+  "npk_name": "A_Claude_FGunner_v09.NPK",
+  "overlays": [
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/(tn)atgunner_ranger.img",
+      "frame_paths": [
+        "output/claude_awakening_v09/canvas/ranger/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/atgunner_launcher.img",
+      "frame_paths": [
+        "output/claude_awakening_v09/canvas/launcher/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/atgunner_launcher_event.img",
+      "frame_paths": [
+        "output/claude_awakening_v09/canvas/launcher/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/atgunner_mecha.img",
+      "frame_paths": [
+        "output/claude_awakening_v09/canvas/mecha/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/atgunner_mecha_event.img",
+      "frame_paths": [
+        "output/claude_awakening_v09/canvas/mecha/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/atgunner_ranger.img",
+      "frame_paths": [
+        "output/claude_awakening_v09/canvas/ranger/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/atgunner_ranger_event.img",
+      "frame_paths": [
+        "output/claude_awakening_v09/canvas/ranger/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/atgunner_spit.img",
+      "frame_paths": [
+        "output/claude_awakening_v09/canvas/spit/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true
+    },
+    {
+      "source_npk": "C:\\WeGameApps\\地下城与勇士：创新世纪\\ImagePacks2\\sprite_interface_skillcutscene.NPK",
+      "path": "sprite/interface/skillcutscene/atgunner_spit_event.img",
+      "frame_paths": [
+        "output/claude_awakening_v09/canvas/spit/frame_0000.png"
+      ],
+      "frame_mode": "canvas",
+      "allow_geometry_change": true
+    }
+  ],
+  "protect_paths": [
+    "output/Claude_Gunner_v02/native_frames",
+    "output/claude_gunner_v08/A_Claude_FGunner_v08.NPK"
+  ],
+  "license_note": "民间二创形象，仅自用；不代表官方合作。",
+  "installed": false
+}

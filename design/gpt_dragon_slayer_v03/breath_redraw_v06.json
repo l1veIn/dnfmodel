@@ -1,0 +1,36 @@
+{
+  "mode": "built-in imagegen actual redraw",
+  "status": "candidate02_complete_pending_root_visual_review",
+  "assets": [
+    "idle",
+    "hip",
+    "back"
+  ],
+  "source_motion": "output/action_redraw_2026-11-10/dragon_reference",
+  "output": "output/dragon_breath_redraw_v06",
+  "old_sources_untouched": true,
+  "paid_65535_calls": 0,
+  "candidate_manifest": "output/dragon_breath_redraw_v06/candidate02/manifest.json",
+  "targets": [
+    0,
+    1,
+    2,
+    3,
+    9,
+    10,
+    11,
+    12,
+    232,
+    233,
+    234,
+    235
+  ],
+  "world_crop": [
+    165,
+    240,
+    160,
+    160
+  ],
+  "generation_record": "output/dragon_breath_redraw_v06/generation_record.json",
+  "new_imagegen_calls": 4
+}
