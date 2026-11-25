@@ -1,11 +1,17 @@
 ---
 name: dnf-character-patch
-description: 制作 DNF（地下城与勇士）角色整体替换补丁：把某个职业的全部时装替换成一个新角色（如女枪手改 Claude 大小姐、女鬼剑改 GPT 龙娘），也包括技能里的武器道具、机器人和召唤物、大招人物帧、切入图和技能特效，产出可安装的 NPK、对照页和发布包。只要用户提到给 DNF 职业换形象、做 NPK 替换补丁、“女鬼剑/女枪手/女法师改某某”、AI 娘补丁，要修改这类补丁的动作、手和武器的贴合、走路和待机，或要改技能效果、切入图、觉醒画面、喷火器卫星这类技能贴图，都使用这个 skill，即使用户没有说“补丁”或“skill”。
+description: 制作和修订 DNF 外观补丁，包括职业整身替换、指定头套与时装替换、武器装扮、技能特效、觉醒立绘与切入、动态 Buff。用于制作 NPK、复核动作或升级分享包。
 ---
 
-# DNF 角色整体替换补丁
+# DNF 角色外观补丁
 
-把一个职业的所有时装换成新角色的整体绘制精灵，保留原版动作和帧序号。范例是女枪手 Claude 大小姐 v02（用户评价“模范”）：配置 `design/claude_gunner/`，说明 `docs/claude_gunner_v02.md`。持武器、大附件、浅色服装的角色看女鬼剑 GPT 龙娘 v02：配置 `design/gpt_dragon_slayer_v02/`，说明 `docs/gpt_dragon_slayer_v02.md`。
+先选覆盖范围。每一阶段用[验收清单](references/acceptance.md)留证据。
+
+| 需求 | 制作入口 |
+|---|---|
+| 整个职业换造型，或新角色的身体比例与原版差异大 | 在目标主骨架皮肤层写入整身精灵，按下面的制作顺序保留原动作帧位。 |
+| 穿指定头套或时装时换外观，原版肢体与握点适合新造型 | 复用原版动作，按实际帽子、上衣等层重绘并替换。先读[指定装扮的分层制作](references/costume_layers.md)。 |
+| 扩装扮范围、拆独立武器包、做叠层特效或更新 Buff 分享包 | 核对真实资源路径、当前审核版本和回读证据，见[定向覆盖与发布](references/targeted_release.md)。 |
 
 ## 不能越过的边界
 
@@ -17,20 +23,20 @@ description: 制作 DNF（地下城与勇士）角色整体替换补丁：把某
 
 ## 运行环境
 
-```
-PY=D:/VideoStudio/comfyUI/install/ComfyUI/ComfyUI/.venv/Scripts/python.exe
-K=.claude/skills/dnf-character-patch/scripts/patch.py
+```powershell
+$PY = (Get-Command python).Source
+$K = '.claude/skills/dnf-character-patch/scripts/patch.py'
 ```
 
-从项目根目录运行 `$PY $K <id> <命令>`，不带参数可看全部命令。需要几分钟以上的命令放后台运行。
+从项目根目录运行 `& $PY $K <id> <命令>`，不带参数可看全部命令。需要几分钟以上的命令放后台运行。
 
-## 流程
+## 整身替换制作顺序
 
 ### 1. 摸清职业
 
 ```
-$PY $K survey swordman atequipment
-$PY $K init gpt_dragon_slayer swordman atequipment sg --weapon=katana --stem=A_GPTDragon_FSlayer
+& $PY $K survey swordman atequipment
+& $PY $K init gpt_dragon_slayer swordman atequipment sg --weapon=katana --stem=A_GPTDragon_FSlayer
 ```
 
 `survey` 给出主骨架帧数、其他骨架和武器种类。路径里 `gunner/atequipment`、`mage/equipment`、`priest/atequipment`、`swordman/atequipment` 是女性职业。其他骨架（如女鬼剑的 222 帧）留在包外，保持官方外观，否则会变透明。
@@ -88,11 +94,11 @@ $PY $K init gpt_dragon_slayer swordman atequipment sg --weapon=katana --stem=A_G
 默认全用动作表，不用 H3。GPT 龙娘 246 帧全用动作表，翻转段的效果也够好；Claude 大小姐 v02 因为先做了 H3 才留下一部分。动作表每张约 8 格，246 帧约 31 张、$7–8。表的格式和提示词写法见 [references/prompts.md](references/prompts.md)。
 
 ```
-$PY $K <id> sheet-refs <表名>    # 先看参考图和 poses_<表名>_marked.png
-$PY $K <id> sheet-draw <表名>    # 付费，看结果后再切。重画用 --version=2
-$PY $K <id> sheet-cut <表名>
-$PY $K <id> sheets-draw --budget=9   # 批量画所有没画过的表，到预算自动停，可重复运行。不要并行开多个 sheet-draw，会写坏 journal.json
-$PY $K <id> sheets-cut               # 每张表切最新版，修复表最后切，再应用 clip_scales.json
+& $PY $K <id> sheet-refs <表名>    # 先看参考图和 poses_<表名>_marked.png
+& $PY $K <id> sheet-draw <表名>    # 付费，看结果后再切。重画用 --version=2
+& $PY $K <id> sheet-cut <表名>
+& $PY $K <id> sheets-draw --budget=9   # 批量画所有没画过的表，到预算自动停，可重复运行。不要并行开多个 sheet-draw，会写坏 journal.json
+& $PY $K <id> sheets-cut               # 每张表切最新版，修复表最后切，再应用 clip_scales.json
 ```
 
 一张表只有一个缩放，个别段可能和邻段大小不同。把目标身高比写进 `design/<id>/clip_scales.json`（如 `{"clip_100_102": 1.02}`），之后切表都会生效，不必另写脚本。单帧大小不对（修复表画得大小不同、一张表里某一行画小了）写 `design/<id>/frame_scales.json`（如 `{"155": 1.07}`），系数取 `sizes` 给的值；可重复运行，不会叠乘。所在段已经被 `clip_scales.json` 放大过的帧别再乘。重画单帧不要拆段，用带 `replace` 的修复表。只有要改这一段的大小时才拆：一个段只有一个目标，混了两张表的帧就会一大一小（`sizes` 会列出来）。
@@ -105,7 +111,7 @@ H3 只在动作表明显不够时用：`video-gen`（本地，约 5.5 分钟一�
 
 先在**没画之前**检查原版握持点：`$PY $K <id> hands targets.png`。红圈应该落在手上。
 
-持武器的表直接开 `"mark_grips": true`：参考图上会画品红圆点，并告诉模型把拳头画在点上。原版手和身体同色（黑手套、黑袖子）时，模型看不清手在哪，文字也说不准。GPT 龙娘 v02 第一轮有 28 帧手和刀对不上，加圆点重画后都接上了。圆点落错地方时（比如落在头发上）先写手动握点 `grip`，发图前先看 `_marked` 图。手和刀差太多时，拉手臂只能救 15px 以内，别的都要重画。
+持武器的表直接开 `"mark_grips": true`：参考图上会画品红圆点，并告诉模型把拳头画在点上。原版手和身体同色（黑手套、黑袖子）时，模型看不清手在哪，文字也说不准。GPT 龙娘 v02 第一轮有 28 帧手和刀对不上，加圆点重画后都接上了。圆点落错地方时（比如落在头发上）先写手动握点 `grip`，发图前先看 `_marked` 图。手和刀位置不符时，先核对真实握点和姿势。边缘缺口逐像素修，腕肘结构错位时局部重画。
 
 - 手枪类贴着露出的皮肤，用 `"hand_detect": "visible_skin"`。
 - 刀剑类、戴手套的职业，用 `"arm_end"`，只认武器两端和细的肢体。
@@ -121,9 +127,9 @@ H3 只在动作表明显不够时用：`video-gen`（本地，约 5.5 分钟一�
 ### 6. 合成
 
 ```
-$PY $K <id> check
-$PY $K <id> final
-$PY $K <id> match-sizes    # 有 H3 段时：缩放后再跑一次 final
+& $PY $K <id> check
+& $PY $K <id> final
+& $PY $K <id> match-sizes    # 有 H3 段时：缩放后再跑一次 final
 ```
 
 `final` 对全部段统一调色板、对齐脚底，最后做手部贴合。约半分钟，可随时重跑。最后两行列出拉伸过大和手太远的帧，都要放大看。原版的刀有时本来就和手分开（快动作），先和原版比再判断。
@@ -133,15 +139,15 @@ $PY $K <id> match-sizes    # 有 H3 段时：缩放后再跑一次 final
 按 [references/acceptance.md](references/acceptance.md) 逐项检查。工具：
 
 ```
-$PY $K <id> board all.png 0-40 12      # 上原版下新版，都带武器
-$PY $K <id> hands closeup.png 6-35     # 每只手的特写
-$PY $K <id> grips grips.png 13-22      # 腰部放大，红圈是握点，少量帧看得最清楚
-$PY $K <id> anim walk.gif 13-22        # 动图，看布料跳动和大小突变
-$PY $K <id> stats                      # 身高比、脚底、完全相同的帧
-$PY $K <id> sizes                      # 各表按面积比大小，找缩放错的表
-$PY $K <id> repeats                    # 原版完全重复和只差一点的帧，可以复用
-$PY $K <id> moving 14-17               # 这几帧里原版哪里在动：按高度和图层统计
-$PY $K <id> colors                     # 参考图、母版、成品的色相对比
+& $PY $K <id> board all.png 0-40 12      # 上原版下新版，都带武器
+& $PY $K <id> hands closeup.png 6-35     # 每只手的特写
+& $PY $K <id> grips grips.png 13-22      # 腰部放大，红圈是握点，少量帧看得最清楚
+& $PY $K <id> anim walk.gif 13-22        # 动图，看布料跳动和大小突变
+& $PY $K <id> stats                      # 身高比、脚底、完全相同的帧
+& $PY $K <id> sizes                      # 各表按面积比大小，找缩放错的表
+& $PY $K <id> repeats                    # 原版完全重复和只差一点的帧，可以复用
+& $PY $K <id> moving 14-17               # 这几帧里原版哪里在动：按高度和图层统计
+& $PY $K <id> colors                     # 参考图、母版、成品的色相对比
 ```
 
 用户验收非常细（见清单），这里查出的问题不要留给用户。
@@ -155,9 +161,9 @@ $PY $K <id> colors                     # 参考图、母版、成品的色相对
 修问题的流程：
 
 ```
-$PY $K <id> issues                     # 待修和被退回的问题，帧号同时给工具编号和用户编号，标记给出坐标
-$PY $K <id> issue-fix <n> "做法"        # 修完、重跑 final 之后再写；记录当时的帧版本
-$PY $K <id> issue-note <n> "说明"       # 只说明、不算修完（比如需要用户决定）
+& $PY $K <id> issues                     # 待修和被退回的问题，帧号同时给工具编号和用户编号，标记给出坐标
+& $PY $K <id> issue-fix <n> "做法"        # 修完、重跑 final 之后再写；记录当时的帧版本
+& $PY $K <id> issue-note <n> "说明"       # 只说明、不算修完（比如需要用户决定）
 ```
 
 用户点“刷新”就能看到新帧，然后点“复核通过”或“退回”。一个动作通过之后帧又改了，会自动变成“需复核”。旧的 `review-page` 和 `review.json` 不再使用；`python scripts/workbench/issues.py <id> import-review` 可以把旧记录导入问题单。
@@ -178,7 +184,7 @@ $PY $K <id> issue-note <n> "说明"       # 只说明、不算修完（比如需
 
 找技能的特效文件先用工作台的“DNF 资源”页（`/#/game/<职业目录>`）：每个特效目录的原版和各项目改版并排播放。中文技能名存在 `kb/curated/skill_names.json`，确认过的名字在页面上勾“已核实”，推断的名字不要当事实用。
 
-人物补丁之后的进阶内容，并进同一个 NPK。范例是女枪手 v03～v05，详细做法见 [references/effects.md](references/effects.md)，动手前先读。
+人物和约定的技能资源可合入本体。可选武器和 Buff 按[定向覆盖与发布](references/targeted_release.md)分组交付。范例是女枪手 v03～v05，详细做法见 [references/effects.md](references/effects.md)，动手前先读。
 
 | 内容 | 做法 | 模型 |
 |---|---|---|

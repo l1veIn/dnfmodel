@@ -26,6 +26,7 @@ kb/sources/
 *.apng
 *.mp4
 *.webm
+*.m4a
 *.bk2
 *.bik
 *.mov
@@ -48,14 +49,14 @@ __pycache__/
 # Skill assets that are part of the tool, not output
 !.claude/skills/**/assets/*.png
 
-# Workbench worker logs (the issue log itself, issues.jsonl, is versioned)
-design/*/workbench/worker.log
+# Runtime logs and crash dumps (workbench issue records use .jsonl)
+*.log
+*.stackdump
 kb/cache/
 
 # Browser and Baidu downloads in progress, and archives dropped in the project root
 *.downloading
 *.baiduyun.*
-kb/*.log
 
 # Downloaded community reference patch, kept locally with its previews and notes
 /\[抖动款\]雷电将军＆无期迷途buff补丁 Colg特典（已修复）/

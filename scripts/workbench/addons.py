@@ -2,6 +2,7 @@
 
 Only published manifests registered locally can supply preview or download
 paths. Registration does not imply installation, visual approval or game QA.
+Entries with missing local build files are omitted until those files exist.
 """
 from __future__ import annotations
 
@@ -30,9 +31,9 @@ def _output(value, suffix):
     if not isinstance(value, str) or "\\" in value or not value:
         raise ValueError("Addon paths must be workspace-relative POSIX paths")
     relative = Path(value)
-    if relative.is_absolute() or any(p in (".", "..") for p in relative.parts):
+    if relative.anchor or any(p in (".", "..") for p in relative.parts):
         raise ValueError("Addon paths must stay inside workspace output")
-    path = (ROOT / relative).resolve(strict=True)
+    path = (ROOT / relative).resolve()
     if not path.is_relative_to((ROOT / "output").resolve()) or path.suffix.lower() != suffix:
         raise ValueError("Addon paths must stay inside workspace output")
     return path
@@ -49,19 +50,30 @@ def _sha(path):
         return hashlib.file_digest(stream, "sha256").hexdigest()
 
 
-def _package(manifest_path):
-    manifest = _json(manifest_path)
-    if manifest.get("schema") != 1 or manifest.get("status") not in ("packaged_local_candidate", "user_approved"):
+def _package(manifest_path, ident):
+    try:
+        manifest = _json(manifest_path)
+    except FileNotFoundError:
+        return None
+    if (not isinstance(manifest, dict) or manifest.get("schema") != 1
+            or manifest.get("status") not in ("packaged_local_candidate", "user_approved")):
         raise ValueError("Only a packaged addon manifest can be registered")
+    if manifest.get("id") != ident:
+        raise ValueError("Addon ID differs from its published manifest")
     package = _output(manifest.get("npk"), ".npk")
     if not re.fullmatch(r"A_[A-Za-z0-9_.-]+\.NPK", package.name):
         raise ValueError("Addon package must have an A_*.NPK name")
-    key = ("package", _token(manifest_path), _token(package))
+    digest = manifest.get("sha256")
+    if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest):
+        raise ValueError("Addon manifest must declare a SHA-256 for its package")
+    try:
+        key = ("package", _token(manifest_path), _token(package))
+    except FileNotFoundError:
+        return None
     hit = _cache.get(key)
     if hit is not None:
         return hit
-    digest = manifest.get("sha256", "")
-    if not re.fullmatch(r"[0-9a-f]{64}", digest) or _sha(package) != digest:
+    if _sha(package) != digest:
         raise ValueError("Addon package hash differs from its published manifest")
     sys.path.insert(0, str(ROOT / "scripts"))
     from dnf_resources import read_npk
@@ -108,9 +120,10 @@ def _registered():
             raise ValueError("Addon IDs must be unique safe identifiers")
         seen.add(ident)
         manifest_path = _output(row.get("manifest"), ".json")
-        manifest, package, edits = _package(manifest_path)
-        if manifest.get("id") != ident:
-            raise ValueError("Addon ID differs from its published manifest")
+        loaded = _package(manifest_path, ident)
+        if loaded is None:
+            continue
+        manifest, package, edits = loaded
         result.append((ident, manifest_path, manifest, package, edits))
     return result
 

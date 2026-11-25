@@ -1,7 +1,0 @@
-{"prompt_id": "4f094fce-f1f1-4c7d-a2f2-7813c2222c03", "number": 1, "node_errors": {}}
-{"elapsed": 0, "latest": null}
-{"elapsed": 10, "latest": {"utc": "2026-10-22T15:25:47.966873+00:00", "ram_free_bytes": 11448438784, "commit_free_bytes": 19803234304, "gpu_used_mib": 1383.0, "gpu_free_mib": 10615.0, "gpu_util_percent": 4.0}}
-{"elapsed": 20, "latest": {"utc": "2026-10-22T15:25:58.061194+00:00", "ram_free_bytes": 8812314624, "commit_free_bytes": 19559055360, "gpu_used_mib": 1383.0, "gpu_free_mib": 10615.0, "gpu_util_percent": 10.0}}
-{"elapsed": 30, "latest": {"utc": "2026-10-22T15:26:08.061347+00:00", "ram_free_bytes": 8956715008, "commit_free_bytes": 19793444864, "gpu_used_mib": 1385.0, "gpu_free_mib": 10613.0, "gpu_util_percent": 6.0}}
-{"elapsed": 40, "latest": {"utc": "2026-10-22T15:26:17.940887+00:00", "ram_free_bytes": 17288388608, "commit_free_bytes": 17311776768, "gpu_used_mib": 6028.0, "gpu_free_mib": 5970.0, "gpu_util_percent": 100.0}}
-{"completed": true, "metrics": {"elapsed_seconds": 41.291, "peak_gpu_used_mib_sampled": 6429.0, "min_ram_free_gib_sampled": 8.124412536621094, "min_commit_free_gib_sampled": 15.499488830566406, "sample_interval_seconds": 0.5, "frames": 25, "size": 256, "fps": 24, "alpha_output": false, "memory_guard_triggered": false, "game_ready": false}}
